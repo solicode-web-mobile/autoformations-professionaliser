@@ -142,9 +142,12 @@ Ce mécanisme réserve immédiatement la route Jekyll, insère le badge 🚧 dan
   - [gabarit-domaine.md](resources/gabarit-domaine.md) : Gabarit normé pour créer un domaine de compétence (`_domaines/D.XXX.Y.[mini-code].md`).
   - [gabarit-ua.md](resources/gabarit-ua.md) : Gabarit normé pour créer une Unité d'Apprentissage (`_uas/[domaine]/UA.XXX.YY.md`).
   - [gabarit-tuto-en-construction.md](resources/gabarit-tuto-en-construction.md) : Gabarit normé pour initialiser les fichiers stubs de tutoriels (`en_construction: true`).
-- **Ressources transversales du projet :**
-  - Les règles pédagogiques locales du niveau dans `.agents/rules/` (directives didactiques et cycle actif).
-  - `.agents/rules/standards-techniques.md` (Encodage UTF-8 sans BOM, conventions de nommage et livrables).
+- **Ressources transversales & spécifiques au niveau courant :**
+  - .agents/resources/transversal/README.md : Référentiel commun des trois niveaux (N1 Découvrir, N2 Prototyper, N3 Développer/Réaliser).
+  - **Fiche profil du niveau courant** sous .agents/resources/[niveau]/ (ex: .agents/resources/n3/profil-n3.md).
+  - **Fiches didactiques des domaines du niveau** sous .agents/resources/[niveau]/domaines/.
+  - Les règles pédagogiques du niveau dans .agents/rules/ (ex: pedagogie-spartel-n3.md).
+  - .agents/rules/standards-techniques.md (Encodage UTF-8 sans BOM, conventions de nommage et livrables GitHub/MD).
 
 ---
 

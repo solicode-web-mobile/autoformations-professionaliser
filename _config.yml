@@ -1,12 +1,12 @@
-title: Autoformations Web
-description: Autoformations Solicode
+title: Autoformations N3 - Développer
+description: Autoformations Solicode - Niveau 3 (Développer / Réaliser)
 
 theme: just-the-docs
 
 url: https://solicode-web-mobile.github.io
-baseurl: /autoformations-web
+baseurl: /autoformations-professionaliser
 
-repository: solicode-web-mobile/autoformations-web
+repository: solicode-web-mobile/autoformations-professionaliser
 
 aux_links:
   "Solicode.co": https://solicode.co/
@@ -40,7 +40,7 @@ mermaid:
 
 # gh_edit_link: true
 # gh_edit_link_text: "Modifier cette page sur GitHub"
-# gh_edit_repository: "https://github.com/solicode-web-mobile/autoformations-web"
+# gh_edit_repository: "https://github.com/solicode-web-mobile/autoformations-professionaliser"
 # gh_edit_branch: "main"
 # gh_edit_view_mode: "tree"
 

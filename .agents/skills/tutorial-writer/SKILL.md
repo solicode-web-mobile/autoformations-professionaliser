@@ -46,18 +46,19 @@ $$\text{Comprendre} \longrightarrow \text{Reproduire} \longrightarrow \text{Exp�
 - **Données d'entrée pour une série progressive :**
   1. Le **Plan des tutoriels de l'UA** : Liste ordonnée des tutoriels avec leurs notions cibles.
   2. Le **Code source final d'arrivée** : Fichier(s) complet(s) ou maquette terminée représentant le livrable final attendu à l'issue de l'UA.
-- **Ressources didactiques par domaine (Spécifiques au cursus local — Chargement OBLIGATOIRE dès le cadrage) :**
-  - [.agents/resources/domaines/domaines-pedagogiques.md](../../resources/domaines/domaines-pedagogiques.md) : Index central d'orientation des 17 domaines techniques du cursus local.
-  - **Fiche modulaire dédiée au domaine en cours de rédaction** dans `.agents/resources/domaines/` (ex: [domaine-algo.md](../../resources/domaines/domaine-algo.md) pour l'algorithmique, [domaine-conception.md](../../resources/domaines/domaine-conception.md) pour les gabarits SVG de diagrammes MCD Merise, [domaine-css.md](../../resources/domaines/domaine-css.md), [domaine-php-sql.md](../../resources/domaines/domaine-php-sql.md), etc.).
+- **Ressources didactiques et profil de niveau (Chargement OBLIGATOIRE dès le cadrage) :**
+  - .agents/resources/transversal/README.md : Référentiel commun des trois niveaux (N1 Découvrir, N2 Prototyper, N3 Développer/Réaliser).
+  - **Fiche profil du niveau courant** sous .agents/resources/[niveau]/ (ex: .agents/resources/n3/profil-n3.md).
+  - **Fiches didactiques du domaine en cours de rédaction** sous .agents/resources/[niveau]/domaines/ (dès qu'elles sont définies pour le niveau).
 - **Ressources transversales du projet :**
-  - Les règles pédagogiques locales du niveau dans `.agents/rules/` (Directives de style et de progression).
-  - `.agents/rules/standards-techniques.md` (Encodage UTF-8, règles Jekyll, `window.pageData`, livrables GitHub/MD).
-  - Code réel et démonstrateurs sous `/code/`.
+  - Les règles pédagogiques locales du niveau dans .agents/rules/ (ex: pedagogie-spartel-n3.md).
+  - .agents/rules/standards-techniques.md (Encodage UTF-8, règles Jekyll, window.pageData, livrables GitHub/MD).
+  - Code réel et démonstrateurs sous /code/.
 
 ---
 
 # 4. Contraintes & Règles Inviolables
-- **Chargement Obligatoire de la Fiche Domaine :** Avant TOUTE rédaction, simplification ou refonte d'un tutoriel, l'agent DOIT impérativement identifier le domaine technique concerné (ex: `D.121.1-algo` → `.agents/resources/domaines/domaine-algo.md`, `D.112.1-conception` → `.agents/resources/domaines/domaine-conception.md`) et charger sa fiche didactique depuis les ressources locales de l'agent (`.agents/resources/domaines/`). L'agent applique strictement les contraintes propres au domaine (formats de code imposés, composants visuels spécifiques comme `array-svg.html`, structure du livrable, interdictions thématiques). Interdiction formelle d'engager la rédaction sans avoir consulté la fiche du domaine.
+- **Chargement Obligatoire des Ressources du Niveau :** Avant TOUTE rédaction, simplification ou refonte d'un tutoriel, l'agent DOIT impérativement charger le profil du niveau courant (.agents/resources/[niveau]/profil-[niveau].md) ainsi que la fiche didactique du domaine concerné si elle existe sous .agents/resources/[niveau]/domaines/. L'agent applique strictement les contraintes propres au domaine et au niveau en cours. Interdiction formelle d'engager la rédaction sans avoir consulté les spécifications du niveau.
 - **Preuve par le Code & Dépôt Unique des Autoformations :** L'apprenant dispose d'un **dépôt GitHub unique pour l'ensemble des livrables de l'année**, organisé par les **noms lisibles** (et NON les codes alphanumériques) des domaines, des UA et des tutoriels :
   ```text
   [nom-domaine]/[nom-ua]/[nom-tutoriel]/[nom-fichier]

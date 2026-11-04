@@ -52,6 +52,12 @@ Ce document définit la matrice d'adéquation entre la typologie détectée d'un
 - **Compétences exclues par défaut :**
   - `domain-scaffolder`, `bug-fixer`, `context-generator`, `feature-dev` (sauf si le tutoriel inclut une application témoin à maintenir).
 
+#### Déclinaison par Niveau d'Autoformation Solicode :
+- **Niveau N1 (Découvrir) :** Fondamentaux du web, procédural, code pas-à-pas (skill technique associé : dev-n1).
+- **Niveau N2 (Prototyper) :** POO PHP, architecture 3-tiers, modélisation UML (skill technique associé : dev-n2).
+- **Niveau N3 (Développer / Réaliser) :** Frameworks modernes (Laravel, Alpine.js), TDD, principes SOLID, méthodologie Scrum (skill technique associé : dev-n3).
+- **Socle méthodologique universel (N1, N2, N3) :** 	utorial-planer, 	utorial-writer, dev-jekyll, sync-theme, plugin-dev.
+
 ---
 
 ### Profil 3 : Ingénierie Pédagogique & Ateliers APC (Évaluation & Compétences)

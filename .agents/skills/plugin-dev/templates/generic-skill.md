@@ -1,4 +1,4 @@
-﻿---
+---
 name: [nom-du-skill]
 description: [Description rédigée à la 3ème personne indiquant clairement QUAND déclencher et QUAND NE PAS déclencher ce skill]
 version: 1.0.0
