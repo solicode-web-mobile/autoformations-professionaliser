@@ -1,6 +1,6 @@
 ---
 title: "Analyser un besoin existant"
-layout: competences
+layout: competences 
 code: "C.111"
 module_reference: "DWB-M106"
 reference: "DWB-M106-C.111"
