@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donnée Temporaire</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #cbd5e1;
+        }
+        .search-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px 35px 10px 10px;
+            border: 1px solid #94a3b8;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .clear-btn {
+            position: absolute;
+            right: 10px;
+            background: none;
+            border: none;
+            color: #ef4444;
+            font-weight: bold;
+            cursor: pointer;
+            display: none;
+        }
+        .info-box {
+            background-color: #f8fafc;
+            border-left: 4px solid #3b82f6;
+            color: #334155;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label style="display:block; margin-bottom:8px; font-size:14px; font-weight:600; color:#334155;">Rechercher un article :</label>
+        
+        <div class="search-wrapper">
+            <input type="text" id="recherche" placeholder="Ex: Tutoriel CSS...">
+            <button class="clear-btn" id="btn-clear" title="Effacer la recherche">✖</button>
+        </div>
+        
+        <div class="info-box" id="info">
+            Le texte <span class="highlight">""</span> est une donnée temporaire. Dès que vous effacez ou quittez la page, l'application l'oublie, car elle n'a pas besoin d'être conservée dans la base de données.
+        </div>
+    </div>
+
+    <script>
+        const inputRecherche = document.getElementById('recherche');
+        const btnClear = document.getElementById('btn-clear');
+        const info = document.getElementById('info');
+
+        inputRecherche.addEventListener('input', () => {
+            const val = inputRecherche.value;
+            if (val.trim() !== '') {
+                btnClear.style.display = 'block';
+                info.innerHTML = `Le texte <span class="highlight">"${val}"</span> est une donnée temporaire. Dès que vous effacez ou quittez la page, l'application l'oublie, car elle n'a pas besoin d'être conservée dans la base de données.`;
+            } else {
+                btnClear.style.display = 'none';
+                info.innerHTML = `Le texte <span class="highlight">""</span> est une donnée temporaire. Dès que vous effacez ou quittez la page, l'application l'oublie, car elle n'a pas besoin d'être conservée dans la base de données.`;
+            }
+        });
+
+        btnClear.addEventListener('click', () => {
+            inputRecherche.value = '';
+            btnClear.style.display = 'none';
+            info.innerHTML = `Le texte <span class="highlight">""</span> est une donnée temporaire. Dès que vous effacez ou quittez la page, l'application l'oublie, car elle n'a pas besoin d'être conservée dans la base de données.`;
+        });
+    </script>
+</body>
+</html>

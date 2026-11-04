@@ -1,0 +1,66 @@
+<!-- ==================================================
+     AFFICHAGE
+     ================================================== -->
+
+{% if previous_type or next_type %}
+
+  <div class="next-step">
+
+    <div class="next-step-navigation">
+
+      <!-- ÉTAPE PRÉCÉDENTE -->
+
+      {% if previous_type %}
+
+        <a
+          id="previous-step-link"
+          class="next-step-link previous-step-link"
+          href="{{ previous_url | relative_url }}"
+          data-next-type="tuto"
+          data-normal-url="{{ previous_url | relative_url }}"
+          data-compact-url="{% if previous_compact_url %}{{ previous_compact_url | relative_url }}{% endif %}"
+          data-detaille-url="{% if previous_detaille_url %}{{ previous_detaille_url | relative_url }}{% endif %}"
+        >
+
+          <span class="next-step-arrow">←</span>
+
+          <span class="next-step-title">
+            {{ previous_title }}
+          </span>
+
+        </a>
+
+      {% else %}
+        <div></div>
+      {% endif %}
+
+
+      <!-- ÉTAPE SUIVANTE -->
+
+      {% if next_type %}
+
+        <a
+          id="next-step-link"
+          class="next-step-link"
+          href="{{ next_url | relative_url }}"
+          data-next-type="{{ next_type }}"
+          data-normal-url="{{ next_url | relative_url }}"
+          data-compact-url="{% if next_compact_url %}{{ next_compact_url | relative_url }}{% endif %}"
+          data-detaille-url="{% if next_detaille_url %}{{ next_detaille_url | relative_url }}{% endif %}"
+        >
+
+          <span class="next-step-title">
+            {{ next_title }}
+          </span>
+
+          <span class="next-step-arrow">→</span>
+
+        </a>
+
+      {% endif %}
+
+    </div>
+
+  </div>
+
+{% endif %}

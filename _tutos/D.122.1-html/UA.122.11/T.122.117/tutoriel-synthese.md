@@ -1,0 +1,166 @@
+---
+title: "Tutoriel de Synthèse"
+layout: tuto
+slug: "tutoriel-synthese"
+permalink: /tutos/:slug/
+tuto_id: "T.122.117"
+type: "classique"
+version: "normal"
+ua: "UA.122.11"
+nav_order: 7
+data_html: |
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Métier de développeur - Les principales missions</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    </body>
+    </html>
+data_css: ""
+data_js: ""
+---
+
+<script>
+window.pageData = {
+    html: {{ page.data_html | default: "" | jsonify }},
+    css: {{ page.data_css | default: "" | jsonify }},
+    js: {{ page.data_js | default: "" | jsonify }},
+    php: {{ page.data_php | default: "" | jsonify }}
+};
+</script>
+
+## 1. Objectif
+
+Réaliser la page complète d'un article de blog en utilisant l'ensemble des balises et concepts HTML étudiés (titres, paragraphes, conteneurs sémantiques, listes et images).
+
+## 2. Prérequis
+
+* Avoir suivi les tutoriels T.122.111 à T.122.116.
+* Maîtriser l'imbrication des balises et l'indentation.
+
+## 3. Données de départ
+
+Le code de base fourni intègre déjà un lien vers un fichier CSS (qui se chargera de la décoration visuelle). Votre rôle est de fournir la structure HTML correcte.
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Métier de développeur - Les principales missions</title>
+    <!-- Le fichier CSS gère l'apparence visuelle -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+</body>
+</html>
+```
+
+## Partie 1 — Pratique
+
+Dans ce tutoriel de synthèse, il n'y a pas de nouvelle théorie. Vous allez appliquer ce que vous avez appris.
+
+### 1.1. Préparer le fichier
+
+Dans VS Code, créez le fichier `page-detail.html` et collez-y les données de départ.
+
+### 1.2. Construire l'en-tête de l'article
+
+Dans `<body>`, créez le conteneur principal de l'article et son en-tête. 
+
+```html
+<body>
+    <article>
+        <header class="article-header">
+            <span class="article-category">Développement</span>
+            <h1>Le métier de développeur et ses principales missions</h1>
+            
+            <div class="article-meta">
+                <div class="article-author">
+                    <img src="images/author.jpg" alt="Portrait de l'auteur">
+                    <div>
+                        <strong>Madani Ali</strong>
+                        <span>Auteur du blog</span>
+                    </div>
+                </div>
+                <time datetime="2026-02-14">14 Février 2026</time>
+                <span>5 min de lecture</span>
+            </div>
+        </header>
+```
+
+### 1.3. Ajouter l'image de couverture
+
+Sous le `<header>`, ajoutez la figure illustrant l'article :
+
+```html
+        <figure class="article-cover">
+            <img src="images/article-cover.png" alt="Écran montrant du code informatique">
+        </figure>
+```
+
+### 1.4. Intégrer le contenu principal et la citation
+
+Sous l'image, ajoutez le corps de l'article avec une citation :
+
+```html
+        <main class="article-main">
+            <section class="article-body">
+                <h2>Le rôle du développeur</h2>
+                <p>Le développeur crée des applications. Il transforme un besoin en solution informatique.</p>
+                
+                <h3>Réaliser l'application</h3>
+                <figure class="article-figure">
+                    <img src="images/article-example.png" alt="Développeur écrivant du code">
+                    <figcaption>Le développeur écrit le code de l'application.</figcaption>
+                </figure>
+                
+                <blockquote class="article-blockquote">
+                    <p>Le développeur réalise l'application à partir du besoin. Il utilise des technologies comme HTML, CSS et JavaScript.</p>
+                    <cite>— Métier de développeur</cite>
+                </blockquote>
+```
+
+### 1.5. Finaliser avec une liste des tâches
+
+Toujours dans la section, terminez avec la liste à puces décrivant les tâches, puis fermez soigneusement toutes vos balises (`</section>`, `</main>`, `</article>`, `</body>`).
+
+```html
+                <ul class="article-list">
+                    <li><strong>Analyser le besoin</strong> : comprendre le projet.</li>
+                    <li><strong>Réaliser l'application</strong> : écrire le code.</li>
+                    <li><strong>Vérifier l'application</strong> : tester et corriger.</li>
+                    <li><strong>Déployer l'application</strong> : mettre en ligne sur un serveur.</li>
+                </ul>
+
+                <h3>Travailler en équipe</h3>
+                <p>Le développeur travaille aussi avec une équipe. La collaboration est importante pour réussir le projet.</p>
+            </section>
+        </main>
+    </article>
+</body>
+```
+
+### 1.6. Tester la page
+
+Enregistrez `page-detail.html` et ouvrez-le.
+
+**Résultat attendu :**
+
+Grâce au fichier CSS lié dans le `<head>`, votre HTML brut prend forme et ressemble à un véritable article de blog professionnel. L'image de couverture est large, les polices sont lisibles, et l'auteur est mis en page correctement.
+
+<iframe
+    class="auto-wrapper"
+    src="{{'/code/blog/page-detail-v1/page-detail-v1.html' | relative_url}}"
+    height="700"
+    title="Résultat de la page complète">
+</iframe>
+
+## 2. Bilan
+
+**Vous avez réalisé :** l'intégration de A à Z de la structure HTML d'un article de blog.
+
+**Vous savez maintenant :** utiliser l'ensemble du vocabulaire HTML (sémantique, multimédia, structuration) pour produire un document web complet et valide.

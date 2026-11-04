@@ -1,0 +1,12 @@
+---
+title: "Vérifier le fonctionnement d’une solution"
+layout: domaines
+code: "D.131.1"
+mini-code: "test"
+competence: "C.131"
+ordre: 14
+capacite_finale: >
+  Vérifier qu’une fonctionnalité produit le résultat attendu et contrôler, après 
+  modification, que les fonctionnalités existantes continuent de produire les 
+  résultats attendus.
+---

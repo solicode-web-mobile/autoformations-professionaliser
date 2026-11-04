@@ -1,0 +1,41 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.jj": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "serve.ps1": true,
+        "README.md": true,
+        "LICENSE": true,
+        "index.md": true,
+        "Gemfile.lock": true,
+        "Gemfile": true,
+        "autoformations-web.code-workspace": true,
+        ".gitignore": true,
+        "_config.yml": true,
+        ".jekyll-cache": true,
+        "_site": true,
+        "_old": true,
+        ".github": true,
+        ".vscode": true
+    },
+    "hide-files.files": [],
+    "folder-color.pathColors": [
+        {
+            "folderPath": "autoformations-web\\old_agent",
+            "isFolderOnly": true,
+            "color": "foldercolorizer.color_d787af"
+        },
+        {
+            "filePath": "autoformations-web\\_tutos\\D.122.2-css\\_notions-et-uas.md",
+            "color": "foldercolorizer.color_008080"
+        },
+        {
+            "folderPath": "autoformations-web\\.agents\\",
+            "isFolderOnly": true,
+            "color": "foldercolorizer.color_ff8700"
+        }
+    ]
+}

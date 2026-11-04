@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}">
+
+{% case page.layout %}
+  {% when "mission" %}
+    <link rel="stylesheet" href="{{ '/assets/css/mission.css' | relative_url }}">
+  {% when "competence" %}
+    <link rel="stylesheet" href="{{ '/assets/css/competence.css' | relative_url }}">
+  {% when "domaine" %}
+    <link rel="stylesheet" href="{{ '/assets/css/domaine.css' | relative_url }}">
+  {% when "ua" %}
+    <link rel="stylesheet" href="{{ '/assets/css/ua.css' | relative_url }}">
+  {% when "session" %}
+    <link rel="stylesheet" href="{{ '/assets/css/session.css' | relative_url }}">
+  {% when "tuto" %}
+    <link rel="stylesheet" href="{{ '/assets/css/tuto.css' | relative_url }}">
+  {% when "prototype" %}
+    <link rel="stylesheet" href="{{ '/assets/css/prototype.css' | relative_url }}">
+  {% when "lab" %}
+    <link rel="stylesheet" href="{{ '/assets/css/lab.css' | relative_url }}">
+  {% when "projet" %}
+    <link rel="stylesheet" href="{{ '/assets/css/projet.css' | relative_url }}">
+{% endcase %}
+
+<link rel="stylesheet" href="{{ '/assets/css/editor.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/algo-svg.css' | relative_url }}">
+
+<link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/vs2015.min.css"
+    >
+
+<!-- Highlight.js -->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document
+            .querySelectorAll("pre code")
+            .forEach(function (codeBlock) {
+                hljs.highlightElement(codeBlock);
+            });
+    });
+</script>
+
+<script defer src="{{ '/assets/js/tutorial-navigation.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/text-resizer.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/iframe-controls.js' | relative_url }}"></script>
+
+<script>
+    window.editeurCodeUrl = "{{ '/editeur-code' | relative_url }}";
+    window.__jekyll_baseurl = "{{ site.baseurl }}";
+</script>
+
+<script defer src="{{ '/assets/js/code-editor-injector.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/fullscreen-block.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/sidebar-toggle.js' | relative_url }}"></script>
+

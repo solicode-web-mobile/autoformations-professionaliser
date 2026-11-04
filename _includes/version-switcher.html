@@ -1,0 +1,16 @@
+{% if page.tuto_id %}
+<div class="version-switcher">
+  {% assign versions = site.tutos | where: "tuto_id", page.tuto_id %}
+  {% for v in versions %}
+    <a href="{{ v.url | relative_url }}" class="tuto-topbar-btn {% if page.version == v.version %}active{% endif %}" title="Format : {{ v.version }}">
+      {% if v.version == 'compact' %}
+        ⚡ Synthèse
+      {% elsif v.version == 'normal' %}
+        📖 Standard
+      {% elsif v.version == 'detaille' %}
+        🔍 Approfondi
+      {% endif %}
+    </a>
+  {% endfor %}
+</div>
+{% endif %}

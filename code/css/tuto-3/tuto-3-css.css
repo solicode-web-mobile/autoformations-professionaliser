@@ -1,0 +1,15 @@
+/* Sélecteur de classe simple */
+.title {
+    color: red;
+}
+
+/* Sélecteurs groupés (multiple) */
+h2, h3 {
+    color: darkblue;
+    font-family: Georgia, serif;
+}
+
+/* Sélecteur descendant (.parent .enfant) */
+.article-body p {
+    color: darkgreen;
+}

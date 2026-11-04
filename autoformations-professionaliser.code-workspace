@@ -1,0 +1,57 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"hide-files.files": [
+			"serve.ps1",
+			"README.md",
+			"LICENSE",
+			"index.md",
+			"Gemfile.lock",
+			"Gemfile",
+			"autoformations-web.code-workspace",
+			".gitignore",
+			"_config.yml",
+			".jekyll-cache",
+			"_site",
+			"_old",
+			".github",
+			".vscode"
+		],
+		"folder-color.pathColors": [
+			{
+				"folderPath": "autoformations-web\\_tutos\\",
+				"isFolderOnly": true,
+				"color": "foldercolorizer.color_afaf00"
+			},
+			{
+				"folderPath": "autoformations-web\\_agent",
+				"isFolderOnly": true,
+				"color": "foldercolorizer.color_ffaf87"
+			},
+			{
+				"folderPath": "autoformations-web\\_tutos\\C122\\",
+				"isFolderOnly": true,
+				"color": "foldercolorizer.color_5f5fd7"
+			},
+			{
+				"folderPath": "autoformations-web\\.agents\\",
+				"isFolderOnly": true,
+				"color": "foldercolorizer.color_ff8700"
+			},
+			{
+				"folderPath": "autoformations-web\\_plan-réalisation-tutos\\S4\\",
+				"isFolderOnly": true,
+				"color": "foldercolorizer.color_af5f00"
+			},
+			{
+				"folderPath": "autoformations-web\\_plan-réalisation-tutos\\",
+				"isFolderOnly": true,
+				"color": "foldercolorizer.color_ff8700"
+			}
+		]
+	}
+}
