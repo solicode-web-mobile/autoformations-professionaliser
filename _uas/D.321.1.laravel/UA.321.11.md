@@ -1,24 +1,21 @@
 ---
-title: "Bases de Laravel : routes, contrôleurs & Blade"
+title: "Hello World Laravel : Route et Vue"
 layout: ua
 code: "UA.321.11"
-ordre: 7
+ordre: 11
 competence: "C.321"
 domaine: "D.321.1"
-duree: 12
+duree: 8
 objectif: >
-  Développer le premier incrément fonctionnel web sous Laravel 12 sans base de données relationnelle active.
+  Valider l'environnement d'exécution local et le cycle de routage élémentaire sous Laravel 12.
 description: >
-  Développer le premier incrément fonctionnel web sous Laravel 12 sans base de données relationnelle active : configurer le projet, déclarer des routes publiques nommées avec paramètres d'URL dynamiques, créer un contrôleur mince avec injection de dépendance IoC du Service de données CSV, et composer des gabarits Blade responsive intégrant la gestion conviviale de l'erreur 404.
+  Valider l'environnement d'exécution local et le cycle de routage élémentaire sous Laravel 12. L'apprenant déclare une première route web publique dans routes/web.php et compose une vue Blade minimale sans contrôleur ni logique métier.
 notions:
-  - "Initialisation et arborescence standard de Laravel 12 (routes/, app/Http/Controllers/, resources/views/)"
-  - "Routage déclaratif modulaire, routes nommées et injection de paramètres dynamiques ({slug})"
-  - "Contrôleur HTTP mince avec injection de dépendances IoC et déclenchement d'erreur abort(404)"
-  - "Moteur de gabarits Blade (gabarit maître, héritage structurel, affichage sécurisé, directives Tailwind CSS)"
-  - "Gestion conviviale des erreurs (personnalisation de la vue d'erreur 404)"
+  - "Initialisation & Serveur Local : Structure de répertoires standard (routes/, resources/views/), commande de démarrage de serveur local"
+  - "Routage Déclaratif Minimal : Déclaration de route fermée (Route::get()) et renvoi direct d'une vue (view())"
+  - "Moteur Blade de Base : Syntaxe de balisage HTML sous Blade et création de template simple"
 livrable: >
-  Code source complet de la consultation d'un article : routes/web.php, ArticleController.php, ArticleService.php, gabarit maître Blade et vue d'erreur 404.
+  Déclaration de la route de test élémentaire (routes/web.php) et vue minimale de confirmation d'environnement (resources/views/welcome.blade.php).
 travail_a_faire: >
-  Développer sous Laravel 12 la route, le contrôleur ArticleController, le service ArticleService et les vues Blade pour la page de détail d'un article.
+  Déclarer une route de test et créer une vue Blade minimale pour valider le serveur web local sous Laravel 12.
 ---
-

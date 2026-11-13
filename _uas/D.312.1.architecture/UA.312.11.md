@@ -1,24 +1,23 @@
 ---
-title: "Architecture logicielle en couches & classe service"
+title: "Architecture logicielle en deux couches"
 layout: ua
 code: "UA.312.11"
-ordre: 6
+ordre: 10
 competence: "C.312"
 domaine: "D.312.1"
 duree: 10
 objectif: >
-  Concevoir l'architecture logicielle initiale séparant strictement l'orchestration HTTP de la logique de données sans base relationnelle.
+  Concevoir l'architecture logicielle initiale séparant strictement l'orchestration HTTP de la logique de données sans base de données relationnelle.
 description: >
   Concevoir l'architecture logicielle initiale séparant strictement l'orchestration HTTP (contrôleur mince) de la logique de données (classe Service) sans base de données relationnelle, formaliser une décision d'architecture (ADR-01) et schématiser la trajectoire cible globale du produit.
 notions:
-  - "Limites du pattern MVC naïf (écueil des Fat Controllers, couplage fort)"
-  - "Principe de Responsabilité Unique (SRP) appliqué aux contrôleurs minces et classes Services"
-  - "Isolation de la persistance tabulaire (encapsulation de la lecture CSV dans un Service)"
-  - "Formalisation des choix techniques par les fiches ADR (Architecture Decision Records)"
-  - "Vision cible macroscopique et anticipation vers l'ORM Eloquent"
+  - "Limites du Pattern MVC Naïf : Écueil des Fat Controllers, couplage fort et difficulté des tests unitaires"
+  - "Principe de Responsabilité Unique (SRP) : Séparation étanche de la couche Présentation (ArticleController) et de la couche Métier/Données (ArticleService)"
+  - "Isolation de la Persistance Tabulaire : Encapsulation de la lecture CSV dans la classe Service sans dépendance physique SQL"
+  - "Formalisation des Choix Techniques par les ADR : Structure d'une fiche ADR (Titre, Statut, Contexte, Décision, Justification, Conséquences)"
+  - "Vision Cible Macroscopique : Anticipation de la trajectoire d'évolution vers l'ORM Eloquent"
 livrable: >
-  Schéma d'architecture 2 couches minimale (conception-technique/architecture-sprint1.md), fiche de décision technique ADR-01 (conception-technique/decision-technique-bdd-csv.md) et schéma directeur cible (conception-technique/architecture-cible-macro.md).
+  Description détaillée de l'architecture 2 couches minimale du Sprint 1 (conception-technique/architecture-sprint1.md), fiche de décision technique ADR-01 (conception-technique/decision-technique-bdd-csv.md) et schéma directeur cible (conception-technique/architecture-cible-macro.md).
 travail_a_faire: >
-  Concevoir le schéma d'architecture 2 couches de l'application et rédiger la fiche de décision d'architecture ADR-01 pour la persistance CSV temporaire.
+  Concevoir le schéma d'architecture 2 couches et rédiger la décision technique ADR-01 justifiant l'utilisation d'une source CSV in-memory.
 ---
-
