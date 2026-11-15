@@ -1,21 +1,23 @@
 ---
-title: "Modélisation de diagramme de contexte"
+title: "Diagramme de contexte"
 layout: ua
 code: "UA.311.21"
+maturite: "UA-Lab"
 ordre: 6
 competence: "C.311"
 domaine: "D.311.2"
-duree: 10
+duree: 6
 objectif: >
-  Définir les frontières du système logiciel et cartographier les interactions utilisateurs en syntaxe déclarative Mermaid.js.
+  Délimiter les frontières fonctionnelles du système et identifier les interactions avec les acteurs externes en syntaxe déclarative Mermaid.js.
 description: >
-  Définir les frontières du système logiciel et cartographier les interactions utilisateurs en syntaxe déclarative Mermaid.js. L'apprenant élabore le diagramme de contexte délimitant les acteurs humains (Apprenant, Recruteur, Auteur Lauréat, Administrateur), le client mobile et les systèmes externes d'authentification.
+  Analyser les flux et les frontières du système logiciel. L'apprenant modélise le diagramme de contexte de l'application en syntaxe déclarative versionnable, identifiant acteurs primaires, secondaires et systèmes tiers.
 notions:
-  - "Schématisation Déclarative Diagram-as-Code : Syntaxe Mermaid sous VS Code, prévisualisation temps réel et versioning Git"
-  - "Délimitation des Frontières du Système : Système applicatif vs acteurs humains vs services externes tiers d'authentification"
-  - "Typologie des Acteurs : Acteurs principaux (utilisateurs directs) et acteurs secondaires (systèmes d'appui)"
+  - "Frontière système et concept de boîte noire : délimitation stricte entre le système cible et son environnement"
+  - "Typologie des acteurs : acteurs primaires humains (Lecteur public, Lauréat), acteurs secondaires (Modérateur, Formateur PO) et système tiers (Service hébergement / GitHub)"
+  - "Flux d'échange nommés : flux orientés représentant les interactions sans détail protocolaire"
+  - "Syntaxe déclarative Mermaid.js : modélisation textuelle graph LR versionnable directement intégrée au Markdown"
 livrable: >
-  Diagramme de contexte système Mermaid délimitant l'application et ses acteurs (analyse/diagramme-contexte.mmd) et template de prompt validé (diagramme-context.prompt.md).
+  Diagramme de contexte système Mermaid (livrables/uml/diagramme-contexte.mmd) et prompt réutilisable (livrables/ia/prompts/prompt-diagramme-contexte.prompt.md).
 travail_a_faire: >
-  Modéliser le diagramme de contexte du Blog des Lauréats délimitant le système et ses acteurs en Mermaid.js sous VS Code.
+  Identifier les acteurs et flux d'échange du système, produire le diagramme Mermaid.js et concevoir le prompt de transposition.
 ---
