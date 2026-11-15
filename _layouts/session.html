@@ -161,11 +161,34 @@ layout: default
 
                 <div class="ua-card-header">
 
-                  <span class="ua-card-code">
-                    <a href="{{ ua.url | relative_url }}">
-                      {{ ua.code }}
-                    </a>
-                  </span>
+                  <div class="ua-card-header-top">
+                    <span class="ua-card-code">
+                      <a href="{{ ua.url | relative_url }}">
+                        {{ ua.code }}
+                      </a>
+                    </span>
+
+                    {% if ua.maturite %}
+                      {% assign mat_clean = ua.maturite | replace: "UA-", "" | strip %}
+                      {% assign mat_str = ua.maturite | downcase %}
+                      {% if mat_str contains "tach" or mat_str contains "tâch" %}
+                        {% assign mat_badge_class = "badge-tache" %}
+                        {% assign mat_badge_text = "Tâche" %}
+                      {% elsif mat_str contains "lab" %}
+                        {% assign mat_badge_class = "badge-lab" %}
+                        {% assign mat_badge_text = "Lab" %}
+                      {% elsif mat_str contains "tuto" %}
+                        {% assign mat_badge_class = "badge-tuto" %}
+                        {% assign mat_badge_text = "Tuto" %}
+                      {% else %}
+                        {% assign mat_badge_class = "badge-default" %}
+                        {% assign mat_badge_text = mat_clean %}
+                      {% endif %}
+                      <span class="badge-maturite {{ mat_badge_class }}">
+                        {{ mat_badge_text }}
+                      </span>
+                    {% endif %}
+                  </div>
 
                   <h3>
                     {{ ua.title }}
@@ -280,7 +303,7 @@ layout: default
 
                     </div>
 
-                    {% include tuto-list.html tutos=ua_tutos %}
+                    {% include tuto-list.html tutos=ua_tutos maturite=ua.maturite %}
 
                   </div>
 

@@ -11,8 +11,23 @@ permalink: /export/microCompetences.csv
   {%- assign _titre   = (p.title | append: "") | strip | replace: '"','""' | replace: '\n',' ' | replace: '\r',' ' -%}
   {%- assign _soustitre = "" -%}
   {%- assign _compref = (comp.reference | append: "") | strip -%}
-  {%- assign _lien    = "" -%}
+  {%- if p.url != empty and p.url != nil -%}
+    {%- assign _lien = site.url | append: site.baseurl | append: p.url -%}
+  {%- else -%}
+    {%- assign _lien = "" -%}
+  {%- endif -%}
   {%- assign _desc    = (p.capacite_finale | append: "") | strip | replace: '"','""' | replace: '\n',' ' | replace: '\r',' ' -%}
-  {%- assign _ref     = comp.filiere | append: "-" | append: _code -%}
+  {%- assign filiere = site.filiere | default: "DMB" -%}
+  {%- if comp and comp.module_reference -%}
+    {%- assign mod_filiere = comp.module_reference | split: "-" | first -%}
+    {%- if mod_filiere and mod_filiere != "" -%}
+      {%- assign filiere = mod_filiere -%}
+    {%- endif -%}
+  {%- endif -%}
+  {%- if p.reference and p.reference != "" -%}
+    {%- assign _ref = p.reference -%}
+  {%- else -%}
+    {%- assign _ref = filiere | append: "-" | append: _code -%}
+  {%- endif -%}
 "{{ _ordre }}","{{ _code }}","{{ _titre }}","{{ _soustitre }}","{{ _compref }}","{{ _lien }}","{{ _desc }}","{{ _ref }}"
 {% endfor %}

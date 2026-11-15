@@ -1,6 +1,9 @@
 title: Autoformations N3 - Développer
 description: Autoformations Solicode - Niveau 3 (Développer / Réaliser)
 
+filiere: "DMB"
+filiere_nom: "Développeur Mobile et Web"
+
 theme: just-the-docs
 
 url: https://solicode-web-mobile.github.io

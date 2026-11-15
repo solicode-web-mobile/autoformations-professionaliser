@@ -258,9 +258,16 @@ a:focus-visible {
   margin-bottom: 1rem;
 }
 
-.ua-card-code {
-  display: block;
+.ua-card-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
   margin-bottom: 0.35rem;
+}
+
+.ua-card-code {
+  display: inline-block;
   color: #7253ed;
   font-family: monospace;
   font-size: 0.78rem;
@@ -437,6 +444,60 @@ a:focus-visible {
   border-color: #e5e7eb;
   color: #b91c1c;
   transform: none;
+}
+
+/* =========================================================
+   BADGES DE MATURITÉ MINIMALISTES (UA & TUTOS)
+   ========================================================= */
+
+.badge-maturite {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  border: 1px solid transparent;
+  flex-shrink: 0;
+}
+
+/* Maturité UA-Lab */
+.badge-maturite-lab,
+.badge-maturite.badge-ua-lab,
+.badge-maturite.badge-lab {
+  background-color: #f0f7ff;
+  color: #0369a1;
+  border-color: #bae6fd;
+}
+
+/* Maturité UA-Tâche (strictement sans accent dans les sélecteurs CSS) */
+.badge-maturite-tache,
+.badge-maturite.badge-ua-tache,
+.badge-maturite.badge-tache,
+.badge-maturite-tche,
+.badge-maturite.badge-ua-tche,
+.badge-maturite.badge-tche {
+  background-color: #f5f3ff;
+  color: #6d28d9;
+  border-color: #ddd6fe;
+}
+
+/* Maturité UA-Tuto */
+.badge-maturite-tuto,
+.badge-maturite.badge-ua-tuto,
+.badge-maturite.badge-tuto {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border-color: #bbf7d0;
+}
+
+.tuto-card-badge-maturite {
+  font-size: 0.62rem;
+  padding: 0.1rem 0.45rem;
+  margin-left: 0.5rem;
 }
 
 @media (max-width: 700px) {

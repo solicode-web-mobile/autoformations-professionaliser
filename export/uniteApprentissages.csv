@@ -2,19 +2,45 @@
 layout: null
 permalink: /export/uniteApprentissages.csv
 ---
-"ordre","code","nom","micro_competence_reference","lien","description","reference"
+"ordre","code","nom","domaine","micro_competence_reference","lien","description","reference"
 {% assign uas = site.uas | sort: "ordre" -%}
 {%- for p in uas -%}
   {%- assign _ordre = p.ordre -%}
   {%- assign _code = p.code | append: "" | strip -%}
   {%- assign _nom = p.title | append: "" | strip | replace: '"','""' | replace: '\n',' ' | replace: '\r',' ' -%}
-  {%- assign _micro_comp = "DWB-" | append: p.domaine -%}
+  {%- assign _domaine = p.domaine | append: "" | strip -%}
+
+  {%- assign dom = site.domaines | where: "code", p.domaine | first -%}
+  {%- assign comp_code = p.competence | default: dom.competence -%}
+  {%- assign comp = site.competences | where: "code", comp_code | first -%}
+  {%- assign filiere = site.filiere | default: "DMB" -%}
+  {%- if comp and comp.module_reference -%}
+    {%- assign mod_filiere = comp.module_reference | split: "-" | first -%}
+    {%- if mod_filiere and mod_filiere != "" -%}
+      {%- assign filiere = mod_filiere -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- if dom and dom.reference and dom.reference != "" -%}
+    {%- assign _micro_comp = dom.reference -%}
+  {%- elsif _domaine != "" -%}
+    {%- assign _micro_comp = filiere | append: "-" | append: _domaine -%}
+  {%- else -%}
+    {%- assign _micro_comp = "" -%}
+  {%- endif -%}
+
   {%- if p.url != empty and p.url != nil -%}
-    {%- assign _lien = "https://solicode-web-mobile.github.io/autoformations-web" | append: p.url -%}
+    {%- assign _lien = site.url | append: site.baseurl | append: p.url -%}
   {%- else -%}
     {%- assign _lien = "" -%}
   {%- endif -%}
+
   {%- assign _desc = p.description | append: "" | strip | replace: '"','""' | replace: '\n',' ' | replace: '\r',' ' -%}
-  {%- assign _ref = "DWB-" | append: _code -%}
-"{{ _ordre }}","{{ _code }}","{{ _nom }}","{{ _micro_comp }}","{{ _lien }}","{{ _desc }}","{{ _ref }}"
+
+  {%- if p.reference and p.reference != "" -%}
+    {%- assign _ref = p.reference -%}
+  {%- else -%}
+    {%- assign _ref = filiere | append: "-" | append: _code -%}
+  {%- endif -%}
+"{{ _ordre }}","{{ _code }}","{{ _nom }}","{{ _domaine }}","{{ _micro_comp }}","{{ _lien }}","{{ _desc }}","{{ _ref }}"
 {% endfor %}

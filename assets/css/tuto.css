@@ -134,6 +134,33 @@
   line-height: 1.2;
 }
 
+.tuto-topbar-badge-maturite {
+  margin-left: 0.45rem;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+}
+
+.badge-maturite.badge-tache,
+.badge-maturite.badge-ua-tache {
+  background-color: #f5f3ff;
+  color: #6d28d9;
+  border: 1px solid #ddd6fe;
+}
+
+.badge-maturite.badge-lab,
+.badge-maturite.badge-ua-lab {
+  background-color: #f0f7ff;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.badge-maturite.badge-tuto,
+.badge-maturite.badge-ua-tuto {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
 .tuto-header h1 {
   margin: 0;
 

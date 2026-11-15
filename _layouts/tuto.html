@@ -14,8 +14,29 @@ layout: default
           {% if page.tuto_id %}
           <span class="tuto-code">
             <span class="tuto-code-badge">{{ page.tuto_id }}</span>
+            {% assign current_ua_header = site.uas | where: "code", page.ua | first %}
+            {% assign current_maturite_header = page.maturite | default: current_ua_header.maturite %}
+            {% if current_maturite_header %}
+              {% assign mat_clean_header = current_maturite_header | replace: "UA-", "" | strip %}
+              {% assign mat_head_str = current_maturite_header | downcase %}
+              {% if mat_head_str contains "tach" or mat_head_str contains "tâch" %}
+                {% assign mat_head_class = "badge-tache" %}
+                {% assign mat_head_text = "Tâche" %}
+              {% elsif mat_head_str contains "lab" %}
+                {% assign mat_head_class = "badge-lab" %}
+                {% assign mat_head_text = "Lab" %}
+              {% elsif mat_head_str contains "tuto" %}
+                {% assign mat_head_class = "badge-tuto" %}
+                {% assign mat_head_text = "Tuto" %}
+              {% else %}
+                {% assign mat_head_class = "badge-default" %}
+                {% assign mat_head_text = mat_clean_header %}
+              {% endif %}
+              <span class="badge-maturite tuto-topbar-badge-maturite {{ mat_head_class }}">
+                {{ mat_head_text }}
+              </span>
+            {% endif %}
             <span class="tuto-domain-name">
-              {% assign current_ua_header = site.uas | where: "code", page.ua | first %}
               {% assign current_domaine_code_header = page.domaine | default: current_ua_header.domaine %}
               {% assign current_domaine_header = site.domaines | where: "code", current_domaine_code_header | first %}
               {{ current_domaine_header.title }}

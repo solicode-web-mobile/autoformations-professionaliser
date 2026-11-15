@@ -39,6 +39,8 @@
 
         {% if tuto_normal %}
 
+          {% assign current_tuto_mat = tuto_normal.maturite | default: include.maturite | default: ua.maturite %}
+
           <a
             href="{{ tuto_normal.url | relative_url }}"
             class="tuto-card {% if tuto.tuto_id == page.tuto_id %}tuto-card-active{% endif %}"
@@ -56,6 +58,27 @@
             <span class="tuto-card-title">
               {{ tuto_normal.title }}{% if tuto_normal.en_construction %} 🚧{% endif %}
             </span>
+
+            {% if current_tuto_mat %}
+              {% assign mat_pill = current_tuto_mat | replace: "UA-", "" | strip %}
+              {% assign mat_pill_str = current_tuto_mat | downcase %}
+              {% if mat_pill_str contains "tach" or mat_pill_str contains "tâch" %}
+                {% assign mat_pill_class = "badge-tache" %}
+                {% assign mat_pill_text = "Tâche" %}
+              {% elsif mat_pill_str contains "lab" %}
+                {% assign mat_pill_class = "badge-lab" %}
+                {% assign mat_pill_text = "Lab" %}
+              {% elsif mat_pill_str contains "tuto" %}
+                {% assign mat_pill_class = "badge-tuto" %}
+                {% assign mat_pill_text = "Tuto" %}
+              {% else %}
+                {% assign mat_pill_class = "badge-default" %}
+                {% assign mat_pill_text = mat_pill %}
+              {% endif %}
+              <span class="badge-maturite tuto-card-badge-maturite {{ mat_pill_class }}">
+                {{ mat_pill_text }}
+              </span>
+            {% endif %}
 
           </a>
 
