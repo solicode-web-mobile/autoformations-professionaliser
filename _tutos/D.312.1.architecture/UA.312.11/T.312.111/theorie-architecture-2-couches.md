@@ -1,7 +1,7 @@
 ---
 layout: tuto
-title: "Théorie : Architecture 2 couches"
-sous_titre: "Comprendre la séparation des responsabilités, les contrôleurs minces, les classes services et le formalisme ADR"
+title: "Théorie : Architecture 2 couches & ADR"
+sous_titre: "Comprendre le découpage architectural en deux couches, les principes SOLID et la formalisation des choix techniques"
 slug: "theorie-architecture-2-couches"
 permalink: /tutos/theorie-architecture-2-couches/
 tuto_id: "T.312.111"
@@ -10,7 +10,8 @@ ua: "UA.312.11"
 maturite: "UA-Lab"
 nav_order: 1
 simplified: true
-en_construction: true
+en_construction: false
+branche: "sprint1"
 data_html: ""
 data_css: ""
 data_js: ""
@@ -18,18 +19,25 @@ data_php: ""
 ---
 
 ## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase 3 — Conception & Architecture Logicielle / Étape 3.1 — Découplage Architectural & Décision ADR.
-- **Stack mobilisée :** Principes SOLID (Single Responsibility), patrons d'architecture MVC et Services, formalisme ADR.
+- **Position dans le flux :** Phase B — Analyse, Conception & Planification / Étape 3.1 — Découplage Architectural.
+- **Branche Git :** `sprint1`
+- **Stack mobilisée :** Principes SOLID (Single Responsibility), architecture 2 couches (Contrôleur / Service), formalisme ADR.
 
 ## 2. Travail à Faire (Ce que l'Apprenant Doit Produire)
-Effectuer les recherches nécessaires et concevoir une présentation synthétique (support visuel ou mémo écrit) expliquant le principe de séparation des responsabilités, les dangers des « contrôleurs obèses » (*Fat Controllers*), l'intérêt du patron Classe Service pour isoler l'accès aux données et la méthodologie de traçabilité des choix par les ADRs.
+Effectuer les recherches nécessaires et formaliser une fiche de synthèse expliquant le principe de séparation des responsabilités, les dangers des « contrôleurs obèses » (*Fat Controllers*), l'intérêt du patron Classe Service pour isoler l'accès aux données et la méthodologie de traçabilité des choix par les ADRs.
 
-## 3. Notions Clés du Sprint à Ne Pas Oublier
-- Le principe SoC (Separation of Concerns).
-- Le rôle précis d'un contrôleur mince (recevoir la requête HTTP, appeler le service, retourner la réponse Blade).
-- Le rôle d'une classe Service comme frontière métier indépendante du protocole web.
-- La structure formelle d'un ADR et les critères d'une décision d'ingénierie traçable.
+## 3. Répartition Didactique (Règle des 20/80)
 
-## 4. Points de Réflexion & Auto-Évaluation
-- *Pourquoi est-il stratégique de démarrer le Sprint 1 avec une classe Service lisant un CSV plutôt que de coder des requêtes SQL directes dans le contrôleur ?*
-- *Quand nous remplacerons le CSV par une base relationnelle au Sprint 2, quel composant sera modifié et quel composant restera intact ?*
+### Les 20% fournis directement au tutoriel :
+- **Architecture 2 couches :**
+  - **Couche Présentation (Contrôleur HTTP mince) :** Réceptionne la requête HTTP, valide les entrées élémentaires, délègue le traitement métier au Service et retourne la réponse (vue Blade ou redirection). Il ne contient aucune logique de persistance ni algorithme métier lourd.
+  - **Couche Métier / Données (Classe Service) :** Encapsule l'accès aux données et la logique métier. En Sprint 1, elle abstrait la lecture du fichier tabulaire `articles.csv` pour préparer une transition transparente vers un ORM/SGBD au sprint suivant.
+- **Principe SoC (Separation of Concerns) :** Chaque composant logiciel doit avoir une responsabilité unique et bien délimitée.
+- **Structure canonique d'un ADR (Architecture Decision Record) :** Titre, Statut (Accepté), Contexte, Décision retenue, Conséquences (positives et négatives), Alternatives écartées.
+
+### Les 80% recherchés par l'apprenant :
+- Analyser les risques de dette technique liés aux *Fat Controllers* (couplage fort, impossibilité de tester unitairement, non-réutilisabilité).
+- Comparer les bénéfices et compromis d'un amorçage rapide par source tabulaire CSV par rapport à l'installation immédiate d'un SGBD relationnel.
+
+## 4. Livrable Attendu
+- Fiche de synthèse d'architecture intégrée dans le journal d'apprentissage personnel de l'apprenant.

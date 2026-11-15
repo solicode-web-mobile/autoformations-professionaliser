@@ -1,6 +1,6 @@
 ---
 layout: tuto
-title: "Théorie : Prompt Engineering"
+title: "Théorie : Prompt Engineering & Méthode RIO"
 sous_titre: "Comprendre les LLMs, la méthode RIO, le Context Engineering et le méta-prompting"
 slug: "theorie-prompt-engineering"
 permalink: /tutos/theorie-prompt-engineering/
@@ -10,7 +10,8 @@ ua: "UA.325.11"
 maturite: "UA-Lab"
 nav_order: 1
 simplified: true
-en_construction: true
+en_construction: false
+branche: "sprint1"
 data_html: ""
 data_css: ""
 data_js: ""
@@ -18,18 +19,27 @@ data_php: ""
 ---
 
 ## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase 1 — Cadrage & Gouvernance Agile / Étape 1.3 — Outillage Prompt Engineering.
+- **Position dans le flux :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 1.1 — Outillage Prompt Engineering.
+- **Branche Git :** `sprint1`
 - **Stack mobilisée :** Chaîne d'outillage IA, LLMs (Gemini, Claude), architecture de contextes.
 
 ## 2. Travail à Faire (Ce que l'Apprenant Doit Produire)
-Effectuer les recherches documentaires nécessaires et concevoir une présentation synthétique (support visuel ou mémo écrit) expliquant les mécanismes de traitement des LLMs, la structure d'un prompt directif selon la méthode RIO et l'intérêt du Context Engineering par rapport au prompting naïf.
+Effectuer les recherches documentaires nécessaires et concevoir une fiche de synthèse expliquant le fonctionnement d'un LLM, la structure d'un prompt directif selon la méthode RIO et l'intérêt du Context Engineering.
 
-## 3. Notions Clés du Sprint à Ne Pas Oublier
-- Le principe de complétion statistique d'un LLM et la sensibilité au contexte initial.
-- Le triptyque RIO (Rôle, Instruction, Output).
-- Le rôle des contraintes négatives pour fiabiliser la conformité des sorties.
-- La notion de méta-prompting et la réutilisabilité des gabarits.
+## 3. Répartition Didactique (Règle des 20/80)
 
-## 4. Points de Réflexion & Auto-Évaluation
-- *Pourquoi un prompt demandant simplement « Écris-moi une page Laravel » donne-t-il un résultat inexploitable en production ?*
-- *En quoi l'exigence d'un format de sortie strict (Markdown/code brut) protège-t-elle l'intégration dans un pipeline de développement ?*
+### Les 20% fournis directement au tutoriel :
+- **Fenêtre de contexte et injection chirurgicale :** Un modèle de langage ne conserve aucune mémoire implicite entre sessions distinctes. L'agent doit recevoir explicitement les règles, le périmètre et les fichiers cibles (`@fichier`).
+- **Méthode RIO :**
+  - **Rôle :** Persona technique de haut niveau (ex. *« Expert Senior Laravel 12 »*).
+  - **Intention / Instructions :** Objectif fonctionnel unique et séquence d'actions sans ambiguïté.
+  - **Output :** Délimitation stricte du format attendu (Markdown brut, bloc de code sans fioriture).
+- **Contraintes négatives bloquantes :** Supprimer tout bavardage introductif ou de politesse, interdire le code partiel (`// TODO`) et forcer des chemins relatifs stricts.
+
+### Les 80% recherchés par l'apprenant :
+- Analyser le phénomène d'hallucination des LLMs et comment la complétion probabiliste influence la génération de code.
+- Comparer l'approche *Zero-Shot prompting* et *Few-Shot prompting* sur des cas d'usage de développement web.
+- Expérimenter l'impact de consignes négatives strictes sur la reproductibilité des sorties.
+
+## 4. Livrable Attendu
+- Fiche de synthèse RIO intégrée dans le journal d'apprentissage personnel de l'apprenant.

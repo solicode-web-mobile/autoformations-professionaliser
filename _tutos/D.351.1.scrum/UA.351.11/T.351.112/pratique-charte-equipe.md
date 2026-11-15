@@ -1,7 +1,7 @@
 ---
 layout: tuto
-title: "Pratique : Charte d'équipe"
-sous_titre: "Co-rédiger la charte d'équipe, organiser la rotation du Scrum Master et définir la DoD"
+title: "Pratique : Charte d'équipe & Organisation"
+sous_titre: "Établir la charte d'équipe agile de la promotion et contractualiser les règles de fonctionnement"
 slug: "pratique-charte-equipe"
 permalink: /tutos/pratique-charte-equipe/
 tuto_id: "T.351.112"
@@ -10,28 +10,25 @@ ua: "UA.351.11"
 maturite: "UA-Lab"
 nav_order: 2
 simplified: true
-en_construction: true
+en_construction: false
+branche: "sprint1"
 data_html: ""
 data_css: ""
 data_js: ""
 data_php: ""
 ---
 
-## 1. Livrable Attendu
-- `livrables/scrum/charte-equipe.md` (ou `scrum/README.md`) : Charte collective de gouvernance signée.
+## 1. Positionnement dans le Flux & la Stack
+- **Position dans le flux :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 1.2 — Charte d'Équipe.
+- **Branche Git :** `sprint1`
+- **Fichiers modifiés ou créés :** `scrum/charte-equipe.md`
 
-## 2. Consignes & Jalons de Réalisation
-Ne pas recopier de modèle générique ; bâtir la charte en respectant ces 4 jalons :
-1. **Rôles & Rotation :** Identifier les membres et fixer le calendrier de rotation hebdomadaire du Scrum Master.
-2. **Règles de Vie :** Fixer l'heure précise du Daily (15 min max) et les canaux officiels d'échange.
-3. **Protocole de Peer Coaching :** Règle des 15 min de recherche individuelle avant sollicitation d'un pair, puis escalade au SM après 30 min de blocage.
-4. **DoD Initiale :** Rédiger 5 à 7 critères d'acceptation minimaux pour l'incrément de sprint.
+## 2. Travail à Faire (Projet d'Imitation)
+L'apprenant applique les notions de rôles et de cérémonies pour co-rédiger avec le formateur la Charte d'équipe de la promotion pour le *Blog des Lauréats* :
+1. **Rôles & Rotation :** Calendrier de rotation du Scrum Master entre les apprenants.
+2. **Règles de Vie :** Horaire fixe du Daily Scrum (9h00, 15 min max) et canaux officiels d'échange.
+3. **Protocole de Peer Coaching :** Règle des 15 min de recherche individuelle avant sollicitation d'un pair, puis escalade au Scrum Master après 30 min de blocage.
 
-## 3. Points de Vigilance
-- ⚠️ Éviter les déclarations d'intention vagues ; chaque règle doit être mesurable et opposable.
-- ⚠️ La DoD doit être immédiatement testable dès le premier sprint.
-
-## 4. Critères de Validation
-- [ ] Le fichier `livrables/scrum/charte-equipe.md` existe et est versionné sous Git.
-- [ ] Le protocole d'escalade des difficultés est explicitement rédigé.
-- [ ] La DoD contient au moins 5 critères concrets et vérifiables.
+## 3. Critères de Validation
+- [ ] Le fichier `scrum/charte-equipe.md` existe et est versionné sur la branche `sprint1`.
+- [ ] Le protocole d'escalade des difficultés et la rotation du Scrum Master y sont explicitement rédigés.

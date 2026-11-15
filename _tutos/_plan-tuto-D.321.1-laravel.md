@@ -25,7 +25,7 @@
 - **Notions Clés Utilisées dans le Sprint :**
   - Cycle de vie d'une requête HTTP sous Laravel 12 (`public/index.php` $\to$ Kernel $\to$ Router $\to$ Vue $\to$ Réponse 200).
   - Routage déclaratif dans `routes/web.php` : façade `Route::get()`, closures anonymes.
-  - Moteur de gabarit Blade : syntaxe d'interpolation `{{ $variable }}`, directives de base.
+  - Moteur de gabarit Blade : syntaxe d'interpolation `{% raw %}{{ $variable }}{% endraw %}`, directives de base.
   - Intégration Tailwind CSS : classes utilitaires et structure responsive.
 - **Livrables :** Route d'accueil fonctionnelle et vue Blade (`routes/web.php`, `resources/views/welcome.blade.php`) sur la branche `sprint1`.
 - **Travail à Faire :** Assimiler les bases de Laravel, configurer la route GET racine et concevoir la page d'accueil du Blog des Lauréats.
@@ -93,7 +93,7 @@
   - **Les 20% fournis directement au tutoriel :**
     - Qu'est-ce que Laravel : framework PHP moderne adoptant le modèle MVC.
     - Le cycle d'une requête : point d'entrée unique `public/index.php`, passage au routeur `routes/web.php` et retour d'une vue.
-    - Syntaxe élémentaire de Blade : balises d'interpolation `{{ $variable }}` avec protection XSS intégrée et localisation dans `resources/views/`.
+    - Syntaxe élémentaire de Blade : balises d'interpolation `{% raw %}{{ $variable }}{% endraw %}` avec protection XSS intégrée et localisation dans `resources/views/`.
   - **Les 80% recherchés par l'apprenant :**
     - Organisation des répertoires du framework Laravel (`app/`, `config/`, `database/`, `resources/`, `routes/`).
     - Rôle du CLI Artisan et commandes de diagnostic (`php artisan route:list`).

@@ -1,7 +1,7 @@
 ---
 layout: tuto
-title: "Théorie : Contrôleur et Vues"
-sous_titre: "Comprendre le rôle du contrôleur HTTP dans le pattern MVC et les directives itératives Blade"
+title: "Théorie : Contrôleur et Vues dynamiques"
+sous_titre: "Comprendre le rôle du contrôleur HTTP dans l'architecture MVC et les directives de boucle Blade"
 slug: "theorie-controleur-et-vues"
 permalink: /tutos/theorie-controleur-et-vues/
 tuto_id: "T.321.121"
@@ -10,7 +10,8 @@ ua: "UA.321.12"
 maturite: "UA-Lab"
 nav_order: 1
 simplified: true
-en_construction: true
+en_construction: false
+branche: "sprint1"
 data_html: ""
 data_css: ""
 data_js: ""
@@ -18,18 +19,26 @@ data_php: ""
 ---
 
 ## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase 4 — Réalisation Applicative & Code Cible / Étape 4.2 — Contrôleur HTTP & Rendu de Collection.
+- **Position dans le flux :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.2 — Contrôleur HTTP.
+- **Branche Git :** `sprint1`
 - **Stack mobilisée :** Pattern MVC, Contrôleur HTTP Laravel, Directives Blade itératives.
 
 ## 2. Travail à Faire (Ce que l'Apprenant Doit Produire)
-Effectuer les recherches nécessaires et concevoir une présentation synthétique (support visuel ou mémo écrit) expliquant le rôle du contrôleur dans le découpage MVC, l'intérêt d'extraire la logique hors des routes, et l'usage des directives Blade pour afficher des collections de données.
+Effectuer les recherches nécessaires et formaliser une fiche de synthèse expliquant le rôle du contrôleur dans le découpage MVC, l'intérêt d'extraire la logique hors des routes, et l'usage des directives Blade pour afficher des collections de données.
 
-## 3. Notions Clés du Sprint à Ne Pas Oublier
-- Le rôle d'aiguilleur du contrôleur (coordonner sans accumuler la logique métier).
-- La génération de contrôleurs via la CLI Artisan (`make:controller`).
-- La fonction helper `view()` et le passage de données via `compact()`.
-- Les directives Blade itératives (`@foreach`, `@forelse`, `@empty`, `@endforeach`).
+## 3. Répartition Didactique (Règle des 20/80)
 
-## 4. Points de Réflexion & Auto-Évaluation
-- *Pourquoi la directive `@forelse` est-elle plus robuste et élégante qu'un `@if(count(...))` suivi d'un `@foreach` ?*
-- *Que se passe-t-il si la variable passée au contrôleur est vide ou nulle ?*
+### Les 20% fournis directement au tutoriel :
+- **Rôle du Contrôleur HTTP :** Agir comme coordinateur entre la requête entrante et la vue. Il élimine le code métier des fichiers de routage (`routes/web.php`), prépare les données et retourne une `Response`.
+- **Scaffolding Artisan :** Commande `php artisan make:controller Public/CategoryController` pour générer une classe standard dans `app/Http/Controllers/`.
+- **Passage de variables à la vue :** Utilisation de la fonction helper `view('categories.index', compact('categories'))` ou d'un tableau associatif clé-valeur.
+- **Directives itératives Blade :**
+  - `@foreach ($items as $item) ... @endforeach` pour boucler sur une collection.
+  - `@forelse ($items as $item) ... @empty ... @endforelse` pour gérer de manière robuste l'affichage alternatif lorsque la collection est vide.
+
+### Les 80% recherchés par l'apprenant :
+- Différence architecturale entre un contrôleur conventionnel (avec plusieurs méthodes d'action) et un contrôleur à action unique (*Single Action Controller* utilisant `__invoke`).
+- Manipulation fluide des collections PHP / Laravel pour trier et filtrer les données avant affichage.
+
+## 4. Livrable Attendu
+- Fiche de synthèse sur les contrôleurs MVC intégrée dans le journal d'apprentissage personnel de l'apprenant.
