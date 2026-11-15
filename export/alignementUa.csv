@@ -9,7 +9,12 @@ permalink: /export/alignementUa.csv
 {%- assign sessions = site.sessions | sort: "nav_order" -%}
 {%- assign global_index = 0 -%}
 {%- for s in sessions -%}
-  {%- assign _session_ref = filiere | append: "-" | append: s.code -%}
+  {%- assign _legacy_session_ref = filiere | append: "-" | append: s.code -%}
+  {%- if s.reference and s.reference != "" -%}
+    {%- assign _session_ref = s.reference -%}
+  {%- else -%}
+    {%- assign _session_ref = _legacy_session_ref -%}
+  {%- endif -%}
   {%- if s.uas -%}
     {%- for ua_code in s.uas -%}
       {%- assign global_index = global_index | plus: 1 -%}

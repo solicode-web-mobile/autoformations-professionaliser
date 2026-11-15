@@ -13,12 +13,19 @@ permalink: /export/sessionFormation.csv
   {%- else -%}
     {%- assign _titre = p.title | append: "" | strip | replace: '"','""' | replace: '\n',' ' | replace: '\r',' ' -%}
   {%- endif -%}
-  {%- assign _code = p.code | append: "" | strip -%}
-  {%- assign _thematique = "" -%}
   {%- assign _filiere = site.filiere | default: "DMB" -%}
+  {%- assign _legacy_ref = _filiere | append: "-" | append: p.code -%}
+  {%- if p.reference and p.reference != "" -%}
+    {%- assign _session_ref = p.reference -%}
+  {%- else -%}
+    {%- assign _session_ref = _legacy_ref -%}
+  {%- endif -%}
+  {%- assign _code = _session_ref -%}
+  {%- assign _reference = _session_ref -%}
+  {%- assign _thematique = "" -%}
   {%- assign _objectifs = p.objectif | append: "" | strip | replace: '"','""' | replace: '\n',' ' | replace: '\r',' ' -%}
   
-  {%- assign proto = site.prototypes | where: "session", _code | first -%}
+  {%- assign proto = site.prototypes | where: "session", p.code | first -%}
   {%- if proto -%}
     {%- assign _proto_titre = proto.title | append: "" | strip | replace: '"','""' | replace: '\n',' ' | replace: '\r',' ' -%}
     {%- assign _proto_desc = proto.travail_a_faire | append: "" | strip | replace: '"','""' | replace: '\n',' ' | replace: '\r',' ' -%}
@@ -30,7 +37,7 @@ permalink: /export/sessionFormation.csv
     {%- assign _proto_contraintes = "" -%}
   {%- endif -%}
 
-  {%- assign projet = site.projets | where: "session", _code | first -%}
+  {%- assign projet = site.projets | where: "session", p.code | first -%}
   {%- if projet -%}
     {%- assign _projet_titre = projet.title | append: "" | strip | replace: '"','""' | replace: '\n',' ' | replace: '\r',' ' -%}
     {%- assign _projet_desc = projet.travail_a_faire | append: "" | strip | replace: '"','""' | replace: '\n',' ' | replace: '\r',' ' -%}
@@ -46,7 +53,6 @@ permalink: /export/sessionFormation.csv
   {%- assign _date_debut = p.date_debut | default: "" -%}
   {%- assign _date_fin = p.date_fin | default: "" -%}
   {%- assign _jour_feries = "" -%}
-  {%- assign _reference = _filiere | append: "-" | append: _code -%}
   {%- assign _annee_formation = "2026-2027" -%}
 {{ newline }}"{{ _ordre }}","{{ _titre }}","{{ _code }}","{{ _thematique }}","{{ _filiere }}","{{ _objectifs }}","{{ _proto_titre }}","{{ _proto_desc }}","{{ _proto_contraintes }}","{{ _projet_titre }}","{{ _projet_desc }}","{{ _projet_contraintes }}","{{ _remarques }}","{{ _date_debut }}","{{ _date_fin }}","{{ _jour_feries }}","{{ _reference }}","{{ _annee_formation }}"
 {%- endfor -%}
