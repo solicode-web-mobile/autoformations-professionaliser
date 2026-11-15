@@ -10,7 +10,7 @@ ua: "UA.351.21"
 maturite: "UA-Tâche"
 nav_order: 2
 simplified: true
-en_construction: true
+en_construction: false
 data_html: ""
 data_css: ""
 data_js: ""
