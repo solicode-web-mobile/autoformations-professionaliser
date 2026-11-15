@@ -2,95 +2,80 @@
 
 ## 1. Présentation & Rôle
 `tutorial-planer` est l'**architecte et ingénieur de la progression pédagogique** des tutoriels au sein du cursus Solicode (Niveaux N1, N2 ou N3 selon le dépôt courant).  
-Il intervient en amont de `tutorial-writer` pour concevoir, auditer et ordonnancer les plans de réalisation technique par session ou sprint (`_plan-réalisation-tutos/S[X]/plan-developpement.md`).
+Il intervient en amont de `tutorial-writer`, `tutorial-lab-writer` et `tutorial-task-writer` pour concevoir, auditer et ordonnancer les plans de réalisation technique par session ou sprint :
+- En N1/N2 : `_plan-réalisation-tutos/S[X]/plan-developpement.md`.
+- En N3 : Plans par domaine `_tutos/_plan-tuto-D.XXX.Y-[nom].md` et cadrage de session `_sessions/S[X].md` / `_tutos/D.XXX.Y/_S0X.md`.
 
-7: Sa mission est de transformer méthodiquement le code hérité (`dossier-depart/`) vers le livrable complet de la session (`code-a-apprendre/`) sans aucune rupture cognitive ($E_{n-1} \rightarrow E_n$), de garantir l'intégrité référentielle des entités Jekyll (`_sessions/`, `_domaines/`, `_uas/`), et d'initialiser immédiatement les fichiers stubs de tutoriels sous `_tutos/` avec l'état `en_construction: true`.
-8: 
-9: ---
-10: 
-11: ## 2. Cas d'Usage Principaux
-12: - **Quand utiliser ce skill :**
-13:   - Cadrage et conception d'un nouveau plan de développement (`_plan-réalisation-tutos/S[X]/plan-developpement.md`).
-14:   - Découpage incrémental de la transformation de `dossier-depart/` vers `code-a-apprendre/`.
-15:   - Audit et restructuration d'un plan existant (marquage `audite: true`, détection des ruptures de prérequis).
-16:   - Détection, création et synchronisation automatique des entités pédagogiques manquantes (`_sessions/S[X].md`, `_domaines/`, `_uas/`).
-17:   - Initialisation des fichiers stubs de tutoriels sous `_tutos/` sans contenu avec `en_construction: true`.
-18:   - Formulation des titres de tutoriels selon la règle du juste équilibre (un seul objectif technique concret sans nom d'entité métier).
-19: - **Quand NE PAS utiliser ce skill :**
-20:   - Rédaction détaillée pas-à-pas du corps d'un tutoriel ➔ Utiliser `tutorial-writer`.
-21:   - Développement de layouts ou styles Jekyll ➔ Utiliser `dev-jekyll`.
-22:   - Synchronisation du socle partagé (Core Theme) ➔ Utiliser `sync-theme`.
-23:   - Gouvernance globale des règles et compétences ➔ Utiliser `plugin-dev`.
-24: 
-25: ---
-26: 
-27: ## 3. Prompts Types d'Invocation
-28: 
-29: ```markdown
-30: # Cadrage d'une nouvelle session
-31: @[.agents/skills/tutorial-planer/SKILL.md] Conçois le plan de réalisation de développement pour la session S5 à partir de dossier-depart/ et code-a-apprendre/.
-32: ```
-33: 
-34: ```markdown
-35: # Audit et mise en conformité d'un plan existant
-36: @[_plan-réalisation-tutos/S5/plan-developpement.md] @[.agents/skills/tutorial-planer/SKILL.md] /plan
-37: Audite ce plan selon les standards Solicode, vérifie la continuité cognitive et formule les titres équilibrés.
-38: ```
-39: 
-40: ```markdown
-41: # Alignement automatique des entités Jekyll et création des stubs
-42: @[.agents/skills/tutorial-planer/SKILL.md] Aligne la liste uas de la fiche session _sessions/S5.md et crée les fichiers stubs de tutoriels avec en_construction: true.
-43: ```
-44: 
-45: ---
-46: 
-47: ## 4. Prérequis & Données d'Entrée
-48: - **Codes source de référence :**
-49:   - `_plan-réalisation-tutos/S[X]/dossier-depart/` (code hérité de la session précédente).
-50:   - `_plan-réalisation-tutos/S[X]/code-a-apprendre/` (code cible complet de la session).
-51: - **Gabarits internes du skill :**
-52:   - `resources/gabarit-plan-session.md` (structure canonique du plan).
-53:   - `resources/gabarit-session.md`, `resources/gabarit-domaine.md`, `resources/gabarit-ua.md`.
-54:   - `resources/gabarit-tuto-en-construction.md` (structure canonique des stubs `en_construction: true`).
-55:   - `resources/methode-bien-demarrer.md` (sas d'installation si nouvelle technologie).
-56: - **Règles applicables :**
-57:   - Les règles pédagogiques locales dans `.agents/rules/` (cycle actif, niveau de langue adapté).
-58:   - `.agents/rules/standards-techniques.md` (UTF-8 sans BOM, livrables de code source).
-59: 
-60: ---
-61: 
-62: ## 5. Déroulement Pas-à-Pas (Ce que fait l'Agent)
-63: 1. **Étape 1 — Analyse Différentielle :** Compare `dossier-depart/` et `code-a-apprendre/` pour cartographier exactement les fichiers à créer ou modifier.
-64: 2. **Étape 2 — Contrôle de Granularité :** Vérifie le respect strict du nombre d'UAs (1 UA par domaine par défaut, 2 en cas de démarrage technologique).
-65: 3. **Étape 3 — Découpage Incrémental Déterministe :** Découpe la transformation en étapes élémentaires où chaque tutoriel $N$ consomme rigoureusement le résultat de $N-1$.
-66: 4. **Étape 4 — Titrage Équilibré :** Rédige les titres H3 en formulant un seul objectif technique concret sans jamais mentionner les entités métier (pas d'Article, Catégorie, etc.).
-67: 5. **Étape 5 — Rédaction des Fiches Techniques :** Renseigne pour chaque tutoriel les 6 rubriques normées avec extraits de code $E_{n-1} \rightarrow E_n$ et livrables physiques.
-68: 6. **Étape 6 — Synchronisation des Entités Jekyll :** Crée ou aligne immédiatement `_sessions/S[X].md`, `_domaines/` et `_uas/`.
-69: 7. **Étape 7 — Création des Fichiers Stubs :** Crée les fichiers sous `_tutos/[Domaine]/[UA]/[Code-Tuto]/[slug].md` avec Front Matter complet, `en_construction: true` et corps vierge.
-70: 
-71: ---
-72: 
-73: ## 6. Livrables Produits & Méthode de Vérification
-74: - **Livrables attendus :**
-75:   - `_plan-réalisation-tutos/S[X]/plan-developpement.md` (validé avec `audite: true`).
-76:   - Fiche de session `_sessions/S[X].md` synchronisée.
-77:   - Fiches d'Unités d'Apprentissage `_uas/[domaine]/UA.XXX.YY.md` alignées.
-78:   - Fichiers stubs de tutoriels `_tutos/[Domaine]/[UA]/[Code-Tuto]/[slug].md` avec `en_construction: true`.
-79: - **Comment vérifier le résultat :**
-80:   Vérifier la checklist binaire :
-81:   - [x] Front Matter présent avec `audite: true` et `statut: "audité et validé"`.
-82:   - [x] Règle de granularité respectée (1 UA par défaut, 2 au démarrage).
-83:   - [x] Zéro mention d'entités métier dans les titres H3.
-84:   - [x] Extraits de code $E_{n-1}$ et $E_n$ fournis pour chaque étape sans trou cognitif.
-85:   - [x] Fichiers stubs créés dans `_tutos/` avec `en_construction: true` et corps vierge.
-86:   - [x] Tous les livrables sont du code source tapé ou un journal `commandes.md`.
+Sa mission est d'assurer une progression continue sans rupture cognitive ($E_{n-1} \rightarrow E_n$), de garantir l'intégrité référentielle des entités Jekyll (`_sessions/`, `_domaines/`, `_uas/`), de respecter le calibrage de sprint (80h en N3) et d'initialiser les fichiers de tutoriels.
 
 ---
 
-## 7. Pièges Fréquents & Bonnes Pratiques
-| Piège Fréquent | Risque | Bonne Pratique |
-| :--- | :--- | :--- |
-| Mentionner l'entité du cas d'étude dans le titre H3 | L'apprenant mémorise le cas particulier au lieu de la compétence | Bannir « Article », « Catégorie » des titres H3 ; se focaliser sur la notion technique pure |
-| Sauter une étape de configuration locale | Blocage complet de l'apprenant | Intégrer obligatoirement le sas « Bien Démarrer » lors de l'introduction d'un outil |
-| Multiplier les micro-UAs pour chaque mot-clé | Éparpillement du référentiel | Respecter la règle d'une seule UA par domaine par session en régime de croisière |
-| Livrable formulé comme un constat passif | Manque d'évaluation tangible | Exiger exclusivement du code source effectivement tapé ou un fichier `commandes.md` |
+## 2. Cas d'Usage Principaux
+- Cadrage et découpage d'un nouveau sprint de 80h en N3 à travers les 4 phases (A: Outillage & Cadrage, B: Analyse & Planification, C: Réalisation, D: Clôture).
+- Conception des plans de tutoriels par domaine (`_tutos/_plan-tuto-D.XXX.Y-[nom].md`).
+- Audit et simplification de plans de sessions existants pour éliminer redondances et tâches non pertinentes.
+- Arbitrage d'outillage IA : planification des prompts uniquement pour les étapes récurrentes du flux de travail produisant des livrables de sprint.
+- Alignement des entités Jekyll (`_sessions/S[X].md`, `_domaines/`, `_uas/`).
+- Initialisation des fichiers de tutoriels (stubs `en_construction: true`) et bascule vers `en_construction: false` dès validation.
+
+---
+
+## 3. Prompts Types d'Invocation
+
+```markdown
+# Cadrage d'une session de sprint N3 (80h)
+@[.agents/skills/tutorial-planer/SKILL.md] Conçois la planification de la Session S01 en 80h réparties sur les 4 phases A, B, C et D selon le flux de travail Scrum.
+```
+
+```markdown
+# Audit et mise en conformité d'un plan de domaine existant
+@[_tutos/_plan-tuto-D.321.1-laravel.md] @[.agents/skills/tutorial-planer/SKILL.md] /plan
+Audite ce plan selon les standards N3, élimine les théories superflues, réserve les prompts aux flux récurrents et calibre la branche sprint1.
+```
+
+```markdown
+# Alignement automatique des entités Jekyll et création des stubs
+@[.agents/skills/tutorial-planer/SKILL.md] Aligne la liste uas de la fiche session _sessions/S1.md et crée les fichiers stubs de tutoriels sous _tutos/.
+```
+
+---
+
+## 4. Prérequis & Données d'Entrée
+- **Cadrage de Session :** Durée verrouillée à 80h (10 jours $\times$ 8h/j en N3) et branche Git `sprintX`.
+- **Référentiel de Compétences :** Fiches `_modules/`, `_competences/`, `_domaines/` et `_uas/`.
+- **Ciblage Exclusif :** Tous les tutoriels ciblent exclusivement le Projet d'imitation (*Blog des Lauréats*).
+- **Règles applicables :**
+  - `.agents/rules/pedagogie-spartel-n3.md` (Pareto 20/80, zéro théorie en tâche, pas de durée aux apprenants).
+  - `.agents/rules/standards-techniques.md` (UTF-8 sans BOM, livrables de code source et markdown).
+
+---
+
+## 5. Déroulement Pas-à-Pas (Ce que fait l'Agent)
+1. **Étape 1 — Analyse du Périmètre & Cadrage Temporel :** Verrouille la durée globale à 80h pour le sprint.
+2. **Étape 2 — Structuration en 4 Phases Chronologiques :**
+   - Phase A : Outillage IA, Gouvernance & Cadrage.
+   - Phase B : Analyse des Exigences, Conception & Planification.
+   - Phase C : Réalisation Applicative & Code Cible.
+   - Phase D : Clôture de Sprint, Rétrospective & Bilan.
+3. **Étape 3 — Découpage Séquentiel Sans Rupture :** Ordonnance les UAs et tutoriels de manière strictement continue ($1 \dots N$).
+4. **Étape 4 — Filtrage des Prompts & Théories :**
+   - Supprime les théories déjà acquises aux niveaux antérieurs (ex : diagrammes UML déjà maîtrisés en N2).
+   - Réserve la création de prompts aux seules étapes récurrentes de flux de travail.
+5. **Étape 5 — Synchronisation des Entités Jekyll :** Crée ou aligne `_sessions/S[X].md`, `_domaines/` et `_uas/`.
+6. **Étape 6 — Génération des Fichiers de Tutoriels :** Initialise les fichiers sous `_tutos/[Domaine]/[UA]/[Code-Tuto]/[slug].md`.
+
+---
+
+## 6. Livrables Produits & Méthode de Vérification
+- **Livrables attendus :**
+  - Plans par domaine `_tutos/_plan-tuto-D.XXX.Y-*.md` validés.
+  - Fiche de session `_sessions/S[X].md` synchronisée.
+  - Fiches d'Unités d'Apprentissage `_uas/[domaine]/UA.XXX.YY.md` alignées (ordre, durée, notions).
+  - Fichiers de tutoriels sous `_tutos/` (en `en_construction: false` dès validation).
+- **Checklist binaire de contrôle :**
+  - [x] Durée totale de la session exactement égale à 80h.
+  - [x] Séquence des UAs continue de 1 à $N$.
+  - [x] Branche Git unique `sprintX` indiquée.
+  - [x] Zéro durée affichée aux apprenants dans les titres et contenus.
+  - [x] Tous les tutoriels ciblent exclusivement le Projet d'imitation.
+  - [x] Tous les fichiers sont encodés en **UTF-8 sans BOM**.

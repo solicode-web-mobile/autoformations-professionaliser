@@ -1,7 +1,7 @@
 ---
 name: tutorial-writer
 description: Conçoit et rédige des tutoriels techniques (unitaires ou en série progressive vers un code final) nativement simplifiés, concrets et vérifiables pour les apprenants, en chargeant obligatoirement les règles didactiques du domaine concerné et en rappelant l'emplacement exact du livrable dans le dépôt annuel.
-version: 2.6.0
+version: 3.0.0
 inspiration:
   source: "solicode-pedagogy"
   plugin: "pedagogy-referential"
@@ -59,6 +59,14 @@ $$\text{Comprendre} \longrightarrow \text{Reproduire} \longrightarrow \text{Exp�
 
 # 4. Contraintes & Règles Inviolables
 - **Chargement Obligatoire des Ressources du Niveau :** Avant TOUTE rédaction, simplification ou refonte d'un tutoriel, l'agent DOIT impérativement charger le profil du niveau courant (.agents/resources/[niveau]/profil-[niveau].md) ainsi que la fiche didactique du domaine concerné si elle existe sous .agents/resources/[niveau]/domaines/. L'agent applique strictement les contraintes propres au domaine et au niveau en cours. Interdiction formelle d'engager la rédaction sans avoir consulté les spécifications du niveau.
+- **Livrables en Niveau N3 (Organisation par Sprints) :**
+  En Niveau N3, les livrables d'apprentissage sont réalisés au sein d'un Sprint Scrum et versionnés sur la **branche Git unique du sprint** (`sprintX`, ex: `sprint1`).
+  - Les tutoriels guident l'apprenant **exclusivement sur le Projet d'imitation** (*Blog des Lauréats*).
+  - Les fichiers impactés sont spécifiés avec leur chemin relatif exact dans le projet (`app/Services/`, `app/Http/Controllers/`, `resources/views/`, `routes/web.php`, `scrum/`, `livrables/`).
+  - Interdiction stricte de mentionner des durées de tâche (`(2h)`, `(4h)`) dans les titres ou les consignes destinées aux apprenants.
+  - Dès validation et intégration, la métadonnée porte obligatoirement `en_construction: false`.
+- **Règle de Pareto 20/80 en Théorie :**
+  Dans les tutoriels comportant une phase d'assimilation théorique, le contenu fournit directement les 20% de définitions fondamentales, rigoureuses et immédiatement discriminantes pour débloquer 80% du travail pratique. Les 80% complémentaires font l'objet d'une recherche active ciblée de l'apprenant.
 - **Preuve par le Code & Dépôt Unique des Autoformations :** L'apprenant dispose d'un **dépôt GitHub unique pour l'ensemble des livrables de l'année**, organisé par les **noms lisibles** (et NON les codes alphanumériques) des domaines, des UA et des tutoriels :
   ```text
   [nom-domaine]/[nom-ua]/[nom-tutoriel]/[nom-fichier]

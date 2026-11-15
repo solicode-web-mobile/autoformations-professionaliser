@@ -1,37 +1,39 @@
 # Guide Opérationnel : Comment Utiliser `tutorial-task-writer`
 
 ## 1. Rôle du Skill
-Le skill `tutorial-task-writer` rédige et met à jour les fiches de tutoriels opérationnels rattachées aux Unités d'Apprentissage de maturité **`UA-Tâche`** (cadrage, cérémonies de sprint Scrum, bilan de projet).
+Le skill `tutorial-task-writer` rédige et met à jour les fiches de tutoriels opérationnels rattachées aux Unités d'Apprentissage de maturité **`UA-Tâche`** (cadrage de périmètre, rituels et cérémonies de sprint Scrum, outillage IA des cérémonies, bilans de progression).
 
 ---
 
 ## 2. Cas d'Usage Principaux
-- Rédaction d'un tutoriel de rituel agile (Sprint Planning, Sprint Review, Sprint Retrospective, Backlog Grooming).
-- Formalisation des étapes de démarrage d'un sprint (cadrage, validation de l'environnement, pitch deck).
+- Rédaction d'un tutoriel de cérémonie agile (Sprint Planning, Sprint Review, Sprint Retrospective, Backlog Refinement).
+- Rédaction du tutoriel de cadrage opérationnel du périmètre d'un sprint (`cadrage/cadrage-projet.md`).
+- Rédaction des tutoriels d'outillage IA des cérémonies agiles (conception des prompts de clôture et de planification).
 - Cadrage des bilans individuels et collectifs d'acquisition de compétences.
 
 ---
 
 ## 3. Prompts Types pour Invoquer le Skill
-- *« Rédige les fiches de tutoriels pour l'UA-Tâche UA.351.21 à partir du plan _tutos/_plan-tuto-D.351.2-realisation-projet.md. »*
-- *« Formalise le tutoriel opérationnel du rituel de Sprint Planning (T.351.221) pour l'UA-Tâche UA.351.22. »*
-- *« Rédige les étapes de la rétrospective et de la dette d'empathie pour la tâche T.351.232. »*
+- *« Rédige la fiche opérationnelle de cadrage de projet (T.351.211) pour l'UA-Tâche UA.351.21. »*
+- *« Formalise le tutoriel de rituel de Sprint Planning (T.351.221) pour l'UA-Tâche UA.351.22 sans aucune théorie et sur la branche sprint1. »*
+- *« Rédige le tutoriel d'outillage IA T.351.235 créant les 4 prompts de clôture de sprint selon la méthode RIO. »*
 
 ---
 
 ## 4. Prérequis
 1. L'Unité d'Apprentissage parente doit porter la mention `maturite: "UA-Tâche"`.
-2. Le plan de développement du domaine (`_plan-tuto-D.351.2-realisation-projet.md`) et le cadrage de session (`_S01.md`) sont disponibles.
-3. Les artefacts attendus (charte, procès-verbaux, grilles DoD, rapports de rétrospective) sont clairement délimités.
+2. Le plan de développement du domaine (`_plan-tuto-D.351.2-realisation-projet.md`) et le cadrage de session (`_sessions/S[X].md`) sont disponibles.
+3. Les artefacts attendus (cadrage, procès-verbaux, grilles DoD, rapports de rétrospective, prompts de cérémonie) sont clairement délimités.
+4. La branche Git de travail (ex: `sprint1`) est identifiée.
 
 ---
 
 ## 5. Déroulement Pas-à-Pas
 1. **Étape 1 — Définition de l'Objectif Opérationnel & Prérequis :**  
-   Clarifier ce que l'équipe doit accomplir concrètement dans le sprint et les prérequis nécessaires.
-2. **Étape 2 — Découpage en Étapes Directives :**  
-   Structurer le déroulement en 3 à 5 étapes claires rédigées à l'impératif direct (*« Exécutez »*, *« Découpez »*, *« Validez »*).
+   Clarifier ce que l'équipe doit accomplir concrètement dans le sprint, sans mentionner de durée de tâche à l'apprenant.
+2. **Étape 2 — Découpage en Étapes Directives (Zéro Théorie) :**  
+   Structurer le déroulement en étapes d'action directes rédigées à l'impératif direct (*« Exécutez »*, *« Découpez »*, *« Validez »*).
 3. **Étape 3 — Définition des Livrables & Critères de Réussite :**  
-   Spécifier l'emplacement exact des livrables Markdown et formuler des critères de validation binaires `[ ]`.
+   Spécifier l'emplacement exact des fichiers impactés sur la branche Git du sprint (`sprintX`) et formuler des critères de validation binaires `[ ]`.
 4. **Étape 4 — Sauvegarde & Contrôle :**  
-   Enregistrer le fichier en UTF-8 sans BOM sous `_tutos/[Domaine]/[UA]/[Code-Tuto]/[slug].md` avec `maturite: "UA-Tâche"` et `en_construction: true`.
+   Enregistrer le fichier en **UTF-8 sans BOM** sous `_tutos/[Domaine]/[UA]/[Code-Tuto]/[slug].md` avec `maturite: "UA-Tâche"` et `en_construction: false` dès validation.

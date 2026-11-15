@@ -1,59 +1,55 @@
 # Guide Opérationnel : Comment Utiliser `tutorial-lab-writer`
 
 ## 1. Rôle du Skill
-Le skill `tutorial-lab-writer` est le rédacteur technique et pédagogique dédié aux Unités d'Apprentissage relevant du niveau de maturité **`UA-Lab`** (ateliers pratiques guidés de modélisation, de cadrage agile, d'architecture et d'outillage IA).
+Le skill `tutorial-lab-writer` est le rédacteur technique et pédagogique dédié aux Unités d'Apprentissage relevant du niveau de maturité **`UA-Lab`** (ateliers pratiques guidés de modélisation, de cadrage agile, d'architecture, d'outillage IA et de développement avec frameworks).
 
 ---
 
 ## 2. Cas d'Usage Principaux
-- Rédaction des 3 fiches de tutoriels (Théorie, Pratique sur projet d'imitation, Prompts RIO fil rouge) pour une Unité d'Apprentissage `UA-Lab`.
-- Alignement et mise à jour d'un atelier pratique guidé à partir de la source de vérité (`_plan-tuto-D.XXX.Y.md`).
-- Formalisation des critères d'évaluation et de validation d'un atelier pratique UML, Scrum ou Architecture.
+- Rédaction des fiches de tutoriels flexibles (Théorie 20/80, Pratique sur projet d'imitation, Création de prompts récurrents) pour une Unité d'Apprentissage `UA-Lab`.
+- Arbitrage didactique : omission de théorie superflue (notions N1/N2 déjà validées) ou omission de prompt hors flux récurrent.
+- Scission des prompts d'ingénierie applicative (ex: `prompt-back-end` et `prompt-front-end`).
+- Alignement et mise à jour des ateliers pratiques à partir des plans de domaine (`_tutos/_plan-tuto-D.XXX.Y-*.md`).
 
 ---
 
 ## 3. Prompts Types pour Invoquer le Skill
-- *« Rédige les fiches de tutoriels pour l'UA-Lab UA.311.21 à partir du plan _tutos/_plan-tuto-D.311.2.md. »*
-- *« Mets à jour la tâche 2 (Pratique) de l'UA-Lab UA.311.22 avec les jalons de réalisation Mermaid. »*
-- *« Rédige le prompt RIO de la tâche 3 de l'UA-Lab UA.312.11 pour le projet fil rouge. »*
+- *« Rédige les fiches de tutoriels pour l'UA-Lab UA.311.21 à partir du plan _tutos/_plan-tuto-D.311.2-uml.md en omettant la théorie déjà acquise en N2. »*
+- *« Formalise la fiche théorique 20/80 (T.351.121) de l'UA-Lab UA.351.12 avec les définitions clés de Product Backlog et User Stories. »*
+- *« Rédige le tutoriel de création du prompt backend (T.321.133) pour l'UA-Lab UA.321.13 avec le cahier des charges RIO complet. »*
 
 ---
 
 ## 4. Prérequis
 Avant d'activer le skill, s'assurer que :
 1. L'Unité d'Apprentissage est explicitement qualifiée avec `maturite: "UA-Lab"`.
-2. Le plan de tutoriels associé (`_tutos/_plan-tuto-D.XXX.Y.md`) et le cadrage de session (`_tutos/_S0X.md`) sont disponibles comme sources de vérité.
-3. Les emplacements cibles de livrables (`livrables/uml/`, `livrables/ia/prompts/`, etc.) sont identifiés.
+2. Le plan de tutoriels associé (`_tutos/_plan-tuto-D.XXX.Y-*.md`) et le cadrage de session (`_sessions/S[X].md`) sont disponibles comme sources de vérité.
+3. La branche Git du sprint (ex: `sprint1`) et les fichiers cibles impactés sont clairement identifiés.
 
 ---
 
 ## 5. Déroulement Pas-à-Pas
 
 ### Étape 1 : Chargement des Sources de Vérité
-- Charger la description de l'UA dans `_uas/` et dans le plan du domaine `_tutos/_plan-tuto-D.XXX.Y.md`.
-- Extraire les 3 tâches associées : Tâche 1 (Théorie), Tâche 2 (Pratique), Tâche 3 (Prompts & Skills).
+- Charger la description de l'UA dans `_uas/` et dans le plan du domaine `_tutos/_plan-tuto-D.XXX.Y-*.md`.
+- Identifier la composition requise (2, 3 ou 4 tâches) selon les règles d'omission de théorie ou d'éviction de prompt.
 
-### Étape 2 : Rédaction de la Fiche Théorie (`T.XXX.YY1`)
-- Renseigner la section 1 : Positionnement dans le Flux & la Stack.
-- Définir le Travail à faire pour l'apprenant (recherche documentaire, mémo de synthèse).
-- Formaliser les Notions Clés et les questions d'auto-évaluation.
+### Étape 2 : Rédaction de la Fiche Théorie (si requise)
+- Appliquer rigoureusement la règle Pareto 20/80 :
+  - Fournir 20% de définitions fondamentales incontournables.
+  - Formuler les 80% de notions à approfondir par recherche active de l'apprenant.
+- Ne jamais afficher d'indication de durée.
 
-### Étape 3 : Rédaction de la Fiche Pratique (`T.XXX.YY2`)
-- Définir le chemin exact du livrable physique attendu.
-- Découper la réalisation en 3 jalons chronologiques clairs.
-- Ajouter les points de vigilance et les critères de validation sous forme de cases à cocher `[ ]`.
+### Étape 3 : Rédaction de la Fiche Pratique
+- Cibler **exclusivement le Projet d'imitation** (*Blog des Lauréats*).
+- Spécifier la branche Git (`branche: "sprintX"`).
+- Découper la réalisation en jalons chronologiques clairs et fournir des critères de validation binaires `[ ]`.
 
-### Étape 4 : Rédaction de la Fiche Prompts & Skills (`T.XXX.YY3`)
-- Structurer le prompt selon la méthode RIO (Rôle, Instruction, Output, Contraintes Négatives).
-- Spécifier les critères de test du prompt avec un agent IA.
+### Étape 4 : Rédaction de la Fiche Création de Prompt (si flux récurrent)
+- Titrer directement au format `Création du prompt-[nom]`.
+- Expliciter les missions concrètes que le prompt exécute pour le projet.
+- Structurer le cahier des charges selon la méthode RIO avec contraintes négatives strictes.
 
 ### Étape 5 : Encodage et Validation
-- Sauvegarder impérativement les fichiers en UTF-8 sans BOM.
-- Vérifier la présence du champ `maturite: "UA-Lab"` et de l'état `en_construction: true`.
-
----
-
-## 6. Méthode de Vérification des Livrables
-- **Absence de BOM :** Exécuter le test de validation PowerShell sur les fichiers `.md`.
-- **Rendu Jekyll :** Vérifier que les pages s'affichent correctement sous `_layouts/tuto.html`.
-- **Zéro Capture d'Écran :** Contrôler que tous les livrables exigés sont des fichiers de code ou de texte (`.mmd`, `.md`, `.prompt.md`).
+- Vérifier que le frontmatter porte `en_construction: false` lors de la publication.
+- Sauvegarder impérativement en **UTF-8 sans BOM** sous `_tutos/[Domaine]/[UA]/[Code-Tuto]/[slug].md`.

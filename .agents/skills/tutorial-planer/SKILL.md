@@ -1,7 +1,7 @@
 ---
 name: tutorial-planer
 description: Conçoit, audite et optimise les plans de réalisation et la progression pédagogique des tutoriels par session/sprint, garantissant le chaînage sans rupture cognitive, le titrage technique équilibré (un seul objectif concret), le sas 'Bien démarrer', la description technique complète transformant le dossier de départ vers le livrable final, le respect de la granularité (1 UA par domaine par session, 2 au démarrage), et la création automatique des entités pédagogiques manquantes (Unités d'Apprentissage _uas/, Sessions _sessions/, Domaines _domaines/).
-version: 1.4.0
+version: 2.0.0
 inspiration:
   source: "solicode-pedagogy"
   plugin: "pedagogy-referential"
