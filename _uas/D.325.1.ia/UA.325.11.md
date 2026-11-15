@@ -2,22 +2,22 @@
 title: "Prompt Engineering"
 layout: ua
 code: "UA.325.11"
+maturite: "UA-Lab"
 ordre: 5
 competence: "C.325"
 domaine: "D.325.1"
-duree: 10
+duree: 8
 objectif: >
-  Maîtriser les fondations opérationnelles de l'interaction avec un Grand Modèle de Langage (LLM) pour fiabiliser la production d'artefacts logiciels.
+  Maîtriser la méthode RIO et le Context Engineering pour outiller l'apprenant d'un méta-prompt capable de générer tous les prompts du flux de développement.
 description: >
-  Maîtriser les fondations opérationnelles de l'interaction avec un Grand Modèle de Langage (LLM) pour fiabiliser la production d'artefacts logiciels. L'apprenant apprend à formuler des instructions directes, fermées et déterministes évitant les hallucinations, à cibler chirurgicalement les intrants de contexte documentaire et à instaurer une boucle critique d'évaluation systématique du résultat généré.
+  Outiller le développeur augmenté par l'ingénierie de prompt structurée. L'apprenant formalise le guide méthodologique RIO et conçoit le méta-prompt réutilisable pour automatiser la transposition des étapes sur le projet Fil Rouge.
 notions:
-  - "Fondations des LLMs : Tokens, fenêtre de contexte, température, complétion probabiliste et prévention des hallucinations"
-  - "Patron Canonique de Prompt à 4 Blocs : Rôle, Intention opérationnelle, Spécifications techniques, Contraintes négatives d'exclusion"
-  - "Méthode RIO : Rôle, Intention, Output délimité"
-  - "Context Engineering Chirurgical : Sélection ciblée des fichiers via @fichier, réduction du bruit documentaire"
-  - "Boucle d'Évaluation Critique : Vérification de conformité, diagnostic d'écart et reformulation itérative"
+  - "Méthode directrice RIO : Rôle précis (persona d'expert), Instructions contextualisées sans ambiguïté, Output au format strict (Markdown, code pur)"
+  - "Context Engineering : Injection du contexte métier et des règles de développement, réduction drastique des hallucinations"
+  - "Contraintes négatives explicites : Suppression du bavardage de politesse, interdiction formelle de dévier du périmètre fonctionnel"
+  - "Méta-Prompting : Conception d'un prompt générateur de prompts (prompt-creator.prompt.md) paramétré par variables [VARIABLE]"
 livrable: >
-  Méta-prompt prompt-creator.prompt.md, guide méthodologique de prompting (ia/README.md), et templates de prompts de sprint validés (diagramme-context.prompt.md, diagramme-cas-utilisation.prompt.md).
+  Guide opératoire d'ingénierie de prompt (livrables/ia/README.md) et générateur de prompts (livrables/ia/prompt-creator.prompt.md).
 travail_a_faire: >
-  Élaborer le méta-prompt de référence prompt-creator.prompt.md selon la méthode RIO et générer les prompts directifs de cadrage pour le sprint.
+  Rédiger le guide RIO d'équipe, concevoir le méta-prompt prompt-creator et tester sa pertinence sur un cas d'usage réel.
 ---

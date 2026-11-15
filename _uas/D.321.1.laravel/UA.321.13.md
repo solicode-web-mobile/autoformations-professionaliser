@@ -1,24 +1,25 @@
 ---
-title: "Contrôleur, Classe Service et Vue détaillée"
+title: "Contrôleur, Service et Vue détaillée"
 layout: ua
 code: "UA.321.13"
+maturite: "UA-Lab"
 ordre: 13
 competence: "C.321"
 domaine: "D.321.1"
-duree: 12
+duree: 14
 objectif: >
-  Développer l'incrément logiciel principal du sprint en architecture 2 couches sous Laravel 12 avec route dynamique, contrôleur mince, classe Service et gestion 404.
+  Développer l'incrément logiciel principal en architecture deux couches : route dynamique, contrôleur mince avec injection de dépendance, classe Service et gestion HTTP 404.
 description: >
-  Développer l'incrément logiciel principal du sprint en architecture 2 couches sous Laravel 12 : déclaration d'une route paramétrée dynamique, contrôleur mince avec injection d'une classe Service de lecture de données tabulaires (CSV), rendu d'une vue Blade responsive et déclenchement de l'erreur HTTP 404 (abort(404)).
+  Finaliser la tranche verticale logicielle du Sprint 1. L'apprenant implémente la route paramétrée, injecte la classe Service encapsulant la lecture tabulaire, gère l'exception ressource non trouvée (abort 404) et produit la vue de détail sous gabarit maître responsive.
 notions:
-  - "Paramètres d'URL Dynamiques & Routes Nommées : Routes avec paramètres {id} ou {slug} et génération d'URL via route()"
-  - "Contrôleur Mince & Injection IoC : Injection de ArticleService dans le contrôleur via le constructeur"
-  - "Classe Service & Lecture Tabulaire : Encapsulation de la lecture CSV sans base relationnelle"
-  - "Gestion de l'Erreur HTTP 404 : Interception du cas de ressource non trouvée via abort(404) et personnalisation de errors/404.blade.php"
-  - "Gabarit Blade Maître : Héritage structurel (layouts/app.blade.php, @extends, @section)"
+  - "Routes paramétrées dynamiques : paramètres d'URL Route::get('/articles/{id}', ...), contraintes whereNumber('id'), routes nommées name('articles.show')"
+  - "Injection de dépendances IoC : déclaration du service dans le constructeur de ArticleController pour résolution automatique par le conteneur Laravel"
+  - "Classe Service découplée : classe ArticleService dans app/Services/, méthode find(int $id), extraction et parsing des données tabulaires CSV (fgetcsv())"
+  - "Gestion d'erreurs et résilience HTTP : interception d'absence d'article via abort(404), gabarit personnalisé resources/views/errors/404.blade.php"
+  - "Héritage de gabarit maître Blade : structure maître resources/views/layouts/app.blade.php avec @yield('content'), héritage par @extends('layouts.app') et @section('content')"
+  - "Composants d'interface partagés : barre de navigation (navbar), pied de page (footer) et bouton de retour consultation"
 livrable: >
-  Code source complet de la consultation détaillée : routes/web.php (articles.show), ArticleController.php, ArticleService.php, layouts/app.blade.php, articles/show.blade.php et errors/404.blade.php.
+  Incrément logiciel complet et fonctionnel (routes, contrôleur, service, vues de détail et 404) et prompt complet (livrables/ia/prompts/prompt-service-detail.prompt.md).
 travail_a_faire: >
-  Développer l'incrément complet de consultation d'article avec ArticleController, ArticleService (données CSV) et les vues Blade responsive.
+  Coder la route nommée, la classe ArticleService, le contrôleur mince, la vue Blade avec gabarit maître et le prompt d'ingénierie réutilisable.
 ---
-

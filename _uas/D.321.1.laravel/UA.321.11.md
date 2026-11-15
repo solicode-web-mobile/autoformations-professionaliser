@@ -1,21 +1,23 @@
 ---
-title: "Hello World Laravel : Route et Vue"
+title: "Routage et Vues Laravel"
 layout: ua
 code: "UA.321.11"
+maturite: "UA-Lab"
 ordre: 11
 competence: "C.321"
 domaine: "D.321.1"
 duree: 8
 objectif: >
-  Valider l'environnement d'exécution local et le cycle de routage élémentaire sous Laravel 12.
+  Initialiser le socle Laravel 12, configurer le routage web de base et produire un premier rendu visuel via le moteur de gabarit Blade.
 description: >
-  Valider l'environnement d'exécution local et le cycle de routage élémentaire sous Laravel 12. L'apprenant déclare une première route web publique dans routes/web.php et compose une vue Blade minimale sans contrôleur ni logique métier.
+  Prendre en main le framework Laravel 12 et son cycle de requête HTTP. L'apprenant valide l'environnement de développement, déclare sa première route GET et retourne une vue Blade enrichie sous Tailwind CSS.
 notions:
-  - "Initialisation & Serveur Local : Structure de répertoires standard (routes/, resources/views/), commande de démarrage de serveur local"
-  - "Routage Déclaratif Minimal : Déclaration de route fermée (Route::get()) et renvoi direct d'une vue (view())"
-  - "Moteur Blade de Base : Syntaxe de balisage HTML sous Blade et création de template simple"
+  - "Cycle de vie d'une requête HTTP sous Laravel 12 (public/index.php -> Kernel HTTP -> Middlewares -> Routeur -> Vue -> Réponse 200)"
+  - "Routage déclaratif dans routes/web.php : façade Route::get(), closures anonymes function () { return view(...); }"
+  - "Moteur de gabarit Blade : convention d'arborescence resources/views/*.blade.php, syntaxe d'interpolation {{ $variable }}, protection XSS native"
+  - "Intégration CSS utilitaire : intégration de Tailwind CSS (via CDN/Vite), conteneurs centrés, typographie responsive"
 livrable: >
-  Déclaration de la route de test élémentaire (routes/web.php) et vue minimale de confirmation d'environnement (resources/views/welcome.blade.php).
+  Route d'accueil fonctionnelle et vue Blade stylisée (routes/web.php, resources/views/welcome.blade.php) et prompt (livrables/ia/prompts/prompt-routage-web.prompt.md).
 travail_a_faire: >
-  Déclarer une route de test et créer une vue Blade minimale pour valider le serveur web local sous Laravel 12.
+  Configurer la route GET racine, créer la vue de bienvenue responsive et concevoir le prompt de transposition.
 ---
