@@ -17,7 +17,7 @@
 - **Compétence :** `C.351` — Piloter un projet avec Scrum et gouverner les cérémonies
 - **Domaine :** `D.351.2` — Réalisation de projet et rituels agiles
 - **Durée estimée :** 6 heures
-- **Objectif :** Initialiser le projet collectif et individuel, valider l'environnement de développement et présenter le pitch de cadrage.
+- **Objectif :** Initialiser le dépôt Git versionné sous GitHub et cadrer le périmètre d'intervention de l'équipe pour soutenir le pitch de lancement du premier sprint auprès des parties prenantes.
 - **Description :** Poser les bases opérationnelles du projet. L'apprenant contractualise la charte de cadrage, initialise le dépôt Git, valide sa checklist d'environnement outillé et présente le pitch de lancement du premier sprint.
 - **Notions Clés Utilisées dans le Sprint :**
   - Cadrage d'un projet informatique (vision, parties prenantes, périmètre).
@@ -39,7 +39,7 @@
 - **Compétence :** `C.351` — Piloter un projet avec Scrum et gouverner les cérémonies
 - **Domaine :** `D.351.2` — Réalisation de projet et rituels agiles
 - **Durée estimée :** 4 heures
-- **Objectif :** Animer le rituel de Sprint Planning, estimer l'effort relatif, formaliser le Sprint Backlog et contractualiser la Definition of Done.
+- **Objectif :** Calibrer la vélocité et l'effort de l'équipe en Story Points pour bâtir le Sprint Backlog du premier incrément et contractualiser la Definition of Done en 7 critères bloquants.
 - **Description :** Cérémonie de planification du sprint. L'équipe sélectionne les User Stories du Product Backlog, les découpe en tâches techniques, calibre l'effort et s'engage collectivement sur le Sprint Goal.
 - **Notions Clés Utilisées dans le Sprint :**
   - Rituel du Sprint Planning en 2 parties (Quoi et Comment).
@@ -61,7 +61,7 @@
 - **Compétence :** `C.351` — Piloter un projet avec Scrum et gouverner les cérémonies
 - **Domaine :** `D.351.2` — Réalisation de projet et rituels agiles
 - **Durée estimée :** 6 heures
-- **Objectif :** Valider l'incrément en Sprint Review, animer la rétrospective réflexive (dette d'empathie), affiner le Backlog et dresser le bilan de session.
+- **Objectif :** Valider l'incrément déployable en démonstration live face aux critères de la DoD et animer une rétrospective réflexive identifiant la dette d'empathie utilisateur pour raffiner le Product Backlog du Sprint 2.
 - **Description :** Phase de clôture et d'amélioration continue. L'équipe démontre l'incrément déployable aux parties prenantes, conduit une rétrospective approfondie mettant en évidence l'absence d'empathie utilisateur (dette justifiant S02), affine le Product Backlog pour le sprint suivant et formalise son débriefing de progression.
 - **Notions Clés Utilisées dans le Sprint :**
   - Démonstration fonctionnelle interactive en direct (Sprint Review).

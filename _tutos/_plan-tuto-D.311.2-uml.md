@@ -8,17 +8,17 @@
 
 ## 1. Description des Unités d'Apprentissage du Domaine
 
-### UA.311.21 [UA-Lab] — Diagramme de contexte
+### UA.311.21 — Modélisation de diagramme de contexte
 
 - **Code :** `UA.311.21`
-- **Niveau de Maturité :** `UA-Lab` (Atelier pratique guidé)
-- **Ordre en Session :** Étape 06
+- **Maturité :** `UA-lab` (Atelier pratique guidé)
+- **Ordre en Session :** Étape 04
 - **Positionnement Flux de Travail :** Phase 2 — Analyse des Exigences & Modélisation / Étape 2.1 — Frontières Système & Contexte
 - **Briques Stack Technique :** Mermaid.js, Syntaxe déclarative Markdown, Diagramme de contexte système
 - **Compétence :** `C.311` — Analyser et modéliser les besoins logiciels
 - **Domaine :** `D.311.2` — Modélisation logicielle UML
 - **Durée estimée :** 6 heures
-- **Objectif :** Délimiter les frontières fonctionnelles du système et identifier les interactions avec les acteurs externes en syntaxe déclarative Mermaid.js.
+- **Objectif :** Délimiter les frontières fonctionnelles du système logiciel et cartographier les interactions avec les acteurs externes en syntaxe déclarative Mermaid.js pour sécuriser le périmètre du projet.
 - **Description :** Analyser les flux et les frontières du système logiciel. L'apprenant modélise le diagramme de contexte de l'application en syntaxe déclarative versionnable, identifiant acteurs primaires, secondaires et systèmes tiers.
 - **Notions Clés Utilisées dans le Sprint :**
   - Frontière système et concept de boîte noire : délimitation stricte entre le système cible et son environnement.
@@ -30,17 +30,17 @@
 
 ---
 
-### UA.311.22 [UA-Lab] — Cas d'utilisation macro
+### UA.311.22 — Diagramme de cas d'utilisation macro
 
 - **Code :** `UA.311.22`
-- **Niveau de Maturité :** `UA-Lab` (Atelier pratique guidé)
-- **Ordre en Session :** Étape 09
+- **Maturité :** `UA-lab` (Atelier pratique guidé)
+- **Ordre en Session :** Étape 07
 - **Positionnement Flux de Travail :** Phase 2 — Analyse des Exigences & Modélisation / Étape 2.4 — Cartographie des Cas d'Utilisation Macro
 - **Briques Stack Technique :** Mermaid.js, Use Cases UML, Relations structurelles
 - **Compétence :** `C.311` — Analyser et modéliser les besoins logiciels
 - **Domaine :** `D.311.2` — Modélisation logicielle UML
 - **Durée estimée :** 8 heures
-- **Objectif :** Modéliser la cartographie globale des cas d'utilisation macro en Mermaid.js avec identification rigoureuse des relations include et extend.
+- **Objectif :** Cartographier l'ensemble des 15 cas d'utilisation macro du blog en Mermaid.js avec identification des relations d'inclusion et d'extension pour isoler et spécifier le cas d'usage central de consultation d'un article.
 - **Description :** Représenter l'ensemble des fonctionnalités du système du point de vue des acteurs. L'apprenant modélise les cas d'utilisation macro, structure les dépendances fonctionnelles et garantit la traçabilité avec le Product Backlog.
 - **Notions Clés Utilisées dans le Sprint :**
   - Cas d'utilisation macro : granularité fonctionnelle observable sans sur-segmentation technique (15 UCs de l'application).
@@ -52,7 +52,7 @@
 
 ---
 
-## 2. Plan des Tutoriels : UA.311.21 [UA-Lab]
+## 2. Plan des Tutoriels : UA.311.21
 
 ### T.311.211 — Théorie : Diagramme de contexte
 *(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*
@@ -121,7 +121,7 @@ Concevoir dans `livrables/ia/prompts/prompt-diagramme-contexte.prompt.md` le pro
 
 ---
 
-## 3. Plan des Tutoriels : UA.311.22 [UA-Lab]
+## 3. Plan des Tutoriels : UA.311.22
 
 ### T.311.221 — Théorie : Cas d'utilisation macro
 *(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*

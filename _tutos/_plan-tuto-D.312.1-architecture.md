@@ -8,17 +8,17 @@
 
 ## 1. Description des Unités d'Apprentissage du Domaine
 
-### UA.312.11 [UA-Lab] — Architecture logicielle 2 couches
+### UA.312.11 — Architecture logicielle en deux couches
 
 - **Code :** `UA.312.11`
-- **Niveau de Maturité :** `UA-Lab` (Atelier pratique guidé)
-- **Ordre en Session :** Étape 10
+- **Maturité :** `UA-lab` (Atelier pratique guidé)
+- **Ordre en Session :** Étape 08
 - **Positionnement Flux de Travail :** Phase 3 — Conception & Architecture Logicielle / Étape 3.1 — Découplage Architectural & Décision ADR
 - **Briques Stack Technique :** Architecture 2 couches, Contrôleur mince IoC, Classe Service, ADR, Mermaid séquence
 - **Compétence :** `C.312` — Concevoir et structurer l'architecture logicielle
 - **Domaine :** `D.312.1` — Architecture logicielle en couches
 - **Durée estimée :** 8 heures
-- **Objectif :** Concevoir une architecture logicielle découplée en deux couches (Contrôleur mince IoC / Classe Service) et documenter la décision dans un ADR formel.
+- **Objectif :** Concevoir une architecture logicielle découplée isolant le contrôleur mince de la persistance tabulaire via une classe Service dédiée et formaliser ce choix technique stratégique dans un ADR opposable avec diagramme de séquence HTTP.
 - **Description :** Isoler la logique de présentation de la logique métier et d'accès aux données. L'apprenant conçoit l'architecture en deux couches, rédige l'ADR-01 justifiant le choix sans base de données relationnelle initiale et modélise la séquence HTTP.
 - **Notions Clés Utilisées dans le Sprint :**
   - Principe de séparation des responsabilités (SoC) : découplage strict entre couche de présentation HTTP et logique métier/données.
@@ -31,7 +31,7 @@
 
 ---
 
-## 2. Plan des Tutoriels : UA.312.11 [UA-Lab]
+## 2. Plan des Tutoriels : UA.312.11
 
 ### T.312.111 — Théorie : Architecture 2 couches
 *(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*

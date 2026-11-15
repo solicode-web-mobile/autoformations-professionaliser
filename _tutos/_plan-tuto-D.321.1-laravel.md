@@ -8,63 +8,63 @@
 
 ## 1. Description des Unités d'Apprentissage du Domaine
 
-### UA.321.11 [UA-Lab] — Routage et Vues Laravel
+### UA.321.11 — Hello World Laravel : Route et Vue
 
 - **Code :** `UA.321.11`
-- **Niveau de Maturité :** `UA-Lab` (Atelier pratique guidé)
-- **Ordre en Session :** Étape 11
+- **Maturité :** `UA-lab` (Atelier pratique guidé)
+- **Ordre en Session :** Étape 09
 - **Positionnement Flux de Travail :** Phase 4 — Réalisation Applicative & Code Cible / Étape 4.1 — Routage Web & Page d'Accueil
 - **Briques Stack Technique :** Laravel 12 Router, Moteur Blade, Tailwind CSS utilitaire
 - **Compétence :** `C.321` — Développer une application Web avec le framework Laravel
 - **Domaine :** `D.321.1` — Développement Web avec Laravel
 - **Durée estimée :** 8 heures
-- **Objectif :** Initialiser le socle Laravel 12, configurer le routage web de base et produire un premier rendu visuel via le moteur de gabarit Blade.
-- **Description :** Prendre en main le framework Laravel 12 et son cycle de requête HTTP. L'apprenant valide l'environnement de développement, déclare sa première route GET et retourne une vue Blade enrichie sous Tailwind CSS.
+- **Objectif :** Valider le bon fonctionnement de l'environnement d'exécution Laravel 12 et livrer la page d'accueil minimale du Blog des Lauréats en configurant le routage web déclaratif et un premier gabarit Blade responsive sous Tailwind CSS.
+- **Description :** Cette unité d'apprentissage constitue le premier contact opérationnel avec Laravel 12. L'apprenant valide sa chaîne d'outillage locale en instanciant le serveur web, s'approprie le cycle de vie d'une requête HTTP, et produit le premier incrément visible de l'application : une page d'accueil sécurisée et mise en page de manière moderne.
 - **Notions Clés Utilisées dans le Sprint :**
   - Cycle de vie d'une requête HTTP sous Laravel 12 (`public/index.php` $\to$ Kernel HTTP $\to$ Middlewares $\to$ Routeur $\to$ Vue $\to$ Réponse 200).
   - Routage déclaratif dans `routes/web.php` : façade `Route::get()`, closures anonymes `function () { return view(...); }`.
   - Moteur de gabarit Blade : convention d'arborescence `resources/views/*.blade.php`, syntaxe d'interpolation `{{ $variable }}`, protection XSS native.
   - Intégration CSS utilitaire : intégration de Tailwind CSS (via CDN/Vite), conteneurs centrés, typographie responsive.
-- **Livrables :** Route d'accueil fonctionnelle et vue Blade stylisée (`routes/web.php`, `resources/views/welcome.blade.php`) et prompt (`livrables/ia/prompts/prompt-routage-web.prompt.md`).
-- **Travail à Faire :** Configurer la route GET racine, créer la vue de bienvenue responsive et concevoir le prompt de transposition.
+- **Livrables :** Route d'accueil fonctionnelle et vue Blade stylisée (`routes/web.php`, `resources/views/welcome.blade.php`) et prompt (`livrables/ia/prompts/prompt-route-setup.prompt.md`).
+- **Travail à Faire :** Configurer la route GET racine dans `routes/web.php`, concevoir la vue de bienvenue responsive stylisée sous Tailwind CSS et rédiger le prompt de transposition Fil Rouge.
 
 ---
 
-### UA.321.12 [UA-Lab] — Contrôleur et Vue de collection
+### UA.321.12 — Démarrage rapide Laravel : Contrôleur et Vue
 
 - **Code :** `UA.321.12`
-- **Niveau de Maturité :** `UA-Lab` (Atelier pratique guidé)
-- **Ordre en Session :** Étape 12
+- **Maturité :** `UA-lab` (Atelier pratique guidé)
+- **Ordre en Session :** Étape 10
 - **Positionnement Flux de Travail :** Phase 4 — Réalisation Applicative & Code Cible / Étape 4.2 — Contrôleur HTTP & Rendu de Collection
 - **Briques Stack Technique :** Artisan Controller, Contrôleur HTTP, Directives Blade itératives, Collections
 - **Compétence :** `C.321` — Développer une application Web avec le framework Laravel
 - **Domaine :** `D.321.1` — Développement Web avec Laravel
 - **Durée estimée :** 8 heures
-- **Objectif :** Découpler la logique de requête par un contrôleur HTTP dédié et afficher une collection de données structurées avec les directives de boucle Blade.
-- **Description :** Implémenter le pattern MVC au niveau du contrôleur. L'apprenant génère un contrôleur HTTP avec artisan, extrait la logique de la route vers une méthode d'action et transmet un jeu de données à une vue Blade itérative.
+- **Objectif :** Mettre en œuvre le pattern MVC en isolant l'orchestration HTTP dans un contrôleur dédié pour extraire et afficher dynamiquement la collection des catégories d'articles à travers des boucles Blade stylisées.
+- **Description :** L'apprenant franchit une étape clé de structuration en éliminant les closures directes dans les routes au profit d'un contrôleur HTTP mince. Il apprend à séparer la réception de la requête, la préparation des données et leur restitution visuelle dynamique sous forme de grille responsive.
 - **Notions Clés Utilisées dans le Sprint :**
   - Rôle du contrôleur HTTP dans l'architecture MVC : récepteur de `Request`, orchestrateur d'action et fournisseur de `Response`.
-  - Commande de scaffolding Artisan : `php artisan make:controller Public/CategoryController`.
+  - Commande de scaffolding Artisan : `php artisan make:controller Public/ArticleController`.
   - Transmission de données structurées : fonction d'assistance `view('vue', compact('categories'))` et tableaux associatifs.
   - Directives de boucle Blade : `@foreach`, `@forelse`, `@empty`, `@endforeach` pour itérer de manière résiliente sur une collection.
   - Grille de cartes responsive sous Tailwind CSS (`grid grid-cols-1 md:grid-cols-3 gap-6`).
-- **Livrables :** Contrôleur HTTP et vue de collection (`app/Http/Controllers/Public/CategoryController.php`, `resources/views/categories/index.blade.php`) et prompt (`livrables/ia/prompts/prompt-controleur-collection.prompt.md`).
-- **Travail à Faire :** Créer le contrôleur avec artisan, définir l'action d'affichage de liste, composer la vue avec directive de boucle et concevoir le prompt de transposition.
+- **Livrables :** Contrôleur HTTP et vue de collection (`app/Http/Controllers/Public/ArticleController.php`, `resources/views/articles/index.blade.php`) et prompt (`livrables/ia/prompts/prompt-controller-blade.prompt.md`).
+- **Travail à Faire :** Générer le contrôleur avec Artisan, implémenter la méthode d'affichage de collection, composer la vue Blade en grille de cartes et rédiger le prompt de transposition.
 
 ---
 
-### UA.321.13 [UA-Lab] — Contrôleur, Service et Vue détaillée
+### UA.321.13 — Contrôleur, Classe Service et Vue détaillée
 
 - **Code :** `UA.321.13`
-- **Niveau de Maturité :** `UA-Lab` (Atelier pratique guidé)
-- **Ordre en Session :** Étape 13
+- **Maturité :** `UA-lab` (Atelier pratique guidé)
+- **Ordre en Session :** Étape 11
 - **Positionnement Flux de Travail :** Phase 4 — Réalisation Applicative & Code Cible / Étape 4.3 — Tranche Verticale Complète & Étape 4.4 — Résilience & Erreurs HTTP
 - **Briques Stack Technique :** Routes dynamiques, Injection IoC, Classe Service CSV, Blade layout maître, abort(404)
 - **Compétence :** `C.321` — Développer une application Web avec le framework Laravel
 - **Domaine :** `D.321.1` — Développement Web avec Laravel
 - **Durée estimée :** 14 heures
-- **Objectif :** Développer l'incrément logiciel principal en architecture deux couches : route dynamique, contrôleur mince avec injection de dépendance, classe Service et gestion HTTP 404.
-- **Description :** Finaliser la tranche verticale logicielle du Sprint 1. L'apprenant implémente la route paramétrée, injecte la classe Service encapsulant la lecture tabulaire, gère l'exception ressource non trouvée (abort 404) et produit la vue de détail sous gabarit maître responsive.
+- **Objectif :** Livrer la fonctionnalité centrale de consultation détaillée d'un article du Blog des Lauréats en implémentant une architecture découplée en deux couches (contrôleur mince IoC et classe service sur persistance tabulaire) avec gestion sécurisée de l'erreur 404.
+- **Description :** Point culminant de la réalisation logicielle du Sprint 1, cette unité livre la tranche verticale complète de l'application sans base relationnelle active. L'apprenant professionnalise son code en encapsulant la lecture tabulaire dans une classe Service injectée automatiquement par le conteneur IoC, et garantit la robustesse utilisateur face aux identifiants inexistants.
 - **Notions Clés Utilisées dans le Sprint :**
   - Routes paramétrées dynamiques : paramètres d'URL `Route::get('/articles/{id}', ...)`, contraintes `whereNumber('id')`, routes nommées `name('articles.show')`.
   - Injection de dépendances IoC : déclaration du service dans le constructeur de `ArticleController` pour résolution automatique par le conteneur Laravel.
@@ -72,12 +72,12 @@
   - Gestion d'erreurs et résilience HTTP : interception d'absence d'article via `abort(404)`, gabarit personnalisé `resources/views/errors/404.blade.php`.
   - Héritage de gabarit maître Blade : structure maître `resources/views/layouts/app.blade.php` avec `@yield('content')`, héritage par `@extends('layouts.app')` et `@section('content')`.
   - Composants d'interface partagés : barre de navigation (navbar), pied de page (footer) et bouton de retour consultation.
-- **Livrables :** Incrément logiciel complet et fonctionnel (routes, contrôleur, service, vues de détail et 404) et prompt complet (`livrables/ia/prompts/prompt-service-detail.prompt.md`).
-- **Travail à Faire :** Coder la route nommée, la classe ArticleService, le contrôleur mince, la vue Blade avec gabarit maître et le prompt d'ingénierie réutilisable.
+- **Livrables :** Tranche verticale logicielle complète (routes, contrôleur, service, vues de détail et 404) et prompt complet (`livrables/ia/prompts/prompt-article-service.prompt.md`).
+- **Travail à Faire :** Coder la route nommée, la classe ArticleService de lecture CSV, le contrôleur mince avec injection IoC, la vue Blade avec gabarit maître et le prompt d'ingénierie réutilisable.
 
 ---
 
-## 2. Plan des Tutoriels : UA.321.11 [UA-Lab]
+## 2. Plan des Tutoriels : UA.321.11
 
 ### T.321.111 — Théorie : Routage et Vues
 *(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*
@@ -148,7 +148,7 @@ Concevoir dans `livrables/ia/prompts/prompt-routage-web.prompt.md` le prompt d'i
 
 ---
 
-## 3. Plan des Tutoriels : UA.321.12 [UA-Lab]
+## 3. Plan des Tutoriels : UA.321.12
 
 ### T.321.121 — Théorie : Contrôleur et Vues
 *(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*
@@ -219,7 +219,7 @@ Concevoir dans `livrables/ia/prompts/prompt-controleur-collection.prompt.md` le 
 
 ---
 
-## 4. Plan des Tutoriels : UA.321.13 [UA-Lab]
+## 4. Plan des Tutoriels : UA.321.13
 
 ### T.321.131 — Théorie : Contrôleur mince et Service
 *(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*

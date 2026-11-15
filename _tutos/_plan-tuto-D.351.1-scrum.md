@@ -7,17 +7,17 @@
 
 ## 1. Description des Unités d'Apprentissage du Domaine
 
-### UA.351.11 [UA-Lab] — Introduction à Scrum
+### UA.351.11 — Introduction à Scrum
 
 - **Code :** `UA.351.11`
-- **Niveau de Maturité :** `UA-Lab` (Atelier pratique guidé)
-- **Ordre en Session :** Étape 04
+- **Maturité :** `UA-lab` (Atelier pratique guidé)
+- **Ordre en Session :** Étape 02
 - **Positionnement Flux de Travail :** Phase 1 — Cadrage & Gouvernance / Étape 1.2 — Gouvernance d'Équipe Scrum
 - **Briques Stack Technique :** Cadre Scrum, Rôles, DoD, Git conventions
 - **Compétence :** `C.351` — Piloter un projet avec Scrum
 - **Domaine :** `D.351.1` — Gouvernance agile Scrum
 - **Durée estimée :** 10 heures
-- **Objectif :** Installer la gouvernance agile de la promotion en formation active par projets, s'approprier les 3 piliers empiriques, les 5 valeurs Scrum, les 3 rôles de l'équipe et co-rédiger la charte d'équipe.
+- **Objectif :** Installer la gouvernance agile de la promotion en formation active par projets en s'appropriant les 3 piliers empiriques et les 5 valeurs Scrum pour contractualiser une charte d'équipe engageante avec protocole de peer coaching.
 - **Description :** Installer la gouvernance agile de la promotion en formation active par projets. L'apprenant s'approprie les 3 piliers empiriques, les 5 valeurs Scrum, les 3 rôles de l'équipe et co-rédige la charte d'équipe définissant les responsabilités partagées et les règles de vie collaborative.
 - **Notions Clés Utilisées dans le Sprint :**
   - Les 3 Piliers Empiriques (Transparence, inspection, adaptation).
@@ -30,18 +30,18 @@
 
 ---
 
-### UA.351.12 [UA-Lab] — Product Backlog et User Stories
+### UA.351.12 — Product Backlog et User Stories
 
 - **Code :** `UA.351.12`
-- **Niveau de Maturité :** `UA-Lab` (Atelier pratique guidé)
-- **Ordre en Session :** Étape 07
+- **Maturité :** `UA-lab` (Atelier pratique guidé)
+- **Ordre en Session :** Étape 05
 - **Positionnement Flux de Travail :** Phase 2 — Analyse des Exigences & Modélisation / Étape 2.2 — Découpage User Stories & Product Backlog
 - **Briques Stack Technique :** Product Backlog, User Stories INVEST, Priorisation MoSCoW, Story Points
 - **Compétence :** `C.351` — Piloter un projet avec Scrum
 - **Domaine :** `D.351.1` — Gouvernance agile Scrum
 - **Durée estimée :** 8 heures
-- **Objectif :** Décomposer les besoins fonctionnels en User Stories conformes aux critères INVEST et construire le Product Backlog initial priorisé selon MoSCoW.
-- **Description :** Structurer et prioriser le carnet de produit Scrum. L'apprenant rédige les User Stories avec critères d'acceptation clairs, applique la grille INVEST et classe les éléments selon la méthode MoSCoW.
+- **Objectif :** Découper les fonctionnalités globales du blog en User Stories indépendantes selon le standard INVEST pour formaliser le Product Backlog ordonné et priorisé selon la méthode MoSCoW.
+- **Description :** Structurer et prioriser le carnet de produit Scrum. L'apprenant rédige les User Stories avec critères d'acceptation clairs, applique la grille INVEST et classe les éléments selon la méthode MoSCoW pour isoler le premier PBI du sprint.
 - **Notions Clés Utilisées dans le Sprint :**
   - Format canonique User Story (« En tant que... je veux... afin de... »).
   - Critères de qualité INVEST (Independent, Negotiable, Valuable, Estimable, Small, Testable).
@@ -53,7 +53,7 @@
 
 ---
 
-## 2. Plan des Tutoriels : UA.351.11 [UA-Lab]
+## 2. Plan des Tutoriels : UA.351.11
 
 ### T.351.111 — Théorie : Cadre Scrum
 *(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*
@@ -123,7 +123,7 @@ Concevoir dans `livrables/ia/prompts/prompt-gouvernance-scrum.prompt.md` le prom
 
 ---
 
-## 3. Plan des Tutoriels : UA.351.12 [UA-Lab]
+## 3. Plan des Tutoriels : UA.351.12
 
 ### T.351.121 — Théorie : Product Backlog
 *(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*

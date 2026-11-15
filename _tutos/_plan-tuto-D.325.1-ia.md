@@ -8,17 +8,17 @@
 
 ## 1. Description des Unités d'Apprentissage du Domaine
 
-### UA.325.11 [UA-Lab] — Prompt Engineering
+### UA.325.11 — Prompt Engineering
 
 - **Code :** `UA.325.11`
-- **Niveau de Maturité :** `UA-Lab` (Atelier pratique guidé)
-- **Ordre en Session :** Étape 05
+- **Maturité :** `UA-lab` (Atelier pratique guidé)
+- **Ordre en Session :** Étape 03
 - **Positionnement Flux de Travail :** Phase 1 — Cadrage & Gouvernance Agile / Étape 1.3 — Outillage Prompt Engineering
 - **Briques Stack Technique :** LLMs (Claude, Gemini), Méthode RIO, Context Engineering, Méta-prompting
 - **Compétence :** `C.325` — Développer des solutions logicielles avec l'assistance de l'IA
 - **Domaine :** `D.325.1` — Ingénierie de prompt et agents IA
 - **Durée estimée :** 8 heures
-- **Objectif :** Maîtriser la méthode RIO et le Context Engineering pour outiller l'apprenant d'un méta-prompt capable de générer tous les prompts du flux de développement.
+- **Objectif :** Maîtriser le dialogue déterministe avec les modèles de langage et le Context Engineering pour outiller l'équipe d'un méta-prompt réutilisable capable de générer tous les prompts du flux de travail sans hallucination.
 - **Description :** Outiller le développeur augmenté par l'ingénierie de prompt structurée. L'apprenant formalise le guide méthodologique RIO et conçoit le méta-prompt réutilisable pour automatiser la transposition des étapes sur le projet Fil Rouge.
 - **Notions Clés Utilisées dans le Sprint :**
   - Méthode directrice RIO : Rôle précis (persona d'expert), Instructions contextualisées sans ambiguïté, Output au format strict (Markdown, code pur).
@@ -30,7 +30,7 @@
 
 ---
 
-## 2. Plan des Tutoriels : UA.325.11 [UA-Lab]
+## 2. Plan des Tutoriels : UA.325.11
 
 ### T.325.111 — Théorie : Prompt Engineering
 *(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*
