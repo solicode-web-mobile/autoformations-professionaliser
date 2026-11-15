@@ -39,26 +39,22 @@ Ne pas demander une réalisation technique avant l'apprentissage des prérequis 
 
 ### 2.2 Réaliser trois projets dans le même Sprint
 
-La formation repose sur trois projets complémentaires.
+La formation repose sur trois projets complémentaires :
 
-**Projet 1 — Projet d'imitation**
-- Réalisation guidée par le formateur.
-- Découverte et application de la nouvelle technique.
-- Référence commune pour les démonstrations et les explications.
+1. **Projet 1 — Projet d'imitation (*Blog des Lauréats*) :**
+   - Réalisation guidée pas-à-pas avec le formateur.
+   - **Règle fondamentale des tutoriels :** Les fiches de tutoriels décrivent **exclusivement le travail à réaliser sur le Projet d'imitation**.
+   - C'est la référence commune pour toutes les démonstrations et explications.
 
-**Projet 2 — Projet technique**
-- Réalisation autonome par l'apprenant.
-- Reproduction de la même technique sur un autre projet.
-- Vérification de la compréhension et de la maîtrise technique.
+2. **Projet 2 — Projet technique (*Portfolio Développeur*) :**
+   - Réalisation autonome par l'apprenant pour reproduire la même technique sur son projet individuel.
+   - Réalisé **après** la complétion de la technique sur le projet d'imitation.
 
-**Projet 3 — Projet fil rouge**
-- Transposition de la même technique vers une application métier.
-- Utilisation de prompts réutilisables et d'un Agent IA.
-- Adaptation de la solution au contexte du projet.
+3. **Projet 3 — Projet fil rouge (*Application Métier*) :**
+   - Transposition de la même technique vers une application métier via les prompts réutilisables créés pour l'Agent IA.
+   - Réalisé **après** validation de la technique sur le projet d'imitation.
 
-**Règle :** les trois projets travaillent sur la même technique pendant le même Sprint. Ils ne constituent pas trois formations indépendantes et ne nécessitent pas trois enseignements théoriques.
-
-La difficulté et l'autonomie augmentent progressivement d'un projet à l'autre.
+**Règle :** Ne pas mélanger les consignes des trois projets dans les tutoriels. Le tutoriel guide l'apprenant sur le projet d'imitation ; l'autonomie et la transposition interviennent une fois la technique assimilée.
 
 ### 2.3 Conception préliminaire centrée utilisateur
 
@@ -81,21 +77,53 @@ Ne pas imposer une conception exhaustive avant le développement. Seuls les él�
 
 La création d'un Agent IA constitue une finalité de la progression pédagogique.
 
-L'apprenant doit d'abord comprendre et réaliser les techniques manuellement ou avec un accompagnement pédagogique.
+L'apprentissage du **Prompt Engineering (méthode RIO, Context Engineering)** doit être positionné dès l'entame du cursus (Étape 01) afin d'outiller immédiatement l'apprenant.
 
-Ensuite, il formalise les méthodes validées dans des prompts et des instructions réutilisables.
+**Règle d'or de création des Prompts : Uniquement pour les étapes récurrentes du flux de travail produisant un livrable projet.**
+- Un **flux de travail** produit un livrable concret nécessaire à la réalisation du sprint et du produit (diagramme d'analyse, Product Backlog, Sprint Backlog de sprint, composants applicatifs métier).
+- Les prompts réutilisables (`*.prompt.md`) sont **strictement réservés aux étapes du flux de travail** qui génèrent ces livrables de réalisation récurrents.
+- **Interdiction formelle de créer un prompt pour :**
+  1. *Les UAs d'apprentissage conceptuel pur ou de cadre méthodologique* (ex : découverte théorique de Scrum).
+  2. *Les décisions structurelles uniques prises une seule fois pour tout le projet* (ex : ADR d'architecture logicielle globale).
+  3. *Les labs de prise en main et d'apprentissage initial d'un outil ou framework* (ex : Hello World Laravel, découverte du MVC).
+- Dans chaque tutoriel de création de prompt, expliciter obligatoirement **la liste précise des missions concrètes** que prend en charge le prompt pour l'application métier.
+
+**Règles de simplification théorique (Prérequis N2) :**
+- **Zéro cours sur les notions déjà acquises en N2 :** Ne jamais introduire de tutoriel théorique pour des notions validées aux niveaux antérieurs (ex : diagramme de contexte, diagramme de cas d'utilisation, bases de Tailwind/CSS). L'UA passe directement à la pratique outillée (ex: Mermaid.js).
+- **Théorie ciblée sur le nouveau socle N3 :** Dès qu'un nouveau framework ou paradigme apparaît (ex: Laravel 12, pattern MVC), le tutoriel théorique définit obligatoirement ce qu'est le framework, son architecture MVC, son cycle de requête et ses outils (Artisan), sans digresser sur le CSS/HTML déjà acquis.
+
+**Règles de structuration des activités IA :**
+- **Pas de fausse pratique dans le lab de Prompt Engineering :** Dans un lab dédié à l'IA/Prompting, la pratique EST directement la conception et le test du prompt lui-même (ex: le méta-prompt générateur `prompt-creator`). Ne pas créer de tutoriel intermédiaire artificiel de rédaction de guide documentaire.
+- **Titrage direct du prompt à créer :** Le titre du tutoriel IA doit nommer directement le prompt à créer (format : `Création du prompt-[nom]`).
 
 La progression est la suivante :
 
-1. Apprendre la technique.
-2. L'appliquer sur les projets.
-3. Formaliser les étapes et les règles.
-4. Construire les prompts et les Skills nécessaires.
-5. Assembler et tester un Agent IA capable d'assister ou de reproduire la démarche.
+1. Maîtriser le Prompt Engineering (méthode RIO) et concevoir le méta-prompt générateur (`prompt-creator`).
+2. Pour chaque étape du **flux de travail** (Analyse, Backlog, Architecture, Code Laravel) :
+   - Apprendre la technique (si elle n'est pas déjà acquise aux niveaux antérieurs N1/N2).
+   - L'appliquer sur les projets d'imitation et technique.
+   - Concevoir le prompt réutilisable (`prompt-[nom]`) instrumenté pour reproduire cette étape du flux de travail sur l'application métier.
+3. Assembler et tester l'Agent IA du sprint.
 
-L'Agent IA doit être fondé sur des méthodes comprises, testées et validées par l'apprenant.
+### 2.5 Règle des 20/80 des Définitions Clés (Principe de Pareto Didactique)
 
-Ne pas créer artificiellement un Agent IA pour chaque petite activité. Privilégier un agent réutilisable couvrant un processus ou un ensemble cohérent de techniques.
+Dans chaque tutoriel d'assimilation théorique (**Tutoriel 1 — Apprendre**) des UA-Labs :
+- Le tutoriel fournit directement **les 20% de définitions fondamentales, rigoureuses et discriminantes** (ex : définition primordiale du Product Backlog, User Stories, injection de dépendance IoC) qui permettent de comprendre et débloquer **80% du sujet**.
+- Pour les notions secondaires, périphériques ou d'approfondissement, le tutoriel invite explicitement les apprenants à chercher sur Internet et à compléter ces définitions par eux-mêmes (recherche active).
+- Cette règle élimine le temps perdu en rédaction passive de longs mémos théoriques tout en garantissant un socle de définitions rigoureux, immédiatement actionnable dans le sprint.
+
+**Règle stricte pour les tutoriels pratiques (Tutoriel 2 — Appliquer) :**  
+Dans le tutoriel pratique, **aucune définition théorique n'est donnée**. Les apprenants appliquent directement ce qu'ils ont appris dans le tutoriel théorique exclusivement sur le **Projet d'imitation** pour construire l'incrément.
+
+**Règle stricte pour les tutoriels de type Tâche (UA-Tâche) :**  
+Dans les tutoriels de type Tâche (cadrage, Sprint Planning, Sprint Review, Rétrospective), **aucune théorie n'est donnée**. Les apprenants réalisent directement les actions et cérémonies opérationnelles du sprint.
+
+### 2.6 Livrables par Branche Unique de Sprint & Fichiers Modifiés
+
+- Dans chaque sprint, une **Branche Git unique par sprint** est créée et partagée pour l'ensemble des tâches et UAs (format : `sprintX`, ex : `sprint1`).
+- Chaque tutoriel précise clairement la branche de référence `sprintX` ainsi que la **liste exacte des fichiers modifiés ou créés**.
+- Ne jamais afficher d'indication de durée unitaire (ex: `(2h)`, `(4h)`) dans les tâches ou tutoriels destinés aux apprenants.
+- Les tutoriels validés et intégrés au cursus portent obligatoirement la métadonnée `en_construction: false`.
 
 ## 3. Articulation avec Scrum
 
@@ -292,15 +320,17 @@ Conserver la progression pédagogique en trois activités principales.
 
 ### Tutoriel 2 — Appliquer
 
-**Objectif :** maîtriser la technique par la pratique.
+**Objectif :** maîtriser la technique par la pratique et produire les livrables concrets du sprint.
+
+**Règle stricte :** Aucune définition théorique n'est introduite dans ce tutoriel. L'apprenant applique directement ce qu'il a assimilé dans le Tutoriel 1 (Apprendre) pour construire les artéfacts réels du projet.
 
 **Projet d'imitation :**
-Réaliser la technique avec le formateur.
+Réaliser la technique avec le formateur pas-à-pas.
 
 **Projet technique :**
-Reproduire la même réalisation de manière autonome.
+Reproduire la même réalisation de manière autonome sur son projet individuel.
 
-**Livrables :** résultats techniques des deux projets.
+**Livrables :** résultats techniques et fichiers versionnés des deux projets.
 
 **Validation :** vérifier le fonctionnement et la compréhension de la technique.
 
@@ -321,14 +351,24 @@ Ne pas créer une quatrième activité si le travail peut être intégré nature
 ## 8. Règles de simplification rédactionnelle
 
 - Utiliser des titres courts et explicites.
+- Ne jamais indiquer la durée des tâches aux apprenants dans les tutoriels.
+- Dans les tutoriels, guider exclusivement les apprenants sur le **Projet d'imitation** (*Blog des Lauréats*) ; les deux autres projets (Portfolio et Fil Rouge) sont réalisés après la complétion du sprint.
+- Pour chaque tâche/tutoriel de réalisation, préciser le nom de la **branche Git à créer** et la liste exacte des **fichiers modifiés ou créés**.
+- Zéro théorie dans les tutoriels de type Tâche (cadrage, planning, review, rétrospective).
+- Pour les activités IA, donner directement le nom du prompt à créer (ex: `Création du prompt-[nom]`).
+- Expliciter obligatoirement les missions concrètes que le prompt prend en charge.
+- Ne créer des prompts QUE pour les étapes récurrentes du flux de travail qui produisent un livrable de sprint ou de projet.
+- Pour le code Laravel en architecture 2 couches, découper en deux prompts distincts : `prompt-back-end` et `prompt-front-end`.
+- Prévoir une tâche dédiée pour la création des 4 prompts de clôture de sprint (`prompt-sprint-review`, `prompt-sprint-retrospective`, `prompt-backlog-refinement`, `prompt-bilan-session`).
 - Employer un verbe d'action.
 - Décrire directement le travail à réaliser.
+- Appliquer la règle des 20/80 : donner les 20% de définitions clés bloquantes dans le tutoriel théorique et inviter l'apprenant à chercher le reste.
 - Limiter les notions aux éléments nécessaires.
-- Éviter les explications théoriques répétées.
+- Ne pas introduire de théorie superflue lorsque la notion a déjà été acquise aux niveaux antérieurs (ex : diagramme de contexte et cas d'utilisation déjà maîtrisés en N2).
+- Éviter les explications théoriques répétées et les présentations/mémos redondants.
+- Ne pas introduire de pratique artificielle dans un lab de prompt engineering : la pratique consiste à créer et tester le prompt.
 - Ne demander qu'un livrable ayant une utilité identifiable.
-- Éviter les tableaux trop volumineux.
-- Ne pas imposer systématiquement une présentation, un diagramme ou un document.
-- Employer des consignes adaptées au niveau des apprenants.
+- Éviter les présentations intermédiaires redondantes : les démonstrations ont lieu naturellement pour chaque livrable et lors de la Sprint Review.
 
 Préserver les termes techniques nécessaires à la formation professionnelle.
 

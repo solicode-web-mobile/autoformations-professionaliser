@@ -9,7 +9,19 @@ Le skill `scrum-pedagogical-plan-adapter` analyse, audite, simplifie et harmonis
 - **Audit de cohérence d'un plan de domaine :** Passer au crible un fichier `_plan-tuto-D.xxx.x.md` pour détecter les doublons, sur-spécifications ou discordances de charge horaire.
 - **Simplification et recalibrage d'une UA :** Réduire une unité trop dense à son essentiel opératoire sans perte docimologique.
 - **Alignement avec la cadence de Sprint Scrum :** Garantir que les activités de cadrage, conception, réalisation et bilan s'enchaînent de manière fluide sans tomber dans un cycle en V rigide.
-- **Validation du chaînage Tri-Projets :** S'assurer que le projet d'imitation, le portfolio individuel et le projet fil rouge (prompts RIO) avancent sur la même technique au cours du même sprint.
+- **Ciblage exclusif du Projet d'imitation dans les tutoriels :** Les tutoriels guident l'apprenant pas-à-pas uniquement sur le *Blog des Lauréats*. Le Portfolio individuel et le Projet Fil Rouge (transposition IA) sont réalisés après la complétion du sprint.
+- **Format rigoureux des livrables :** Branche Git unique de sprint (`sprint1`) pour l'ensemble des tâches + liste exacte des fichiers modifiés ou créés (zéro durée unitaire affichée aux apprenants, `en_construction: false`).
+- **Zéro théorie dans les tutoriels de type Tâche :** Les cérémonies et cadrages (cadrage, Sprint Planning, Sprint Review, Rétrospective) sont 100% axés sur l'action réelle.
+- **Découpage des prompts Laravel :** Séparation en `prompt-back-end` (route, contrôleur IoC, service CSV, 404) et `prompt-front-end` (layout Blade, vue détail Tailwind, page 404).
+- **Prompts de clôture de sprint :** Tâche dédiée pour concevoir les 4 prompts de clôture (`prompt-sprint-review`, `prompt-sprint-retrospective`, `prompt-backlog-refinement`, `prompt-bilan-session`).
+- **Antériorité du Prompt Engineering :** Placer la maîtrise de la méthode RIO et du méta-prompt `prompt-creator` en Étape 01 pour outiller l'apprenant dès l'entame de la formation. Dans ce lab, la pratique est directement la création du prompt générateur (zéro tutoriel documentaire intermédiaire).
+- **Condition stricte de création d'un Prompt :** Uniquement pour les étapes récurrentes du flux de travail qui produisent un livrable de sprint/projet (Backlog, Sprint Planning, Use cases macro, Code métier). Zéro prompt pour les labs d'apprentissage conceptuel (Scrum), les décisions uniques d'architecture globale (ADR), ou la prise en main initiale (Hello World Laravel).
+- **Titrage épuré des activités IA & Missions explicites :** Format standard `Création du prompt-[nom]`, avec description explicite des missions concrètes que réalise le prompt.
+- **Élimination de la théorie redondante N2 :** Ne pas créer de tutoriel théorique pour des notions déjà validées au Niveau N2 (diagramme de contexte UML, diagramme de cas d'utilisation UML, Tailwind/CSS). Passer directement à la pratique outillée (Mermaid.js).
+- **Focalisation de la théorie sur les nouveautés N3 :** Définir en priorité ce qu'est le framework (Laravel 12, pattern MVC, cycle de requête HTTP, Artisan) dès sa première apparition.
+- **Application du Principe de Pareto Didactique (20/80) dans les Tutoriels 1 (Théorie) :** S'assurer que les tutoriels théoriques fournissent directement les 20% de définitions clés débloquantes (ex: définition primordiale du Product Backlog, User Stories, DoD, IoC) et laissent les 80% restants à la recherche active de l'apprenant.
+- **Sanctuarisation des Tutoriels 2 (Pratique) :** Zéro théorie ni redite de définitions dans le tutoriel pratique. L'effort est 100% focalisé sur la production des livrables du sprint pour le projet d'imitation et le projet technique.
+- **Élimination des prérequis régressifs et présentations redondantes :** Écarter les tâches basiques (init Git, création de squelette) et les pitchs superflus, les livrables étant présentés au fil de l'eau et lors de la Sprint Review.
 
 ---
 
