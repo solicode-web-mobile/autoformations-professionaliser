@@ -13,7 +13,7 @@ trigger: always_on
   ```
 
 ## 2. Architecture Jekyll & Just the Docs
-- **Collections :** Respecter l'organisation (`_missions/`, `_competences/`, `_domaines/`, `_uas/`, `_sessions/`, `_tutos/`, `_labs/`, `_prototypes/`, `_projets/`). Le code d'accompagnement réside dans `/code`.
+- **Collections :** Respecter l'organisation (`_missions/`, `_modules/`, `_competences/`, `_domaines/`, `_uas/`, `_sessions/`, `_tutos/`, `_labs/`, `_prototypes/`, `_projets/`). Le code d'accompagnement réside dans `/code`.
 - **Zéro CSS Inline :** Interdiction absolue d'ajouter des balises `<style>` ou du CSS en attribut dans les layouts HTML et includes. Les styles vont exclusivement dans `assets/css/`.
 - **Filtre Liquid `jsonify` :** Il ajoute automatiquement les guillemets. Ne jamais entourer manuellement de quotes (`"{{ val | jsonify }}"` est une erreur de syntaxe).
 
@@ -29,4 +29,12 @@ trigger: always_on
 ## 5. Gouvernance des Skills & Documentation Obligatoire
 - Tout skill (`.agents/skills/<nom-du-skill>/`) doit obligatoirement inclure un sous-dossier `doc/` contenant son guide d'utilisation opérationnel (`doc/how-to-use.md`).
 - Ce document formalise : le rôle du skill, les cas d'usage, les prompts types pour l'invoquer, les prérequis, le déroulement pas-à-pas et la méthode de vérification des livrables.
+
+## 6. Gouvernance des Modules et Compétences
+- **Collection `_modules/` :** Les modules de formation officiels du cursus sont stockés sous `_modules/` avec leur `id_bdd`, `code` (`M105`..`M114`), `module_reference` (`DMB-Mxxx`) et `title`.
+- **Protocole Obligatoire de Création de Compétence :**
+  Lorsqu'une nouvelle compétence (`_competences/C.xxx.md`) est créée ou révisée :
+  1. L'agent IA doit obligatoirement analyser les 10 modules officiels du cursus (`_modules/`).
+  2. L'agent IA doit obligatoirement formuler une **proposition formelle d'affectation** du module (`module: "Mxxx"`), de sa référence BDD (`module_reference: "DMB-Mxxx"`) et de sa référence canonique (`reference: "DMB-Mxxx-C.xxx"`), argumentée techniquement et didactiquement.
+  3. **Validation Obligatoire du Concepteur Pédagogique :** Il est strictement interdit à l'agent d'acter ou de figer unilatéralement l'affectation du module sans avoir obtenu au préalable la validation explicite du concepteur pédagogique (humain).
 
