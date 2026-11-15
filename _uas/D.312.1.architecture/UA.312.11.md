@@ -1,23 +1,24 @@
 ---
-title: "Architecture logicielle en deux couches"
+title: "Architecture logicielle 2 couches"
 layout: ua
 code: "UA.312.11"
+maturite: "UA-Lab"
 ordre: 10
 competence: "C.312"
 domaine: "D.312.1"
-duree: 10
+duree: 8
 objectif: >
-  Concevoir l'architecture logicielle initiale séparant strictement l'orchestration HTTP de la logique de données sans base de données relationnelle.
+  Concevoir une architecture logicielle découplée en deux couches (Contrôleur mince IoC / Classe Service) et documenter la décision dans un ADR formel.
 description: >
-  Concevoir l'architecture logicielle initiale séparant strictement l'orchestration HTTP (contrôleur mince) de la logique de données (classe Service) sans base de données relationnelle, formaliser une décision d'architecture (ADR-01) et schématiser la trajectoire cible globale du produit.
+  Isoler la logique de présentation de la logique métier et d'accès aux données. L'apprenant conçoit l'architecture en deux couches, rédige l'ADR-01 justifiant le choix sans base de données relationnelle initiale et modélise la séquence HTTP.
 notions:
-  - "Limites du Pattern MVC Naïf : Écueil des Fat Controllers, couplage fort et difficulté des tests unitaires"
-  - "Principe de Responsabilité Unique (SRP) : Séparation étanche de la couche Présentation (ArticleController) et de la couche Métier/Données (ArticleService)"
-  - "Isolation de la Persistance Tabulaire : Encapsulation de la lecture CSV dans la classe Service sans dépendance physique SQL"
-  - "Formalisation des Choix Techniques par les ADR : Structure d'une fiche ADR (Titre, Statut, Contexte, Décision, Justification, Conséquences)"
-  - "Vision Cible Macroscopique : Anticipation de la trajectoire d'évolution vers l'ORM Eloquent"
+  - "Principe de séparation des responsabilités (SoC) : découplage strict entre couche de présentation HTTP et logique métier/données"
+  - "Patron architectural en 2 couches : Contrôleur mince (orchestration HTTP) -> Classe Service (métier et abstraction des données)"
+  - "Décision technique de persistance transitoire : choix délibéré d'une source tabulaire CSV en mémoire (articles.csv), zéro SGBD relationnel en amorçage S1"
+  - "Architecture Decision Record (ADR) : formalisation standardisée de l'ADR-01 (Titre, Statut, Contexte, Décision, Alternatives écartées, Conséquences)"
+  - "Modélisation de flux HTTP en séquence : diagramme Mermaid sequenceDiagram illustrant le parcours complet de la requête (cas nominal et cas d'erreur 404)"
 livrable: >
-  Description détaillée de l'architecture 2 couches minimale du Sprint 1 (conception-technique/architecture-sprint1.md), fiche de décision technique ADR-01 (conception-technique/decision-technique-bdd-csv.md) et schéma directeur cible (conception-technique/architecture-cible-macro.md).
+  Dossier d'architecture S1 et ADR-01 (livrables/architecture/architecture-sprint1.md) et prompt réutilisable (livrables/ia/prompts/prompt-architecture.prompt.md).
 travail_a_faire: >
-  Concevoir le schéma d'architecture 2 couches et rédiger la décision technique ADR-01 justifiant l'utilisation d'une source CSV in-memory.
+  Rédiger l'ADR-01, modéliser le diagramme de séquence en Mermaid.js et concevoir le prompt d'ingénierie d'architecture.
 ---
