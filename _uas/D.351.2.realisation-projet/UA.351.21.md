@@ -1,23 +1,22 @@
 ---
-title: "Lancement et cadrage initial du projet (Sprint 1)"
+title: "Cadrage du projet (Sprint 1)"
 layout: ua
 code: "UA.351.21"
 maturite: "UA-Tâche"
-ordre: 1
+ordre: 3
 competence: "C.351"
 domaine: "D.351.2"
-duree: 6
+duree: 2
 objectif: >
-  Initialiser le dépôt Git versionné sous GitHub et cadrer le périmètre d'intervention de l'équipe pour soutenir le pitch de lancement du premier sprint auprès des parties prenantes.
+  Analyser le besoin métier du produit, délimiter le périmètre In-Scope/Out-of-Scope et formaliser le contrat de cadrage projet avec le Product Owner.
 description: >
-  Poser les bases opérationnelles du projet. L'apprenant contractualise la charte de cadrage, initialise le dépôt Git, valide sa checklist d'environnement outillé et présente le pitch de lancement du premier sprint.
+  Poser le périmètre fonctionnel strict du produit. L'apprenant analyse le cahier des charges du Projet d'imitation, isole le périmètre In-Scope de consultation publique responsive, écarte les fonctionnalités hors périmètre (Out-of-Scope) et formalise le cadrage produit.
 notions:
-  - "Cadrage d'un projet informatique (vision, parties prenantes, périmètre)"
-  - "Gestion de configuration logicielle sous Git et GitHub"
-  - "Checklist de validation d'un environnement moderne de développement full-stack"
-  - "Techniques de pitch de synthèse technique et d'alignement d'équipe"
+  - "Cadrage du périmètre produit (Problème, utilisateurs cibles, valeur attendue)"
+  - "Délimitation stricte In-Scope vs Out-of-Scope (Zéro authentification, zéro paiement, zéro SGBD relationnel en S1)"
+  - "Parties prenantes et contraintes majeures de réalisation"
 livrable: >
-  Charte de cadrage, dépôt Git initialisé, checklist environnement validée, support de présentation S1 (presentation-s01.md).
+  Contrat de cadrage produit validé avec le Product Owner (cadrage/cadrage-projet.md sur la branche sprint1).
 travail_a_faire: >
-  Réaliser les 3 tutoriels opérationnels T.351.211, T.351.212 et T.351.213.
+  Analyser les exigences du Blog des Lauréats, délimiter le périmètre In-Scope / Out-of-Scope et rédiger le document cadrage/cadrage-projet.md.
 ---

@@ -8,16 +8,17 @@ competence: "C.351"
 domaine: "D.351.2"
 duree: 4
 objectif: >
-  Calibrer la vélocité et l'effort de l'équipe en Story Points pour bâtir le Sprint Backlog du premier incrément et contractualiser la Definition of Done en 7 critères bloquants.
+  Calibrer la vélocité et l'effort de l'équipe en Story Points pour bâtir le Sprint Backlog du premier incrément, contractualiser la Definition of Done en 7 critères bloquants et concevoir le prompt de planification.
 description: >
-  Cérémonie de planification du sprint. L'équipe sélectionne les User Stories du Product Backlog, les découpe en tâches techniques, calibre l'effort et s'engage collectivement sur le Sprint Goal.
+  Cérémonie de planification du sprint. L'équipe sélectionne les User Stories du Product Backlog pour le Blog des Lauréats, les découpe en tâches techniques, contractualise la Definition of Done et conçoit le prompt réutilisable prompt-sprint-planning.
 notions:
   - "Rituel du Sprint Planning en 2 parties (Quoi et Comment)"
   - "Estimation d'effort en Story Points (suite de Fibonacci)"
   - "Décomposition des User Stories en tâches techniques élémentaires"
   - "Contractualisation de la Definition of Done (DoD) en 7 critères bloquants"
+  - "Automatisation de la planification de sprint par prompt d'ingénierie"
 livrable: >
-  Sprint Backlog S1 (scrum/sprint-backlog-s1.md) et tableau Kanban initialisé.
+  Sprint Backlog S1 (scrum/sprint-backlog-s1.md) et prompt réutilisable (livrables/ia/prompts/prompt-sprint-planning.prompt.md) sur la branche sprint1.
 travail_a_faire: >
-  Réaliser le tutoriel opérationnel T.351.221.
+  Conduire le Sprint Planning du Blog des Lauréats, formaliser le Sprint Backlog S1 et concevoir le prompt prompt-sprint-planning.
 ---
