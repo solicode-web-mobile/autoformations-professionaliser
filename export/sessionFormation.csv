@@ -2,8 +2,10 @@
 layout: null
 permalink: /export/sessionFormation.csv
 ---
+{%- capture newline %}
+{% endcapture -%}
 "ordre","titre","code","thematique","filiere_reference","objectifs_pedagogique","titre_prototype","description_prototype","contraintes_prototype","titre_projet","description_projet","contraintes_projet","remarques","date_debut","date_fin","jour_feries_vacances","reference","annee_formation_reference"
-{% assign sessions = site.sessions | sort: "nav_order" -%}
+{%- assign sessions = site.sessions | sort: "nav_order" -%}
 {%- for p in sessions -%}
   {%- assign _ordre = p.nav_order -%}
   {%- if p.titre_csv -%}
@@ -46,5 +48,5 @@ permalink: /export/sessionFormation.csv
   {%- assign _jour_feries = "" -%}
   {%- assign _reference = _filiere | append: "-" | append: _code -%}
   {%- assign _annee_formation = "2026-2027" -%}
-"{{ _ordre }}","{{ _titre }}","{{ _code }}","{{ _thematique }}","{{ _filiere }}","{{ _objectifs }}","{{ _proto_titre }}","{{ _proto_desc }}","{{ _proto_contraintes }}","{{ _projet_titre }}","{{ _projet_desc }}","{{ _projet_contraintes }}","{{ _remarques }}","{{ _date_debut }}","{{ _date_fin }}","{{ _jour_feries }}","{{ _reference }}","{{ _annee_formation }}"
-{% endfor %}
+{{ newline }}"{{ _ordre }}","{{ _titre }}","{{ _code }}","{{ _thematique }}","{{ _filiere }}","{{ _objectifs }}","{{ _proto_titre }}","{{ _proto_desc }}","{{ _proto_contraintes }}","{{ _projet_titre }}","{{ _projet_desc }}","{{ _projet_contraintes }}","{{ _remarques }}","{{ _date_debut }}","{{ _date_fin }}","{{ _jour_feries }}","{{ _reference }}","{{ _annee_formation }}"
+{%- endfor -%}

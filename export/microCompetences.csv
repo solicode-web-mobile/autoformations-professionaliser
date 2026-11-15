@@ -2,8 +2,10 @@
 layout: null
 permalink: /export/microCompetences.csv
 ---
+{%- capture newline %}
+{% endcapture -%}
 "ordre","code","titre","sous_titre","competence_reference","lien","description","reference"
-{% assign domaines = site.domaines | sort: "ordre" -%}
+{%- assign domaines = site.domaines | sort: "ordre" -%}
 {%- for p in domaines -%}
   {%- assign comp = site.competences | where: "code", p.competence | first -%}
   {%- assign _ordre   = p.ordre -%}
@@ -29,5 +31,5 @@ permalink: /export/microCompetences.csv
   {%- else -%}
     {%- assign _ref = filiere | append: "-" | append: _code -%}
   {%- endif -%}
-"{{ _ordre }}","{{ _code }}","{{ _titre }}","{{ _soustitre }}","{{ _compref }}","{{ _lien }}","{{ _desc }}","{{ _ref }}"
-{% endfor %}
+{{ newline }}"{{ _ordre }}","{{ _code }}","{{ _titre }}","{{ _soustitre }}","{{ _compref }}","{{ _lien }}","{{ _desc }}","{{ _ref }}"
+{%- endfor -%}

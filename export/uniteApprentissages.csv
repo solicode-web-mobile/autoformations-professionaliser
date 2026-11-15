@@ -2,8 +2,10 @@
 layout: null
 permalink: /export/uniteApprentissages.csv
 ---
+{%- capture newline %}
+{% endcapture -%}
 "ordre","code","nom","domaine","micro_competence_reference","lien","description","reference"
-{% assign uas = site.uas | sort: "ordre" -%}
+{%- assign uas = site.uas | sort: "ordre" -%}
 {%- for p in uas -%}
   {%- assign _ordre = p.ordre -%}
   {%- assign _code = p.code | append: "" | strip -%}
@@ -42,5 +44,5 @@ permalink: /export/uniteApprentissages.csv
   {%- else -%}
     {%- assign _ref = filiere | append: "-" | append: _code -%}
   {%- endif -%}
-"{{ _ordre }}","{{ _code }}","{{ _nom }}","{{ _domaine }}","{{ _micro_comp }}","{{ _lien }}","{{ _desc }}","{{ _ref }}"
-{% endfor %}
+{{ newline }}"{{ _ordre }}","{{ _code }}","{{ _nom }}","{{ _domaine }}","{{ _micro_comp }}","{{ _lien }}","{{ _desc }}","{{ _ref }}"
+{%- endfor -%}

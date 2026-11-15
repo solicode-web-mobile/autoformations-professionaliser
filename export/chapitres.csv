@@ -2,9 +2,11 @@
 layout: null
 permalink: /export/chapitres.csv
 ---
+{%- capture newline %}
+{% endcapture -%}
 "ordre","code","nom","unite_apprentissage_reference","duree_en_heure","isOfficiel","lien","description","formateur_reference","reference","is_imitation_ua"
 {%- assign filiere = site.filiere | default: "DMB" -%}
-{% assign tutos = site.tutos | where: "version", "normal" | sort: "nav_order" -%}
+{%- assign tutos = site.tutos | where: "version", "normal" | sort: "nav_order" -%}
 {%- for p in tutos -%}
   {%- assign _ordre = p.nav_order -%}
   {%- assign _code = p.tuto_id | append: "" | strip -%}
@@ -28,5 +30,5 @@ permalink: /export/chapitres.csv
   {%- assign _formateur = "" -%}
   {%- assign _ref = filiere | append: "-" | append: _code -%}
   {%- assign _imitation = "0" -%}
-"{{ _ordre }}","{{ _code }}","{{ _nom }}","{{ _ua_ref }}","{{ _duree }}","{{ _isofficiel }}","{{ _lien }}","{{ _desc }}","{{ _formateur }}","{{ _ref }}","{{ _imitation }}"
-{% endfor %}
+{{ newline }}"{{ _ordre }}","{{ _code }}","{{ _nom }}","{{ _ua_ref }}","{{ _duree }}","{{ _isofficiel }}","{{ _lien }}","{{ _desc }}","{{ _formateur }}","{{ _ref }}","{{ _imitation }}"
+{%- endfor -%}
