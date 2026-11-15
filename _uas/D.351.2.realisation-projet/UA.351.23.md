@@ -8,7 +8,7 @@ competence: "C.351"
 domaine: "D.351.2"
 duree: 6
 objectif: >
-  Valider l'incrément en Sprint Review, animer la rétrospective réflexive (dette d'empathie), affiner le Backlog et dresser le bilan de session.
+  Valider l'incrément déployable en démonstration live face aux critères de la DoD et animer une rétrospective réflexive identifiant la dette d'empathie utilisateur pour raffiner le Product Backlog du Sprint 2.
 description: >
   Phase de clôture et d'amélioration continue. L'équipe démontre l'incrément déployable aux parties prenantes, conduit une rétrospective approfondie mettant en évidence l'absence d'empathie utilisateur (dette justifiant S02), affine le Product Backlog pour le sprint suivant et formalise son débriefing de progression.
 notions:

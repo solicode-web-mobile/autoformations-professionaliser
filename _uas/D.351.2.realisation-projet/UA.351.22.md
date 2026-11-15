@@ -8,7 +8,7 @@ competence: "C.351"
 domaine: "D.351.2"
 duree: 4
 objectif: >
-  Animer le rituel de Sprint Planning, estimer l'effort relatif, formaliser le Sprint Backlog et contractualiser la Definition of Done.
+  Calibrer la vélocité et l'effort de l'équipe en Story Points pour bâtir le Sprint Backlog du premier incrément et contractualiser la Definition of Done en 7 critères bloquants.
 description: >
   Cérémonie de planification du sprint. L'équipe sélectionne les User Stories du Product Backlog, les découpe en tâches techniques, calibre l'effort et s'engage collectivement sur le Sprint Goal.
 notions:

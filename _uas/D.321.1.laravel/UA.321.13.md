@@ -1,16 +1,16 @@
 ---
-title: "Contrôleur, Service et Vue détaillée"
+title: "Contrôleur, Classe Service et Vue détaillée"
 layout: ua
 code: "UA.321.13"
 maturite: "UA-Lab"
-ordre: 13
+ordre: 11
 competence: "C.321"
 domaine: "D.321.1"
 duree: 14
 objectif: >
-  Développer l'incrément logiciel principal en architecture deux couches : route dynamique, contrôleur mince avec injection de dépendance, classe Service et gestion HTTP 404.
+  Livrer la fonctionnalité centrale de consultation détaillée d'un article du Blog des Lauréats en implémentant une architecture découplée en deux couches (contrôleur mince IoC et classe service sur persistance tabulaire) avec gestion sécurisée de l'erreur 404.
 description: >
-  Finaliser la tranche verticale logicielle du Sprint 1. L'apprenant implémente la route paramétrée, injecte la classe Service encapsulant la lecture tabulaire, gère l'exception ressource non trouvée (abort 404) et produit la vue de détail sous gabarit maître responsive.
+  Point culminant de la réalisation logicielle du Sprint 1, cette unité livre la tranche verticale complète de l'application sans base relationnelle active. L'apprenant professionnalise son code en encapsulant la lecture tabulaire dans une classe Service injectée automatiquement par le conteneur IoC, et garantit la robustesse utilisateur face aux identifiants inexistants.
 notions:
   - "Routes paramétrées dynamiques : paramètres d'URL Route::get('/articles/{id}', ...), contraintes whereNumber('id'), routes nommées name('articles.show')"
   - "Injection de dépendances IoC : déclaration du service dans le constructeur de ArticleController pour résolution automatique par le conteneur Laravel"

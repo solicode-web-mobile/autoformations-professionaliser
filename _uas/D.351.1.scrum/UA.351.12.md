@@ -3,14 +3,14 @@ title: "Product Backlog et User Stories"
 layout: ua
 code: "UA.351.12"
 maturite: "UA-Lab"
-ordre: 7
+ordre: 5
 competence: "C.351"
 domaine: "D.351.1"
 duree: 8
 objectif: >
-  Décomposer les besoins fonctionnels en User Stories conformes aux critères INVEST et construire le Product Backlog initial priorisé selon MoSCoW.
+  Découper les fonctionnalités globales du blog en User Stories indépendantes selon le standard INVEST pour formaliser le Product Backlog ordonné et priorisé selon la méthode MoSCoW.
 description: >
-  Structurer et prioriser le carnet de produit Scrum. L'apprenant rédige les User Stories avec critères d'acceptation clairs, applique la grille INVEST et classe les éléments selon la méthode MoSCoW.
+  Structurer et prioriser le carnet de produit Scrum. L'apprenant rédige les User Stories avec critères d'acceptation clairs, applique la grille INVEST et classe les éléments selon la méthode MoSCoW pour isoler le premier PBI du sprint.
 notions:
   - "Format canonique User Story (En tant que... je veux... afin de...)"
   - "Critères de qualité INVEST (Independent, Negotiable, Valuable, Estimable, Small, Testable)"

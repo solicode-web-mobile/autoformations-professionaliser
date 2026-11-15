@@ -3,12 +3,12 @@ title: "Introduction à Scrum"
 layout: ua
 code: "UA.351.11"
 maturite: "UA-Lab"
-ordre: 4
+ordre: 2
 competence: "C.351"
 domaine: "D.351.1"
 duree: 10
 objectif: >
-  Installer la gouvernance agile de la promotion en formation active par projets, s'approprier les 3 piliers empiriques, les 5 valeurs Scrum, les 3 rôles de l'équipe et co-rédiger la charte d'équipe.
+  Installer la gouvernance agile de la promotion en formation active par projets en s'appropriant les 3 piliers empiriques et les 5 valeurs Scrum pour contractualiser une charte d'équipe engageante avec protocole de peer coaching.
 description: >
   Installer la gouvernance agile de la promotion en formation active par projets. L'apprenant s'approprie les 3 piliers empiriques, les 5 valeurs Scrum, les 3 rôles de l'équipe et co-rédige la charte d'équipe définissant les responsabilités partagées et les règles de vie collaborative.
 notions:

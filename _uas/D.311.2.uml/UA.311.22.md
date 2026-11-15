@@ -1,14 +1,14 @@
 ---
-title: "Cas d'utilisation macro"
+title: "Diagramme de cas d'utilisation macro"
 layout: ua
 code: "UA.311.22"
 maturite: "UA-Lab"
-ordre: 9
+ordre: 7
 competence: "C.311"
 domaine: "D.311.2"
 duree: 8
 objectif: >
-  Modéliser la cartographie globale des cas d'utilisation macro en Mermaid.js avec identification rigoureuse des relations include et extend.
+  Cartographier l'ensemble des 15 cas d'utilisation macro du blog en Mermaid.js avec identification des relations d'inclusion et d'extension pour isoler et spécifier le cas d'usage central de consultation d'un article.
 description: >
   Représenter l'ensemble des fonctionnalités du système du point de vue des acteurs. L'apprenant modélise les cas d'utilisation macro, structure les dépendances fonctionnelles et garantit la traçabilité avec le Product Backlog.
 notions:

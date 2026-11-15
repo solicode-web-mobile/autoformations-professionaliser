@@ -1,14 +1,14 @@
 ---
-title: "Architecture logicielle 2 couches"
+title: "Architecture logicielle en deux couches"
 layout: ua
 code: "UA.312.11"
 maturite: "UA-Lab"
-ordre: 10
+ordre: 8
 competence: "C.312"
 domaine: "D.312.1"
 duree: 8
 objectif: >
-  Concevoir une architecture logicielle découplée en deux couches (Contrôleur mince IoC / Classe Service) et documenter la décision dans un ADR formel.
+  Concevoir une architecture logicielle découplée isolant le contrôleur mince de la persistance tabulaire via une classe Service dédiée et formaliser ce choix technique stratégique dans un ADR opposable avec diagramme de séquence HTTP.
 description: >
   Isoler la logique de présentation de la logique métier et d'accès aux données. L'apprenant conçoit l'architecture en deux couches, rédige l'ADR-01 justifiant le choix sans base de données relationnelle initiale et modélise la séquence HTTP.
 notions:

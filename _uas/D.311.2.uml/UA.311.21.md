@@ -1,14 +1,14 @@
 ---
-title: "Diagramme de contexte"
+title: "Modélisation de diagramme de contexte"
 layout: ua
 code: "UA.311.21"
 maturite: "UA-Lab"
-ordre: 6
+ordre: 4
 competence: "C.311"
 domaine: "D.311.2"
 duree: 6
 objectif: >
-  Délimiter les frontières fonctionnelles du système et identifier les interactions avec les acteurs externes en syntaxe déclarative Mermaid.js.
+  Délimiter les frontières fonctionnelles du système logiciel et cartographier les interactions avec les acteurs externes en syntaxe déclarative Mermaid.js pour sécuriser le périmètre du projet.
 description: >
   Analyser les flux et les frontières du système logiciel. L'apprenant modélise le diagramme de contexte de l'application en syntaxe déclarative versionnable, identifiant acteurs primaires, secondaires et systèmes tiers.
 notions:

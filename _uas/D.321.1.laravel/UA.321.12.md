@@ -1,16 +1,16 @@
 ---
-title: "Contrôleur et Vue de collection"
+title: "Démarrage rapide Laravel : Contrôleur et Vue"
 layout: ua
 code: "UA.321.12"
 maturite: "UA-Lab"
-ordre: 12
+ordre: 10
 competence: "C.321"
 domaine: "D.321.1"
 duree: 8
 objectif: >
-  Découpler la logique de requête par un contrôleur HTTP dédié et afficher une collection de données structurées avec les directives de boucle Blade.
+  Mettre en œuvre le pattern MVC en isolant l'orchestration HTTP dans un contrôleur dédié pour extraire et afficher dynamiquement la collection des catégories d'articles à travers des boucles Blade stylisées.
 description: >
-  Implémenter le pattern MVC au niveau du contrôleur. L'apprenant génère un contrôleur HTTP avec artisan, extrait la logique de la route vers une méthode d'action et transmet un jeu de données à une vue Blade itérative.
+  L'apprenant franchit une étape clé de structuration en éliminant les closures directes dans les routes au profit d'un contrôleur HTTP mince. Il apprend à séparer la réception de la requête, la préparation des données et leur restitution visuelle dynamique sous forme de grille responsive.
 notions:
   - "Rôle du contrôleur HTTP dans l'architecture MVC : récepteur de Request, orchestrateur d'action et fournisseur de Response"
   - "Commande de scaffolding Artisan : php artisan make:controller Public/CategoryController"

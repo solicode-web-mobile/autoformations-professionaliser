@@ -8,7 +8,7 @@ competence: "C.351"
 domaine: "D.351.2"
 duree: 6
 objectif: >
-  Initialiser le projet collectif et individuel, valider l'environnement de développement et présenter le pitch de cadrage.
+  Initialiser le dépôt Git versionné sous GitHub et cadrer le périmètre d'intervention de l'équipe pour soutenir le pitch de lancement du premier sprint auprès des parties prenantes.
 description: >
   Poser les bases opérationnelles du projet. L'apprenant contractualise la charte de cadrage, initialise le dépôt Git, valide sa checklist d'environnement outillé et présente le pitch de lancement du premier sprint.
 notions:
