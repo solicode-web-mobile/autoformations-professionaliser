@@ -3,7 +3,10 @@ title: "Développer des applications mobiles Android"
 layout: competences
 code: "C.323"
 niveau: "N3"
-mission: "M2"
+mission: M2
+module: "M110"
+module_reference: "DMB-M110"
+reference: "DMB-M110-C.323"
 competence: >
   S'initier à la programmation native Kotlin et à l'environnement Android Studio 
   pour créer une application simple, et convertir l'application Laravel sur mobile via NativePHP.

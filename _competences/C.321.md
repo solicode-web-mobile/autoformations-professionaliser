@@ -3,7 +3,10 @@ title: "Développer une application Web avec Laravel"
 layout: competences
 code: "C.321"
 niveau: "N3"
-mission: "M2"
+mission: M2
+module: "M109"
+module_reference: "DMB-M109"
+reference: "DMB-M109-C.321"
 competence: >
   Maîtriser le développement d'une application Web MVC complète avec Laravel 
   (routing, contrôleurs, gabarits Blade, ORM Eloquent, migrations et validation de formulaires).

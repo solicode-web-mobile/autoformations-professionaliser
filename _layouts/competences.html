@@ -32,6 +32,38 @@ layout: default
       {% endif %}
     {% endif %}
 
+    {% if page.module_reference %}
+      {% assign module =
+        site.modules
+        | where: "module_reference", page.module_reference
+        | first
+      %}
+
+      {% if module == nil and page.module %}
+        {% assign module =
+          site.modules
+          | where: "code", page.module
+          | first
+        %}
+      {% endif %}
+
+      {% if module %}
+        <p class="competence-reference layout-reference">
+          <strong>Module :</strong>
+          <a href="{{ module.url | relative_url }}">
+            {{ module.code }} — {{ module.title }} ({{ module.module_reference }})
+          </a>
+        </p>
+      {% endif %}
+    {% endif %}
+
+    {% if page.reference %}
+      <p class="competence-reference layout-reference">
+        <strong>Référence Officielle :</strong>
+        <code>{{ page.reference }}</code>
+      </p>
+    {% endif %}
+
   </header>
 
 

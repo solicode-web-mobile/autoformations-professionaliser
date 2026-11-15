@@ -101,6 +101,10 @@ collections:
     output: true
     permalink: /missions/:slug/
 
+  modules:
+    output: true
+    permalink: /modules/:slug/
+
   competences:
     output: true
     permalink: /competences/:slug/
@@ -133,6 +137,10 @@ just_the_docs:
     missions:
       name: "Formations"
       nav_exclude: false
+
+    modules:
+      name: "Modules"
+      nav_exclude: true
 
     domaines:
       name: "Formations"

@@ -3,7 +3,10 @@ title: "Automatiser avec la CI/CD"
 layout: competences
 code: "C.343"
 niveau: "N3"
-mission: "M4"
+mission: M4
+module: "M111"
+module_reference: "DMB-M111"
+reference: "DMB-M111-C.343"
 competence: >
   Mettre en œuvre un pipeline d'intégration continue sous GitHub Actions pour 
   exécuter automatiquement les tests à chaque commit ou Pull Request.

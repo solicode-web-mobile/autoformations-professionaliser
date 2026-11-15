@@ -3,7 +3,10 @@ title: "Cadrer les besoins utilisateurs et modéliser le système avec UML"
 layout: competences
 code: "C.311"
 niveau: "N3"
-mission: "M1"
+mission: M1
+module: "M106"
+module_reference: "DMB-M106"
+reference: "DMB-M106-C.311"
 competence: >
   Explorer et formaliser les besoins utilisateurs selon les étapes du Design Thinking, 
   et modéliser visuellement la structure et les flux du système avec le langage UML 

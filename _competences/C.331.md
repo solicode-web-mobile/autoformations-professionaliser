@@ -3,7 +3,10 @@ title: "Développer selon l'approche TDD avec Laravel"
 layout: competences
 code: "C.331"
 niveau: "N3"
-mission: "M3"
+mission: M3
+module: "M109"
+module_reference: "DMB-M109"
+reference: "DMB-M109-C.331"
 competence: >
   Appliquer le cycle Red-Green-Refactor en écrivant les tests unitaires et 
   fonctionnels avec PHPUnit avant le code de production dans l'environnement Laravel.

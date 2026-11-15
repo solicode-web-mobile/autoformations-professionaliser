@@ -3,7 +3,10 @@ title: "Concevoir l'architecture logicielle de l'application Laravel"
 layout: competences
 code: "C.312"
 niveau: "N3"
-mission: "M1"
+mission: M1
+module: "M109"
+module_reference: "DMB-M109"
+reference: "DMB-M109-C.312"
 competence: >
   Structurer sur plan l'architecture logicielle de l'application (séparation des rôles, 
   contrôleurs légers, services métier et interfaces) pour garantir l'évolutivité avant l'implémentation.

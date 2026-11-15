@@ -3,7 +3,10 @@ title: "Déployer une application Laravel sous Linux"
 layout: competences
 code: "C.342"
 niveau: "N3"
-mission: "M4"
+mission: M4
+module: "M111"
+module_reference: "DMB-M111"
+reference: "DMB-M111-C.342"
 competence: >
   Installer, configurer et administrer un environnement serveur Linux pour héberger 
   et exécuter une application Web Laravel de manière pérenne.

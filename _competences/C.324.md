@@ -3,7 +3,10 @@ title: "Sécuriser les accès et autorisations"
 layout: competences
 code: "C.324"
 niveau: "N3"
-mission: "M2"
+mission: M2
+module: "M109"
+module_reference: "DMB-M109"
+reference: "DMB-M109-C.324"
 competence: >
   Mettre en place l'authentification par jetons API avec Laravel Sanctum et gérer 
   le contrôle d'accès basé sur les rôles et permissions avec le package Spatie.

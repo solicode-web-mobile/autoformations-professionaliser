@@ -3,7 +3,10 @@ title: "Mener une veille technologique"
 layout: competences
 code: "C.344"
 niveau: "N3"
-mission: "M4"
+mission: M4
+module: "M112"
+module_reference: "DMB-M112"
+reference: "DMB-M112-C.344"
 competence: >
   Mener une veille structurée sur les technologies émergentes d'infrastructure, 
   de sécurité et d'outillage de test pour préparer l'évolution professionnelle vers le palier N4.

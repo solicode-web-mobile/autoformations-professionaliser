@@ -3,7 +3,10 @@ title: "Concevoir des Agents IA et développer des Skills"
 layout: competences
 code: "C.325"
 niveau: "N3"
-mission: "M2"
+mission: M2
+module: "M109"
+module_reference: "DMB-M109"
+reference: "DMB-M109-C.325"
 competence: >
   Concevoir des agents IA autonomes logiciels et coder des skills modulaires augmentant l'application d'entreprise.
 objectif: >

@@ -3,7 +3,10 @@ title: "Piloter un projet avec Scrum"
 layout: competences
 code: "C.351"
 niveau: "N3"
-mission: "M5"
+mission: M5
+module: "M107"
+module_reference: "DMB-M107"
+reference: "DMB-M107-C.351"
 competence: >
   Déployer les cérémonies, rôles et artefacts de la méthode agile Scrum pour mener à bien un projet logiciel itératif en équipe.
 objectif: >
