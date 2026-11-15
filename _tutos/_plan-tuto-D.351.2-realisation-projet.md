@@ -1,31 +1,33 @@
 # Plan des Tutoriels : D.351.2 — Réalisation de Projet & Rituels Agiles
 
 > **Domaine :** `D.351.2` | **Compétence :** `C.351` — Piloter un projet avec Scrum et gouverner les cérémonies | **Session :** S01  
-> **Niveau de Maturité :** UA-tâche (Niveau 0 — Cadrage, cérémonies et phases de projet)
+> **Niveau de Maturité :** UA-Tâche (Niveau 0 — Cadrage, cérémonies et phases opérationnelles de projet)  
+> **Branche Git de Travail :** `sprint1`  
+> **Projet Référence :** Projet d'imitation (*Blog des Lauréats*)  
+> **Référentiels Liés :** [`../../3.sprints/flux-travail-n3.md`](../../3.sprints/flux-travail-n3.md) | [`../../3.sprints/stack-technique-n3.md`](../../3.sprints/stack-technique-n3.md)
 
 ---
 
 ## 1. Description des Unités d'Apprentissage du Domaine
 
-### UA.351.21 — Lancement et cadrage initial du projet (Sprint 1)
+### UA.351.21 — Cadrage du périmètre du projet (Sprint 1)
 
 - **Code :** `UA.351.21`
-- **Maturité :** `UA-tâche` (Cadrage et lancement de projet)
-- **Ordre en Session :** Étape 01
-- **Positionnement Flux de Travail :** Phase A — Cadrage, Gouvernance & Outillage
-- **Briques Stack Technique :** Git, GitHub, VS Code, Laravel 12, Pitch Deck
+- **Maturité :** `UA-tâche` (Cadrage de périmètre de projet)
+- **Ordre en Session :** Étape 03
+- **Positionnement Flux de Travail :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 1.3 — Cadrage du Projet
+- **Briques Stack Technique :** Cadrage agile, Matrice de périmètre, Vision produit
 - **Compétence :** `C.351` — Piloter un projet avec Scrum et gouverner les cérémonies
 - **Domaine :** `D.351.2` — Réalisation de projet et rituels agiles
-- **Durée estimée :** 6 heures
-- **Objectif :** Initialiser le dépôt Git versionné sous GitHub et cadrer le périmètre d'intervention de l'équipe pour soutenir le pitch de lancement du premier sprint auprès des parties prenantes.
-- **Description :** Poser les bases opérationnelles du projet. L'apprenant contractualise la charte de cadrage, initialise le dépôt Git, valide sa checklist d'environnement outillé et présente le pitch de lancement du premier sprint.
+- **Durée estimée :** 2 heures
+- **Objectif :** Définir et formaliser le périmètre d'intervention du projet pour le Sprint 1 en contractualisant les frontières fonctionnelles et les objectifs cibles dans le document de cadrage.
+- **Description :** Poser les frontières opérationnelles du projet. L'apprenant contractualise le document de cadrage du projet en se concentrant directement sur la vision, les parties prenantes et les limites du périmètre (in/out) sans dispersion technique d'infrastructure déjà maîtrisée en N2.
 - **Notions Clés Utilisées dans le Sprint :**
-  - Cadrage d'un projet informatique (vision, parties prenantes, périmètre).
-  - Gestion de configuration logicielle sous Git et GitHub.
-  - Checklist de validation d'un environnement moderne de développement full-stack.
-  - Techniques de pitch de synthèse technique et d'alignement d'équipe.
-- **Livrables :** Charte de cadrage, dépôt Git initialisé, checklist environnement validée, support de présentation S1 (`presentation-s01.md`).
-- **Travail à Faire :** Réaliser les 3 tutoriels opérationnels `T.351.211`, `T.351.212` et `T.351.213`.
+  - Cadrage d'un projet informatique (vision stratégique, cibles, parties prenantes).
+  - Délimitation du périmètre (ce qui est inclus dans le Sprint 1 vs ce qui est reporté).
+  - Définition des critères de succès du sprint.
+- **Livrable :** Document de cadrage projet (`cadrage/cadrage-projet.md`) sur la branche `sprint1`.
+- **Travail à Faire :** Rédiger le document `cadrage/cadrage-projet.md` pour le Projet d'imitation (*Blog des Lauréats*).
 
 ---
 
@@ -34,20 +36,20 @@
 - **Code :** `UA.351.22`
 - **Maturité :** `UA-tâche` (Planification Scrum de sprint)
 - **Ordre en Session :** Étape 06
-- **Positionnement Flux de Travail :** Phase B — Analyse, Conception & Planification
-- **Briques Stack Technique :** Sprint Backlog, Planning Poker, Definition of Done, Kanban
+- **Positionnement Flux de Travail :** Phase B — Analyse, Conception & Planification / Étape 2.3 — Planification & Sprint Backlog
+- **Briques Stack Technique :** Sprint Backlog, Décomposition en tâches, Definition of Done, Kanban
 - **Compétence :** `C.351` — Piloter un projet avec Scrum et gouverner les cérémonies
 - **Domaine :** `D.351.2` — Réalisation de projet et rituels agiles
 - **Durée estimée :** 4 heures
-- **Objectif :** Calibrer la vélocité et l'effort de l'équipe en Story Points pour bâtir le Sprint Backlog du premier incrément et contractualiser la Definition of Done en 7 critères bloquants.
-- **Description :** Cérémonie de planification du sprint. L'équipe sélectionne les User Stories du Product Backlog, les découpe en tâches techniques, calibre l'effort et s'engage collectivement sur le Sprint Goal.
+- **Objectif :** Bâtir le Sprint Backlog du premier incrément en découpant les User Stories en tâches techniques et contractualiser la Definition of Done en 7 critères bloquants, puis automatiser la planification par un prompt dédié.
+- **Description :** Cérémonie opérationnelle de planification du sprint. L'équipe sélectionne les User Stories prioritaires, les découpe en tâches d'ingénierie concrètes, s'engage sur le Sprint Goal et conçoit le prompt réutilisable `prompt-sprint-planning`.
 - **Notions Clés Utilisées dans le Sprint :**
   - Rituel du Sprint Planning en 2 parties (Quoi et Comment).
-  - Estimation d'effort en Story Points (suite de Fibonacci).
   - Décomposition des User Stories en tâches techniques élémentaires.
   - Contractualisation de la Definition of Done (DoD) en 7 critères bloquants.
-- **Livrables :** Sprint Backlog S1 (`scrum/sprint-backlog-s1.md`) et tableau Kanban initialisé.
-- **Travail à Faire :** Réaliser le tutoriel opérationnel `T.351.221`.
+  - Prompt d'automatisation de la planification agile.
+- **Livrables :** Sprint Backlog S1 (`scrum/sprint-backlog-s1.md`) et prompt d'ingénierie (`livrables/ia/prompts/prompt-sprint-planning.prompt.md`) sur la branche `sprint1`.
+- **Travail à Faire :** Animer la planification du sprint, renseigner le document `sprint-backlog-s1.md` et concevoir le prompt `prompt-sprint-planning`.
 
 ---
 
@@ -57,160 +59,180 @@
 - **Maturité :** `UA-tâche` (Cérémonies de clôture et amélioration continue)
 - **Ordre en Session :** Étape 12
 - **Positionnement Flux de Travail :** Phase D — Clôture de Sprint, Rétrospective & Bilan
-- **Briques Stack Technique :** Sprint Review, Sprint Retrospective, Backlog Grooming, Bilan
+- **Briques Stack Technique :** Sprint Review, Sprint Retrospective, Backlog Refinement, Bilan de compétences
 - **Compétence :** `C.351` — Piloter un projet avec Scrum et gouverner les cérémonies
 - **Domaine :** `D.351.2` — Réalisation de projet et rituels agiles
-- **Durée estimée :** 6 heures
-- **Objectif :** Valider l'incrément déployable en démonstration live face aux critères de la DoD et animer une rétrospective réflexive identifiant la dette d'empathie utilisateur pour raffiner le Product Backlog du Sprint 2.
-- **Description :** Phase de clôture et d'amélioration continue. L'équipe démontre l'incrément déployable aux parties prenantes, conduit une rétrospective approfondie mettant en évidence l'absence d'empathie utilisateur (dette justifiant S02), affine le Product Backlog pour le sprint suivant et formalise son débriefing de progression.
+- **Durée estimée :** 4 heures
+- **Objectif :** Valider l'incrément déployable en démonstration live face aux critères de la DoD, animer une rétrospective réflexive identifiant la dette d'empathie, raffiner le carnet produit et créer la suite des 4 prompts de clôture.
+- **Description :** Clôture rigoureuse et amélioration continue du sprint. L'équipe démontre l'incrément fonctionnel, conduit la rétrospective réflexive révélant le manque de Design Thinking (justifiant le Sprint S02), affine le Product Backlog, clôture le bilan individuel et produit les 4 prompts automatisant ces rituels récurrents.
 - **Notions Clés Utilisées dans le Sprint :**
-  - Démonstration fonctionnelle interactive en direct (Sprint Review).
-  - Validation de la Definition of Done (DoD) critère par critère.
-  - Dynamique réflexive de rétrospective (forces, freins, axes de progrès).
-  - Analyse didactique de dette méthodologique (manque de Design Thinking).
-  - Backlog Refinement et projection de vélocité.
-- **Livrables :** Procès-verbal de démonstration, grille DoD validée, compte-rendu de rétrospective (`scrum/retrospective-s1.md`), Product Backlog affiné pour Sprint 2, bilan individuel de progression.
-- **Travail à Faire :** Réaliser les 4 tutoriels opérationnels `T.351.231`, `T.351.232`, `T.351.233` et `T.351.234`.
+  - Démonstration fonctionnelle live de l'incrément déployable (Sprint Review).
+  - Validation critère par critère de la Definition of Done (DoD).
+  - Rétrospective réflexive et détection de la dette d'empathie utilisateur.
+  - Backlog Refinement pour le sprint suivant.
+  - Capitalisation par prompts IA dédiés pour chaque cérémonie de clôture.
+- **Livrables :** Revue de sprint (`scrum/revue-s1.md`), rétrospective (`scrum/retrospective-s1.md`), backlog affiné (`scrum/product-backlog.md`), bilan individuel (`scrum/bilan-s1.md`) et 4 prompts IA (`prompt-sprint-review`, `prompt-sprint-retrospective`, `prompt-backlog-refinement`, `prompt-bilan-session`) sur la branche `sprint1`.
+- **Travail à Faire :** Réaliser les rituels de clôture et concevoir les 4 prompts IA dans `livrables/ia/prompts/`.
 
 ---
 
 ## 2. Plan des Tutoriels : UA.351.21
 
-### T.351.211 — Cadrage initial et lancement du projet (Sprint 1)
+### T.351.211 — Cadrage du périmètre du projet
 
 - **Code :** `T.351.211`
-- **Maturité :** `UA-tâche` (Tutoriel pas-à-pas opérationnel)
+- **Maturité :** `UA-tâche` (Tutoriel opérationnel de cadrage)
 - **Unité d'Apprentissage parente :** `UA.351.21`
-- **Titre Canonique :** Cadrage initial et lancement du projet (Sprint 1)
-- **Durée :** 2 heures
-- **Objectif Opérationnel :** Contractualiser la charte de cadrage projet et initialiser le dépôt Git versionné.
-- **Prérequis :** Maîtrise des commandes Git de base (`init`, `commit`, `branch`).
+- **Titre Canonique :** Cadrage du périmètre du projet
+- **Position dans le Flux :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 1.3 — Cadrage du Projet.
+- **Branche Git de travail :** `sprint1`
+- **Fichiers modifiés ou créés :** `cadrage/cadrage-projet.md`
+- **Objectif Opérationnel :** Contractualiser le cadrage du périmètre fonctionnel du Projet d'imitation (*Blog des Lauréats*) pour le Sprint 1.
+- **Prérequis :** Prise de connaissance du sujet d'imitation et de la charte d'équipe (`UA.351.11`).
 - **Déroulement Pas-à-Pas :**
-  1. *Étape 1 :* Définir la vision du produit *Blog des Lauréats* et clarifier les objectifs du Sprint 1.
-  2. *Étape 2 :* Initialiser le dépôt Git local et distant (GitHub) avec `.gitignore` standard Laravel.
-  3. *Étape 3 :* Rédiger le fichier `charte-cadrage.md` consignant les engagements initiaux.
-- **Critère de Réussite :** Le dépôt Git est configuré, accessible et la charte de cadrage est validée.
-
----
-
-### T.351.212 — Validation de l'environnement technique (Sprint 1)
-
-- **Code :** `T.351.212`
-- **Maturité :** `UA-tâche` (Tutoriel pas-à-pas opérationnel)
-- **Unité d'Apprentissage parente :** `UA.351.21`
-- **Titre Canonique :** Validation de l'environnement technique (Sprint 1)
-- **Durée :** 2 heures
-- **Objectif Opérationnel :** Vérifier et valider l'outillage local de développement pour l'ensemble de la promotion.
-- **Prérequis :** PHP 8.3+, Composer, Node.js 20+, VS Code installés.
-- **Déroulement Pas-à-Pas :**
-  1. *Étape 1 :* Exécuter la checklist de diagnostic des binaires (`php -v`, `composer -V`, `node -v`).
-  2. *Étape 2 :* Installer et configurer les extensions recommandées sous VS Code (PHP Intelephense, Tailwind CSS, Mermaid Previewer).
-  3. *Étape 3 :* Valider la génération d'un diagramme Mermaid de test en local.
-- **Critère de Réussite :** 100% des éléments de la checklist environnement sont validés sans avertissement bloquant.
-
----
-
-### T.351.213 — Réalisation du pitch de lancement (Sprint 1)
-
-- **Code :** `T.351.213`
-- **Maturité :** `UA-tâche` (Tutoriel pas-à-pas opérationnel)
-- **Unité d'Apprentissage parente :** `UA.351.21`
-- **Titre Canonique :** Réalisation du pitch de lancement (Sprint 1)
-- **Durée :** 2 heures
-- **Objectif Opérationnel :** Concevoir et présenter le support de pitch pour lancer la dynamique du Sprint 1.
-- **Prérequis :** Prise de connaissance du sujet d'imitation et des objectifs certifiants N3.
-- **Déroulement Pas-à-Pas :**
-  1. *Étape 1 :* Rédiger la structure du pitch en 5 slides Markdown (`presentation-s01.md`).
-  2. *Étape 2 :* Formuler la proposition de valeur et les personas cibles préliminaires.
-  3. *Étape 3 :* Réaliser une restitution orale chronométrée de 5 minutes devant l'équipe.
-- **Critère de Réussite :** Le support `presentation-s01.md` est finalisé et le pitch est approuvé par le formateur.
+  1. *Étape 1 :* Formaliser la vision du projet : plateforme de publication d'articles techniques pour valoriser les lauréats.
+  2. *Étape 2 :* Délimiter le périmètre strict du Sprint 1 (Ce qui est IN : consultation publique d'un article, lecture CSV ; Ce qui est OUT : authentification, création d'article, base de données relationnelle).
+  3. *Étape 3 :* Identifier les parties prenantes (Lecteur public, Formateur Product Owner) et consigner l'ensemble dans `cadrage/cadrage-projet.md`.
+- **Critère de Réussite :** Le fichier `cadrage/cadrage-projet.md` est validé et versionné sur la branche `sprint1`.
 
 ---
 
 ## 3. Plan des Tutoriels : UA.351.22
 
-### T.351.221 — Sprint Planning et engagement d'équipe (Sprint 1)
+### T.351.221 — Sprint Planning et engagement d'équipe
 
 - **Code :** `T.351.221`
-- **Maturité :** `UA-tâche` (Tutoriel pas-à-pas opérationnel)
+- **Maturité :** `UA-tâche` (Tutoriel opérationnel de planification)
 - **Unité d'Apprentissage parente :** `UA.351.22`
-- **Titre Canonique :** Sprint Planning et engagement d'équipe (Sprint 1)
-- **Durée :** 4 heures
-- **Objectif Opérationnel :** Animer la planification du Sprint 1, découper l'incrément en tâches techniques et contractualiser l'engagement d'équipe.
-- **Prérequis :** Product Backlog initial validé (`UA.351.12`).
+- **Titre Canonique :** Sprint Planning et engagement d'équipe
+- **Position dans le Flux :** Phase B — Analyse, Conception & Planification / Étape 2.3 — Planification & Sprint Backlog.
+- **Branche Git de travail :** `sprint1`
+- **Fichiers modifiés ou créés :** `scrum/sprint-backlog-s1.md`
+- **Objectif Opérationnel :** Animer la planification du Sprint 1, découper l'incrément en tâches d'ingénierie et contractualiser la Definition of Done.
+- **Prérequis :** Product Backlog initialisé (`UA.351.12`).
 - **Déroulement Pas-à-Pas :**
-  1. *Étape 1 :* Examiner la User Story prioritaire : *« Consultation détaillée d'un article de blog »*.
-  2. *Étape 2 :* Découper la Story en tâches techniques d'ingénierie (architecture, route, contrôleur, vue, service CSV).
-  3. *Étape 3 :* Évaluer l'effort technique en Story Points et renseigner le `sprint-backlog-s1.md`.
-  4. *Étape 4 :* Valider formellement la grille Definition of Done (DoD) en 7 critères bloquants.
-- **Critère de Réussite :** Le document `sprint-backlog-s1.md` est complet, les tâches sont réparties sur le Kanban et l'engagement d'équipe est validé.
+  1. *Étape 1 :* Sélectionner la User Story prioritaire du carnet : *« Consultation détaillée d'un article de blog »*.
+  2. *Étape 2 :* Découper la Story en tâches techniques élémentaires (Modélisation UML, ADR-01, Route/Vue, Contrôleur, Classe Service CSV, Layout Blade et 404).
+  3. *Étape 3 :* Formaliser la grille Definition of Done (DoD) en 7 critères bloquants.
+  4. *Étape 4 :* Renseigner le fichier `scrum/sprint-backlog-s1.md` et engager l'équipe sur le Sprint Goal.
+- **Critère de Réussite :** Le document `scrum/sprint-backlog-s1.md` est finalisé et versionné sur la branche `sprint1`.
+
+---
+
+### T.351.222 — Création du prompt-sprint-planning
+
+- **Code :** `T.351.222`
+- **Maturité :** `UA-tâche` (Tutoriel d'automatisation IA)
+- **Unité d'Apprentissage parente :** `UA.351.22`
+- **Titre Canonique :** Création du prompt-sprint-planning
+- **Position dans le Flux :** Phase B — Analyse, Conception & Planification / Étape 2.3 — Automatisation de la Planification.
+- **Branche Git de travail :** `sprint1`
+- **Fichiers modifiés ou créés :** `livrables/ia/prompts/prompt-sprint-planning.prompt.md`
+- **Objectif Opérationnel :** Concevoir le prompt d'ingénierie réutilisable permettant à un agent IA de générer le Sprint Backlog découpé à partir d'une sélection de User Stories.
+- **Missions Concrètes Réalisées par le Prompt :**
+  1. Extraire les User Stories sélectionnées pour le sprint depuis le Product Backlog.
+  2. Décomposer chaque User Story en tâches techniques concrètes selon la stack du projet.
+  3. Rédiger le document `sprint-backlog.md` avec matrice de suivi et checklist DoD.
+- **Cahier des Charges du Prompt (Méthode RIO) :**
+  - **Rôle :** Scrum Master & Coach Agile senior expert en décomposition de tâches techniques.
+  - **Instruction :** Prendre en entrée les User Stories retenues et produire la décomposition technique détaillée avec critères DoD.
+  - **Output :** Fichier Markdown structuré directement intégrable dans `scrum/sprint-backlog-[ID].md`.
+  - **Contraintes Négatives :** Pas de tâches vagues ou génériques ; chaque tâche doit spécifier les fichiers cibles impactés.
+- **Critère de Réussite :** Le fichier `livrables/ia/prompts/prompt-sprint-planning.prompt.md` est testé et versionné sur la branche `sprint1`.
 
 ---
 
 ## 4. Plan des Tutoriels : UA.351.23
 
-### T.351.231 — Sprint Review et démonstration live (Sprint 1)
+### T.351.231 — Sprint Review et démonstration live
 
 - **Code :** `T.351.231`
-- **Maturité :** `UA-tâche` (Tutoriel pas-à-pas opérationnel)
+- **Maturité :** `UA-tâche` (Tutoriel opérationnel de démonstration)
 - **Unité d'Apprentissage parente :** `UA.351.23`
-- **Titre Canonique :** Sprint Review et démonstration live (Sprint 1)
-- **Durée :** 1 heure 30
-- **Objectif Opérationnel :** Conduire la démonstration fonctionnelle live de l'incrément et valider la DoD avec les parties prenantes.
-- **Prérequis :** Code applicatif Laravel 12 stabilisé et fonctionnel.
+- **Titre Canonique :** Sprint Review et démonstration live
+- **Position dans le Flux :** Phase D — Clôture de Sprint, Rétrospective & Bilan / Étape 5.1 — Démonstration Live.
+- **Branche Git de travail :** `sprint1`
+- **Fichiers modifiés ou créés :** `scrum/revue-s1.md`
+- **Objectif Opérationnel :** Conduire la démonstration live de l'incrément face au formateur Product Owner et valider critère par critère la DoD.
 - **Déroulement Pas-à-Pas :**
-  1. *Étape 1 :* Démarrer le serveur de développement local et préparer les scénarios de test nominaux et d'erreur (404).
-  2. *Étape 2 :* Présenter la fonctionnalité de consultation d'article en direct devant le formateur Product Owner.
-  3. *Étape 3 :* Émarger la grille de Definition of Done (7/7 critères validés).
-- **Critère de Réussite :** L'incrément est validé en séance sans plantage et le PV de revue est rédigé.
+  1. *Étape 1 :* Préparer l'environnement de démonstration sur le serveur local (`php artisan serve`).
+  2. *Étape 2 :* Jouer les scénarios nominaux (consultation d'articles valides) et d'erreur (URL inexistante $\to$ page 404).
+  3. *Étape 3 :* Renseigner la grille de validation DoD dans `scrum/revue-s1.md`.
+- **Critère de Réussite :** Le procès-verbal `scrum/revue-s1.md` atteste de la validation des 7 critères de la DoD sur la branche `sprint1`.
 
 ---
 
-### T.351.232 — Sprint Retrospective et dette d'empathie (Sprint 1)
+### T.351.232 — Sprint Retrospective et dette d'empathie
 
 - **Code :** `T.351.232`
-- **Maturité :** `UA-tâche` (Tutoriel pas-à-pas opérationnel)
+- **Maturité :** `UA-tâche` (Tutoriel opérationnel de rétrospective)
 - **Unité d'Apprentissage parente :** `UA.351.23`
-- **Titre Canonique :** Sprint Retrospective et dette d'empathie (Sprint 1)
-- **Durée :** 1 heure 30
-- **Objectif Opérationnel :** Animer le rituel de rétrospective agile et formaliser le constat réflexif de dette méthodologique pour le sprint suivant.
-- **Prérequis :** Clôture de la Sprint Review.
+- **Titre Canonique :** Sprint Retrospective et dette d'empathie
+- **Position dans le Flux :** Phase D — Clôture de Sprint, Rétrospective & Bilan / Étape 5.2 — Analyse Réflexive.
+- **Branche Git de travail :** `sprint1`
+- **Fichiers modifiés ou créés :** `scrum/retrospective-s1.md`
+- **Objectif Opérationnel :** Animer la rétrospective réflexive d'équipe et acter formellement la dette d'empathie utilisateur justifiant l'introduction du Design Thinking au Sprint 2.
 - **Déroulement Pas-à-Pas :**
-  1. *Étape 1 :* Animer la collecte des ressentis (ce qui a bien fonctionné, ce qui a posé problème).
-  2. *Étape 2 :* Analyser la question réflexive didactique : l'écran codé répond-il aux besoins réels d'utilisateurs testés ?
-  3. *Étape 3 :* Consigner le constat de dette d'empathie dans `scrum/retrospective-s1.md` justifiant l'intégration du Design Thinking en Session S02.
-- **Critère de Réussite :** Le rapport `retrospective-s1.md` est formalisé et la dette d'empathie est actée pour le Sprint 2.
+  1. *Étape 1 :* Collecter les observations de l'équipe (points forts techniques, difficultés rencontrées).
+  2. *Étape 2 :* Analyser la question réflexive : l'écran codé répond-il aux besoins réels d'utilisateurs testés ?
+  3. *Étape 3 :* Formaliser le constat de dette méthodologique dans `scrum/retrospective-s1.md`.
+- **Critère de Réussite :** Le compte-rendu `scrum/retrospective-s1.md` est validé et acte la transition pédagogique vers le Sprint 2.
 
 ---
 
-### T.351.233 — Raffinement du Product Backlog (Sprint 1)
+### T.351.233 — Raffinement du Product Backlog
 
 - **Code :** `T.351.233`
-- **Maturité :** `UA-tâche` (Tutoriel pas-à-pas opérationnel)
+- **Maturité :** `UA-tâche` (Tutoriel opérationnel de raffinement)
 - **Unité d'Apprentissage parente :** `UA.351.23`
-- **Titre Canonique :** Raffinement du Product Backlog (Sprint 1)
-- **Durée :** 1 heure 30
-- **Objectif Opérationnel :** Actualiser, ré-estimer et réordonner le Product Backlog pour préparer le Sprint 2.
-- **Prérequis :** Bilan de la Sprint Review et de la Retrospective.
+- **Titre Canonique :** Raffinement du Product Backlog
+- **Position dans le Flux :** Phase D — Clôture de Sprint, Rétrospective & Bilan / Étape 5.3 — Backlog Grooming.
+- **Branche Git de travail :** `sprint1`
+- **Fichiers modifiés ou créés :** `scrum/product-backlog.md`
+- **Objectif Opérationnel :** Actualiser et réordonner le Product Backlog à la lumière des retours de revue pour préparer le Sprint 2.
 - **Déroulement Pas-à-Pas :**
-  1. *Étape 1 :* Intégrer les retours d'utilisateurs et ajuster les User Stories en suspens.
-  2. *Étape 2 :* Définir les critères d'acceptation préliminaires pour les Stories du Sprint 2 (Personas, Formulaire de création, persistance).
-  3. *Étape 3 :* Actualiser le fichier `scrum/product-backlog.md`.
-- **Critère de Réussite :** Le Product Backlog actualisé reflète fidèlement la trajectoire du Sprint 2.
+  1. *Étape 1 :* Marquer la User Story US-01 comme terminée (`Terminé`).
+  2. *Étape 2 :* Intégrer les nouvelles exigences et réordonner les User Stories de la session suivante (Personas, création d'article).
+  3. *Étape 3 :* Mettre à jour `scrum/product-backlog.md`.
+- **Critère de Réussite :** Le fichier `scrum/product-backlog.md` est actualisé et prêt pour la planification du Sprint 2.
 
 ---
 
-### T.351.234 — Débriefing de session et bilan de progression (Sprint 1)
+### T.351.234 — Débriefing de session et bilan de progression
 
 - **Code :** `T.351.234`
-- **Maturité :** `UA-tâche` (Tutoriel pas-à-pas opérationnel)
+- **Maturité :** `UA-tâche` (Tutoriel opérationnel d'auto-évaluation)
 - **Unité d'Apprentissage parente :** `UA.351.23`
-- **Titre Canonique :** Débriefing de session et bilan de progression (Sprint 1)
-- **Durée :** 1 heure 30
-- **Objectif Opérationnel :** Dresser le bilan individuel et collectif d'acquisition des compétences sur les 80h de formation.
-- **Prérequis :** Épreuve de Live Coding 40 min terminée et cérémonies Scrum clôturées.
+- **Titre Canonique :** Débriefing de session et bilan de progression
+- **Position dans le Flux :** Phase D — Clôture de Sprint, Rétrospective & Bilan / Étape 5.4 — Débriefing Individuel.
+- **Branche Git de travail :** `sprint1`
+- **Fichiers modifiés ou créés :** `scrum/bilan-s1.md`
+- **Objectif Opérationnel :** Dresser le bilan individuel d'acquisition des compétences sur l'ensemble de la Session S01.
 - **Déroulement Pas-à-Pas :**
-  1. *Étape 1 :* Remplir la grille d'auto-évaluation réflexive sur les compétences mobilisées ($C.311, C.312, C.321, C.325, C.351$).
-  2. *Étape 2 :* Analyser les axes d'amélioration identifiés lors de l'épreuve de Live Coding.
-  3. *Étape 3 :* Clôturer le journal de session et valider la feuille de progression individuelle.
-- **Critère de Réussite :** La fiche de débriefing individuel est complétée et archivée dans le dossier de progression de l'apprenant.
+  1. *Étape 1 :* Évaluer son niveau d'acquisition sur les 5 compétences du sprint ($C.311, C.312, C.321, C.325, C.351$).
+  2. *Étape 2 :* Analyser les résultats de l'épreuve de Live Coding de 40 minutes et cibler les axes de consolidation.
+  3. *Étape 3 :* Renseigner la fiche de débriefing individuel dans `scrum/bilan-s1.md`.
+- **Critère de Réussite :** Le bilan `scrum/bilan-s1.md` est rempli et versé au suivi de compétences de l'apprenant.
+
+---
+
+### T.351.235 — Création des 4 prompts de clôture de sprint
+
+- **Code :** `T.351.235`
+- **Maturité :** `UA-tâche` (Tutoriel d'automatisation IA)
+- **Unité d'Apprentissage parente :** `UA.351.23`
+- **Titre Canonique :** Création des 4 prompts de clôture de sprint
+- **Position dans le Flux :** Phase D — Clôture de Sprint, Rétrospective & Bilan / Étape 5.5 — Automatisation des Rituels de Clôture.
+- **Branche Git de travail :** `sprint1`
+- **Fichiers modifiés ou créés :**
+  - `livrables/ia/prompts/prompt-sprint-review.prompt.md`
+  - `livrables/ia/prompts/prompt-sprint-retrospective.prompt.md`
+  - `livrables/ia/prompts/prompt-backlog-refinement.prompt.md`
+  - `livrables/ia/prompts/prompt-bilan-session.prompt.md`
+- **Objectif Opérationnel :** Concevoir les 4 prompts d'ingénierie réutilisables automatisant la production des livrables pour chacune des cérémonies de clôture de sprint.
+- **Missions Concrètes des 4 Prompts :**
+  1. **`prompt-sprint-review` :** Générer le procès-verbal de démonstration et la grille d'audit de la DoD à partir des fonctionnalités livrées sur le sprint.
+  2. **`prompt-sprint-retrospective` :** Guider l'animation de la rétrospective agile, structurer la collecte des forces/axes d'amélioration et synthétiser les décisions concrètes d'équipe.
+  3. **`prompt-backlog-refinement` :** Analyser le Product Backlog, actualiser les statuts des User Stories livrées et ré-estimer/réordonner les items prioritaires pour le sprint suivant.
+  4. **`prompt-bilan-session` :** Générer le canevas de débriefing individuel réflexif et la matrice de positionnement sur les compétences techniques mobilisées.
+- **Critère de Réussite :** Les 4 fichiers de prompts sont créés dans `livrables/ia/prompts/` et versionnés sur la branche `sprint1`.

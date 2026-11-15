@@ -2,6 +2,8 @@
 
 > **Domaine :** `D.321.1` | **Compétence :** `C.321` — Développer une application Web avec le framework Laravel | **Session :** S01  
 > **Niveau de Maturité :** UA-Lab (Atelier pratique guidé)  
+> **Branche Git de Travail :** `sprint1`  
+> **Projet Référence :** Projet d'imitation (*Blog des Lauréats*)  
 > **Référentiels Liés :** [`../../3.sprints/flux-travail-n3.md`](../../3.sprints/flux-travail-n3.md) | [`../../3.sprints/stack-technique-n3.md`](../../3.sprints/stack-technique-n3.md)
 
 ---
@@ -11,285 +13,247 @@
 ### UA.321.11 — Hello World Laravel : Route et Vue
 
 - **Code :** `UA.321.11`
-- **Maturité :** `UA-lab` (Atelier pratique guidé)
+- **Maturité :** `UA-Lab` (Atelier pratique guidé)
 - **Ordre en Session :** Étape 09
-- **Positionnement Flux de Travail :** Phase 4 — Réalisation Applicative & Code Cible / Étape 4.1 — Routage Web & Page d'Accueil
+- **Positionnement Flux de Travail :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.1 — Routage Web & Page d'Accueil
 - **Briques Stack Technique :** Laravel 12 Router, Moteur Blade, Tailwind CSS utilitaire
 - **Compétence :** `C.321` — Développer une application Web avec le framework Laravel
 - **Domaine :** `D.321.1` — Développement Web avec Laravel
-- **Durée estimée :** 8 heures
-- **Objectif :** Valider le bon fonctionnement de l'environnement d'exécution Laravel 12 et livrer la page d'accueil minimale du Blog des Lauréats en configurant le routage web déclaratif et un premier gabarit Blade responsive sous Tailwind CSS.
-- **Description :** Cette unité d'apprentissage constitue le premier contact opérationnel avec Laravel 12. L'apprenant valide sa chaîne d'outillage locale en instanciant le serveur web, s'approprie le cycle de vie d'une requête HTTP, et produit le premier incrément visible de l'application : une page d'accueil sécurisée et mise en page de manière moderne.
+- **Durée estimée :** 4 heures
+- **Objectif :** S'approprier le fonctionnement initial du framework Laravel 12 et livrer la page d'accueil du Blog des Lauréats en configurant le routage web déclaratif et un premier gabarit Blade sous Tailwind CSS.
+- **Description :** Premier contact opérationnel avec Laravel 12. L'apprenant découvre l'écosystème Laravel et le cycle de vie d'une requête HTTP, puis configure sa première route web déclarative et sa vue d'accueil.
 - **Notions Clés Utilisées dans le Sprint :**
-  - Cycle de vie d'une requête HTTP sous Laravel 12 (`public/index.php` $\to$ Kernel HTTP $\to$ Middlewares $\to$ Routeur $\to$ Vue $\to$ Réponse 200).
-  - Routage déclaratif dans `routes/web.php` : façade `Route::get()`, closures anonymes `function () { return view(...); }`.
-  - Moteur de gabarit Blade : convention d'arborescence `resources/views/*.blade.php`, syntaxe d'interpolation `{{ $variable }}`, protection XSS native.
-  - Intégration CSS utilitaire : intégration de Tailwind CSS (via CDN/Vite), conteneurs centrés, typographie responsive.
-- **Livrables :** Route d'accueil fonctionnelle et vue Blade stylisée (`routes/web.php`, `resources/views/welcome.blade.php`) et prompt (`livrables/ia/prompts/prompt-route-setup.prompt.md`).
-- **Travail à Faire :** Configurer la route GET racine dans `routes/web.php`, concevoir la vue de bienvenue responsive stylisée sous Tailwind CSS et rédiger le prompt de transposition Fil Rouge.
+  - Cycle de vie d'une requête HTTP sous Laravel 12 (`public/index.php` $\to$ Kernel $\to$ Router $\to$ Vue $\to$ Réponse 200).
+  - Routage déclaratif dans `routes/web.php` : façade `Route::get()`, closures anonymes.
+  - Moteur de gabarit Blade : syntaxe d'interpolation `{{ $variable }}`, directives de base.
+  - Intégration Tailwind CSS : classes utilitaires et structure responsive.
+- **Livrables :** Route d'accueil fonctionnelle et vue Blade (`routes/web.php`, `resources/views/welcome.blade.php`) sur la branche `sprint1`.
+- **Travail à Faire :** Assimiler les bases de Laravel, configurer la route GET racine et concevoir la page d'accueil du Blog des Lauréats.
 
 ---
 
 ### UA.321.12 — Démarrage rapide Laravel : Contrôleur et Vue
 
 - **Code :** `UA.321.12`
-- **Maturité :** `UA-lab` (Atelier pratique guidé)
+- **Maturité :** `UA-Lab` (Atelier pratique guidé)
 - **Ordre en Session :** Étape 10
-- **Positionnement Flux de Travail :** Phase 4 — Réalisation Applicative & Code Cible / Étape 4.2 — Contrôleur HTTP & Rendu de Collection
-- **Briques Stack Technique :** Artisan Controller, Contrôleur HTTP, Directives Blade itératives, Collections
+- **Positionnement Flux de Travail :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.2 — Contrôleur HTTP & Rendu de Collection
+- **Briques Stack Technique :** Artisan Controller, Contrôleur HTTP, Directives Blade itératives
 - **Compétence :** `C.321` — Développer une application Web avec le framework Laravel
 - **Domaine :** `D.321.1` — Développement Web avec Laravel
-- **Durée estimée :** 8 heures
-- **Objectif :** Mettre en œuvre le pattern MVC en isolant l'orchestration HTTP dans un contrôleur dédié pour extraire et afficher dynamiquement la collection des catégories d'articles à travers des boucles Blade stylisées.
-- **Description :** L'apprenant franchit une étape clé de structuration en éliminant les closures directes dans les routes au profit d'un contrôleur HTTP mince. Il apprend à séparer la réception de la requête, la préparation des données et leur restitution visuelle dynamique sous forme de grille responsive.
+- **Durée estimée :** 6 heures
+- **Objectif :** Mettre en œuvre le pattern MVC en isolant l'orchestration HTTP dans un contrôleur dédié pour afficher dynamiquement la collection des catégories d'articles à travers des boucles Blade stylisées.
+- **Description :** Structuration MVC du code applicatif. L'apprenant remplace les closures directes par un contrôleur HTTP mince créé avec la CLI Artisan, transmet des données structurées et compose une vue Blade itérative dynamique.
 - **Notions Clés Utilisées dans le Sprint :**
-  - Rôle du contrôleur HTTP dans l'architecture MVC : récepteur de `Request`, orchestrateur d'action et fournisseur de `Response`.
-  - Commande de scaffolding Artisan : `php artisan make:controller Public/ArticleController`.
-  - Transmission de données structurées : fonction d'assistance `view('vue', compact('categories'))` et tableaux associatifs.
-  - Directives de boucle Blade : `@foreach`, `@forelse`, `@empty`, `@endforeach` pour itérer de manière résiliente sur une collection.
-  - Grille de cartes responsive sous Tailwind CSS (`grid grid-cols-1 md:grid-cols-3 gap-6`).
-- **Livrables :** Contrôleur HTTP et vue de collection (`app/Http/Controllers/Public/ArticleController.php`, `resources/views/articles/index.blade.php`) et prompt (`livrables/ia/prompts/prompt-controller-blade.prompt.md`).
-- **Travail à Faire :** Générer le contrôleur avec Artisan, implémenter la méthode d'affichage de collection, composer la vue Blade en grille de cartes et rédiger le prompt de transposition.
+  - Rôle du contrôleur HTTP dans l'architecture MVC : récepteur de `Request`, coordinateur et fournisseur de `Response`.
+  - Commande de scaffolding Artisan : `php artisan make:controller Public/CategoryController`.
+  - Transmission de données structurées : fonction d'assistance `view('vue', compact('categories'))`.
+  - Directives de boucle Blade : `@foreach`, `@forelse`, `@empty`, `@endforeach`.
+- **Livrables :** Contrôleur HTTP et vue de collection (`app/Http/Controllers/Public/CategoryController.php`, `resources/views/categories/index.blade.php`, `routes/web.php`) sur la branche `sprint1`.
+- **Travail à Faire :** Générer le contrôleur avec Artisan, implémenter l'action de collection et composer la vue Blade en grille de cartes.
 
 ---
 
 ### UA.321.13 — Contrôleur, Classe Service et Vue détaillée
 
 - **Code :** `UA.321.13`
-- **Maturité :** `UA-lab` (Atelier pratique guidé)
+- **Maturité :** `UA-Lab` (Atelier pratique guidé)
 - **Ordre en Session :** Étape 11
-- **Positionnement Flux de Travail :** Phase 4 — Réalisation Applicative & Code Cible / Étape 4.3 — Tranche Verticale Complète & Étape 4.4 — Résilience & Erreurs HTTP
-- **Briques Stack Technique :** Routes dynamiques, Injection IoC, Classe Service CSV, Blade layout maître, abort(404)
+- **Positionnement Flux de Travail :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.3 — Tranche Verticale Complète & Étape 4.4 — Résilience & Erreurs HTTP
+- **Briques Stack Technique :** Routes dynamiques, Injection IoC, Classe Service CSV, Layout maître Blade, abort(404), Prompts IA Backend & Frontend, Live Coding
 - **Compétence :** `C.321` — Développer une application Web avec le framework Laravel
 - **Domaine :** `D.321.1` — Développement Web avec Laravel
-- **Durée estimée :** 14 heures
-- **Objectif :** Livrer la fonctionnalité centrale de consultation détaillée d'un article du Blog des Lauréats en implémentant une architecture découplée en deux couches (contrôleur mince IoC et classe service sur persistance tabulaire) avec gestion sécurisée de l'erreur 404.
-- **Description :** Point culminant de la réalisation logicielle du Sprint 1, cette unité livre la tranche verticale complète de l'application sans base relationnelle active. L'apprenant professionnalise son code en encapsulant la lecture tabulaire dans une classe Service injectée automatiquement par le conteneur IoC, et garantit la robustesse utilisateur face aux identifiants inexistants.
+- **Durée estimée :** 32 heures
+- **Objectif :** Livrer la fonctionnalité centrale de consultation détaillée d'un article en implémentant l'architecture en deux couches (contrôleur mince IoC et classe service tabulaire), concevoir les deux prompts spécialisés (`prompt-back-end` et `prompt-front-end`) et réussir l'évaluation de Live Coding en 40 minutes.
+- **Description :** Réalisation majeure du Sprint 1. L'apprenant construit la tranche verticale complète de consultation d'article, sécurise les identifiants inexistants via `abort(404)`, encapsule l'accès CSV dans une classe Service injectée automatiquement, outille son agent IA avec deux prompts ciblés (backend et frontend) et s'entraîne à reproduire la tranche en 40 minutes chrono.
 - **Notions Clés Utilisées dans le Sprint :**
-  - Routes paramétrées dynamiques : paramètres d'URL `Route::get('/articles/{id}', ...)`, contraintes `whereNumber('id')`, routes nommées `name('articles.show')`.
-  - Injection de dépendances IoC : déclaration du service dans le constructeur de `ArticleController` pour résolution automatique par le conteneur Laravel.
-  - Classe Service découplée : classe `ArticleService` dans `app/Services/`, méthode `find(int $id)`, extraction et parsing des données tabulaires CSV (`fgetcsv()`).
-  - Gestion d'erreurs et résilience HTTP : interception d'absence d'article via `abort(404)`, gabarit personnalisé `resources/views/errors/404.blade.php`.
-  - Héritage de gabarit maître Blade : structure maître `resources/views/layouts/app.blade.php` avec `@yield('content')`, héritage par `@extends('layouts.app')` et `@section('content')`.
-  - Composants d'interface partagés : barre de navigation (navbar), pied de page (footer) et bouton de retour consultation.
-- **Livrables :** Tranche verticale logicielle complète (routes, contrôleur, service, vues de détail et 404) et prompt complet (`livrables/ia/prompts/prompt-article-service.prompt.md`).
-- **Travail à Faire :** Coder la route nommée, la classe ArticleService de lecture CSV, le contrôleur mince avec injection IoC, la vue Blade avec gabarit maître et le prompt d'ingénierie réutilisable.
+  - Routes paramétrées : `Route::get('/articles/{id}', ...)` avec contrainte `whereNumber('id')`.
+  - Injection de dépendances IoC : résolution automatique de `ArticleService` par le conteneur Laravel.
+  - Classe Service découplée : classe `ArticleService` dans `app/Services/` lisant `database/data/articles.csv`.
+  - Résilience HTTP : interception de ressource absente via `abort(404)` et gabarit personnalisé `errors/404.blade.php`.
+  - Héritage de layout maître Blade : structure `layouts/app.blade.php` avec `@yield('content')`, `@extends` et `@section`.
+  - Automatisation IA : prompts séparés backend et frontend.
+- **Livrables :** Tranche logicielle complète (`ArticleService.php`, `ArticleController.php`, `app.blade.php`, `show.blade.php`, `404.blade.php`), prompt backend (`livrables/ia/prompts/prompt-back-end.prompt.md`), prompt frontend (`livrables/ia/prompts/prompt-front-end.prompt.md`) et simulation de Live Coding validée sur la branche `sprint1`.
+- **Travail à Faire :** Implémenter la tranche verticale complète, tester le cas 404, concevoir les deux prompts IA et réaliser l'entraînement chronométré au Live Coding.
 
 ---
 
 ## 2. Plan des Tutoriels : UA.321.11
 
-### T.321.111 — Théorie : Routage et Vues
-*(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*
+### T.321.111 — Théorie : Routage et Vues sous Laravel
 
-#### 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase 4 — Réalisation Applicative & Code Cible / Étape 4.1 — Routage Web & Page d'Accueil.
-- **Stack mobilisée :** Framework Laravel 12, Routeur web, Moteur de gabarit Blade, Tailwind CSS.
-
-#### 2. Travail à Faire (Ce que l'Apprenant Doit Produire)
-Effectuer les recherches nécessaires et concevoir une présentation synthétique (support visuel ou mémo écrit) expliquant le cycle de traitement d'une requête web dans Laravel 12, le fonctionnement du fichier `routes/web.php` et les mécanismes de rendu HTML sécurisé sous Blade.
-
-#### 3. Notions Clés du Sprint à Ne Pas Oublier
-*(L'apprenant doit obligatoirement couvrir ces notions et les enrichir par sa propre recherche) :*
-- Le point d'entrée unique `public/index.php` et le rôle du routeur.
-- La syntaxe déclarative `Route::get('/chemin', $action)`.
-- La convention d'emplacement des vues dans `resources/views/`.
-- La syntaxe d'interpolation `{{ $variable }}` et l'échappement XSS automatique.
-
-#### 4. Points de Réflexion & Auto-Évaluation
-- *Pourquoi ne doit-on jamais coder de logique métier complexe ni de requêtes SQL directement dans une closure de `routes/web.php` ?*
-- *Quelle commande Artisan permet de lister l'ensemble des routes déclarées dans l'application ?*
+- **Code :** `T.321.111`
+- **Maturité :** `UA-Lab` (Présentation théorique & assimilation)
+- **Unité d'Apprentissage parente :** `UA.321.11`
+- **Titre Canonique :** Théorie : Routage et Vues sous Laravel
+- **Position dans le Flux :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.1 — Routage & Vues.
+- **Branche Git de travail :** `sprint1`
+- **Objectif Opérationnel :** Comprendre l'architecture de base du framework Laravel, le traitement d'une requête HTTP et la syntaxe Blade.
+- **Répartition Didactique (Règle des 20/80) :**
+  - **Les 20% fournis directement au tutoriel :**
+    - Qu'est-ce que Laravel : framework PHP moderne adoptant le modèle MVC.
+    - Le cycle d'une requête : point d'entrée unique `public/index.php`, passage au routeur `routes/web.php` et retour d'une vue.
+    - Syntaxe élémentaire de Blade : balises d'interpolation `{{ $variable }}` avec protection XSS intégrée et localisation dans `resources/views/`.
+  - **Les 80% recherchés par l'apprenant :**
+    - Organisation des répertoires du framework Laravel (`app/`, `config/`, `database/`, `resources/`, `routes/`).
+    - Rôle du CLI Artisan et commandes de diagnostic (`php artisan route:list`).
+- **Critère de Réussite :** Fiche d'assimilation des principes Laravel intégrée au journal d'apprentissage.
 
 ---
 
 ### T.321.112 — Pratique : Route et page d'accueil
-*(Tâche 2 — Réalisation Pratique sur le Projet d'Imitation)*
 
-#### 1. Livrable Attendu
-- `routes/web.php` : Déclaration de la route racine `/`.
-- `resources/views/welcome.blade.php` : Gabarit d'accueil complet et stylisé sous Tailwind CSS.
-
-#### 2. Consignes & Jalons de Réalisation
-Bâtir l'écran d'accueil en respectant ces 4 jalons :
-1. **Lancement du Serveur Local :** Exécuter `php artisan serve` à la racine et vérifier l'accès sur `http://127.0.0.1:8000`.
-2. **Configuration de la Route Racine :** Déclarer la route GET `/` appelant explicitement la vue `welcome`.
-3. **Composition de la Vue Blade :** Créer la page HTML5 sémantique, intégrer Tailwind CSS, concevoir la bannière d'accueil du *Blog des Lauréats* et le message d'introduction.
-4. **Vérification Navigateur :** S'assurer de la réponse HTTP 200 et de l'adaptation sur mobile (responsive).
-
-#### 3. Points de Vigilance
-- ⚠️ Attention à la casse du nom du fichier de vue (toujours en minuscules sous Linux).
-- ⚠️ Exécuter impérativement la commande artisan à la racine du projet Laravel.
-
-#### 4. Critères de Validation
-- [ ] La navigation sur `http://127.0.0.1:8000/` affiche la page d'accueil sans déformation visuelle.
-- [ ] Le code HTML généré est valide et sémantique.
-- [ ] Le commit Git respecte la convention d'équipe.
-
----
-
-### T.321.113 — Prompts & Skills : Routage Web Fil Rouge
-*(Tâche 3 — Conception Prompts & Skills Projet Fil Rouge)*
-
-#### 1. Positionnement dans le Flux Fil Rouge
-- Transposition de l'Étape 4.1 (Routage Web & Page d'Accueil) vers le Projet Fil Rouge (ex : Plateforme Cinéma).
-
-#### 2. Travail à Faire
-Concevoir dans `livrables/ia/prompts/prompt-routage-web.prompt.md` le prompt d'ingénierie réutilisable permettant à un agent IA d'initialiser la route et la page d'accueil adaptées au Projet Fil Rouge.
-
-#### 3. Cahier des Charges du Prompt (Méthode RIO)
-- **Rôle :** Développeur Fullstack Laravel 12 & expert Blade / Tailwind CSS.
-- **Instruction :** Prendre en entrée les paramètres du projet Fil Rouge `[THEME_PROJET]` et générer le code de `routes/web.php` et `resources/views/welcome.blade.php` avec identité visuelle adaptée.
-- **Output :** Deux blocs de code clairement séparés avec chemins relatifs stricts.
-- **Contraintes Négatives :** Pas de JavaScript complexe à ce stade, pas de persistance en base.
-
-#### 4. Critères de Validation
-- [ ] Le prompt est testé sur l'application Fil Rouge.
-- [ ] Le code produit s'exécute immédiatement sans erreur de syntaxe PHP ou Blade.
+- **Code :** `T.321.112`
+- **Maturité :** `UA-Lab` (Pratique guidée sur projet d'imitation)
+- **Unité d'Apprentissage parente :** `UA.321.11`
+- **Titre Canonique :** Pratique : Route et page d'accueil
+- **Position dans le Flux :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.1 — Page d'Accueil.
+- **Branche Git de travail :** `sprint1`
+- **Fichiers modifiés ou créés :** `routes/web.php`, `resources/views/welcome.blade.php`
+- **Objectif Opérationnel :** Déclarer la route racine et créer la vue de bienvenue du Blog des Lauréats stylisée sous Tailwind CSS.
+- **Déroulement Pas-à-Pas :**
+  1. *Étape 1 :* Lancer le serveur local de test via `php artisan serve`.
+  2. *Étape 2 :* Dans `routes/web.php`, déclarer la route GET `/` retournant la vue `welcome`.
+  3. *Étape 3 :* Concevoir `resources/views/welcome.blade.php` avec bannière de titre, message d'introduction et structure Tailwind CSS responsive.
+  4. *Étape 4 :* Vérifier l'affichage dans le navigateur (`http://127.0.0.1:8000`).
+- **Critère de Réussite :** La page d'accueil s'affiche avec code HTTP 200 sur la branche `sprint1`.
 
 ---
 
 ## 3. Plan des Tutoriels : UA.321.12
 
-### T.321.121 — Théorie : Contrôleur et Vues
-*(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*
+### T.321.121 — Théorie : Contrôleur et Vues dynamiques
 
-#### 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase 4 — Réalisation Applicative & Code Cible / Étape 4.2 — Contrôleur HTTP & Rendu de Collection.
-- **Stack mobilisée :** Pattern MVC, Contrôleur HTTP Laravel, Directives Blade itératives.
-
-#### 2. Travail à Faire (Ce que l'Apprenant Doit Produire)
-Effectuer les recherches nécessaires et concevoir une présentation synthétique (support visuel ou mémo écrit) expliquant le rôle du contrôleur dans le découpage MVC, l'intérêt d'extraire la logique hors des routes, et l'usage des directives Blade pour afficher des collections de données.
-
-#### 3. Notions Clés du Sprint à Ne Pas Oublier
-*(L'apprenant doit obligatoirement couvrir ces notions et les enrichir par sa propre recherche) :*
-- Le rôle d'aiguilleur du contrôleur (coordonner sans accumuler la logique métier).
-- La génération de contrôleurs via la CLI Artisan (`make:controller`).
-- La fonction helper `view()` et le passage de données via `compact()`.
-- Les directives Blade itératives (`@foreach`, `@forelse`, `@empty`, `@endforeach`).
-
-#### 4. Points de Réflexion & Auto-Évaluation
-- *Pourquoi la directive `@forelse` est-elle plus robuste et élégante qu'un `@if(count(...))` suivi d'un `@foreach` ?*
-- *Que se passe-t-il si la variable passée au contrôleur est vide ou nulle ?*
-
----
-
-### T.321.122 — Pratique : Contrôleur et liste
-*(Tâche 2 — Réalisation Pratique sur le Projet d'Imitation)*
-
-#### 1. Livrable Attendu
-- `app/Http/Controllers/Public/CategoryController.php` : Contrôleur gérant la collection.
-- `resources/views/categories/index.blade.php` : Vue Blade itérant sur les données.
-
-#### 2. Consignes & Jalons de Réalisation
-Bâtir la liste en respectant ces 4 jalons :
-1. **Génération du Contrôleur :** Créer `CategoryController` dans le namespace `App\Http\Controllers\Public` via Artisan.
-2. **Définition de l'Action :** Coder la méthode `index()` initialisant un jeu de données de catégories et le transmettant à la vue.
-3. **Déclaration de la Route :** Déclarer la route GET `/categories` pointant vers `CategoryController@index`.
-4. **Composition de la Vue :** Concevoir `resources/views/categories/index.blade.php` avec directive `@forelse` affichant une grille de cartes Tailwind CSS.
-
-#### 3. Points de Vigilance
-- ⚠️ Veiller à importer correctement le contrôleur dans `routes/web.php` via son namespace complet.
-- ⚠️ Prévoir systématiquement le cas d'une collection vide dans la directive `@empty`.
-
-#### 4. Critères de Validation
-- [ ] La navigation sur `http://127.0.0.1:8000/categories` affiche la grille de données sans erreur.
-- [ ] Le contrôleur reste mince et délègue l'affichage à la vue Blade.
-- [ ] Le responsive design est validé sur plusieurs largeurs d'écran.
+- **Code :** `T.321.121`
+- **Maturité :** `UA-Lab` (Présentation théorique & assimilation)
+- **Unité d'Apprentissage parente :** `UA.321.12`
+- **Titre Canonique :** Théorie : Contrôleur et Vues dynamiques
+- **Position dans le Flux :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.2 — Contrôleur HTTP.
+- **Branche Git de travail :** `sprint1`
+- **Objectif Opérationnel :** Comprendre le rôle du contrôleur HTTP dans le patron MVC et les directives de boucle Blade.
+- **Répartition Didactique (Règle des 20/80) :**
+  - **Les 20% fournis directement au tutoriel :**
+    - Rôle du contrôleur : séparer la réception de la requête web de la restitution visuelle.
+    - Génération via Artisan : `php artisan make:controller Public/CategoryController`.
+    - Transmission de variables avec le helper `view('vue', compact('categories'))`.
+    - Directives de boucle Blade : `@foreach` et `@forelse` avec clause `@empty`.
+  - **Les 80% recherchés par l'apprenant :**
+    - Différence entre contrôleur classique et contrôleur invocable (`__invoke`).
+    - Mécanismes de manipulation des collections en PHP / Laravel.
+- **Critère de Réussite :** Fiche de synthèse sur les contrôleurs intégrée au journal d'apprentissage.
 
 ---
 
-### T.321.123 — Prompts & Skills : Contrôleur et collection Fil Rouge
-*(Tâche 3 — Conception Prompts & Skills Projet Fil Rouge)*
+### T.321.122 — Pratique : Contrôleur et liste des catégories
 
-#### 1. Positionnement dans le Flux Fil Rouge
-- Transposition de l'Étape 4.2 (Contrôleur HTTP & Rendu de Collection) vers le Projet Fil Rouge (ex : Plateforme Cinéma).
-
-#### 2. Travail à Faire
-Concevoir dans `livrables/ia/prompts/prompt-controleur-collection.prompt.md` le prompt d'ingénierie réutilisable permettant à un agent IA de générer le contrôleur et la vue de collection d'une entité métier du Projet Fil Rouge (ex : Genres de films).
-
-#### 3. Cahier des Charges du Prompt (Méthode RIO)
-- **Rôle :** Développeur backend Laravel 12 & spécialiste Blade.
-- **Instruction :** Générer le contrôleur HTTP avec namespace propre et la vue Blade associée stylisée avec Tailwind CSS à partir des données de l'entité `[ENTITE_COLLECTION]`.
-- **Output :** Fichiers PHP et Blade complets prêts à l'intégration.
-- **Contraintes Négatives :** Pas de requêtes SQL directes, utiliser des données structurées propres.
-
-#### 4. Critères de Validation
-- [ ] Le prompt est testé sur l'application Fil Rouge.
-- [ ] La collection d'entités métier s'affiche harmonieusement sous forme de cartes responsive.
+- **Code :** `T.321.122`
+- **Maturité :** `UA-Lab` (Pratique guidée sur projet d'imitation)
+- **Unité d'Apprentissage parente :** `UA.321.12`
+- **Titre Canonique :** Pratique : Contrôleur et liste des catégories
+- **Position dans le Flux :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.2 — Rendu de Collection.
+- **Branche Git de travail :** `sprint1`
+- **Fichiers modifiés ou créés :**
+  - `app/Http/Controllers/Public/CategoryController.php`
+  - `resources/views/categories/index.blade.php`
+  - `routes/web.php`
+- **Objectif Opérationnel :** Créer un contrôleur HTTP, transmettre une liste de catégories et l'afficher dans une grille responsive Blade.
+- **Déroulement Pas-à-Pas :**
+  1. *Étape 1 :* Générer `CategoryController` via Artisan dans `App\Http\Controllers\Public`.
+  2. *Étape 2 :* Implémenter la méthode `index()` initialisant un jeu de données de catégories et retournant la vue avec `compact()`.
+  3. *Étape 3 :* Déclarer la route GET `/categories` dans `routes/web.php`.
+  4. *Étape 4 :* Concevoir `resources/views/categories/index.blade.php` avec la directive `@forelse` affichant une grille de cartes Tailwind CSS.
+- **Critère de Réussite :** La navigation sur `/categories` affiche dynamiquement la liste de catégories sans erreur sur la branche `sprint1`.
 
 ---
 
 ## 4. Plan des Tutoriels : UA.321.13
 
-### T.321.131 — Théorie : Contrôleur mince et Service
-*(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*
+### T.321.131 — Théorie : Injection de dépendances et Classe Service
 
-#### 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase 4 — Réalisation Applicative & Code Cible / Étape 4.3 — Tranche Verticale Complète & Étape 4.4 — Résilience & Erreurs HTTP.
-- **Stack mobilisée :** Laravel IoC Container, Dependency Injection, Routes dynamiques, Exceptions HTTP 404, Héritage Blade.
-
-#### 2. Travail à Faire (Ce que l'Apprenant Doit Produire)
-Effectuer les recherches nécessaires et concevoir une présentation synthétique (support visuel ou mémo écrit) expliquant le fonctionnement de l'injection de dépendances dans Laravel, le rôle de la classe Service comme passerelle vers les données, les mécanismes de capture d'erreurs 404 et le principe d'héritage de gabarit maître sous Blade.
-
-#### 3. Notions Clés du Sprint à Ne Pas Oublier
-*(L'apprenant doit obligatoirement couvrir ces notions et les enrichir par sa propre recherche) :*
-- Les routes dynamiques paramétrées `{id}` et la contrainte de type `whereNumber('id')`.
-- L'injection de dépendances automatique par le constructeur (IoC).
-- L'encapsulation de la lecture des données (CSV) dans `ArticleService`.
-- Le déclenchement de `abort(404)` et la personnalisation de la réponse d'erreur.
-- L'architecture de gabarit maître Blade (`@extends`, `@yield`, `@section`).
-
-#### 4. Points de Réflexion & Auto-Évaluation
-- *Pourquoi est-il crucial de restreindre le paramètre `{id}` avec `whereNumber()` dès la déclaration de route ?*
-- *Quel est l'avantage docimologique et professionnel d'avoir un layout maître partagé par toutes les vues de l'application ?*
+- **Code :** `T.321.131`
+- **Maturité :** `UA-Lab` (Présentation théorique & assimilation)
+- **Unité d'Apprentissage parente :** `UA.321.13`
+- **Titre Canonique :** Théorie : Injection de dépendances et Classe Service
+- **Position dans le Flux :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.3 — Découplage & Injection.
+- **Branche Git de travail :** `sprint1`
+- **Objectif Opérationnel :** Maîtriser le conteneur IoC de Laravel, l'injection de dépendances par le constructeur, la gestion des erreurs 404 et l'héritage de layout Blade.
+- **Répartition Didactique (Règle des 20/80) :**
+  - **Les 20% fournis directement au tutoriel :**
+    - Conteneur de services (IoC) : injection automatique des dépendances typées dans le constructeur du contrôleur.
+    - Classe Service découplée : isolation de la logique d'accès aux données (lecture CSV) hors du contrôleur.
+    - Déclenchement d'exception HTTP : fonction `abort(404)` et gabarit dédié `resources/views/errors/404.blade.php`.
+    - Héritage de layout maître Blade : `@extends('layouts.app')`, `@yield('content')`, `@section('content')`.
+  - **Les 80% recherchés par l'apprenant :**
+    - Cycle de résolution des dépendances par le Service Container de Laravel.
+    - Typage strict PHP 8.3 et retours de fonctions (`?array`, `void`).
+- **Critère de Réussite :** Fiche d'assimilation des patrons Service et IoC intégrée au journal d'apprentissage.
 
 ---
 
-### T.321.132 — Pratique : Service et vue détaillée
-*(Tâche 2 — Réalisation Pratique sur le Projet d'Imitation)*
+### T.321.132 — Pratique : Tranche verticale complète et gestion 404
 
-#### 1. Livrable Attendu
-- `app/Services/ArticleService.php` : Classe de service lisant les articles depuis le CSV.
-- `app/Http/Controllers/Public/ArticleController.php` : Contrôleur mince avec injection IoC.
-- `resources/views/layouts/app.blade.php` : Gabarit maître responsive (navbar, footer).
-- `resources/views/articles/show.blade.php` : Vue de consultation détaillée d'un article.
-- `resources/views/errors/404.blade.php` : Vue personnalisée d'erreur 404.
-- `routes/web.php` : Route nommée `articles.show`.
-
-#### 2. Consignes & Jalons de Réalisation
-Bâtir la tranche verticale complète en respectant ces 5 jalons :
-1. **Création de la Classe Service :** Coder `ArticleService` dans `app/Services/` avec la méthode `find(int $id)` qui parcourt `database/data/articles.csv` via `fgetcsv()` et retourne un tableau ou `null`.
-2. **Implémentation du Contrôleur Mince :** Injecter `ArticleService` dans le constructeur de `ArticleController`. Dans la méthode `show(int $id)`, appeler le service et déclencher `abort(404)` si l'article n'existe pas.
-3. **Déclaration de la Route Nommée :** Configurer `Route::get('/articles/{id}', [ArticleController::class, 'show'])->whereNumber('id')->name('articles.show');`.
-4. **Mise en Place du Layout Maître :** Créer `resources/views/layouts/app.blade.php` avec en-tête de navigation, conteneur `@yield('content')` et pied de page Tailwind.
-5. **Vues de Détail et 404 :** Développer `show.blade.php` héritant du layout avec affichage complet de l'article, et personnaliser `errors/404.blade.php`.
-
-#### 3. Points de Vigilance
-- ⚠️ Ne pas oublier de fermer le pointeur de fichier CSV (`fclose()`) après lecture.
-- ⚠️ Tester expressément le scénario d'erreur en saisissant un identifiant inexistant dans l'URL (ex: `/articles/9999`).
-
-#### 4. Critères de Validation
-- [ ] La navigation sur un article existant (ex: `http://127.0.0.1:8000/articles/1`) affiche l'article complet dans le gabarit maître.
-- [ ] La navigation sur un identifiant inexistant renvoie une page 404 propre avec code HTTP 404.
-- [ ] Le Live Coding 40 min d'évaluation est réalisable à partir de ce modèle.
+- **Code :** `T.321.132`
+- **Maturité :** `UA-Lab` (Pratique guidée sur projet d'imitation)
+- **Unité d'Apprentissage parente :** `UA.321.13`
+- **Titre Canonique :** Pratique : Tranche verticale complète et gestion 404
+- **Position dans le Flux :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.3 & 4.4 — Tranche Verticale & Résilience.
+- **Branche Git de travail :** `sprint1`
+- **Fichiers modifiés ou créés :**
+  - `app/Services/ArticleService.php`
+  - `app/Http/Controllers/Public/ArticleController.php`
+  - `resources/views/layouts/app.blade.php`
+  - `resources/views/articles/show.blade.php`
+  - `resources/views/errors/404.blade.php`
+  - `routes/web.php`
+- **Objectif Opérationnel :** Implémenter la tranche verticale complète de consultation d'un article avec injection IoC du service CSV, layout maître Blade et gestion d'erreur 404.
+- **Déroulement Pas-à-Pas :**
+  1. *Étape 1 :* Développer `ArticleService` dans `app/Services/` avec la méthode `find(int $id)` lisant `database/data/articles.csv`.
+  2. *Étape 2 :* Développer `ArticleController` avec injection de `ArticleService` dans le constructeur et méthode `show(int $id)` déclenchant `abort(404)` si l'article est absent.
+  3. *Étape 3 :* Configurer la route nommée `Route::get('/articles/{id}', ...)->whereNumber('id')->name('articles.show');`.
+  4. *Étape 4 :* Créer le layout maître `resources/views/layouts/app.blade.php` (navbar, `@yield('content')`, footer Tailwind).
+  5. *Étape 5 :* Développer `resources/views/articles/show.blade.php` et personnaliser `resources/views/errors/404.blade.php`.
+- **Critère de Réussite :** L'accès à `/articles/1` affiche l'article complet et l'accès à `/articles/999` renvoie une page 404 personnalisée sur la branche `sprint1`.
 
 ---
 
-### T.321.133 — Prompts & Skills : Service métier et détail Fil Rouge
-*(Tâche 3 — Conception Prompts & Skills Projet Fil Rouge)*
+### T.321.133 — Création du prompt-back-end
 
-#### 1. Positionnement dans le Flux Fil Rouge
-- Transposition des Étapes 4.3 & 4.4 (Tranche Verticale Complète & Gestion d'Erreurs) vers le Projet Fil Rouge (ex : Consultation détaillée d'un Film).
+- **Code :** `T.321.133`
+- **Maturité :** `UA-Lab` (Automatisation & Ingénierie IA)
+- **Unité d'Apprentissage parente :** `UA.321.13`
+- **Titre Canonique :** Création du prompt-back-end
+- **Position dans le Flux :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.3 — Automatisation Backend.
+- **Branche Git de travail :** `sprint1`
+- **Fichiers modifiés ou créés :** `livrables/ia/prompts/prompt-back-end.prompt.md`
+- **Objectif Opérationnel :** Concevoir le prompt d'ingénierie réutilisable permettant à un agent IA de générer l'ensemble de la couche backend d'une entité.
+- **Missions Concrètes Réalisées par le Prompt :**
+  1. Générer la classe Service métier encapsulant l'accès aux données tabulaires avec typage strict.
+  2. Générer le contrôleur HTTP mince avec injection de dépendances IoC et déclenchement d'erreur `abort(404)`.
+  3. Déclarer la route web paramétrée avec contrainte numérique et nommage explicite.
+- **Cahier des Charges du Prompt (Méthode RIO) :**
+  - **Rôle :** Développeur Backend Laravel 12 senior expert en Clean Code et conteneur IoC.
+  - **Instruction :** Prendre en entrée les spécifications d'une entité métier `[ENTITE_METIER]` et générer le code PHP complet (Service, Contrôleur, Route) sans omission de typage.
+  - **Output :** Fichiers PHP complets avec chemins stricts.
+  - **Contraintes Négatives :** Zéro logique de persistance dans le contrôleur ; interdiction de retourner des tableaux non typés.
+- **Critère de Réussite :** Le prompt est testé et validé dans `livrables/ia/prompts/prompt-back-end.prompt.md` sur la branche `sprint1`.
 
-#### 2. Travail à Faire
-Concevoir dans `livrables/ia/prompts/prompt-service-detail.prompt.md` le prompt d'ingénierie réutilisable permettant à un agent IA d'implémenter la tranche verticale complète d'une entité du Projet Fil Rouge (route dynamique, service, contrôleur, layout et gestion 404).
+---
 
-#### 3. Cahier des Charges du Prompt (Méthode RIO)
-- **Rôle :** Architecte applicatif et développeur Laravel 12 senior.
-- **Instruction :** Générer l'ensemble des fichiers de la tranche verticale pour l'entité métier `[ENTITE_METIER]` (ex : Film, Séance) en respectant l'architecture 2 couches (Contrôleur mince IoC + Service découplé), le layout Blade Tailwind et le traitement d'erreur 404.
-- **Output :** Fichiers complets avec arborescence exacte et instructions de test.
-- **Contraintes Négatives :** Zéro code manquant dans les méthodes de service, typage strict imposé.
+### T.321.134 — Création du prompt-front-end & Entraînement Live Coding
 
-#### 4. Critères de Validation
-- [ ] Le prompt est testé avec l'agent IA sur l'application Fil Rouge.
-- [ ] La tranche verticale générée est immédiatement opérationnelle sur serveur local et conforme aux 7 critères de la DoD.
+- **Code :** `T.321.134`
+- **Maturité :** `UA-Lab` (Automatisation IA & Entraînement Technique)
+- **Unité d'Apprentissage parente :** `UA.321.13`
+- **Titre Canonique :** Création du prompt-front-end & Entraînement Live Coding
+- **Position dans le Flux :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.4 — Automatisation Frontend & Évaluation.
+- **Branche Git de travail :** `sprint1`
+- **Fichiers modifiés ou créés :** `livrables/ia/prompts/prompt-front-end.prompt.md`
+- **Objectif Opérationnel :** Concevoir le prompt d'ingénierie pour la couche frontend et s'entraîner à reproduire la tranche verticale complète en 40 minutes chrono.
+- **Missions Concrètes Réalisées par le Prompt :**
+  1. Générer le layout maître Blade responsive avec navigation et pied de page Tailwind CSS.
+  2. Générer la vue de consultation détaillée de l'entité héritant du layout maître.
+  3. Générer la vue personnalisée d'erreur 404.
+- **Entraînement au Live Coding (40 minutes) :**
+  - Simulation chronométrée : reproduction de la tranche verticale sur une nouvelle entité sans aide extérieure.
+  - Validation des 7 critères de la Definition of Done en conditions réelles d'évaluation.
+- **Critère de Réussite :** Le prompt `prompt-front-end.prompt.md` est consigné dans `livrables/ia/prompts/` et l'entraînement de Live Coding est réussi en moins de 40 minutes sur la branche `sprint1`.
