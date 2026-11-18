@@ -31,6 +31,8 @@ $$\text{Comprendre} \longrightarrow \text{Reproduire} \longrightarrow \text{Exp�
 2. **Branche Git Unique :** L'ensemble des livrables, tâches et UAs du sprint est versionné sur une **branche partagée unique par sprint** (`sprintX`, ex: `sprint1`).
 3. **Ciblage Exclusif du Projet d'Imitation :** Dans toutes les fiches de tutoriels, les consignes et le code cible s'appliquent **exclusivement au Projet d'imitation (*Blog des Lauréats*)**. Le Portfolio Développeur (Projet technique) et le Projet Fil Rouge sont réalisés de manière autonome après l'achèvement du sprint.
 4. **Règle de Pareto 20/80 en Théorie :** Dans toute fiche théorique, le contenu fournit directement les **20% de définitions fondamentales et discriminantes** débloquant 80% de la pratique ; les **80% complémentaires** font l'objet d'une recherche active ciblée de l'apprenant.
+   - **Interdiction stricte de divulguer la cuisine interne aux apprenants :** Ne jamais mentionner les termes « 20/80 », « Règle des 20/80 », « Les 20%... », « Les 80%... » ou « (Ce que l'Apprenant Doit Produire) » dans les titres, sous-titres ou corps des tutoriels. Utiliser des intitulés professionnels clairs et directs : « Notions fondamentales » (ou « Concepts essentiels ») pour le socle fourni, et « Recherches à effectuer » (ou « Pistes d'approfondissement ») pour la recherche active.
+   - **Suppression du bloc redondant de positionnement :** Dans les fiches théoriques, supprimer la section superflue « Positionnement dans le Flux & la Stack » pour aller droit au but (Travail à faire, Notions fondamentales, Recherches, Livrable).
 5. **Zéro Théorie dans les UA-Tâche :** Les fiches de type tâche (`UA-Tâche`) sont 100% orientées action opérationnelle sans aucun exposé théorique.
 6. **Masquage des Durées aux Apprenants :** Interdiction stricte d'afficher des durées de tâche unitaire (`(2h)`, `(4h)`) dans les titres canoniques ou le corps des tutoriels destinés aux apprenants.
 7. **Règle d'Or de Création des Prompts IA :**
@@ -38,6 +40,7 @@ $$\text{Comprendre} \longrightarrow \text{Reproduire} \longrightarrow \text{Exp�
    - Interdiction formelle de créer un prompt pour les apprentissages conceptuels purs (Scrum), les décisions architecturales uniques (ADR global) ou la prise en main initiale (Hello World).
    - Scission systématique en deux prompts dédiés pour le code applicatif : `prompt-back-end` et `prompt-front-end`.
 8. **Rigueur des livrables :** Le livrable est toujours constitué de code source ou de markdown (`.md`, `.mmd`, `.prompt.md`) commité sur GitHub. **Interdiction stricte de captures d'écran comme livrable.**
+9. **Zéro Solution Clé en Main dans les Pratiques UA-Lab :** Dans les fiches pratiques d'une `UA-Lab`, l'apprenant est en situation d'expérimentation et d'application active : c'est à lui de concevoir et produire son code, ses schémas ou ses manifestes. Le tutoriel fournit le cadre, le cahier des charges technique, les jalons directifs et les critères d'acceptation, mais **interdiction formelle de fournir la solution rédigée complète prête à copier-coller**. La solution complète pas-à-pas est réservée exclusivement aux tutoriels d'apprentissage de code incrémental (`UA-Tuto`) et aux tâches de projet opérationnelles (`UA-Tâche`).
 
 ## 4. Gestion Méthodique des Corrections
 Lorsqu'une erreur ou incohérence est constatée dans un code ou un livrable :

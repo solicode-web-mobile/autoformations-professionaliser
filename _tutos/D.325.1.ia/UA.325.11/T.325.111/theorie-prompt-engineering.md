@@ -20,17 +20,10 @@ data_js: ""
 data_php: ""
 ---
 
-## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 2 — Initialisation de l'Agent IA.
-- **Branche Git :** `sprint1`
-- **Stack mobilisée :** Chaîne d'outillage IA, LLMs, architecture de contextes.
-
-## 2. Travail à Faire (Ce que l'Apprenant Doit Produire)
+## 1. Travail à faire
 Effectuer les recherches documentaires nécessaires et concevoir une fiche de synthèse expliquant le fonctionnement d'un LLM, la structure d'un prompt directif selon la méthode RIO et l'intérêt du Context Engineering dans le développement logiciel.
 
-## 3. Répartition Didactique (Règle des 20/80)
-
-### Les 20% fournis directement au tutoriel :
+## 2. Notions fondamentales
 - **Fenêtre de contexte et injection chirurgicale :** Un modèle de langage ne conserve aucune mémoire implicite entre sessions distinctes. L'agent doit recevoir explicitement les règles, le périmètre et les fichiers cibles.
 - **Méthode RIO :**
   - **Rôle :** Persona technique de haut niveau (ex. *« Expert Senior Laravel 12 »*).
@@ -38,10 +31,11 @@ Effectuer les recherches documentaires nécessaires et concevoir une fiche de sy
   - **Output :** Délimitation stricte du format attendu (Markdown brut, bloc de code sans bavardage).
 - **Contraintes négatives bloquantes :** Supprimer tout bavardage introductif ou de politesse, interdire le code partiel (`// TODO`) et forcer des chemins relatifs stricts.
 
-### Les 80% recherchés par l'apprenant :
+## 3. Recherches à effectuer
 - Analyser le phénomène d'hallucination des LLMs et comment la complétion probabiliste influence la génération de code source.
 - Comparer l'approche *Zero-Shot prompting* et *Few-Shot prompting* sur des cas d'usage de développement web.
 - Expérimenter l'impact de consignes négatives strictes sur la reproductibilité des sorties.
 
-## 4. Livrable Attendu
-- Fiche de synthèse Prompt Engineering intégrée dans le journal d'apprentissage personnel de l'apprenant.
+## 4. Livrable attendu
+- **Fichier de synthèse :** `tutoriels/ia/agent-skills/prompt-engineering/prompt-engineering.md` sur la branche `sprint1`.
+- **Contenu attendu :** Synthèse personnelle structurée reprenant les notions fondamentales (LLMs, méthode RIO, Context Engineering) et les réponses documentées aux recherches à effectuer.

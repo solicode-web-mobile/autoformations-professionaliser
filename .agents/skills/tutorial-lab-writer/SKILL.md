@@ -46,7 +46,7 @@ $$\text{[Théorie 20/80 (Optionnelle)]} \longrightarrow \text{Pratique Imitation
 
 # 3. Structures Normées des Fiches d'une UA-Lab
 
-### Format Fiche Théorie & Assimilation (Règle Pareto 20/80)
+### Format Fiche Théorie & Assimilation
 ```markdown
 ---
 layout: tuto
@@ -68,26 +68,20 @@ data_js: ""
 data_php: ""
 ---
 
-## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** [Phase et étape du sprint]
-- **Branche Git :** `sprintX`
-- **Stack mobilisée :** [Outils et technologies mobilisés]
-
-## 2. Travail à Faire (Ce que l'Apprenant Doit Produire)
+## 1. Travail à faire
 [Description concrète de la recherche ou du livrable de synthèse]
 
-## 3. Répartition Didactique (Règle des 20/80)
-
-### Les 20% fournis directement au tutoriel :
+## 2. Notions fondamentales
 - **[Définition fondamentale 1] :** [Définition rigoureuse et immédiatement actionnable]
 - **[Définition fondamentale 2] :** [Définition rigoureuse et immédiatement actionnable]
 
-### Les 80% recherchés par l'apprenant :
+## 3. Recherches à effectuer
 - [Question d'approfondissement ou exploration critique 1]
 - [Comparaison technique ou recherche active 2]
 
-## 4. Livrable Attendu
-- Fiche de synthèse intégrée dans le journal d'apprentissage personnel de l'apprenant.
+## 4. Livrable attendu
+- **Fichier de synthèse :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md` sur la branche `sprintX`.
+- **Contenu :** Synthèse personnelle structurée reprenant les notions fondamentales et les résultats des recherches à effectuer.
 ```
 
 ### Format Fiche Pratique sur Projet d'Imitation
@@ -187,3 +181,6 @@ Concevoir dans `livrables/ia/prompts/prompt-[nom].prompt.md` le prompt d'ingéni
 6. **Maturité Explicite & Publication :** `maturite: "UA-Lab"`, `version: "normal"`, `simplified: true` et `en_construction: false` dès validation du tutoriel.
 7. **Inspection et Synchronisation du Référentiel Physique (`D:\labs-web\projet-imiation-n3`) :** Le skill inspecte obligatoirement le dépôt réel situé sous `D:\labs-web\projet-imiation-n3`. Si une consigne du concepteur contredit l'état actuel de ce référentiel, le skill doit également synchroniser et corriger les livrables physiques correspondants dans `D:\labs-web\projet-imiation-n3` pour garantir la stricte concordance entre les ateliers et le projet réel.
 8. **Formatage Strict des Blocs de Code (Zéro Espace & Ligne Vide) :** Tout bloc de code (fenced code block ```` ``` ```` ou ```` ```` ````) doit obligatoirement être précédé d'une ligne vide et commencer strictement à la colonne 0 (sans aucun espace d'indentation), y compris à l'intérieur des listes ordonnées. Le contenu textuel ou Markdown encapsulé doit également débuter à la colonne 0 sans indentation artificielle.
+9. **Interdiction de Divulguer la Cuisine Interne aux Apprenants :** Interdiction formelle d'exposer des formulations didactiques internes telles que « Règle des 20/80 », « Les 20%... », « Les 80%... » ou « (Ce que l'Apprenant Doit Produire) » dans les tutoriels destinés aux apprenants. Utiliser des sections directes et professionnelles : « Notions fondamentales » (socle théorique fourni) et « Recherches à effectuer » (investigation active). Supprimer également le bloc superflue « Positionnement dans le Flux & la Stack » dans les fiches théoriques pour aller directement au travail à faire.
+10. **Chemins de Livrables Précis (`tutoriels/`) :** Tout livrable doit être référencé avec son chemin relatif complet (`tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`). Interdiction absolue des dossiers orphelins (comme `labs/` : toujours utiliser `tutoriels/`) et des formulations vagues (comme *« journal d'apprentissage personnel »* sans chemin physique explicite).
+11. **Autonomie de la Pratique (Zéro Solution Clé en Main) :** Dans les ateliers pratiques d'une `UA-Lab`, c'est à l'apprenant de concevoir et produire son code, ses schémas ou ses manifestes. Fournir des spécifications rigoureuses, des contraintes directives (cahier des charges RIO, jalons, critères de validation), mais **interdiction absolue de fournir la solution rédigée complète prête à copier-coller**. La solution intégrale pas-à-pas est réservée exclusivement aux fiches d'apprentissage incrémental (`UA-Tuto`) et aux tâches opérationnelles (`UA-Tâche`).

@@ -35,14 +35,18 @@ Avant d'activer le skill, s'assurer que :
 - Identifier la composition requise (2, 3 ou 4 tâches) selon les règles d'omission de théorie ou d'éviction de prompt.
 
 ### Étape 2 : Rédaction de la Fiche Théorie (si requise)
-- Appliquer rigoureusement la règle Pareto 20/80 :
-  - Fournir 20% de définitions fondamentales incontournables.
-  - Formuler les 80% de notions à approfondir par recherche active de l'apprenant.
+- Appliquer rigoureusement le découpage didactique (socle 20/80 en conception interne) :
+  - Rédiger les **Notions fondamentales** (définitions et concepts clés immédiatement fournis).
+  - Rédiger les **Recherches à effectuer** (notions et questions à explorer par recherche active de l'apprenant).
+  - Interdiction stricte de divulguer la terminologie interne (« Règle des 20/80 », « 20% », « 80% », « Ce que l'apprenant doit produire ») aux apprenants.
+  - Ne pas inclure de bloc superflue « Positionnement dans le Flux & la Stack » (aller directement au Travail à faire).
 - Ne jamais afficher d'indication de durée.
 
 ### Étape 3 : Rédaction de la Fiche Pratique
 - Cibler **exclusivement le Projet d'imitation** (*Blog des Lauréats*).
 - Spécifier la branche Git (`branche: "sprintX"`).
+- **Autonomie de la pratique :** L'apprenant est en situation d'expérimentation active. Fournir le cahier des charges technique, les jalons directifs et les critères d'acceptation, mais **interdiction formelle de donner la solution complète rédigée à copier-coller** (réservée aux `UA-Tuto` et `UA-Tâche`).
+- Spécifier l'emplacement exact sous `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` (jamais de dossier `labs/`).
 - Découper la réalisation en jalons chronologiques clairs et fournir des critères de validation binaires `[ ]`.
 
 ### Étape 4 : Rédaction de la Fiche Création de Prompt (si flux récurrent)

@@ -18,7 +18,7 @@ notions:
   - "Conception modulaire d'un skill outillé (SKILL.md, doc/how-to-use.md et missions spécialisées)"
   - "Outillage de l'étape d'initialisation de dépôt avec les skills de démarrage (skills-dev, gestion-depot)"
 livrable: >
-  Fiches de synthèse théoriques (Prompt Engineering, Agent IA), atelier pratique d'exemple skill-presentation (SKILL.md, doc/how-to-use.md, missions/), et sur le Blog des Lauréats : règles permanentes (.agents/rules/contexte-projet.md, regles-generales.md) et skills de démarrage (.agents/skills/skills-dev/, .agents/skills/gestion-depot/ avec init-depot.md et init-projet.md).
+  Fiches de synthèse théoriques (tutoriels/ia/agent-skills/), atelier pratique d'exemple skill-presentation (tutoriels/ia/agent-skills/skill-presentation/), et sur le Blog des Lauréats : règles permanentes (.agents/rules/contexte-projet.md, regles-generales.md) et skills de démarrage (.agents/skills/skills-dev/, .agents/skills/gestion-depot/ avec init-depot.md et init-projet.md).
 travail_a_faire: >
   Assimiler le Prompt Engineering et la méthode RIO, comprendre l'architecture d'un Agent IA et les règles permanentes, concevoir un skill d'exemple complet (skill-presentation), puis déployer sur le projet d'imitation les règles du projet et les skills agentiques de gestion de dépôt.
 ---

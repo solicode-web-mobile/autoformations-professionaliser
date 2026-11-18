@@ -25,6 +25,13 @@ trigger: always_on
 - **Éditeur interactif :** Dès qu'un tutoriel utilise des champs `data_*`, insérer systématiquement le script `window.pageData` sous le Front Matter. Isoler le code de préparation pour que l'onglet de travail de l'apprenant reste vierge.
 - **Médias :** Stockage obligatoire dans `images-tutos/[Domaine]/[ID_Tuto]/[nom.ext]`.
 - **Livrables :** Le livrable est toujours un **dépôt GitHub** ou un fichier `.md` de commandes. **Interdiction stricte de captures d'écran comme livrable.**
+- **Règle Universelle des Chemins de Livrables (`tutoriels/`) :**
+  Tout livrable d'apprentissage doit obligatoirement être spécifié avec son chemin relatif complet sous l'arborescence standardisée :
+  `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`
+  - **Fiche théorique :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md` sur la branche active du sprint.
+  - **Atelier pratique ou exemple guidé :** Déposé obligatoirement sous `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` (fichiers de code, manifestes, documentation). **Interdiction formelle d'utiliser un dossier racine `labs/`.**
+  - **Tâche de projet opérationnelle :** Livrables positionnés aux emplacements racine officiels (`src/`, `.agents/`, `rapport/`, `presentations/`, etc.) ET journal des commandes dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].command.md`.
+  - **Interdiction formelle des formulations vagues :** Ne jamais écrire de mentions floues telles que *« journal d'apprentissage personnel »* sans fournir le chemin complet et explicite du fichier à commiter.
 - **Règle de Journalisation des Commandes :**
   - Dès qu'un tutoriel implique la saisie de commandes en ligne de commande (CLI / Shell), l'apprenant doit obligatoirement consigner ses commandes dans le fichier standardisé `[slug-tuto].command.md` déposé dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` sur la branche de sprint active.
   - Dans la fiche de tutoriel, les commandes du journal sont présentées directement sous la forme d'un bloc ```` ```bash ```` (sans double encapsulation ```` ````markdown ````).
