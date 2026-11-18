@@ -1,7 +1,7 @@
 ---
 layout: tuto
 title: "Initialiser le projet et publier sur GitHub avec GitHub CLI"
-sous_titre: "Initialiser le dépôt Git local, créer la branche sprint1 et publier le projet personnel avec gh repo create"
+sous_titre: "Initialiser le dépôt Git local avec .gitignore vide, créer la branche sprint1 et publier le projet personnel avec gh repo create"
 slug: "publication-github"
 slug_domaine: "realisation-projet"
 slug_ua: "initialisation"
@@ -28,9 +28,9 @@ data_php: ""
 - **Branche Git :** `sprint1`
 
 ## 2. Travail à Faire
-- **Tâche 1 : Initialisation locale :** Créer le projet local, initialiser Git (`git init`) et créer la branche de travail `sprint1`.
+- **Tâche 1 : Initialisation locale :** Créer le projet local, créer un fichier `.gitignore` vide (`touch .gitignore`), initialiser Git (`git init`) et créer la branche de travail `sprint1`.
 - **Tâche 2 : Journalisation des commandes :** Créer l'arborescence et consigner les commandes dans `tutoriels/realisation-projet/initialisation/publication-github/publication-github.command.md`.
-- **Tâche 3 : Publication sur GitHub :** Réaliser le premier commit avec le fichier journal et publier le dépôt sur votre compte GitHub personnel via GitHub CLI avec la commande interactive `gh repo create`.
+- **Tâche 3 : Publication sur GitHub :** Réaliser le premier commit avec `.gitignore` et le fichier journal, puis publier le dépôt sur votre compte GitHub personnel via GitHub CLI avec la commande interactive `gh repo create`.
 
 ## 3. Étapes de Réalisation
 
@@ -42,10 +42,11 @@ data_php: ""
    *Si vous n'êtes pas authentifié, exécutez `gh auth login` et choisissez `GitHub.com` > `HTTPS` > `Login with a web browser`.*
 
 2. **Étape 2 — Création du dossier de travail et initialisation Git :**  
-   Créez le répertoire local du projet d'imitation et initialisez le suivi de version :
+   Créez le répertoire local du projet d'imitation, créez un fichier `.gitignore` vide et initialisez le suivi de version :
    ```bash
    mkdir blog-des-laureats
    cd blog-des-laureats
+   touch .gitignore
    git init
    ```
 
@@ -57,31 +58,31 @@ data_php: ""
 
 4. **Étape 4 — Création de l'arborescence et du journal de commandes :**  
    Créez le répertoire dédié au tutoriel :
-   
    ```bash
    mkdir -p tutoriels/realisation-projet/initialisation/publication-github
    ```
 
    Créez le fichier `tutoriels/realisation-projet/initialisation/publication-github/publication-github.command.md` pour consigner l'historique des commandes :
-   ````markdown
-   ```bash
-   gh auth status
-   mkdir blog-des-laureats
-   cd blog-des-laureats
-   git init
-   git checkout -b sprint1
-   mkdir -p tutoriels/realisation-projet/initialisation/publication-github
-   git add tutoriels/realisation-projet/initialisation/publication-github/publication-github.command.md
-   git commit -m "docs: consigner les commandes d'initialisation"
-   gh repo create
-   ```
-   ````
+````markdown
+```bash
+gh auth status
+mkdir blog-des-laureats
+cd blog-des-laureats
+touch .gitignore
+git init
+git checkout -b sprint1
+mkdir -p tutoriels/realisation-projet/initialisation/publication-github
+git add .gitignore tutoriels/realisation-projet/initialisation/publication-github/publication-github.command.md
+git commit -m "feat: initialisation du projet et journal des commandes"
+gh repo create
+```
+````
 
 5. **Étape 5 — Premier commit local :**  
-   Indexez et validez le fichier `publication-github.command.md` sur la branche `sprint1` :
+   Indexez et validez le fichier `.gitignore` et `publication-github.command.md` sur la branche `sprint1` :
    ```bash
-   git add tutoriels/realisation-projet/initialisation/publication-github/publication-github.command.md
-   git commit -m "docs: consigner les commandes d'initialisation"
+   git add .gitignore tutoriels/realisation-projet/initialisation/publication-github/publication-github.command.md
+   git commit -m "feat: initialisation du projet et journal des commandes"
    ```
 
 6. **Étape 6 — Publication interactive sur GitHub :**  
@@ -102,8 +103,10 @@ data_php: ""
 ## 4. Livrables & Critères de Validation
 - **Livrables attendus :**
   - Dépôt distant public accessible à l'URL `https://github.com/[votre-compte-github]/blog-des-laureats`.
+  - Fichier `.gitignore` vide à la racine du dépôt.
   - Journal des commandes : `tutoriels/realisation-projet/initialisation/publication-github/publication-github.command.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Le dépôt distant est créé et public sous le compte GitHub personnel de l'apprenant.
   - [ ] La branche de travail active est strictement `sprint1`.
+  - [ ] Le fichier `.gitignore` est présent à la racine et vide.
   - [ ] Le fichier `publication-github.command.md` est présent dans `tutoriels/realisation-projet/initialisation/publication-github/` et consigne fidèlement les commandes exécutées.

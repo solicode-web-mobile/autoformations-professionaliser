@@ -22,6 +22,7 @@ trigger: always_on
 - **Médias :** Stockage obligatoire dans `images-tutos/[Domaine]/[ID_Tuto]/[nom.ext]`.
 - **Livrables :** Le livrable est toujours un **dépôt GitHub** ou un fichier `.md` de commandes. **Interdiction stricte de captures d'écran comme livrable.**
 - **Règle de Journalisation des Commandes :** Dès qu'un tutoriel implique la saisie de commandes en ligne de commande (CLI / Shell), l'apprenant doit obligatoirement consigner ses commandes dans le fichier standardisé `[slug-tuto].command.md` déposé dans le dossier `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` sur la branche de sprint active.
+- **Consultation et Synchronisation du Référentiel Physique (`D:\labs-web\projet-imiation-n3`) :** L'Agent IA inspecte obligatoirement le dépôt de référence réel situé sous `D:\labs-web\projet-imiation-n3` pour en extraire fidèlement l'arborescence, les scripts, les configurations et les règles. Si une modification demandée par l'utilisateur contredit le contenu actuel de ce référentiel, l'Agent IA doit impérativement corriger et synchroniser les livrables physiques correspondants dans `D:\labs-web\projet-imiation-n3` en même temps que les tutoriels.
 
 ## 4. Transparence de l'Agent IA
 - **Affichage des compétences :** Indiquer les compétences mobilisées à la fin de chaque réponse.
