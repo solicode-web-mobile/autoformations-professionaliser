@@ -88,7 +88,7 @@ data_php: ""
      - Si aucune tâche n'est précisée : Auditer Git, GitHub CLI et `README.md`, puis proposer un plan d'action.
 
    # 3. Actions Outillées
-   - **Initialisation Git :** Exécuter `git init`, configurer `.gitignore`, créer la branche de sprint active (`sprint1`).
+   - **Initialisation Git :** Exécuter `git init` et créer la branche de sprint active (`sprint1`).
    - **Publication GitHub :** Vérifier `gh auth status` et exécuter `gh repo create [nom] --public --source=. --remote=origin --push`.
    - **Contrôle du README :** Vérifier la présence des 6 sections canoniques (Description, Contexte, Stack Laravel 12, Dossiers, Méthodologie, Démarrage).
    ```

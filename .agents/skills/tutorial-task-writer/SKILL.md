@@ -92,3 +92,4 @@ data_php: ""
 5. **Ciblage Exclusif du Projet d'Imitation :** Toutes les tâches opérationnelles s'exécutent sur le Projet d'imitation (*Blog des Lauréats*).
 6. **Livrables Concrets Hors `labs/` sur Branche Unique :** Chaque tâche débouche obligatoirement sur un fichier versionné sur la branche du sprint (`sprintX`) dans les répertoires de projet (`README.md`, `missions/`, `flux-travail/`, `issues/`, `sprints/`). Les livrables de type `UA-Tâche` ne vont JAMAIS dans `labs/`.
 7. **Encodage Strict UTF-8 sans BOM :** Tous les fichiers générés respectent la règle 1 de `standards-techniques.md`.
+8. **Journalisation Standardisée des Commandes :** Dès que la réalisation de la tâche implique la saisie de commandes CLI / terminal par l'apprenant, le tutoriel prescrit obligatoirement la création du fichier journal `[slug-tuto].command.md` déposé dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` sur la branche de sprint active.
