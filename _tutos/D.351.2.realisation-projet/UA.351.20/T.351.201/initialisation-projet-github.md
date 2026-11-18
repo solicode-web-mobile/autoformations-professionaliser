@@ -20,16 +20,19 @@ data_js: ""
 data_php: ""
 ---
 
-## 1. Positionnement & Emplacement du Livrable
-- **Domaine :** `D.351.2` (`realisation-projet`)
-- **Unité d'Apprentissage :** `UA.351.20` (`initialisation`)
-- **Tutoriel :** `T.351.201` (`publication-github`)
-- **Type d'UA :** `UA-Tâche` *(Les livrables sont des fichiers de projet opérationnels — ils ne sont PAS placés dans le dossier `labs/`)*.
-- **Position dans le flux :** Phase A — Initialisation du Projet, Outillage IA & Méthodologie / Étape 01 — Initialisation et publication du projet.
+## 1. Prérequis
+- **Base théorique et pratique requise :**
+  - Installation et utilisation de GitHub CLI (`gh repo create`).
+  - Création et gestion des branches Git (`sprint[N]`).
+- **Prérequis de projet :** Présentation et cadrage du projet d'imitation par le formateur référent.
 - **Branche Git :** `sprint1`
-- **Emplacement exact des livrables :** `.gitignore`, `commandes.md` (à la racine du dépôt personnel de l'apprenant) et Dépôt distant public sur GitHub.
 
-## 2. Déroulement Pas-à-Pas de la Tâche
+## 2. Travail à Faire
+- **Tâche 1 : Initialisation locale :** Créer le projet local, initialiser Git (`git init`), configurer le fichier `.gitignore` standard et créer la branche de travail `sprint1`.
+- **Tâche 2 : Publication sur GitHub :** Réaliser le premier commit et publier le dépôt sur votre compte GitHub personnel via GitHub CLI avec la commande `gh repo create`.
+- **Tâche 3 : Journalisation :** Consigner l'ensemble des commandes exécutées dans le fichier `commandes.md` et synchroniser sur la branche `sprint1`.
+
+## 3. Étapes de Réalisation
 
 1. **Étape 1 — Vérification de l'authentification GitHub CLI :**  
    Vérifiez que votre terminal est authentifié sur votre compte GitHub personnel :
@@ -118,10 +121,10 @@ data_php: ""
    git push origin sprint1
    ```
 
-## 3. Livrables & Critères de Réussite
+## 4. Livrables & Critères de Validation
 - **Livrables attendus :**
   - Dépôt distant public accessible à l'URL `https://github.com/[votre-compte-github]/blog-des-laureats`.
-  - Fichiers `.gitignore` et `commandes.md` à la racine de la branche `sprint1`.
+  - Fichier `commandes.md` à la racine de la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Le dépôt distant est créé sous le compte GitHub personnel de l'apprenant.
   - [ ] La branche de travail active est strictement `sprint1`.

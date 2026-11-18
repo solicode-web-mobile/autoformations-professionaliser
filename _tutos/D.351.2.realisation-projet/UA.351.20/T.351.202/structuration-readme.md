@@ -1,7 +1,7 @@
 ---
 layout: tuto
 title: "Structurer le README du projet avec la stack technique N3"
-sous_titre: "Créer l'arborescence des 7 dossiers et rédiger le README.md racine"
+sous_titre: "Créer l'arborescence des 7 dossiers, initialiser sprints/ et rédiger le README.md racine"
 slug: "structuration-readme"
 slug_domaine: "realisation-projet"
 slug_ua: "initialisation"
@@ -20,16 +20,20 @@ data_js: ""
 data_php: ""
 ---
 
-## 1. Positionnement & Emplacement du Livrable
-- **Domaine :** `D.351.2` (`realisation-projet`)
-- **Unité d'Apprentissage :** `UA.351.20` (`initialisation`)
-- **Tutoriel :** `T.351.202` (`structuration-readme`)
-- **Type d'UA :** `UA-Tâche` *(Les livrables sont des fichiers de projet opérationnels — ils ne sont PAS placés dans le dossier `labs/`)*.
-- **Position dans le flux :** Phase A — Initialisation du Projet, Outillage IA & Méthodologie / Étape 01 — Initialisation et publication du projet.
+## 1. Prérequis
+- **Base théorique et pratique requise :**
+  - Organisation standard d'un dépôt Solicode N3 (arborescence des 7 dossiers).
+  - Structure canonique d'un fichier `README.md` d'ingénierie logicielle intégrant la stack Laravel 12.
+  - Planification Scrum de base sous Git.
+- **Prérequis de projet :** Dépôt Git initialisé et publié sur la branche `sprint1` (`T.351.201`).
 - **Branche Git :** `sprint1`
-- **Emplacement exact des livrables :** `README.md` *(Racine du projet)* et l'arborescence des 7 dossiers.
 
-## 2. Déroulement Pas-à-Pas de la Tâche
+## 2. Travail à Faire
+- **Tâche 1 : Arborescence de projet :** Créer les 7 répertoires d'organisation du projet (`.agents/`, `docs/`, `flux-travail/`, `issues/`, `labs/`, `missions/`, `sprints/`).
+- **Tâche 2 : Planification Scrum de base :** Créer les fichiers de suivi `sprints/sprints.md` et `sprints/README.md`.
+- **Tâche 3 : Rédaction du README.md :** Rédiger le fichier `README.md` racine selon la structure standardisée Solicode en intégrant la stack technique du projet (Laravel 12).
+
+## 3. Étapes de Réalisation
 
 1. **Étape 1 — Création de l'arborescence des 7 dossiers de projet :**  
    À la racine du projet `blog-des-laureats`, créez les répertoires d'organisation du projet :
@@ -37,8 +41,29 @@ data_php: ""
    mkdir -p .agents docs flux-travail issues labs missions sprints
    ```
 
-2. **Étape 2 — Rédaction du fichier `README.md` racine avec la Stack N3 fixée :**  
-   Créez à la racine le fichier `README.md` en intégrant rigoureusement les informations validées pour le Niveau 3 :
+2. **Étape 2 — Initialisation de la planification Scrum dans `sprints/` :**  
+   Dans le dossier `sprints/`, créez le fichier `sprints.md` pour référencer la feuille de route du projet :
+   ```markdown
+   # Feuille de Route des Sprints - Blog des Lauréats
+
+   | Sprint | Branche | Objectif Principal | Statut |
+   | :--- | :--- | :--- | :--- |
+   | **Sprint 1** | `sprint1` | Initialisation, cadrage et consultation publique d'un article | En cours |
+   | **Sprint 2** | `sprint2` | Gestion et publication des articles | À venir |
+   | **Sprint 3** | `sprint3` | Authentification et administration | À venir |
+   ```
+
+   Créez également le guide `sprints/README.md` :
+   ```markdown
+   # Dossier des Sprints
+
+   Ce dossier regroupe le suivi Scrum du projet :
+   - `sprints.md` : Feuille de route globale des sprints.
+   - `sprint[N]/` : Dossier spécifique à chaque sprint (cadrage, sprint backlog, revues et rétrospectives).
+   ```
+
+3. **Étape 3 — Rédaction du fichier `README.md` racine avec la Stack N3 :**  
+   À la racine du projet, créez ou modifiez le fichier `README.md` selon le standard officiel Solicode :
 
    ```markdown
    # Blog des Lauréats - Projet d'Imitation Niveau 3
@@ -70,22 +95,19 @@ data_php: ""
    - **Unité d'apprentissage (UA)** :
      - **UA-Tuto** : Unité basée sur des tutoriels pas-à-pas.
      - **UA-Lab** : Unité pratique guidée par le formateur.
-     - **UA-Tâche** : Unité regroupant les tâches récurrentes de gestion Scrum à chaque sprint.
+     - **UA-tâche** : Unité regroupant les tâches récurrentes de gestion Scrum à chaque sprint.
 
    ---
 
    ## 3. Stack technique
-   - **Backend & Framework** : PHP 8.2+, Framework **Laravel 12** (Architecture 2 couches : Contrôleur mince -> Classe Service).
-   - **Frontend & Rendu** : Gabarits **Blade**, utilitaires CSS **Tailwind CSS**, réactivité légère avec **Alpine.js**.
-   - **Persistance des données** :
-     - *Sprint 1* : Données tabulaires CSV (`app/Services/ArticleService.php`).
-     - *Sprints ultérieurs* : Base de données relationnelle MySQL et ORM Eloquent.
-   - **Tests automatisés & Qualité** : **PHPUnit / Pest** (TDD) et respect strict des standards **PSR-12**.
-   - **Modélisation & Conception** : **UML avec Mermaid.js** (diagramme de contexte système, cas d'utilisation macro).
-   - **Méthodologie & Cadre Agile** : **Scrum** (Sprints calibrés de 80h, branche Git unique par sprint `sprint1`, Definition of Done en 7 critères bloquants).
-   - **Gestion de versions & Outillage CLI** : **Git** et **GitHub CLI (`gh`)**.
-   - **Intelligence Artificielle & Automatisation** : **Agent IA Antigravity** (méthode de prompting structuré RIO, règles permanentes Always-On et skills modulaires).
-   - **Documentation & Restitution** : Markdown standard et diaporamas **Marp**.
+   - **Framework Backend** : PHP 8.2+, Laravel 12 (Architecture 2 couches : Contrôleur mince -> Service).
+   - **Frontend & Rendu** : Blade Templates, Tailwind CSS, Alpine.js (composants interactifs légers).
+   - **Persistance des données** : Fichiers tabulaires CSV (Sprint 1) puis base relationnelle MySQL avec Eloquent ORM.
+   - **Tests automatisés** : PHPUnit / Pest (approche TDD), respect strict de PSR-12.
+   - **Modélisation & Architecture** : Diagrammes UML en Markdown via syntaxe Mermaid.js, fiches de décision ADR.
+   - **Méthodologie & Cadre Agile** : Scrum (Sprint de 80h, branche unique `sprint1`, DoD à 7 critères).
+   - **Gestion de versions** : Git et GitHub CLI (`gh`).
+   - **Intelligence Artificielle & Automatisation** : Agent Antigravity (Skills outillés natifs et prompts RIO réutilisables).
 
    ---
 
@@ -94,7 +116,7 @@ data_php: ""
    - [docs/](./docs/) : Documentation libre, recherches et veilles technologiques personnelles.
    - [flux-travail/](./flux-travail/) : Référentiel méthodologique et suivi des étapes de réalisation du projet.
    - [issues/](./issues/) : Gestion et suivi des tâches et user stories du projet.
-   - [labs/](./labs/) : Restitution des laboratoires théoriques et pratiques organisés par domaine et UA-Lab (`labs/slug-domaine/slug-ua/slug-tuto/`).
+   - [labs/](./labs/) : Restitution des laboratoires théoriques et pratiques organisés par domaine et UA-Lab.
    - [missions/](./missions/) : Catalogue des missions normalisées pour les apprenants en mode chatbot.
    - [sprints/](./sprints/) : Planification Scrum des sprints et suivi de la branche active.
 
@@ -103,19 +125,20 @@ data_php: ""
    ## 5. Méthodologie de développement
    Le projet intègre les meilleures pratiques de l'ingénierie logicielle :
    - **Agile / Scrum** : Découpage par sprints, réunions quotidiennes et revues de sprint.
-   - **Processus de développement** : Séparation claire entre la branche fonctionnelle et la branche technique.
+   - **Processus de développement** : Séparation claire entre les étapes de cadrage fonctionnel et d'implémentation technique.
    - **Design Thinking** : Conception centrée sur les besoins réels des utilisateurs.
-   - **Modélisation UML** : Schémas de cas d'utilisation, diagrammes de classes et de séquences.
+   - **Modélisation UML** : Schémas de cas d'utilisation, diagrammes de contexte et diagrammes de séquences.
 
    ---
 
    ## 6. Démarrage rapide
 
    ### Prérequis
-   - Git installé sur votre machine.
-   - GitHub CLI (`gh`) configuré et authentifié.
+   - Git installé et configuré.
+   - GitHub CLI (`gh`) authentifié.
+   - PHP 8.2+ et Composer installés.
 
-   ### Cloner le projet
+   ### Cloner et explorer le projet
    ```bash
    git clone https://github.com/[votre-compte-github]/blog-des-laureats.git
    cd blog-des-laureats
@@ -123,19 +146,19 @@ data_php: ""
    ```
    ```
 
-3. **Étape 3 — Validation et commit sur la branche de sprint :**  
-   Indexez et validez le fichier `README.md` sur la branche `sprint1` :
+4. **Étape 4 — Commit et synchronisation sur `sprint1` :**  
+   Indexez les nouveaux fichiers, validez le commit et poussez sur le dépôt distant :
    ```bash
-   git add README.md
-   git commit -m "docs: formaliser le README.md avec la stack N3 et l'arborescence des dossiers"
+   git add .
+   git commit -m "docs: structurer l'arborescence des 7 dossiers, sprints et le README standard N3"
    git push origin sprint1
    ```
 
-## 3. Livrables & Critères de Réussite
+## 4. Livrables & Critères de Validation
 - **Livrables attendus :**
-  - Fichier `README.md` à la racine de la branche `sprint1`.
-  - Arborescence des 7 dossiers (`.agents/`, `docs/`, `flux-travail/`, `issues/`, `labs/`, `missions/`, `sprints/`).
+  - Fichier `README.md` racine propre et conforme au standard Solicode (stack Laravel 12).
+  - Planification Scrum : `sprints/sprints.md` et `sprints/README.md`.
 - **Critères de validation :**
-  - [ ] Le `README.md` détaille rigoureusement la stack N3 (Laravel 12, Blade, Tailwind, Alpine, CSV).
-  - [ ] Les 7 répertoires racines sont créés et versionnés.
-  - [ ] Le commit est publié sur la branche `sprint1` du compte personnel.
+  - [ ] L'arborescence des 7 dossiers (`.agents/`, `docs/`, `flux-travail/`, `issues/`, `labs/`, `missions/`, `sprints/`) est créée à la racine.
+  - [ ] Le fichier `README.md` racine documente intégralement la stack technique N3.
+  - [ ] Les fichiers `sprints/sprints.md` et `sprints/README.md` sont initialisés sur la branche `sprint1`.

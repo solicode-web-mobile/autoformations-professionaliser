@@ -14,11 +14,11 @@ description: >
   Mettre en place le socle de versionnement et de publication du projet d'imitation. L'apprenant initialise le dépôt Git local, publie le projet sur son profil GitHub personnel via la commande CLI 'gh repo create', structure le README.md racine avec la stack technique N3, et formalise la mission d'étape ainsi que le prompt réutilisable dans le dossier missions/.
 notions:
   - "Publication de dépôt distant via GitHub CLI (gh repo create sur compte personnel)"
-  - "Structuration normée du README.md racine avec la stack N3"
-  - "Formalisation d'une mission de démarrage (missions/1.init-projet.mission.md)"
-  - "Création du prompt d'ingénierie d'initialisation (missions/1.init-projet.prompt.md)"
+  - "Structuration normée du README.md racine avec la stack N3 et feuille de route sprints/"
+  - "Formalisation de la mission d'étape (missions/1.init-projet.mission.md)"
+  - "Création du skill outillé (.agents/skills/gestion-depot/SKILL.md)"
 livrable: >
-  Dépôt GitHub personnel publié, README.md standardisé, mission d'étape (missions/1.init-projet.mission.md) et prompt d'initialisation (missions/1.init-projet.prompt.md) sur la branche sprint1.
+  Dépôt GitHub distant publié et synchronisé sur la branche sprint1, README.md standardisé (Laravel 12), planification Scrum (sprints/sprints.md et sprints/README.md), mission d'étape (missions/1.init-projet.mission.md) et skill outillé (.agents/skills/gestion-depot/SKILL.md).
 travail_a_faire: >
-  Initialiser Git localement, publier sur son compte GitHub avec 'gh repo create', rédiger le README.md complet avec la stack N3, créer la mission d'étape missions/1.init-projet.mission.md et concevoir le prompt missions/1.init-projet.prompt.md.
+  Initialiser Git localement, publier sur son compte GitHub avec 'gh repo create', créer l'arborescence des 7 dossiers, initialiser sprints/, rédiger le README.md complet avec la stack N3, créer la mission d'étape missions/1.init-projet.mission.md et concevoir le skill outillé .agents/skills/gestion-depot/SKILL.md.
 ---

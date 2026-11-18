@@ -34,13 +34,16 @@ Ce skill est l'**artisan opérationnel et méthodologique** chargé de concevoir
 
 # 3. Structure Normée d'une Fiche `UA-Tâche`
 
-### Format Fiche Opérationnelle de Projet ou Cérémonie Scrum
+Toute fiche de tutoriel rattachée à une Unité d'Apprentissage de type `UA-Tâche` adopte obligatoirement la structure standardisée en **4 sections** :
+
 ```markdown
 ---
 layout: tuto
 title: "[Titre Opérationnel de la Tâche]"
 sous_titre: "[Sous-titre explicite décrivant l'action concrète dans le sprint]"
 slug: "[slug-kebab-case]"
+slug_domaine: "[slug_domaine]"
+slug_ua: "[slug_ua]"
 permalink: /tutos/[slug-kebab-case]/
 tuto_id: "T.XXX.YYY"
 version: "normal"
@@ -56,70 +59,36 @@ data_js: ""
 data_php: ""
 ---
 
-## 1. Objectif Opérationnel & Prérequis
-- **Position dans le flux :** [Phase et étape du sprint]
+## 1. Prérequis
+- **Base théorique et pratique requise :**
+  - [Outil / Notions clés 20/80 requises, ex: Installation et utilisation de GitHub CLI (`gh repo create`)]
+  - [Conventions / Branches requises, ex: Création et gestion des branches Git (`sprint[N]`)]
+- **Prérequis de projet :** [Présentation du projet par le formateur, tâche/étape antérieure validée]
 - **Branche Git :** `sprintX`
-- **Fichiers modifiés ou créés :** `[chemin/du/livrable.md]`
-- **Objectif :** [Action concrète à réaliser dans le sprint et résultat attendu]
-- **Prérequis :** [Artefacts ou validations préalables requises]
 
-## 2. Déroulement Pas-à-Pas de la Tâche
-Exécuter la tâche en respectant ces étapes chronologiques :
-1. **Étape 1 — [Nom étape 1] :** [Description directe et directive à l'impératif]
-2. **Étape 2 — [Nom étape 2] :** [Description directe et directive à l'impératif]
-3. **Étape 3 — [Nom étape 3] :** [Description directe et directive à l'impératif]
+## 2. Travail à Faire
+- [Synthèse des tâches concrètes et directives à accomplir dans ce tutoriel]
 
-## 3. Livrables & Critères de Réussite
-- **Livrable attendu :** Fichier `[chemin/du/livrable.md]` sur la branche `sprintX`.
+## 3. Étapes de Réalisation
+1. **Étape 1 — [Nom étape 1] :** [Consigne directe et directive à l'impératif avec commandes exactes]
+2. **Étape 2 — [Nom étape 2] :** [Consigne directe et directive à l'impératif avec commandes exactes]
+3. **Étape 3 — [Nom étape 3] :** [Consigne directe et directive à l'impératif avec commandes exactes]
+
+## 4. Livrables & Critères de Validation
+- **Livrables attendus :**
+  - [Chemin exact du fichier produit sur la branche sprintX hors dossier labs/]
 - **Critères de validation :**
   - [ ] [Critère vérifiable et opposable 1]
   - [ ] [Critère vérifiable et opposable 2]
 ```
 
-### Format Fiche Création de Prompts de Cérémonies Scrum
-Lorsque la tâche consiste à outiller l'équipe de prompts d'automatisation des rituels agiles (ex : `prompt-sprint-planning`, `prompt-sprint-review`, `prompt-sprint-retrospective`, `prompt-backlog-refinement`, `prompt-bilan-session`) :
-```markdown
----
-layout: tuto
-title: "Création des prompts de clôture de sprint"
-sous_titre: "[Sous-titre explicite décrivant l'outillage IA des cérémonies]"
-slug: "[slug-kebab-case]"
-permalink: /tutos/[slug-kebab-case]/
-tuto_id: "T.XXX.YYY"
-version: "normal"
-ua: "UA.XXX.YY"
-maturite: "UA-Tâche"
-nav_order: [numéro d'ordre]
-simplified: true
-en_construction: false
-branche: "sprintX"
-data_html: ""
-data_css: ""
-data_js: ""
-data_php: ""
----
-
-## 1. Objectif Opérationnel & Prérequis
-- **Position dans le flux :** [Phase et étape du sprint / Automatisation]
-- **Branche Git :** `sprintX`
-- **Fichiers modifiés ou créés :** `livrables/ia/prompts/prompt-[nom].prompt.md`
-- **Objectif :** [Automatiser la production des livrables de cérémonie agile]
-
-## 2. Missions Concrètes des Prompts Réalisés
-1. **`prompt-[nom-1]` :** [Description de la mission opérationnelle]
-2. **`prompt-[nom-2]` :** [Description de la mission opérationnelle]
-
-## 3. Critères de Validation
-- [ ] Les fichiers de prompts sont créés dans `livrables/ia/prompts/` et versionnés sur la branche `sprintX`.
-- [ ] Chaque prompt adopte la méthode RIO avec contraintes négatives strictes.
-```
-
 ---
 
 # 4. Règles Inviolables
-1. **Règle Absolue « Zéro Théorie » :** Les tutoriels UA-Tâche sont 100% orientés action. Interdiction formelle d'insérer des exposés théoriques ou des synthèses de cours. L'apprenant applique des consignes directes (*« Exécutez »*, *« Découpez »*, *« Validez »*).
-2. **Zéro Affichage de Durée aux Apprenants :** Ne jamais insérer de mention de temps unitaire (`(2h)`, `(4h)`) dans le titre ou le corps de la fiche destinée aux apprenants.
-3. **Ciblage Exclusif du Projet d'Imitation :** Toutes les tâches opérationnelles s'exécutent sur le Projet d'imitation (*Blog des Lauréats*).
-4. **Livrables Concrets et Traçables sur Branche Unique :** Chaque tâche débouche obligatoirement sur un fichier versionné sur la branche du sprint (`sprintX`). Zéro validation verbale sans artefact écrit (`cadrage/cadrage-projet.md`, `scrum/sprint-backlog-s1.md`, etc.).
-5. **Suppression des Cérémonies Obsolètes en N3 :** Ne pas créer de tâches artificielles pour l'initialisation de Git/IDE ou les pitch decks de lancement (notions déjà acquises en N2 ou remplacées par la démonstration continue des livrables).
-6. **Encodage Strict UTF-8 sans BOM :** Tous les fichiers générés respectent la règle 1 de `standards-techniques.md`.
+1. **Règle Absolue « Zéro Cours Théorique » :** Les tutoriels `UA-Tâche` ne dispensent aucun cours magistral ni explication conceptuelle passive. La section `Prérequis` énumère uniquement les bases théoriques et pratiques nécessaires sous forme de liste à puces. L'apprenant évalue lui-même sa maîtrise et consulte les labs/ressources théoriques si nécessaire.
+2. **Structure Universelle en 4 Sections :** Tout tutoriel `UA-Tâche` doit comporter strictement les sections `1. Prérequis`, `2. Travail à Faire`, `3. Étapes de Réalisation`, `4. Livrables & Critères de Validation`. La section « Positionnement » est bannie (prise en charge par le fil d'Ariane du layout).
+3. **Périmètre Strict des Livrables :** Ne lister dans les livrables que les artefacts d'ingénierie formellement exigés par le workflow (exclure les fichiers de configuration utilitaires implicites comme `.gitignore`).
+4. **Zéro Affichage de Durée aux Apprenants :** Ne jamais insérer de mention de temps unitaire (`(2h)`, `(4h)`) dans le titre ou le corps de la fiche destinée aux apprenants.
+5. **Ciblage Exclusif du Projet d'Imitation :** Toutes les tâches opérationnelles s'exécutent sur le Projet d'imitation (*Blog des Lauréats*).
+6. **Livrables Concrets Hors `labs/` sur Branche Unique :** Chaque tâche débouche obligatoirement sur un fichier versionné sur la branche du sprint (`sprintX`) dans les répertoires de projet (`README.md`, `missions/`, `flux-travail/`, `issues/`, `sprints/`). Les livrables de type `UA-Tâche` ne vont JAMAIS dans `labs/`.
+7. **Encodage Strict UTF-8 sans BOM :** Tous les fichiers générés respectent la règle 1 de `standards-techniques.md`.
