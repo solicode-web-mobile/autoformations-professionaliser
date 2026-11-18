@@ -36,33 +36,39 @@ data_php: ""
 
 1. **Étape 1 — Vérification de l'authentification GitHub CLI :**  
    Vérifiez que votre terminal est authentifié sur votre compte GitHub personnel :
-   ```bash
-   gh auth status
-   ```
+
+```bash
+gh auth status
+```
+
    *Si vous n'êtes pas authentifié, exécutez `gh auth login` et choisissez `GitHub.com` > `HTTPS` > `Login with a web browser`.*
 
 2. **Étape 2 — Création du dossier de travail et initialisation Git :**  
    Créez le répertoire local du projet d'imitation, créez un fichier `.gitignore` vide et initialisez le suivi de version :
-   ```bash
-   mkdir blog-des-laureats
-   cd blog-des-laureats
-   touch .gitignore
-   git init
-   ```
+
+```bash
+mkdir blog-des-laureats
+cd blog-des-laureats
+touch .gitignore
+git init
+```
 
 3. **Étape 3 — Création de la branche commune unique de sprint :**  
    Conformément au standard Solicode N3, l'ensemble des travaux et livrables d'un sprint est versionné sur une branche partagée unique :
-   ```bash
-   git checkout -b sprint1
-   ```
+
+```bash
+git checkout -b sprint1
+```
 
 4. **Étape 4 — Création de l'arborescence et du journal de commandes :**  
    Créez le répertoire dédié au tutoriel :
-   ```bash
-   mkdir -p tutoriels/realisation-projet/initialisation/publication-github
-   ```
+
+```bash
+mkdir -p tutoriels/realisation-projet/initialisation/publication-github
+```
 
    Créez le fichier `tutoriels/realisation-projet/initialisation/publication-github/publication-github.command.md` pour consigner l'historique des commandes :
+
 ````markdown
 ```bash
 gh auth status
@@ -80,16 +86,18 @@ gh repo create
 
 5. **Étape 5 — Premier commit local :**  
    Indexez et validez le fichier `.gitignore` et `publication-github.command.md` sur la branche `sprint1` :
-   ```bash
-   git add .gitignore tutoriels/realisation-projet/initialisation/publication-github/publication-github.command.md
-   git commit -m "feat: initialisation du projet et journal des commandes"
-   ```
+
+```bash
+git add .gitignore tutoriels/realisation-projet/initialisation/publication-github/publication-github.command.md
+git commit -m "feat: initialisation du projet et journal des commandes"
+```
 
 6. **Étape 6 — Publication interactive sur GitHub :**  
    Lancez la création du dépôt distant sans paramètres :
-   ```bash
-   gh repo create
-   ```
+
+```bash
+gh repo create
+```
 
    Répondez aux questions posées interactivement par GitHub CLI :
    - **What would you like to do?** : `Push an existing local repository to GitHub`

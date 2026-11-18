@@ -39,12 +39,14 @@ data_php: ""
 
 1. **Étape 1 — Création de l'arborescence agentique du projet :**  
    À la racine du projet `blog-des-laureats`, créez les répertoires dédiés aux règles et aux skills :
-   ```bash
-   mkdir -p .agents/rules .agents/skills/skills-dev .agents/skills/gestion-depot/missions
-   ```
+
+```bash
+mkdir -p .agents/rules .agents/skills/skills-dev .agents/skills/gestion-depot/missions
+```
 
 2. **Étape 2 — Définition du contexte projet Always-On `.agents/rules/contexte-projet.md` :**  
    Créez le fichier `.agents/rules/contexte-projet.md` pour cadrer l'environnement de l'Agent IA :
+
 ````markdown
 # Contexte du Projet
 
@@ -93,6 +95,7 @@ L'apprenant et l'Agent IA appliquent les méthodes suivantes :
 
 3. **Étape 3 — Définition des règles générales Always-On `.agents/rules/regles-generales.md` :**  
    Créez le fichier `.agents/rules/regles-generales.md` :
+
 ````markdown
 # Règles Générales de Rédaction et de Structure
 
@@ -146,6 +149,7 @@ Ces règles s'appliquent de manière générique à tous les fichiers et toutes 
 
 4. **Étape 4 — Mise en place du skill méta-gouvernance `.agents/skills/skills-dev/SKILL.md` :**  
    Créez le fichier `.agents/skills/skills-dev/SKILL.md` :
+
 ````markdown
 ---
 name: skills-dev
@@ -171,6 +175,7 @@ Gouverner, concevoir, créer et auditer les **Skills** (`.agents/skills/`), leur
 
 5. **Étape 5 — Conception du skill `.agents/skills/gestion-depot/SKILL.md` :**  
    Créez le fichier `.agents/skills/gestion-depot/SKILL.md` :
+
 ````markdown
 ---
 name: gestion-depot
@@ -200,6 +205,7 @@ L'agent identifie le travail demandé par le concepteur et exécute la mission c
 
 6. **Étape 6 — Rédaction des missions d'étape dans `.agents/skills/gestion-depot/missions/` :**  
    Créez `missions/init-depot.md` :
+
 ````markdown
 # Mission : Initialisation du Dépôt (`init-depot.md`)
 
@@ -219,6 +225,7 @@ Initialiser le dépôt Git local, contrôler la branche active du sprint et publ
 ````
 
    Créez `missions/init-projet.md` :
+
 ````markdown
 # Mission : Initialisation du Projet (`init-projet.md`)
 
@@ -244,6 +251,7 @@ Structurer le fichier `README.md` racine et initialiser les dossiers documentair
 
 7. **Étape 7 — Journalisation des commandes exécutées :**  
    Créez le sous-dossier et le fichier `tutoriels/ia/agent-skills/skill-gestion-depot/skill-gestion-depot.command.md` :
+
 ````markdown
 ```bash
 mkdir -p .agents/rules .agents/skills/skills-dev .agents/skills/gestion-depot/missions
@@ -256,11 +264,12 @@ git push origin sprint1
 
 8. **Étape 8 — Commit et synchronisation sur `sprint1` :**  
    Indexez les nouveaux fichiers agentiques, validez le commit et poussez sur `sprint1` :
-   ```bash
-   git add .agents/ tutoriels/ia/agent-skills/skill-gestion-depot/skill-gestion-depot.command.md
-   git commit -m "feat(ia): outiller l'étape d'initialisation avec les règles Always-On et le skill gestion-depot"
-   git push origin sprint1
-   ```
+
+```bash
+git add .agents/ tutoriels/ia/agent-skills/skill-gestion-depot/skill-gestion-depot.command.md
+git commit -m "feat(ia): outiller l'étape d'initialisation avec les règles Always-On et le skill gestion-depot"
+git push origin sprint1
+```
 
 ## 4. Livrables & Critères de Validation
 - **Livrables attendus :**

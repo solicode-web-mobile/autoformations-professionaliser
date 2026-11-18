@@ -38,62 +38,65 @@ data_php: ""
 
 1. **Étape 1 — Création de l'arborescence des dossiers racine :**  
    À la racine du projet `blog-des-laureats`, créez les répertoires d'organisation du projet :
-   ```bash
-   mkdir -p .agents docs flux-travail issues tutoriels presentations rapport sprints
-   ```
+
+```bash
+mkdir -p .agents docs flux-travail issues tutoriels presentations rapport sprints
+```
 
 2. **Étape 2 — Initialisation de la planification Scrum dans `sprints/` :**  
    Dans le dossier `sprints/`, créez le fichier `sprints.md` pour référencer la feuille de route du projet :
-   ```markdown
-   # Planification des Sprints
 
-   Ce document enregistre les sprints du projet. Les sprints suivants seront ajoutés ultérieurement, après chaque session de planification. Pour le moment, seul le Sprint 1 est actif avec la description détaillée du sprint actuel ci-dessous.
+```markdown
+# Planification des Sprints
 
-   ---
+Ce document enregistre les sprints du projet. Les sprints suivants seront ajoutés ultérieurement, après chaque session de planification. Pour le moment, seul le Sprint 1 est actif avec la description détaillée du sprint actuel ci-dessous.
 
-   ## Sprint 1 : Initialisation, Cadrage & Première Fonctionnalité Laravel 12
-   - **Statut** : Actif
-   - **Branche Git** : `sprint1`
-   - **Objectif pédagogique** : Au terme de la session, l'apprenant est capable d'initialiser un dépôt distant avec GitHub CLI, d'outiller l'environnement avec un Agent IA et un catalogue de missions, de formaliser le processus de développement et le flux de travail, de cadrer le projet sous gouvernance Scrum, de modéliser le diagramme de contexte et les cas d'utilisation avec Mermaid, de gérer les tâches via le dossier `issues/`, et de développer sous Laravel 12 une page de consultation détaillée d'un article selon une architecture 2 couches (Contrôleur mince -> Classe Service) avec gabarit Blade responsive et gestion de l'erreur 404.
-   - **Déroulement (Vue d'ensemble du travail de la session)** :
-     - Initialiser le projet et publier sur GitHub.
-     - Outiller l'environnement avec un Agent IA et son catalogue de missions.
-     - Formaliser le flux de travail d'ingénierie.
-     - Cadrer le périmètre sous gouvernance Scrum.
-     - Modéliser le contexte et les cas d'utilisation avec Mermaid.
-     - Structurer le Product Backlog et les issues dans `issues/`.
-     - Concevoir l'architecture en 2 couches (Contrôleur mince -> Classe Service).
-     - Implémenter la consultation d'un article sous Laravel 12 (gabarit Blade responsive et gestion 404).
-   ```
+---
+
+## Sprint 1 : Initialisation, Cadrage & Première Fonctionnalité Laravel 12
+- **Statut** : Actif
+- **Branche Git** : `sprint1`
+- **Objectif pédagogique** : Au terme de la session, l'apprenant est capable d'initialiser un dépôt distant avec GitHub CLI, d'outiller l'environnement avec un Agent IA et un catalogue de missions, de formaliser le processus de développement et le flux de travail, de cadrer le projet sous gouvernance Scrum, de modéliser le diagramme de contexte et les cas d'utilisation avec Mermaid, de gérer les tâches via le dossier `issues/`, et de développer sous Laravel 12 une page de consultation détaillée d'un article selon une architecture 2 couches (Contrôleur mince -> Classe Service) avec gabarit Blade responsive et gestion de l'erreur 404.
+- **Déroulement (Vue d'ensemble du travail de la session)** :
+  - Initialiser le projet et publier sur GitHub.
+  - Outiller l'environnement avec un Agent IA et son catalogue de missions.
+  - Formaliser le flux de travail d'ingénierie.
+  - Cadrer le périmètre sous gouvernance Scrum.
+  - Modéliser le contexte et les cas d'utilisation avec Mermaid.
+  - Structurer le Product Backlog et les issues dans `issues/`.
+  - Concevoir l'architecture en 2 couches (Contrôleur mince -> Classe Service).
+  - Implémenter la consultation d'un article sous Laravel 12 (gabarit Blade responsive et gestion 404).
+```
 
    Créez également le guide `sprints/README.md` :
-   ```markdown
-   # Dossier des Sprints (`sprints/`)
 
-   Ce dossier centralise la planification et le suivi des Sprints selon la méthodologie Agile/Scrum.
+```markdown
+# Dossier des Sprints (`sprints/`)
 
-   ---
+Ce dossier centralise la planification et le suivi des Sprints selon la méthodologie Agile/Scrum.
 
-   ## 1. Rôle du dossier
+---
 
-   - Il contient le calendrier et les objectifs de chaque sprint du projet.
-   - Il sert de source de vérité unique (SSOT) pour identifier le sprint actif et sa branche Git associée.
-   - L'Agent IA consulte ce dossier pour vérifier sur quelle branche de travail il doit opérer.
+## 1. Rôle du dossier
 
-   ---
+- Il contient le calendrier et les objectifs de chaque sprint du projet.
+- Il sert de source de vérité unique (SSOT) pour identifier le sprint actif et sa branche Git associée.
+- L'Agent IA consulte ce dossier pour vérifier sur quelle branche de travail il doit opérer.
 
-   ## 2. Règle de gouvernance des Sprints
+---
 
-   - Seul le concepteur (ou chef de projet) ajoute de nouveaux sprints dans la planification.
-   - L'Agent IA ne doit jamais inventer de futurs sprints non validés.
-   - Chaque sprint actif doit posséder sa branche Git dédiée au format `sprint[N]`.
+## 2. Règle de gouvernance des Sprints
 
-   ---
+- Seul le concepteur (ou chef de projet) ajoute de nouveaux sprints dans la planification.
+- L'Agent IA ne doit jamais inventer de futurs sprints non validés.
+- Chaque sprint actif doit posséder sa branche Git dédiée au format `sprint[N]`.
 
-   ## 3. Contenu du dossier
+---
 
-   - [sprints.md](./sprints.md) : Fichier de suivi de la planification des sprints.
-   ```
+## 3. Contenu du dossier
+
+- [sprints.md](./sprints.md) : Fichier de suivi de la planification des sprints.
+```
 
 3. **Étape 3 — Rédaction du fichier `README.md` racine avec la Stack N3 :**  
    À la racine du projet, créez ou modifiez le fichier `README.md` selon le standard officiel Solicode :
@@ -181,6 +184,7 @@ git checkout sprint1
 
 4. **Étape 4 — Journalisation des commandes exécutées :**  
    Créez le sous-dossier et le fichier `tutoriels/realisation-projet/initialisation/readme-stack-technique/readme-stack-technique.command.md` :
+
 ````markdown
 ```bash
 mkdir -p .agents docs flux-travail issues tutoriels presentations rapport sprints
@@ -193,11 +197,12 @@ git push origin sprint1
 
 5. **Étape 5 — Commit et synchronisation sur `sprint1` :**  
    Indexez les nouveaux fichiers, validez le commit et poussez sur le dépôt distant :
-   ```bash
-   git add README.md sprints/ tutoriels/realisation-projet/initialisation/readme-stack-technique/readme-stack-technique.command.md
-   git commit -m "docs: structurer l'arborescence des dossiers, sprints et le README standard N3"
-   git push origin sprint1
-   ```
+
+```bash
+git add README.md sprints/ tutoriels/realisation-projet/initialisation/readme-stack-technique/readme-stack-technique.command.md
+git commit -m "docs: structurer l'arborescence des dossiers, sprints et le README standard N3"
+git push origin sprint1
+```
 
 ## 4. Livrables & Critères de Validation
 - **Livrables attendus :**

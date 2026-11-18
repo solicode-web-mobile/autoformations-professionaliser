@@ -39,12 +39,14 @@ L'apprenant doit créer :
 
 1. **Étape 1 — Création de l'arborescence de l'atelier :**  
    Dans votre projet, créez l'arborescence du skill dans le répertoire `labs/ia/skill-presentation/` :
-   ```bash
-   mkdir -p labs/ia/skill-presentation/doc labs/ia/skill-presentation/missions
-   ```
+
+```bash
+mkdir -p labs/ia/skill-presentation/doc labs/ia/skill-presentation/missions
+```
 
 2. **Étape 2 — Rédaction du manifeste `SKILL.md` :**  
    Dans `labs/ia/skill-presentation/`, créez le fichier `SKILL.md` :
+
 ````markdown
 ---
 name: skill-presentation
@@ -63,6 +65,7 @@ Ce skill permet à l'Agent IA de transformer des spécifications, un README ou d
 
 3. **Étape 3 — Rédaction du guide d'utilisation `doc/how-to-use.md` :**  
    Dans `labs/ia/skill-presentation/doc/`, créez `how-to-use.md` :
+
 ````markdown
 # Guide d'Utilisation : skill-presentation
 
@@ -82,6 +85,7 @@ Ce skill est activé dès que l'utilisateur souhaite créer un support de prése
 
 4. **Étape 4 — Conception de la mission `missions/presentation-marp.mission.md` :**  
    Dans `labs/ia/skill-presentation/missions/`, créez `presentation-marp.mission.md` selon la méthode RIO :
+
 ````markdown
 ---
 mission: presentation-marp
@@ -101,6 +105,7 @@ format: rio
 
 5. **Étape 5 — Conception de la mission `missions/presentation-powerpoint.mission.md` :**  
    Dans `labs/ia/skill-presentation/missions/`, créez `presentation-powerpoint.mission.md` :
+
 ````markdown
 ---
 mission: presentation-powerpoint

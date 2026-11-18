@@ -39,34 +39,37 @@ data_php: ""
 
 1. **Étape 1 — Création du répertoire des présentations :**  
    À la racine du projet `blog-des-laureats`, créez le dossier `presentations/` :
-   ```bash
-   mkdir -p presentations
-   ```
+
+```bash
+mkdir -p presentations
+```
 
 2. **Étape 2 — Rédaction du guide `presentations/README.md` :**  
    Dans `presentations/`, créez le fichier `README.md` :
-   ```markdown
-   # Dossier des Présentations (`presentations/`)
 
-   Ce dossier regroupe les diaporamas du projet conçus au format Marp Markdown.
+```markdown
+# Dossier des Présentations (`presentations/`)
 
-   ## 1. Rôle du dossier
-   - Centraliser les présentations orales pour la soutenance globale du projet et les restitutions de chaque sprint.
-   - Faciliter la modification rapide des diapositives via le format texte Markdown.
-   - Permettre l'export direct en PDF ou HTML avec Marp.
+Ce dossier regroupe les diaporamas du projet conçus au format Marp Markdown.
 
-   ## 2. Contenu du dossier
-   - `presentation-blog.md` : Diaporama de présentation générale du projet Blog des lauréats.
-   - `presentation-sprint1.md` : Diaporama de restitution du Sprint 1 (dépôt, modélisation, architecture 2 couches).
+## 1. Rôle du dossier
+- Centraliser les présentations orales pour la soutenance globale du projet et les restitutions de chaque sprint.
+- Faciliter la modification rapide des diapositives via le format texte Markdown.
+- Permettre l'export direct en PDF ou HTML avec Marp.
 
-   ## 3. Guide d'utilisation
-   - Ouvrir un fichier de présentation dans votre éditeur de code.
-   - Utiliser l'extension VS Code Marp pour prévisualiser les diapositives.
-   - Respecter la page de garde normalisée (Apprenant, Encadrant, Établissement Solicode).
-   ```
+## 2. Contenu du dossier
+- `presentation-blog.md` : Diaporama de présentation générale du projet Blog des lauréats.
+- `presentation-sprint1.md` : Diaporama de restitution du Sprint 1 (dépôt, modélisation, architecture 2 couches).
+
+## 3. Guide d'utilisation
+- Ouvrir un fichier de présentation dans votre éditeur de code.
+- Utiliser l'extension VS Code Marp pour prévisualiser les diapositives.
+- Respecter la page de garde normalisée (Apprenant, Encadrant, Établissement Solicode).
+```
 
 3. **Étape 3 — Rédaction du diaporama général `presentations/presentation-blog.md` :**  
    Créez le fichier `presentations/presentation-blog.md` :
+
 ````markdown
 ---
 marp: true
@@ -130,6 +133,7 @@ footer: "Encadrant : ESSARRAJ Fouad | Solicode Tanger"
 
 4. **Étape 4 — Rédaction du diaporama de sprint `presentations/presentation-sprint1.md` :**  
    Créez le fichier `presentations/presentation-sprint1.md` :
+
 ````markdown
 ---
 marp: true
@@ -184,6 +188,7 @@ footer: "Encadrant : ESSARRAJ Fouad | Solicode Tanger"
 
 5. **Étape 5 — Journalisation des commandes exécutées :**  
    Créez le sous-dossier et le fichier `tutoriels/realisation-projet/initialisation/presentation-marp/presentation-marp.command.md` :
+
 ````markdown
 ```bash
 mkdir -p presentations
@@ -196,11 +201,12 @@ git push origin sprint1
 
 6. **Étape 6 — Commit et synchronisation sur `sprint1` :**  
    Indexez les présentations, validez le commit et poussez sur `sprint1` :
-   ```bash
-   git add presentations/ tutoriels/realisation-projet/initialisation/presentation-marp/presentation-marp.command.md
-   git commit -m "docs: initialiser les presentations racine au format Marp"
-   git push origin sprint1
-   ```
+
+```bash
+git add presentations/ tutoriels/realisation-projet/initialisation/presentation-marp/presentation-marp.command.md
+git commit -m "docs: initialiser les presentations racine au format Marp"
+git push origin sprint1
+```
 
 ## 4. Livrables & Critères de Validation
 - **Livrables attendus :**
