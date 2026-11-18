@@ -2,8 +2,10 @@
 layout: tuto
 title: "Théorie : Routage et Vues sous Laravel"
 sous_titre: "Découvrir le framework Laravel 12, le cycle de vie d'une requête HTTP et le moteur de templates Blade"
-slug: "theorie-routage-et-vues"
-permalink: /tutos/theorie-routage-et-vues/
+slug: "routage-fondamentaux"
+slug_domaine: "laravel"
+slug_ua: "hello-world"
+permalink: /tutos/routage-fondamentaux/
 tuto_id: "T.321.111"
 version: "normal"
 ua: "UA.321.11"

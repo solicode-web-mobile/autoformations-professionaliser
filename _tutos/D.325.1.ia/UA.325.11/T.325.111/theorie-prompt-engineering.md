@@ -2,8 +2,10 @@
 layout: tuto
 title: "Théorie : Prompt Engineering & Méthode RIO"
 sous_titre: "Comprendre les LLMs, la méthode RIO, le Context Engineering et le méta-prompting"
-slug: "theorie-prompt-engineering"
-permalink: /tutos/theorie-prompt-engineering/
+slug: "methode-rio"
+slug_domaine: "ia"
+slug_ua: "agent-missions"
+permalink: /tutos/methode-rio/
 tuto_id: "T.325.111"
 version: "normal"
 ua: "UA.325.11"

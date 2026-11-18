@@ -2,8 +2,10 @@
 layout: tuto
 title: "Pratique : Contrôleur et liste des catégories"
 sous_titre: "Créer un contrôleur HTTP avec Artisan, transmettre des données et afficher une grille responsive Blade"
-slug: "pratique-controleur-et-liste"
-permalink: /tutos/pratique-controleur-et-liste/
+slug: "liste-articles"
+slug_domaine: "laravel"
+slug_ua: "controleur-vue"
+permalink: /tutos/liste-articles/
 tuto_id: "T.321.122"
 version: "normal"
 ua: "UA.321.12"

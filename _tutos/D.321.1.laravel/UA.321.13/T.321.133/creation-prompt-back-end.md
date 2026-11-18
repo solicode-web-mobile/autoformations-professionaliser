@@ -2,8 +2,10 @@
 layout: tuto
 title: "Création du prompt-back-end"
 sous_titre: "Concevoir le prompt d'ingénierie prompt-back-end pour générer la couche service, le contrôleur mince et les routes"
-slug: "creation-prompt-back-end"
-permalink: /tutos/creation-prompt-back-end/
+slug: "prompt-backend"
+slug_domaine: "laravel"
+slug_ua: "tranche-verticale"
+permalink: /tutos/prompt-backend/
 tuto_id: "T.321.133"
 version: "normal"
 ua: "UA.321.13"

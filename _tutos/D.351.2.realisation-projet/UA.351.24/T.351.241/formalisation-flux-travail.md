@@ -2,8 +2,10 @@
 layout: tuto
 title: "Documenter le flux de travail de développement"
 sous_titre: "Formaliser les étapes, prérequis et livrables de réalisation du projet"
-slug: "formalisation-flux-travail"
-permalink: /tutos/formalisation-flux-travail/
+slug: "formalisation-etapes"
+slug_domaine: "realisation-projet"
+slug_ua: "flux-developpement"
+permalink: /tutos/formalisation-etapes/
 tuto_id: "T.351.241"
 version: "normal"
 ua: "UA.351.24"

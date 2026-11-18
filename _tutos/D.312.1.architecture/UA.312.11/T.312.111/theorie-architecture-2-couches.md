@@ -2,8 +2,10 @@
 layout: tuto
 title: "Théorie : Architecture 2 couches & ADR"
 sous_titre: "Comprendre le découpage architectural en deux couches, les principes SOLID et la formalisation des choix techniques"
-slug: "theorie-architecture-2-couches"
-permalink: /tutos/theorie-architecture-2-couches/
+slug: "separation-responsabilites"
+slug_domaine: "architecture"
+slug_ua: "deux-couches"
+permalink: /tutos/separation-responsabilites/
 tuto_id: "T.312.111"
 version: "normal"
 ua: "UA.312.11"

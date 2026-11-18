@@ -2,8 +2,10 @@
 layout: tuto
 title: "Pratique : Décision d'architecture (ADR-01) & Diagramme de séquence"
 sous_titre: "Formaliser le choix d'architecture 2 couches avec persistance CSV et modéliser le flux HTTP sous Mermaid"
-slug: "pratique-decision-architecture-adr"
-permalink: /tutos/pratique-decision-architecture-adr/
+slug: "decision-adr-sequence"
+slug_domaine: "architecture"
+slug_ua: "deux-couches"
+permalink: /tutos/decision-adr-sequence/
 tuto_id: "T.312.112"
 version: "normal"
 ua: "UA.312.11"

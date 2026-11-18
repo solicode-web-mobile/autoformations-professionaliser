@@ -2,8 +2,10 @@
 layout: tuto
 title: "Théorie : Injection de dépendances et Classe Service"
 sous_titre: "Comprendre le conteneur IoC, l'injection par le constructeur, la résilience 404 et le layout maître Blade"
-slug: "theorie-controleur-mince-et-service"
-permalink: /tutos/theorie-controleur-mince-et-service/
+slug: "service-csv-ioc"
+slug_domaine: "laravel"
+slug_ua: "tranche-verticale"
+permalink: /tutos/service-csv-ioc/
 tuto_id: "T.321.131"
 version: "normal"
 ua: "UA.321.13"

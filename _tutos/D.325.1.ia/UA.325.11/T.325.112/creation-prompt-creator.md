@@ -2,8 +2,10 @@
 layout: tuto
 title: "Définition du socle de règles et du protocole de l'Agent IA"
 sous_titre: "Formaliser les règles, le protocole de fonctionnement et la mission de génération de missions"
-slug: "creation-prompt-creator"
-permalink: /tutos/creation-prompt-creator/
+slug: "socle-protocole"
+slug_domaine: "ia"
+slug_ua: "agent-missions"
+permalink: /tutos/socle-protocole/
 tuto_id: "T.325.112"
 version: "normal"
 ua: "UA.325.11"

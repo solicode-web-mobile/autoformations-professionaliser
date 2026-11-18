@@ -2,8 +2,10 @@
 layout: tuto
 title: "Raffinement du Product Backlog"
 sous_titre: "Actualiser, ré-estimer et réordonner le carnet de produit en vue du prochain sprint"
-slug: "raffinement-du-product-backlog"
-permalink: /tutos/raffinement-du-product-backlog/
+slug: "backlog-refinement"
+slug_domaine: "realisation-projet"
+slug_ua: "cloture-sprint"
+permalink: /tutos/backlog-refinement/
 tuto_id: "T.351.233"
 version: "normal"
 ua: "UA.351.23"

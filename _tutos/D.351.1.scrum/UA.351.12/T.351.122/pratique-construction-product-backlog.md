@@ -2,8 +2,10 @@
 layout: tuto
 title: "Pratique : Organisation du Product Backlog et des issues"
 sous_titre: "Structurer l'espace de suivi et découper les User Stories du projet dans issues/"
-slug: "pratique-construction-product-backlog"
-permalink: /tutos/pratique-construction-product-backlog/
+slug: "organisation-issues"
+slug_domaine: "scrum"
+slug_ua: "product-backlog"
+permalink: /tutos/organisation-issues/
 tuto_id: "T.351.122"
 version: "normal"
 ua: "UA.351.12"

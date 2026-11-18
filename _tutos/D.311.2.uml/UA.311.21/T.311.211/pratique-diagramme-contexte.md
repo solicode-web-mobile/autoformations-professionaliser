@@ -2,8 +2,10 @@
 layout: tuto
 title: "Pratique : Diagramme de contexte système"
 sous_titre: "Délimiter les frontières fonctionnelles du Blog des Lauréats et cartographier les interactions externes en Mermaid"
-slug: "pratique-diagramme-contexte"
-permalink: /tutos/pratique-diagramme-contexte/
+slug: "modelisation-systeme"
+slug_domaine: "uml"
+slug_ua: "diagramme-contexte"
+permalink: /tutos/modelisation-systeme/
 tuto_id: "T.311.211"
 version: "normal"
 ua: "UA.311.21"

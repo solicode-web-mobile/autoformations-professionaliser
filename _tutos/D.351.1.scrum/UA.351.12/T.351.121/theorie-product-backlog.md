@@ -2,8 +2,10 @@
 layout: tuto
 title: "Théorie : Product Backlog & User Stories INVEST"
 sous_titre: "Comprendre le carnet produit, les User Stories, les critères INVEST et la priorisation MoSCoW"
-slug: "theorie-product-backlog"
-permalink: /tutos/theorie-product-backlog/
+slug: "user-stories-invest"
+slug_domaine: "scrum"
+slug_ua: "product-backlog"
+permalink: /tutos/user-stories-invest/
 tuto_id: "T.351.121"
 version: "normal"
 ua: "UA.351.12"

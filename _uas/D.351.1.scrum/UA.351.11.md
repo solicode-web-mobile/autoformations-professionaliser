@@ -2,6 +2,7 @@
 title: "Introduction à Scrum"
 layout: ua
 code: "UA.351.11"
+slug: "cadre-agile"
 maturite: "UA-Lab"
 ordre: 4
 competence: "C.351"

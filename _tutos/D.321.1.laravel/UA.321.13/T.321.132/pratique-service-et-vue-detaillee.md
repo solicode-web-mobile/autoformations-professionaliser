@@ -2,8 +2,10 @@
 layout: tuto
 title: "Pratique : Tranche verticale complète et gestion 404"
 sous_titre: "Développer ArticleService (CSV), ArticleController mince, layout Blade maître et gestion 404"
-slug: "pratique-service-et-vue-detaillee"
-permalink: /tutos/pratique-service-et-vue-detaillee/
+slug: "consultation-detaillee-404"
+slug_domaine: "laravel"
+slug_ua: "tranche-verticale"
+permalink: /tutos/consultation-detaillee-404/
 tuto_id: "T.321.132"
 version: "normal"
 ua: "UA.321.13"

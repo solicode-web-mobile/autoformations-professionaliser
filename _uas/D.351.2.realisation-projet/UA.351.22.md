@@ -2,6 +2,7 @@
 title: "Planification de sprint et engagement d'équipe (Sprint 1)"
 layout: ua
 code: "UA.351.22"
+slug: "planification"
 maturite: "UA-Tâche"
 ordre: 8
 competence: "C.351"

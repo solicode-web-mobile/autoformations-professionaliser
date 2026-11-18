@@ -2,6 +2,7 @@
 title: "Clôture de sprint, démonstration et rétrospective (Sprint 1)"
 layout: ua
 code: "UA.351.23"
+slug: "cloture-sprint"
 maturite: "UA-Tâche"
 ordre: 14
 competence: "C.351"

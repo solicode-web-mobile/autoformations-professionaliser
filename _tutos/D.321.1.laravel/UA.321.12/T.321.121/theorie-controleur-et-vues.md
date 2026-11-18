@@ -2,8 +2,10 @@
 layout: tuto
 title: "Théorie : Contrôleur et Vues dynamiques"
 sous_titre: "Comprendre le rôle du contrôleur HTTP dans l'architecture MVC et les directives de boucle Blade"
-slug: "theorie-controleur-et-vues"
-permalink: /tutos/theorie-controleur-et-vues/
+slug: "controleur-http"
+slug_domaine: "laravel"
+slug_ua: "controleur-vue"
+permalink: /tutos/controleur-http/
 tuto_id: "T.321.121"
 version: "normal"
 ua: "UA.321.12"

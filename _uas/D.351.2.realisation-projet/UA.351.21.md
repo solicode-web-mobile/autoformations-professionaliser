@@ -2,6 +2,7 @@
 title: "Cadrage du projet (Sprint 1)"
 layout: ua
 code: "UA.351.21"
+slug: "cadrage"
 maturite: "UA-Tâche"
 ordre: 5
 competence: "C.351"

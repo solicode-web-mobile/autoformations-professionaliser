@@ -2,8 +2,10 @@
 layout: tuto
 title: "Création du prompt-diagramme-contexte"
 sous_titre: "Concevoir le prompt prompt-diagramme-contexte pour automatiser la modélisation du contexte système"
-slug: "creation-prompt-diagramme-contexte"
-permalink: /tutos/creation-prompt-diagramme-contexte/
+slug: "prompt-generation"
+slug_domaine: "uml"
+slug_ua: "diagramme-contexte"
+permalink: /tutos/prompt-generation/
 tuto_id: "T.311.212"
 version: "normal"
 ua: "UA.311.21"

@@ -2,8 +2,10 @@
 layout: tuto
 title: "Création du prompt-use-cases-macro"
 sous_titre: "Concevoir le prompt prompt-use-cases-macro pour automatiser la cartographie des cas d'utilisation"
-slug: "creation-prompt-use-cases-macro"
-permalink: /tutos/creation-prompt-use-cases-macro/
+slug: "prompt-use-cases"
+slug_domaine: "uml"
+slug_ua: "cas-utilisation"
+permalink: /tutos/prompt-use-cases/
 tuto_id: "T.311.222"
 version: "normal"
 ua: "UA.311.22"

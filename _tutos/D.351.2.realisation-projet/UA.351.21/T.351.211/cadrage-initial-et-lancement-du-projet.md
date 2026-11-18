@@ -2,8 +2,10 @@
 layout: tuto
 title: "Cadrage du périmètre du projet"
 sous_titre: "Contractualiser le cadrage du périmètre fonctionnel du Blog des Lauréats pour le Sprint 1"
-slug: "cadrage-initial-et-lancement-du-projet"
-permalink: /tutos/cadrage-initial-et-lancement-du-projet/
+slug: "perimetre-produit"
+slug_domaine: "realisation-projet"
+slug_ua: "cadrage"
+permalink: /tutos/perimetre-produit/
 tuto_id: "T.351.211"
 version: "normal"
 ua: "UA.351.21"

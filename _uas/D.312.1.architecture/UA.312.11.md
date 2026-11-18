@@ -2,6 +2,7 @@
 title: "Architecture logicielle en deux couches"
 layout: ua
 code: "UA.312.11"
+slug: "deux-couches"
 maturite: "UA-Lab"
 ordre: 10
 competence: "C.312"

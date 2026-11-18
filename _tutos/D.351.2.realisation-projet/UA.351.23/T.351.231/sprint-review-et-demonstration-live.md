@@ -2,8 +2,10 @@
 layout: tuto
 title: "Sprint Review et démonstration live"
 sous_titre: "Conduire la démonstration de l'incrément fonctionnel et valider la Definition of Done"
-slug: "sprint-review-et-demonstration-live"
-permalink: /tutos/sprint-review-et-demonstration-live/
+slug: "review-demonstration"
+slug_domaine: "realisation-projet"
+slug_ua: "cloture-sprint"
+permalink: /tutos/review-demonstration/
 tuto_id: "T.351.231"
 version: "normal"
 ua: "UA.351.23"

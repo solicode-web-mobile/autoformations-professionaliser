@@ -2,6 +2,7 @@
 title: "Product Backlog et gestion des issues"
 layout: ua
 code: "UA.351.12"
+slug: "product-backlog"
 maturite: "UA-Lab"
 ordre: 7
 competence: "C.351"

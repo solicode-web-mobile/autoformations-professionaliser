@@ -2,6 +2,7 @@
 title: "Contrôleur, Classe Service et Vue détaillée"
 layout: ua
 code: "UA.321.13"
+slug: "tranche-verticale"
 maturite: "UA-Lab"
 ordre: 13
 competence: "C.321"

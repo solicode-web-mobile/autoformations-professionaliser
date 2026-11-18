@@ -2,8 +2,10 @@
 layout: tuto
 title: "Débriefing de session et bilan de progression"
 sous_titre: "Dresser le bilan individuel d'acquisition des compétences sur l'ensemble de la session"
-slug: "debriefing-de-session-et-bilan-de-progression"
-permalink: /tutos/debriefing-de-session-et-bilan-de-progression/
+slug: "debriefing-progression"
+slug_domaine: "realisation-projet"
+slug_ua: "cloture-sprint"
+permalink: /tutos/debriefing-progression/
 tuto_id: "T.351.234"
 version: "normal"
 ua: "UA.351.23"

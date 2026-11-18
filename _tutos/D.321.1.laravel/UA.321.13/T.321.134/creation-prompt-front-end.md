@@ -2,8 +2,10 @@
 layout: tuto
 title: "Création du prompt-front-end & Entraînement Live Coding"
 sous_titre: "Concevoir le prompt prompt-front-end et s'entraîner à reproduire la tranche verticale en 40 minutes"
-slug: "creation-prompt-front-end"
-permalink: /tutos/creation-prompt-front-end/
+slug: "prompt-frontend"
+slug_domaine: "laravel"
+slug_ua: "tranche-verticale"
+permalink: /tutos/prompt-frontend/
 tuto_id: "T.321.134"
 version: "normal"
 ua: "UA.321.13"

@@ -2,8 +2,10 @@
 layout: tuto
 title: "Sprint Planning et engagement d'équipe"
 sous_titre: "Bâtir le Sprint Backlog du premier incrément et contractualiser la Definition of Done"
-slug: "sprint-planning-et-engagement-dequipe"
-permalink: /tutos/sprint-planning-et-engagement-dequipe/
+slug: "sprint-backlog"
+slug_domaine: "realisation-projet"
+slug_ua: "planification"
+permalink: /tutos/sprint-backlog/
 tuto_id: "T.351.221"
 version: "normal"
 ua: "UA.351.22"

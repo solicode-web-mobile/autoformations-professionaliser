@@ -2,8 +2,10 @@
 layout: tuto
 title: "Pratique : Charte d'équipe & Organisation"
 sous_titre: "Établir la charte d'équipe agile de la promotion et contractualiser les règles de fonctionnement"
-slug: "pratique-charte-equipe"
-permalink: /tutos/pratique-charte-equipe/
+slug: "charte-equipe"
+slug_domaine: "scrum"
+slug_ua: "cadre-agile"
+permalink: /tutos/charte-equipe/
 tuto_id: "T.351.112"
 version: "normal"
 ua: "UA.351.11"

@@ -2,8 +2,10 @@
 layout: tuto
 title: "Théorie : Cadre Scrum, Rôles & Cérémonies"
 sous_titre: "Comprendre l'empirisme, les 3 piliers, les 3 rôles, les 5 événements et les 3 artéfacts Scrum"
-slug: "theorie-cadre-scrum"
-permalink: /tutos/theorie-cadre-scrum/
+slug: "roles-ceremonies"
+slug_domaine: "scrum"
+slug_ua: "cadre-agile"
+permalink: /tutos/roles-ceremonies/
 tuto_id: "T.351.111"
 version: "normal"
 ua: "UA.351.11"

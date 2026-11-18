@@ -2,8 +2,10 @@
 layout: tuto
 title: "Sprint Retrospective et dette d'empathie"
 sous_titre: "Animer la rétrospective réflexive et acter la dette d'empathie utilisateur"
-slug: "sprint-retrospective-et-dette-dempathie"
-permalink: /tutos/sprint-retrospective-et-dette-dempathie/
+slug: "retrospective-reflexive"
+slug_domaine: "realisation-projet"
+slug_ua: "cloture-sprint"
+permalink: /tutos/retrospective-reflexive/
 tuto_id: "T.351.232"
 version: "normal"
 ua: "UA.351.23"

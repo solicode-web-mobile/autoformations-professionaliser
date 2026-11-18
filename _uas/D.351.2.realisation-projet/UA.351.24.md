@@ -2,6 +2,7 @@
 title: "Processus de développement et Documentation du flux de travail"
 layout: ua
 code: "UA.351.24"
+slug: "flux-developpement"
 maturite: "UA-Tâche"
 ordre: 3
 competence: "C.351"

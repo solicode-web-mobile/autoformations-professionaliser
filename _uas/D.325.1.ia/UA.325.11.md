@@ -2,6 +2,7 @@
 title: "Initialisation de l'Agent IA & Catalogue de missions"
 layout: ua
 code: "UA.325.11"
+slug: "agent-missions"
 maturite: "UA-Lab"
 ordre: 2
 competence: "C.325"

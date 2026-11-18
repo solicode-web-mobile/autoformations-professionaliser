@@ -2,6 +2,7 @@
 title: "Diagramme de cas d'utilisation macro"
 layout: ua
 code: "UA.311.22"
+slug: "cas-utilisation"
 maturite: "UA-Lab"
 ordre: 9
 competence: "C.311"

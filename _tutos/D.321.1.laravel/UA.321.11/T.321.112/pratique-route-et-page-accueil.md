@@ -2,8 +2,10 @@
 layout: tuto
 title: "Pratique : Route et page d'accueil"
 sous_titre: "Déclarer la route racine et créer la vue de bienvenue du Blog des Lauréats avec Tailwind CSS"
-slug: "pratique-route-et-page-accueil"
-permalink: /tutos/pratique-route-et-page-accueil/
+slug: "route-accueil-blade"
+slug_domaine: "laravel"
+slug_ua: "hello-world"
+permalink: /tutos/route-accueil-blade/
 tuto_id: "T.321.112"
 version: "normal"
 ua: "UA.321.11"

@@ -2,8 +2,10 @@
 layout: tuto
 title: "Pratique : Diagramme de cas d'utilisation macro"
 sous_titre: "Modéliser les 15 cas d'utilisation macro du Blog des Lauréats avec relations structurelles en Mermaid"
-slug: "pratique-diagramme-cas-utilisation-macro"
-permalink: /tutos/pratique-diagramme-cas-utilisation-macro/
+slug: "modelisation-macro"
+slug_domaine: "uml"
+slug_ua: "cas-utilisation"
+permalink: /tutos/modelisation-macro/
 tuto_id: "T.311.221"
 version: "normal"
 ua: "UA.311.22"
