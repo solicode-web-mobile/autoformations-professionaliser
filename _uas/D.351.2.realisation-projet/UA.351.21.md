@@ -1,5 +1,5 @@
 ---
-title: "Cadrage du projet sous gouvernance Scrum"
+title: "Cadrage du périmètre du projet (Sprint 1)"
 layout: ua
 code: "UA.351.21"
 slug: "cadrage"
@@ -9,16 +9,16 @@ competence: "C.351"
 domaine: "D.351.2"
 duree: 2
 objectif: >
-  Formaliser la gouvernance agile du projet d'imitation, contractualiser la planification des sprints dans sprints/sprints.md et définir les objectifs opérationnels du Sprint 1 sur sa branche de travail dédiée.
+  Définir la vision du Blog des Lauréats, identifier les acteurs cibles (Lauréat et Apprenant/Visiteur), délimiter le périmètre In-Scope vs Out-of-Scope du Sprint 1 et contractualiser la feuille de route dans sprints/sprints.md sur la branche sprint1.
 description: >
-  Cadrer le projet sous gouvernance Scrum pour le Blog des Lauréats. L'apprenant structure le dossier de gouvernance sprints/, rédige son guide d'utilisation sprints/README.md, formalise le fichier central de suivi sprints/sprints.md en déclarant le Sprint 1 en statut Actif avec ses objectifs pédagogiques et techniques, et synchronise la branche Git partagée sprint1.
+  Cadrer le périmètre fonctionnel du projet sur le Blog des Lauréats. L'apprenant explicite la vision produit, caractérise les acteurs clés (Lauréat et Apprenant/Visiteur), isole les exigences fonctionnelles incluses (In-Scope : consultation publique d'un article) et exclues (Out-of-Scope : authentification, SGBD relationnel) pour le premier sprint, contractualise la feuille de route dans sprints/sprints.md en déclarant le Sprint 1 en statut Actif et rédige le guide méthodologique sprints/README.md.
 notions:
+  - "Vision produit et personas cibles : Lauréat (valorisation des travaux) et Apprenant/Visiteur (consultation des réalisations)"
+  - "Délimitation stricte du périmètre In-Scope (consultation publique sous Laravel 12) vs Out-of-Scope (zéro authentification, zéro SGBD MySQL en S1)"
   - "Gouvernance de sprint et source unique de vérité (sprints/sprints.md)"
-  - "Définition du sprint actif et objectifs du Sprint 1 (Laravel 12, architecture 2 couches)"
-  - "Convention de versionnement par branche de sprint partagée (sprint1)"
   - "Guide méthodologique et règles de gestion des sprints (sprints/README.md)"
 livrable: >
-  Dossier de cadrage Scrum du projet : sprints/sprints.md, sprints/README.md et journal des commandes sur la branche sprint1.
+  Dossier de gouvernance sprints/ : feuille de route sprints/sprints.md (Sprint 1 Actif), guide sprints/README.md et journal des commandes dans tutoriels/realisation-projet/cadrage/perimetre-produit/perimetre-produit.command.md sur la branche sprint1.
 travail_a_faire: >
-  Initialiser le dossier sprints/, rédiger le guide méthodologique sprints/README.md, renseigner la planification dans sprints/sprints.md en isolant le Sprint 1 en statut Actif et synchroniser le dépôt.
+  Définir la vision et les acteurs du Blog des Lauréats, délimiter le périmètre In-Scope et Out-of-Scope du premier sprint, initialiser le guide sprints/README.md, formaliser la feuille de route dans sprints/sprints.md en déclarant le Sprint 1 en statut Actif et consigner les commandes opérationnelles.
 ---

@@ -14,7 +14,7 @@
 
 - **Code :** `UA.311.21`
 - **Maturité :** `UA-Lab` (Atelier pratique guidé)
-- **Ordre en Session :** Étape 04
+- **Ordre en Session :** Étape 05
 - **Positionnement Flux de Travail :** Phase B — Analyse, Conception & Planification / Étape 2.1 — Frontières Système & Contexte
 - **Briques Stack Technique :** Mermaid.js, Syntaxe déclarative Markdown, Diagramme de contexte système
 - **Compétence :** `C.311` — Analyser et modéliser les besoins logiciels
@@ -36,7 +36,7 @@
 
 - **Code :** `UA.311.22`
 - **Maturité :** `UA-Lab` (Atelier pratique guidé)
-- **Ordre en Session :** Étape 07
+- **Ordre en Session :** Étape 06
 - **Positionnement Flux de Travail :** Phase B — Analyse, Conception & Planification / Étape 2.4 — Cartographie des Cas d'Utilisation Macro
 - **Briques Stack Technique :** Mermaid.js, Use Cases UML, Relations structurelles (`<<include>>`, `<<extend>>`)
 - **Compétence :** `C.311` — Analyser et modéliser les besoins logiciels

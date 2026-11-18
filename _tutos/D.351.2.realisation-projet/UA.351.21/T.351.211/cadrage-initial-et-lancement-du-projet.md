@@ -1,7 +1,7 @@
 ---
 layout: tuto
-title: "Cadrage du projet sous gouvernance Scrum"
-sous_titre: "Formaliser la planification des sprints dans sprints/sprints.md et activer le Sprint 1 pour le Blog des Lauréats"
+title: "Cadrage du périmètre du projet (Sprint 1)"
+sous_titre: "Définir la vision, identifier les acteurs, délimiter le périmètre In/Out du Sprint 1 et contractualiser la feuille de route"
 slug: "perimetre-produit"
 slug_domaine: "realisation-projet"
 slug_ua: "cadrage"
@@ -21,22 +21,41 @@ data_php: ""
 ---
 
 ## 1. Objectif Opérationnel & Prérequis
-- **Position dans le flux :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 4 — Cadrage du projet sous gouvernance Scrum.
+- **Position dans le flux :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 4 — Cadrage du périmètre du projet (*Blog des Lauréats*).
 - **Branche Git :** `sprint1`
 - **Fichiers modifiés ou créés :** `sprints/sprints.md`, `sprints/README.md`.
-- **Objectif :** Contractualiser la gouvernance agile du projet d'imitation (*Blog des Lauréats*) en formalisant la planification dans `sprints/sprints.md`, en activant le Sprint 1 sur sa branche de travail dédiée et en rédigeant le guide méthodologique du dossier.
+- **Objectif :** Poser le cadre fonctionnel du projet d'imitation (*Blog des Lauréats*) : formaliser la vision produit et les deux acteurs cibles, délimiter ce qui est strictement inclus (In-Scope) et exclu (Out-of-Scope) du premier sprint, et contractualiser la gouvernance dans `sprints/sprints.md` sur la branche `sprint1`.
 - **Prérequis :** Initiation à la méthode Agile Scrum (`UA.351.11`) et initialisation du projet (`UA.351.20`).
 
 ## 2. Déroulement Pas-à-Pas de la Tâche
 
-1. **Étape 1 — Création du dossier et du guide méthodologique `sprints/README.md` :**  
-   Initialisez le dossier racine `sprints/` et créez le fichier de guide méthodologique :
+1. **Étape 1 — Définition de la Vision Produit & des Personas du Blog des Lauréats :**  
+   Avant de modéliser les diagrammes UML ou de créer les tâches de développement, vous devez poser les fondations fonctionnelles du projet d'imitation :
+   - **Vision du produit :** Le *Blog des Lauréats* est une vitrine web conçue pour valoriser publiquement les réalisations et profils techniques des lauréats de Solicode auprès des recruteurs et des apprenants.
+   - **Acteur primaire (Consommateur en S1) :** *L'Apprenant ou le Visiteur/Recruteur*, qui souhaite consulter le catalogue des réalisations et lire en détail chaque article publié.
+   - **Acteur secondaire (Contributeur) :** *Le Lauréat*, qui soumettra et administrera ses articles dans un sprint ultérieur.
+
+2. **Étape 2 — Délimitation In-Scope vs Out-of-Scope du Sprint 1 :**  
+   Pour garantir la livraison d'un incrément fonctionnel et testable au bout des 80 heures sans dispersion :
+   - **In-Scope (Strictement inclus dans le Sprint 1) :**
+     - Consultation publique de la fiche détaillée d'un article de blog via sa route dynamique `/articles/{id}`.
+     - Architecture logicielle découplée en deux couches : Contrôleur mince HTTP $\to$ Classe Service.
+     - Stockage tabulaire transitoire en mémoire à partir d'un fichier CSV (`articles.csv`).
+     - Rendu responsive sous gabarit Blade avec layout maître et composants d'interface.
+     - Gestion résiliente de l'erreur HTTP 404 en cas d'identifiant d'article inexistant.
+   - **Out-of-Scope (Strictement exclu du Sprint 1) :**
+     - Zéro module d'authentification ou de connexion utilisateur.
+     - Zéro formulaire de rédaction, modification ou suppression d'article.
+     - Zéro base de données relationnelle MySQL (reportée aux sprints ultérieurs).
+
+3. **Étape 3 — Initialisation du dossier `sprints/` et du guide `sprints/README.md` :**  
+   Créez le dossier racine `sprints/` pour accueillir la gouvernance du projet :
 
 ```bash
 mkdir -p sprints
 ```
 
-Rédigez le fichier `sprints/README.md` :
+   Rédigez le guide méthodologique `sprints/README.md` définissant les règles de fonctionnement pour l'équipe et l'Agent IA :
 
 ```markdown
 # Dossier des Sprints (`sprints/`)
@@ -66,8 +85,8 @@ Ce dossier centralise la planification et le suivi des Sprints selon la méthodo
 - [sprints.md](./sprints.md) : Fichier de suivi de la planification des sprints.
 ```
 
-2. **Étape 2 — Formalisation du fichier de cadrage `sprints/sprints.md` :**  
-   Créez le document central de suivi `sprints/sprints.md` en déclarant le premier sprint actif :
+4. **Étape 4 — Formalisation de la feuille de route dans `sprints/sprints.md` :**  
+   Créez le document central de suivi `sprints/sprints.md` en déclarant le Sprint 1 en statut Actif :
 
 ```markdown
 # Planification des Sprints
@@ -91,8 +110,8 @@ Ce document enregistre les sprints du projet. Les sprints suivants seront ajout�
   - Implémenter la consultation d'un article sous Laravel 12 (gabarit Blade responsive et gestion 404).
 ```
 
-3. **Étape 3 — Journalisation des commandes exécutées :**  
-   Dans le fichier `tutoriels/realisation-projet/cadrage/perimetre-produit/perimetre-produit.command.md`, consignez la commande exécutée :
+5. **Étape 5 — Journalisation des commandes exécutées :**  
+   Dans le fichier `tutoriels/realisation-projet/cadrage/perimetre-produit/perimetre-produit.command.md`, consignez la commande de création du dossier :
 
 ```bash
 mkdir -p sprints
@@ -104,7 +123,8 @@ mkdir -p sprints
   - Fichier de cadrage Scrum : `sprints/sprints.md` sur la branche `sprint1`.
   - Journal des commandes : `tutoriels/realisation-projet/cadrage/perimetre-produit/perimetre-produit.command.md`.
 - **Critères de validation :**
+  - [ ] La vision produit et les deux acteurs cibles (*Lauréat* et *Apprenant/Visiteur*) sont clairement identifiés.
+  - [ ] Les frontières In-Scope et Out-of-Scope du Sprint 1 sont clairement distinguées.
   - [ ] Le fichier `sprints/README.md` explicite le rôle de source de vérité unique (SSOT) pour l'Agent IA et l'équipe.
   - [ ] Le document `sprints/sprints.md` déclare le Sprint 1 en statut Actif sur la branche `sprint1`.
-  - [ ] Les objectifs pédagogiques et les 8 étapes clés du Sprint 1 y sont explicitement répertoriés.
-  - [ ] Le journal `perimetre-produit.command.md` consigne fidèlement les commandes exécutées.
+  - [ ] Le journal `perimetre-produit.command.md` consigne la commande `mkdir -p sprints`.

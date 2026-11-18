@@ -21,7 +21,7 @@ data_php: ""
 ---
 
 ## 1. Objectif Opérationnel & Prérequis
-- **Position dans le flux :** Phase B — Analyse, Conception & Planification / Étape 2.3 — Automatisation de la Planification.
+- **Position dans le flux :** Phase B — Analyse Fonctionnelle, Backlog & Planification de Sprint / Étape 7 — Automatisation de la Planification.
 - **Branche Git :** `sprint1`
 - **Fichiers modifiés ou créés :** `livrables/ia/prompts/prompt-sprint-planning.prompt.md`
 - **Objectif :** Concevoir le prompt d'ingénierie réutilisable permettant à un agent IA de générer le Sprint Backlog découpé à partir d'une sélection de User Stories.

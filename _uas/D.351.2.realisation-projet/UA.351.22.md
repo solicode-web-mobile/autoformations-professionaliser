@@ -1,25 +1,26 @@
 ---
-title: "Planification de sprint et engagement d'équipe (Sprint 1)"
+title: "Planification de sprint et carnet de tâches (Sprint 1)"
 layout: ua
 code: "UA.351.22"
 slug: "planification"
 maturite: "UA-Tâche"
-ordre: 6
+ordre: 7
 competence: "C.351"
 domaine: "D.351.2"
 duree: 4
 objectif: >
-  Calibrer la vélocité et l'effort de l'équipe en Story Points pour bâtir le Sprint Backlog du premier incrément, contractualiser la Definition of Done et activer les issues de sprint dans issues/issues-open.md.
+  Calibrer l'effort de l'équipe en Story Points à partir du cas d'usage isolé, bâtir le Sprint Backlog du premier incrément, initialiser le carnet de tâches issues/ (README.md et issues-open.md) et contractualiser la Definition of Done face au Sprint Goal.
 description: >
-  Cérémonie de planification du sprint. L'équipe sélectionne les User Stories du Product Backlog pour le Blog des Lauréats, les découpe en tâches techniques, active les issues opérationnelles dans issues/issues-open.md, contractualise la Definition of Done et conçoit le prompt réutilisable prompt-sprint-planning.
+  Cérémonie de planification du sprint. L'équipe sélectionne la User Story prioritaire issue des cas d'utilisation pour le Blog des Lauréats, la découpe en tâches d'ingénierie, initialise l'espace de suivi issues/ (guide issues/README.md et activation dans issues/issues-open.md), contractualise la Definition of Done en 7 critères bloquants face au Sprint Goal et conçoit le prompt réutilisable prompt-sprint-planning.
 notions:
-  - "Rituel du Sprint Planning en 2 parties (Quoi et Comment)"
+  - "Rituel du Sprint Planning en 2 temps (Quoi et Comment)"
   - "Estimation d'effort en Story Points (suite de Fibonacci)"
-  - "Décomposition des User Stories en tâches techniques élémentaires et activation dans issues/issues-open.md"
-  - "Contractualisation de la Definition of Done (DoD) en 7 critères bloquants"
+  - "Structuration de l'espace de suivi issues/ (README.md, issues-open.md, issues-à-valider.md, issues-closes.md)"
+  - "Décomposition de la User Story en tâches techniques élémentaires et activation dans issues/issues-open.md"
+  - "Contractualisation de la Definition of Done (DoD) en 7 critères bloquants face au Sprint Goal"
   - "Automatisation de la planification de sprint par prompt d'ingénierie"
 livrable: >
-  Sprint Backlog S1 (scrum/sprint-backlog-s1.md), issues de sprint activées dans issues/issues-open.md et prompt réutilisable sur la branche sprint1.
+  Dossier de suivi des tâches issues/ (issues/README.md et issues/issues-open.md activé), Sprint Backlog S1 (scrum/sprint-backlog-s1.md) et prompt réutilisable sur la branche sprint1.
 travail_a_faire: >
-  Conduire le Sprint Planning du Blog des Lauréats, formaliser le Sprint Backlog S1, activer les issues du sprint et concevoir le prompt prompt-sprint-planning.
+  Conduire le Sprint Planning du Blog des Lauréats à partir du cas d'usage de consultation, initialiser l'espace issues/, décomposer la story en tâches d'ingénierie dans issues/issues-open.md, formaliser la DoD et concevoir le prompt prompt-sprint-planning.
 ---

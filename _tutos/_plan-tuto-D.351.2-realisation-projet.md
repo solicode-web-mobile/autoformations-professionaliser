@@ -14,42 +14,42 @@
 
 - **Code :** `UA.351.21`
 - **Maturité :** `UA-tâche` (Cadrage de périmètre de projet)
-- **Ordre en Session :** Étape 03
-- **Positionnement Flux de Travail :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 1.3 — Cadrage du Projet
+- **Ordre en Session :** Étape 04
+- **Positionnement Flux de Travail :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 4 — Cadrage du Projet
 - **Briques Stack Technique :** Cadrage agile, Matrice de périmètre, Vision produit
 - **Compétence :** `C.351` — Piloter un projet avec Scrum et gouverner les cérémonies
 - **Domaine :** `D.351.2` — Réalisation de projet et rituels agiles
 - **Durée estimée :** 2 heures
-- **Objectif :** Définir et formaliser le périmètre d'intervention du projet pour le Sprint 1 en contractualisant les frontières fonctionnelles et les objectifs cibles dans le document de cadrage.
-- **Description :** Poser les frontières opérationnelles du projet. L'apprenant contractualise le document de cadrage du projet en se concentrant directement sur la vision, les parties prenantes et les limites du périmètre (in/out) sans dispersion technique d'infrastructure déjà maîtrisée en N2.
+- **Objectif :** Définir et formaliser le périmètre d'intervention du projet pour le Sprint 1 en contractualisant les frontières fonctionnelles (In-Scope / Out-of-Scope) et la feuille de route dans sprints/sprints.md.
+- **Description :** Poser les frontières opérationnelles du projet sur le Blog des Lauréats. L'apprenant explicite la vision produit, identifie les acteurs clés (Lauréat et Apprenant/Visiteur), délimite les exigences In-Scope vs Out-of-Scope du premier sprint et contractualise le suivi dans sprints/sprints.md et sprints/README.md.
 - **Notions Clés Utilisées dans le Sprint :**
-  - Cadrage d'un projet informatique (vision stratégique, cibles, parties prenantes).
-  - Délimitation du périmètre (ce qui est inclus dans le Sprint 1 vs ce qui est reporté).
-  - Définition des critères de succès du sprint.
-- **Livrable :** Document de cadrage projet (`cadrage/cadrage-projet.md`) sur la branche `sprint1`.
-- **Travail à Faire :** Rédiger le document `cadrage/cadrage-projet.md` pour le Projet d'imitation (*Blog des Lauréats*).
+  - Vision produit et personas cibles : Lauréat et Apprenant/Visiteur.
+  - Délimitation du périmètre In-Scope (consultation publique sous Laravel 12) vs Out-of-Scope (zéro authentification, zéro MySQL).
+  - Gouvernance de sprint et source unique de vérité (`sprints/sprints.md`).
+- **Livrable :** Dossier `sprints/` (`sprints/sprints.md`, `sprints/README.md`) et journal des commandes `tutoriels/realisation-projet/cadrage/perimetre-produit/perimetre-produit.command.md` sur la branche `sprint1`.
+- **Travail à Faire :** Rédiger `sprints/README.md`, formaliser `sprints/sprints.md` en déclarant le Sprint 1 en statut Actif pour le Projet d'imitation (*Blog des Lauréats*) et consigner les commandes.
 
 ---
 
-### UA.351.22 — Planification de sprint et engagement d'équipe (Sprint 1)
+### UA.351.22 — Planification de sprint et carnet de tâches (Sprint 1)
 
 - **Code :** `UA.351.22`
 - **Maturité :** `UA-tâche` (Planification Scrum de sprint)
-- **Ordre en Session :** Étape 06
-- **Positionnement Flux de Travail :** Phase B — Analyse, Conception & Planification / Étape 2.3 — Planification & Sprint Backlog
-- **Briques Stack Technique :** Sprint Backlog, Décomposition en tâches, Definition of Done, Kanban
+- **Ordre en Session :** Étape 07
+- **Positionnement Flux de Travail :** Phase B — Analyse, Conception & Planification / Étape 2.4 — Planification & Sprint Backlog
+- **Briques Stack Technique :** Sprint Backlog, Décomposition en tâches, Definition of Done, dossier issues/
 - **Compétence :** `C.351` — Piloter un projet avec Scrum et gouverner les cérémonies
 - **Domaine :** `D.351.2` — Réalisation de projet et rituels agiles
 - **Durée estimée :** 4 heures
-- **Objectif :** Bâtir le Sprint Backlog du premier incrément en découpant les User Stories en tâches techniques et contractualiser la Definition of Done en 7 critères bloquants, puis automatiser la planification par un prompt dédié.
-- **Description :** Cérémonie opérationnelle de planification du sprint. L'équipe sélectionne les User Stories prioritaires, les découpe en tâches d'ingénierie concrètes, s'engage sur le Sprint Goal et conçoit le prompt réutilisable `prompt-sprint-planning`.
+- **Objectif :** Bâtir le Sprint Backlog du premier incrément à partir du cas d'usage de consultation, initialiser l'espace de suivi issues/ (README.md et issues-open.md) et contractualiser la Definition of Done en 7 critères bloquants face au Sprint Goal.
+- **Description :** Cérémonie opérationnelle de planification du sprint. L'équipe sélectionne la User Story prioritaire déduite des cas d'utilisation, la découpe en tâches d'ingénierie concrètes, active les tâches dans issues/issues-open.md, s'engage sur le Sprint Goal et conçoit le prompt réutilisable `prompt-sprint-planning`.
 - **Notions Clés Utilisées dans le Sprint :**
   - Rituel du Sprint Planning en 2 parties (Quoi et Comment).
-  - Décomposition des User Stories en tâches techniques élémentaires.
-  - Contractualisation de la Definition of Done (DoD) en 7 critères bloquants.
-  - Prompt d'automatisation de la planification agile.
-- **Livrables :** Sprint Backlog S1 (`scrum/sprint-backlog-s1.md`) et prompt d'ingénierie (`livrables/ia/prompts/prompt-sprint-planning.prompt.md`) sur la branche `sprint1`.
-- **Travail à Faire :** Animer la planification du sprint, renseigner le document `sprint-backlog-s1.md` et concevoir le prompt `prompt-sprint-planning`.
+  - Organisation de l'espace de suivi des tâches `issues/` (`README.md`, `issues-open.md`, `issues-à-valider.md`, `issues-closes.md`).
+  - Décomposition de la User Story en tâches d'ingénierie concrètes.
+  - Contractualisation de la Definition of Done (DoD) en 7 critères bloquants face au Sprint Goal.
+- **Livrables :** Espace de suivi `issues/` (`issues/README.md`, `issues/issues-open.md`), Sprint Backlog S1 (`scrum/sprint-backlog-s1.md`) et prompt d'ingénierie (`livrables/ia/prompts/prompt-sprint-planning.prompt.md`) sur la branche `sprint1`.
+- **Travail à Faire :** Animer la planification du sprint, initialiser `issues/README.md`, activer les tâches dans `issues/issues-open.md` et concevoir le prompt `prompt-sprint-planning`.
 
 ---
 
@@ -78,44 +78,44 @@
 
 ## 2. Plan des Tutoriels : UA.351.21
 
-### T.351.211 — Cadrage du périmètre du projet
+### T.351.211 — Cadrage du périmètre du projet (Sprint 1)
 
 - **Code :** `T.351.211`
 - **Maturité :** `UA-tâche` (Tutoriel opérationnel de cadrage)
 - **Unité d'Apprentissage parente :** `UA.351.21`
-- **Titre Canonique :** Cadrage du périmètre du projet
-- **Position dans le Flux :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 1.3 — Cadrage du Projet.
+- **Titre Canonique :** Cadrage du périmètre du projet (Sprint 1)
+- **Position dans le Flux :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 4 — Cadrage du Projet.
 - **Branche Git de travail :** `sprint1`
-- **Fichiers modifiés ou créés :** `cadrage/cadrage-projet.md`
+- **Fichiers modifiés ou créés :** `sprints/sprints.md`, `sprints/README.md`, `tutoriels/realisation-projet/cadrage/perimetre-produit/perimetre-produit.command.md`
 - **Objectif Opérationnel :** Contractualiser le cadrage du périmètre fonctionnel du Projet d'imitation (*Blog des Lauréats*) pour le Sprint 1.
-- **Prérequis :** Prise de connaissance du sujet d'imitation et de la charte d'équipe (`UA.351.11`).
+- **Prérequis :** Prise de connaissance du sujet d'imitation et de la méthode Agile Scrum (`UA.351.11`).
 - **Déroulement Pas-à-Pas :**
   1. *Étape 1 :* Formaliser la vision du projet : plateforme de publication d'articles techniques pour valoriser les lauréats.
-  2. *Étape 2 :* Délimiter le périmètre strict du Sprint 1 (Ce qui est IN : consultation publique d'un article, lecture CSV ; Ce qui est OUT : authentification, création d'article, base de données relationnelle).
-  3. *Étape 3 :* Identifier les parties prenantes (Lecteur public, Formateur Product Owner) et consigner l'ensemble dans `cadrage/cadrage-projet.md`.
-- **Critère de Réussite :** Le fichier `cadrage/cadrage-projet.md` est validé et versionné sur la branche `sprint1`.
+  2. *Étape 2 :* Délimiter le périmètre strict du Sprint 1 (Ce qui est IN : consultation publique d'un article, lecture CSV, 404 ; Ce qui est OUT : authentification, création d'article, base de données relationnelle).
+  3. *Étape 3 :* Identifier les deux acteurs clés (Lauréat et Apprenant/Visiteur public) et consigner l'ensemble dans `sprints/sprints.md` et `sprints/README.md`.
+- **Critère de Réussite :** Le fichier `sprints/sprints.md` déclare le Sprint 1 en statut Actif sur la branche `sprint1`.
 
 ---
 
 ## 3. Plan des Tutoriels : UA.351.22
 
-### T.351.221 — Sprint Planning et engagement d'équipe
+### T.351.221 — Planification de sprint et carnet de tâches
 
 - **Code :** `T.351.221`
 - **Maturité :** `UA-tâche` (Tutoriel opérationnel de planification)
 - **Unité d'Apprentissage parente :** `UA.351.22`
-- **Titre Canonique :** Sprint Planning et engagement d'équipe
-- **Position dans le Flux :** Phase B — Analyse, Conception & Planification / Étape 2.3 — Planification & Sprint Backlog.
+- **Titre Canonique :** Planification de sprint et carnet de tâches
+- **Position dans le Flux :** Phase B — Analyse, Conception & Planification / Étape 2.4 — Planification & Carnet de tâches.
 - **Branche Git de travail :** `sprint1`
-- **Fichiers modifiés ou créés :** `scrum/sprint-backlog-s1.md`
-- **Objectif Opérationnel :** Animer la planification du Sprint 1, découper l'incrément en tâches d'ingénierie et contractualiser la Definition of Done.
-- **Prérequis :** Product Backlog initialisé (`UA.351.12`).
+- **Fichiers modifiés ou créés :** `issues/README.md`, `issues/issues-open.md`, `scrum/sprint-backlog-s1.md`
+- **Objectif Opérationnel :** Animer la planification du Sprint 1, initialiser l'espace `issues/`, découper l'incrément en tâches d'ingénierie et contractualiser la Definition of Done.
+- **Prérequis :** Diagramme de cas d'utilisation macro (`UA.311.22`) et initiation Scrum (`UA.351.11`).
 - **Déroulement Pas-à-Pas :**
-  1. *Étape 1 :* Sélectionner la User Story prioritaire du carnet : *« Consultation détaillée d'un article de blog »*.
-  2. *Étape 2 :* Découper la Story en tâches techniques élémentaires (Modélisation UML, ADR-01, Route/Vue, Contrôleur, Classe Service CSV, Layout Blade et 404).
-  3. *Étape 3 :* Formaliser la grille Definition of Done (DoD) en 7 critères bloquants.
-  4. *Étape 4 :* Renseigner le fichier `scrum/sprint-backlog-s1.md` et engager l'équipe sur le Sprint Goal.
-- **Critère de Réussite :** Le document `scrum/sprint-backlog-s1.md` est finalisé et versionné sur la branche `sprint1`.
+  1. *Étape 1 :* Sélectionner la User Story prioritaire issue du cas d'utilisation : *« Consultation détaillée d'un article de blog »*.
+  2. *Étape 2 :* Initialiser le dossier `issues/` et rédiger le guide `issues/README.md`.
+  3. *Étape 3 :* Découper la Story en tâches d'ingénierie élémentaires et les activer dans `issues/issues-open.md`.
+  4. *Étape 4 :* Formaliser la grille Definition of Done (DoD) en 7 critères bloquants face au Sprint Goal.
+- **Critère de Réussite :** Le dossier `issues/` est initialisé avec `issues-open.md` activé et le Sprint Backlog est contractualisé sur la branche `sprint1`.
 
 ---
 
