@@ -226,6 +226,11 @@
   text-decoration: underline;
 }
 
+.tuto-breadcrumb-current span {
+  color: #1e293b;
+  font-weight: 600;
+}
+
 
 /* =========================================================
    4. OUTILS DE LECTURE

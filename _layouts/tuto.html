@@ -97,7 +97,7 @@ layout: default
           <span class="tuto-breadcrumb-separator">&gt;</span>
         {% endif %}
         <span class="tuto-reference layout-reference">
-          <a href="{{ current_domaine.url | relative_url }}" title="{{ current_domaine.code }}">{{ current_domaine.title }}</a>
+          <a href="{{ current_domaine.url | relative_url }}" title="{{ current_domaine.code }} — {{ current_domaine.title }}">{{ current_domaine.slug | default: current_domaine.mini-code | default: current_domaine.title }}</a>
         </span>
       {% endif %}
 
@@ -106,7 +106,14 @@ layout: default
           <span class="tuto-breadcrumb-separator">&gt;</span>
         {% endif %}
         <span class="tuto-reference layout-reference">
-          <a href="{{ current_ua.url | relative_url }}" title="{{ current_ua.code }}">{{ current_ua.title }}</a>
+          <a href="{{ current_ua.url | relative_url }}" title="{{ current_ua.code }} — {{ current_ua.title }}">{{ current_ua.slug | default: current_ua.title }}</a>
+        </span>
+      {% endif %}
+
+      {% if page.slug %}
+        <span class="tuto-breadcrumb-separator">&gt;</span>
+        <span class="tuto-reference layout-reference tuto-breadcrumb-current">
+          <span title="{{ page.tuto_id }} — {{ page.title }}">{{ page.slug }}</span>
         </span>
       {% endif %}
     </div>

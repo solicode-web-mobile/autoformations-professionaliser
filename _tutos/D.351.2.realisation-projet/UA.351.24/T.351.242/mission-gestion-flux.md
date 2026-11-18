@@ -9,6 +9,7 @@ permalink: /tutos/mission-suivi/
 tuto_id: "T.351.242"
 version: "normal"
 ua: "UA.351.24"
+maturite: "UA-Tâche"
 nav_order: 2
 simplified: true
 en_construction: true

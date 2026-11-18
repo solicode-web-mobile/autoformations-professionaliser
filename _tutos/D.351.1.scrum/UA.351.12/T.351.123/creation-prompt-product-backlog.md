@@ -2,10 +2,10 @@
 layout: tuto
 title: "Création du prompt-product-backlog"
 sous_titre: "Concevoir le prompt d'ingénierie prompt-product-backlog pour découper et prioriser le carnet de produit"
-slug: "prompt-backlog"
+slug: "prompt-user-stories"
 slug_domaine: "scrum"
 slug_ua: "product-backlog"
-permalink: /tutos/prompt-backlog/
+permalink: /tutos/prompt-user-stories/
 tuto_id: "T.351.123"
 version: "normal"
 ua: "UA.351.12"

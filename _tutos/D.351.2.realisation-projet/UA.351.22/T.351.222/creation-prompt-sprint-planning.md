@@ -2,10 +2,10 @@
 layout: tuto
 title: "Création du prompt-sprint-planning"
 sous_titre: "Concevoir le prompt prompt-sprint-planning pour automatiser la décomposition des User Stories en tâches de sprint"
-slug: "prompt-planification"
+slug: "prompt-engagement-equipe"
 slug_domaine: "realisation-projet"
 slug_ua: "planification"
-permalink: /tutos/prompt-planification/
+permalink: /tutos/prompt-engagement-equipe/
 tuto_id: "T.351.222"
 version: "normal"
 ua: "UA.351.22"

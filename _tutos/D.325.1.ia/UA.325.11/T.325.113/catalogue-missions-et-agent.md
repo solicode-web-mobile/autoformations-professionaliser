@@ -9,6 +9,7 @@ permalink: /tutos/catalogue-index/
 tuto_id: "T.325.113"
 version: "normal"
 ua: "UA.325.11"
+maturite: "UA-Lab"
 nav_order: 3
 simplified: true
 en_construction: true

@@ -9,6 +9,7 @@ permalink: /tutos/formalisation-etapes/
 tuto_id: "T.351.241"
 version: "normal"
 ua: "UA.351.24"
+maturite: "UA-Tâche"
 nav_order: 1
 simplified: true
 en_construction: true

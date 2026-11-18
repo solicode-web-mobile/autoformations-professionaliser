@@ -2,10 +2,10 @@
 layout: tuto
 title: "Création des 4 prompts de clôture de sprint"
 sous_titre: "Concevoir les prompts automatisant les livrables de Sprint Review, Retrospective, Refinement et Bilan"
-slug: "prompts-cloture"
+slug: "prompts-ceremonies-bilan"
 slug_domaine: "realisation-projet"
 slug_ua: "cloture-sprint"
-permalink: /tutos/prompts-cloture/
+permalink: /tutos/prompts-ceremonies-bilan/
 tuto_id: "T.351.235"
 version: "normal"
 ua: "UA.351.23"
