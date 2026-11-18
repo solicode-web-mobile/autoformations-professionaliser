@@ -36,14 +36,14 @@ Vous devez concevoir :
 
 ## 2. Consignes & Spécifications de Réalisation
 
-1. **Jalon 1 — Création de la Classe Service Découplée :**  
+1. **Étape 1 — Création de la Classe Service Découplée :**  
    Dans `src/app/Services/ArticleService.php` :
    - Déclarez la méthode publique `find(int $id): ?array`.
    - Ouvrez et parcourez le fichier tabulaire `src/database/data/articles.csv` avec la fonction native PHP `fgetcsv()`.
    - Si la ligne correspondante à l'identifiant est trouvée, retournez un tableau associatif complet (`id`, `titre`, `contenu`, `auteur`, `date`).
    - Si l'identifiant est absent ou le fichier non lisible, retournez strictement `null`.
 
-2. **Jalon 2 — Contrôleur Mince avec Injection IoC & Résilience 404 :**  
+2. **Étape 2 — Contrôleur Mince avec Injection IoC & Résilience 404 :**  
    Dans `src/app/Http/Controllers/Public/ArticleController.php` :
    - Injectez `ArticleService` dans le constructeur : `public function __construct(protected ArticleService $articleService) {}`.
    - Coder l'action `show(int $id): \Illuminate\View\View` :
@@ -51,24 +51,24 @@ Vous devez concevoir :
      - Si `$article === null`, déclenchez immédiatement l'exception HTTP : `abort(404);`.
      - Sinon, retournez la vue avec les données : `return view('articles.show', compact('article'));`.
 
-3. **Jalon 3 — Déclaration de la Route Paramétrée :**  
+3. **Étape 3 — Déclaration de la Route Paramétrée :**  
    Dans `src/routes/web.php`, déclarez la route GET dynamique :
    - Définissez l'URI `/articles/{id}` reliée à `ArticleController@show`.
    - Sécurisez le paramètre avec la contrainte numérique `->whereNumber('id')`.
    - Nommez la route : `->name('articles.show')`.
 
-4. **Jalon 4 — Mise en Place du Layout Maître Blade :**  
+4. **Étape 4 — Mise en Place du Layout Maître Blade :**  
    Dans `src/resources/views/layouts/app.blade.php` :
    - Structurez le squelette HTML5 responsive avec balises méta et Tailwind CSS.
    - Intégrez une barre de navigation partagée avec le logo du Blog des Lauréats et le lien d'accueil.
    - Positionnez le conteneur principal avec le point d'ancrage `@yield('content')`.
    - Intégrez un pied de page normé Solicode.
 
-5. **Jalon 5 — Vues de Détail et Page 404 Personnalisée :**  
+5. **Étape 5 — Vues de Détail et Page 404 Personnalisée :**  
    - `src/resources/views/articles/show.blade.php` : hérite du layout maître (`@extends('layouts.app')`), affiche le titre, l'auteur, la date et le corps de l'article, et fournit un lien de retour fluide vers la liste des articles.
    - `src/resources/views/errors/404.blade.php` : hérite du layout maître et affiche un message clair invitant l'utilisateur à revenir à l'accueil face à un article inexistant.
 
-6. **Jalon 6 — Validation Navigateur & Journalisation :**  
+6. **Étape 6 — Validation Navigateur & Journalisation :**  
    Vérifiez le fonctionnement nominal sur `http://127.0.0.1:8000/articles/1` et l'affichage propre de l'erreur 404 sur `http://127.0.0.1:8000/articles/999`.  
    Consignez les commandes de test dans `tutoriels/laravel/tranche-verticale/consultation-detaillee-404/consultation-detaillee-404.command.md` :
 

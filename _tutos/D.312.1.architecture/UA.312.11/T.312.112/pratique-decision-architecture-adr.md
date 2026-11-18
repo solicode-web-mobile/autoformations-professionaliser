@@ -30,7 +30,7 @@ Vous devez concevoir :
 
 ## 2. Consignes & Spécifications de Réalisation
 
-1. **Jalon 1 — Rédaction de l'ADR-01 :**  
+1. **Étape 1 — Rédaction de l'ADR-01 :**  
    Rédigez l'Architecture Decision Record en appliquant la structure canonique à 6 sections :
    - *Titre :* ADR-01 — Architecture découplée en 2 couches et persistance tabulaire transitoire CSV.
    - *Statut :* Accepté.
@@ -39,12 +39,12 @@ Vous devez concevoir :
    - *Conséquences :* Testabilité unitaire immédiate, légèreté du projet, absence de migrations relationnelles en S1, transition transparente vers MySQL au Sprint 2.
    - *Alternatives écartées :* Justification de l'abandon du modèle monolithique ("Fat Controller") et de l'installation prématurée d'une base MySQL.
 
-2. **Jalon 2 — Modélisation du Flux HTTP en Diagramme de Séquence :**  
+2. **Étape 2 — Modélisation du Flux HTTP en Diagramme de Séquence :**  
    En syntaxe déclarative Mermaid `sequenceDiagram`, modélisez les deux scénarios d'exécution :
    - *Scénario nominal (HTTP 200) :* Navigateur $\to$ `routes/web.php` $\to$ `ArticleController::show($id)` $\to$ `ArticleService::find($id)` $\to$ lecture CSV $\to$ retour tableau associatif $\to$ contrôleur instancie la vue Blade $\to$ retour page HTML 200 au navigateur.
    - *Scénario d'exception (HTTP 404) :* `ArticleService::find($id)` renvoie `null` $\to$ `ArticleController` déclenche `abort(404)` $\to$ Kernel intercepte l'exception $\to$ rendu de `errors/404.blade.php` $\to$ réponse HTTP 404 au navigateur.
 
-3. **Jalon 3 — Restitution Marp :**  
+3. **Étape 3 — Restitution Marp :**  
    Concevez `presentation-decision-adr-sequence.md` au format Marp Markdown pour présenter oralement l'arbitrage architectural et le diagramme de séquence aux parties prenantes.
 
 ## 3. Livrables & Critères de validation

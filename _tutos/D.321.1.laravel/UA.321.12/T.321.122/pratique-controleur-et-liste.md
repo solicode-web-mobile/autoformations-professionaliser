@@ -33,7 +33,7 @@ Vous devez concevoir :
 
 ## 2. Consignes & Spécifications de Réalisation
 
-1. **Jalon 1 — Génération du Contrôleur HTTP :**  
+1. **Étape 1 — Génération du Contrôleur HTTP :**  
    Depuis le dossier `src/`, exécutez la commande Artisan pour générer le contrôleur dans le sous-espace `Public` :
 
 ```bash
@@ -41,18 +41,18 @@ cd src
 php artisan make:controller Public/ArticleController
 ```
 
-2. **Jalon 2 — Implémentation de l'Action `index()` :**  
+2. **Étape 2 — Implémentation de l'Action `index()` :**  
    Dans `src/app/Http/Controllers/Public/ArticleController.php`, codez la méthode publique `index()` :
    - Déclarez un tableau associatif de plusieurs articles représentatifs (id, titre, extrait, nom du lauréat, date de publication).
    - Retournez la vue `articles.index` en transmettant la variable via `view('articles.index', compact('articles'))`.
    - Typage de retour strict : `public function index(): \Illuminate\View\View`.
 
-3. **Jalon 3 — Déclaration de la Route dans `routes/web.php` :**  
+3. **Étape 3 — Déclaration de la Route dans `routes/web.php` :**  
    Associez l'URL `/articles` à l'action du contrôleur :
    - Importez la classe avec `use App\Http\Controllers\Public\ArticleController;`.
    - Déclarez la route nommée : `Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');`.
 
-4. **Jalon 4 — Composition de la Vue Blade Itérative :**  
+4. **Étape 4 — Composition de la Vue Blade Itérative :**  
    Dans `src/resources/views/articles/index.blade.php` :
    - Structurez une grille responsive Tailwind CSS (`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6`).
    - Utilisez la directive `@forelse ($articles as $article) ... @empty ... @endforelse`.
@@ -60,7 +60,7 @@ php artisan make:controller Public/ArticleController
    - Dans le bloc `@empty`, affichez un message élégant indiquant qu'aucun article n'est disponible.
    - Zéro CSS inline.
 
-5. **Jalon 5 — Validation Navigateur & Journalisation :**  
+5. **Étape 5 — Validation Navigateur & Journalisation :**  
    Testez l'accès sur `http://127.0.0.1:8000/articles`. Vérifiez le comportement de la grille lors du redimensionnement de l'écran.  
    Consignez les commandes exécutées dans `tutoriels/laravel/controleur-vue/liste-articles/liste-articles.command.md` :
 

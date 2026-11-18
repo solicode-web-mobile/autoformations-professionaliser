@@ -30,20 +30,20 @@ Vous devez concevoir :
 
 ## 2. Consignes & Spécifications de Réalisation
 
-1. **Jalon 1 — Identification des Acteurs Externes :**  
+1. **Étape 1 — Identification des Acteurs Externes :**  
    Recensez les profils d'utilisateurs humains identifiés lors du cadrage :
    - *Acteurs primaires :* L'Apprenant ou le Visiteur public (consommateur des articles en S1) et le Lauréat (futur rédacteur d'articles).
    - *Acteur secondaire :* Le Modérateur (supervision des contenus).
    - *Système tiers :* Le service d'hébergement ou dépôt Git.
 
-2. **Jalon 2 — Modélisation de la Boîte Noire Système :**  
+2. **Étape 2 — Modélisation de la Boîte Noire Système :**  
    Positionnez le *Blog des Lauréats* au centre du modèle en tant que boîte noire. Le diagramme de contexte ne détaille pas la cuisine interne de l'application (pas de classes, pas de bases de données internes).
 
-3. **Jalon 3 — Définition des Flux Orientés :**  
+3. **Étape 3 — Définition des Flux Orientés :**  
    Reliez chaque acteur au système central avec des flux orientés et nommés explicitement en syntaxe Mermaid `graph LR` (consultation d'un article, lecture des profils, soumission de réalisations).  
    *Règle d'or :* Il est strictement interdit d'établir un flux direct entre deux acteurs externes ; tout échange transite obligatoirement par le système central.
 
-4. **Jalon 4 — Préparation du Diaporama Marp :**  
+4. **Étape 4 — Préparation du Diaporama Marp :**  
    Concevez le diaporama `presentation-modelisation-systeme.md` au format Marp Markdown pour présenter oralement les frontières de l'application et justifier les flux modélisés.
 
 ## 3. Livrables & Critères de validation

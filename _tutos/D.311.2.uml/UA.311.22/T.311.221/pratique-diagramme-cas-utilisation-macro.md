@@ -30,21 +30,21 @@ Vous devez concevoir :
 
 ## 2. Consignes & Spécifications de Réalisation
 
-1. **Jalon 1 — Cartographie des 15 Cas d'Utilisation Macro :**  
+1. **Étape 1 — Cartographie des 15 Cas d'Utilisation Macro :**  
    Identifiez les fonctionnalités visibles du système sans sur-segmentation technique :
    - *Espace Public (Visiteur / Apprenant) :* Consulter l'accueil, lister les articles, consulter un article en détail, filtrer par catégorie, rechercher un lauréat.
    - *Espace Lauréat (Auteur) :* Rédiger un article, modifier son brouillon, publier un article, gérer son profil public.
    - *Espace Modération :* Valider une publication, suspendre un article, gérer les signalements.
 
-2. **Jalon 2 — Modélisation des Relations Structurelles :**  
+2. **Étape 2 — Modélisation des Relations Structurelles :**  
    Reliez chaque acteur à ses fonctionnalités respectives et appliquez rigoureusement les stéréotypes UML :
    - Relation d'inclusion obligatoire `<<include>>` (ex : *Consulter un article* inclut obligatoirement *Afficher les détails de l'auteur*).
    - Relation d'extension optionnelle ou conditionnelle `<<extend>>` (ex : *Partager sur les réseaux* étend conditionnellement *Consulter un article*).
 
-3. **Jalon 3 — Isolation du Cas d'Usage Central du Sprint 1 :**  
+3. **Étape 3 — Isolation du Cas d'Usage Central du Sprint 1 :**  
    Isolez formellement le cas d'usage cible du premier incrément logiciel : **« Consulter un article de blog »** avec ses critères d'acceptation nominaux (affichage des métadonnées, titre, contenu) et d'exception (interception d'une ressource absente). Cette spécification servira d'entrée directe à la séance de Sprint Planning (`UA.351.22`).
 
-4. **Jalon 4 — Restitution Marp :**  
+4. **Étape 4 — Restitution Marp :**  
    Concevez `presentation-modelisation-macro.md` au format Marp Markdown pour présenter la cartographie fonctionnelle de l'application et la justification du cas prioritaire du Sprint 1.
 
 ## 3. Livrables & Critères de validation
