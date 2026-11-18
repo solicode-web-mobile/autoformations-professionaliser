@@ -45,9 +45,9 @@ Avant d'activer le skill, s'assurer que :
 ### Étape 3 : Rédaction de la Fiche Pratique
 - Cibler **exclusivement le Projet d'imitation** (*Blog des Lauréats*).
 - Spécifier la branche Git (`branche: "sprintX"`).
-- **Autonomie de la pratique :** L'apprenant est en situation d'expérimentation active. Fournir le cahier des charges technique, les jalons directifs et les critères d'acceptation, mais **interdiction formelle de donner la solution complète rédigée à copier-coller** (réservée aux `UA-Tuto` et `UA-Tâche`).
+- **Autonomie de la pratique :** L'apprenant est en situation d'expérimentation active. Fournir le cahier des charges technique, les étapes directives et les critères d'acceptation, mais **interdiction formelle de donner la solution complète rédigée à copier-coller** (réservée aux `UA-Tuto` et `UA-Tâche`).
 - Spécifier l'emplacement exact sous `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` (jamais de dossier `labs/`).
-- Découper la réalisation en jalons chronologiques clairs et fournir des critères de validation binaires `[ ]`.
+- Découper la réalisation en étapes chronologiques claires (`1. **Étape 1 — ... :**` ; proscrire le terme *« Jalon »*) et fournir des critères de validation binaires `[ ]`.
 
 ### Étape 4 : Rédaction de la Fiche Création de Prompt (si flux récurrent)
 - Titrer directement au format `Création du prompt-[nom]`.

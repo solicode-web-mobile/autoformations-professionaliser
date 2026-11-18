@@ -33,7 +33,7 @@ $$\text{[Théorie 20/80 (Optionnelle)]} \longrightarrow \text{Pratique Imitation
 
 - **Quand l'activer :**
   - Rédaction ou mise à jour des fiches de tutoriels associées à une Unité d'Apprentissage de maturité **`UA-Lab`**.
-  - Structuration des consignes et jalons de modélisation UML (Mermaid.js).
+  - Structuration des consignes et étapes directives de modélisation UML (Mermaid.js).
   - Rédaction des ateliers de gouvernance agile Scrum (charte d'équipe, Product Backlog, User Stories INVEST).
   - Formalisation des dossiers d'architecture logicielle (ADR, diagrammes de séquence).
   - Élaboration de prompts directifs selon la méthode RIO pour les étapes récurrentes du flux de travail.
@@ -113,10 +113,10 @@ data_php: ""
 - **Stack mobilisée :** [Outils et technologies mobilisés]
 
 ## 2. Travail à Faire (Projet d'Imitation)
-Bâtir le livrable sur le Projet d'imitation en respectant ces jalons :
-1. **[Jalon 1] :** [Description opérationnelle directive]
-2. **[Jalon 2] :** [Description opérationnelle directive]
-3. **[Jalon 3] :** [Description opérationnelle directive]
+Bâtir le livrable sur le Projet d'imitation en respectant ces étapes :
+1. **Étape 1 — [Objectif opérationnel] :** [Description opérationnelle directive]
+2. **Étape 2 — [Objectif opérationnel] :** [Description opérationnelle directive]
+3. **Étape 3 — [Objectif opérationnel] :** [Description opérationnelle directive]
 
 ## 3. Critères de Validation
 - [ ] Le fichier `[chemin/du/fichier.ext]` est présent et versionné sur la branche `sprintX`.
@@ -183,5 +183,6 @@ Concevoir dans `livrables/ia/prompts/prompt-[nom].prompt.md` le prompt d'ingéni
 8. **Formatage Strict des Blocs de Code (Zéro Espace & Ligne Vide) :** Tout bloc de code (fenced code block ```` ``` ```` ou ```` ```` ````) doit obligatoirement être précédé d'une ligne vide et commencer strictement à la colonne 0 (sans aucun espace d'indentation), y compris à l'intérieur des listes ordonnées. Le contenu textuel ou Markdown encapsulé doit également débuter à la colonne 0 sans indentation artificielle.
 9. **Interdiction de Divulguer la Cuisine Interne aux Apprenants :** Interdiction formelle d'exposer des formulations didactiques internes telles que « Règle des 20/80 », « Les 20%... », « Les 80%... » ou « (Ce que l'Apprenant Doit Produire) » dans les tutoriels destinés aux apprenants. Utiliser des sections directes et professionnelles : « Notions fondamentales » (socle théorique fourni) et « Recherches à effectuer » (investigation active). Supprimer également le bloc superflue « Positionnement dans le Flux & la Stack » dans les fiches théoriques pour aller directement au travail à faire.
 10. **Chemins de Livrables Précis (`tutoriels/`) :** Tout livrable doit être référencé avec son chemin relatif complet (`tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`). Interdiction absolue des dossiers orphelins (comme `labs/` : toujours utiliser `tutoriels/`) et des formulations vagues (comme *« journal d'apprentissage personnel »* sans chemin physique explicite).
-11. **Autonomie de la Pratique (Zéro Solution Clé en Main) :** Dans les ateliers pratiques d'une `UA-Lab`, c'est à l'apprenant de concevoir et produire son code, ses schémas ou ses manifestes. Fournir des spécifications rigoureuses, des contraintes directives (cahier des charges RIO, jalons, critères de validation), mais **interdiction absolue de fournir la solution rédigée complète prête à copier-coller**. La solution intégrale pas-à-pas est réservée exclusivement aux fiches d'apprentissage incrémental (`UA-Tuto`) et aux tâches opérationnelles (`UA-Tâche`).
+11. **Autonomie de la Pratique (Zéro Solution Clé en Main) :** Dans les ateliers pratiques d'une `UA-Lab`, c'est à l'apprenant de concevoir et produire son code, ses schémas ou ses manifestes. Fournir des spécifications rigoureuses, des contraintes directives (cahier des charges RIO, étapes directives, critères de validation), mais **interdiction absolue de fournir la solution rédigée complète prête à copier-coller**. La solution intégrale pas-à-pas est réservée exclusivement aux fiches d'apprentissage incrémental (`UA-Tuto`) et aux tâches opérationnelles (`UA-Tâche`).
 12. **Interdiction des Étapes de Commit/Push :** Ne jamais insérer d'étape directive de commit ou de push (`git add`, `git commit`, `git push`) à la fin des tutoriels. Les apprenants N3 maîtrisent déjà le versionnement Git et gèrent leurs commits de manière autonome sur la branche active.
+13. **Interdiction Formelle du Terme « Jalon » :** Dans tous les tutoriels destinés aux apprenants, utiliser exclusivement le terme direct et accessible **« Étape »** (`1. **Étape 1 — ... :**`). Le terme *« Jalon »* est proscrit.
