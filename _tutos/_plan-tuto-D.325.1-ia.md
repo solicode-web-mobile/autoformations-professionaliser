@@ -1,85 +1,88 @@
 # Plan des Tutoriels : D.325.1 — Ingénierie de Prompt et Agents IA
 
-> **Domaine :** `D.325.1` | **Compétence :** `C.325` — Développer des solutions logicielles avec l'assistance de l'IA | **Session :** S01  
+> **Domaine :** `D.325.1` | **Compétence :** `C.325` — Concevoir des Agents IA et développer des Skills | **Session :** S1  
 > **Niveau de Maturité :** UA-Lab (Atelier pratique guidé)  
 > **Branche Git de Travail :** `sprint1`  
-> **Référentiels Liés :** [`../../3.sprints/flux-travail-n3.md`](../../3.sprints/flux-travail-n3.md) | [`../../3.sprints/stack-technique-n3.md`](../../3.sprints/stack-technique-n3.md)
+> **Mentor de Domaine :** `.agents/skills/domaine-ia/SKILL.md`
 
 ---
 
 ## 1. Description des Unités d'Apprentissage du Domaine
 
-### UA.325.11 — Prompt Engineering
+### UA.325.11 — Initialisation de l'Agent IA & Architecture des Skills
 
 - **Code :** `UA.325.11`
 - **Maturité :** `UA-Lab` (Atelier pratique guidé)
-- **Ordre en Session :** Étape 01
-- **Positionnement Flux de Travail :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 1.1 — Outillage Prompt Engineering
-- **Briques Stack Technique :** LLMs (Claude, Gemini), Méthode RIO, Context Engineering, Méta-prompting
-- **Compétence :** `C.325` — Développer des solutions logicielles avec l'assistance de l'IA
+- **Ordre en Session :** Étape 02
+- **Positionnement Flux de Travail :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 2 — Initialisation de l'Agent IA
+- **Compétence :** `C.325` — Concevoir des Agents IA et développer des Skills
 - **Domaine :** `D.325.1` — Ingénierie de prompt et agents IA
 - **Durée estimée :** 6 heures
-- **Objectif :** Maîtriser le dialogue déterministe avec les modèles de langage et le Context Engineering pour outiller l'équipe d'un méta-prompt réutilisable capable de générer tous les prompts du flux de travail sans hallucination.
-- **Description :** Outiller le développeur augmenté par l'ingénierie de prompt structurée. L'apprenant s'approprie la méthode RIO et conçoit le méta-prompt réutilisable `prompt-creator` pour automatiser la transposition des étapes du sprint.
-- **Notions Clés Utilisées dans le Sprint :**
-  - Méthode directrice RIO : Rôle précis (persona d'expert), Instructions contextualisées sans ambiguïté, Output au format strict (Markdown, code pur).
-  - Context Engineering : Injection du contexte métier et des règles de développement, réduction drastique des hallucinations.
-  - Contraintes négatives explicites : Suppression du bavardage de politesse, interdiction formelle de dévier du périmètre fonctionnel.
-  - Méta-Prompting : Conception d'un prompt générateur de prompts (`prompt-creator.prompt.md`).
-- **Livrable :** Méta-prompt générateur de prompts au standard RIO (`livrables/ia/prompts/prompt-creator.prompt.md`) sur la branche `sprint1`.
-- **Travail à Faire :** Assimiler la méthode RIO, concevoir le méta-prompt `prompt-creator` et tester sa pertinence sur un cas d'usage réel.
+- **Objectif :** Maîtriser le dialogue déterministe avec les modèles de langage (méthode RIO, patterns de prompt), comprendre l'architecture d'un Agent IA (règles Always-On vs compétences modulaires), concevoir en atelier le skill modulaire `skill-presentation` avec sa mission Marp, puis outiller le projet d'imitation avec les règles permanentes et le skill de démarrage `gestion-depot`.
+- **Description :** Accompagné par le skill mentor `domaine-ia`, l'apprenant franchit les étapes de découverte, formalisation et pratique agentique. Il produit les synthèses techniques et diaporamas de soutenance pour chaque étape, et déploie les règles et compétences réelles sur le projet *Blog des Lauréats*.
+- **Notions Clés :**
+  - Méthode directrice RIO : Rôle précis (persona d'expert), Instructions fermées avec contraintes négatives, Output strict sans tableau.
+  - Patterns fondamentaux : Persona, Template, Constraint, Step-by-Step, Reflective.
+  - Paliers d'autonomie et architecture de l'agent : LLM brut vs Chatbot passif vs Agent IA autonome outillé.
+  - Rules Always-On (`.agents/rules/`) vs Skills modulaires (`.agents/skills/`).
+  - Découvrabilité native d'un skill (frontmatter YAML, plafond $\le 75$ lignes, missions spécialisées).
+  - Outillage de l'étape d'initialisation de dépôt (`skills-dev`, `gestion-depot`).
+- **Livrables :**
+  - Livrables d'apprentissage sous `tutoriels/ia/agent-skills/` :
+    - `prompt-engineering/` : `prompt-engineering.md`, `presentation-prompt-engineering.md`
+    - `agent-ia/` : `agent-ia.md`, `presentation-agent-ia.md`
+    - `skill-presentation/` : `skill-presentation.md`, `presentation-skill-presentation.md`, `SKILL.md`, `missions/marp-slides.md`, `skill-presentation.command.md`
+  - Livrables d'outillage projet sous le *Blog des Lauréats* :
+    - Règles Always-On : `.agents/rules/contexte-projet.md`, `.agents/rules/regles-generales.md`
+    - Skills : `.agents/skills/skills-dev/`, `.agents/skills/gestion-depot/` (`missions/init-depot.md`, `missions/init-projet.md`)
+    - Journal CLI : `tutoriels/ia/agent-skills/skill-gestion-depot/skill-gestion-depot.command.md`
+- **Travail à Faire :** Assimiler le Prompt Engineering et la méthode RIO, explorer l'architecture d'un Agent IA, concevoir en atelier le skill d'exemple `skill-presentation` avec sa mission Marp, puis outiller le projet d'imitation avec les règles Always-On et le skill de démarrage `gestion-depot`.
 
 ---
 
 ## 2. Plan des Tutoriels : UA.325.11
 
 ### T.325.111 — Théorie : Prompt Engineering & Méthode RIO
-*(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*
+*(Tâche 1 — Présentation Théorique & Notions Fondamentales)*
 
-#### 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 1.1 — Outillage Prompt Engineering.
-- **Stack mobilisée :** Chaîne d'outillage IA, LLMs (Gemini, Claude), architecture de contextes.
-
-#### 2. Travail à Faire (Ce que l'Apprenant Doit Produire)
-Effectuer les recherches documentaires nécessaires et concevoir une fiche de synthèse expliquant le fonctionnement d'un LLM, la structure d'un prompt directif selon la méthode RIO et l'intérêt du Context Engineering.
-
-#### 3. Répartition Didactique (Règle des 20/80)
-- **Les 20% fournis directement au tutoriel :**
-  - Définition formelle de la fenêtre de contexte et du ciblage chirurgical des fichiers (`@fichier`).
-  - Définition de la méthode **RIO** : Rôle expert, Intention opérationnelle fermée, Output délimité.
-  - Rôle des contraintes négatives bloquantes (zéro explication, code pur, zéro bavardage).
-- **Les 80% recherchés par l'apprenant :**
-  - Recherche active sur le phénomène d'hallucination des LLMs et la complétion probabiliste.
-  - Distinctions entre *Few-Shot prompting* et *Zero-Shot prompting*.
-
-#### 4. Livrable Attendu
-- Fiche de synthèse RIO intégrée dans le journal d'apprentissage.
+- **Slug :** `prompt-engineering` | **Maturité :** `UA-Lab` | **Nav Order :** 1
+- **Travail à faire :** Rédiger la fiche technique et le diaporama Marp formalisant le fonctionnement d'un LLM, la méthode RIO, l'injection chirurgicale de contexte et les patterns fondamentaux.
+- **Livrables attendus :**
+  - Fiche technique : `tutoriels/ia/agent-skills/prompt-engineering/prompt-engineering.md`
+  - Diaporama Marp : `tutoriels/ia/agent-skills/prompt-engineering/presentation-prompt-engineering.md`
 
 ---
 
-### T.325.112 — Création du prompt-creator
-*(Tâche 2 — Pratique & Automatisation)*
+### T.325.112 — Théorie : Architecture d'un Agent IA et Règles Always-On
+*(Tâche 2 — Présentation Théorique & Notions Fondamentales)*
 
-#### 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 1.1 — Méta-Prompt Générateur.
-- **Branche Git de travail :** `sprint1`
-- **Fichiers modifiés ou créés :** `livrables/ia/prompts/prompt-creator.prompt.md`
+- **Slug :** `agent-ia` | **Maturité :** `UA-Lab` | **Nav Order :** 2
+- **Travail à faire :** Rédiger la fiche technique et le diaporama Marp explicitant les 3 paliers d'autonomie (LLM vs Chatbot vs Agent), le cycle Perception/Action, l'architecture Rules Always-On vs Skills modulaires, et la découvrabilité native.
+- **Livrables attendus :**
+  - Fiche technique : `tutoriels/ia/agent-skills/agent-ia/agent-ia.md`
+  - Diaporama Marp : `tutoriels/ia/agent-skills/agent-ia/presentation-agent-ia.md`
 
-#### 2. Travail à Faire
-Concevoir, tester et valider dans `livrables/ia/prompts/prompt-creator.prompt.md` le méta-prompt officiel permettant à l'agent IA de générer, sur simple description d'un besoin de tâche, le prompt RIO complet et contextualisé pour chaque étape future du sprint.
+---
 
-#### 3. Missions Concrètes Réalisées par le Prompt
-1. Analyser une consigne brute de tâche ou d'exigence logicielle.
-2. Structurer le prompt selon le formalisme RIO (Rôle expert, Intention opérationnelle fermée, Output délimité).
-3. Injecter les contraintes négatives bloquantes (zéro bavardage de politesse, code exécutable complet sans omission, chemins relatifs stricts).
-4. Produire un fichier `.prompt.md` prêt à l'emploi.
+### T.325.113 — Pratique : Conception d'un skill agentique — Exemple skill-presentation
+*(Tâche 3 — Atelier Pratique Guidé Autonome)*
 
-#### 4. Cahier des Charges du Prompt (Méthode RIO)
-- **Rôle :** Métaprompt Engineer expert en systèmes multi-agents.
-- **Instruction :** Prendre en entrée la description d'une tâche d'ingénierie logicielle et produire un prompt directif structuré en Rôle / Contexte / Instructions pas-à-pas / Contraintes négatives / Format de sortie.
-- **Output :** Bloc Markdown contenant le prompt prêt à être enregistré dans un fichier `*.prompt.md`.
-- **Contraintes Négatives :** Le méta-prompt ne doit pas exécuter la tâche lui-même ; il doit produire le prompt qui permettra d'exécuter la tâche.
+- **Slug :** `skill-presentation` | **Maturité :** `UA-Lab` | **Nav Order :** 3
+- **Travail à faire :** Concevoir et tester en autonomie le skill modulaire d'exemple `skill-presentation` avec son orchestrateur `SKILL.md` ($\le 75$ lignes), sa mission opératoire `missions/marp-slides.md`, son compte-rendu technique et son diaporama Marp.
+- **Livrables attendus :**
+  - Compte-rendu technique : `tutoriels/ia/agent-skills/skill-presentation/skill-presentation.md`
+  - Diaporama Marp : `tutoriels/ia/agent-skills/skill-presentation/presentation-skill-presentation.md`
+  - Skill fonctionnel : `tutoriels/ia/agent-skills/skill-presentation/SKILL.md` et `missions/marp-slides.md`
+  - Journal CLI : `tutoriels/ia/agent-skills/skill-presentation/skill-presentation.command.md`
 
-#### 5. Critères de Validation
-- [ ] Le fichier `livrables/ia/prompts/prompt-creator.prompt.md` est présent et versionné sur la branche `sprint1`.
-- [ ] Soumis à une consigne brute de test, il génère un prompt RIO complet, testable et conforme aux standards de la promotion.
+---
+
+### T.325.114 — Application : Outiller l'étape d'initialisation avec le skill gestion-depot
+*(Tâche 4 — Déploiement Réel sur le Blog des Lauréats)*
+
+- **Slug :** `skill-gestion-depot` | **Maturité :** `UA-Tâche` | **Nav Order :** 4
+- **Travail à faire :** Déployer sur le projet d'imitation le socle de règles permanentes `.agents/rules/` (`contexte-projet.md`, `regles-generales.md`), le skill méta-gouvernance `skills-dev` et le skill opérationnel `gestion-depot` avec ses deux missions (`init-depot.md` et `init-projet.md`).
+- **Livrables attendus :**
+  - Règles permanentes : `.agents/rules/contexte-projet.md`, `.agents/rules/regles-generales.md`
+  - Skills projet : `.agents/skills/skills-dev/SKILL.md`, `.agents/skills/gestion-depot/SKILL.md` (avec `missions/init-depot.md` et `missions/init-projet.md`)
+  - Journal CLI : `tutoriels/ia/agent-skills/skill-gestion-depot/skill-gestion-depot.command.md`

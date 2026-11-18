@@ -1,7 +1,7 @@
 ---
 layout: tuto
 title: "Pratique : Conception d'un skill agentique — Exemple skill-presentation"
-sous_titre: "Concevoir un skill outillé avec SKILL.md, doc/how-to-use.md et missions spécialisées Marp et PowerPoint"
+sous_titre: "Concevoir un skill outillé avec SKILL.md et sa mission spécialisée missions/marp-slides.md"
 slug: "skill-presentation"
 slug_domaine: "ia"
 slug_ua: "agent-skills"
@@ -21,70 +21,68 @@ data_php: ""
 ---
 
 ## 1. Travail à faire
-Concevoir et rédiger, dans le cadre d'un atelier pratique autonome, un skill agentique modulaire nommé `skill-presentation`.
+Concevoir et développer, dans le cadre d'un atelier pratique autonome, un skill agentique modulaire nommé `skill-presentation` selon les standards industriels Solicode N3.
 
-Ce skill sert d'exemple concret d'outillage d'un Agent IA pour la production de supports de restitution technique. Vous devez concevoir :
-1. Le manifeste déclaratif du skill : `SKILL.md`.
-2. Le guide d'utilisation opérationnel : `doc/how-to-use.md`.
-3. La mission RIO de génération de diaporamas Marp : `missions/presentation-marp.mission.md`.
-4. La mission RIO de génération de trames PowerPoint : `missions/presentation-powerpoint.mission.md`.
+Ce skill sert de modèle d'outillage pour automatiser la génération de diaporamas et supports de présentation technique. Vous devez concevoir :
+1. Le manifeste orchestrateur du skill : `SKILL.md`.
+2. La mission spécialisée de génération de diaporamas Marp : `missions/marp-slides.md`.
+3. Le compte-rendu d'atelier formalisé : `skill-presentation.md`.
+4. Le diaporama Marp de restitution de l'atelier : `presentation-skill-presentation.md`.
 5. Le journal des commandes exécutées : `skill-presentation.command.md`.
 
 ## 2. Consignes & Spécifications de Réalisation
 
-1. **Jalon 1 — Préparation de l'arborescence :**  
-   Initialisez l'arborescence dédiée à l'atelier dans votre dépôt :
+1. **Jalon 1 — Préparation de l'arborescence de l'atelier :**  
+   Initialisez l'arborescence dédiée à l'atelier pratique sous l'emplacement standardisé de tutoriels :
 
 ```bash
-mkdir -p tutoriels/ia/agent-skills/skill-presentation/doc tutoriels/ia/agent-skills/skill-presentation/missions
+mkdir -p tutoriels/ia/agent-skills/skill-presentation/missions
 ```
 
-2. **Jalon 2 — Rédaction du manifeste `SKILL.md` :**  
-   Dans `tutoriels/ia/agent-skills/skill-presentation/SKILL.md`, concevez le manifeste du skill en respectant les spécifications suivantes :
-   - **En-tête YAML :** Définir `name: skill-presentation`, `description` (explicite pour la découvrabilité native par l'agent IA) et `version: 1.0.0`.
-   - **Présentation générale :** Exposer l'objectif du skill (transformer des spécifications ou un README en présentations professionnelles).
-   - **Capacités :** Décrire les deux modes pris en charge (diaporamas Marp Markdown prêts à projeter et trames textuelles hiérarchisées pour PowerPoint).
+2. **Jalon 2 — Conception du manifeste orchestrateur `SKILL.md` :**  
+   Dans `tutoriels/ia/agent-skills/skill-presentation/SKILL.md`, concevez le manifeste du skill selon les directives suivantes :
+   - **Frontmatter YAML :** Définir `name: skill-presentation` et rédiger une `description` orientée action et découvrabilité native par l'Agent IA.
+   - **Titre principal :** Identifier clairement le nom du skill et sa commande d'activation conventionnelle (`/skill-presentation`).
+   - **Section 1 (Mission) :** Définir en 1 à 2 phrases le rôle d'orchestration de présentations de diapositives.
+   - **Section 2 (Déclenchement) :** Énoncer explicitement les conditions d'activation (quand l'activer lors d'une demande de diaporama ou soutenance) et les exclusions (quand ne pas l'activer pour de la documentation textuelle classique).
+   - **Section 3 (Missions disponibles) :** Déclarer la mission spécialisée accessible sous `missions/marp-slides.md`.
+   - **Garde-fou de compacité :** Respecter rigoureusement le plafond strict de $\le 75$ lignes pour l'orchestrateur.
 
-3. **Jalon 3 — Rédaction du guide opérationnel `doc/how-to-use.md` :**  
-   Dans `tutoriels/ia/agent-skills/skill-presentation/doc/how-to-use.md`, rédigez le guide d'utilisation destiné aux développeurs et à l'Agent IA :
-   - **Rôle du skill :** Préciser dans quelles situations concrètes ce skill est activé (revue de sprint, soutenance technique, restitution client).
-   - **Prompts types d'invocation :** Formuler au moins deux exemples de requêtes types démontrant comment déclencher le skill à partir d'un fichier source (ex: à partir de `README.md` ou des livrables de sprint).
-   - **Déroulement de l'exécution :** Détailler la séquence pas-à-pas suivie par l'agent (analyse de la source, sélection de la mission, application du gabarit, écriture du livrable).
+3. **Jalon 3 — Conception de la mission spécialisée `missions/marp-slides.md` :**  
+   Dans `tutoriels/ia/agent-skills/skill-presentation/missions/marp-slides.md`, formalisez le cahier des charges de la mission de génération de diapositives :
+   - **Titre & Objet :** Définir le périmètre de la mission (génération de diaporamas Marp Markdown).
+   - **Tâche 1 (En-tête Marp) :** Exiger le bloc YAML initial (`marp: true`, `theme: default`, `paginate: true`, en-tête et pied de page).
+   - **Tâche 2 (Page de garde normalisée) :** Intégrer la structure de la première slide (`<!-- _class: lead -->`) avec les mentions obligatoires Solicode : Apprenant, Encadrant ESSARRAJ Fouad, Établissement Solicode Tanger, Domaine, Compétence et Date.
+   - **Tâche 3 (Conception des diapositives) :** Imposer la règle stricte du zéro tableau Markdown (listes à puces `- ` exclusives), une densité maximale de 4 à 6 puces par slide, et une diapositive de conclusion obligatoire.
+   - **Livrables attendus :** Fichier `.md` prêt à être prévisualisé ou exporté via Marp.
 
-4. **Jalon 4 — Conception de la mission RIO Marp `missions/presentation-marp.mission.md` :**  
-   Dans `tutoriels/ia/agent-skills/skill-presentation/missions/presentation-marp.mission.md`, formalisez le cahier des charges de la mission selon la **méthode RIO** :
-   - **Front Matter :** Déclarer `mission: presentation-marp` et `format: rio`.
-   - **Rôle :** Spécifier un persona d'expert frontend et design technique spécialisé dans Marp Markdown.
-   - **Instruction :** Définir la directive précise guidant l'agent pour convertir la source en diaporama Marp.
-   - **Output :** Exiger une structure Markdown stricte débutant par l'en-tête Marp (`marp: true`, `theme: default`, pagination), une page de garde normalisée (Apprenant, Encadrant, Établissement) et des séparateurs de slides `---`.
-   - **Contraintes négatives :** Interdire tout texte narratif en dehors des diapositives, limiter à 4 puces par slide et bannir tout HTML non interprétable par Marp.
+4. **Jalon 4 — Rédaction du compte-rendu d'atelier `skill-presentation.md` :**  
+   Dans `tutoriels/ia/agent-skills/skill-presentation/skill-presentation.md`, formalisez la notice complète de votre atelier pratique :
+   - Les objectifs de l'atelier et compétences mobilisées.
+   - L'anatomie d'un skill modulaire avec un diagramme Mermaid illustrant l'orchestrateur (`SKILL.md`) et le sous-dossier `missions/`.
+   - La mise en œuvre détaillée des fichiers conçus (`SKILL.md` et `missions/marp-slides.md`).
+   - La comparaison avec l'architecture déployée sur le projet d'imitation (*Blog des lauréats*) : `skills-dev` et `gestion-depot`.
 
-5. **Jalon 5 — Conception de la mission RIO PowerPoint `missions/presentation-powerpoint.mission.md` :**  
-   Dans `tutoriels/ia/agent-skills/skill-presentation/missions/presentation-powerpoint.mission.md`, formalisez le cahier des charges pour PowerPoint selon la **méthode RIO** :
-   - **Front Matter :** Déclarer `mission: presentation-powerpoint` et `format: rio`.
-   - **Rôle :** Définir un persona de consultant en communication technique.
-   - **Instruction :** Formuler la directive pour structurer une trame hiérarchisée prête à l'import dans PowerPoint.
-   - **Output :** Imposer un formatage par diapositive comprenant Titre (H2), messages clés sous forme de liste à puces, et une section dédiée `### Notes de l'orateur` contenant les arguments oraux.
-   - **Contraintes négatives :** Proscrire les diapositives surchargées de texte et interdire les acronymes non explicités.
+5. **Jalon 5 — Conception du diaporama Marp `presentation-skill-presentation.md` :**  
+   Dans `tutoriels/ia/agent-skills/skill-presentation/presentation-skill-presentation.md`, préparez le support de présentation orale de l'atelier au format Marp Markdown en appliquant les consignes de la mission conçue.
 
-6. **Jalon 6 — Journalisation des commandes :**  
-   Dans le fichier `tutoriels/ia/agent-skills/skill-presentation/skill-presentation.command.md`, consignez la commande de création des répertoires :
+6. **Jalon 6 — Journalisation des commandes dans `skill-presentation.command.md` :**  
+   Dans `tutoriels/ia/agent-skills/skill-presentation/skill-presentation.command.md`, consignez la commande de préparation des répertoires :
 
 ```bash
-mkdir -p tutoriels/ia/agent-skills/skill-presentation/doc tutoriels/ia/agent-skills/skill-presentation/missions
+mkdir -p tutoriels/ia/agent-skills/skill-presentation/missions
 ```
 
 ## 3. Livrables & Critères de validation
 - **Livrables attendus :**
-  - Dossier d'atelier `tutoriels/ia/agent-skills/skill-presentation/` comprenant vos 4 fichiers rédigés :
-    - `SKILL.md` (manifeste YAML et capacités).
-    - `doc/how-to-use.md` (guide opérationnel avec cas d'usage et prompts).
-    - `missions/presentation-marp.mission.md` (cahier des charges RIO Marp).
-    - `missions/presentation-powerpoint.mission.md` (cahier des charges RIO PowerPoint).
+  - Compte-rendu d'atelier : `tutoriels/ia/agent-skills/skill-presentation/skill-presentation.md` sur la branche `sprint1`.
+  - Diaporama Marp : `tutoriels/ia/agent-skills/skill-presentation/presentation-skill-presentation.md` sur la branche `sprint1`.
+  - Manifeste orchestrateur : `tutoriels/ia/agent-skills/skill-presentation/SKILL.md` sur la branche `sprint1`.
+  - Mission spécialisée : `tutoriels/ia/agent-skills/skill-presentation/missions/marp-slides.md` sur la branche `sprint1`.
   - Journal des commandes : `tutoriels/ia/agent-skills/skill-presentation/skill-presentation.command.md` sur la branche `sprint1`.
 - **Critères de validation :**
-  - [ ] Le fichier `SKILL.md` contient un Front Matter YAML valide avec nom, description et version.
-  - [ ] Le guide `doc/how-to-use.md` explicite le rôle, des prompts d'invocation réalistes et le flux d'exécution.
-  - [ ] La mission Marp respecte les 4 composantes RIO (Rôle, Instruction, Output Marp avec en-tête, Contraintes négatives).
-  - [ ] La mission PowerPoint respecte les 4 composantes RIO avec la section obligatoire `### Notes de l'orateur`.
-  - [ ] Le journal `skill-presentation.command.md` consigne la commande de préparation.
+  - [ ] Le fichier `SKILL.md` contient un Front Matter YAML valide avec `name` et `description`, et ne dépasse pas 75 lignes.
+  - [ ] Le fichier `SKILL.md` définit clairement sa mission, ses conditions de déclenchement et référence `missions/marp-slides.md`.
+  - [ ] La mission `missions/marp-slides.md` détaille les tâches d'en-tête Marp, la page de garde avec mentions Solicode et la règle du zéro tableau Markdown.
+  - [ ] Le compte-rendu `skill-presentation.md` explicite l'architecture du skill et la comparaison avec les skills du projet.
+  - [ ] Le journal `skill-presentation.command.md` consigne fidèlement la commande d'initialisation de l'arborescence.

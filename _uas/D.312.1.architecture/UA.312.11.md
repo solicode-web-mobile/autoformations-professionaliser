@@ -4,7 +4,7 @@ layout: ua
 code: "UA.312.11"
 slug: "deux-couches"
 maturite: "UA-Lab"
-ordre: 10
+ordre: 9
 competence: "C.312"
 domaine: "D.312.1"
 duree: 4

@@ -4,7 +4,7 @@ layout: ua
 code: "UA.351.22"
 slug: "planification"
 maturite: "UA-Tâche"
-ordre: 8
+ordre: 7
 competence: "C.351"
 domaine: "D.351.2"
 duree: 4

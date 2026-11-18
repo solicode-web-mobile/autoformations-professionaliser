@@ -21,16 +21,28 @@ data_php: ""
 ---
 
 ## 1. Travail à faire
-Effectuer les recherches documentaires nécessaires et concevoir une fiche de synthèse expliquant l'anatomie d'un Agent IA autonome, la distinction entre règles permanentes Always-On et contexte volatil, ainsi que les mécanismes de découverte native des skills.
+Effectuer les recherches documentaires nécessaires, rédiger une fiche de synthèse personnelle et concevoir un diaporama de restitution Marp expliquant l'anatomie d'un Agent IA de développement, le cycle Perception-Décision-Action, la séparation entre règles permanentes Always-On et compétences modulaires (Skills), ainsi que les principes d'ingénierie logicielle (SSOT, DRY) appliqués aux agents.
 
 ## 2. Notions fondamentales
-- **Chatbot vs Agent IA outillé :** Un chatbot se limite à répondre par du texte généré. Un Agent IA perçoit son environnement (fichiers, terminal, arborescence), raisonne sur une séquence d'actions et utilise des outils (tools) pour manipuler le code et le dépôt.
-- **Règles Always-On vs contexte volatil :**
-  - Les contextes volatils disparaissent à la fermeture de la session.
-  - Les règles permanentes (`.agents/rules/*.md`) sont injectées automatiquement à chaque interaction sans intervention humaine, assurant la conformité aux normes (standards de code, conventions de nommage, architecture).
-- **Architecture modulaire d'un Skill :**
-  - Un skill est un répertoire autonome regroupant un manifeste (`SKILL.md`), sa documentation opérationnelle (`doc/how-to-use.md`) et des missions ou scripts spécialisés.
-  - L'agent découvre les compétences disponibles via la description du manifeste et les active à la demande pour préserver sa fenêtre de contexte.
+- **Les Trois Paliers d'Autonomie :**
+  - **1. LLM (Moteur brut) :** Modèle probabiliste prédisant les séquences textuelles sans mémoire implicite ni capacité d'interagir avec le système de fichiers.
+  - **2. Chatbot (Conversationnel passif) :** Interface conversationnelle maintenant l'historique d'un échange, mais incapable de modifier du code ou d'exécuter des tests.
+  - **3. Agent IA de développement :** Entité autonome outillée ancrée dans l'espace de travail. Il perçoit l'arborescence, planifie une séquence de tâches, modifie chirurgicalement les fichiers et exécute des commandes via son terminal.
+- **Cycle Perception → Décision → Action :**
+  - *Perception :* Lecture de la demande du concepteur, inspection des fichiers et analyse de l'arborescence.
+  - *Décision :* Établissement d'un plan d'intervention décomposé en sous-tâches ordonnées.
+  - *Action :* Utilisation des outils spécialisés de l'agent :
+    - Outil d'exécution CLI (`run_command`) pour compiler, tester et vérifier les statuts.
+    - Outils d'inspection (`read_file`, `list_dir`) pour lire le code sans le dénaturer.
+    - Outils d'édition (`write_file`, `edit_file`) pour implémenter les modifications ciblées.
+- **Architecture d'un Agent : Rules Always-On vs Skills Modulaires :**
+  - **Règles Always-On (`.agents/rules/`) :** Directives universelles injectées automatiquement à chaque interaction. Elles définissent le cadre non négociable du projet (français simple A1, zéro tableau Markdown, 100% liens relatifs, interdiction de commit et push par l'IA).
+  - **Skills Modulaires (`.agents/skills/`) :** Compétences expertes chargées dynamiquement selon le besoin pour préserver la fenêtre de contexte de l'agent.
+  - **Découvrabilité & Compacité :** L'agent découvre les compétences grâce à l'en-tête YAML frontmatter (`name` et `description`). Le fichier orchestrateur `SKILL.md` respecte un plafond strict $\le 75$ lignes et délègue les tâches opératoires à son dossier `missions/`.
+- **Principes Cardinaux d'Ingénierie Logicielle :**
+  - **SSOT (Single Source of Truth) :** Chaque convention est définie à un emplacement unique (ex. les règles de formatage sont dans `regles-generales.md` et ne sont jamais dupliquées).
+  - **DRY (Don't Repeat Yourself) :** Les skills s'appuient sur le socle des règles sans les redéfinir.
+  - **Gouvernance Humaine :** L'Agent IA propose, analyse et outille ; seul le concepteur valide, commit et push sur le dépôt.
 
 ## 3. Recherches à effectuer
 - Comparer les architectures agentiques modernes (boucle ReAct : Raisonnement / Action / Observation, et standard MCP : Model Context Protocol).
@@ -38,5 +50,6 @@ Effectuer les recherches documentaires nécessaires et concevoir une fiche de sy
 - Étudier comment les agents IA industriels découpent un problème complexe en sous-tâches coordonnées.
 
 ## 4. Livrable attendu
-- **Fichier de synthèse :** `tutoriels/ia/agent-skills/agent-ia/agent-ia.md` sur la branche `sprint1`.
-- **Contenu attendu :** Synthèse personnelle structurée reprenant les notions fondamentales (Chatbot vs Agent IA, règles Always-On vs contexte volatil, découvrabilité des skills) et les réponses documentées aux recherches à effectuer.
+- **Fiche technique de synthèse :** `tutoriels/ia/agent-skills/agent-ia/agent-ia.md` sur la branche `sprint1`.
+- **Diaporama Marp de restitution :** `tutoriels/ia/agent-skills/agent-ia/presentation-agent-ia.md` sur la branche `sprint1`.
+- **Contenu attendu :** Synthèse personnelle structurée reprenant les notions fondamentales (Paliers d'autonomie, cycle Perception-Décision-Action, Always-On vs Skills, principes SSOT/DRY) et les réponses documentées aux recherches à effectuer.

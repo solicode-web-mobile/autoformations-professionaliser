@@ -4,7 +4,7 @@ layout: ua
 code: "UA.351.11"
 slug: "cadre-agile"
 maturite: "UA-Lab"
-ordre: 4
+ordre: 3
 competence: "C.351"
 domaine: "D.351.1"
 duree: 4

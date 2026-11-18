@@ -4,7 +4,7 @@ layout: ua
 code: "UA.311.22"
 slug: "cas-utilisation"
 maturite: "UA-Lab"
-ordre: 9
+ordre: 8
 competence: "C.311"
 domaine: "D.311.2"
 duree: 4

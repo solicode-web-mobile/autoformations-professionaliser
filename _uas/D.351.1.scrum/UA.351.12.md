@@ -4,7 +4,7 @@ layout: ua
 code: "UA.351.12"
 slug: "product-backlog"
 maturite: "UA-Lab"
-ordre: 7
+ordre: 6
 competence: "C.351"
 domaine: "D.351.1"
 duree: 6

@@ -4,7 +4,7 @@ layout: ua
 code: "UA.321.13"
 slug: "tranche-verticale"
 maturite: "UA-Lab"
-ordre: 13
+ordre: 12
 competence: "C.321"
 domaine: "D.321.1"
 duree: 32

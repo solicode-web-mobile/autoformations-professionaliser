@@ -4,7 +4,7 @@ layout: ua
 code: "UA.311.21"
 slug: "diagramme-contexte"
 maturite: "UA-Lab"
-ordre: 6
+ordre: 5
 competence: "C.311"
 domaine: "D.311.2"
 duree: 4

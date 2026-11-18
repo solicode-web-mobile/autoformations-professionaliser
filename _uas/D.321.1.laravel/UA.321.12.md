@@ -4,7 +4,7 @@ layout: ua
 code: "UA.321.12"
 slug: "controleur-vue"
 maturite: "UA-Lab"
-ordre: 12
+ordre: 11
 competence: "C.321"
 domaine: "D.321.1"
 duree: 6
