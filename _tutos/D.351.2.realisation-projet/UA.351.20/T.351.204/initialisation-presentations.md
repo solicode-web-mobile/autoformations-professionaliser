@@ -31,8 +31,8 @@ data_php: ""
 ## 2. Travail à Faire
 - **Tâche 1 : Structuration du dossier :** Créer le répertoire `presentations/` à la racine du projet.
 - **Tâche 2 : Rédaction du guide du dossier :** Rédiger `presentations/README.md` avec les instructions d'utilisation et d'export Marp.
-- **Tâche 3 : Diaporama général du projet :** Rédiger la présentation générale `presentations/presentation-blog.md`.
-- **Tâche 4 : Diaporama de restitution du Sprint 1 :** Rédiger la présentation de revue de sprint `presentations/presentation-sprint1.md`.
+- **Tâche 3 : Diaporama général du projet :** Initialiser `presentations/presentation-blog.md` avec son en-tête et sa page de garde Marp.
+- **Tâche 4 : Diaporama de restitution du Sprint 1 :** Initialiser `presentations/presentation-sprint1.md` avec son en-tête et sa page de garde Marp.
 - **Tâche 5 : Journalisation des commandes :** Consigner les commandes exécutées dans `tutoriels/realisation-projet/initialisation/presentation-marp/presentation-marp.command.md`.
 
 ## 3. Étapes de Réalisation
@@ -67,8 +67,8 @@ Ce dossier regroupe les diaporamas du projet conçus au format Marp Markdown.
 - Respecter la page de garde normalisée (Apprenant, Encadrant, Établissement Solicode).
 ```
 
-3. **Étape 3 — Rédaction du diaporama général `presentations/presentation-blog.md` :**  
-   Créez le fichier `presentations/presentation-blog.md` :
+3. **Étape 3 — Initialisation du diaporama général `presentations/presentation-blog.md` :**  
+   Créez le fichier `presentations/presentation-blog.md` avec son en-tête Marp et sa page de garde :
 
 ````markdown
 ---
@@ -89,50 +89,10 @@ footer: "Encadrant : ESSARRAJ Fouad | Solicode Tanger"
 - **Domaine** : Développement Web
 - **Compétence** : Développer une application web complète
 - **Date** : 2026-11-18
-
----
-
-## 1. Contexte du projet
-- Application web de valorisation des parcours des anciens lauréats de Solicode.
-- Espace de partage d'expériences professionnelles et de conseils d'insertion.
-- Réalisation selon une méthode par imitation en Niveau 3.
-
----
-
-## 2. Objectifs techniques et pédagogiques
-- Maîtriser le framework backend Laravel 12.
-- Implémenter une architecture logicielle robuste en 2 couches.
-- Pratiquer la démarche Agile/Scrum et les sprints d'ingénierie.
-- Automatiser l'environnement de développement avec un Agent IA outillé.
-
----
-
-## 3. Stack technique
-- **Backend** : Laravel 12 (PHP 8.2+).
-- **Architecture** : 2 couches (Contrôleur mince -> Service).
-- **Frontend** : Blade responsive, HTML5, CSS3, JavaScript.
-- **Base de données** : MySQL.
-- **Gestion de versions** : Git et GitHub CLI (`gh`).
-
----
-
-## 4. Organisation du projet
-- `.agents/` : Règles et skills agentiques.
-- `flux-travail/` : Processus d'ingénierie logicielle étape par étape.
-- `issues/` : Backlog et tâches de développement.
-- `presentations/` : Diaporamas de soutenance.
-- `rapport/` : Documentation technique et chapitres modulaires.
-- `sprints/` : Planification Scrum et suivi des branches.
-
----
-
-<!-- _class: lead -->
-# Démonstration & Perspectives
-### Passage aux réalisations concrètes
 ````
 
-4. **Étape 4 — Rédaction du diaporama de sprint `presentations/presentation-sprint1.md` :**  
-   Créez le fichier `presentations/presentation-sprint1.md` :
+4. **Étape 4 — Initialisation du diaporama de sprint `presentations/presentation-sprint1.md` :**  
+   Créez le fichier `presentations/presentation-sprint1.md` avec son en-tête Marp et sa page de garde :
 
 ````markdown
 ---
@@ -153,37 +113,6 @@ footer: "Encadrant : ESSARRAJ Fouad | Solicode Tanger"
 - **Domaine** : Développement Web
 - **Compétence** : Initialisation, Cadrage Scrum et Architecture 2 couches
 - **Date** : 2026-11-18
-
----
-
-## 1. Objectifs du Sprint 1
-- Initialiser le dépôt distant avec GitHub CLI sur la branche `sprint1`.
-- Outiller l'environnement avec un Agent IA et ses skills de démarrage.
-- Formaliser le flux de travail d'ingénierie et cadrer la gouvernance Scrum.
-- Modéliser le diagramme de contexte et les cas d'utilisation avec Mermaid.
-- Développer sous Laravel 12 la page de consultation détaillée d'un article.
-
----
-
-## 2. Réalisations du Sprint
-- Dépôt Git initialisé et publié sur GitHub sur la branche `sprint1`.
-- Agent IA configuré dans `.agents/` avec règles Always-On et skills modulaires.
-- Flux de travail normalisé dans `flux-travail/flux-travail.md`.
-- Dossiers documentaires racine créés (`presentations/` et `rapport/`).
-- Architecture 2 couches préparée (Contrôleur -> Service).
-
----
-
-## 3. Démonstration technique
-- Consultation détaillée d'un article sous Laravel 12.
-- Gabarit Blade responsive et gestion de l'erreur 404.
-- Validation des tests et revue de code.
-
----
-
-<!-- _class: lead -->
-# Conclusion du Sprint 1
-### Bilan et passage au Sprint 2
 ````
 
 5. **Étape 5 — Journalisation des commandes exécutées :**  
