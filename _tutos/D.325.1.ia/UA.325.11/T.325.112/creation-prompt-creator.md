@@ -1,7 +1,7 @@
 ---
 layout: tuto
-title: "Création du prompt-creator"
-sous_titre: "Concevoir le méta-prompt prompt-creator pour automatiser la génération des prompts du sprint"
+title: "Définition du socle de règles et du protocole de l'Agent IA"
+sous_titre: "Formaliser les règles, le protocole de fonctionnement et la mission de génération de missions"
 slug: "creation-prompt-creator"
 permalink: /tutos/creation-prompt-creator/
 tuto_id: "T.325.112"
@@ -19,25 +19,21 @@ data_php: ""
 ---
 
 ## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 1.1 — Méta-Prompt Générateur.
+- **Position dans le flux :** Phase A — Initialisation du Projet, Outillage IA & Méthodologie / Étape 02 — Initialisation de l'Agent IA.
 - **Branche Git :** `sprint1`
-- **Fichiers modifiés ou créés :** `livrables/ia/prompts/prompt-creator.prompt.md`
+- **Fichiers modifiés ou créés :** `missions/init-ia.mission.md`, `missions/init-agent.mission.md`, `missions/missions-creator.mission.md`
 
 ## 2. Travail à Faire
-Concevoir, tester et valider dans `livrables/ia/prompts/prompt-creator.prompt.md` le méta-prompt officiel permettant à l'agent IA de générer, sur simple description d'un besoin de tâche, le prompt RIO complet et contextualisé pour chaque étape future du sprint.
+1. Rédiger le socle commun des règles et contexte du projet dans `missions/init-ia.mission.md`.
+2. Définir le protocole d'interaction et de fonctionnement opérationnel de l'Agent IA dans `missions/init-agent.mission.md`.
+3. Concevoir la mission génératrice de missions d'ingénierie dans `missions/missions-creator.mission.md` en appliquant la méthode RIO.
 
-## 3. Missions Concrètes Réalisées par le Prompt
-1. Analyser une consigne brute de tâche ou d'exigence logicielle.
-2. Structurer le prompt selon le formalisme RIO (Rôle expert, Intention opérationnelle fermée, Output délimité).
-3. Injecter les contraintes négatives bloquantes (zéro bavardage de politesse, code exécutable complet sans omission, chemins relatifs stricts).
-4. Produire un fichier `.prompt.md` prêt à l'emploi.
+## 3. Missions Concrètes Réalisées par l'Agent IA
+1. Analyser les consignes d'étapes et injecter le contexte projet sans hallucination.
+2. Respecter les contraintes négatives bloquantes (zéro bavardage, chemins relatifs stricts, UTF-8 sans BOM).
+3. Produire des missions d'ingénierie standardisées et prêtes à l'emploi.
 
-## 4. Cahier des Charges du Prompt (Méthode RIO)
-- **Rôle :** Métaprompt Engineer expert en systèmes multi-agents et architecture logicielle.
-- **Instruction :** Prendre en entrée la description d'une tâche d'ingénierie logicielle et produire un prompt directif structuré en Rôle / Contexte / Instructions pas-à-pas / Contraintes négatives / Format de sortie.
-- **Output :** Bloc Markdown contenant le prompt prêt à être enregistré dans un fichier `*.prompt.md`.
-- **Contraintes Négatives :** Le méta-prompt ne doit pas exécuter la tâche lui-même ; il doit produire le prompt qui permettra d'exécuter la tâche.
-
-## 5. Critères de Validation
-- [ ] Le fichier `livrables/ia/prompts/prompt-creator.prompt.md` est présent et versionné sur la branche `sprint1`.
-- [ ] Soumis à une consigne brute de test, il génère un prompt RIO complet, testable et conforme aux standards de la promotion.
+## 4. Critères de Validation
+- [ ] Le fichier `missions/init-ia.mission.md` formalise les règles communes du projet.
+- [ ] Le fichier `missions/init-agent.mission.md` définit le protocole opérationnel de l'Agent.
+- [ ] Le fichier `missions/missions-creator.mission.md` est validé et testé sur un cas d'étape réel.

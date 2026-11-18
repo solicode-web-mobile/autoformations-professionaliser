@@ -3,7 +3,7 @@ title: "Démarrage rapide Laravel : Contrôleur et Vue"
 layout: ua
 code: "UA.321.12"
 maturite: "UA-Lab"
-ordre: 10
+ordre: 12
 competence: "C.321"
 domaine: "D.321.1"
 duree: 6

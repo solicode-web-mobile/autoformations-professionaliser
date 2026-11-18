@@ -3,7 +3,7 @@ title: "Clôture de sprint, démonstration et rétrospective (Sprint 1)"
 layout: ua
 code: "UA.351.23"
 maturite: "UA-Tâche"
-ordre: 12
+ordre: 14
 competence: "C.351"
 domaine: "D.351.2"
 duree: 4

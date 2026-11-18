@@ -3,7 +3,7 @@ title: "Introduction à Scrum"
 layout: ua
 code: "UA.351.11"
 maturite: "UA-Lab"
-ordre: 2
+ordre: 4
 competence: "C.351"
 domaine: "D.351.1"
 duree: 4

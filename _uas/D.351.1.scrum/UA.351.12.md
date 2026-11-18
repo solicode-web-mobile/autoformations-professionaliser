@@ -1,23 +1,23 @@
 ---
-title: "Product Backlog et User Stories"
+title: "Product Backlog et gestion des issues"
 layout: ua
 code: "UA.351.12"
 maturite: "UA-Lab"
-ordre: 5
+ordre: 7
 competence: "C.351"
 domaine: "D.351.1"
 duree: 6
 objectif: >
-  Découper les fonctionnalités globales du blog en User Stories indépendantes selon le standard INVEST pour formaliser le Product Backlog ordonné et priorisé selon la méthode MoSCoW.
+  Découper les fonctionnalités du projet en User Stories indépendantes selon le standard INVEST et structurer le carnet de produit sous forme d'issues opérationnelles classées par statut.
 description: >
-  Structurer et prioriser le carnet de produit Scrum pour le Projet d'imitation. L'apprenant s'approprie la définition formelle du Product Backlog, rédige les User Stories avec critères d'acceptation, applique la grille INVEST et ordonnance le carnet selon MoSCoW.
+  Structurer et prioriser le carnet de produit Scrum pour le Projet d'imitation. L'apprenant s'approprie la définition formelle du Product Backlog, rédige les User Stories avec critères d'acceptation, organise l'espace de suivi du projet (dossier issues/) et classe les issues selon leur cycle de validation (open, à-valider, closes).
 notions:
   - "Définition formelle du Product Backlog : source unique, vivante et ordonnancée par la valeur sous la responsabilité du PO"
-  - "Format canonique User Story (En tant que... je veux... afin de...)"
-  - "Critères de qualité INVEST (Independent, Negotiable, Valuable, Estimable, Small, Testable)"
-  - "Priorisation MoSCoW (Must, Should, Could, Won't) et critères d'acceptation Gherkin"
+  - "Format canonique User Story (En tant que... je veux... afin de...) et critères d'acceptation INVEST"
+  - "Espace de suivi des issues de projet : structure des dossiers et fichiers de suivi (issues/README.md, issues-open.md, issues-à-valider.md, issues-closes.md)"
+  - "Circuit de validation des tâches et synchronisation avec le Product Backlog"
 livrable: >
-  Product Backlog initial priorisé (livrables/scrum/product-backlog.md) et prompt réutilisable (livrables/ia/prompts/prompt-product-backlog.prompt.md) sur la branche sprint1.
+  Espace de suivi des tâches structuré dans le projet (issues/README.md, issues/issues-open.md, issues/issues-à-valider.md, issues/issues-closes.md) et prompt réutilisable sur la branche sprint1.
 travail_a_faire: >
-  Construire le Product Backlog du Blog des Lauréats, formaliser les critères d'acceptation et concevoir le prompt prompt-product-backlog.
+  Construire le Product Backlog du Blog des Lauréats, formaliser les critères d'acceptation, organiser les issues du projet et soumettre à la validation.
 ---

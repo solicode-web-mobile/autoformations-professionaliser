@@ -3,7 +3,7 @@ title: "Hello World Laravel : Route et Vue"
 layout: ua
 code: "UA.321.11"
 maturite: "UA-Lab"
-ordre: 9
+ordre: 11
 competence: "C.321"
 domaine: "D.321.1"
 duree: 4

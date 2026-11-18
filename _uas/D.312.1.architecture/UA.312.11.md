@@ -3,7 +3,7 @@ title: "Architecture logicielle en deux couches"
 layout: ua
 code: "UA.312.11"
 maturite: "UA-Lab"
-ordre: 8
+ordre: 10
 competence: "C.312"
 domaine: "D.312.1"
 duree: 4

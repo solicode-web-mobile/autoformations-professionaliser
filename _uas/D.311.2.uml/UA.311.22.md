@@ -3,7 +3,7 @@ title: "Diagramme de cas d'utilisation macro"
 layout: ua
 code: "UA.311.22"
 maturite: "UA-Lab"
-ordre: 7
+ordre: 9
 competence: "C.311"
 domaine: "D.311.2"
 duree: 4

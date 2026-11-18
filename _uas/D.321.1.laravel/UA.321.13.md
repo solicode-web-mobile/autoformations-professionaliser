@@ -3,7 +3,7 @@ title: "Contrôleur, Classe Service et Vue détaillée"
 layout: ua
 code: "UA.321.13"
 maturite: "UA-Lab"
-ordre: 11
+ordre: 13
 competence: "C.321"
 domaine: "D.321.1"
 duree: 32

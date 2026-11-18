@@ -3,7 +3,7 @@ title: "Modélisation de diagramme de contexte"
 layout: ua
 code: "UA.311.21"
 maturite: "UA-Lab"
-ordre: 4
+ordre: 6
 competence: "C.311"
 domaine: "D.311.2"
 duree: 4
