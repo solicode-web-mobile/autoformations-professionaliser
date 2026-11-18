@@ -65,86 +65,86 @@ data_php: ""
 3. **Étape 3 — Rédaction du fichier `README.md` racine avec la Stack N3 :**  
    À la racine du projet, créez ou modifiez le fichier `README.md` selon le standard officiel Solicode :
 
-   ```markdown
-   # Blog des Lauréats - Projet d'Imitation Niveau 3
+````markdown
+# Blog des Lauréats - Projet d'Imitation Niveau 3
 
-   ## 1. Description du projet
-   Le Blog des Lauréats est une application web conçue pour la communauté de Solicode Tanger.
-   Les lauréats peuvent rédiger, publier et administrer leurs articles professionnels.
-   Les apprenants actuels de Solicode peuvent consulter et lire ces retours d'expérience. L'application est déployée et accessible en ligne sur Internet.
+## 1. Description du projet
+Le Blog des Lauréats est une application web conçue pour la communauté de Solicode Tanger.
+Les lauréats peuvent rédiger, publier et administrer leurs articles professionnels.
+Les apprenants actuels de Solicode peuvent consulter et lire ces retours d'expérience. L'application est déployée et accessible en ligne sur Internet.
 
-   ---
+---
 
-   ## 2. Contexte et Objectifs
+## 2. Contexte et Objectifs
 
-   ### Contexte général
-   - **Établissement** : Solicode Tanger.
-   - **Promotion** : Niveau 3 - Développement Web et Mobile.
-   - **Formateur référent** : ESSARRAJ Fouad.
+### Contexte général
+- **Établissement** : Solicode Tanger.
+- **Promotion** : Niveau 3 - Développement Web et Mobile.
+- **Formateur référent** : ESSARRAJ Fouad.
 
-   ### Démarche pédagogique : Méthode par imitation
-   Ce projet s'appuie sur la méthode par imitation pour guider l'apprenant pas à pas de A à Z :
-   - **Tutoriels** : Guides complets détaillant les étapes et les résultats attendus.
-   - **UA-Lab** : Laboratoires d'apprentissage guidés pour maîtriser les bases théoriques et pratiques.
-   - **Lab** : Recherche autonome d'une solution technique validée par le formateur.
-   - **Veille technologique** : Découverte et intégration de nouveaux outils ou composants.
-   - **Tâches** : Actions pratiques d'ingénierie et d'organisation Scrum.
+### Démarche pédagogique : Méthode par imitation
+Ce projet s'appuie sur la méthode par imitation pour guider l'apprenant pas à pas de A à Z :
+- **Tutoriels** : Guides complets détaillant les étapes et les résultats attendus.
+- **UA-Lab** : Laboratoires d'apprentissage guidés pour maîtriser les bases théoriques et pratiques.
+- **Lab** : Recherche autonome d'une solution technique validée par le formateur.
+- **Veille technologique** : Découverte et intégration de nouveaux outils ou composants.
+- **Tâches** : Actions pratiques d'ingénierie et d'organisation Scrum.
 
-   ### Composants pédagogiques (Approche Par Compétences - APC)
-   - **Domaine de compétence** : Regroupement thématique des compétences du référentiel.
-   - **Unité d'apprentissage (UA)** :
-     - **UA-Tuto** : Unité basée sur des tutoriels pas-à-pas.
-     - **UA-Lab** : Unité pratique guidée par le formateur.
-     - **UA-tâche** : Unité regroupant les tâches récurrentes de gestion Scrum à chaque sprint.
+### Composants pédagogiques (Approche Par Compétences - APC)
+- **Domaine de compétence** : Regroupement thématique des compétences du référentiel.
+- **Unité d'apprentissage (UA)** :
+  - **UA-Tuto** : Unité basée sur des tutoriels pas-à-pas.
+  - **UA-Lab** : Unité pratique guidée par le formateur.
+  - **UA-tâche** : Unité regroupant les tâches récurrentes de gestion Scrum à chaque sprint.
 
-   ---
+---
 
-   ## 3. Stack technique
-   - **Framework Backend** : PHP 8.2+, Laravel 12 (Architecture 2 couches : Contrôleur mince -> Service).
-   - **Frontend & Rendu** : Blade Templates, Tailwind CSS, Alpine.js (composants interactifs légers).
-   - **Persistance des données** : Fichiers tabulaires CSV (Sprint 1) puis base relationnelle MySQL avec Eloquent ORM.
-   - **Tests automatisés** : PHPUnit / Pest (approche TDD), respect strict de PSR-12.
-   - **Modélisation & Architecture** : Diagrammes UML en Markdown via syntaxe Mermaid.js, fiches de décision ADR.
-   - **Méthodologie & Cadre Agile** : Scrum (Sprint de 80h, branche unique `sprint1`, DoD à 7 critères).
-   - **Gestion de versions** : Git et GitHub CLI (`gh`).
-   - **Intelligence Artificielle & Automatisation** : Agent Antigravity (Skills outillés natifs et prompts RIO réutilisables).
+## 3. Stack technique
+- **Framework Backend** : PHP 8.2+, Laravel 12 (Architecture 2 couches : Contrôleur mince -> Service).
+- **Frontend & Rendu** : Blade Templates, Tailwind CSS, Alpine.js (composants interactifs légers).
+- **Persistance des données** : Fichiers tabulaires CSV (Sprint 1) puis base relationnelle MySQL avec Eloquent ORM.
+- **Tests automatisés** : PHPUnit / Pest (approche TDD), respect strict de PSR-12.
+- **Modélisation & Architecture** : Diagrammes UML en Markdown via syntaxe Mermaid.js, fiches de décision ADR.
+- **Méthodologie & Cadre Agile** : Scrum (Sprint de 80h, branche unique `sprint1`, DoD à 7 critères).
+- **Gestion de versions** : Git et GitHub CLI (`gh`).
+- **Intelligence Artificielle & Automatisation** : Agent Antigravity (Skills outillés natifs et prompts RIO réutilisables).
 
-   ---
+---
 
-   ## 4. Organisation des dossiers
-   - [.agents/](./.agents/) : Configuration native de l'Agent IA (règles permanentes et skills outillés).
-   - [docs/](./docs/) : Documentation libre, recherches et veilles technologiques personnelles.
-   - [flux-travail/](./flux-travail/) : Référentiel méthodologique et suivi des étapes de réalisation du projet.
-   - [issues/](./issues/) : Gestion et suivi des tâches et user stories du projet.
-   - [labs/](./labs/) : Restitution des laboratoires théoriques et pratiques organisés par domaine et UA-Lab.
-   - [missions/](./missions/) : Catalogue des missions normalisées pour les apprenants en mode chatbot.
-   - [sprints/](./sprints/) : Planification Scrum des sprints et suivi de la branche active.
+## 4. Organisation des dossiers
+- [.agents/](./.agents/) : Configuration native de l'Agent IA (règles permanentes et skills outillés).
+- [docs/](./docs/) : Documentation libre, recherches et veilles technologiques personnelles.
+- [flux-travail/](./flux-travail/) : Référentiel méthodologique et suivi des étapes de réalisation du projet.
+- [issues/](./issues/) : Gestion et suivi des tâches et user stories du projet.
+- [labs/](./labs/) : Restitution des laboratoires théoriques et pratiques organisés par domaine et UA-Lab.
+- [missions/](./missions/) : Catalogue des missions normalisées pour les apprenants en mode chatbot.
+- [sprints/](./sprints/) : Planification Scrum des sprints et suivi de la branche active.
 
-   ---
+---
 
-   ## 5. Méthodologie de développement
-   Le projet intègre les meilleures pratiques de l'ingénierie logicielle :
-   - **Agile / Scrum** : Découpage par sprints, réunions quotidiennes et revues de sprint.
-   - **Processus de développement** : Séparation claire entre les étapes de cadrage fonctionnel et d'implémentation technique.
-   - **Design Thinking** : Conception centrée sur les besoins réels des utilisateurs.
-   - **Modélisation UML** : Schémas de cas d'utilisation, diagrammes de contexte et diagrammes de séquences.
+## 5. Méthodologie de développement
+Le projet intègre les meilleures pratiques de l'ingénierie logicielle :
+- **Agile / Scrum** : Découpage par sprints, réunions quotidiennes et revues de sprint.
+- **Processus de développement** : Séparation claire entre les étapes de cadrage fonctionnel et d'implémentation technique.
+- **Design Thinking** : Conception centrée sur les besoins réels des utilisateurs.
+- **Modélisation UML** : Schémas de cas d'utilisation, diagrammes de contexte et diagrammes de séquences.
 
-   ---
+---
 
-   ## 6. Démarrage rapide
+## 6. Démarrage rapide
 
-   ### Prérequis
-   - Git installé et configuré.
-   - GitHub CLI (`gh`) authentifié.
-   - PHP 8.2+ et Composer installés.
+### Prérequis
+- Git installé et configuré.
+- GitHub CLI (`gh`) authentifié.
+- PHP 8.2+ et Composer installés.
 
-   ### Cloner et explorer le projet
-   ```bash
-   git clone https://github.com/[votre-compte-github]/blog-des-laureats.git
-   cd blog-des-laureats
-   git checkout sprint1
-   ```
-   ```
+### Cloner et explorer le projet
+```bash
+git clone https://github.com/[votre-compte-github]/blog-des-laureats.git
+cd blog-des-laureats
+git checkout sprint1
+```
+````
 
 4. **Étape 4 — Commit et synchronisation sur `sprint1` :**  
    Indexez les nouveaux fichiers, validez le commit et poussez sur le dépôt distant :
