@@ -9,16 +9,18 @@ competence: "C.325"
 domaine: "D.325.1"
 duree: 6
 objectif: >
-  Maîtriser les principes du Prompt Engineering structuré (méthode RIO), comprendre l'architecture d'un Agent IA outillé et de ses règles Always-On, expérimenter la création d'un skill sur un exemple concret (skill-presentation), et outiller le projet d'imitation avec les règles permanentes et les skills de démarrage (skills-dev, gestion-depot).
+  Maîtriser les principes du Prompt Engineering structuré (méthode RIO), comprendre l'architecture logicielle d'un Agent IA outillé (règles Always-On vs compétences modulaires), concevoir en atelier pratique un premier skill modulaire avec sa mission Marp (skill-presentation), et appliquer ces compétences pour outiller le Blog des Lauréats avec les règles Always-On et le skill gestion-depot.
 description: >
-  Outiller le projet d'imitation par un Agent IA contextualisé doté de règles Always-On et de skills modulaires. L'apprenant assimile le Prompt Engineering (RIO) et l'architecture agentique, conçoit un skill d'exemple (skill-presentation avec missions Marp et PowerPoint), puis met en place sur le projet d'imitation le socle de règles (.agents/rules/contexte-projet.md, regles-generales.md) ainsi que les skills de démarrage (skills-dev et gestion-depot avec ses missions init-depot et init-projet).
+  Guidé par le skill mentor domaine-ia, l'apprenant assimile le dialogue déterministe avec les LLMs (méthode RIO, patterns fondamentaux, context engineering), explore l'architecture d'un Agent IA outillé et de ses règles permanentes, conçoit dans un atelier pratique le skill modulaire skill-presentation (avec missions/marp-slides.md et diaporama Marp), puis déploie sur le projet d'imitation le socle de règles (.agents/rules/contexte-projet.md, regles-generales.md) et les skills de démarrage (skills-dev, gestion-depot avec ses missions init-depot et init-projet).
 notions:
-  - "Méthode directrice RIO : Rôle précis (persona d'expert), Instructions contextualisées sans ambiguïté, Output au format strict"
-  - "Architecture d'un Agent IA : distinction règles Always-On vs contexte volatil, catalogue de skills et découvrabilité native"
-  - "Conception modulaire d'un skill outillé (SKILL.md, doc/how-to-use.md et missions spécialisées)"
-  - "Outillage de l'étape d'initialisation de dépôt avec les skills de démarrage (skills-dev, gestion-depot)"
+  - "Méthode directrice RIO (Rôle persona d'expert, Instruction avec contraintes négatives, Output au format strict sans tableau)"
+  - "Patterns fondamentaux de prompt (Persona, Template, Constraint, Step-by-Step, Reflective)"
+  - "Architecture de l'Agent IA : distinction règles Always-On (.agents/rules/) vs compétences modulaires (.agents/skills/)"
+  - "Découvrabilité native d'un skill (frontmatter YAML, plafond <= 75 lignes, missions spécialisées)"
+  - "Conception pratique d'un skill outillé (skill-presentation avec missions/marp-slides.md)"
+  - "Outillage opérationnel de gestion de dépôt (.agents/skills/gestion-depot/ avec init-depot.md et init-projet.md)"
 livrable: >
-  Fiches de synthèse théoriques (tutoriels/ia/agent-skills/), atelier pratique d'exemple skill-presentation (tutoriels/ia/agent-skills/skill-presentation/), et sur le Blog des Lauréats : règles permanentes (.agents/rules/contexte-projet.md, regles-generales.md) et skills de démarrage (.agents/skills/skills-dev/, .agents/skills/gestion-depot/ avec init-depot.md et init-projet.md).
+  Livrables d'apprentissage sous tutoriels/ia/agent-skills/ (dossiers prompt-engineering/, agent-ia/, skill-presentation/ combinant fiches techniques [slug].md, diaporamas Marp presentation-[slug].md et journal skill-gestion-depot.command.md sans README unitaires), et livrables d'outillage sur le Blog des Lauréats (.agents/rules/contexte-projet.md, regles-generales.md, et skills skills-dev/, gestion-depot/).
 travail_a_faire: >
-  Assimiler le Prompt Engineering et la méthode RIO, comprendre l'architecture d'un Agent IA et les règles permanentes, concevoir un skill d'exemple complet (skill-presentation), puis déployer sur le projet d'imitation les règles du projet et les skills agentiques de gestion de dépôt.
+  Assimiler le Prompt Engineering et la méthode RIO, explorer l'architecture d'un Agent IA et les règles permanentes, concevoir en atelier le skill d'exemple skill-presentation avec sa mission Marp, puis outiller le projet d'imitation avec les règles Always-On et le skill de démarrage gestion-depot.
 ---
