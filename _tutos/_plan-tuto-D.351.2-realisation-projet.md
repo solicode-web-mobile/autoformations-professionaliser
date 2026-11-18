@@ -63,16 +63,16 @@
 - **Compétence :** `C.351` — Piloter un projet avec Scrum et gouverner les cérémonies
 - **Domaine :** `D.351.2` — Réalisation de projet et rituels agiles
 - **Durée estimée :** 4 heures
-- **Objectif :** Valider l'incrément déployable en démonstration live face aux critères de la DoD, animer une rétrospective réflexive identifiant la dette d'empathie, raffiner le carnet produit et créer la suite des 4 prompts de clôture.
-- **Description :** Clôture rigoureuse et amélioration continue du sprint. L'équipe démontre l'incrément fonctionnel, conduit la rétrospective réflexive révélant le manque de Design Thinking (justifiant le Sprint S02), affine le Product Backlog, clôture le bilan individuel et produit les 4 prompts automatisant ces rituels récurrents.
+- **Objectif :** Valider l'incrément déployable en démonstration live face aux critères de la DoD, animer une rétrospective réflexive identifiant la dette d'empathie, raffiner le carnet produit et concevoir le skill modulaire d'automatisation de clôture de sprint.
+- **Description :** Clôture rigoureuse et amélioration continue du sprint. L'équipe démontre l'incrément fonctionnel, conduit la rétrospective réflexive révélant le manque de Design Thinking (justifiant le Sprint S02), affine le Product Backlog, clôture le bilan individuel et produit le skill modulaire cloture-sprint orchestrant les 4 missions automatisant ces rituels récurrents.
 - **Notions Clés Utilisées dans le Sprint :**
   - Démonstration fonctionnelle live de l'incrément déployable (Sprint Review).
   - Validation critère par critère de la Definition of Done (DoD).
   - Rétrospective réflexive et détection de la dette d'empathie utilisateur.
   - Backlog Refinement pour le sprint suivant.
-  - Capitalisation par prompts IA dédiés pour chaque cérémonie de clôture.
-- **Livrables :** Revue de sprint (`scrum/revue-s1.md`), rétrospective (`scrum/retrospective-s1.md`), backlog affiné (`scrum/product-backlog.md`), bilan individuel (`scrum/bilan-s1.md`) et 4 prompts IA (`prompt-sprint-review`, `prompt-sprint-retrospective`, `prompt-backlog-refinement`, `prompt-bilan-session`) sur la branche `sprint1`.
-- **Travail à Faire :** Réaliser les rituels de clôture et concevoir les 4 prompts IA dans `livrables/ia/prompts/`.
+  - Architecture modulaire d'un Skill Agent IA (orchestrateur SKILL.md et missions spécialisées).
+- **Livrables :** Revue de sprint (`scrum/revue-s1.md`), rétrospective (`scrum/retrospective-s1.md`), backlog affiné (`scrum/product-backlog.md`), bilan individuel (`scrum/bilan-s1.md`) et skill modulaire de clôture (`.agents/skills/cloture-sprint/` et documentation `tutoriels/realisation-projet/cloture-sprint/skill-cloture-sprint/`) sur la branche `sprint1`.
+- **Travail à Faire :** Réaliser les rituels de clôture et concevoir le skill modulaire de clôture de sprint orchestrant les 4 missions.
 
 ---
 
@@ -216,23 +216,28 @@
 
 ---
 
-### T.351.235 — Création des 4 prompts de clôture de sprint
+### T.351.235 — Création du skill de clôture de sprint
 
 - **Code :** `T.351.235`
-- **Maturité :** `UA-tâche` (Tutoriel d'automatisation IA)
+- **Maturité :** `UA-tâche` (Tutoriel d'outillage IA & architecture de skill)
 - **Unité d'Apprentissage parente :** `UA.351.23`
-- **Titre Canonique :** Création des 4 prompts de clôture de sprint
+- **Titre Canonique :** Création du skill de clôture de sprint
 - **Position dans le Flux :** Phase D — Clôture de Sprint, Rétrospective & Bilan / Étape 5.5 — Automatisation des Rituels de Clôture.
 - **Branche Git de travail :** `sprint1`
 - **Fichiers modifiés ou créés :**
-  - `livrables/ia/prompts/prompt-sprint-review.prompt.md`
-  - `livrables/ia/prompts/prompt-sprint-retrospective.prompt.md`
-  - `livrables/ia/prompts/prompt-backlog-refinement.prompt.md`
-  - `livrables/ia/prompts/prompt-bilan-session.prompt.md`
-- **Objectif Opérationnel :** Concevoir les 4 prompts d'ingénierie réutilisables automatisant la production des livrables pour chacune des cérémonies de clôture de sprint.
-- **Missions Concrètes des 4 Prompts :**
-  1. **`prompt-sprint-review` :** Générer le procès-verbal de démonstration et la grille d'audit de la DoD à partir des fonctionnalités livrées sur le sprint.
-  2. **`prompt-sprint-retrospective` :** Guider l'animation de la rétrospective agile, structurer la collecte des forces/axes d'amélioration et synthétiser les décisions concrètes d'équipe.
-  3. **`prompt-backlog-refinement` :** Analyser le Product Backlog, actualiser les statuts des User Stories livrées et ré-estimer/réordonner les items prioritaires pour le sprint suivant.
-  4. **`prompt-bilan-session` :** Générer le canevas de débriefing individuel réflexif et la matrice de positionnement sur les compétences techniques mobilisées.
-- **Critère de Réussite :** Les 4 fichiers de prompts sont créés dans `livrables/ia/prompts/` et versionnés sur la branche `sprint1`.
+  - `.agents/skills/cloture-sprint/SKILL.md`
+  - `.agents/skills/cloture-sprint/missions/sprint-review.md`
+  - `.agents/skills/cloture-sprint/missions/sprint-retrospective.md`
+  - `.agents/skills/cloture-sprint/missions/backlog-refinement.md`
+  - `.agents/skills/cloture-sprint/missions/debriefing-session.md`
+  - `.agents/skills/cloture-sprint/doc/how-to-use.md`
+  - `tutoriels/realisation-projet/cloture-sprint/skill-cloture-sprint/skill-cloture-sprint.md`
+  - `tutoriels/realisation-projet/cloture-sprint/skill-cloture-sprint/presentation-skill-cloture-sprint.md`
+  - `tutoriels/realisation-projet/cloture-sprint/skill-cloture-sprint/skill-cloture-sprint.command.md`
+- **Objectif Opérationnel :** Concevoir le skill modulaire réutilisable `cloture-sprint` orchestrant les 4 missions d'ingénierie qui automatisent la production des livrables de clôture de sprint.
+- **Missions Orchestrées par le Skill :**
+  1. **`missions/sprint-review.md` :** Générer le procès-verbal de démonstration et l'audit binaire critère par critère de la DoD face au Sprint Goal.
+  2. **`missions/sprint-retrospective.md` :** Guider l'animation de la rétrospective agile, structurer les forces et axes d'amélioration, et acter le constat de dette d'empathie utilisateur vers S2.
+  3. **`missions/backlog-refinement.md` :** Archiver les tâches livrées dans `issues/issues-closes.md` et réordonner/estimer les User Stories du Product Backlog pour le sprint suivant.
+  4. **`missions/debriefing-session.md` :** Générer le canevas de débriefing individuel réflexif sur les 5 compétences du sprint ($C.311, C.312, C.321, C.325, C.351$) et analyser le Live Coding 40 min.
+- **Critère de Réussite :** Le skill `.agents/skills/cloture-sprint/` est opérationnel, documenté et testé avec la commande `/cloture-sprint` sur la branche `sprint1`.

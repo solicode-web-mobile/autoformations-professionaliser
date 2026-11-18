@@ -16,7 +16,7 @@ Le skill `tutorial-task-writer` rédige et met à jour les fiches de tutoriels o
 ## 3. Prompts Types pour Invoquer le Skill
 - *« Rédige la fiche opérationnelle de cadrage de projet (T.351.211) pour l'UA-Tâche UA.351.21. »*
 - *« Formalise le tutoriel de rituel de Sprint Planning (T.351.221) pour l'UA-Tâche UA.351.22 sans aucune théorie et sur la branche sprint1. »*
-- *« Rédige le tutoriel d'outillage IA T.351.235 créant les 4 prompts de clôture de sprint selon la méthode RIO. »*
+- *« Rédige le tutoriel d'outillage IA T.351.235 créant le skill modulaire de clôture de sprint orchestrant les 4 missions de fin de sprint. »*
 
 ---
 
