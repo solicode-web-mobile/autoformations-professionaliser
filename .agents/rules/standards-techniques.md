@@ -37,6 +37,7 @@ trigger: always_on
   - Dans la fiche de tutoriel, les commandes du journal sont présentées directement sous la forme d'un bloc ```` ```bash ```` (sans double encapsulation ```` ````markdown ````).
   - Le journal ne consigne que les commandes opérationnelles utiles de la tâche : **interdiction formelle d'y inclure les commandes Git (`git add`, `git commit`, `git push`)**.
   - **S'il n'y a aucune commande CLI à exécuter dans le tutoriel (travail purement rédactionnel ou d'édition dans l'IDE), ne pas citer cette partie** (aucun fichier journal ni étape de journalisation).
+  - **Interdiction formelle des étapes de Commit / Push :** Interdiction d'ajouter une étape directive de commit ou push (`git add`, `git commit`, `git push`) à la fin des tutoriels. Les apprenants N3 maîtrisent déjà le cycle de versionnement Git et gèrent leurs commits de manière autonome.
 - **Consultation et Synchronisation du Référentiel Physique (`D:\labs-web\projet-imiation-n3`) :** L'Agent IA inspecte obligatoirement le dépôt de référence réel situé sous `D:\labs-web\projet-imiation-n3` pour en extraire fidèlement l'arborescence, les scripts, les configurations et les règles. Si une modification demandée par l'utilisateur contredit le contenu actuel de ce référentiel, l'Agent IA doit impérativement corriger et synchroniser les livrables physiques correspondants dans `D:\labs-web\projet-imiation-n3` en même temps que les tutoriels.
 
 ## 4. Transparence de l'Agent IA

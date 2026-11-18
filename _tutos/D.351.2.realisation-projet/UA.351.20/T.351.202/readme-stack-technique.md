@@ -189,15 +189,6 @@ git checkout sprint1
 mkdir -p .agents docs flux-travail issues tutoriels presentations rapport sprints
 ```
 
-5. **Étape 5 — Commit et synchronisation sur `sprint1` :**  
-   Indexez les nouveaux fichiers, validez le commit et poussez sur le dépôt distant :
-
-```bash
-git add README.md sprints/ tutoriels/realisation-projet/initialisation/readme-stack-technique/readme-stack-technique.command.md
-git commit -m "docs: structurer l'arborescence des dossiers, sprints et le README standard N3"
-git push origin sprint1
-```
-
 ## 4. Livrables & Critères de Validation
 - **Livrables attendus :**
   - Fichier `README.md` racine propre et conforme au standard Solicode (stack Laravel 12).

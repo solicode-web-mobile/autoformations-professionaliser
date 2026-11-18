@@ -213,15 +213,6 @@ node concat-chapitres.js
 cd ..
 ```
 
-8. **Étape 8 — Commit et synchronisation sur `sprint1` :**  
-   Indexez les nouveaux fichiers, validez le commit et poussez sur `sprint1` :
-
-```bash
-git add rapport/ tutoriels/realisation-projet/initialisation/rapport-modulaire/rapport-modulaire.command.md
-git commit -m "docs: initialiser le rapport modulaire et le script d'assemblage Node.js"
-git push origin sprint1
-```
-
 ## 4. Livrables & Critères de Validation
 - **Livrables attendus :**
   - Dossier `rapport/` avec `README.md`, `concat-chapitres.js`, `package.json` et `rapport-blog.md`.

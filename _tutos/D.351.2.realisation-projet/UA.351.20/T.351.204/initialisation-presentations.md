@@ -122,15 +122,6 @@ footer: "Encadrant : ESSARRAJ Fouad | Solicode Tanger"
 mkdir -p presentations
 ```
 
-6. **Étape 6 — Commit et synchronisation sur `sprint1` :**  
-   Indexez les présentations, validez le commit et poussez sur `sprint1` :
-
-```bash
-git add presentations/ tutoriels/realisation-projet/initialisation/presentation-marp/presentation-marp.command.md
-git commit -m "docs: initialiser les presentations racine au format Marp"
-git push origin sprint1
-```
-
 ## 4. Livrables & Critères de Validation
 - **Livrables attendus :**
   - Dossier `presentations/` avec `README.md`.

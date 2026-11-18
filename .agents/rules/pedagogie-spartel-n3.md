@@ -41,6 +41,7 @@ $$\text{Comprendre} \longrightarrow \text{Reproduire} \longrightarrow \text{Exp�
    - Scission systématique en deux prompts dédiés pour le code applicatif : `prompt-back-end` et `prompt-front-end`.
 8. **Rigueur des livrables :** Le livrable est toujours constitué de code source ou de markdown (`.md`, `.mmd`, `.prompt.md`) commité sur GitHub. **Interdiction stricte de captures d'écran comme livrable.**
 9. **Zéro Solution Clé en Main dans les Pratiques UA-Lab :** Dans les fiches pratiques d'une `UA-Lab`, l'apprenant est en situation d'expérimentation et d'application active : c'est à lui de concevoir et produire son code, ses schémas ou ses manifestes. Le tutoriel fournit le cadre, le cahier des charges technique, les jalons directifs et les critères d'acceptation, mais **interdiction formelle de fournir la solution rédigée complète prête à copier-coller**. La solution complète pas-à-pas est réservée exclusivement aux tutoriels d'apprentissage de code incrémental (`UA-Tuto`) et aux tâches de projet opérationnelles (`UA-Tâche`).
+10. **Interdiction des Étapes de Commit/Push aux Apprenants N3 :** Les apprenants de Niveau N3 maîtrisent déjà la gestion de version Git (validée aux niveaux N1 et N2). Il est formellement interdit d'ajouter une étape directive de commit ou de push (`git add`, `git commit`, `git push`) à la fin des tutoriels. L'apprenant sait quand et comment versionner ses livrables sur la branche active du sprint.
 
 ## 4. Gestion Méthodique des Corrections
 Lorsqu'une erreur ou incohérence est constatée dans un code ou un livrable :

@@ -256,15 +256,6 @@ Structurer le fichier `README.md` racine et initialiser les dossiers documentair
 mkdir -p .agents/rules .agents/skills/skills-dev .agents/skills/gestion-depot/missions
 ```
 
-8. **Étape 8 — Commit et synchronisation sur `sprint1` :**  
-   Indexez les nouveaux fichiers agentiques, validez le commit et poussez sur `sprint1` :
-
-```bash
-git add .agents/ tutoriels/ia/agent-skills/skill-gestion-depot/skill-gestion-depot.command.md
-git commit -m "feat(ia): outiller l'étape d'initialisation avec les règles Always-On et le skill gestion-depot"
-git push origin sprint1
-```
-
 ## 4. Livrables & Critères de Validation
 - **Livrables attendus :**
   - Fichiers de règles : `.agents/rules/contexte-projet.md` et `.agents/rules/regles-generales.md`.
