@@ -250,17 +250,11 @@ Structurer le fichier `README.md` racine et initialiser les dossiers documentair
 ````
 
 7. **Étape 7 — Journalisation des commandes exécutées :**  
-   Créez le sous-dossier et le fichier `tutoriels/ia/agent-skills/skill-gestion-depot/skill-gestion-depot.command.md` :
+   Dans le fichier `tutoriels/ia/agent-skills/skill-gestion-depot/skill-gestion-depot.command.md`, consignez les commandes exécutées :
 
-````markdown
 ```bash
 mkdir -p .agents/rules .agents/skills/skills-dev .agents/skills/gestion-depot/missions
-mkdir -p tutoriels/ia/agent-skills/skill-gestion-depot
-git add .agents/ tutoriels/ia/agent-skills/skill-gestion-depot/skill-gestion-depot.command.md
-git commit -m "feat(ia): outiller l'étape d'initialisation avec les règles Always-On et le skill gestion-depot"
-git push origin sprint1
 ```
-````
 
 8. **Étape 8 — Commit et synchronisation sur `sprint1` :**  
    Indexez les nouveaux fichiers agentiques, validez le commit et poussez sur `sprint1` :

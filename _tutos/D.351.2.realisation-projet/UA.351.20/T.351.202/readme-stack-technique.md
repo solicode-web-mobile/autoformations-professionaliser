@@ -183,17 +183,11 @@ git checkout sprint1
 ````
 
 4. **Étape 4 — Journalisation des commandes exécutées :**  
-   Créez le sous-dossier et le fichier `tutoriels/realisation-projet/initialisation/readme-stack-technique/readme-stack-technique.command.md` :
+   Dans le fichier `tutoriels/realisation-projet/initialisation/readme-stack-technique/readme-stack-technique.command.md`, consignez les commandes exécutées :
 
-````markdown
 ```bash
 mkdir -p .agents docs flux-travail issues tutoriels presentations rapport sprints
-mkdir -p tutoriels/realisation-projet/initialisation/readme-stack-technique
-git add README.md sprints/ tutoriels/realisation-projet/initialisation/readme-stack-technique/readme-stack-technique.command.md
-git commit -m "docs: structurer l'arborescence des dossiers, sprints et le README standard N3"
-git push origin sprint1
 ```
-````
 
 5. **Étape 5 — Commit et synchronisation sur `sprint1` :**  
    Indexez les nouveaux fichiers, validez le commit et poussez sur le dépôt distant :

@@ -187,17 +187,11 @@ footer: "Encadrant : ESSARRAJ Fouad | Solicode Tanger"
 ````
 
 5. **Étape 5 — Journalisation des commandes exécutées :**  
-   Créez le sous-dossier et le fichier `tutoriels/realisation-projet/initialisation/presentation-marp/presentation-marp.command.md` :
+   Dans le fichier `tutoriels/realisation-projet/initialisation/presentation-marp/presentation-marp.command.md`, consignez les commandes exécutées :
 
-````markdown
 ```bash
 mkdir -p presentations
-mkdir -p tutoriels/realisation-projet/initialisation/presentation-marp
-git add presentations/ tutoriels/realisation-projet/initialisation/presentation-marp/presentation-marp.command.md
-git commit -m "docs: initialiser les presentations racine au format Marp"
-git push origin sprint1
 ```
-````
 
 6. **Étape 6 — Commit et synchronisation sur `sprint1` :**  
    Indexez les présentations, validez le commit et poussez sur `sprint1` :

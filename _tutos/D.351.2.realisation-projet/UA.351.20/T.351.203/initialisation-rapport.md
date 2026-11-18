@@ -30,7 +30,7 @@ data_php: ""
 
 ## 2. Travail à Faire
 - **Tâche 1 : Structuration du dossier :** Créer le répertoire `rapport/` et son sous-dossier `rapport/chapitres/`.
-- **Tâche 2 : Rédaction des chapitres de cadrage :** Rédiger `rapport/README.md`, `rapport/chapitres/README.md`, `01-introduction.md` et `02-conclusion.md`.
+- **Tâche 2 : Guides et chapitres vides :** Rédiger `rapport/README.md`, `rapport/chapitres/README.md`, et initialiser les deux chapitres vides `01-introduction.md` et `02-conclusion.md`.
 - **Tâche 3 : Script d'assemblage Node.js :** Créer `rapport/concat-chapitres.js` et le fichier de configuration `rapport/package.json`.
 - **Tâche 4 : Génération du rapport consolidé :** Exécuter le script Node.js pour produire le document final `rapport/rapport-blog.md`.
 - **Tâche 5 : Journalisation des commandes :** Consigner les commandes exécutées dans `tutoriels/realisation-projet/initialisation/rapport-modulaire/rapport-modulaire.command.md`.
@@ -47,7 +47,7 @@ mkdir -p rapport/chapitres
 2. **Étape 2 — Rédaction du guide d'utilisation `rapport/README.md` :**  
    Dans `rapport/`, créez le fichier `README.md` décrivant l'organisation et la commande de compilation :
 
-```markdown
+````markdown
 # Dossier du Rapport de Projet (`rapport/`)
 
 Ce dossier héberge le rapport technique et académique du projet Blog des lauréats.
@@ -60,26 +60,20 @@ Le rapport est découpé en chapitres indépendants dans le sous-dossier `chapit
 ## 2. Compilation automatique
 Le fichier unique consolidé `rapport-blog.md` est généré automatiquement à partir des chapitres à l'aide d'un script Node.js :
 - Script : `concat-chapitres.js`
-- Commande directe :
-  ```bash
-  node concat-chapitres.js
-  ```
-- Ou via npm :
-  ```bash
-  npm run build
-  ```
+- Commande directe : `node concat-chapitres.js`
+- Ou via npm : `npm run build`
 
 ## 3. Guide de rédaction
 - Rédiger ou modifier les chapitres dans le sous-dossier `chapitres/`.
 - Chaque fichier de chapitre doit commencer par son titre de niveau 1 (`# Chapitre N : ...`).
 - Lancer le script de compilation après chaque modification pour mettre à jour `rapport-blog.md`.
 - Respecter les règles générales : zéro tableau Markdown, liens relatifs et français professionnel.
-```
+````
 
 3. **Étape 3 — Rédaction du guide interne `rapport/chapitres/README.md` :**  
    Dans `rapport/chapitres/`, créez le fichier `README.md` formalisant les règles de nommage des chapitres :
 
-```markdown
+````markdown
 # Sous-dossier des Chapitres (`rapport/chapitres/`)
 
 Ce sous-dossier contient les chapitres unitaires qui composent le rapport de projet.
@@ -97,50 +91,22 @@ Ce sous-dossier contient les chapitres unitaires qui composent le rapport de pro
 - Nommer les fichiers avec un préfixe numérique ordonné (`01-...`, `02-...`).
 - Chaque fichier commence par un titre Markdown de niveau 1 (`# Chapitre N : ...`).
 - Le script `../concat-chapitres.js` lit automatiquement ces fichiers par ordre alphabétique pour générer le rapport consolidé `rapport-blog.md`.
-```
+````
 
-4. **Étape 4 — Rédaction des deux premiers chapitres du rapport :**  
-   Dans `rapport/chapitres/`, créez `01-introduction.md` :
+4. **Étape 4 — Initialisation des chapitres vides :**  
+   Dans `rapport/chapitres/`, créez les deux premiers chapitres vides avec uniquement leur titre de niveau 1 :
 
-```markdown
-# Chapitre 1 : Introduction Générale
+   Créez `01-introduction.md` :
 
-## 1. Contexte du projet
-Dans le cadre de la formation au sein de Solicode Tanger (Niveau 3), le projet d'imitation consiste à concevoir et développer une application web complète intitulée **Blog des lauréats**. Cette plateforme a pour mission de valoriser les parcours des anciens lauréats, de partager leurs retours d'expérience et d'inspirer les nouvelles promotions d'apprenants.
+````markdown
+# Chapitre 1 : Introduction
+````
 
-## 2. Objectifs du projet
-- Développer une application moderne avec le framework Laravel 12 en PHP.
-- Adopter une architecture logicielle robuste en 2 couches (Contrôleur -> Service).
-- Mettre en œuvre la méthodologie Agile/Scrum avec découpage en sprints successifs.
-- Exploiter les outils d'ingénierie modernes : modélisation UML (diagramme de contexte, cas d'utilisation), gestion de version Git/GitHub et agent IA d'automatisation.
+   Créez également `02-conclusion.md` :
 
-## 3. Périmètre initial
-Le premier sprint du projet se concentre sur l'initialisation complète de l'environnement, le cadrage méthodologique, l'outillage de l'Agent IA et la réalisation d'une première fonctionnalité métier : la consultation détaillée d'un article de blog avec gabarit Blade responsive et gestion des erreurs 404.
-```
-
-   Créez également `rapport/chapitres/02-conclusion.md` :
-
-```markdown
-# Chapitre 2 : Conclusion et Perspectives
-
-## 1. Bilan des réalisations
-Le démarrage du projet a permis de poser des fondations méthodologiques et techniques solides :
-- Initialisation propre du dépôt GitHub et gestion rigoureuse des branches de sprint.
-- Mise en place d'un environnement de travail assisté par l'Agent IA avec règles Always-On et catalogue de skills modulaires.
-- Formalisation complète du processus de développement dans le flux de travail.
-- Structuration modulaire des présentations et des chapitres du rapport technique.
-
-## 2. Acquis pédagogiques et techniques
-- Maîtrise des standards d'ingénierie logicielle (Agile/Scrum, 2TUP).
-- Structuration claire d'une architecture backend Laravel en 2 couches.
-- Automatisation de tâches documentaires à l'aide de scripts Node.js.
-
-## 3. Perspectives d'évolution
-Les prochains sprints permettront d'étendre les fonctionnalités de la plateforme Blog des lauréats :
-- Ajout de la gestion complète des articles (création, édition, suppression).
-- Gestion des catégories, tags et commentaires.
-- Authentification, rôles utilisateurs et espace d'administration dédié.
-```
+````markdown
+# Chapitre 2 : Conclusion
+````
 
 5. **Étape 5 — Mise en place du script d'assemblage Node.js :**  
    Dans `rapport/`, créez `concat-chapitres.js` :
@@ -238,20 +204,14 @@ cd ..
    *Le fichier `rapport/rapport-blog.md` est généré automatiquement.*
 
 7. **Étape 7 — Journalisation des commandes exécutées :**  
-   Créez le sous-dossier et le fichier `tutoriels/realisation-projet/initialisation/rapport-modulaire/rapport-modulaire.command.md` :
+   Dans le fichier `tutoriels/realisation-projet/initialisation/rapport-modulaire/rapport-modulaire.command.md`, consignez les commandes exécutées :
 
-````markdown
 ```bash
 mkdir -p rapport/chapitres
 cd rapport
 node concat-chapitres.js
 cd ..
-mkdir -p tutoriels/realisation-projet/initialisation/rapport-modulaire
-git add rapport/ tutoriels/realisation-projet/initialisation/rapport-modulaire/rapport-modulaire.command.md
-git commit -m "docs: initialiser le rapport modulaire et le script d'assemblage Node.js"
-git push origin sprint1
 ```
-````
 
 8. **Étape 8 — Commit et synchronisation sur `sprint1` :**  
    Indexez les nouveaux fichiers, validez le commit et poussez sur `sprint1` :
@@ -268,7 +228,7 @@ git push origin sprint1
   - Sous-dossier `rapport/chapitres/` avec `README.md`, `01-introduction.md` et `02-conclusion.md`.
   - Journal des commandes : `tutoriels/realisation-projet/initialisation/rapport-modulaire/rapport-modulaire.command.md` sur la branche `sprint1`.
 - **Critères de validation :**
-  - [ ] Les chapitres `01-introduction.md` et `02-conclusion.md` sont rédigés dans `rapport/chapitres/`.
+  - [ ] Les chapitres vides `01-introduction.md` et `02-conclusion.md` sont initialisés dans `rapport/chapitres/`.
   - [ ] Le script `concat-chapitres.js` s'exécute avec succès via `node concat-chapitres.js` sans erreur.
   - [ ] Le fichier `rapport-blog.md` est généré et regroupe les chapitres assemblés.
   - [ ] Le journal `rapport-modulaire.command.md` consigne fidèlement les commandes exécutées.

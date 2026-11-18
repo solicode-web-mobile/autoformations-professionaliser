@@ -25,7 +25,11 @@ trigger: always_on
 - **Éditeur interactif :** Dès qu'un tutoriel utilise des champs `data_*`, insérer systématiquement le script `window.pageData` sous le Front Matter. Isoler le code de préparation pour que l'onglet de travail de l'apprenant reste vierge.
 - **Médias :** Stockage obligatoire dans `images-tutos/[Domaine]/[ID_Tuto]/[nom.ext]`.
 - **Livrables :** Le livrable est toujours un **dépôt GitHub** ou un fichier `.md` de commandes. **Interdiction stricte de captures d'écran comme livrable.**
-- **Règle de Journalisation des Commandes :** Dès qu'un tutoriel implique la saisie de commandes en ligne de commande (CLI / Shell), l'apprenant doit obligatoirement consigner ses commandes dans le fichier standardisé `[slug-tuto].command.md` déposé dans le dossier `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` sur la branche de sprint active.
+- **Règle de Journalisation des Commandes :**
+  - Dès qu'un tutoriel implique la saisie de commandes en ligne de commande (CLI / Shell), l'apprenant doit obligatoirement consigner ses commandes dans le fichier standardisé `[slug-tuto].command.md` déposé dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` sur la branche de sprint active.
+  - Dans la fiche de tutoriel, les commandes du journal sont présentées directement sous la forme d'un bloc ```` ```bash ```` (sans double encapsulation ```` ````markdown ````).
+  - Le journal ne consigne que les commandes opérationnelles utiles de la tâche : **interdiction formelle d'y inclure les commandes Git (`git add`, `git commit`, `git push`)**.
+  - **S'il n'y a aucune commande CLI à exécuter dans le tutoriel (travail purement rédactionnel ou d'édition dans l'IDE), ne pas citer cette partie** (aucun fichier journal ni étape de journalisation).
 - **Consultation et Synchronisation du Référentiel Physique (`D:\labs-web\projet-imiation-n3`) :** L'Agent IA inspecte obligatoirement le dépôt de référence réel situé sous `D:\labs-web\projet-imiation-n3` pour en extraire fidèlement l'arborescence, les scripts, les configurations et les règles. Si une modification demandée par l'utilisateur contredit le contenu actuel de ce référentiel, l'Agent IA doit impérativement corriger et synchroniser les livrables physiques correspondants dans `D:\labs-web\projet-imiation-n3` en même temps que les tutoriels.
 
 ## 4. Transparence de l'Agent IA

@@ -69,7 +69,6 @@ mkdir -p tutoriels/realisation-projet/initialisation/publication-github
 
    Créez le fichier `tutoriels/realisation-projet/initialisation/publication-github/publication-github.command.md` pour consigner l'historique des commandes :
 
-````markdown
 ```bash
 gh auth status
 mkdir blog-des-laureats
@@ -77,12 +76,8 @@ cd blog-des-laureats
 touch .gitignore
 git init
 git checkout -b sprint1
-mkdir -p tutoriels/realisation-projet/initialisation/publication-github
-git add .gitignore tutoriels/realisation-projet/initialisation/publication-github/publication-github.command.md
-git commit -m "feat: initialisation du projet et journal des commandes"
 gh repo create
 ```
-````
 
 5. **Étape 5 — Premier commit local :**  
    Indexez et validez le fichier `.gitignore` et `publication-github.command.md` sur la branche `sprint1` :
