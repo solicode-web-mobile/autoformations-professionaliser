@@ -4,7 +4,7 @@ layout: ua
 code: "UA.321.11"
 slug: "hello-world"
 maturite: "UA-Lab"
-ordre: 10
+ordre: 9
 competence: "C.321"
 domaine: "D.321.1"
 duree: 4

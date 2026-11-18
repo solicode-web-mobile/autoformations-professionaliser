@@ -1,5 +1,5 @@
 ---
-title: "Cadrage du projet (Sprint 1)"
+title: "Cadrage du projet sous gouvernance Scrum"
 layout: ua
 code: "UA.351.21"
 slug: "cadrage"
@@ -9,15 +9,16 @@ competence: "C.351"
 domaine: "D.351.2"
 duree: 2
 objectif: >
-  Analyser le besoin métier du produit, délimiter le périmètre In-Scope/Out-of-Scope et formaliser le contrat de cadrage projet avec le Product Owner.
+  Formaliser la gouvernance agile du projet d'imitation, contractualiser la planification des sprints dans sprints/sprints.md et définir les objectifs opérationnels du Sprint 1 sur sa branche de travail dédiée.
 description: >
-  Poser le périmètre fonctionnel strict du produit. L'apprenant analyse le cahier des charges du Projet d'imitation, isole le périmètre In-Scope de consultation publique responsive, écarte les fonctionnalités hors périmètre (Out-of-Scope) et formalise le cadrage produit.
+  Cadrer le projet sous gouvernance Scrum pour le Blog des Lauréats. L'apprenant structure le dossier de gouvernance sprints/, rédige son guide d'utilisation sprints/README.md, formalise le fichier central de suivi sprints/sprints.md en déclarant le Sprint 1 en statut Actif avec ses objectifs pédagogiques et techniques, et synchronise la branche Git partagée sprint1.
 notions:
-  - "Cadrage du périmètre produit (Problème, utilisateurs cibles, valeur attendue)"
-  - "Délimitation stricte In-Scope vs Out-of-Scope (Zéro authentification, zéro paiement, zéro SGBD relationnel en S1)"
-  - "Parties prenantes et contraintes majeures de réalisation"
+  - "Gouvernance de sprint et source unique de vérité (sprints/sprints.md)"
+  - "Définition du sprint actif et objectifs du Sprint 1 (Laravel 12, architecture 2 couches)"
+  - "Convention de versionnement par branche de sprint partagée (sprint1)"
+  - "Guide méthodologique et règles de gestion des sprints (sprints/README.md)"
 livrable: >
-  Contrat de cadrage produit validé avec le Product Owner (cadrage/cadrage-projet.md sur la branche sprint1).
+  Dossier de cadrage Scrum du projet : sprints/sprints.md, sprints/README.md et journal des commandes sur la branche sprint1.
 travail_a_faire: >
-  Analyser les exigences du Blog des Lauréats, délimiter le périmètre In-Scope / Out-of-Scope et rédiger le document cadrage/cadrage-projet.md.
+  Initialiser le dossier sprints/, rédiger le guide méthodologique sprints/README.md, renseigner la planification dans sprints/sprints.md en isolant le Sprint 1 en statut Actif et synchroniser le dépôt.
 ---

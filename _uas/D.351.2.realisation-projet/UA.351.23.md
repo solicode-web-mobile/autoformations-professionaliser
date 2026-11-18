@@ -4,7 +4,7 @@ layout: ua
 code: "UA.351.23"
 slug: "cloture-sprint"
 maturite: "UA-Tâche"
-ordre: 13
+ordre: 12
 competence: "C.351"
 domaine: "D.351.2"
 duree: 4

@@ -3,164 +3,79 @@
 > **Domaine :** `D.351.1` | **Compétence :** `C.351` — Piloter un projet avec Scrum | **Session :** S01  
 > **Niveau de Maturité :** UA-Lab (Atelier pratique guidé)  
 > **Branche Git de Travail :** `sprint1`  
-> **Référentiels Liés :** [`../../3.sprints/flux-travail-n3.md`](../../3.sprints/flux-travail-n3.md) | [`../../3.sprints/stack-technique-n3.md`](../../3.sprints/stack-technique-n3.md)
+> **Référentiel Miroir :** `tutoriels/scrum/initiation-scrum/`
 
 ---
 
-## 1. Description des Unités d'Apprentissage du Domaine
+## 1. Description de l'Unité d'Apprentissage
 
-### UA.351.11 — Introduction à Scrum
+### UA.351.11 — Initiation à la méthode Agile Scrum
 
 - **Code :** `UA.351.11`
 - **Maturité :** `UA-Lab` (Atelier pratique guidé)
-- **Ordre en Session :** Étape 02
-- **Positionnement Flux de Travail :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 1.2 — Gouvernance d'Équipe Scrum
-- **Briques Stack Technique :** Cadre Scrum, Rôles, Cérémonies, Artéfacts, Charte d'équipe
+- **Ordre en Session :** Étape 03
+- **Positionnement dans la formation :** Apprentissage méthodologique préalable illustré par le **Portfolio Développeur** (Projet Technique de référence), que l'apprenant applique sur son propre projet technique individuel.
+- **Briques Stack Technique :** Cadre Scrum, Rôles, Cérémonies, Artéfacts, Vision Produit, Personas, User Stories, Product Backlog, Story Points, MoSCoW, DoR, DoD, Sprint Goal, Sprint Backlog, Kanban, Daily Scrum, Sprint Review, Sprint Retrospective.
 - **Compétence :** `C.351` — Piloter un projet avec Scrum
 - **Domaine :** `D.351.1` — Gouvernance agile Scrum
-- **Durée estimée :** 4 heures
-- **Objectif :** Installer la gouvernance agile de la promotion en formation active par projets en s'appropriant les 3 piliers empiriques, les rôles et cérémonies Scrum pour contractualiser une charte d'équipe engageante.
-- **Description :** Installer la gouvernance agile de l'équipe. L'apprenant s'approprie les 3 piliers empiriques, les 3 rôles, les 5 événements/cérémonies Scrum et co-rédige la charte d'équipe définissant les responsabilités partagées et les règles de vie collaborative.
-- **Notions Clés Utilisées dans le Sprint :**
-  - Les 3 Piliers Empiriques (Transparence, inspection, adaptation).
-  - Les 3 Rôles Scrum (Product Owner, Scrum Master, Développeurs).
-  - Les 5 Événements/Cérémonies Scrum (Sprint, Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective).
-  - Les 3 Artéfacts Scrum (Product Backlog, Sprint Backlog, Incrément déployable).
-  - Charte d'équipe agile (Horaires du Daily, protocole d'entraide peer coaching, rotation du rôle de Scrum Master).
-- **Livrable :** Charte d'équipe de la promotion (`scrum/charte-equipe.md`) sur la branche `sprint1`.
-- **Travail à Faire :** Co-rédiger la charte d'équipe sur le Projet d'imitation, formaliser les règles de fonctionnement collectif et le calendrier des cérémonies.
-
----
-
-### UA.351.12 — Product Backlog et User Stories
-
-- **Code :** `UA.351.12`
-- **Maturité :** `UA-Lab` (Atelier pratique guidé)
-- **Ordre en Session :** Étape 05
-- **Positionnement Flux de Travail :** Phase B — Analyse, Conception & Planification / Étape 2.2 — Découpage User Stories & Product Backlog
-- **Briques Stack Technique :** Product Backlog, User Stories INVEST, Priorisation MoSCoW, Story Points
-- **Compétence :** `C.351` — Piloter un projet avec Scrum
-- **Domaine :** `D.351.1` — Gouvernance agile Scrum
-- **Durée estimée :** 6 heures
-- **Objectif :** Découper les fonctionnalités globales du blog en User Stories indépendantes selon le standard INVEST pour formaliser le Product Backlog ordonné et priorisé selon la méthode MoSCoW.
-- **Description :** Structurer et prioriser le carnet de produit Scrum pour le Projet d'imitation. L'apprenant s'approprie la définition formelle du Product Backlog, rédige les User Stories avec critères d'acceptation, applique la grille INVEST et ordonnance le carnet selon MoSCoW.
-- **Notions Clés Utilisées dans le Sprint :**
-  - Définition formelle du Product Backlog : source unique, vivante et ordonnancée par la valeur sous la responsabilité du PO.
-  - Format canonique User Story (« En tant que... je veux... afin de... »).
-  - Critères de qualité INVEST (Independent, Negotiable, Valuable, Estimable, Small, Testable).
-  - Priorisation MoSCoW (Must, Should, Could, Won't) et critères d'acceptation Gherkin.
-- **Livrables :** Product Backlog initial priorisé (`livrables/scrum/product-backlog.md`) et prompt réutilisable (`livrables/ia/prompts/prompt-product-backlog.prompt.md`) sur la branche `sprint1`.
-- **Travail à Faire :** Construire le Product Backlog du Blog des Lauréats, formaliser les critères d'acceptation et concevoir le prompt `prompt-product-backlog`.
+- **Durée estimée :** 8 heures
+- **Objectif :** Acquérir les fondamentaux du cadre Scrum et piloter un projet de développement Web de bout en bout : formuler la vision produit, exprimer les besoins en User Stories, ordonner le Product Backlog selon MoSCoW, planifier et animer un Sprint de développement, et conduire la Sprint Review et la Rétrospective réflexive.
+- **Description :** Découvrir l'Agilité et appliquer le cadre Scrum sur son projet technique individuel. Les tutoriels sont rédigés et illustrés à partir du Portfolio Développeur (projet technique de référence), mais l'apprenant applique les étapes à son propre projet technique. L'apprenant s'approprie les 3 piliers, 3 rôles et 5 événements Scrum, rédige les Personas et User Stories avec critères d'acceptation, estime le Product Backlog en Story Points avec la DoD, découpe un Sprint Goal en tâches techniques sur tableau Kanban, et clôture l'itération par une démonstration live et un plan d'amélioration continue.
+- **Livrables :** Dossier `tutoriels/scrum/initiation-scrum/` comprenant les 5 fiches techniques et 5 diaporamas Marp associés sur la branche `sprint1`.
 
 ---
 
 ## 2. Plan des Tutoriels : UA.351.11
 
-### T.351.111 — Théorie : Cadre Scrum, Rôles & Cérémonies
-*(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*
+### T.351.111 — Comprendre l'approche Agile et le cadre Scrum
+*(Tutoriel 1 — Fondamentaux & Posture)*
 
-#### 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 1.2 — Gouvernance d'Équipe Scrum.
-- **Stack mobilisée :** Méthodologie agile Scrum, gouvernance d'équipe produit.
-
-#### 2. Travail à Faire (Ce que l'Apprenant Doit Produire)
-Effectuer les recherches nécessaires et formaliser une fiche de synthèse expliquant le fonctionnement du cadre empirique Scrum, les rôles et le déroulement des cérémonies.
-
-#### 3. Répartition Didactique (Règle des 20/80)
-- **Les 20% fournis directement au tutoriel :**
-  - *Les 3 Rôles Scrum :* Product Owner (porteur de valeur et des priorités), Scrum Master (garant du cadre et facilitateur), Développeurs (responsables de l'incrément et de la qualité technique).
-  - *Les 5 Événements/Cérémonies :* Le Sprint, le Sprint Planning, le Daily Scrum, la Sprint Review et la Sprint Retrospective.
-  - *Les 3 Artéfacts & les 3 Piliers :* Product Backlog, Sprint Backlog, Incrément conforme à la DoD ; Transparence, Inspection, Adaptation.
-- **Les 80% recherchés par l'apprenant :**
-  - Déroulement opérationnel et timebox de chaque cérémonie (les 3 questions clés du Daily Scrum, la règle des 15 minutes, l'escalade des blocages).
-  - Les 5 valeurs Scrum (Engagement, Courage, Focus, Ouverture, Respect).
-
-#### 4. Livrable Attendu
-- Fiche de synthèse des rôles et cérémonies intégrée dans le journal d'apprentissage.
+- **Slug :** `comprendre-scrum` | **Maturité :** `UA-Lab` | **Nav Order :** 1
+- **Travail à faire :** Assimiler la rupture entre cycle en V et démarche Agile, les 4 valeurs directrices, les 3 rôles centraux (PO, SM, Développeurs), la notion de Sprint et d'Incrément. Définir sa posture (PO + Développeur), la cadence de sprint (1 semaine) et la charte d'engagement sur le Portfolio.
+- **Livrables attendus :**
+  - Fiche technique : `tutoriels/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md`
+  - Diaporama Marp : `tutoriels/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md`
 
 ---
 
-### T.351.112 — Pratique : Charte d'équipe & Organisation
-*(Tâche 2 — Réalisation Pratique sur le Projet d'Imitation)*
+### T.351.112 — Définir la vision produit et exprimer les besoins en User Stories
+*(Tutoriel 2 — Cadrage Fonctionnel & Exigences)*
 
-#### 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase A — Outillage IA, Gouvernance & Cadrage / Étape 1.2 — Charte d'Équipe.
-- **Branche Git de travail :** `sprint1`
-- **Fichiers modifiés ou créés :** `scrum/charte-equipe.md`
-
-#### 2. Travail à Faire (Projet d'Imitation)
-L'apprenant applique les notions de rôles et de cérémonies pour co-rédiger avec le formateur la Charte d'équipe de la promotion pour le *Blog des Lauréats* :
-1. **Rôles & Rotation :** Calendrier de rotation du Scrum Master.
-2. **Règles de Vie :** Horaire fixe du Daily Scrum (9h00, 15 min max) et canaux officiels d'échange.
-3. **Protocole de Peer Coaching :** Règle des 15 min de recherche individuelle avant sollicitation d'un pair, puis escalade au Scrum Master après 30 min de blocage.
-
-#### 3. Critères de Validation
-- [ ] Le fichier `scrum/charte-equipe.md` existe et est versionné sur la branche `sprint1`.
-- [ ] Le protocole d'escalade des difficultés et la rotation du Scrum Master y sont explicitement rédigés.
+- **Slug :** `vision-besoins` | **Maturité :** `UA-Lab` | **Nav Order :** 2
+- **Travail à faire :** Formuler la Vision Produit du portfolio, caractériser les Personas cibles (Sarah RH tech et Karim Lead dev), rédiger les 5 User Stories majeures du MVP avec leurs critères d'acceptation testables et délimiter le périmètre initial.
+- **Livrables attendus :**
+  - Fiche technique : `tutoriels/scrum/initiation-scrum/vision-besoins/vision-besoins.md`
+  - Diaporama Marp : `tutoriels/scrum/initiation-scrum/vision-besoins/presentation-vision-besoins.md`
 
 ---
 
-## 3. Plan des Tutoriels : UA.351.12
+### T.351.113 — Créer, estimer et ordonner le Product Backlog
+*(Tutoriel 3 — Backlog, Estimations & Qualité)*
 
-### T.351.121 — Théorie : Product Backlog et User Stories
-*(Tâche 1 — Présentation Théorique & Exercices d'Assimilation)*
-
-#### 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase B — Analyse, Conception & Planification / Étape 2.2 — Découpage User Stories & Product Backlog.
-- **Stack mobilisée :** Méthodologie agile Scrum, Product Backlog, User Stories, INVEST, MoSCoW.
-
-#### 2. Travail à Faire (Ce que l'Apprenant Doit Produire)
-Effectuer les recherches nécessaires et concevoir un support synthétique expliquant la structure d'un carnet de produit Scrum et le découpage en User Stories selon les critères INVEST.
-
-#### 3. Répartition Didactique (Règle des 20/80)
-- **Les 20% fournis directement au tutoriel :**
-  - **Définition primordiale du Product Backlog :** La source unique, centralisée et vivante de tout ce qui est nécessaire dans le produit. C'est un carnet ordonnancé selon la valeur métier sous l'autorité exclusive du Product Owner.
-  - **Structure canonique de la User Story :** « En tant que [rôle], je veux [action] afin de [valeur métier / bénéfice] ».
-  - **Les critères INVEST** (Independent, Negotiable, Valuable, Estimable, Small, Testable) et les 4 priorités MoSCoW (Must, Should, Could, Won't).
-- **Les 80% recherchés par l'apprenant :**
-  - Techniques de rédaction de critères d'acceptation exploitables (formulation Gherkin / Given-When-Then).
-
-#### 4. Livrable Attendu
-- Grille d'évaluation INVEST complétée.
+- **Slug :** `product-backlog` | **Maturité :** `UA-Lab` | **Nav Order :** 3
+- **Travail à faire :** Structurer le Product Backlog vivant du portfolio, estimer la complexité en Story Points (suite de Fibonacci), appliquer la priorisation MoSCoW (16 points Must have pour le MVP) et contractualiser la Definition of Ready (DoR) et la Definition of Done (DoD).
+- **Livrables attendus :**
+  - Fiche technique : `tutoriels/scrum/initiation-scrum/product-backlog/product-backlog.md`
+  - Diaporama Marp : `tutoriels/scrum/initiation-scrum/product-backlog/presentation-product-backlog.md`
 
 ---
 
-### T.351.122 — Pratique : Construction du Product Backlog initial
-*(Tâche 2 — Réalisation Pratique sur le Projet d'Imitation)*
+### T.351.114 — Planifier, découper et piloter un Sprint de développement
+*(Tutoriel 4 — Planification & Pilotage Quotidien)*
 
-#### 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase B — Analyse, Conception & Planification / Étape 2.2 — Carnet Produit Initial.
-- **Branche Git de travail :** `sprint1`
-- **Fichiers modifiés ou créés :** `livrables/scrum/product-backlog.md`
-
-#### 2. Travail à Faire (Projet d'Imitation)
-Bâtir le carnet de produit du *Blog des Lauréats* :
-1. **Recensement des Exigences :** Identifier les besoins fonctionnels à partir des cas d'utilisation macro.
-2. **Rédaction des User Stories :** Rédiger les PBIs au format standard avec critères d'acceptation.
-3. **Priorisation MoSCoW :** Définir les items Must Have pour le premier sprint (consultation publique d'article).
-
-#### 3. Critères de Validation
-- [ ] Le fichier `livrables/scrum/product-backlog.md` est présent et structuré en tableau Markdown sur la branche `sprint1`.
-- [ ] 100% des PBIs respectent le format User Story et les critères INVEST.
+- **Slug :** `sprint-planning-execution` | **Maturité :** `UA-Lab` | **Nav Order :** 4
+- **Travail à faire :** Animer la réunion de planification (Sprint Planning), formuler le Sprint Goal du Sprint 1, sélectionner 10 Story Points dans le Sprint Backlog, décomposer en 13 tâches techniques élémentaires ($\le 4$h), animer le tableau Kanban et simuler le Daily Scrum sur 5 jours.
+- **Livrables attendus :**
+  - Fiche technique : `tutoriels/scrum/initiation-scrum/sprint-planning-execution/sprint-planning-execution.md`
+  - Diaporama Marp : `tutoriels/scrum/initiation-scrum/sprint-planning-execution/presentation-sprint-planning-execution.md`
 
 ---
 
-### T.351.123 — Création du prompt-product-backlog
-*(Tâche 3 — Transposition IA)*
+### T.351.115 — Valider l'incrément, animer la Sprint Review et la Rétrospective
+*(Tutoriel 5 — Clôture d'Itération & Amélioration Continue)*
 
-#### 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase B — Analyse, Conception & Planification / Étape 2.2 — Automatisation du Backlog.
-- **Branche Git de travail :** `sprint1`
-- **Fichiers modifiés ou créés :** `livrables/ia/prompts/prompt-product-backlog.prompt.md`
-
-#### 2. Travail à Faire
-Concevoir et tester dans `livrables/ia/prompts/prompt-product-backlog.prompt.md` le prompt d'ingénierie réutilisable permettant à un agent IA de produire le Product Backlog complet et ordonné pour l'application métier.
-
-#### 3. Missions Concrètes Réalisées par le Prompt
-1. Analyser les besoins fonctionnels d'une application métier et les découper en User Stories INVEST complètes.
-2. Rédiger pour chaque User Story des critères d'acceptation testables selon le formalisme Given-When-Then.
-3. Ordonnancer et prioriser les User Stories selon MoSCoW en isolant le périmètre fonctionnel du premier Sprint.
-
-#### 4. Critères de Validation
-- [ ] Le fichier `livrables/ia/prompts/prompt-product-backlog.prompt.md` est présent et testé sur la branche `sprint1`.
-- [ ] Le backlog généré couvre l'ensemble des parcours utilisateurs avec une priorisation cohérente.
+- **Slug :** `revue-retrospective` | **Maturité :** `UA-Lab` | **Nav Order :** 5
+- **Travail à faire :** Réaliser la démonstration en direct de l'incrément opérationnel face à la DoD, recueillir les retours d'un évaluateur externe, animer la Sprint Retrospective réflexive (points forts, difficultés, 3 actions d'amélioration) et préparer le Sprint 2 (7 Story Points).
+- **Livrables attendus :**
+  - Fiche technique : `tutoriels/scrum/initiation-scrum/revue-retrospective/revue-retrospective.md`
+  - Diaporama Marp : `tutoriels/scrum/initiation-scrum/revue-retrospective/presentation-revue-retrospective.md`

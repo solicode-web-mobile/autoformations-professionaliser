@@ -25,7 +25,7 @@ data_php: ""
 - **Branche Git :** `sprint1`
 - **Fichiers modifiés ou créés :** `scrum/sprint-backlog-s1.md`, `issues/issues-open.md`
 - **Objectif :** Animer la planification du Sprint 1, découper l'incrément en tâches d'ingénierie, contractualiser la Definition of Done et activer les issues de sprint dans `issues/issues-open.md`.
-- **Prérequis :** Product Backlog et espace issues initialisés (`UA.351.12`).
+- **Prérequis :** Initiation à la méthode Agile Scrum (`UA.351.11`) et cadrage Scrum du projet (`UA.351.21`).
 
 ## 2. Déroulement Pas-à-Pas de la Tâche
 1. **Étape 1 — Sélection de la User Story :** Retenir la User Story prioritaire : *« Consultation détaillée d'un article de blog »*.
