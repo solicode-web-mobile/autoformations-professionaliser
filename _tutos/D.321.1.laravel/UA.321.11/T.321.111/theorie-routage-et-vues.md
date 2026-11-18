@@ -20,29 +20,30 @@ data_js: ""
 data_php: ""
 ---
 
-## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.1 — Routage & Vues.
-- **Branche Git :** `sprint1`
-- **Stack mobilisée :** Framework Laravel 12, Routeur web, Moteur Blade, Tailwind CSS.
+## 1. Travail à faire
+Effectuer les recherches documentaires nécessaires, concevoir une fiche de synthèse personnelle et préparer un diaporama de restitution Marp expliquant l'architecture générale de Laravel 12, le cycle de vie complet d'une requête HTTP du point d'entrée jusqu'à l'émission de la réponse, le fonctionnement déclaratif du routeur web et les mécanismes de rendu sécurisé sous le moteur de gabarits Blade.
 
-## 2. Travail à Faire (Ce que l'Apprenant Doit Produire)
-Effectuer les recherches nécessaires et formaliser une fiche de synthèse expliquant le rôle de Laravel, le parcours d'une requête HTTP jusqu'à la vue et les mécanismes de rendu HTML sécurisé sous Blade.
+## 2. Notions fondamentales
+- **Qu'est-ce que Laravel 12 :**
+  - Framework PHP full-stack moderne implémentant l'architecture MVC (Modèle - Vue - Contrôleur).
+  - Fournit un écosystème outillé complet : outil en ligne de commande Artisan, conteneur d'inversion de contrôle (IoC), moteur de gabarits Blade, gestion de dépendances via Composer.
+- **Cycle de Vie d'une Requête HTTP sous Laravel 12 :**
+  1. *Point d'entrée unique :* Le serveur web redirige toute requête HTTP vers `public/index.php`.
+  2. *Initialisation du Kernel :* Chargement du conteneur de services et traversée des middlewares globaux de sécurité (protection CSRF, sessions).
+  3. *Résolution par le Routeur :* Le fichier déclaratif `routes/web.php` fait correspondre la méthode HTTP (GET, POST) et l'URI à une action logicielle (closure ou contrôleur).
+  4. *Exécution & Rendu :* L'action traite la demande, appelle éventuellement une vue Blade et compile le gabarit en code HTML5 pur.
+  5. *Émission de la Réponse :* Le Kernel renvoie la `Response` HTTP (statut 200, en-têtes) vers le navigateur de l'utilisateur.
+- **Le Moteur de Gabarits Blade :**
+  - Fichiers nommés avec l'extension double `.blade.php` situés sous `resources/views/`.
+  - Syntaxe d'interpolation `{% raw %}{{ $variable }}{% endraw %}` qui applique automatiquement la fonction PHP `htmlspecialchars()` pour immuniser l'affichage contre les attaques par injection XSS (*Cross-Site Scripting*).
+  - Compilation en cache sous `storage/framework/views/` pour une performance optimale sans recalcul à chaque requête.
 
-## 3. Répartition Didactique (Règle des 20/80)
+## 3. Recherches à effectuer
+- Analyser l'organisation des répertoires standards d'un projet Laravel 12 (`app/`, `bootstrap/`, `config/`, `database/`, `resources/`, `routes/`, `storage/`).
+- Étudier les commandes d'inspection de routes offertes par l'outil Artisan (`php artisan route:list`).
+- Comparer le moteur Blade avec d'autres moteurs de templates PHP (Twig, Smarty) sur les critères de simplicité et de sécurité.
 
-### Les 20% fournis directement au tutoriel :
-- **Qu'est-ce que Laravel :** Framework PHP moderne implémentant le modèle MVC (Modèle - Vue - Contrôleur) et fournissant un écosystème outillé complet (Artisan, Composer, moteur Blade, conteneur d'injection de dépendances).
-- **Cycle d'une requête HTTP dans Laravel :**
-  1. Point d'entrée unique : `public/index.php`.
-  2. Chargement du Kernel HTTP et passage par les middlewares globaux.
-  3. Résolution de l'URL par le routeur (`routes/web.php`).
-  4. Exécution de l'action associée (closure ou contrôleur).
-  5. Rendu d'une vue Blade (`resources/views/`) et émission de la réponse HTTP 200.
-- **Moteur de gabarits Blade :** Fichiers `.blade.php`, syntaxe d'interpolation `{% raw %}{{ $variable }}{% endraw %}` avec protection automatique contre les failles XSS (`htmlspecialchars`).
-
-### Les 80% recherchés par l'apprenant :
-- Organisation de l'arborescence standard d'un projet Laravel (`app/`, `bootstrap/`, `config/`, `database/`, `resources/`, `routes/`, `storage/`).
-- Fonctionnalités de la CLI Artisan (`php artisan list`, `php artisan route:list`).
-
-## 4. Livrable Attendu
-- Fiche de synthèse sur les bases de Laravel intégrée dans le journal d'apprentissage personnel de l'apprenant.
+## 4. Livrable attendu
+- **Fiche technique de synthèse :** `tutoriels/laravel/hello-world/routage-fondamentaux/routage-fondamentaux.md` sur la branche `sprint1`.
+- **Diaporama Marp de restitution :** `tutoriels/laravel/hello-world/routage-fondamentaux/presentation-routage-fondamentaux.md` sur la branche `sprint1`.
+- **Contenu attendu :** Synthèse personnelle structurée reprenant les notions fondamentales (MVC Laravel, cycle de vie HTTP, routage, Blade et sécurité XSS) et les réponses documentées aux recherches à effectuer.

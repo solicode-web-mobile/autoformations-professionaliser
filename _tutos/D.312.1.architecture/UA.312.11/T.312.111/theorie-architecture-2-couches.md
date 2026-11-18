@@ -20,26 +20,30 @@ data_js: ""
 data_php: ""
 ---
 
-## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase B — Analyse, Conception & Planification / Étape 3.1 — Découplage Architectural.
-- **Branche Git :** `sprint1`
-- **Stack mobilisée :** Principes SOLID (Single Responsibility), architecture 2 couches (Contrôleur / Service), formalisme ADR.
+## 1. Travail à faire
+Effectuer les recherches documentaires nécessaires, concevoir une fiche de synthèse personnelle et préparer un diaporama de restitution Marp expliquant le principe de séparation des responsabilités (SoC), les risques de dette technique liés aux « contrôleurs obèses » (*Fat Controllers*), l'intérêt du patron Classe Service pour découpler l'accès aux données de l'orchestration HTTP, et la méthode de traçabilité des décisions stratégiques par les ADRs (*Architecture Decision Records*).
 
-## 2. Travail à Faire (Ce que l'Apprenant Doit Produire)
-Effectuer les recherches nécessaires et formaliser une fiche de synthèse expliquant le principe de séparation des responsabilités, les dangers des « contrôleurs obèses » (*Fat Controllers*), l'intérêt du patron Classe Service pour isoler l'accès aux données et la méthodologie de traçabilité des choix par les ADRs.
+## 2. Notions fondamentales
+- **Le Patron Architectural en 2 Couches :**
+  - **Couche Présentation (Contrôleur HTTP mince) :** Réceptionne la requête entrante, valide les paramètres élémentaires, délègue immédiatement le traitement métier à la couche Service et retourne la réponse (vue Blade ou redirection). Il ne contient aucun code SQL, aucun algorithme de calcul lourd, ni accès direct au système de fichiers.
+  - **Couche Métier & Abstraction des Données (Classe Service) :** Encapsule l'accès aux données et applique les règles métier. En Sprint 1, elle abstrait la lecture du fichier tabulaire `articles.csv` pour permettre une transition transparente vers un ORM/SGBD relationnel au sprint suivant sans impacter le contrôleur.
+- **Principe de Séparation des Responsabilités (SoC / Single Responsibility Principle) :**
+  - Chaque classe et chaque couche logicielle doit avoir une responsabilité unique et un seul motif de changement.
+  - Le découplage permet de tester unitairement la logique métier sans dépendre de l'environnement HTTP (requêtes, sessions, cookies).
+- **Structure Canonique d'un ADR (Architecture Decision Record) :**
+  - *Titre :* ADR-01 — Choix d'une architecture en deux couches avec persistance transitoire CSV.
+  - *Statut :* Proposé / Accepté / Remplacé.
+  - *Contexte :* Problématique technique et contraintes de démarrage du premier sprint.
+  - *Décision :* Solution technique retenue et règles d'implémentation.
+  - *Conséquences :* Bénéfices obtenus (simplicité, rapidité d'amorce, testabilité) et compromis acceptés (absence de transactions relationnelles).
+  - *Alternatives écartées :* Pourquoi l'installation immédiate d'un SGBD MySQL a été reportée au Sprint 2.
 
-## 3. Répartition Didactique (Règle des 20/80)
+## 3. Recherches à effectuer
+- Analyser les risques de couplage fort et de régression logicielle provoqués par les *Fat Controllers* en milieu professionnel.
+- Étudier les différences entre le patron Classe Service et le patron Repository dans l'écosystème Laravel.
+- Comparer les avantages et inconvénients d'un amorçage rapide par source de données tabulaire CSV face à un schéma relationnel avec migrations.
 
-### Les 20% fournis directement au tutoriel :
-- **Architecture 2 couches :**
-  - **Couche Présentation (Contrôleur HTTP mince) :** Réceptionne la requête HTTP, valide les entrées élémentaires, délègue le traitement métier au Service et retourne la réponse (vue Blade ou redirection). Il ne contient aucune logique de persistance ni algorithme métier lourd.
-  - **Couche Métier / Données (Classe Service) :** Encapsule l'accès aux données et la logique métier. En Sprint 1, elle abstrait la lecture du fichier tabulaire `articles.csv` pour préparer une transition transparente vers un ORM/SGBD au sprint suivant.
-- **Principe SoC (Separation of Concerns) :** Chaque composant logiciel doit avoir une responsabilité unique et bien délimitée.
-- **Structure canonique d'un ADR (Architecture Decision Record) :** Titre, Statut (Accepté), Contexte, Décision retenue, Conséquences (positives et négatives), Alternatives écartées.
-
-### Les 80% recherchés par l'apprenant :
-- Analyser les risques de dette technique liés aux *Fat Controllers* (couplage fort, impossibilité de tester unitairement, non-réutilisabilité).
-- Comparer les bénéfices et compromis d'un amorçage rapide par source tabulaire CSV par rapport à l'installation immédiate d'un SGBD relationnel.
-
-## 4. Livrable Attendu
-- Fiche de synthèse d'architecture intégrée dans le journal d'apprentissage personnel de l'apprenant.
+## 4. Livrable attendu
+- **Fiche technique de synthèse :** `tutoriels/architecture/deux-couches/separation-responsabilites/separation-responsabilites.md` sur la branche `sprint1`.
+- **Diaporama Marp de restitution :** `tutoriels/architecture/deux-couches/separation-responsabilites/presentation-separation-responsabilites.md` sur la branche `sprint1`.
+- **Contenu attendu :** Synthèse personnelle structurée reprenant les notions fondamentales (découpage 2 couches, SoC, formalisme ADR) et les réponses argumentées aux recherches à effectuer.

@@ -21,19 +21,30 @@ data_php: ""
 ---
 
 ## 1. Objectif Opérationnel & Prérequis
-- **Position dans le flux :** Phase D — Clôture de Sprint, Rétrospective & Bilan / Étape 5.3 — Backlog Grooming.
+- **Position dans le flux :** Phase D — Clôture de Sprint, Rétrospective & Bilan / Étape 12.3 — Backlog Grooming.
 - **Branche Git :** `sprint1`
-- **Fichiers modifiés ou créés :** `scrum/product-backlog.md`
-- **Objectif :** Actualiser le carnet de produit à la lumière des retours de la revue et préparer les priorités du Sprint 2.
-- **Prérequis :** Validation de la revue et analyse de rétrospective.
+- **Fichiers modifiés ou créés :** `scrum/product-backlog.md`, `issues/issues-closes.md`.
+- **Objectif :** Clôturer les tâches du Sprint 1 et réordonner le Product Backlog face aux retours de la revue pour préparer la planification du Sprint 2.
+- **Prérequis :** Démonstration validée en Sprint Review (`T.351.231`) et analyse réflexive de rétrospective (`T.351.232`).
 
 ## 2. Déroulement Pas-à-Pas de la Tâche
-1. **Étape 1 — Mise à Jour des Statuts :** Passer la User Story US-01 à l'état `Terminé` dans le backlog.
-2. **Étape 2 — Intégration des Nouveaux Besoins :** Définir les critères d'acceptation préliminaires pour les Stories du Sprint 2 (Personas, création d'articles).
-3. **Étape 3 — Réordonnancement :** Mettre à jour `scrum/product-backlog.md` selon les priorités du Product Owner.
+
+1. **Étape 1 — Archivage des Tâches Livrées :**  
+   Basculez les tâches achevées du Sprint 1 depuis `issues/issues-open.md` vers le registre d'archivage `issues/issues-closes.md` avec mention de la date de clôture et du commit de validation.
+
+2. **Étape 2 — Actualisation du Statut de la User Story :**  
+   Dans `scrum/product-backlog.md`, passez l'élément US-01 (*« En tant qu'apprenant ou recruteur, je veux consulter la page détaillée d'un article... »*) à l'état formel `Terminé (Done)`.
+
+3. **Étape 3 — Préparation et Réordonnancement du Sprint 2 :**  
+   - Intégrez les retours formulés par le Product Owner lors de la démonstration.
+   - Spécifiez les critères d'acceptation préliminaires pour les prochaines User Stories prioritaires du Sprint 2 (Phase de Design Thinking, formulaires d'articles et transition vers la base de données relationnelle).
+   - Réestimez les Story Points selon l'échelle de Fibonacci si des incertitudes techniques ont été levées.
 
 ## 3. Livrables & Critères de Réussite
-- **Livrable attendu :** Fichier `scrum/product-backlog.md` actualisé sur la branche `sprint1`.
+- **Livrables attendus :**
+  - Carnet de produit actualisé : `scrum/product-backlog.md` sur la branche `sprint1`.
+  - Registre des tâches archivées : `issues/issues-closes.md` sur la branche `sprint1`.
 - **Critères de validation :**
-  - [ ] Les éléments livrés sont archivés comme terminés.
-  - [ ] Le backlog est ordonné pour la prochaine séance de Sprint Planning.
+  - [ ] La User Story US-01 est marquée comme terminée dans le Product Backlog.
+  - [ ] Les tâches de réalisation du Sprint 1 sont archivées dans `issues/issues-closes.md`.
+  - [ ] Les priorités pour le Sprint 2 sont clairement ordonnées.

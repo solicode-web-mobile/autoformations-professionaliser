@@ -20,27 +20,29 @@ data_js: ""
 data_php: ""
 ---
 
-## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.2 — Contrôleur HTTP.
-- **Branche Git :** `sprint1`
-- **Stack mobilisée :** Pattern MVC, Contrôleur HTTP Laravel, Directives Blade itératives.
+## 1. Travail à faire
+Effectuer les recherches documentaires nécessaires, concevoir une fiche de synthèse personnelle et préparer un diaporama de restitution Marp expliquant le rôle coordinateur du contrôleur HTTP dans le modèle MVC, les avantages d'extraire la logique de traitement hors des fichiers de routes, la commande de génération Artisan et la restitution dynamique de collections de données via les directives itératives Blade.
 
-## 2. Travail à Faire (Ce que l'Apprenant Doit Produire)
-Effectuer les recherches nécessaires et formaliser une fiche de synthèse expliquant le rôle du contrôleur dans le découpage MVC, l'intérêt d'extraire la logique hors des routes, et l'usage des directives Blade pour afficher des collections de données.
+## 2. Notions fondamentales
+- **Rôle du Contrôleur HTTP dans l'Architecture MVC :**
+  - Le contrôleur agit comme un chef d'orchestre : il réceptionne la requête entrante (`Request`), orchestre les actions requises, prépare les données et retourne une réponse (`Response` ou vue).
+  - Il élimine les closures anonymes complexes dans `routes/web.php` pour garantir la lisibilité et la testabilité du code.
+- **Génération par la CLI Artisan :**
+  - Commande standard de scaffolding : `php artisan make:controller Public/ArticleController`.
+  - La classe générée hérite de `App\Http\Controllers\Controller` et prend place sous `app/Http/Controllers/Public/`.
+- **Transmission de Données vers la Vue Blade :**
+  - Utilisation du helper `view('articles.index', compact('articles'))` ou transmission par tableau associatif `view('articles.index', ['articles' => $articles])`.
+  - La variable `$articles` devient immédiatement accessible dans le gabarit Blade correspondant sous `resources/views/articles/index.blade.php`.
+- **Directives de Boucle Blade :**
+  - Directive `@foreach ($articles as $article) ... @endforeach` pour itérer sur une collection.
+  - Directive résiliente `@forelse ($articles as $article) ... @empty ... @endforelse` : affiche automatiquement le bloc alternatif `@empty` lorsqu'aucun élément n'est présent dans la collection, évitant les erreurs de variables indéfinies.
 
-## 3. Répartition Didactique (Règle des 20/80)
+## 3. Recherches à effectuer
+- Analyser la différence conceptuelle entre un contrôleur conventionnel à actions multiples et un contrôleur à action unique (*Single Action Controller* implémentant la méthode magique `__invoke`).
+- Étudier les méthodes utilitaires de la classe `Illuminate\Support\Collection` de Laravel pour trier, filtrer et transformer des données tabulaires avant transmission à la vue.
+- Examiner comment passer des paramètres d'URL nommés aux actions de contrôleur.
 
-### Les 20% fournis directement au tutoriel :
-- **Rôle du Contrôleur HTTP :** Agir comme coordinateur entre la requête entrante et la vue. Il élimine le code métier des fichiers de routage (`routes/web.php`), prépare les données et retourne une `Response`.
-- **Scaffolding Artisan :** Commande `php artisan make:controller Public/CategoryController` pour générer une classe standard dans `app/Http/Controllers/`.
-- **Passage de variables à la vue :** Utilisation de la fonction helper `view('categories.index', compact('categories'))` ou d'un tableau associatif clé-valeur.
-- **Directives itératives Blade :**
-  - `@foreach ($items as $item) ... @endforeach` pour boucler sur une collection.
-  - `@forelse ($items as $item) ... @empty ... @endforelse` pour gérer de manière robuste l'affichage alternatif lorsque la collection est vide.
-
-### Les 80% recherchés par l'apprenant :
-- Différence architecturale entre un contrôleur conventionnel (avec plusieurs méthodes d'action) et un contrôleur à action unique (*Single Action Controller* utilisant `__invoke`).
-- Manipulation fluide des collections PHP / Laravel pour trier et filtrer les données avant affichage.
-
-## 4. Livrable Attendu
-- Fiche de synthèse sur les contrôleurs MVC intégrée dans le journal d'apprentissage personnel de l'apprenant.
+## 4. Livrable attendu
+- **Fiche technique de synthèse :** `tutoriels/laravel/controleur-vue/requete-action-http/requete-action-http.md` sur la branche `sprint1`.
+- **Diaporama Marp de restitution :** `tutoriels/laravel/controleur-vue/requete-action-http/presentation-requete-action-http.md` sur la branche `sprint1`.
+- **Contenu attendu :** Synthèse personnelle structurée reprenant les notions fondamentales (contrôleurs MVC, Artisan make:controller, directives Blade `@forelse`) et les réponses argumentées aux recherches à effectuer.

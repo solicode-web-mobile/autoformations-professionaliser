@@ -20,19 +20,40 @@ data_js: ""
 data_php: ""
 ---
 
-## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase B — Analyse, Conception & Planification / Étape 3.1 — Rédaction ADR & Séquence.
-- **Branche Git :** `sprint1`
-- **Fichiers modifiés ou créés :** `livrables/architecture/architecture-sprint1.md`
-- **Stack mobilisée :** Architecture 2 couches, Mermaid.js (sequenceDiagram), ADR-01.
+## 1. Travail à faire
+Formaliser la décision stratégique d'architecture logicielle pour le premier sprint du *Blog des Lauréats* sous le formalisme standardisé ADR-01, et modéliser le parcours complet de la requête HTTP en syntaxe déclarative Mermaid.js (`sequenceDiagram`).
 
-## 2. Travail à Faire (Projet d'Imitation)
-Bâtir le livrable d'architecture en respectant ces jalons :
-1. **Rédaction de l'ADR-01 :** Documenter le choix de l'architecture 2 couches avec persistance tabulaire CSV (`database/data/articles.csv`) pour amorcer le Sprint 1 sans dépendance SGBD.
-2. **Analyse d'Impact & Conséquences :** Lister les bénéfices (rapidité d'amorçage, simplicité, testabilité) et les contraintes acceptées (pas de transactions SQL, volumétrie limitée).
-3. **Modélisation de la Séquence HTTP :** Rédiger le diagramme `sequenceDiagram` décrivant l'enchaînement : Client $\to$ `routes/web.php` $\to$ `ArticleController` $\to$ `ArticleService` $\to$ Vue Blade (cas nominal 200 et cas d'exception 404).
+Vous devez concevoir :
+1. Le document d'architecture opposable : `adr-01-architecture-2-couches.md`.
+2. Le fichier source Mermaid de séquence HTTP : `sequence-http.mmd`.
+3. Le diaporama Marp de restitution technique : `presentation-decision-adr-sequence.md`.
 
-## 3. Critères de Validation
-- [ ] Le fichier `livrables/architecture/architecture-sprint1.md` existe et adopte le formalisme canonique ADR sur la branche `sprint1`.
-- [ ] Le diagramme de séquence Mermaid compile sans avertissement et illustre le cas nominal ainsi que l'exception 404.
-- [ ] L'isolation entre contrôleur mince et classe service est formellement garantie.
+## 2. Consignes & Spécifications de Réalisation
+
+1. **Jalon 1 — Rédaction de l'ADR-01 :**  
+   Rédigez l'Architecture Decision Record en appliquant la structure canonique à 6 sections :
+   - *Titre :* ADR-01 — Architecture découplée en 2 couches et persistance tabulaire transitoire CSV.
+   - *Statut :* Accepté.
+   - *Contexte :* Objectif d'amorçage rapide du Sprint 1, livraison prioritaire de la consultation sans dépendance d'infrastructure SGBD.
+   - *Décision :* Découplage strict entre `ArticleController` (orchestrateur HTTP mince) et `ArticleService` (extraction des données depuis `database/data/articles.csv`).
+   - *Conséquences :* Testabilité unitaire immédiate, légèreté du projet, absence de migrations relationnelles en S1, transition transparente vers MySQL au Sprint 2.
+   - *Alternatives écartées :* Justification de l'abandon du modèle monolithique ("Fat Controller") et de l'installation prématurée d'une base MySQL.
+
+2. **Jalon 2 — Modélisation du Flux HTTP en Diagramme de Séquence :**  
+   En syntaxe déclarative Mermaid `sequenceDiagram`, modélisez les deux scénarios d'exécution :
+   - *Scénario nominal (HTTP 200) :* Navigateur $\to$ `routes/web.php` $\to$ `ArticleController::show($id)` $\to$ `ArticleService::find($id)` $\to$ lecture CSV $\to$ retour tableau associatif $\to$ contrôleur instancie la vue Blade $\to$ retour page HTML 200 au navigateur.
+   - *Scénario d'exception (HTTP 404) :* `ArticleService::find($id)` renvoie `null` $\to$ `ArticleController` déclenche `abort(404)` $\to$ Kernel intercepte l'exception $\to$ rendu de `errors/404.blade.php` $\to$ réponse HTTP 404 au navigateur.
+
+3. **Jalon 3 — Restitution Marp :**  
+   Concevez `presentation-decision-adr-sequence.md` au format Marp Markdown pour présenter oralement l'arbitrage architectural et le diagramme de séquence aux parties prenantes.
+
+## 3. Livrables & Critères de validation
+- **Livrables attendus :**
+  - Document ADR : `tutoriels/architecture/deux-couches/decision-adr-sequence/adr-01-architecture-2-couches.md` sur la branche `sprint1`.
+  - Diagramme Mermaid : `tutoriels/architecture/deux-couches/decision-adr-sequence/sequence-http.mmd` sur la branche `sprint1`.
+  - Diaporama Marp : `tutoriels/architecture/deux-couches/decision-adr-sequence/presentation-decision-adr-sequence.md` sur la branche `sprint1`.
+- **Critères de validation :**
+  - [ ] Le document ADR-01 respecte la structure à 6 sections sans omission.
+  - [ ] Le diagramme de séquence Mermaid compile sans avertissement et explicite le cas nominal ainsi que l'interception de l'erreur 404.
+  - [ ] L'isolation entre le contrôleur mince et la classe service est formellement démontrée.
+  - [ ] Le diaporama Marp respecte les règles didactiques (zéro tableau Markdown).

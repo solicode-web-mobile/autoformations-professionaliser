@@ -20,25 +20,29 @@ data_js: ""
 data_php: ""
 ---
 
-## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.3 — Automatisation Backend.
-- **Branche Git :** `sprint1`
-- **Fichiers modifiés ou créés :** `livrables/ia/prompts/prompt-back-end.prompt.md`
+## 1. Travail à faire
+Concevoir et tester le prompt d'ingénierie réutilisable nommé `prompt-back-end.prompt.md` selon la méthode RIO.
 
-## 2. Travail à Faire
-Concevoir dans `livrables/ia/prompts/prompt-back-end.prompt.md` le prompt d'ingénierie réutilisable permettant à un agent IA de générer l'ensemble de la couche backend d'une entité (Service, Contrôleur avec injection IoC, Route et gestion 404).
+Ce prompt est un composant agentique réutilisable permettant à un Agent IA de générer automatiquement la couche backend complète pour n'importe quelle entité métier du Projet Fil Rouge : classe Service avec lecture de données, contrôleur HTTP mince avec injection IoC, routage paramétré et déclenchement d'erreur 404.
 
-## 3. Missions Concrètes Réalisées par le Prompt
-1. Générer la classe Service métier encapsulant l'accès aux données tabulaires avec typage strict PHP 8.3 (`?array`).
-2. Générer le contrôleur HTTP mince avec injection de dépendances IoC et déclenchement d'erreur `abort(404)`.
+## 2. Missions Concrètes Réalisées par le Prompt
+1. Générer la classe Service métier encapsulant l'accès aux données tabulaires avec typage strict PHP 8.3 (`?array`, `array`).
+2. Générer le contrôleur HTTP mince avec injection de dépendances IoC par le constructeur et déclenchement d'erreur `abort(404)`.
 3. Déclarer la route web paramétrée avec contrainte numérique `whereNumber()` et nommage explicite `name(...)`.
 
-## 4. Cahier des Charges du Prompt (Méthode RIO)
-- **Rôle :** Développeur Backend Laravel 12 senior expert en Clean Code et conteneur IoC.
-- **Instruction :** Prendre en entrée les spécifications d'une entité métier `[ENTITE_METIER]` et générer le code PHP complet (Service, Contrôleur, Route) sans omission de typage.
-- **Output :** Fichiers PHP complets avec chemins stricts.
-- **Contraintes Négatives :** Zéro logique de persistance dans le contrôleur ; interdiction de retourner des tableaux non typés.
+## 3. Cahier des Charges du Prompt (Méthode RIO)
+- **Rôle (Persona) :** Développeur Backend Laravel 12 senior expert en Clean Code, conteneur IoC et principes SOLID.
+- **Instruction (Contexte & Tâche) :** Prendre en entrée les champs et spécifications d'une entité métier `[ENTITE_METIER]` et générer le code PHP backend complet (Service, Contrôleur, Route) sans omission de typage.
+- **Output (Format de sortie) :** Fichiers PHP complets avec chemins stricts et balises ```` ```php ````.
+- **Contraintes Négatives :**
+  - Zéro logique de persistance ou de lecture de fichiers dans le contrôleur.
+  - Interdiction de retourner des tableaux associatifs sans typage explicite.
+  - Zéro bavardage conversationnel.
 
-## 5. Critères de Validation
-- [ ] Le fichier `livrables/ia/prompts/prompt-back-end.prompt.md` est testé et validé sur la branche `sprint1`.
-- [ ] Le code backend produit s'exécute sans erreur de syntaxe ni avertissement de typage.
+## 4. Livrables & Critères de validation
+- **Livrable attendu :**
+  - Fichier de prompt réutilisable : `tutoriels/laravel/tranche-verticale/prompt-backend/prompt-back-end.prompt.md` sur la branche `sprint1`.
+- **Critères de validation :**
+  - [ ] Le prompt est rédigé selon la méthode RIO avec contraintes négatives explicites.
+  - [ ] Testé sur une nouvelle entité métier (ex : Réalisation, Film), il génère un code PHP backend syntaxiquement valide et prêt à l'emploi.
+  - [ ] La séparation stricte entre contrôleur mince et classe service est garantie.

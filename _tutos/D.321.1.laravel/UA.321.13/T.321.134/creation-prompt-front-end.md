@@ -20,26 +20,40 @@ data_js: ""
 data_php: ""
 ---
 
-## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.4 — Automatisation Frontend & Évaluation.
-- **Branche Git :** `sprint1`
-- **Fichiers modifiés ou créés :** `livrables/ia/prompts/prompt-front-end.prompt.md`
+## 1. Travail à faire
+1. Concevoir et tester le prompt d'ingénierie réutilisable nommé `prompt-front-end.prompt.md` selon la méthode RIO pour automatiser la génération des interfaces Blade responsives.
+2. Réaliser une simulation chronométrée d'entraînement à l'épreuve certificative de Live Coding (coder la tranche verticale complète en moins de 40 minutes en totale autonomie).
 
-## 2. Travail à Faire
-1. **Création du Prompt Frontend :** Concevoir dans `livrables/ia/prompts/prompt-front-end.prompt.md` le prompt d'ingénierie réutilisable permettant à un agent IA de générer l'ensemble de la couche frontend d'une entité (layout maître Blade, vue de détail responsive et gabarit 404).
-2. **Entraînement au Live Coding (40 minutes chrono) :** S'entraîner à reproduire l'implémentation complète de la tranche verticale sur une nouvelle entité sans aide extérieure, en validant l'ensemble des 7 critères de la DoD.
+Vous devez concevoir :
+1. Le fichier de prompt réutilisable : `prompt-front-end.prompt.md`.
+2. Le compte-rendu d'entraînement au Live Coding : `prompt-frontend.md`.
 
-## 3. Missions Concrètes Réalisées par le Prompt Frontend
+## 2. Missions Concrètes Réalisées par le Prompt Front-End
 1. Générer le layout maître Blade responsive avec navigation et pied de page Tailwind CSS.
-2. Générer la vue de consultation détaillée de l'entité héritant du layout maître via `@extends` et `@section`.
+2. Générer la vue de consultation détaillée d'une entité héritant du layout maître via `@extends` et `@section`.
 3. Générer la vue d'erreur 404 personnalisée.
 
-## 4. Cahier des Charges du Prompt (Méthode RIO)
-- **Rôle :** Développeur Frontend Laravel 12 & Designer Tailwind CSS senior.
-- **Instruction :** Prendre en entrée les champs d'une entité `[ENTITE_METIER]` et générer le gabarit maître, la vue de consultation responsive et la page 404.
-- **Output :** Fichiers Blade complets et stylisés sous Tailwind CSS.
-- **Contraintes Négatives :** Zéro CSS inline, utiliser exclusivement les classes utilitaires Tailwind ; mise en page obligatoirement mobile-first.
+## 3. Cahier des Charges du Prompt (Méthode RIO)
+- **Rôle (Persona) :** Développeur Frontend Laravel 12 & Designer Tailwind CSS senior.
+- **Instruction (Contexte & Tâche) :** Prendre en entrée les champs d'une entité métier `[ENTITE_METIER]` et générer le gabarit maître, la vue de consultation responsive et la page 404.
+- **Output (Format de sortie) :** Fichiers Blade complets et stylisés sous Tailwind CSS.
+- **Contraintes Négatives :**
+  - Zéro CSS inline (`style="..."`). Utiliser exclusivement les classes utilitaires Tailwind CSS.
+  - Mise en page obligatoirement mobile-first.
+  - Zéro bavardage conversationnel.
 
-## 5. Critères de Validation
-- [ ] Le prompt `prompt-front-end.prompt.md` est consigné dans `livrables/ia/prompts/` sur la branche `sprint1`.
-- [ ] La simulation d'épreuve de Live Coding est réussie en moins de 40 minutes avec les 7 critères de la DoD validés.
+## 4. Protocole d'Entraînement au Live Coding (40 Minutes Chrono)
+Pour valider l'épreuve individuelle (65% de la note certificative) :
+1. *Chrono 00–10 min :* Coder `RealisationService::find($id)` et déclarer la route paramétrée.
+2. *Chrono 10–20 min :* Développer le contrôleur mince `RealisationController` avec injection IoC et `abort(404)`.
+3. *Chrono 20–35 min :* Composer le layout maître Blade et la vue détaillée `show.blade.php`.
+4. *Chrono 35–40 min :* Vérifier les scénarios nominal (200) et d'erreur (404) sur le navigateur.
+
+## 5. Livrables & Critères de validation
+- **Livrables attendus :**
+  - Fichier de prompt : `tutoriels/laravel/tranche-verticale/prompt-frontend/prompt-front-end.prompt.md` sur la branche `sprint1`.
+  - Compte-rendu d'entraînement : `tutoriels/laravel/tranche-verticale/prompt-frontend/prompt-frontend.md` sur la branche `sprint1`.
+- **Critères de validation :**
+  - [ ] Le prompt `prompt-front-end.prompt.md` génère des vues Blade valides sans CSS inline.
+  - [ ] L'entraînement au Live Coding est réussi en moins de 40 minutes sans aucune assistance extérieure.
+  - [ ] L'ensemble des 7 critères de la DoD est validé lors de la simulation.

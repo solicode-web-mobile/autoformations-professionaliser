@@ -20,19 +20,40 @@ data_js: ""
 data_php: ""
 ---
 
-## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase B — Analyse, Conception & Planification / Étape 2.1 — Frontières Système & Contexte.
-- **Branche Git :** `sprint1`
-- **Fichiers modifiés ou créés :** `livrables/uml/diagramme-contexte.mmd`
-- **Stack mobilisée :** Mermaid.js, Syntaxe déclarative Markdown, Diagramme de contexte système.
+## 1. Travail à faire
+Délimiter les frontières fonctionnelles du *Blog des Lauréats* et modéliser en syntaxe déclarative Mermaid.js son diagramme de contexte système, à partir des acteurs et du périmètre contractualisés lors du cadrage (`UA.351.21`).
 
-## 2. Travail à Faire (Projet d'Imitation)
-Bâtir le diagramme de contexte système en respectant ces jalons :
-1. **Identification des Acteurs :** Recenser au moins 2 profils d'utilisateurs humains primaires (Lecteur public, Lauréat), les acteurs secondaires (Modérateur, PO) et les services tiers (GitHub / Hébergement).
-2. **Définition de la Boîte Noire :** Placer le *Blog des Lauréats* au centre du modèle.
-3. **Modélisation des Flux :** Relier chaque acteur au système central avec des flux orientés et nommés explicitement en syntaxe `graph LR`.
+Vous devez concevoir :
+1. Le fichier source Mermaid du diagramme de contexte : `diagramme-contexte.mmd`.
+2. La fiche technique d'analyse de contexte : `modelisation-systeme.md`.
+3. Le diaporama Marp de restitution technique : `presentation-modelisation-systeme.md`.
 
-## 3. Critères de Validation
-- [ ] Le fichier `livrables/uml/diagramme-contexte.mmd` est présent et versionné sur la branche `sprint1`.
-- [ ] La frontière système est clairement matérialisée (aucun flux direct entre deux acteurs externes).
-- [ ] Le diagramme s'affiche sans erreur de rendu sous Mermaid.
+## 2. Consignes & Spécifications de Réalisation
+
+1. **Jalon 1 — Identification des Acteurs Externes :**  
+   Recensez les profils d'utilisateurs humains identifiés lors du cadrage :
+   - *Acteurs primaires :* L'Apprenant ou le Visiteur public (consommateur des articles en S1) et le Lauréat (futur rédacteur d'articles).
+   - *Acteur secondaire :* Le Modérateur (supervision des contenus).
+   - *Système tiers :* Le service d'hébergement ou dépôt Git.
+
+2. **Jalon 2 — Modélisation de la Boîte Noire Système :**  
+   Positionnez le *Blog des Lauréats* au centre du modèle en tant que boîte noire. Le diagramme de contexte ne détaille pas la cuisine interne de l'application (pas de classes, pas de bases de données internes).
+
+3. **Jalon 3 — Définition des Flux Orientés :**  
+   Reliez chaque acteur au système central avec des flux orientés et nommés explicitement en syntaxe Mermaid `graph LR` (consultation d'un article, lecture des profils, soumission de réalisations).  
+   *Règle d'or :* Il est strictement interdit d'établir un flux direct entre deux acteurs externes ; tout échange transite obligatoirement par le système central.
+
+4. **Jalon 4 — Préparation du Diaporama Marp :**  
+   Concevez le diaporama `presentation-modelisation-systeme.md` au format Marp Markdown pour présenter oralement les frontières de l'application et justifier les flux modélisés.
+
+## 3. Livrables & Critères de validation
+- **Livrables attendus :**
+  - Diagramme Mermaid : `tutoriels/uml/diagramme-contexte/modelisation-systeme/diagramme-contexte.mmd` sur la branche `sprint1`.
+  - Fiche technique : `tutoriels/uml/diagramme-contexte/modelisation-systeme/modelisation-systeme.md` sur la branche `sprint1`.
+  - Diaporama Marp : `tutoriels/uml/diagramme-contexte/modelisation-systeme/presentation-modelisation-systeme.md` sur la branche `sprint1`.
+- **Critères de validation :**
+  - [ ] Le fichier `diagramme-contexte.mmd` est syntaxiquement valide sous Mermaid.js en orientation `graph LR`.
+  - [ ] La frontière système est clairement matérialisée avec le Blog des Lauréats au centre.
+  - [ ] Les acteurs primaires (*Lauréat*, *Apprenant/Visiteur*) et secondaires sont fidèlement représentés.
+  - [ ] Aucun flux direct ne relie deux acteurs externes.
+  - [ ] Le diaporama Marp respecte les standards de présentation Solicode (zéro tableau Markdown).

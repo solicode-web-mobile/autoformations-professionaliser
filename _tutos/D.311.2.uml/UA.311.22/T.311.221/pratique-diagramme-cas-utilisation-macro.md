@@ -20,19 +20,41 @@ data_js: ""
 data_php: ""
 ---
 
-## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase B — Analyse, Conception & Planification / Étape 2.4 — Cartographie des Cas d'Utilisation Macro.
-- **Branche Git :** `sprint1`
-- **Fichiers modifiés ou créés :** `livrables/uml/use-cases-macro.mmd`
-- **Stack mobilisée :** Mermaid.js, Use Cases UML, Relations structurelles (`<<include>>`, `<<extend>>`).
+## 1. Travail à faire
+Cartographier l'ensemble des cas d'utilisation macro du *Blog des Lauréats* sous forme de diagramme UML en syntaxe déclarative Mermaid.js, puis isoler et spécifier le cas d'usage central retenu pour le premier sprint : **« Consulter un article de blog »**.
 
-## 2. Travail à Faire (Projet d'Imitation)
-Bâtir le diagramme de cas d'utilisation macro en respectant ces jalons :
-1. **Cartographie des 15 UCs :** Identifier les cas d'utilisation couvrant l'espace public (consultation, lecture), l'espace lauréat (rédaction, publication) et la modération.
-2. **Association Acteurs-UCs :** Relier chaque acteur à ses cas d'utilisation respectifs.
-3. **Formalisation des Relations Structurelles :** Positionner les dépendances obligatoires (`<<include>>`) et conditionnelles (`<<extend>>`).
+Vous devez concevoir :
+1. Le fichier source Mermaid des cas d'utilisation : `use-cases-macro.mmd`.
+2. La fiche technique d'analyse fonctionnelle : `modelisation-macro.md`.
+3. Le diaporama Marp de restitution technique : `presentation-modelisation-macro.md`.
 
-## 3. Critères de Validation
-- [ ] Le fichier `livrables/uml/use-cases-macro.mmd` est versionné sur la branche `sprint1`.
-- [ ] L'ensemble des 15 cas d'utilisation de l'application y figurent de manière lisible.
-- [ ] La syntaxe Mermaid `graph TD` est propre et sans avertissement.
+## 2. Consignes & Spécifications de Réalisation
+
+1. **Jalon 1 — Cartographie des 15 Cas d'Utilisation Macro :**  
+   Identifiez les fonctionnalités visibles du système sans sur-segmentation technique :
+   - *Espace Public (Visiteur / Apprenant) :* Consulter l'accueil, lister les articles, consulter un article en détail, filtrer par catégorie, rechercher un lauréat.
+   - *Espace Lauréat (Auteur) :* Rédiger un article, modifier son brouillon, publier un article, gérer son profil public.
+   - *Espace Modération :* Valider une publication, suspendre un article, gérer les signalements.
+
+2. **Jalon 2 — Modélisation des Relations Structurelles :**  
+   Reliez chaque acteur à ses fonctionnalités respectives et appliquez rigoureusement les stéréotypes UML :
+   - Relation d'inclusion obligatoire `<<include>>` (ex : *Consulter un article* inclut obligatoirement *Afficher les détails de l'auteur*).
+   - Relation d'extension optionnelle ou conditionnelle `<<extend>>` (ex : *Partager sur les réseaux* étend conditionnellement *Consulter un article*).
+
+3. **Jalon 3 — Isolation du Cas d'Usage Central du Sprint 1 :**  
+   Isolez formellement le cas d'usage cible du premier incrément logiciel : **« Consulter un article de blog »** avec ses critères d'acceptation nominaux (affichage des métadonnées, titre, contenu) et d'exception (interception d'une ressource absente). Cette spécification servira d'entrée directe à la séance de Sprint Planning (`UA.351.22`).
+
+4. **Jalon 4 — Restitution Marp :**  
+   Concevez `presentation-modelisation-macro.md` au format Marp Markdown pour présenter la cartographie fonctionnelle de l'application et la justification du cas prioritaire du Sprint 1.
+
+## 3. Livrables & Critères de validation
+- **Livrables attendus :**
+  - Diagramme Mermaid : `tutoriels/uml/cas-utilisation/modelisation-macro/use-cases-macro.mmd` sur la branche `sprint1`.
+  - Fiche technique : `tutoriels/uml/cas-utilisation/modelisation-macro/modelisation-macro.md` sur la branche `sprint1`.
+  - Diaporama Marp : `tutoriels/uml/cas-utilisation/modelisation-macro/presentation-modelisation-macro.md` sur la branche `sprint1`.
+- **Critères de validation :**
+  - [ ] Le fichier `use-cases-macro.mmd` compile sans erreur en orientation `graph TD`.
+  - [ ] Les 15 cas d'utilisation macro couvrent l'ensemble des besoins du blog sans micro-actions techniques.
+  - [ ] Les relations structurelles `<<include>>` et `<<extend>>` sont correctement orientées.
+  - [ ] Le cas d'usage central *Consulter un article de blog* est isolé avec clarté.
+  - [ ] Le diaporama Marp respecte les règles de lisibilité (zéro tableau Markdown).

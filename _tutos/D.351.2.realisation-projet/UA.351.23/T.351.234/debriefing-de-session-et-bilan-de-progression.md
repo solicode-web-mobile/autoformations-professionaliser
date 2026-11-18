@@ -21,19 +21,34 @@ data_php: ""
 ---
 
 ## 1. Objectif Opérationnel & Prérequis
-- **Position dans le flux :** Phase D — Clôture de Sprint, Rétrospective & Bilan / Étape 5.4 — Débriefing Individuel.
+- **Position dans le flux :** Phase D — Clôture de Sprint, Rétrospective & Bilan / Étape 12.4 — Débriefing Individuel.
 - **Branche Git :** `sprint1`
-- **Fichiers modifiés ou créés :** `scrum/bilan-s1.md`
-- **Objectif :** Dresser le bilan individuel et réflexif d'acquisition des compétences sur l'ensemble de la Session S01.
-- **Prérequis :** Épreuve de Live Coding réussie et cérémonies de sprint clôturées.
+- **Fichiers modifiés ou créés :** `scrum/bilan-s1.md`.
+- **Objectif :** Dresser le bilan individuel d'acquisition des compétences sur l'ensemble de la Session S01 et analyser sa performance lors de l'épreuve de Live Coding (40 minutes).
+- **Prérequis :** Épreuve de Live Coding réalisée et cérémonies de clôture achevées.
 
 ## 2. Déroulement Pas-à-Pas de la Tâche
-1. **Étape 1 — Auto-Évaluation des Compétences :** Renseigner sa maîtrise sur les 5 compétences du sprint ($C.311, C.312, C.321, C.325, C.351$).
-2. **Étape 2 — Analyse de l'Épreuve de Live Coding :** Identifier la fluidité d'exécution sur le temps imparti de 40 minutes et cibler les axes techniques à consolider.
-3. **Étape 3 — Clôture du Bilan :** Renseigner le document `scrum/bilan-s1.md`.
+
+1. **Étape 1 — Auto-Évaluation Critique des Compétences du Sprint :**  
+   Évaluez votre niveau d'autonomie (Débutant, Guidé, Autonome, Expert) sur chacune des 5 compétences mobilisées :
+   - `C.311` : Analyser et modéliser les besoins logiciels avec UML et Mermaid.js.
+   - `C.312` : Concevoir l'architecture logicielle découplée en deux couches et formaliser l'ADR.
+   - `C.321` : Développer une application Web avec Laravel 12 (routes, contrôleur, Blade).
+   - `C.325` : Concevoir des Agents IA et développer des Skills modulaires (méthode RIO).
+   - `C.351` : Piloter un projet avec Scrum, animer les cérémonies et tenir les carnets de tâches.
+
+2. **Étape 2 — Bilan Docimologique du Live Coding (40 Minutes) :**  
+   - Analysez le temps réel d'exécution pour produire la tranche verticale sans assistance.
+   - Ciblez les points d'hésitation ou de blocage (syntaxe de route, injection IoC, directives Blade).
+   - Formulez les axes d'entraînement personnel pour sécuriser la rapidité et la propreté du code.
+
+3. **Étape 3 — Rédaction du Document de Bilan :**  
+   Consignez l'ensemble des réflexions et engagements d'apprentissage dans `scrum/bilan-s1.md`.
 
 ## 3. Livrables & Critères de Réussite
-- **Livrable attendu :** Fiche de bilan `scrum/bilan-s1.md` sur la branche `sprint1`.
+- **Livrable attendu :**
+  - Fiche de bilan individuel : `scrum/bilan-s1.md` sur la branche `sprint1`.
 - **Critères de validation :**
-  - [ ] La grille d'auto-évaluation est complétée avec rigueur et esprit critique.
-  - [ ] Les axes de progression personnelle pour la Session S02 sont formulés.
+  - [ ] La grille d'auto-évaluation sur les 5 compétences est complétée avec honnêteté intellectuelle.
+  - [ ] L'analyse du Live Coding 40 minutes est objectivement documentée.
+  - [ ] Les engagements d'apprentissage pour la Session S02 sont formulés.

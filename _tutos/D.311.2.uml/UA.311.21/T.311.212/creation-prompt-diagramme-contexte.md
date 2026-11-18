@@ -1,7 +1,7 @@
 ---
 layout: tuto
 title: "Création du prompt-diagramme-contexte"
-sous_titre: "Concevoir le prompt prompt-diagramme-contexte pour automatiser la modélisation du contexte système"
+sous_titre: "Concevoir le prompt d'ingénierie prompt-diagramme-contexte pour automatiser la modélisation du contexte système"
 slug: "prompt-generation"
 slug_domaine: "uml"
 slug_ua: "diagramme-contexte"
@@ -20,25 +20,30 @@ data_js: ""
 data_php: ""
 ---
 
-## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** Phase B — Analyse, Conception & Planification / Étape 2.1 — Automatisation du Contexte.
-- **Branche Git :** `sprint1`
-- **Fichiers modifiés ou créés :** `livrables/ia/prompts/prompt-diagramme-contexte.prompt.md`
+## 1. Travail à faire
+Concevoir et tester le prompt d'ingénierie réutilisable nommé `prompt-diagramme-contexte.prompt.md` selon la méthode RIO.
 
-## 2. Travail à Faire
-Concevoir dans `livrables/ia/prompts/prompt-diagramme-contexte.prompt.md` le prompt d'ingénierie réutilisable permettant à un agent IA de générer le diagramme de contexte Mermaid pour n'importe quelle application métier.
+Ce prompt est un composant agentique réutilisable permettant à un Agent IA de générer automatiquement le diagramme de contexte Mermaid (`graph LR`) pour n'importe quelle application métier lors du Projet Fil Rouge.
 
-## 3. Missions Concrètes Réalisées par le Prompt
-1. Analyser la description textuelle d'une application métier et en extraire les acteurs primaires, secondaires et systèmes tiers.
-2. Déterminer les frontières fonctionnelles et les flux d'échange bidirectionnels.
-3. Générer le code source Mermaid.js (`graph LR`) prêt à être intégré dans un fichier `.mmd`.
+## 2. Missions Concrètes Réalisées par le Prompt
+1. Analyser la description fonctionnelle textuelle d'une application métier `[THEME_APPLICATION]`.
+2. Identifier les acteurs primaires, les acteurs secondaires et les systèmes tiers.
+3. Délimiter les frontières de la boîte noire système et formaliser les flux d'échange bidirectionnels.
+4. Produire le code source Mermaid.js (`graph LR`) directement prêt à être injecté dans un fichier `.mmd`.
 
-## 4. Cahier des Charges du Prompt (Méthode RIO)
-- **Rôle :** Analyste système senior expert en modélisation fonctionnelle et Mermaid.js.
-- **Instruction :** Prendre en entrée la description de l'application métier `[THEME_APPLICATION]` et déduire les acteurs externes, les systèmes tiers et les flux d'échange pour produire le bloc `graph LR`.
-- **Output :** Bloc de code Mermaid pur directement intégrable dans un fichier `.mmd`.
-- **Contraintes Négatives :** Zéro explication textuelle avant ou après le bloc Mermaid.
+## 3. Cahier des Charges du Prompt (Méthode RIO)
+- **Rôle (Persona) :** Analyste système senior expert en modélisation fonctionnelle et syntaxe déclarative Mermaid.js.
+- **Instruction (Contexte & Tâche) :** Prendre en entrée la description de l'application métier cible et construire le diagramme de contexte en respectant rigoureusement les conventions UML (système au centre, acteurs autour, flux orientés et nommés).
+- **Output (Format de sortie) :** Bloc de code Mermaid pur débutant par `graph LR`.
+- **Contraintes Négatives :**
+  - Interdiction d'ajouter du texte d'introduction, de conclusion ou de bavardage conversationnel.
+  - Interdiction de relier directement deux acteurs externes entre eux.
+  - Zéro tableau Markdown dans la restitution.
 
-## 5. Critères de Validation
-- [ ] Le prompt est testé et sauvegardé dans `livrables/ia/prompts/prompt-diagramme-contexte.prompt.md` sur la branche `sprint1`.
-- [ ] Il génère un diagramme de contexte syntaxiquement valide en syntaxe `graph LR`.
+## 4. Livrables & Critères de validation
+- **Livrable attendu :**
+  - Fichier de prompt réutilisable : `tutoriels/uml/diagramme-contexte/prompt-generation/prompt-diagramme-contexte.prompt.md` sur la branche `sprint1`.
+- **Critères de validation :**
+  - [ ] Le prompt est rédigé selon le formalisme RIO avec ses contraintes négatives explicites.
+  - [ ] Testé avec un exemple d'application métier (ex : Plateforme Cinéma), il génère un bloc Mermaid `graph LR` syntaxiquement valide.
+  - [ ] Le code produit s'intègre directement sans retouche manuelle.
