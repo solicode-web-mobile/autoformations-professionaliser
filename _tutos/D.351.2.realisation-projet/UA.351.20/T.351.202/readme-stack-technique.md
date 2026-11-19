@@ -138,7 +138,7 @@ Ce projet s'appuie sur la méthode par imitation pour guider l'apprenant pas à 
 ## 3. Stack technique et Architecture
 - **Framework Backend** : Laravel 12 (PHP).
 - **Architecture logicielle** : Architecture en 2 couches (Contrôleur mince -> Classe Service).
-- **Frontend & Vues** : Gabarits Blade responsives, HTML5, CSS3, JavaScript.
+- **Frontend & Vues** : Alpine.js (SPA, composants réactifs), gabarits Blade responsives, HTML5, CSS3, Tailwind CSS.
 - **Base de données** : MySQL.
 - **Modélisation** : Diagramme de contexte et cas d'utilisation avec Mermaid.
 - **Gestion de versions & Outils** : Git et GitHub CLI (`gh`).
@@ -151,10 +151,11 @@ Ce projet s'appuie sur la méthode par imitation pour guider l'apprenant pas à 
 - [.agents/](./.agents/) : Configuration native de l'Agent IA (règles permanentes et skills outillés avec leurs missions).
 - [docs/](./docs/) : Documentation libre, recherches et veilles technologiques personnelles.
 - [issues/](./issues/) : Gestion et suivi des tâches et user stories du projet.
-- [tutoriels/](./tutoriels/) : Restitution des tutoriels et ateliers pratiques organisés par domaine.
 - [presentations/](./presentations/) : Diaporamas Marp du projet et des restitutions de sprints.
 - [rapport/](./rapport/) : Rapport modulaire du projet, chapitres et script de compilation Node.js.
 - [sprints/](./sprints/) : Planification Scrum des sprints et suivi de la branche active.
+- [src/](./src/) : Code source de l'application Laravel (architecture 2 couches, contrôleurs, services, vues Blade).
+- [tutoriels/](./tutoriels/) : Restitution des tutoriels et ateliers pratiques organisés par domaine.
 
 ---
 

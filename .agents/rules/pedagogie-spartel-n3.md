@@ -51,6 +51,9 @@ $$\text{Comprendre} \longrightarrow \text{Reproduire} \longrightarrow \text{Exp�
       - Toutes les commandes fournies dans les fiches de tutoriels et les fichiers `.command.md` doivent être directement exécutables sous Windows PowerShell tout en adoptant la syntaxe la plus familière et proche possible des standards Linux.
       - **Création de fichiers :** Proscrire formellement `touch` (non supporté par PowerShell) ainsi que les commandes verbeuses spécifiques à PowerShell (`New-Item`). Utiliser la redirection universelle : `echo "" > <fichier>`.
       - **Création de répertoires :** Conserver systématiquement **`mkdir`** (`mkdir dossier`, `mkdir chemin/vers/dossier` pour les dossiers imbriqués sans paramètre `-p` superflu, et `mkdir dossier1, dossier2` avec virgules pour créer plusieurs répertoires).
+13. **Neutralité de Version de Framework dans les Tutoriels :** Dans l'ensemble des fiches de tutoriels (titres, consignes, descriptions, persona), désigner le framework simplement par son nom (**Laravel**), sans préciser de numéro de version (*Laravel 12* ou *version 12*). La version exacte du framework est exclusivement communiquée dans le fichier de stack technique du projet (`README.md`).
+14. **Intitulé Canonique de l'Organisation de Dépôt :** Utiliser la formulation directe et universelle **« Organisation standard d'un dépôt »** (sans y adjoindre *« Solicode N3 »*).
+15. **Exclusion du Dossier `flux-travail/` pour les Apprenants :** Le dossier `flux-travail/` est un référentiel méthodologique rédigé par le formateur. Il ne doit pas être transmis aux apprenants ni figurer dans les étapes directives de création de dossiers (`mkdir`) de leurs tutoriels.
 
 ## 4. Gestion Méthodique des Corrections
 Lorsqu'une erreur ou incohérence est constatée dans un code ou un livrable :

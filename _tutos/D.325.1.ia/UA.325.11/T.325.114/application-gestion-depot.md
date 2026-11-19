@@ -76,7 +76,7 @@ Ce document définit le cadre spécifique du projet pour l'Agent IA.
 
 - **Framework Backend** : Laravel 12 (PHP).
 - **Architecture logicielle** : Architecture en 2 couches (Contrôleur mince -> Classe Service).
-- **Frontend & Vues** : Gabarits Blade responsives, HTML5, CSS3, JavaScript.
+- **Frontend & Vues** : Alpine.js (SPA, composants réactifs), gabarits Blade responsives, HTML5, CSS3, Tailwind CSS.
 - **Gestion des erreurs** : Traitement explicite de l'erreur 404 (ressources introuvables).
 - **Base de données** : MySQL.
 - **Gestion de versions & Outils** : Git, GitHub CLI (`gh`).

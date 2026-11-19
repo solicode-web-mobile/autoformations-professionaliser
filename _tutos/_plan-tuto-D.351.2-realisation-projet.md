@@ -24,7 +24,7 @@
 - **Description :** Poser les frontières opérationnelles du projet sur le Blog des Lauréats. L'apprenant explicite la vision produit, identifie les acteurs clés (Lauréat et Apprenant/Visiteur), délimite les exigences In-Scope vs Out-of-Scope du premier sprint et contractualise le suivi dans sprints/sprints.md et sprints/README.md.
 - **Notions Clés Utilisées dans le Sprint :**
   - Vision produit et personas cibles : Lauréat et Apprenant/Visiteur.
-  - Délimitation du périmètre In-Scope (consultation publique sous Laravel 12) vs Out-of-Scope (zéro authentification, zéro MySQL).
+  - Délimitation du périmètre In-Scope (consultation publique sous Laravel) vs Out-of-Scope (zéro authentification, zéro MySQL).
   - Gouvernance de sprint et source unique de vérité (`sprints/sprints.md`).
 - **Livrable :** Dossier `sprints/` (`sprints/sprints.md`, `sprints/README.md`) et journal des commandes `tutoriels/realisation-projet/cadrage/perimetre-produit/perimetre-produit.command.md` sur la branche `sprint1`.
 - **Travail à Faire :** Rédiger `sprints/README.md`, formaliser `sprints/sprints.md` en déclarant le Sprint 1 en statut Actif pour le Projet d'imitation (*Blog des Lauréats*) et consigner les commandes.

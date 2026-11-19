@@ -16,14 +16,14 @@
 - **Maturité :** `UA-Lab` (Atelier pratique guidé)
 - **Ordre en Session :** Étape 09
 - **Positionnement Flux de Travail :** Phase C — Réalisation & Implémentation Logicielle / Étape 4.1 — Routage Web & Page d'Accueil
-- **Briques Stack Technique :** Laravel 12 Router, Moteur Blade, Tailwind CSS utilitaire
+- **Briques Stack Technique :** Laravel Router, Moteur Blade, Tailwind CSS utilitaire
 - **Compétence :** `C.321` — Développer une application Web avec le framework Laravel
 - **Domaine :** `D.321.1` — Développement Web avec Laravel
 - **Durée estimée :** 4 heures
-- **Objectif :** S'approprier le fonctionnement initial du framework Laravel 12 et livrer la page d'accueil du Blog des Lauréats en configurant le routage web déclaratif et un premier gabarit Blade sous Tailwind CSS.
-- **Description :** Premier contact opérationnel avec Laravel 12. L'apprenant découvre l'écosystème Laravel et le cycle de vie d'une requête HTTP, puis configure sa première route web déclarative et sa vue d'accueil.
+- **Objectif :** S'approprier le fonctionnement initial du framework Laravel et livrer la page d'accueil du Blog des Lauréats en configurant le routage web déclaratif et un premier gabarit Blade sous Tailwind CSS.
+- **Description :** Premier contact opérationnel avec Laravel. L'apprenant découvre l'écosystème Laravel et le cycle de vie d'une requête HTTP, puis configure sa première route web déclarative et sa vue d'accueil.
 - **Notions Clés Utilisées dans le Sprint :**
-  - Cycle de vie d'une requête HTTP sous Laravel 12 (`public/index.php` $\to$ Kernel $\to$ Router $\to$ Vue $\to$ Réponse 200).
+  - Cycle de vie d'une requête HTTP sous Laravel (`public/index.php` $\to$ Kernel $\to$ Router $\to$ Vue $\to$ Réponse 200).
   - Routage déclaratif dans `routes/web.php` : façade `Route::get()`, closures anonymes.
   - Moteur de gabarit Blade : syntaxe d'interpolation `{% raw %}{{ $variable }}{% endraw %}`, directives de base.
   - Intégration Tailwind CSS : classes utilitaires et structure responsive.
@@ -231,7 +231,7 @@
   2. Générer le contrôleur HTTP mince avec injection de dépendances IoC et déclenchement d'erreur `abort(404)`.
   3. Déclarer la route web paramétrée avec contrainte numérique et nommage explicite.
 - **Cahier des Charges du Prompt (Méthode RIO) :**
-  - **Rôle :** Développeur Backend Laravel 12 senior expert en Clean Code et conteneur IoC.
+  - **Rôle :** Développeur Backend Laravel senior expert en Clean Code et conteneur IoC.
   - **Instruction :** Prendre en entrée les spécifications d'une entité métier `[ENTITE_METIER]` et générer le code PHP complet (Service, Contrôleur, Route) sans omission de typage.
   - **Output :** Fichiers PHP complets avec chemins stricts.
   - **Contraintes Négatives :** Zéro logique de persistance dans le contrôleur ; interdiction de retourner des tableaux non typés.
