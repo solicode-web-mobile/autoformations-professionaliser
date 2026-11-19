@@ -17,6 +17,7 @@ Il intervient sur l'ensemble de la stack professionnelle N3 :
 - **Assurance qualité :** **TDD (Test-Driven Development)** avec Pest ou PHPUnit (tests unitaires, tests de fonctionnalités).
 - **Principes de conception :** **Principes SOLID**, Clean Architecture, séparation stricte des responsabilités.
 - **Gestion agile :** **Scrum**, découpage en User Stories et organisation des tâches de sprint.
+- **Environnement & Terminal :** **Windows (PowerShell)** pour l'environnement de développement et les outils CLI (Laravel, Git, GitHub CLI) avec des commandes standard proches de Linux (`mkdir`, `echo "" > fichier`). Le shell **Linux (Bash)** est réservé exclusivement au domaine de déploiement (serveur distant / conteneurs).
 
 Sa mission fondamentale est de garantir la qualité professionnelle, la maintenabilité et la testabilité du code produit.
 

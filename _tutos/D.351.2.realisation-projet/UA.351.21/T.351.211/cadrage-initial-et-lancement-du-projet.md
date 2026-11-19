@@ -52,7 +52,7 @@ data_php: ""
    Créez le dossier racine `sprints/` pour accueillir la gouvernance du projet :
 
 ```bash
-mkdir -p sprints
+mkdir sprints
 ```
 
    Rédigez le guide méthodologique `sprints/README.md` définissant les règles de fonctionnement pour l'équipe et l'Agent IA :
@@ -114,7 +114,7 @@ Ce document enregistre les sprints du projet. Les sprints suivants seront ajout�
    Dans le fichier `tutoriels/realisation-projet/cadrage/perimetre-produit/perimetre-produit.command.md`, consignez la commande de création du dossier :
 
 ```bash
-mkdir -p sprints
+mkdir sprints
 ```
 
 ## 3. Livrables & Critères de Réussite
@@ -127,4 +127,4 @@ mkdir -p sprints
   - [ ] Les frontières In-Scope et Out-of-Scope du Sprint 1 sont clairement distinguées.
   - [ ] Le fichier `sprints/README.md` explicite le rôle de source de vérité unique (SSOT) pour l'Agent IA et l'équipe.
   - [ ] Le document `sprints/sprints.md` déclare le Sprint 1 en statut Actif sur la branche `sprint1`.
-  - [ ] Le journal `perimetre-produit.command.md` consigne la commande `mkdir -p sprints`.
+  - [ ] Le journal `perimetre-produit.command.md` consigne la commande `mkdir sprints`.

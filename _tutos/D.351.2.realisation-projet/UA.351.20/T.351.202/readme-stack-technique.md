@@ -40,7 +40,7 @@ data_php: ""
    À la racine du projet `blog-des-laureats`, créez les répertoires d'organisation du projet :
 
 ```bash
-mkdir -p .agents docs flux-travail issues tutoriels presentations rapport sprints
+mkdir .agents, docs, flux-travail, issues, tutoriels, presentations, rapport, sprints
 ```
 
 2. **Étape 2 — Initialisation de la planification Scrum dans `sprints/` :**  
@@ -186,7 +186,7 @@ git checkout sprint1
    Dans le fichier `tutoriels/realisation-projet/initialisation/readme-stack-technique/readme-stack-technique.command.md`, consignez les commandes exécutées :
 
 ```bash
-mkdir -p .agents docs flux-travail issues tutoriels presentations rapport sprints
+mkdir .agents, docs, flux-travail, issues, tutoriels, presentations, rapport, sprints
 ```
 
 ## 4. Livrables & Critères de Validation

@@ -40,8 +40,8 @@ Concevoir, documenter et tester le skill modulaire réutilisable **`cloture-spri
    Initialisez les dossiers du skill dans `.agents/skills/cloture-sprint/` et l'espace de documentation d'atelier sous `tutoriels/` :
 
 ```bash
-mkdir -p .agents/skills/cloture-sprint/missions .agents/skills/cloture-sprint/doc
-mkdir -p tutoriels/realisation-projet/cloture-sprint/skill-cloture-sprint
+mkdir .agents/skills/cloture-sprint/missions, .agents/skills/cloture-sprint/doc
+mkdir tutoriels/realisation-projet/cloture-sprint/skill-cloture-sprint
 ```
 
 2. **Étape 2 — Conception du Manifeste Orchestrateur `SKILL.md` :**  
@@ -76,8 +76,8 @@ mkdir -p tutoriels/realisation-projet/cloture-sprint/skill-cloture-sprint
    Testez l'activation du skill et consignez les commandes exécutées dans `tutoriels/realisation-projet/cloture-sprint/skill-cloture-sprint/skill-cloture-sprint.command.md` :
 
 ```bash
-mkdir -p .agents/skills/cloture-sprint/missions .agents/skills/cloture-sprint/doc
-mkdir -p tutoriels/realisation-projet/cloture-sprint/skill-cloture-sprint
+mkdir .agents/skills/cloture-sprint/missions, .agents/skills/cloture-sprint/doc
+mkdir tutoriels/realisation-projet/cloture-sprint/skill-cloture-sprint
 ```
 
 ## 3. Livrables & Critères de validation

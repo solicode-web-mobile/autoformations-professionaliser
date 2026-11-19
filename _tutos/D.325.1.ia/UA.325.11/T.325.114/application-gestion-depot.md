@@ -41,7 +41,7 @@ data_php: ""
    À la racine du projet `blog-des-laureats`, créez les répertoires dédiés aux règles et aux skills :
 
 ```bash
-mkdir -p .agents/rules .agents/skills/skills-dev .agents/skills/gestion-depot/missions
+mkdir .agents/rules, .agents/skills/skills-dev, .agents/skills/gestion-depot/missions
 ```
 
 2. **Étape 2 — Définition du contexte projet Always-On `.agents/rules/contexte-projet.md` :**  
@@ -253,7 +253,7 @@ Structurer le fichier `README.md` racine et initialiser les dossiers documentair
    Dans le fichier `tutoriels/ia/agent-skills/skill-gestion-depot/skill-gestion-depot.command.md`, consignez les commandes exécutées :
 
 ```bash
-mkdir -p .agents/rules .agents/skills/skills-dev .agents/skills/gestion-depot/missions
+mkdir .agents/rules, .agents/skills/skills-dev, .agents/skills/gestion-depot/missions
 ```
 
 ## 4. Livrables & Critères de Validation

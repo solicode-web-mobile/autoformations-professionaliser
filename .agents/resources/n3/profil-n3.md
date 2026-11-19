@@ -45,6 +45,10 @@ En Niveau N3 (**Développer / Réaliser**), les apprenants acquièrent des comp�
 - **Méthodologie & Travail d'Équipe :** **Scrum / Méthodes Agiles**
   - Découpage du besoin en User Stories avec critères d'acceptation précis.
   - Organisation en Sprints, gestion de backlog (Kanban/GitHub Projects), revues de sprint et démonstrations.
+- **Environnement Système & Terminal :** **Windows (PowerShell)**
+  - Développement quotidien sous environnement Windows avec terminal PowerShell (Git, GitHub CLI, PHP/Laravel, Composer, Node.js/NPM).
+  - Utilisation de commandes CLI standard proches des conventions Linux (`mkdir`, `echo "" > fichier`).
+  - L'environnement **Linux (Bash)** est réservé exclusivement au domaine de **déploiement** (déploiement de serveurs distants, conteneurs Docker/Linux).
 
 ---
 

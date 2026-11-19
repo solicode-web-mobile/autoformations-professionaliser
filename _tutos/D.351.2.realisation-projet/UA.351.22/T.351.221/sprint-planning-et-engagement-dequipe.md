@@ -36,7 +36,7 @@ data_php: ""
    Créez le dossier `issues/` pour accueillir le suivi des tâches :
 
 ```bash
-mkdir -p issues
+mkdir issues
 ```
 
    Rédigez le guide `issues/README.md` :
@@ -72,7 +72,7 @@ Ce dossier permet de tracer et planifier les tâches qui ne sont pas suivies dir
    Dans `tutoriels/realisation-projet/planification/sprint-backlog/sprint-backlog.command.md`, consignez la commande :
 
 ```bash
-mkdir -p issues
+mkdir issues
 ```
 
 ## 3. Livrables & Critères de Réussite
@@ -86,4 +86,4 @@ mkdir -p issues
   - [ ] Les micro-tâches de réalisation de la Story sont recensées dans `issues/issues-open.md`.
   - [ ] Les 7 critères de la DoD sont formellement contractualisés face au Sprint Goal.
   - [ ] Le document `scrum/sprint-backlog-s1.md` est finalisé et versionné sur la branche `sprint1`.
-  - [ ] Le journal `sprint-backlog.command.md` consigne la commande `mkdir -p issues`.
+  - [ ] Le journal `sprint-backlog.command.md` consigne la commande `mkdir issues`.

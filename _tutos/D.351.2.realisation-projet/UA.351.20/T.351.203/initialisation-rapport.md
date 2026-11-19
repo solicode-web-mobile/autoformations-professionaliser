@@ -41,7 +41,7 @@ data_php: ""
    À la racine du projet `blog-des-laureats`, créez le sous-dossier `chapitres/` dans `rapport/` :
 
 ```bash
-mkdir -p rapport/chapitres
+mkdir rapport/chapitres
 ```
 
 2. **Étape 2 — Rédaction du guide d'utilisation `rapport/README.md` :**  
@@ -207,7 +207,7 @@ cd ..
    Dans le fichier `tutoriels/realisation-projet/initialisation/rapport-modulaire/rapport-modulaire.command.md`, consignez les commandes exécutées :
 
 ```bash
-mkdir -p rapport/chapitres
+mkdir rapport/chapitres
 cd rapport
 node concat-chapitres.js
 cd ..

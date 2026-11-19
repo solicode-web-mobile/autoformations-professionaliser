@@ -28,7 +28,7 @@ data_php: ""
 - **Branche Git :** `sprint1`
 
 ## 2. Travail à Faire
-- **Tâche 1 : Initialisation locale :** Créer le projet local, créer un fichier `.gitignore` vide (`touch .gitignore`), initialiser Git (`git init`) et créer la branche de travail `sprint1`.
+- **Tâche 1 : Initialisation locale :** Créer le projet local, créer un fichier `.gitignore` vide (`echo "" > .gitignore`), initialiser Git (`git init`) et créer la branche de travail `sprint1`.
 - **Tâche 2 : Journalisation des commandes :** Créer l'arborescence et consigner les commandes dans `tutoriels/realisation-projet/initialisation/publication-github/publication-github.command.md`.
 - **Tâche 3 : Publication sur GitHub :** Réaliser le premier commit avec `.gitignore` et le fichier journal, puis publier le dépôt sur votre compte GitHub personnel via GitHub CLI avec la commande interactive `gh repo create`.
 
@@ -49,7 +49,7 @@ gh auth status
 ```bash
 mkdir blog-des-laureats
 cd blog-des-laureats
-touch .gitignore
+echo "" > .gitignore
 git init
 ```
 
@@ -64,7 +64,7 @@ git checkout -b sprint1
    Créez le répertoire dédié au tutoriel :
 
 ```bash
-mkdir -p tutoriels/realisation-projet/initialisation/publication-github
+mkdir tutoriels/realisation-projet/initialisation/publication-github
 ```
 
    Créez le fichier `tutoriels/realisation-projet/initialisation/publication-github/publication-github.command.md` pour consigner l'historique des commandes :
@@ -73,7 +73,7 @@ mkdir -p tutoriels/realisation-projet/initialisation/publication-github
 gh auth status
 mkdir blog-des-laureats
 cd blog-des-laureats
-touch .gitignore
+echo "" > .gitignore
 git init
 git checkout -b sprint1
 gh repo create

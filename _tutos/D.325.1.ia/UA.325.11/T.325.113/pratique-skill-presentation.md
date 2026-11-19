@@ -36,7 +36,7 @@ Ce skill sert de modèle d'outillage pour automatiser la génération de diapora
    Initialisez l'arborescence dédiée à l'atelier pratique sous l'emplacement standardisé de tutoriels :
 
 ```bash
-mkdir -p tutoriels/ia/agent-skills/skill-presentation/missions
+mkdir tutoriels/ia/agent-skills/skill-presentation/missions
 ```
 
 2. **Étape 2 — Conception du manifeste orchestrateur `SKILL.md` :**  
@@ -70,7 +70,7 @@ mkdir -p tutoriels/ia/agent-skills/skill-presentation/missions
    Dans `tutoriels/ia/agent-skills/skill-presentation/skill-presentation.command.md`, consignez la commande de préparation des répertoires :
 
 ```bash
-mkdir -p tutoriels/ia/agent-skills/skill-presentation/missions
+mkdir tutoriels/ia/agent-skills/skill-presentation/missions
 ```
 
 ## 3. Livrables & Critères de validation

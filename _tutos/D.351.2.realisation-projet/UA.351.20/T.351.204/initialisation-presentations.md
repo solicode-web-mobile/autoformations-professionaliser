@@ -41,7 +41,7 @@ data_php: ""
    À la racine du projet `blog-des-laureats`, créez le dossier `presentations/` :
 
 ```bash
-mkdir -p presentations
+mkdir presentations
 ```
 
 2. **Étape 2 — Rédaction du guide `presentations/README.md` :**  
@@ -119,7 +119,7 @@ footer: "Encadrant : ESSARRAJ Fouad | Solicode Tanger"
    Dans le fichier `tutoriels/realisation-projet/initialisation/presentation-marp/presentation-marp.command.md`, consignez les commandes exécutées :
 
 ```bash
-mkdir -p presentations
+mkdir presentations
 ```
 
 ## 4. Livrables & Critères de Validation
