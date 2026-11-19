@@ -21,7 +21,7 @@ data_php: ""
 ---
 
 ## 1. Travail à faire
-Développer la tranche verticale complète de consultation publique d'un article pour le *Blog des Lauréats* sous Laravel 12 : créer la classe `ArticleService` extrayant les données du fichier tabulaire `src/database/data/articles.csv`, injecter le service dans `ArticleController`, configurer la route dynamique paramétrée `/articles/{id}`, concevoir le layout maître Blade responsive sous Tailwind CSS, composer la vue de détail `show.blade.php` et intercepter de manière résiliente les ressources inexistantes avec une page d'erreur 404 personnalisée.
+Développer la tranche verticale complète de consultation publique d'un article pour le *Blog des Lauréats* sous Laravel : créer la classe `ArticleService` extrayant les données du fichier tabulaire `src/database/data/articles.csv`, injecter le service dans `ArticleController`, configurer la route dynamique paramétrée `/articles/{id}`, concevoir le layout maître Blade responsive sous Tailwind CSS, composer la vue de détail `show.blade.php` et intercepter de manière résiliente les ressources inexistantes avec une page d'erreur 404 personnalisée.
 
 Vous devez concevoir :
 1. La classe Service : `src/app/Services/ArticleService.php`.

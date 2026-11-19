@@ -34,7 +34,7 @@ Vous devez concevoir :
 3. Générer la vue d'erreur 404 personnalisée.
 
 ## 3. Cahier des Charges du Prompt (Méthode RIO)
-- **Rôle (Persona) :** Développeur Frontend Laravel 12 & Designer Tailwind CSS senior.
+- **Rôle (Persona) :** Développeur Frontend Laravel & Designer Tailwind CSS senior.
 - **Instruction (Contexte & Tâche) :** Prendre en entrée les champs d'une entité métier `[ENTITE_METIER]` et générer le gabarit maître, la vue de consultation responsive et la page 404.
 - **Output (Format de sortie) :** Fichiers Blade complets et stylisés sous Tailwind CSS.
 - **Contraintes Négatives :**

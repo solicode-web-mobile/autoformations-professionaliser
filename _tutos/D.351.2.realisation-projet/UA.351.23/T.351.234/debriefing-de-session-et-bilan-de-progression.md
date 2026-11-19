@@ -33,7 +33,7 @@ data_php: ""
    Évaluez votre niveau d'autonomie (Débutant, Guidé, Autonome, Expert) sur chacune des 5 compétences mobilisées :
    - `C.311` : Analyser et modéliser les besoins logiciels avec UML et Mermaid.js.
    - `C.312` : Concevoir l'architecture logicielle découplée en deux couches et formaliser l'ADR.
-   - `C.321` : Développer une application Web avec Laravel 12 (routes, contrôleur, Blade).
+   - `C.321` : Développer une application Web avec Laravel (routes, contrôleur, Blade).
    - `C.325` : Concevoir des Agents IA et développer des Skills modulaires (méthode RIO).
    - `C.351` : Piloter un projet avec Scrum, animer les cérémonies et tenir les carnets de tâches.
 

@@ -26,7 +26,7 @@ Effectuer les recherches documentaires nécessaires, concevoir une fiche de synt
 ## 2. Notions fondamentales
 - **Définition & Rôle du Prompt Engineering :** Discipline d'ingénierie logicielle consistant à concevoir, calibrer et optimiser les instructions transmises à un modèle de langage (LLM). Il agit comme un contrat d'interface rigoureux garantissant un code source prévisible, maintenable et directement exploitable.
 - **La Méthode Directrice RIO :**
-  - **R — Rôle (Persona) :** Attribue à l'agent une identité technique précise et un niveau d'expertise (ex. *« Architecte senior expert Laravel 12 »*). Il calibre le vocabulaire, la rigueur d'analyse et les choix d'architecture.
+  - **R — Rôle (Persona) :** Attribue à l'agent une identité technique précise et un niveau d'expertise (ex. *« Architecte senior expert Laravel »*). Il calibre le vocabulaire, la rigueur d'analyse et les choix d'architecture.
   - **I — Instruction (Contexte & Tâche) :** Exprime l'action à réaliser avec des verbes précis, le contexte métier et les dépendances, assortis de **contraintes négatives bloquantes** (garde-fous interdisant explicitement ce que l'agent ne doit pas faire : pas de bavardage, pas de code tronqué, zéro tableau Markdown).
   - **O — Output (Format attendu) :** Impose la structure de restitution, la langue et les contraintes de forme (Markdown brut, listes à puces `- `, 100% de liens relatifs, respect des plafonds de compacité).
 - **Patterns Fondamentaux d'Ingénierie de Prompt :**

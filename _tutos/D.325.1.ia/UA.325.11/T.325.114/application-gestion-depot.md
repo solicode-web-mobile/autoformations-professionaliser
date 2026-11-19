@@ -233,7 +233,7 @@ Structurer le fichier `README.md` racine et initialiser les dossiers documentair
 
 ## Tâches de la mission
 - **Tâche 1 : Structuration du README.md racine** :
-  - Reformuler et structurer le fichier `README.md` racine selon le standard Solicode N3 en intégrant la stack technique du projet (Laravel 12).
+  - Reformuler et structurer le fichier `README.md` racine selon le standard Solicode N3 en intégrant la stack technique du projet (Laravel).
 - **Tâche 2 : Initialisation des présentations racine (`presentations/`)** :
   - Créer le dossier racine `presentations/` avec son guide `presentations/README.md`.
   - Créer les fichiers diaporamas vides : `presentation-blog.md` et `presentation-sprint1.md` au format Marp.

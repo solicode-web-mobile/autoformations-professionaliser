@@ -22,16 +22,16 @@ data_php: ""
 
 ## 1. Prérequis
 - **Base théorique et pratique requise :**
-  - Organisation standard d'un dépôt Solicode N3 (arborescence des dossiers racine).
-  - Structure canonique d'un fichier `README.md` d'ingénierie logicielle intégrant la stack Laravel 12.
+  - Organisation standard d'un dépôt (arborescence des dossiers racine).
+  - Structure canonique d'un fichier `README.md` d'ingénierie logicielle intégrant la stack Laravel.
   - Planification Scrum de base sous Git.
 - **Prérequis de projet :** Dépôt Git initialisé et publié sur la branche `sprint1` (`T.351.201`).
 - **Branche Git :** `sprint1`
 
 ## 2. Travail à Faire
-- **Tâche 1 : Arborescence de projet :** Créer les répertoires d'organisation du projet (`.agents/`, `docs/`, `flux-travail/`, `issues/`, `tutoriels/`, `presentations/`, `rapport/`, `sprints/`).
+- **Tâche 1 : Arborescence de projet :** Créer les répertoires d'organisation du projet (`.agents/`, `docs/`, `issues/`, `tutoriels/`, `presentations/`, `rapport/`, `sprints/`).
 - **Tâche 2 : Planification Scrum de base :** Créer les fichiers de suivi `sprints/sprints.md` et `sprints/README.md`.
-- **Tâche 3 : Rédaction du README.md :** Rédiger le fichier `README.md` racine selon la structure standardisée Solicode en intégrant la stack technique du projet (Laravel 12).
+- **Tâche 3 : Rédaction du README.md :** Rédiger le fichier `README.md` racine selon la structure standardisée Solicode en intégrant la stack technique du projet (Laravel).
 - **Tâche 4 : Journalisation des commandes :** Consigner les commandes exécutées dans `tutoriels/realisation-projet/initialisation/readme-stack-technique/readme-stack-technique.command.md`.
 
 ## 3. Étapes de Réalisation
@@ -40,7 +40,7 @@ data_php: ""
    À la racine du projet `blog-des-laureats`, créez les répertoires d'organisation du projet :
 
 ```bash
-mkdir .agents, docs, flux-travail, issues, tutoriels, presentations, rapport, sprints
+mkdir .agents, docs, issues, tutoriels, presentations, rapport, sprints
 ```
 
 2. **Étape 2 — Initialisation de la planification Scrum dans `sprints/` :**  
@@ -53,10 +53,10 @@ Ce document enregistre les sprints du projet. Les sprints suivants seront ajout�
 
 ---
 
-## Sprint 1 : Initialisation, Cadrage & Première Fonctionnalité Laravel 12
+## Sprint 1 : Initialisation, Cadrage & Première Fonctionnalité Laravel
 - **Statut** : Actif
 - **Branche Git** : `sprint1`
-- **Objectif pédagogique** : Au terme de la session, l'apprenant est capable d'initialiser un dépôt distant avec GitHub CLI, d'outiller l'environnement avec un Agent IA et un catalogue de missions, de formaliser le processus de développement et le flux de travail, de cadrer le projet sous gouvernance Scrum, de modéliser le diagramme de contexte et les cas d'utilisation avec Mermaid, de gérer les tâches via le dossier `issues/`, et de développer sous Laravel 12 une page de consultation détaillée d'un article selon une architecture 2 couches (Contrôleur mince -> Classe Service) avec gabarit Blade responsive et gestion de l'erreur 404.
+- **Objectif pédagogique** : Au terme de la session, l'apprenant est capable d'initialiser un dépôt distant avec GitHub CLI, d'outiller l'environnement avec un Agent IA et un catalogue de missions, de formaliser le processus de développement et le flux de travail, de cadrer le projet sous gouvernance Scrum, de modéliser le diagramme de contexte et les cas d'utilisation avec Mermaid, de gérer les tâches via le dossier `issues/`, et de développer sous Laravel une page de consultation détaillée d'un article selon une architecture 2 couches (Contrôleur mince -> Classe Service) avec gabarit Blade responsive et gestion de l'erreur 404.
 - **Déroulement (Vue d'ensemble du travail de la session)** :
   - Initialiser le projet et publier sur GitHub.
   - Outiller l'environnement avec un Agent IA et son catalogue de missions.
@@ -65,7 +65,7 @@ Ce document enregistre les sprints du projet. Les sprints suivants seront ajout�
   - Modéliser le contexte et les cas d'utilisation avec Mermaid.
   - Structurer le Product Backlog et les issues dans `issues/`.
   - Concevoir l'architecture en 2 couches (Contrôleur mince -> Classe Service).
-  - Implémenter la consultation d'un article sous Laravel 12 (gabarit Blade responsive et gestion 404).
+  - Implémenter la consultation d'un article sous Laravel (gabarit Blade responsive et gestion 404).
 ```
 
    Créez également le guide `sprints/README.md` :
@@ -150,7 +150,6 @@ Ce projet s'appuie sur la méthode par imitation pour guider l'apprenant pas à 
 ## 4. Organisation des dossiers
 - [.agents/](./.agents/) : Configuration native de l'Agent IA (règles permanentes et skills outillés avec leurs missions).
 - [docs/](./docs/) : Documentation libre, recherches et veilles technologiques personnelles.
-- [flux-travail/](./flux-travail/) : Référentiel méthodologique et suivi des étapes de réalisation du projet.
 - [issues/](./issues/) : Gestion et suivi des tâches et user stories du projet.
 - [tutoriels/](./tutoriels/) : Restitution des tutoriels et ateliers pratiques organisés par domaine.
 - [presentations/](./presentations/) : Diaporamas Marp du projet et des restitutions de sprints.
@@ -186,16 +185,16 @@ git checkout sprint1
    Dans le fichier `tutoriels/realisation-projet/initialisation/readme-stack-technique/readme-stack-technique.command.md`, consignez les commandes exécutées :
 
 ```bash
-mkdir .agents, docs, flux-travail, issues, tutoriels, presentations, rapport, sprints
+mkdir .agents, docs, issues, tutoriels, presentations, rapport, sprints
 ```
 
 ## 4. Livrables & Critères de Validation
 - **Livrables attendus :**
-  - Fichier `README.md` racine propre et conforme au standard Solicode (stack Laravel 12).
+  - Fichier `README.md` racine propre et conforme au standard Solicode (stack Laravel).
   - Planification Scrum : `sprints/sprints.md` et `sprints/README.md`.
   - Journal des commandes : `tutoriels/realisation-projet/initialisation/readme-stack-technique/readme-stack-technique.command.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] L'arborescence des dossiers racine est créée à la racine.
-  - [ ] Le fichier `README.md` racine documente intégralement la stack technique N3 Laravel 12 et l'architecture en 2 couches.
+  - [ ] Le fichier `README.md` racine documente intégralement la stack technique N3 Laravel et l'architecture en 2 couches.
   - [ ] Les fichiers `sprints/sprints.md` et `sprints/README.md` sont initialisés sur la branche `sprint1`.
   - [ ] Le journal `readme-stack-technique.command.md` est présent et consigne fidèlement les commandes.

@@ -25,7 +25,7 @@ data_php: ""
 - **Branche Git :** `sprint1`
 - **Fichiers modifiés ou créés :** `scrum/revue-s1.md`.
 - **Objectif :** Conduire la démonstration live de l'incrément déployable du *Blog des Lauréats* face au Product Owner et valider critère par critère les 7 éléments de la Definition of Done (DoD).
-- **Prérequis :** Tranche verticale complète Laravel 12 stabilisée (`UA.321.13`) sur la branche `sprint1`.
+- **Prérequis :** Tranche verticale complète Laravel stabilisée (`UA.321.13`) sur la branche `sprint1`.
 
 ## 2. Déroulement Pas-à-Pas de la Tâche
 

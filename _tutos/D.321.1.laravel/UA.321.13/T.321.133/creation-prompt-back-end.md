@@ -31,7 +31,7 @@ Ce prompt est un composant agentique réutilisable permettant à un Agent IA de 
 3. Déclarer la route web paramétrée avec contrainte numérique `whereNumber()` et nommage explicite `name(...)`.
 
 ## 3. Cahier des Charges du Prompt (Méthode RIO)
-- **Rôle (Persona) :** Développeur Backend Laravel 12 senior expert en Clean Code, conteneur IoC et principes SOLID.
+- **Rôle (Persona) :** Développeur Backend Laravel senior expert en Clean Code, conteneur IoC et principes SOLID.
 - **Instruction (Contexte & Tâche) :** Prendre en entrée les champs et spécifications d'une entité métier `[ENTITE_METIER]` et générer le code PHP backend complet (Service, Contrôleur, Route) sans omission de typage.
 - **Output (Format de sortie) :** Fichiers PHP complets avec chemins stricts et balises ```` ```php ````.
 - **Contraintes Négatives :**

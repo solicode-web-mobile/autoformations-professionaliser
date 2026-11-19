@@ -1,7 +1,7 @@
 ---
 layout: tuto
 title: "Théorie : Routage et Vues sous Laravel"
-sous_titre: "Découvrir le framework Laravel 12, le cycle de vie d'une requête HTTP et le moteur de templates Blade"
+sous_titre: "Découvrir le framework Laravel, le cycle de vie d'une requête HTTP et le moteur de templates Blade"
 slug: "routage-fondamentaux"
 slug_domaine: "laravel"
 slug_ua: "hello-world"
@@ -21,13 +21,13 @@ data_php: ""
 ---
 
 ## 1. Travail à faire
-Effectuer les recherches documentaires nécessaires, concevoir une fiche de synthèse personnelle et préparer un diaporama de restitution Marp expliquant l'architecture générale de Laravel 12, le cycle de vie complet d'une requête HTTP du point d'entrée jusqu'à l'émission de la réponse, le fonctionnement déclaratif du routeur web et les mécanismes de rendu sécurisé sous le moteur de gabarits Blade.
+Effectuer les recherches documentaires nécessaires, concevoir une fiche de synthèse personnelle et préparer un diaporama de restitution Marp expliquant l'architecture générale de Laravel, le cycle de vie complet d'une requête HTTP du point d'entrée jusqu'à l'émission de la réponse, le fonctionnement déclaratif du routeur web et les mécanismes de rendu sécurisé sous le moteur de gabarits Blade.
 
 ## 2. Notions fondamentales
-- **Qu'est-ce que Laravel 12 :**
+- **Qu'est-ce que Laravel :**
   - Framework PHP full-stack moderne implémentant l'architecture MVC (Modèle - Vue - Contrôleur).
   - Fournit un écosystème outillé complet : outil en ligne de commande Artisan, conteneur d'inversion de contrôle (IoC), moteur de gabarits Blade, gestion de dépendances via Composer.
-- **Cycle de Vie d'une Requête HTTP sous Laravel 12 :**
+- **Cycle de Vie d'une Requête HTTP sous Laravel :**
   1. *Point d'entrée unique :* Le serveur web redirige toute requête HTTP vers `public/index.php`.
   2. *Initialisation du Kernel :* Chargement du conteneur de services et traversée des middlewares globaux de sécurité (protection CSRF, sessions).
   3. *Résolution par le Routeur :* Le fichier déclaratif `routes/web.php` fait correspondre la méthode HTTP (GET, POST) et l'URI à une action logicielle (closure ou contrôleur).
@@ -39,7 +39,7 @@ Effectuer les recherches documentaires nécessaires, concevoir une fiche de synt
   - Compilation en cache sous `storage/framework/views/` pour une performance optimale sans recalcul à chaque requête.
 
 ## 3. Recherches à effectuer
-- Analyser l'organisation des répertoires standards d'un projet Laravel 12 (`app/`, `bootstrap/`, `config/`, `database/`, `resources/`, `routes/`, `storage/`).
+- Analyser l'organisation des répertoires standards d'un projet Laravel (`app/`, `bootstrap/`, `config/`, `database/`, `resources/`, `routes/`, `storage/`).
 - Étudier les commandes d'inspection de routes offertes par l'outil Artisan (`php artisan route:list`).
 - Comparer le moteur Blade avec d'autres moteurs de templates PHP (Twig, Smarty) sur les critères de simplicité et de sécurité.
 

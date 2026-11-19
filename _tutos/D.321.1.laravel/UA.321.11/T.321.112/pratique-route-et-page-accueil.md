@@ -21,7 +21,7 @@ data_php: ""
 ---
 
 ## 1. Travail à faire
-Configurer le premier incrément visible de l'application *Blog des Lauréats* sous Laravel 12 : lancer le serveur de test local, déclarer la route GET racine dans `src/routes/web.php` et composer la vue d'accueil `src/resources/views/welcome.blade.php` avec une mise en page responsive stylisée sous Tailwind CSS.
+Configurer le premier incrément visible de l'application *Blog des Lauréats* sous Laravel : lancer le serveur de test local, déclarer la route GET racine dans `src/routes/web.php` et composer la vue d'accueil `src/resources/views/welcome.blade.php` avec une mise en page responsive stylisée sous Tailwind CSS.
 
 Vous devez concevoir :
 1. La route racine déclarative dans `src/routes/web.php`.

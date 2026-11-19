@@ -21,7 +21,7 @@ data_php: ""
 ---
 
 ## 1. Travail à faire
-Développer la première action de contrôleur MVC pour le *Blog des Lauréats* sous Laravel 12 : générer `ArticleController` avec la CLI Artisan, coder l'action `index()` transmettant une collection d'articles modèles à la vue, déclarer la route GET `/articles` et composer la vue `src/resources/views/articles/index.blade.php` avec affichage d'une grille de cartes responsive sous Tailwind CSS.
+Développer la première action de contrôleur MVC pour le *Blog des Lauréats* sous Laravel : générer `ArticleController` avec la CLI Artisan, coder l'action `index()` transmettant une collection d'articles modèles à la vue, déclarer la route GET `/articles` et composer la vue `src/resources/views/articles/index.blade.php` avec affichage d'une grille de cartes responsive sous Tailwind CSS.
 
 Vous devez concevoir :
 1. Le contrôleur HTTP : `src/app/Http/Controllers/Public/ArticleController.php`.
