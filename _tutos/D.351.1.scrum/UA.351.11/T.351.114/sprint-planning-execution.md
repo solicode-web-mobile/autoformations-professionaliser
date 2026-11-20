@@ -18,6 +18,13 @@ data_html: ""
 data_css: ""
 data_js: ""
 data_php: ""
+sprint: "sprint1"
+statut_realisation: "realise"
+livrables:
+  - chemin: "tutoriels/scrum/initiation-scrum/sprint-planning-execution/sprint-planning-execution.md"
+    version: "1.0.0"
+  - chemin: "tutoriels/scrum/initiation-scrum/sprint-planning-execution/presentation-sprint-planning-execution.md"
+    version: "1.0.0"
 ---
 
 ## 1. Travail à faire

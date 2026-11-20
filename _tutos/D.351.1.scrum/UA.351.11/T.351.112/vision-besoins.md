@@ -18,6 +18,13 @@ data_html: ""
 data_css: ""
 data_js: ""
 data_php: ""
+sprint: "sprint1"
+statut_realisation: "realise"
+livrables:
+  - chemin: "tutoriels/scrum/initiation-scrum/vision-besoins/vision-besoins.md"
+    version: "1.0.0"
+  - chemin: "tutoriels/scrum/initiation-scrum/vision-besoins/presentation-vision-besoins.md"
+    version: "1.0.0"
 ---
 
 ## 1. Travail à faire

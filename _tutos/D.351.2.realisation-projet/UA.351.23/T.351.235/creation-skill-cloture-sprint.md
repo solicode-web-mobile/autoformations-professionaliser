@@ -18,6 +18,15 @@ data_html: ""
 data_css: ""
 data_js: ""
 data_php: ""
+sprint: "sprint1"
+statut_realisation: "realise"
+livrables:
+  - chemin: "tutoriels/realisation-projet/cloture-sprint/skill-cloture-sprint/skill-cloture-sprint.md"
+    version: "1.0.0"
+  - chemin: "tutoriels/realisation-projet/cloture-sprint/skill-cloture-sprint/presentation-skill-cloture-sprint.md"
+    version: "1.0.0"
+  - chemin: "tutoriels/realisation-projet/cloture-sprint/skill-cloture-sprint/skill-cloture-sprint.command.md"
+    version: "1.0.0"
 ---
 
 ## 1. Travail à faire

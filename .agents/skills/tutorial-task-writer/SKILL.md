@@ -9,11 +9,12 @@ inspiration:
 ---
 
 # 1. Mission
-Ce skill est l'**artisan opérationnel et méthodologique** chargé de concevoir et rédiger les fiches de tutoriels associées aux Unités d'Apprentissage de maturité **`UA-Tâche`**.
+Ce skill est l'**artisan opérationnel et méthodologique** de l'écosystème **`tutorial-*-writer`**, chargé de concevoir et rédiger les fiches de tutoriels associées aux Unités d'Apprentissage de maturité **`UA-Tâche`**.
+Il applique le socle des règles transversales et s'appuie sur le protocole de synchronisation physique gouvernés par le Master Skill **[tutorial-writer](../tutorial-writer/SKILL.md)**.
 
-### Distinction Clé : `UA-Tâche` vs `UA-Lab` vs `UA-Tuto`
-- **`UA-Tuto` (Apprentissage incrémental) :** Progression pas-à-pas de code pur ($E_{n-1} \to E_n$), pilotée par `tutorial-writer`.
-- **`UA-Lab` (Atelier pratique guidé) :** Assimilation conceptuelle et pratique outillée (UML, architecture, frameworks, outillage IA), pilotée par `tutorial-lab-writer`.
+### Distinction Clé de l'Écosystème `tutorial-*-writer`
+- **`UA-Tuto` (Apprentissage incrémental) :** Progression pas-à-pas de code pur ($E_{n-1} \to E_n$), pilotée par [tutorial-code-writer](../tutorial-code-writer/SKILL.md).
+- **`UA-Lab` (Atelier pratique guidé) :** Assimilation conceptuelle et pratique outillée (UML, architecture, frameworks, outillage IA), pilotée par [tutorial-lab-writer](../tutorial-lab-writer/SKILL.md).
 - **`UA-Tâche` (Tâche opérationnelle & Cérémonies de projet) :** Une `UA-Tâche` n'a **aucune vocation théorique**. Elle formalise et guide l'exécution d'une **tâche de cadrage ou d'un rituel agile du sprint** (cadrage de périmètre, Sprint Planning, Sprint Review, Rétrospective, Backlog Refinement, Débriefing individuel) ainsi que les prompts réutilisables instrumentant ces cérémonies.
 
 ---
@@ -26,9 +27,10 @@ Ce skill est l'**artisan opérationnel et méthodologique** chargé de concevoir
   - Élaboration des protocoles de cadrage de périmètre de projet.
   - Conception des prompts d'ingénierie réutilisables dédiés à l'automatisation des cérémonies agiles.
 - **Quand NE PAS l'activer :**
-  - Rédaction de tutoriels de code incrémental (`UA-Tuto`) ➔ Utiliser [tutorial-writer](../tutorial-writer/SKILL.md).
+  - Rédaction de tutoriels de code incrémental (`UA-Tuto`) ➔ Utiliser [tutorial-code-writer](../tutorial-code-writer/SKILL.md).
   - Rédaction d'ateliers pratiques guidés avec théorie ou modélisation (`UA-Lab`) ➔ Utiliser [tutorial-lab-writer](../tutorial-lab-writer/SKILL.md).
   - Planification globale et ordonnancement de sessions ➔ Utiliser [tutorial-planer](../tutorial-planer/SKILL.md).
+  - Gouvernance globale, règles partagées et synchronisation ➔ Utiliser [tutorial-writer](../tutorial-writer/SKILL.md).
 
 ---
 
@@ -93,6 +95,6 @@ data_php: ""
 6. **Livrables Concrets Hors `labs/` sur Branche Unique :** Chaque tâche débouche obligatoirement sur un fichier versionné sur la branche du sprint (`sprintX`) dans les répertoires de projet (`README.md`, `missions/`, `flux-travail/`, `issues/`, `sprints/`). Les livrables de type `UA-Tâche` ne vont JAMAIS dans `labs/`.
 7. **Encodage Strict UTF-8 sans BOM :** Tous les fichiers générés respectent la règle 1 de `standards-techniques.md`.
 8. **Journalisation Standardisée des Commandes & Compatibilité Terminal :** Dès que la réalisation de la tâche implique la saisie de commandes CLI / terminal par l'apprenant, le tutoriel prescrit la création du fichier journal `[slug-tuto].command.md` déposé dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` sur la branche de sprint active. Les commandes sont présentées directement en bloc ```` ```bash ```` (sans double encapsulation Markdown). Les commandes prescrites doivent être directement exécutables sous Windows PowerShell tout en adoptant la syntaxe la plus familière et proche possible des standards Linux (conserver `mkdir`, utiliser `echo "" > <fichier>` au lieu de `touch` ou `New-Item`). Le journal ne consigne que les commandes opérationnelles utiles de la tâche, à l'exclusion formelle des commandes Git (`git add`, `git commit`, `git push`). S'il n'y a aucune commande CLI à exécuter dans le tutoriel (travail purement graphique ou rédactionnel), cette partie ne doit pas être citée.
-9. **Inspection et Synchronisation du Référentiel Physique (`D:\labs-web\projet-imiation-n3`) :** Le skill inspecte obligatoirement le dépôt réel situé sous `D:\labs-web\projet-imiation-n3`. Si une consigne du concepteur contredit l'état actuel de ce référentiel, le skill doit également synchroniser et corriger les livrables physiques correspondants dans `D:\labs-web\projet-imiation-n3` pour garantir la stricte concordance entre les tutoriels et le projet réel.
+9. **Gouvernance et Synchronisation Physique par le Master Skill `tutorial-writer` :** L'inspection du référentiel physique (`D:\labs-web\projet-imiation-n3`), la validation des livrables de sprint et leur synchronisation miroir avec les fiches de tutoriels sont gouvernées de manière centralisée par le Master Skill **`tutorial-writer`**. `tutorial-task-writer` garantit la stricte concordance entre le déroulement opérationnel et les dossiers de livrables physiques `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`.
 10. **Formatage Strict des Blocs de Code (Zéro Espace & Ligne Vide) :** Tout bloc de code (fenced code block ```` ``` ```` ou ```` ```` ````) doit obligatoirement être précédé d'une ligne vide et commencer strictement à la colonne 0 (sans aucun espace d'indentation), y compris à l'intérieur des listes ordonnées. Le contenu textuel ou Markdown encapsulé doit également débuter à la colonne 0 sans indentation artificielle.
 11. **Interdiction des Étapes de Commit/Push :** Les apprenants de Niveau N3 maîtrisent déjà le cycle standard de versionnement Git (validé aux niveaux N1 et N2). Il est formellement interdit d'ajouter une étape directive de commit ou de push (`git add`, `git commit`, `git push`) à la fin des tutoriels. L'apprenant gère son propre cycle de commits atomiques sur la branche de sprint active.

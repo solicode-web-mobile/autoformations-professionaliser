@@ -18,6 +18,11 @@ data_html: ""
 data_css: ""
 data_js: ""
 data_php: ""
+sprint: "sprint1"
+statut_realisation: "realise"
+livrables:
+  - chemin: "tutoriels/ia/agent-skills/skill-gestion-depot/skill-gestion-depot.command.md"
+    version: "1.0.0"
 ---
 
 ## 1. Prérequis

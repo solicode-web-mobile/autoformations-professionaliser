@@ -18,6 +18,13 @@ data_html: ""
 data_css: ""
 data_js: ""
 data_php: ""
+sprint: "sprint1"
+statut_realisation: "realise"
+livrables:
+  - chemin: "tutoriels/ia/agent-skills/agent-ia/agent-ia.md"
+    version: "1.0.0"
+  - chemin: "tutoriels/ia/agent-skills/agent-ia/presentation-agent-ia.md"
+    version: "1.0.0"
 ---
 
 ## 1. Travail à faire

@@ -1,67 +1,51 @@
-# Guide d'Utilisation du Skill : tutorial-writer
+# Guide Opérationnel : Comment Utiliser le Master Skill `tutorial-writer`
 
-## 1. Présentation & Rôle
-`tutorial-writer` est l'**artisan pédagogique universel** chargé de concevoir et rédiger les guides d'apprentissage techniques pas-à-pas (tutoriels) pour les apprenants Solicode (Niveaux N1, N2, N3 selon les règles locales du dépôt).
+## 1. Rôle et Responsabilités du Master Skill
+`tutorial-writer` est le **Master Skill et chef d'orchestre** gouvernant la création, la révision et la synchronisation de l'ensemble des tutoriels du cursus Solicode (Niveau N3).
 
-Tout tutoriel produit est **directement et nativement simplifié dès sa conception** : sans surcharge cognitive, visuel d'abord, théorie courte (règle des 20/80), et pratique ultra-ciblée. Il applique en permanence le cycle de pédagogie active :
-$$\text{Comprendre} \longrightarrow \text{Reproduire} \longrightarrow \text{Expérimenter} \longrightarrow \text{Réaliser} \longrightarrow \text{Réutiliser}$$
-
----
-
-## 2. Cas d'Usage Principaux
-- Rédaction d'une **série progressive de tutoriels** à partir d'un plan de session validé et du code cible.
-- Rédaction d'un **tutoriel unitaire autonome** (apprentissage isolé d'une notion avec son micro-livrable).
-- Modernisation ou allègement d'un tutoriel existant trop verbeux ou dense pour le niveau visé.
-- Application de la **règle Pareto 20/80** pour l'assimilation théorique.
-- En N3 : Rédaction ciblée exclusivement sur le **Projet d'imitation** (*Blog des Lauréats*) sur la branche Git `sprintX`.
+Il est l'unique détenteur de deux rôles stratégiques :
+1. **Gouvernance Transversale :** Il impose les règles inviolables communes (encodage UTF-8 sans BOM, mise en page colonne 0, arborescence `tutoriels/`, journalisation CLI sans commande git, français A1-A2, terminal PowerShell Windows, interdiction des termes internes comme 20/80 et Jalons).
+2. **Autorité Unique de Synchronisation :** Il inspecte le dépôt réel physique du projet d'imitation (`D:\labs-web\projet-imiation-n3` ou `E:\labs-web\projet-imiation-n3`) et synchronise en miroir les fiches de tutoriels et les livrables physiques correspondants.
 
 ---
 
-## 3. Prompts Types d'Invocation
+## 2. Architecture de l'Écosystème `tutorial-*-writer`
+`tutorial-writer` aiguille automatiquement chaque besoin didactique vers le sous-skill spécialisé :
 
+| Type d'Apprentissage | Maturité Cible | Rédacteur Spécialisé Délégué |
+| :--- | :--- | :--- |
+| **Code Incrémental Pas-à-Pas** | `UA-Tuto` ($E_{n-1} \to E_n$) | **[tutorial-code-writer](../tutorial-code-writer/SKILL.md)** |
+| **Atelier Pratique Guidé** | `UA-Lab` (20/80, Modélisation, Prompts IA) | **[tutorial-lab-writer](../tutorial-lab-writer/SKILL.md)** |
+| **Tâche de Projet / Cérémonie Agile** | `UA-Tâche` (Cadrage, Sprint Review, 0% Théorie) | **[tutorial-task-writer](../tutorial-task-writer/SKILL.md)** |
+
+---
+
+## 3. Prompts Types pour Invoquer le Master Skill
+
+### A. Demande de Rédaction de Tutoriel (Routage Automatique)
 ```markdown
-# Rédaction d'un tutoriel planifié en N3 sur la branche sprint1
-@[.agents/skills/tutorial-writer/SKILL.md] Rédige le tutoriel T.321.112 défini dans _tutos/_plan-tuto-D.321.1-laravel.md pour la route d'accueil du Blog des Lauréats sur la branche sprint1.
+@[.agents/skills/tutorial-writer/SKILL.md] Rédige le tutoriel T.321.112 de l'UA.321.11 planifié dans le domaine Laravel sur la branche sprint1.
+```
+*Action de l'Agent :* Détecte la nature de l'UA, active le sous-skill adapté (`tutorial-code-writer`, `tutorial-lab-writer` ou `tutorial-task-writer`), applique le socle commun et synchronise ensuite avec `D:\labs-web\projet-imiation-n3`.
+
+### B. Synchronisation entre le Site et le Projet d'Imitation
+```markdown
+@[.agents/skills/tutorial-writer/SKILL.md] Synchronise les fiches de tutoriels du sprint 1 avec les livrables physiques du projet d'imitation sous D:\labs-web\projet-imiation-n3.
+```
+*Action de l'Agent :* Inspecte `D:\labs-web\projet-imiation-n3\tutoriels\`, vérifie la cohérence des noms et livrables, génère ou adapte les documents miroirs.
+
+### C. Audit de Conformité Pédagogique
+```markdown
+@[.agents/skills/tutorial-writer/SKILL.md] Audite la fiche _tutos/D.311.2.uml/UA.311.21/T.311.211/diagramme-classes.md et vérifie le respect des règles transversales.
 ```
 
-```markdown
-# Rédaction d'un tutoriel unitaire simplifié
-@[.agents/skills/tutorial-writer/SKILL.md] Rédige un tutoriel unitaire simplifié pour apprendre à manipuler les collections en Laravel.
-```
-
-```markdown
-# Simplification avec la règle Pareto 20/80
-@[_tutos/D.321.1.laravel/UA.321.11/T.321.111/theorie-routage-et-vues.md] @[.agents/skills/tutorial-writer/SKILL.md] Applique la règle Pareto 20/80 : fournis 20% de définitions fondamentales et confie 80% à la recherche active.
-```
-
 ---
 
-## 4. Prérequis & Données d'Entrée
-- **Plan de cadrage :** Fiche technique du tutoriel issue de `_tutos/_plan-tuto-D.XXX.Y-*.md` (N3) ou `plan-developpement.md` (N1/N2).
-- **Branche Git :** Branche unique du sprint (ex: `sprint1` en N3).
-- **Ciblage Exclusif :** Le corps du tutoriel guide l'apprenant exclusivement sur le Projet d'imitation (*Blog des Lauréats*).
-- **Règles applicables :**
-  - `.agents/rules/pedagogie-spartel-n3.md` (Pareto 20/80, pas de durée affichée aux apprenants, style direct impératif).
-  - `.agents/rules/standards-techniques.md` (Strict UTF-8 sans BOM, livrables de code source et markdown).
-
----
-
-## 5. Déroulement Pas-à-Pas (Ce que fait l'Agent)
-1. **Étape 1 — Cadrage & Chargement du Domaine :** Identifie le domaine technique et prend connaissance des contraintes du niveau N3.
-2. **Étape 2 — Structuration du Front Matter :** Renseigne `layout: tuto`, l'UA, le code tuto, le titre canonique (sans mention de durée), la branche du sprint, et configure `en_construction: false` dès validation.
-3. **Étape 3 — Rédaction de la Théorie Simplifiée (Pareto 20/80) :** Fournit les 20% de définitions indispensables et formule les 80% de points d'approfondissement confiés à la recherche active de l'apprenant.
-4. **Étape 4 — Rédaction de la Pratique Guidée :** Formule des consignes séquentielles à l'impératif direct (*« Ouvrez »*, *« Ajoutez »*, *« Testez »*) sur le Projet d'imitation.
-5. **Étape 5 — Clôture & Livrable sur Branche Git :** Précise l'emplacement exact des fichiers impactés dans le projet et les critères de validation `[ ]`.
-
----
-
-## 6. Livrables Produits & Méthode de Vérification
-- **Livrables attendus :**
-  - Fichier Markdown normé : `_tutos/[Domaine]/[UA]/[Code-Tuto]/[slug-tuto].md`.
-- **Comment vérifier le résultat :**
-  - [x] Le tutoriel cible exclusivement le Projet d'imitation.
-  - [x] Zéro mention de durée de tâche n'est visible pour l'apprenant.
-  - [x] La branche Git du sprint (ex : `sprint1`) est clairement spécifiée.
-  - [x] Toutes les consignes sont formulées à l'impératif direct.
-  - [x] Le statut est configuré à `en_construction: false` dès que le tutoriel est finalisé.
-  - [x] Le fichier est encodé en UTF-8 sans BOM.
+## 4. Procédure de Synchronisation Déterministe
+1. Vérification de la présence de `D:\labs-web\projet-imiation-n3` (ou `E:\labs-web\projet-imiation-n3`).
+2. Vérification de la branche courante Git (ex: `sprint1`).
+3. Vérification de l'arborescence `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`.
+4. Mise à jour miroir des fichiers :
+   - `[slug-tuto].md` (fiche technique).
+   - `presentation-[slug-tuto].md` (support Marp).
+   - `[slug-tuto].command.md` (journal CLI).
