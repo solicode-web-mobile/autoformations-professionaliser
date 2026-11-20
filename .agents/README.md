@@ -36,7 +36,7 @@ flowchart TD
     end
 
     subgraph Synchronisation ["3. Synchronisation Inter-Agents"]
-        SyncRules[".sync/rules.md (Dépôt Projet Cible)"]
+        SyncRules[".sync/rules-sync.md (Dépôt Projet Cible)"]
     end
 
     subgraph Socle ["4. Plateforme & Thème"]
@@ -60,7 +60,7 @@ flowchart TD
 | **[didactique](skills/didactique/SKILL.md)** | **Master Skill & Chef d'orchestre didactique** : garantit le socle commun tous niveaux N1/N2/N3 (sprints 80h, règle des 3 projets, cycle actif, non-régression des prérequis) et aiguille vers les niveaux Macro et Micro. | `_sessions/`, `_uas/`, `_tutos/` |
 | **[didactique-session-planner](skills/didactique-session-planner/SKILL.md)** | **Niveau Macro (Session & Sprint)** : fusionne l'alignement avec le flux réel (`_flux-travail.md`), l'arbitrage de véracité, le cadrage Scrum du sprint de 80h, l'élagage des tâches (10 questions) et la qualification des UAs (`UA-Tâche` / `UA-Lab`). | `_sessions/S[X].md`, `_uas/`, `_flux-travail.md` |
 | **[didactique-tutorial-planner](skills/didactique-tutorial-planner/SKILL.md)** | **Niveau Micro (Tutoriels & Progression)** : conçoit la progression pas-à-pas déterministe ($E_{n-1} \to E_n$), formule les titres techniques équilibrés sans entité métier, insère le sas « Bien démarrer » et initialise les stubs Jekyll (`en_construction: true`). | `_plan-réalisation-tutos/`, `_tutos/`, `resources/` |
-| **[tutorial-writer](skills/tutorial-writer/SKILL.md)** | **Master Skill & Chef d'orchestre rédactionnel** : gouverne les 12 règles transversales partagées (colonne 0, style A1-A2, UTF-8 sans BOM), route vers les rédacteurs spécialisés et pilote la synchronisation inter-agents. | `_tutos/`, `_plan-tuto-*.md`, `.sync/rules.md` |
+| **[tutorial-writer](skills/tutorial-writer/SKILL.md)** | **Master Skill & Chef d'orchestre rédactionnel** : gouverne les 12 règles transversales partagées (colonne 0, style A1-A2, UTF-8 sans BOM), route vers les rédacteurs spécialisés et pilote la synchronisation inter-agents. | `_tutos/`, `_plan-tuto-*.md`, `.sync/rules-sync.md` |
 | **[tutorial-code-writer](skills/tutorial-code-writer/SKILL.md)** | Rédige les tutoriels d'apprentissage de code incrémental pas-à-pas ($E_{n-1} \to E_n$) avec injecteur interactif `window.pageData`. | `_tutos/...` (`UA-Tuto`) |
 | **[tutorial-lab-writer](skills/tutorial-lab-writer/SKILL.md)** | Rédige les ateliers pratiques guidés (notions fondamentales, recherche active, modélisation UML/schémas, outillage IA par skills/prompts). | `_tutos/...` (`UA-Lab`) |
 | **[tutorial-task-writer](skills/tutorial-task-writer/SKILL.md)** | Rédige les fiches de cadrage opérationnel et cérémonies agiles de sprint sans aucun apport théorique (0% théorie). | `_tutos/...` (`UA-Tâche`) |
@@ -121,14 +121,14 @@ Pour rédiger ou affiner le contenu des fiches de tutoriels planifiées :
    - Respect de l'autonomie Git selon les règles du niveau actif.
    - Zéro fuite de cuisine interne (pas de mention « 20/80 ») et remplacement des jalons par le terme direct « Étape ».
 
-### Phase 4 : Synchronisation Inter-Agents & Traçabilité (`.sync/rules.md`)
+### Phase 4 : Synchronisation Inter-Agents & Traçabilité (`.sync/rules-sync.md`)
 Pour synchroniser les tutoriels avec le projet cible réel :
 1. Invoquer **`tutorial-writer`** en mode synchronisation :
    ```markdown
-   @[.agents/skills/tutorial-writer/SKILL.md] Synchronise les fiches de tutoriels avec le projet cible selon .sync/rules.md.
+   @[.agents/skills/tutorial-writer/SKILL.md] Synchronise les fiches de tutoriels avec le projet cible selon .sync/rules-sync.md.
    ```
 2. **Mécanisme Déterministe :**
-   - Consultation obligatoire du contrat `<projet-cible>/.sync/rules.md`.
+   - Consultation obligatoire du contrat `<projet-cible>/.sync/rules-sync.md`.
    - Inspection des fichiers `version.yml` logés **exclusivement dans `.sync/`** du projet cible.
    - Comparaison avec le front-matter du tutoriel source (`_tutos/`).
    - Si `.sync` > front-matter : mise à jour du contenu réel, alignement de la version et passage à `statut_realisation: "synchronise"`.
@@ -154,7 +154,7 @@ Pour synchroniser les tutoriels avec le projet cible réel :
 | *« Rédige un prompt ou un skill avec la méthode RIO »* | **`tutorial-writer`** (route vers `tutorial-lab-writer` + `tutorial-writer-ia`) |
 | *« Rédige la fiche théorique sur la DoD ou le Product Backlog »* | **`tutorial-writer`** (route vers `tutorial-lab-writer` + `tutorial-writer-scrum`) |
 | *« Rédige la fiche du rituel de Sprint Planning ou de cadrage »* | **`tutorial-writer`** (route vers `tutorial-task-writer` + `tutorial-writer-realisation-projet`) |
-| *« Vérifie l'alignement des versions avec le projet cible »* | **`tutorial-writer`** (via `.sync/rules.md`) |
+| *« Vérifie l'alignement des versions avec le projet cible »* | **`tutorial-writer`** (via `.sync/rules-sync.md`) |
 | *« Améliore l'affichage du layout ou corrige un composant CSS »* | **`dev-jekyll`** |
 | *« Synchronise le Core Theme avec le dépôt central »* | **`sync-theme`** |
 | *« Crée un nouveau skill ou modifie une règle d'agent »* | **`skills-dev`** |

@@ -45,11 +45,11 @@ trigger: always_on
   - Les commandes CLI fournies aux apprenants doivent fonctionner nativement sous Windows PowerShell tout en adoptant la syntaxe la plus familière et proche possible des standards Linux :
     - Conserver systématiquement **`mkdir`** (`mkdir dossier`, `mkdir chemin/vers/dossier` sans option `-p` inutile sous PowerShell, et `mkdir dossier1, dossier2` pour plusieurs dossiers).
     - Pour créer un fichier vide, utiliser la redirection standard **`echo "" > <fichier>`** (proscrire `touch` non reconnu par PowerShell et proscrire `New-Item`).
-- **Consultation et Synchronisation du Référentiel Physique (`.sync/rules.md`) :**
-  Le Master Skill **`tutorial-writer`** détient l'autorité exclusive d'inspection et de synchronisation avec le dépôt réel du projet cible (configuré ci-dessus ou via `.sync/rules.md`).
-  Les échanges et le versioning inter-agents sont formellement régis par le contrat **`<projet-cible>/.sync/rules.md`** :
+- **Consultation et Synchronisation du Référentiel Physique (`.sync/rules-sync.md`) :**
+  Le Master Skill **`tutorial-writer`** détient l'autorité exclusive d'inspection et de synchronisation avec le dépôt réel du projet cible (configuré ci-dessus ou via `.sync/rules-sync.md`).
+  Les échanges et le versioning inter-agents sont formellement régis par le contrat **`<projet-cible>/.sync/rules-sync.md`** :
   - **L'Agent Réalisation (Agent Projet) :** Développe les livrables, maintient les numéros de version sémantique exclusivement dans les fichiers `version.yml` logés à l'intérieur du dossier `.sync/` (interdiction stricte de créer des `version.yml` dans `tutoriels/`, `src/`, etc.), et notifie la réalisation dans le front-matter du tutoriel source (`_tutos/`) avec `sprint`, `statut_realisation: "realise"` et la liste des `livrables` (chemins et versions).
-  - **L'Agent Autoformation (`tutorial-writer`) :** Consulte systématiquement `.sync/rules.md` pour interagir avec l'Agent Réalisation, compare les versions déclarées dans le front-matter du tutoriel source avec celles de `.sync/.../version.yml`. Si une mise à jour est détectée, il actualise le contenu didactique dans Jekyll, aligne les versions dans le front-matter et bascule le statut à `synchronise` (ou `a_adapter` si une discordance majeure est détectée).
+  - **L'Agent Autoformation (`tutorial-writer`) :** Consulte systématiquement `.sync/rules-sync.md` pour interagir avec l'Agent Réalisation, compare les versions déclarées dans le front-matter du tutoriel source avec celles de `.sync/.../version.yml`. Si une mise à jour est détectée, il actualise le contenu didactique dans Jekyll, aligne les versions dans le front-matter et bascule le statut à `synchronise` (ou `a_adapter` si une discordance majeure est détectée).
   - **Adaptation mutuelle :** En cas d'incohérence, si la pratique du projet réel valide une solution plus pertinente, le tutoriel est adapté pour refléter la réalité ; si le livrable est incomplet, l'Agent Projet corrige le livrable dans `tutoriels/`.
 
 ## 4. Transparence de l'Agent IA & Traçabilité des Actions
