@@ -1,24 +1,24 @@
 ---
 name: didactique-session-planner
-description: Conçoit, aligne et élague la session de formation (_sessions/S[X].md) et son panier d'Unités d'Apprentissage (_uas/) pour un Sprint Scrum de 80h. Arbitre la véracité entre flux réel (_flux-travail.md) et référentiel, applique les 10 questions d'élagage Scrum, qualifie les UAs (UA-Tâche / UA-Lab) et produit le plan d'impact.
-version: 1.0.0
+description: Conçoit, aligne et élague la session de formation (_sessions/S[X].md) et son panier d'Unités d'Apprentissage (_uas/) pour un Sprint Scrum de 80h sur tous les niveaux (N1, N2, N3). Arbitre la véracité entre flux réel (_flux-travail.md) et référentiel, applique les 10 questions d'élagage Scrum, qualifie les UAs (UA-Tâche / UA-Lab) et produit le plan d'impact.
+version: 1.1.0
 ---
 
-# Session Planner (Macro Didactique)
+# Session Planner (Macro Didactique Tous Niveaux)
 
 ## 1. Rôle et Mission
-Expert du niveau **Macro (Session & Sprint)**, ce skill fusionne l'alignement avec le flux réel de projet et le cadrage Scrum :
+Expert du niveau **Macro (Session & Sprint)** pour les niveaux **N1, N2 et N3**, ce skill fusionne l'alignement avec le flux réel de projet et le cadrage Scrum :
 1. **Arbitrer la véracité** entre le flux opérationnel réel (`_flux-travail.md`) et la session (`_sessions/S[X].md`).
-2. **Auditer et élaguer les activités** selon les exigences Scrum pour éliminer le superflu.
-3. **Qualifier les UAs** en `UA-Tâche` (0% théorie) et `UA-Lab` (20/80 Pareto).
+2. **Auditer et élaguer les activités** selon les exigences Scrum pour éliminer tout superflu.
+3. **Qualifier les UAs** en `UA-Tâche` (0% théorie) et `UA-Lab` (20/80 Pareto) selon le niveau actif résolu dans `.agents/rules/`.
 4. **Mettre à jour la session** et produire le **Plan Artefact** d'impact sur les UAs (`_uas/`).
 
 ## 2. Inviolabilité du Budget Temps & Matrice de Véracité
-- **Inviolabilité de la durée :** La session correspond strictement à un Sprint Scrum de **80 heures** (`duree: 80`). Ce budget global ne doit jamais être modifié ni fragmenté en heures unitaires dans les consignes.
+- **Inviolabilité de la durée :** La session correspond strictement à un Sprint Scrum de **80 heures** (`duree: 80`) quel que soit le niveau. Ce budget global ne doit jamais être modifié ni fragmenté en heures unitaires dans les consignes.
 - **Matrice d'arbitrage de véracité :**
-  - **Le Flux Réel fait autorité :** Pour la réalité des étapes franchies (`git init`, CLI `gh`, Artisan), les arborescences physiques (`missions/`, `flux-travail/`, `issues/`) et les livrables concrets.
-  - **La Session fait autorité :** Pour les compétences officielles certifiantes (`C.311`..`C.351`), les rituels Scrum (Planning, Review, Rétro) et la durée réglementaire (`duree: 80`).
-  - **La Didactique qualifie les labs :** Les mentions brutes du flux (`lab-github`, etc.) sont critiquées et qualifiées aux standards N3.
+  - **Le Flux Réel fait autorité :** Pour la réalité des étapes franchies, les arborescences physiques de livrables et les commandes CLI réelles.
+  - **La Session fait autorité :** Pour les compétences officielles certifiantes du cursus (`C.xxx`), les rituels Scrum (Planning, Review, Rétro) et la durée réglementaire (`duree: 80`).
+  - **La Didactique qualifie les labs :** Les mentions brutes du flux sont critiquées et qualifiées aux standards du niveau actif.
 
 ## 3. Grille des 10 Questions d'Élagage Scrum
 Pour chaque activité du flux ou de la session, auditer systématiquement :
@@ -29,9 +29,9 @@ Pour chaque activité du flux ou de la session, auditer systématiquement :
 5. Son livrable est-il réellement exploité par l'équipe ou le projet ?
 6. Fait-elle doublon avec une autre tâche du sprint ?
 7. Peut-elle être fusionnée avec une étape adjacente ?
-8. N'est-elle pas sur-spécifiée par rapport au niveau d'autonomie N3 ?
+8. N'est-elle pas sur-spécifiée par rapport au niveau d'autonomie de l'apprenant (N1, N2 ou N3) ?
 9. Est-elle correctement ordonnée dans la séquence du sprint ?
-10. Participe-t-elle à la construction de l'Agent IA du sprint ?
+10. Participe-t-elle à l'aboutissement applicatif du sprint selon les objectifs du niveau ?
 
 **Décisions normées à consigner :**
 - `CONSERVER` (pertinente et indispensable) | `SIMPLIFIER` (conserver l'objectif, élaguer les étapes).
@@ -41,11 +41,11 @@ Pour chaque activité du flux ou de la session, auditer systématiquement :
 ## 4. Typologie des UAs & Structure du Sprint
 1. **Qualification didactique :**
    - **`UA-Tâche` :** Cadrage, formalisation de manifestes, issues, rituels Scrum. **0% théorie.**
-   - **`UA-Lab` :** Nouveau concept N3 (MVC Laravel, IoC, Prompt RIO). Fournit les 20% fondamentaux, 80% en recherche active. Zéro théorie sur les prérequis N1/N2.
+   - **`UA-Lab` :** Découverte d'un nouveau paradigme du niveau actif. Fournit les 20% fondamentaux, 80% en recherche active. Zéro théorie sur les prérequis des niveaux antérieurs.
 2. **Découpage chronologique en 4 phases :**
-   - **Phase A — Outillage & Méthode :** Environnement, initialisation dépôt, flux de travail, Agent IA.
-   - **Phase B — Cadrage & Backlog :** User stories, modélisation ciblée, Sprint Planning, issues.
-   - **Phase C — Réalisation Applicative :** Développement 2-couches (back/front), tests, TDD.
+   - **Phase A — Outillage & Méthode :** Environnement, initialisation dépôt, flux de travail, outillage.
+   - **Phase B — Cadrage & Backlog :** Besoins utilisateurs, modélisation ciblée, Sprint Planning, issues.
+   - **Phase C — Réalisation Applicative :** Développement selon l'architecture du niveau, tests.
    - **Phase D — Clôture & Cérémonies :** Sprint Review, Rétrospective, Refinement, bilan.
 
 ## 5. Procédure d'Exécution & Plan Artefact
@@ -55,8 +55,8 @@ Pour chaque activité du flux ou de la session, auditer systématiquement :
 4. **Production du Plan Artefact :** Générer le document de synthèse détaillant l'arbitrage retenu, la matrice d'impact des UAs (`_uas/` créées, adaptées, supprimées avec maturité `UA-Tâche` ou `UA-Lab`) et la liste des stubs à initialiser.
 
 ## 6. Contrôle Qualité
-- [ ] La durée `duree: 80` est strictement préservée.
-- [ ] Le flux réel dicte les étapes concrètes et les livrables physiques (`missions/`, `issues/`).
+- [ ] La durée `duree: 80` est strictement préservée quel que soit le niveau.
+- [ ] Le flux réel dicte les étapes concrètes et les livrables physiques.
 - [ ] Toutes les activités inutiles ou redondantes ont été élaguées avec justification.
 - [ ] Chaque UA est rigoureusement qualifiée en `UA-Tâche` ou `UA-Lab`.
 - [ ] Le frontmatter `uas:` de `_sessions/S[X].md` est complet et ordonné.
