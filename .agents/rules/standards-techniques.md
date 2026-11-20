@@ -52,9 +52,10 @@ trigger: always_on
   - **L'Agent Autoformation (`tutorial-writer`) :** Consulte systématiquement `.sync/rules.md` pour interagir avec l'Agent Réalisation, compare les versions déclarées dans le front-matter du tutoriel source avec celles de `.sync/.../version.yml`. Si une mise à jour est détectée, il actualise le contenu didactique dans Jekyll, aligne les versions dans le front-matter et bascule le statut à `synchronise` (ou `a_adapter` si une discordance majeure est détectée).
   - **Adaptation mutuelle :** En cas d'incohérence, si la pratique du projet réel valide une solution plus pertinente, le tutoriel est adapté pour refléter la réalité ; si le livrable est incomplet, l'Agent Projet corrige le livrable dans `tutoriels/`.
 
-## 4. Transparence de l'Agent IA
-- **Affichage des compétences :** Indiquer les compétences mobilisées à la fin de chaque réponse.
-- **Plans d'action :** Expliciter obligatoirement les compétences prévues pour réaliser chaque étape d'un plan d'implémentation.
+## 4. Transparence de l'Agent IA & Traçabilité des Actions
+- **Affichage Obligatoire des Skills Utilisés :** À la fin de chaque échange / discussion, l'Agent IA doit obligatoirement afficher la liste exacte des **Skills locaux utilisés** lors de la réponse (format : `Skills utilisés : [skill-1], [skill-2]`).
+- **Affichage des Compétences du Cursus :** Indiquer également les compétences certifiantes du référentiel mobilisées (format : `Compétences du cursus : C.xxx, C.yyy`).
+- **Plans d'action :** Expliciter obligatoirement les skills et compétences prévus pour réaliser chaque étape d'un plan d'implémentation.
 
 ## 5. Gouvernance des Skills & Documentation Colocalisée
 - **100% Local au Dépôt :** Toutes les compétences de l'agent résident sous `.agents/skills/`. Aucun mécanisme de Hub distant ou de compétences globales n'est utilisé. La découverte des compétences s'effectue dynamiquement à partir des fichiers `SKILL.md`.

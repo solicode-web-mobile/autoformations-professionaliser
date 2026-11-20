@@ -167,4 +167,4 @@ Toute action menée par l'un quelconque de ces skills doit rigoureusement respec
 1. **Encodage UTF-8 sans BOM :** Obligatoire pour tous les fichiers texte créés ou modifiés.
 2. **Documentation Colocalisée (`README.md`) :** Tout skill possède son fichier `README.md` colocalisé unique et suffisant. Aucun sous-dossier `doc/` n'est requis.
 3. **Découplage Multi-Niveaux :** Les skills méthodologiques sont agnostiques et résolvent le niveau (N1, N2, N3) et le projet cible à partir de `.agents/rules/`.
-4. **Transparence :** Indiquer obligatoirement les compétences mobilisées à la fin de chaque réponse.
+4. **Transparence :** Indiquer obligatoirement les skills locaux utilisés et les compétences mobilisées à la fin de chaque réponse.
