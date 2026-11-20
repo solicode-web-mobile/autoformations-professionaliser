@@ -8,7 +8,13 @@
       "tutorial-planer",
       "tutorial-code-writer",
       "tutorial-lab-writer",
-      "tutorial-task-writer"
+      "tutorial-task-writer",
+      "tutorial-uml-writer",
+      "tutorial-architecture-writer",
+      "tutorial-laravel-writer",
+      "tutorial-ia-writer",
+      "tutorial-scrum-writer",
+      "tutorial-realisation-projet-writer"
     ],
     "global": [
       "project-setup",
