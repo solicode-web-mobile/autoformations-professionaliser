@@ -2,10 +2,6 @@
 name: sync-theme
 description: Pilote la synchronisation du socle technique partage (Core Theme) avec autoformations-core-theme via theme-sync.json et les scripts PowerShell de push et pull.
 version: 1.0.0
-inspiration:
-  source: "local-first-patterns"
-  plugin: "theme-sync"
-  pattern: "safe-manual-orchestration & core-theme-synchronization"
 ---
 
 # 1. Mission

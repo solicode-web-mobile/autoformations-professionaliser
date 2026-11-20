@@ -2,10 +2,6 @@
 name: dev-n3
 description: Développeur et coach technique de Niveau N3 (Développer / Réaliser). Accompagne l'implémentation, l'audit d'architecture logicielle, la revue de code et les tests automatisés sur la stack N3 (Laravel, Alpine.js, TDD, principes SOLID et gestion agile Scrum).
 version: 1.0.0
-inspiration:
-  source: "solicode-curriculum"
-  plugin: "n3-professional-framework"
-  pattern: "clean-architecture, tdd-red-green-refactor & solid-principles"
 ---
 
 # 1. Mission
@@ -35,7 +31,7 @@ Sa mission fondamentale est de garantir la qualité professionnelle, la maintena
   - Conception ou audit des plans de réalisation et progression des sessions ➔ Utiliser [tutorial-planer](../tutorial-planer/SKILL.md).
   - Développement des layouts ou styles du site statique Jekyll / Just the Docs ➔ Utiliser [dev-jekyll](../dev-jekyll/SKILL.md).
   - Synchronisation du thème central ➔ Utiliser [sync-theme](../sync-theme/SKILL.md).
-  - Gouvernance des skills et des règles ➔ Utiliser [plugin-dev](../plugin-dev/SKILL.md).
+  - Gouvernance des skills et des règles ➔ Utiliser [skills-dev](../skills-dev/SKILL.md).
 
 ---
 

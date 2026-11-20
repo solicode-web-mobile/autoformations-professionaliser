@@ -2,10 +2,6 @@
 name: tutorial-writer
 description: Master Skill et chef d'orchestre de la rédaction, de la gouvernance didactique et de la synchronisation des tutoriels avec les livrables du projet cible. Opère de façon générique sur les niveaux N1, N2 et N3 selon .agents/rules/. Centralise les règles transversales (UTF-8, colonne 0, tutoriels/, journalisation CLI, style A1-A2), route vers tutorial-*-writer et pilote le contrat .sync/rules.md.
 version: 4.2.0
-inspiration:
-  source: "solicode-pedagogy"
-  plugin: "pedagogy-referential"
-  pattern: "master-tutorial-orchestrator, multi-level-agnostic & target-repo-synchronizer"
 ---
 
 # 1. Mission & Responsabilités
@@ -21,13 +17,13 @@ flowchart LR
     Format --> Lab["tutorial-lab-writer"]
     Format --> Task["tutorial-task-writer"]
     Master --> Domain["Domaine Technique"]
-    Domain --> TDomain["tutorial-[slug]-writer"]
+    Domain --> TDomain["tutorial-writer-[slug]"]
 ```
 
 Il assure une quadruple responsabilité cardinale :
 1. **Gouvernance Transversale :** Fait respecter le socle commun invariable (encodage, formatage Markdown, arborescence `tutoriels/`, journalisation CLI, style A1-A2).
 2. **Aiguillage Didactique :** Route vers le sous-skill spécialisé de l'écosystème `tutorial-*-writer` selon la maturité de l'UA (`UA-Tuto`, `UA-Lab`, `UA-Tâche`).
-3. **Règles Spécifiques par Domaine :** Combine la structure avec le skill dédié du domaine `tutorial-[slug]-writer` (`uml`, `architecture`, `laravel`, `ia`, `scrum`, `realisation-projet`, etc.).
+3. **Règles Spécifiques par Domaine :** Combine la structure avec le skill dédié du domaine `tutorial-writer-[slug]` (`uml`, `architecture`, `laravel`, `ia`, `scrum`, `realisation-projet`, etc.).
 4. **Synchronisation Inter-Agents :** Pilote de façon exclusive les échanges et le versioning avec le projet cible selon le contrat `<projet-cible>/.sync/rules.md`.
 
 ---
@@ -69,7 +65,7 @@ Tous les rédacteurs `tutorial-*-writer` appliquent obligatoirement ces 12 règl
    - **`maturite: "UA-Tuto"` ➔ [tutorial-code-writer](../tutorial-code-writer/SKILL.md) :** Code incrémental pas-à-pas ($E_{n-1} \to E_n$), injecteur `window.pageData`.
    - **`maturite: "UA-Lab"` ➔ [tutorial-lab-writer](../tutorial-lab-writer/SKILL.md) :** Atelier pratique guidé (notions fondamentales, recherche active, modélisation, outillage IA).
    - **`maturite: "UA-Tâche"` ➔ [tutorial-task-writer](../tutorial-task-writer/SKILL.md) :** Cadrage opérationnel et cérémonies agiles Scrum (0% théorie).
-2. **Injection des Règles Spécifiques de Domaine (`tutorial-[slug]-writer`) :**
+2. **Injection des Règles Spécifiques de Domaine (`tutorial-writer-[slug]`) :**
    - Applique les exigences, outils et syntaxes du domaine cible (`uml`, `architecture`, `laravel`, `ia`, `scrum`, `realisation-projet`, etc.).
 
 ---
@@ -131,6 +127,6 @@ livrables:
 ---
 
 # 10. Exemples Concrets d'Aiguillage
-- **Code incrémental :** Création d'un composant/route pas-à-pas ($E_{n-1} \to E_n$) ➔ **`tutorial-code-writer`** + **`tutorial-laravel-writer`**.
-- **Atelier guidé :** Modélisation UML ➔ **`tutorial-lab-writer`** + **`tutorial-uml-writer`** ; Conception d'architecture ➔ **`tutorial-lab-writer`** + **`tutorial-architecture-writer`** ; Outillage IA RIO ➔ **`tutorial-lab-writer`** + **`tutorial-ia-writer`**.
-- **Tâche de projet :** Cérémonie opérationnelle (0% théorie) ➔ **`tutorial-task-writer`** + **`tutorial-realisation-projet-writer`**.
+- **Code incrémental :** Création d'un composant/route pas-à-pas ($E_{n-1} \to E_n$) ➔ **`tutorial-code-writer`** + **`tutorial-writer-laravel`**.
+- **Atelier guidé :** Modélisation UML ➔ **`tutorial-lab-writer`** + **`tutorial-writer-uml`** ; Conception d'architecture ➔ **`tutorial-lab-writer`** + **`tutorial-writer-architecture`** ; Outillage IA RIO ➔ **`tutorial-lab-writer`** + **`tutorial-writer-ia`**.
+- **Tâche de projet :** Cérémonie opérationnelle (0% théorie) ➔ **`tutorial-task-writer`** + **`tutorial-writer-realisation-projet`**.

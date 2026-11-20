@@ -2,10 +2,6 @@
 name: tutorial-code-writer
 description: Conçoit et rédige les tutoriels techniques d'apprentissage de code incrémental pas-à-pas (UA-Tuto, progression E_{n-1} -> E_n vers un code final d'arrivée) nativement simplifiés, avec injecteur window.pageData pour l'éditeur interactif. Opère de manière générique sur tous les niveaux selon les règles configurées dans .agents/rules/. Membre de l'écosystème tutorial-*-writer sous la gouvernance de tutorial-writer.
 version: 1.1.0
-inspiration:
-  source: "solicode-pedagogy"
-  plugin: "pedagogy-referential"
-  pattern: "incremental-series-progression, multi-level-agnostic & native-simplification"
 ---
 
 # 1. Mission

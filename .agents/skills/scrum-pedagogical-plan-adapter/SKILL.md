@@ -1,6 +1,7 @@
 ---
 name: scrum-pedagogical-plan-adapter
 description: Analyse, corrige et simplifie les domaines, unités d'apprentissage et tutoriels d'une formation organisée en Sprints avec Scrum. Préserve la pédagogie fondée sur l'apprentissage préalable, la conception centrée utilisateur, la réalisation parallèle de trois projets utilisant les mêmes techniques et la création d'un Agent IA réutilisable. Détecte les tâches inutiles, redondantes, mal positionnées ou non pertinentes et propose un plan de réalisation minimal, cohérent et applicable à tout type de projet.
+version: 1.0.0
 ---
 
 # Scrum Pedagogical Plan Adapter

@@ -1,11 +1,11 @@
-# Guide d'Utilisation — Skill `tutorial-realisation-projet-writer`
+# Guide d'Utilisation — Skill `tutorial-writer-realisation-projet`
 
 ## 1. Rôle & Vocation
-Le skill **`tutorial-realisation-projet-writer`** prescrit les règles directes pour rédiger les tutoriels de tâches opérationnelles et cérémonies de sprint du domaine **Réalisation de Projet** (D.351.2, C.351). Il garantit une approche 100% orientée action opérationnelle sans théorie superflue.
+Le skill **`tutorial-writer-realisation-projet`** prescrit les règles directes pour rédiger les tutoriels de tâches opérationnelles et cérémonies de sprint du domaine **Réalisation de Projet** (D.351.2, C.351). Il garantit une approche 100% orientée action opérationnelle sans théorie superflue.
 
 ## 2. Déclenchement & Invocations Types
 ```markdown
-@[.agents/skills/tutorial-realisation-projet-writer/SKILL.md] Rédige la fiche de cérémonie de Sprint Planning pour le Sprint 1.
+@[.agents/skills/tutorial-writer-realisation-projet/SKILL.md] Rédige la fiche de cérémonie de Sprint Planning pour le Sprint 1.
 ```
 
 ## 3. Déroulement Pas-à-Pas

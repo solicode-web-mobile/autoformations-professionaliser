@@ -9,17 +9,17 @@
       "tutorial-code-writer",
       "tutorial-lab-writer",
       "tutorial-task-writer",
-      "tutorial-uml-writer",
-      "tutorial-architecture-writer",
-      "tutorial-laravel-writer",
-      "tutorial-ia-writer",
-      "tutorial-scrum-writer",
-      "tutorial-realisation-projet-writer"
+      "tutorial-writer-uml",
+      "tutorial-writer-architecture",
+      "tutorial-writer-laravel",
+      "tutorial-writer-ia",
+      "tutorial-writer-scrum",
+      "tutorial-writer-realisation-projet"
     ],
     "global": [
       "project-setup",
       "tutorial-writer",
-      "plugin-dev"
+      "skills-dev"
     ]
   }
 }

@@ -1,20 +1,16 @@
 ---
-name: tutorial-ia-writer
-description: Règles de rédaction didactiques et techniques spécifiques au domaine IA et Agents (D.325.1, Compétence C.325). Membre de l'écosystème tutorial-*-writer sous la gouvernance de tutorial-writer.
+name: tutorial-writer-ia
+description: Règles de rédaction didactiques et techniques spécifiques au domaine IA et Agents (D.325.1, Compétence C.325). Membre de l'écosystème tutorial-writer sous la gouvernance de tutorial-writer.
 version: 1.0.0
-inspiration:
-  source: "solicode-pedagogy"
-  plugin: "pedagogy-referential"
-  pattern: "domain-specific-tutorial-writer"
 ---
 
 # 1. Mission & Périmètre
-Expert de domaine au sein de l'écosystème `tutorial-*-writer`, chargé de prescrire les standards didactiques, structures de prompts et règles d'outillage propres au domaine **IA et Agents** (D.325.1, Compétence C.325).
+Expert de domaine au sein de l'écosystème `tutorial-writer`, chargé de prescrire les standards didactiques, structures de prompts et règles d'outillage propres au domaine **IA et Agents** (D.325.1, Compétence C.325).
 Applique le socle transversal et la synchronisation gouvernés par [tutorial-writer](../tutorial-writer/SKILL.md).
 
 # 2. Déclenchement & Limites
 - **Activer :** Rédaction, audit ou adaptation de tutoriels du domaine IA (ingénierie de prompt, méta-prompts, skills modulaires, context engineering).
-- **Ne PAS activer :** Tutoriels de code applicatif classique ➔ `tutorial-laravel-writer` | Cérémonies agiles ➔ `tutorial-scrum-writer` | Gouvernance transversale ➔ `tutorial-writer`.
+- **Ne PAS activer :** Tutoriels de code applicatif classique ➔ `tutorial-writer-laravel` | Cérémonies agiles ➔ `tutorial-writer-scrum` | Gouvernance transversale ➔ `tutorial-writer`.
 
 # 3. Stack Technique & Méthodes du Domaine
 - **Méthode de prompt engineering :** Cadre RIO (Rôle, Instruction, Output, Contraintes Négatives).

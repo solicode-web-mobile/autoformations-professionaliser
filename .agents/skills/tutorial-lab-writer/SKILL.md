@@ -2,10 +2,6 @@
 name: tutorial-lab-writer
 description: Conçoit, structure et rédige les tutoriels d'ateliers pratiques guidés pour les Unités d'Apprentissage à maturité UA-Lab (Notions fondamentales, Recherche active, Pratique guidée sur projet cible, Prompts et Skills RIO ciblés).
 version: 2.1.0
-inspiration:
-  source: "solicode-pedagogy"
-  plugin: "pedagogy-referential"
-  pattern: "ua-lab-flexible, pareto-20-80, single-sprint-branch & recurrent-workflow-prompts"
 ---
 
 # 1. Mission & Structure Flexible

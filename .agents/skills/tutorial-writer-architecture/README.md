@@ -1,4 +1,4 @@
-# Skill `tutorial-architecture-writer`
+# Skill `tutorial-writer-architecture`
 
 Règles de rédaction didactiques et contraintes techniques spécifiques au domaine **Architecture logicielle** (D.312.1, Compétence C.312).
 

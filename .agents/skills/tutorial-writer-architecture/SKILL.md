@@ -1,20 +1,16 @@
 ---
-name: tutorial-architecture-writer
-description: Règles de rédaction didactiques et techniques spécifiques au domaine Architecture logicielle (D.312.1, Compétence C.312). Membre de l'écosystème tutorial-*-writer sous la gouvernance de tutorial-writer.
+name: tutorial-writer-architecture
+description: Règles de rédaction didactiques et techniques spécifiques au domaine Architecture logicielle (D.312.1, Compétence C.312). Membre de l'écosystème tutorial-writer sous la gouvernance de tutorial-writer.
 version: 1.0.0
-inspiration:
-  source: "solicode-pedagogy"
-  plugin: "pedagogy-referential"
-  pattern: "domain-specific-tutorial-writer"
 ---
 
 # 1. Mission & Périmètre
-Expert de domaine au sein de l'écosystème `tutorial-*-writer`, chargé de prescrire les standards techniques, syntaxes, outils et critères de validation propres au domaine **Architecture logicielle** (D.312.1, Compétence C.312).
+Expert de domaine au sein de l'écosystème `tutorial-writer`, chargé de prescrire les standards techniques, syntaxes, outils et critères de validation propres au domaine **Architecture logicielle** (D.312.1, Compétence C.312).
 Applique le socle transversal et la synchronisation gouvernés par [tutorial-writer](../tutorial-writer/SKILL.md).
 
 # 2. Déclenchement & Limites
 - **Activer :** Rédaction, audit ou adaptation de tutoriels du domaine Architecture (découpage en couches, ADR, principes SOLID, flux de données).
-- **Ne PAS activer :** Modélisation purement UML ➔ `tutorial-uml-writer` | Implémentation de code d'application ➔ `tutorial-laravel-writer` | Gouvernance transversale ➔ `tutorial-writer`.
+- **Ne PAS activer :** Modélisation purement UML ➔ `tutorial-writer-uml` | Implémentation de code d'application ➔ `tutorial-writer-laravel` | Gouvernance transversale ➔ `tutorial-writer`.
 
 # 3. Stack Technique & Outils du Domaine
 - **Modèles architecturaux :** Architecture en couches (2 couches en initiation, 3 couches en approfondissement), modèle MVC.

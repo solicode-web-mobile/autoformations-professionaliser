@@ -30,7 +30,7 @@ Ce document définit la matrice d'adéquation entre la typologie détectée d'un
   - `domain-scaffolder` : Création et modélisation d'entités métier multi-tiers et migrations.
   - `bug-fixer` : Diagnostic sur logs (`laravel.log`), exceptions `BlException` et fiches d'incidents.
   - `context-generator` : Cartographie contextuelle `AI_CONTEXT.md` des packages et modules.
-  - `plugin-dev` : Raffinement des règles, guidelines et gouvernance des skills.
+  - `skills-dev` : Raffinement des règles, guidelines et gouvernance des skills.
 - **Compétences exclues par défaut :**
   - `tutorial-writer`, `workshop-builder`.
 
@@ -48,7 +48,7 @@ Ce document définit la matrice d'adéquation entre la typologie détectée d'un
   - `project-setup` : Diagnostic et maintien du cadre éditorial.
   - `planner-dev` : Structuration du plan de cours, décomposition en étapes progressives (macro-plan).
   - `tutorial-writer` : Rédaction détaillée des étapes, insertion de snippets vérifiables, quiz et auto-évaluations.
-  - `plugin-dev` : Création ou enrichissement de micro-guides spécifiques au domaine enseigné.
+  - `skills-dev` : Création ou enrichissement de micro-guides spécifiques au domaine enseigné.
 - **Compétences exclues par défaut :**
   - `domain-scaffolder`, `bug-fixer`, `context-generator`, `feature-dev` (sauf si le tutoriel inclut une application témoin à maintenir).
 
@@ -56,7 +56,7 @@ Ce document définit la matrice d'adéquation entre la typologie détectée d'un
 - **Niveau N1 (Découvrir) :** Fondamentaux du web, procédural, code pas-à-pas (skill technique associé : dev-n1).
 - **Niveau N2 (Prototyper) :** POO PHP, architecture 3-tiers, modélisation UML (skill technique associé : dev-n2).
 - **Niveau N3 (Développer / Réaliser) :** Frameworks modernes (Laravel, Alpine.js), TDD, principes SOLID, méthodologie Scrum (skill technique associé : dev-n3).
-- **Socle méthodologique universel (N1, N2, N3) :** 	utorial-planer, 	utorial-writer, dev-jekyll, sync-theme, plugin-dev.
+- **Socle méthodologique universel (N1, N2, N3) :** 	utorial-planer, 	utorial-writer, dev-jekyll, sync-theme, skills-dev.
 
 ---
 
@@ -71,7 +71,7 @@ Ce document définit la matrice d'adéquation entre la typologie détectée d'un
   - `planner-dev` : Scénarisation de situations d'évaluation et découpage des jalons d'un projet.
   - `workshop-builder` : Conception d'ateliers pratiques guidés (TP), briefs de projet et grilles d'évaluation APC.
   - `tutorial-writer` : Rédaction des supports méthodologiques associés.
-  - `plugin-dev` : Normalisation des fiches d'évaluation.
+  - `skills-dev` : Normalisation des fiches d'évaluation.
 - **Compétences exclues par défaut :**
   - `domain-scaffolder`, `bug-fixer`, `context-generator`, `feature-dev`.
 

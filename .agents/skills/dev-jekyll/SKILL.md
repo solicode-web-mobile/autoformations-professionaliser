@@ -2,10 +2,6 @@
 name: dev-jekyll
 description: Developpe, optimise et maintient l architecture frontend, les layouts, les assets CSS/JS et les fonctionnalites interactives du site Jekyll Just the Docs.
 version: 1.0.0
-inspiration:
-  source: "jekyll-open-source"
-  plugin: "just-the-docs"
-  pattern: "modular-asset-pipeline & dynamic-layout-theming"
 ---
 
 # 1. Mission

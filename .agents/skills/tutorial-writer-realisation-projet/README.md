@@ -1,4 +1,4 @@
-# Skill `tutorial-realisation-projet-writer`
+# Skill `tutorial-writer-realisation-projet`
 
 Règles de rédaction directes et spécifiques au domaine **Réalisation de Projet** (D.351.2, Compétence C.351).
 

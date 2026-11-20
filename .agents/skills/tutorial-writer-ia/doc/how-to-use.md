@@ -1,11 +1,11 @@
-# Guide d'Utilisation — Skill `tutorial-ia-writer`
+# Guide d'Utilisation — Skill `tutorial-writer-ia`
 
 ## 1. Rôle & Vocation
-Le skill **`tutorial-ia-writer`** prescrit les règles didactiques et normatives pour rédiger les tutoriels du domaine **IA et Agents** (D.325.1, C.325). Il garantit la rigueur de la méthode RIO et l'architecture modulaire des skills IA.
+Le skill **`tutorial-writer-ia`** prescrit les règles didactiques et normatives pour rédiger les tutoriels du domaine **IA et Agents** (D.325.1, C.325). Il garantit la rigueur de la méthode RIO et l'architecture modulaire des skills IA.
 
 ## 2. Déclenchement & Invocations Types
 ```markdown
-@[.agents/skills/tutorial-ia-writer/SKILL.md] Rédige le tutoriel de conception du skill de gestion de dépôt avec la méthode RIO.
+@[.agents/skills/tutorial-writer-ia/SKILL.md] Rédige le tutoriel de conception du skill de gestion de dépôt avec la méthode RIO.
 ```
 
 ## 3. Déroulement Pas-à-Pas

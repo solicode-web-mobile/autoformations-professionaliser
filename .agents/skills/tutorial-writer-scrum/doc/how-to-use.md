@@ -1,11 +1,11 @@
-# Guide d'Utilisation — Skill `tutorial-scrum-writer`
+# Guide d'Utilisation — Skill `tutorial-writer-scrum`
 
 ## 1. Rôle & Vocation
-Le skill **`tutorial-scrum-writer`** prescrit les règles didactiques et exigences méthodologiques pour rédiger les tutoriels du domaine **Scrum** (D.351.1, C.351). Il veille à l'équilibre entre concepts fondamentaux et recherche active de l'apprenant.
+Le skill **`tutorial-writer-scrum`** prescrit les règles didactiques et exigences méthodologiques pour rédiger les tutoriels du domaine **Scrum** (D.351.1, C.351). Il veille à l'équilibre entre concepts fondamentaux et recherche active de l'apprenant.
 
 ## 2. Déclenchement & Invocations Types
 ```markdown
-@[.agents/skills/tutorial-scrum-writer/SKILL.md] Rédige le tutoriel d'assimilation de la Definition of Done (DoD) pour le Sprint 1.
+@[.agents/skills/tutorial-writer-scrum/SKILL.md] Rédige le tutoriel d'assimilation de la Definition of Done (DoD) pour le Sprint 1.
 ```
 
 ## 3. Déroulement Pas-à-Pas

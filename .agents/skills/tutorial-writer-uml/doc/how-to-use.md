@@ -1,12 +1,12 @@
-# Guide d'Utilisation — Skill `tutorial-uml-writer`
+# Guide d'Utilisation — Skill `tutorial-writer-uml`
 
 ## 1. Rôle & Vocation
-Le skill **`tutorial-uml-writer`** fournit à l'agent les règles didactiques et contraintes techniques nécessaires pour rédiger les tutoriels du domaine **UML** (D.311.2, C.311). Il opère sous la gouvernance du Master Skill `tutorial-writer`.
+Le skill **`tutorial-writer-uml`** fournit à l'agent les règles didactiques et contraintes techniques nécessaires pour rédiger les tutoriels du domaine **UML** (D.311.2, C.311). Il opère sous la gouvernance du Master Skill `tutorial-writer`.
 
 ## 2. Déclenchement & Invocations Types
 Invoquer ce skill lors de la rédaction de fiches de modélisation ou de schémas déclaratifs Mermaid :
 ```markdown
-@[.agents/skills/tutorial-uml-writer/SKILL.md] Rédige le tutoriel de modélisation des cas d'utilisation pour le Blog des Lauréats.
+@[.agents/skills/tutorial-writer-uml/SKILL.md] Rédige le tutoriel de modélisation des cas d'utilisation pour le Blog des Lauréats.
 ```
 
 ## 3. Déroulement Pas-à-Pas

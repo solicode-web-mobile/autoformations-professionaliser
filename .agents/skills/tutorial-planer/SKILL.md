@@ -2,10 +2,6 @@
 name: tutorial-planer
 description: Conçoit, audite et optimise les plans de réalisation et la progression pédagogique des tutoriels par session/sprint. Garantit le chaînage sans rupture cognitive (E_{n-1} -> E_n), le titrage équilibré (un seul objectif concret, zéro entité métier), le sas 'Bien démarrer', la granularité (1 UA par domaine, 2 au démarrage), la création automatique des entités manquantes (_sessions/, _domaines/, _uas/) et l'initialisation des stubs de tutoriels (en_construction: true).
 version: 2.1.0
-inspiration:
-  source: "solicode-pedagogy"
-  plugin: "pedagogy-referential"
-  pattern: "curriculum-sequencing, zero-gap-learning & cognitive-load-control"
 ---
 
 # 1. Mission & Rôles Clés
@@ -35,7 +31,7 @@ Architecte de la progression pédagogique au sein du cursus Solicode, opérant e
 
 # 3. Déclenchement & Limites
 - **Activer :** Conception d'un plan de réalisation ; audit et élimination de ruptures cognitives ; création d'entités Jekyll manquantes (`_sessions/`, `_domaines/`, `_uas/`) ; génération des stubs `en_construction: true` ; formulation de titres équilibrés.
-- **Ne PAS activer :** Rédaction détaillée du corps d'un tutoriel ➔ `tutorial-writer` | Layouts/CSS Jekyll ➔ `dev-jekyll` | Synchronisation Core Theme ➔ `sync-theme` | Méta-gouvernance ➔ `plugin-dev`.
+- **Ne PAS activer :** Rédaction détaillée du corps d'un tutoriel ➔ `tutorial-writer` | Layouts/CSS Jekyll ➔ `dev-jekyll` | Synchronisation Core Theme ➔ `sync-theme` | Méta-gouvernance ➔ `skills-dev`.
 
 ---
 

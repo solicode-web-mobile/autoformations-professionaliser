@@ -2,10 +2,6 @@
 name: project-setup
 description: Initialise l'agent sur n'importe quel type de projet (Dev logiciel, Redaction de tutoriels/autoformations, Ateliers APC), analyse les cahiers des charges, audite et recycle les dossiers legacy (old_agent) et deploie les competences requises par liens symboliques.
 version: 2.1.0
-inspiration:
-  source: "anthropic/claude-plugins-official"
-  plugin: "claude-code-setup"
-  pattern: "universal onboarding, legacy recycling, capability tailoring & rules proposal"
 ---
 
 # 1. Mission
@@ -28,7 +24,7 @@ Ce skill est l'**orchestrateur universel d'onboarding, d'audit architectural et 
   - Vérification de santé et réalignement de l'environnement IA (`manage-skills.cjs list`).
 - **Quand NE PAS l'activer :**
   - Rédaction ou simplification de tutoriels ➔ Utiliser [tutorial-writer](../tutorial-writer/SKILL.md).
-  - Conception, modification ou gouvernance des compétences et règles ➔ Utiliser [plugin-dev](../plugin-dev/SKILL.md).
+  - Conception, modification ou gouvernance des compétences et règles ➔ Utiliser [skills-dev](../skills-dev/SKILL.md).
   - Développement de composants, styles CSS ou layouts Jekyll ➔ Utiliser [dev-jekyll](../dev-jekyll/SKILL.md).
   - Synchronisation du socle technique partagé (Core Theme) ➔ Utiliser [sync-theme](../sync-theme/SKILL.md).
 

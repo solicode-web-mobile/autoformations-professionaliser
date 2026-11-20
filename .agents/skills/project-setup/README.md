@@ -44,11 +44,11 @@ node .agents/skills/project-setup/scripts/manage-skills.cjs list
 
 # 2. Récupérer / Synchroniser toutes les compétences globales depuis le Hub (Hub -> Projet)
 node .agents/skills/project-setup/scripts/manage-skills.cjs pull
-# (ou avec un nom de skill : node ... pull plugin-dev)
+# (ou avec un nom de skill : node ... pull skills-dev)
 
 # 3. Pousser / Synchroniser toutes les compétences globales vers le Hub (Projet -> Hub)
 node .agents/skills/project-setup/scripts/manage-skills.cjs push
-# (ou avec un nom de skill : node ... push plugin-dev)
+# (ou avec un nom de skill : node ... push skills-dev)
 
 # 4. Détacher une compétence globale pour modification locale (incubation)
 node .agents/skills/project-setup/scripts/manage-skills.cjs localize <nom-du-skill>
@@ -78,7 +78,7 @@ Pour mettre à jour les compétences locales lorsque le Hub `skills-workspace` a
 
 2. **Alternative PowerShell native (sans Node.js) :**
    ```powershell
-   Copy-Item -Path "D:\solicode-lms\skills-workspace\skills\plugin-dev" -Destination ".agents\skills\plugin-dev" -Recurse -Force
+   Copy-Item -Path "D:\solicode-lms\skills-workspace\skills\skills-dev" -Destination ".agents\skills\skills-dev" -Recurse -Force
    Copy-Item -Path "D:\solicode-lms\skills-workspace\skills\project-setup" -Destination ".agents\skills\project-setup" -Recurse -Force
    ```
 

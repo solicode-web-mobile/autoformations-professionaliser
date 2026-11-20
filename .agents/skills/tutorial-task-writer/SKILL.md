@@ -2,10 +2,6 @@
 name: tutorial-task-writer
 description: Conçoit, structure et rédige les fiches de tutoriels opérationnels de projet et cérémonies de sprint pour les Unités d'Apprentissage à maturité UA-Tâche (Cadrage, Sprint Planning, Review, Rétrospective, Refinement, Débriefing, Prompts de cérémonies). 0% théorie.
 version: 2.1.0
-inspiration:
-  source: "solicode-pedagogy"
-  plugin: "pedagogy-referential"
-  pattern: "ua-task-operational, sprint-ceremonies, zero-theory & ceremony-prompts"
 ---
 
 # 1. Mission & Rôle

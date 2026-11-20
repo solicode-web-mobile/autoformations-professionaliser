@@ -1,20 +1,16 @@
 ---
-name: tutorial-realisation-projet-writer
-description: Règles de rédaction spécifiques au domaine Réalisation de Projet (D.351.2, Compétence C.351). Membre de l'écosystème tutorial-*-writer sous la gouvernance de tutorial-writer.
+name: tutorial-writer-realisation-projet
+description: Règles de rédaction spécifiques au domaine Réalisation de Projet (D.351.2, Compétence C.351). Membre de l'écosystème tutorial-writer sous la gouvernance de tutorial-writer.
 version: 1.0.0
-inspiration:
-  source: "solicode-pedagogy"
-  plugin: "pedagogy-referential"
-  pattern: "domain-specific-tutorial-writer"
 ---
 
 # 1. Mission & Périmètre
-Expert de domaine au sein de l'écosystème `tutorial-*-writer`, chargé de prescrire les standards d'action, d'organisation de dépôt et de rituels opérationnels propres au domaine **Réalisation de Projet** (D.351.2, Compétence C.351).
+Expert de domaine au sein de l'écosystème `tutorial-writer`, chargé de prescrire les standards d'action, d'organisation de dépôt et de rituels opérationnels propres au domaine **Réalisation de Projet** (D.351.2, Compétence C.351).
 Applique le socle transversal et la synchronisation gouvernés par [tutorial-writer](../tutorial-writer/SKILL.md).
 
 # 2. Déclenchement & Limites
 - **Activer :** Rédaction, audit ou adaptation de tutoriels opérationnels de projet (cadrage, Sprint Planning, Review, Rétrospective, Refinement, gestion de dépôt).
-- **Ne PAS activer :** Apports méthodologiques Scrum théoriques ➔ `tutorial-scrum-writer` | Rédaction de code applicatif ➔ `tutorial-laravel-writer` | Gouvernance transversale ➔ `tutorial-writer`.
+- **Ne PAS activer :** Apports méthodologiques Scrum théoriques ➔ `tutorial-writer-scrum` | Rédaction de code applicatif ➔ `tutorial-writer-laravel` | Gouvernance transversale ➔ `tutorial-writer`.
 
 # 3. Environnement & Organisation du Projet
 - **Maturité canonique :** `maturite: "UA-Tâche"` (100% orienté action opérationnelle, 0% théorie).

@@ -1,4 +1,4 @@
-# Skill `tutorial-scrum-writer`
+# Skill `tutorial-writer-scrum`
 
 Règles de rédaction didactiques et méthodologiques spécifiques au domaine **Scrum** (D.351.1, Compétence C.351).
 

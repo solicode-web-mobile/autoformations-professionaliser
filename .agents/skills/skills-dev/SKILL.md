@@ -1,11 +1,7 @@
 ---
-name: plugin-dev
+name: skills-dev
 description: Gouverne, conçoit, crée et raffine les skills, les règles (.agents/rules/, AGENTS.md) et les standards normatifs selon les patterns officiels d'Anthropic, et maintient la conformité SemVer.
-version: 1.3.0
-inspiration:
-  source: "anthropic/claude-plugins-official"
-  plugin: "plugin-dev"
-  pattern: "skill scaffolding, trigger tuning, resource encapsulation & continuous refinement"
+version: 1.4.0
 ---
 
 # 1. Mission
@@ -33,7 +29,6 @@ Ce méta-skill assure la gouvernance technique complète de l'écosystème IA : 
 - **Priorité 4 :** Registre `catalog.yaml` et `CHANGELOG.md` du Hub Global.
 
 # 4. Contraintes & Règles Inviolables
-- **Bloc `inspiration` Obligatoire :** Tout skill créé ou modifié DOIT impérativement comporter la métadonnée `inspiration:` dans son frontmatter YAML avec sa source, son plugin de référence et son pattern.
 - **Respect Strict des 10 Rubriques :** Aucun skill ne peut être publié s'il omet l'une des 10 rubriques normées.
 - **Dossier de Documentation Obligatoire (`doc/how-to-use.md`) :** Tout skill créé ou maintenu DOIT obligatoirement posséder un sous-dossier `doc/` renfermant un guide d'utilisation opérationnel (`doc/how-to-use.md`). Ce guide formalise clairement la mission, les cas d'usage concrets, les prompts types pour l'activer, les prérequis, les étapes opératoires pas-à-pas et la procédure de vérification des livrables.
 - **Encapsulation Stricte des Ressources (Niveau Skill vs Niveau Agent) :** Tout fichier méthodologique, guide ou gabarit utilisé exclusivement par une seule compétence DOIT impérativement être encapsulé dans son sous-dossier `resources/` (principe de divulgation progressive). Il est formellement interdit de déposer des ressources mono-compétence au niveau Agent (`.agents/references/`). Le niveau Agent est strictement réservé aux conventions et standards transversaux partagés par plusieurs compétences ou régissant le projet dans sa globalité.
@@ -52,7 +47,6 @@ Ce méta-skill assure la gouvernance technique complète de l'écosystème IA : 
 2. **Étape 2 : Rédaction du `SKILL.md` :**
    - Remplir le gabarit en 10 rubriques.
    - Formuler la description à la 3ème personne en précisant clairement les cas d'activation et d'exclusion.
-   - Remplir le bloc YAML `inspiration`.
    - Encapsuler les éventuelles ressources d'accompagnement propres au skill dans son sous-dossier `resources/`.
 3. **Étape 3 : Rédaction de la Documentation Utilisateur (`doc/how-to-use.md`) :**
    - Créer le dossier `doc/` et rédiger le guide d'utilisation `doc/how-to-use.md` détaillant la mission, les prompts types d'invocation, les entrées/sorties et les contrôles.
@@ -98,7 +92,6 @@ Ce méta-skill assure la gouvernance technique complète de l'écosystème IA : 
 - Le résultat d'exécution du script `validate-skills.cjs` (0 erreur).
 
 # 8. Contrôle Qualité (Checklist Binaire)
-- [ ] Le frontmatter YAML du skill contient-il le bloc inspiration complet (source, plugin, pattern) ?
 - [ ] La description est-elle à la 3ème personne et précise-t-elle quand activer et quand ne pas activer ?
 - [ ] Les 10 rubriques normées sont-elles toutes présentes et renseignées ?
 - [ ] Le sous-dossier `doc/` existe-t-il et contient-il un guide d'utilisation opérationnel (`doc/how-to-use.md`) ?
@@ -112,12 +105,11 @@ Ce méta-skill assure la gouvernance technique complète de l'écosystème IA : 
 | Oubli du dossier `doc/` et de `how-to-use.md` | Inattention lors de la création du skill | Créer `doc/how-to-use.md` selon le gabarit de documentation |
 | Déposer une ressource spécifique au niveau Agent | Manque de granularité dans l'encapsulation | Déplacer le fichier sous `<skill>/resources/` et référencer en ressource interne |
 | Créer un skill pour une simple règle passive | Confusion entre règle et flux outillé | Basculer l'instruction vers rules/ ou AGENTS.md |
-| Oubli de la métadonnée d'inspiration | Inattention | Ajouter systématiquement le bloc inspiration dans le frontmatter |
 | Règle locale en conflit avec le standard Hub | Manque d'audit préalable | Auditer standards/critical-rules.md avant de formaliser la règle |
 
 # 10. Exemples Concrets (Few-Shot)
 **Exemple d'invocation A (Skill) :** *"Crée le skill bug-fixer inspiré de pr-review-toolkit."*
-**Comportement :** L'agent charge `anthropic-skill-patterns.md`, extrait le pattern de revue consolidée, rédige les 10 rubriques avec `inspiration: { plugin: "pr-review-toolkit" }`, isole les fiches de templates dans `bug-fixer/resources/`, exécute `validate-skills.js`, et enregistre la compétence dans `catalog.yaml`.
+**Comportement :** L'agent charge `anthropic-skill-patterns.md`, extrait le pattern de revue consolidée, rédige les 10 rubriques, isole les fiches de templates dans `bug-fixer/resources/`, exécute `validate-skills.js`, et enregistre la compétence dans `catalog.yaml`.
 
 **Exemple d'invocation B (Règle) :** *"Ajoute une règle imposant l'affichage des skills utilisés à chaque fin de message."*
-**Comportement :** L'agent applique le Parcours C de `plugin-dev`, rédige `.agents/rules/affichage-skills.md` et `AGENTS.md`, met à jour `critical-rules.md` du Hub, et applique immédiatement le format requis.
+**Comportement :** L'agent applique le Parcours C de `skills-dev`, rédige `.agents/rules/affichage-skills.md` et `AGENTS.md`, met à jour `critical-rules.md` du Hub, et applique immédiatement le format requis.

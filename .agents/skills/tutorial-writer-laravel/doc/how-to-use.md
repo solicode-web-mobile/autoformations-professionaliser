@@ -1,11 +1,11 @@
-# Guide d'Utilisation — Skill `tutorial-laravel-writer`
+# Guide d'Utilisation — Skill `tutorial-writer-laravel`
 
 ## 1. Rôle & Vocation
-Le skill **`tutorial-laravel-writer`** prescrit les règles didactiques et conventions de code pour rédiger les tutoriels du domaine **Laravel** (D.321.1, C.321). Il garantit le respect des conventions du framework, la séparation Back/Front et l'approche Live Coding.
+Le skill **`tutorial-writer-laravel`** prescrit les règles didactiques et conventions de code pour rédiger les tutoriels du domaine **Laravel** (D.321.1, C.321). Il garantit le respect des conventions du framework, la séparation Back/Front et l'approche Live Coding.
 
 ## 2. Déclenchement & Invocations Types
 ```markdown
-@[.agents/skills/tutorial-laravel-writer/SKILL.md] Rédige le tutoriel de création du CRUD des articles avec FormRequest et Blade.
+@[.agents/skills/tutorial-writer-laravel/SKILL.md] Rédige le tutoriel de création du CRUD des articles avec FormRequest et Blade.
 ```
 
 ## 3. Déroulement Pas-à-Pas

@@ -1,20 +1,16 @@
 ---
-name: tutorial-laravel-writer
-description: Règles de rédaction didactiques et techniques spécifiques au domaine Laravel (D.321.1, Compétence C.321). Membre de l'écosystème tutorial-*-writer sous la gouvernance de tutorial-writer.
+name: tutorial-writer-laravel
+description: Règles de rédaction didactiques et techniques spécifiques au domaine Laravel (D.321.1, Compétence C.321). Membre de l'écosystème tutorial-writer sous la gouvernance de tutorial-writer.
 version: 1.0.0
-inspiration:
-  source: "solicode-pedagogy"
-  plugin: "pedagogy-referential"
-  pattern: "domain-specific-tutorial-writer"
 ---
 
 # 1. Mission & Périmètre
-Expert de domaine au sein de l'écosystème `tutorial-*-writer`, chargé de prescrire les standards techniques, conventions de code et critères de validation propres au domaine **Laravel** (D.321.1, Compétence C.321).
+Expert de domaine au sein de l'écosystème `tutorial-writer`, chargé de prescrire les standards techniques, conventions de code et critères de validation propres au domaine **Laravel** (D.321.1, Compétence C.321).
 Applique le socle transversal et la synchronisation gouvernés par [tutorial-writer](../tutorial-writer/SKILL.md).
 
 # 2. Déclenchement & Limites
 - **Activer :** Rédaction, audit ou adaptation de tutoriels du domaine Laravel (routing, contrôleurs, Eloquent, FormRequest, Blade, Alpine.js, Live Coding).
-- **Ne PAS activer :** Conception architecturale pure / ADR ➔ `tutorial-architecture-writer` | Tâches de cérémonie de sprint ➔ `tutorial-scrum-writer` | Gouvernance transversale ➔ `tutorial-writer`.
+- **Ne PAS activer :** Conception architecturale pure / ADR ➔ `tutorial-writer-architecture` | Tâches de cérémonie de sprint ➔ `tutorial-writer-scrum` | Gouvernance transversale ➔ `tutorial-writer`.
 
 # 3. Stack Technique & Outils du Domaine
 - **Framework & Écosystème :** Laravel, Blade Components, Tailwind CSS, Alpine.js.

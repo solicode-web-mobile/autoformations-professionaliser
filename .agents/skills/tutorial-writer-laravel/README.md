@@ -1,4 +1,4 @@
-# Skill `tutorial-laravel-writer`
+# Skill `tutorial-writer-laravel`
 
 Règles de rédaction didactiques et conventions de code spécifiques au domaine **Laravel** (D.321.1, Compétence C.321).
 

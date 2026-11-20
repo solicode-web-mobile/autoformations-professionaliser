@@ -1,20 +1,16 @@
 ---
-name: tutorial-scrum-writer
-description: Règles de rédaction didactiques et méthodologiques spécifiques au domaine Scrum (D.351.1, Compétence C.351). Membre de l'écosystème tutorial-*-writer sous la gouvernance de tutorial-writer.
+name: tutorial-writer-scrum
+description: Règles de rédaction didactiques et méthodologiques spécifiques au domaine Scrum (D.351.1, Compétence C.351). Membre de l'écosystème tutorial-writer sous la gouvernance de tutorial-writer.
 version: 1.0.0
-inspiration:
-  source: "solicode-pedagogy"
-  plugin: "pedagogy-referential"
-  pattern: "domain-specific-tutorial-writer"
 ---
 
 # 1. Mission & Périmètre
-Expert de domaine au sein de l'écosystème `tutorial-*-writer`, chargé de prescrire les standards didactiques et exigences méthodologiques propres au domaine **Scrum** (D.351.1, Compétence C.351).
+Expert de domaine au sein de l'écosystème `tutorial-writer`, chargé de prescrire les standards didactiques et exigences méthodologiques propres au domaine **Scrum** (D.351.1, Compétence C.351).
 Applique le socle transversal et la synchronisation gouvernés par [tutorial-writer](../tutorial-writer/SKILL.md).
 
 # 2. Déclenchement & Limites
 - **Activer :** Rédaction, audit ou adaptation de tutoriels du domaine Scrum (piliers, rôles, artefacts, DoD, User Stories, rituels théoriques).
-- **Ne PAS activer :** Conduite opérationnelle des cérémonies de sprint ➔ `tutorial-realisation-projet-writer` | Modélisation UML ➔ `tutorial-uml-writer` | Gouvernance transversale ➔ `tutorial-writer`.
+- **Ne PAS activer :** Conduite opérationnelle des cérémonies de sprint ➔ `tutorial-writer-realisation-projet` | Modélisation UML ➔ `tutorial-writer-uml` | Gouvernance transversale ➔ `tutorial-writer`.
 
 # 3. Référentiel Méthodologique & Outils
 - **Fondations Scrum :** 3 piliers (Transparence, Inspection, Adaptation), 3 rôles (PO, Scrum Master, Développeurs), 5 événements.

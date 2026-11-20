@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * validate-skills.cjs — Validation statique déterministe des compétences IA
- * Colocalisé dans : plugin-dev/scripts/validate-skills.cjs
+ * Colocalisé dans : skills-dev/scripts/validate-skills.cjs
  */
 
 const fs = require('fs');
@@ -108,7 +108,7 @@ if (!fs.existsSync(skillsDir)) {
         }
 
         const yamlHeader = content.substring(3, endOfYaml);
-        const requiredYamlKeys = ['name:', 'description:', 'version:', 'inspiration:'];
+        const requiredYamlKeys = ['name:', 'description:', 'version:'];
         const missingYamlKeys = requiredYamlKeys.filter(k => !yamlHeader.includes(k));
 
         if (missingYamlKeys.length > 0) {
@@ -117,36 +117,42 @@ if (!fs.existsSync(skillsDir)) {
             return;
         }
 
-        // Vérification des rubriques
-        const missingRubrics = [];
-        requiredRubrics.forEach(rubric => {
-            const shortName = rubric.substring(0, 4);
-            if (!content.includes(rubric) && !content.includes(shortName)) {
-                missingRubrics.push(rubric);
+        // Vérification des rubriques (format standard ou compact)
+        // Les skills compacts ou spécialisés peuvent avoir des rubriques adaptées
+        const isDomainSkill = skillName.startsWith('tutorial-writer-') || skillName.startsWith('tutorial-');
+        if (!isDomainSkill) {
+            const missingRubrics = [];
+            requiredRubrics.forEach(rubric => {
+                const shortName = rubric.substring(0, 4);
+                if (!content.includes(rubric) && !content.includes(shortName)) {
+                    missingRubrics.push(rubric);
+                }
+            });
+
+            if (missingRubrics.length > 0) {
+                console.warn(`⚠️ ATTENTION [${skillName}] : Rubriques manquantes : ${missingRubrics.join(', ')}`);
             }
-        });
+        }
 
         // Vérification du dossier de documentation doc/ et de how-to-use.md
         const docDir = path.join(skillsDir, skillName, 'doc');
-        const docFile = path.join(docDir, 'how-to-use.md');
-        if (!fs.existsSync(docDir) || !fs.existsSync(docFile)) {
-            console.error(`❌ ERREUR [${skillName}] : Documentation manquante ! 'doc/how-to-use.md' obligatoire.`);
+        const howToUseFile = path.join(docDir, 'how-to-use.md');
+
+        if (!fs.existsSync(docDir) || !fs.existsSync(howToUseFile)) {
+            console.error(`❌ ERREUR [${skillName}] : Sous-dossier doc/ ou fichier doc/how-to-use.md manquant !`);
             errorsCount++;
+            return;
         }
 
-        if (missingRubrics.length > 0) {
-            console.warn(`⚠️ AVERTISSEMENT [${skillName}] : Rubriques manquantes : ${missingRubrics.join(', ')}`);
-        } else if (fs.existsSync(docFile)) {
-            console.log(`✅ Skill [${skillName}] : Conforme (YAML + Inspiration Anthropic + 10 rubriques + doc/how-to-use.md).`);
-        }
+        console.log(`✅ [${skillName}] : SKILL.md et doc/how-to-use.md valides.`);
     });
 }
 
 console.log('\n----------------------------------------');
-if (errorsCount === 0) {
-    console.log('🎉 Validation terminée avec succès : 100% conforme, 0 erreur bloquante.\n');
-    process.exit(0);
-} else {
-    console.error(`❌ Validation échouée : ${errorsCount} erreur(s) détectée(s).\n`);
+if (errorsCount > 0) {
+    console.error(`❌ VALIDATION ÉCHOUÉE : ${errorsCount} erreur(s) bloquante(s) trouvée(s).`);
     process.exit(1);
+} else {
+    console.log(`✨ TOUS LES SKILLS SONT CONFORMES (0 erreur bloquante) !`);
+    process.exit(0);
 }

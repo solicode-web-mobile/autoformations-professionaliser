@@ -1,11 +1,11 @@
-# Guide d'Utilisation — Skill `tutorial-architecture-writer`
+# Guide d'Utilisation — Skill `tutorial-writer-architecture`
 
 ## 1. Rôle & Vocation
-Le skill **`tutorial-architecture-writer`** prescrit les règles didactiques et techniques pour rédiger les tutoriels du domaine **Architecture logicielle** (D.312.1, C.312). Il gouverne la structuration en couches, la rédaction d'ADR et la séparation des responsabilités.
+Le skill **`tutorial-writer-architecture`** prescrit les règles didactiques et techniques pour rédiger les tutoriels du domaine **Architecture logicielle** (D.312.1, C.312). Il gouverne la structuration en couches, la rédaction d'ADR et la séparation des responsabilités.
 
 ## 2. Déclenchement & Invocations Types
 ```markdown
-@[.agents/skills/tutorial-architecture-writer/SKILL.md] Rédige le tutoriel d'architecture en couches pour le projet Blog des Lauréats.
+@[.agents/skills/tutorial-writer-architecture/SKILL.md] Rédige le tutoriel d'architecture en couches pour le projet Blog des Lauréats.
 ```
 
 ## 3. Déroulement Pas-à-Pas

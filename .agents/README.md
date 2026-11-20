@@ -24,12 +24,12 @@ flowchart TD
             Task["tutorial-task-writer (UA-Tâche)"]
         end
         subgraph Domaines ["Règles Spécifiques par Domaine"]
-            DomUml["tutorial-uml-writer"]
-            DomArch["tutorial-architecture-writer"]
-            DomLar["tutorial-laravel-writer"]
-            DomIA["tutorial-ia-writer"]
-            DomScrum["tutorial-scrum-writer"]
-            DomProj["tutorial-realisation-projet-writer"]
+            DomUml["tutorial-writer-uml"]
+            DomArch["tutorial-writer-architecture"]
+            DomLar["tutorial-writer-laravel"]
+            DomIA["tutorial-writer-ia"]
+            DomScrum["tutorial-writer-scrum"]
+            DomProj["tutorial-writer-realisation-projet"]
         end
     end
 
@@ -44,7 +44,7 @@ flowchart TD
     end
 
     subgraph Gouvernance ["5. Méta-Gouvernance IA"]
-        PluginDev["plugin-dev"]
+        PluginDev["skills-dev"]
         Setup["project-setup"]
     end
 
@@ -61,19 +61,19 @@ flowchart TD
 | **[tutorial-code-writer](skills/tutorial-code-writer/SKILL.md)** | Rédige les tutoriels d'apprentissage de code incrémental pas-à-pas ($E_{n-1} \to E_n$) avec injecteur interactif `window.pageData`. | `_tutos/...` (`UA-Tuto`) |
 | **[tutorial-lab-writer](skills/tutorial-lab-writer/SKILL.md)** | Rédige les ateliers pratiques guidés (notions fondamentales, recherche active, modélisation UML/schémas, outillage IA par skills/prompts). | `_tutos/...` (`UA-Lab`) |
 | **[tutorial-task-writer](skills/tutorial-task-writer/SKILL.md)** | Rédige les fiches de cadrage opérationnel et cérémonies agiles de sprint sans aucun apport théorique (0% théorie). | `_tutos/...` (`UA-Tâche`) |
-| **[tutorial-uml-writer](skills/tutorial-uml-writer/SKILL.md)** | Rédige les tutoriels UML (diagrammes Mermaid déclaratifs `graph TD`, `sequenceDiagram`, traçabilité Backlog, zéro capture d'écran). | `_tutos/` (domaine `uml`) |
-| **[tutorial-architecture-writer](skills/tutorial-architecture-writer/SKILL.md)** | Rédige les tutoriels d'architecture (découpage en couches, fiches ADR, flux de données Mermaid, SOLID, contrôleurs minces). | `_tutos/` (domaine `architecture`) |
-| **[tutorial-laravel-writer](skills/tutorial-laravel-writer/SKILL.md)** | Rédige les tutoriels Laravel (Live Coding, FormRequest, Blade/Alpine.js, scission prompt back/front, neutralité de version). | `_tutos/` (domaine `laravel`) |
-| **[tutorial-ia-writer](skills/tutorial-ia-writer/SKILL.md)** | Rédige les tutoriels IA & Agents (méthode RIO, méta-prompt générateur, skills modulaires réutilisables). | `_tutos/` (domaine `ia`) |
-| **[tutorial-scrum-writer](skills/tutorial-scrum-writer/SKILL.md)** | Rédige les tutoriels Scrum conceptuels (INVEST, MoSCoW, DoD mesurable, notions fondamentales vs recherche active sans mention 20/80). | `_tutos/` (domaine `scrum`) |
-| **[tutorial-realisation-projet-writer](skills/tutorial-realisation-projet-writer/SKILL.md)** | Rédige les tâches de projet et cérémonies opérationnelles (maturité UA-Tâche, 0% théorie, journal CLI sans commandes Git). | `_tutos/` (domaine `realisation-projet`) |
+| **[tutorial-writer-uml](skills/tutorial-writer-uml/SKILL.md)** | Rédige les tutoriels UML (diagrammes Mermaid déclaratifs `graph TD`, `sequenceDiagram`, traçabilité Backlog, zéro capture d'écran). | `_tutos/` (domaine `uml`) |
+| **[tutorial-writer-architecture](skills/tutorial-writer-architecture/SKILL.md)** | Rédige les tutoriels d'architecture (découpage en couches, fiches ADR, flux de données Mermaid, SOLID, contrôleurs minces). | `_tutos/` (domaine `architecture`) |
+| **[tutorial-writer-laravel](skills/tutorial-writer-laravel/SKILL.md)** | Rédige les tutoriels Laravel (Live Coding, FormRequest, Blade/Alpine.js, scission prompt back/front, neutralité de version). | `_tutos/` (domaine `laravel`) |
+| **[tutorial-writer-ia](skills/tutorial-writer-ia/SKILL.md)** | Rédige les tutoriels IA & Agents (méthode RIO, méta-prompt générateur, skills modulaires réutilisables). | `_tutos/` (domaine `ia`) |
+| **[tutorial-writer-scrum](skills/tutorial-writer-scrum/SKILL.md)** | Rédige les tutoriels Scrum conceptuels (INVEST, MoSCoW, DoD mesurable, notions fondamentales vs recherche active sans mention 20/80). | `_tutos/` (domaine `scrum`) |
+| **[tutorial-writer-realisation-projet](skills/tutorial-writer-realisation-projet/SKILL.md)** | Rédige les tâches de projet et cérémonies opérationnelles (maturité UA-Tâche, 0% théorie, journal CLI sans commandes Git). | `_tutos/` (domaine `realisation-projet`) |
 | **[tutorial-planer](skills/tutorial-planer/SKILL.md)** | Architecte de la progression pédagogique : conçoit les plans de réalisation par session, crée les entités Jekyll manquantes (`_sessions/`, `_domaines/`, `_uas/`) et initialise les stubs (`en_construction: true`). | `_sessions/`, `_uas/`, `_domaines/`, `_plan-réalisation-tutos/` |
 | **[session-flux-travail-adapter](skills/session-flux-travail-adapter/SKILL.md)** | Aligne la session pédagogique sur le flux de travail opérationnel réel du projet (`flux-travail.md`), qualifie didactiquement les labs et produit le Plan Artefact d'impact. | `_sessions/S[X].md`, `_flux-travail.md` |
 | **[scrum-pedagogical-plan-adapter](skills/scrum-pedagogical-plan-adapter/SKILL.md)** | Analyse, calibre et simplifie l'organisation pédagogique en sprints Scrum de 80h sans surcharge cognitive. | `_sessions/`, `_uas/` |
 | **[dev-jekyll](skills/dev-jekyll/SKILL.md)** | Développe et maintient l'architecture frontend Just the Docs (layouts, includes, CSS/JS, composants interactifs, zéro CSS inline). | `_layouts/`, `_includes/`, `assets/` |
 | **[sync-theme](skills/sync-theme/SKILL.md)** | Pilote la synchronisation du socle partagé avec `autoformations-core-theme` via `push_theme.ps1` et `pull_theme.ps1`. | `theme-sync.json`, scripts PowerShell |
 | **[dev-n3](skills/dev-n3/SKILL.md)** | Développeur et coach technique sur la stack N3 (Laravel, Alpine.js, TDD, SOLID, Scrum). | Code d'accompagnement, tests |
-| **[plugin-dev](skills/plugin-dev/SKILL.md)** | Méta-compétence de gouvernance : conçoit, audite et raffine les skills (`.agents/skills/`) et les règles permanentes (`.agents/rules/`). | `.agents/skills/`, `.agents/rules/` |
+| **[skills-dev](skills/skills-dev/SKILL.md)** | Méta-compétence de gouvernance : conçoit, audite et raffine les skills (`.agents/skills/`) et les règles permanentes (`.agents/rules/`). | `.agents/skills/`, `.agents/rules/` |
 | **[project-setup](skills/project-setup/SKILL.md)** | Initialise l'agent sur n'importe quel dépôt, audite la configuration et déploie les compétences nécessaires. | `.agents/skills.json` |
 
 ---
@@ -112,7 +112,7 @@ Pour rédiger ou affiner le contenu des fiches de tutoriels :
      - Code incrémental pas-à-pas ($E_{n-1} \to E_n$) ➔ **`tutorial-code-writer`** (`UA-Tuto`).
      - Atelier pratique guidé ➔ **`tutorial-lab-writer`** (`UA-Lab`, théorie essentielle, recherche active, modélisation).
      - Tâche opérationnelle ou cérémonie ➔ **`tutorial-task-writer`** (`UA-Tâche`, 0% théorie).
-   - **Règles Spécifiques par Domaine :** Injection automatique du skill technique correspondant (`tutorial-uml-writer`, `tutorial-architecture-writer`, `tutorial-laravel-writer`, `tutorial-ia-writer`, `tutorial-scrum-writer`, `tutorial-realisation-projet-writer`).
+   - **Règles Spécifiques par Domaine :** Injection automatique du skill technique correspondant (`tutorial-writer-uml`, `tutorial-writer-architecture`, `tutorial-writer-laravel`, `tutorial-writer-ia`, `tutorial-writer-scrum`, `tutorial-writer-realisation-projet`).
 3. **Application du Socle Transversal (12 Règles Inviolables) :**
    - Encodage strict UTF-8 sans BOM.
    - Blocs de code débutant strictement à la **colonne 0** (zéro espace, saut de ligne avant et après).
@@ -146,7 +146,7 @@ Pour synchroniser les tutoriels avec le projet cible réel :
 ### Phase 5 : Maintenance du Site & Évolution des Compétences
 - Pour faire évoluer les composants, styles ou layouts Jekyll ➔ Utiliser **`dev-jekyll`**.
 - Pour synchroniser le thème partagé avec le dépôt central ➔ Utiliser **`sync-theme`**.
-- Pour créer, raffiner ou auditer un skill ou une règle d'agent ➔ Utiliser **`plugin-dev`**.
+- Pour créer, raffiner ou auditer un skill ou une règle d'agent ➔ Utiliser **`skills-dev`**.
 
 ---
 
@@ -154,18 +154,18 @@ Pour synchroniser les tutoriels avec le projet cible réel :
 
 | Besoin Exprimé par l'Utilisateur | Compétence à Invoquer |
 | :--- | :--- |
-| *« Rédige un tutoriel de code pas-à-pas pour créer un composant »* | **`tutorial-writer`** (route vers `tutorial-code-writer` + `tutorial-laravel-writer`) |
-| *« Formalise l'atelier pratique d'architecture et de modélisation »* | **`tutorial-writer`** (route vers `tutorial-lab-writer` + `tutorial-architecture-writer`) |
-| *« Modélise les cas d'utilisation ou diagramme de classe Mermaid »* | **`tutorial-writer`** (route vers `tutorial-lab-writer` + `tutorial-uml-writer`) |
-| *« Rédige un prompt ou un skill avec la méthode RIO »* | **`tutorial-writer`** (route vers `tutorial-lab-writer` + `tutorial-ia-writer`) |
-| *« Rédige la fiche théorique sur la DoD ou le Product Backlog »* | **`tutorial-writer`** (route vers `tutorial-lab-writer` + `tutorial-scrum-writer`) |
-| *« Rédige la fiche du rituel de Sprint Planning ou de cadrage »* | **`tutorial-writer`** (route vers `tutorial-task-writer` + `tutorial-realisation-projet-writer`) |
+| *« Rédige un tutoriel de code pas-à-pas pour créer un composant »* | **`tutorial-writer`** (route vers `tutorial-code-writer` + `tutorial-writer-laravel`) |
+| *« Formalise l'atelier pratique d'architecture et de modélisation »* | **`tutorial-writer`** (route vers `tutorial-lab-writer` + `tutorial-writer-architecture`) |
+| *« Modélise les cas d'utilisation ou diagramme de classe Mermaid »* | **`tutorial-writer`** (route vers `tutorial-lab-writer` + `tutorial-writer-uml`) |
+| *« Rédige un prompt ou un skill avec la méthode RIO »* | **`tutorial-writer`** (route vers `tutorial-lab-writer` + `tutorial-writer-ia`) |
+| *« Rédige la fiche théorique sur la DoD ou le Product Backlog »* | **`tutorial-writer`** (route vers `tutorial-lab-writer` + `tutorial-writer-scrum`) |
+| *« Rédige la fiche du rituel de Sprint Planning ou de cadrage »* | **`tutorial-writer`** (route vers `tutorial-task-writer` + `tutorial-writer-realisation-projet`) |
 | *« Vérifie l'alignement des versions avec le projet cible »* | **`tutorial-writer`** (via `.sync/rules.md`) |
 | *« Planifie l'ensemble de la session S2 et crée les stubs »* | **`tutorial-planer`** |
 | *« Le projet réel a ajouté de nouvelles étapes, adapte la session »* | **`session-flux-travail-adapter`** |
 | *« Améliore l'affichage du layout ou corrige un composant CSS »* | **`dev-jekyll`** |
 | *« Synchronise le Core Theme avec le dépôt central »* | **`sync-theme`** |
-| *« Crée un nouveau skill ou modifie une règle d'agent »* | **`plugin-dev`** |
+| *« Crée un nouveau skill ou modifie une règle d'agent »* | **`skills-dev`** |
 
 ---
 

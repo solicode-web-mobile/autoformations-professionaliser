@@ -21,7 +21,7 @@
   - Rédaction ou simplification de tutoriels ➔ Utiliser `tutorial-writer`.
   - Cadrage technique ou planification de session ➔ Utiliser `tutorial-planer`.
   - Développement de layouts ou styles Jekyll ➔ Utiliser `dev-jekyll`.
-  - Conception ou modification de compétences ➔ Utiliser `plugin-dev`.
+  - Conception ou modification de compétences ➔ Utiliser `skills-dev`.
 
 ---
 
