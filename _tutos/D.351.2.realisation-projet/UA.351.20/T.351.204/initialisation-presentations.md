@@ -13,7 +13,8 @@ maturite: "UA-Tâche"
 nav_order: 4
 simplified: true
 en_construction: false
-branche: "sprint1"
+branche: "sprint0"
+sprint: "Sprint 0"
 data_html: ""
 data_css: ""
 data_js: ""

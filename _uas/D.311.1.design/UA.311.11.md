@@ -4,7 +4,7 @@ layout: ua
 code: "UA.311.11"
 slug: "design-thinking-personas"
 maturite: "UA-Lab"
-ordre: 4
+ordre: 3
 competence: "C.311"
 domaine: "D.311.1"
 duree: 8
@@ -13,13 +13,13 @@ objectif: >
 description: >
   Atelier pratique guidé de conception centrée utilisateur. L'apprenant assimile la philosophie du Design Thinking (Empathie, Définition, Idéation, Prototypage, Test) et le modèle Double Diamant. Il pratique l'immersion usagers sans biais, structure une carte d'empathie à 4 quadrants (Dit, Fait, Pense, Ressent), puis formalise les fiches Personas représentatives du Blog des Lauréats (Lecteur apprenant, Auteur lauréat, Modérateur) pour ancrer les fonctionnalités dans des besoins réels vérifiables.
 notions:
-  - "Philosophie de la conception centrée utilisateur (Human-Centered Design) et 5 phases itératives"
-  - "Modèle du Double Diamant : pensée divergente (explorer) et pensée convergente (décider)"
-  - "Techniques d'immersion terrain, écoute active, observation sans biais et entretiens semi-directifs"
-  - "Carte d'empathie à 4 quadrants : Ce qu'il Dit, Fait, Pense et Ressent"
-  - "Structure modulaire d'une fiche Persona : identité, motivations, freins, points de douleur et scénarios d'usage"
+  - "Conception centrée utilisateur (UCD) et 5 phases itératives du Design Thinking"
+  - "Modèle du Double Diamant : divergence (explorer) et convergence (décider)"
+  - "Techniques d'observation et d'entretien terrain semi-directif sans biais"
+  - "Élaboration d'une carte d'empathie à 4 quadrants (Dit, Fait, Pense, Ressent)"
+  - "Structure canonique d'une fiche Persona : identité, motivations, pain points, freins et scénarios d'usage"
 livrable: >
-  Guides méthodologiques d'apprentissage sous tutoriels/design/design-thinking/ (demarche-design-thinking/ et empathie-immersion-personas/ avec fiches [slug].md et diaporamas Marp associés), et synthèse opérationnelle des personas du projet d'imitation dans docs/analyse/personas.md sur la branche sprint0.
+  Guide méthodologique Design Thinking (tutoriels/design/design-thinking-personas/demarche-design-thinking/demarche-design-thinking.md), guide d'empathie (tutoriels/design/design-thinking-personas/empathie-immersion-personas/empathie-immersion-personas.md), diaporamas Marp associés et dossier des Personas du Blog (docs/analyse/personas.md) sur la branche sprint0.
 travail_a_faire: >
-  Assimiler la démarche globale du Design Thinking et du Double Diamant, étudier la méthode d'empathie et la structure d'une carte d'empathie, puis conduire l'analyse des utilisateurs cibles du Blog des Lauréats pour rédiger les fiches Personas dans docs/analyse/personas.md.
+  Assimiler le modèle du Double Diamant, élaborer le guide d'empathie et les cartes d'empathie, conduire l'immersion auprès des apprenants et anciens lauréats, et formaliser les fiches Personas cibles dans docs/analyse/personas.md.
 ---

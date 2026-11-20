@@ -9,7 +9,7 @@ permalink: /tutos/charte-graphique-ui-kit/
 tuto_id: "T.351.013"
 version: "normal"
 ua: "UA.351.01"
-maturite: "UA-Lab"
+maturite: "UA-Tâche"
 nav_order: 3
 simplified: true
 en_construction: true
