@@ -17,7 +17,7 @@ Ce skill est l'expert technique frontend pour le développement, la maintenance 
 - **Quand NE PAS l'activer :**
   - Rédaction de contenu pédagogique ou de tutoriels ➔ Utiliser `tutorial-writer`.
   - Synchronisation avec le dépôt central ➔ Utiliser `sync-theme`.
-  - Configuration de l'agent IA ➔ Utiliser `project-setup`.
+  - Gouvernance des compétences ou règles ➔ Utiliser `skills-dev`.
 
 # 3. Entrées & Ressources à Charger
 - Référence locale : `.agents/references/conventions/jekyll-and-theme-conventions.md`.

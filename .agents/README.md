@@ -37,15 +37,13 @@ flowchart TD
         SyncRules[".sync/rules.md (Dépôt Projet Cible)"]
     end
 
-    subgraph Socle ["4. Plateforme, Thème & Stack"]
+    subgraph Socle ["4. Plateforme & Thème"]
         Jekyll["dev-jekyll"]
         Theme["sync-theme"]
-        N3["dev-n3"]
     end
 
     subgraph Gouvernance ["5. Méta-Gouvernance IA"]
         PluginDev["skills-dev"]
-        Setup["project-setup"]
     end
 
     Adapter --> Planer
@@ -72,9 +70,7 @@ flowchart TD
 | **[scrum-pedagogical-plan-adapter](skills/scrum-pedagogical-plan-adapter/SKILL.md)** | Analyse, calibre et simplifie l'organisation pédagogique en sprints Scrum de 80h sans surcharge cognitive. | `_sessions/`, `_uas/` |
 | **[dev-jekyll](skills/dev-jekyll/SKILL.md)** | Développe et maintient l'architecture frontend Just the Docs (layouts, includes, CSS/JS, composants interactifs, zéro CSS inline). | `_layouts/`, `_includes/`, `assets/` |
 | **[sync-theme](skills/sync-theme/SKILL.md)** | Pilote la synchronisation du socle partagé avec `autoformations-core-theme` via `push_theme.ps1` et `pull_theme.ps1`. | `theme-sync.json`, scripts PowerShell |
-| **[dev-n3](skills/dev-n3/SKILL.md)** | Développeur et coach technique sur la stack N3 (Laravel, Alpine.js, TDD, SOLID, Scrum). | Code d'accompagnement, tests |
 | **[skills-dev](skills/skills-dev/SKILL.md)** | Méta-compétence de gouvernance : conçoit, audite et raffine les skills (`.agents/skills/`) et les règles permanentes (`.agents/rules/`). | `.agents/skills/`, `.agents/rules/` |
-| **[project-setup](skills/project-setup/SKILL.md)** | Initialise l'agent sur n'importe quel dépôt, audite la configuration et déploie les compétences nécessaires. | `.agents/skills/` |
 
 ---
 
