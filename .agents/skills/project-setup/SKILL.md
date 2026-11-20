@@ -37,7 +37,7 @@ Ce skill est l'**orchestrateur universel d'onboarding, d'audit architectural et 
   - [onboarding-workflow.md](resources/onboarding-workflow.md) : Procédure pas-à-pas de bootstrapping et d'initialisation.
 - **Ressources du projet :**
   - Cahiers des charges (`cahiers-charges/`, `README.md`, spécifications fonctionnelles).
-  - Manifeste `.agents/skills.json`, règles `.agents/rules/` et dossier de conventions `.agents/references/conventions/`.
+  - Règles `.agents/rules/` et dossier de conventions `.agents/references/conventions/`.
   - Catalogue global du Hub : `D:/solicode-lms/skills-workspace/catalog.yaml`.
 
 ---
@@ -53,7 +53,7 @@ Ce skill est l'**orchestrateur universel d'onboarding, d'audit architectural et 
 
 # 5. Procédure Pas-à-Pas
 1. **Étape 1 : Diagnostic & Bootstrapping :**
-   - Vérifier si `.agents/skills/` et `.agents/skills.json` existent. Si le projet est vierge, exécuter l'amorce `node D:\solicode-lms\skills-workspace\skills\project-setup\scripts\manage-skills.cjs bootstrap`.
+   - Vérifier si `.agents/skills/` existe.
 2. **Étape 2 : Analyse du Cahier des Charges & Profilage :**
    - Examiner les fichiers d'entrée et consulter [project-typology-and-profiles.md](resources/project-typology-and-profiles.md) pour identifier le profil (Profil 1: Dev Logiciel, Profil 2: Tutoriels/Autoformation, Profil 3: Ingénierie APC, Profil 4: Hybride).
    - En cas d'ambiguïté ou de projet sans doc : engager le dialogue interactif avec l'utilisateur.

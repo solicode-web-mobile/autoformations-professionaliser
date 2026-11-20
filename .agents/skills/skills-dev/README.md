@@ -1,41 +1,30 @@
-# Guide d'Utilisation : Skill `skills-dev`
+# Skill `skills-dev`
 
-> **Compétence :** `skills-dev`  
-> **Portée :** Globale (Partagée par le Hub `skills-workspace`)  
-> **Catégorie :** Gouvernance des Skills, Conception, Promotion & Standards IA  
-> **Fichier technique IA :** [`SKILL.md`](SKILL.md)
+Gouverne, conçoit, audite et affine les compétences locales (`.agents/skills/`) et les règles permanentes (`.agents/rules/`) de l'agent IA.
 
----
+## 1. À quoi sert ce Skill ?
+- **Créer une compétence locale :** Rédiger un fichier `SKILL.md` concis ($\le 80$ lignes) et son `README.md` d'accompagnement sous `.agents/skills/<nom>/`.
+- **Raffiner une compétence :** Adapter les contraintes ou la checklist suite à un retour d'expérience.
+- **Créer ou modifier une règle :** Formaliser une règle d'or transversale dans `.agents/rules/`.
+- **Valider la conformité :** Exécuter le validateur statique déterministe.
 
-## 🎯 1. À quoi sert ce Skill ?
+## 2. Prompts Types d'Invocation
+```markdown
+@[.agents/skills/skills-dev/SKILL.md] Crée un nouveau skill local tutorial-writer-api pour le domaine API REST.
+@[.agents/skills/skills-dev/SKILL.md] Ajoute une règle dans .agents/rules/ interdisant les requêtes SQL brutes.
+@[.agents/skills/skills-dev/SKILL.md] Valide l'ensemble des skills avec le script de conformité.
+```
 
-Le skill `skills-dev` est l'**architecte et le gouverneur de vos compétences IA**. Il intervient pour :
-1. **Créer une nouvelle compétence :** Rédiger un fichier `SKILL.md` rigoureux respectant le standard normé en 10 rubriques et les patterns Anthropic officiels.
-2. **Promouvoir une compétence :** Convertir un skill local testé sur un projet vers le Hub Global via la commande de promotion en cascade (`manage-skills.cjs promote <skill>`).
-3. **Affiner les règles d'or :** Mettre à jour les consignes comportementales (`AGENTS.md`, `rules/affichage-skills.md`).
-4. **Valider la conformité :** Contrôler la syntaxe avec `validate-skills.cjs` pour garantir 0 erreur bloquante.
+## 3. Structure Canonique d'un Skill
+```
+.agents/skills/<nom-du-skill>/
+├── SKILL.md       # Spécifications techniques et règles d'exécution (<= 80 lignes)
+├── README.md      # Documentation utilisateur colocalisée unique et suffisante
+└── resources/     # (Optionnel) Gabarits ou ressources dédiées au skill
+```
 
----
-
-## 💬 2. Comment l'Invoquer ? (Prompts Clés en Main)
-
-- *« Crée un nouveau skill local pour l'automatisation des seeders de test. »*
-- *« Utilise `skills-dev` pour promouvoir le skill feature-dev vers le Hub Global avec toutes ses dépendances. »*
-- *« Ajoute une règle d'or interdisant les requêtes SQL brutes dans les contrôleurs dans standards/critical-rules.md. »*
-- *« Vérifie la conformité de tous les skills du projet avec le script de validation. »*
-
----
-
-## 📋 3. Le Gabarit Universel en 10 Rubriques
-
-Tout skill conçu ou audité par `skills-dev` respecte obligatoirement ces 10 sections :
-1. Mission
-2. Déclenchement & Limites
-3. Entrées & Ressources à Charger (avec colocalisation des ressources non-partagées)
-4. Contraintes & Règles Inviolables
-5. Procédure Pas-à-Pas
-6. Gestion des Ambiguïtés & Décisions
-7. Format de Sortie & Livrables
-8. Contrôle Qualité (Checklist Binaire)
-9. Gestion des Erreurs Fréquentes
-10. Exemples Concrets (Few-Shot)
+## 4. Vérification Déterministe
+Pour vérifier la conformité de l'ensemble des compétences locales :
+```powershell
+node .agents/skills/skills-dev/scripts/validate-skills.cjs
+```

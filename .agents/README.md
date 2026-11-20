@@ -74,7 +74,7 @@ flowchart TD
 | **[sync-theme](skills/sync-theme/SKILL.md)** | Pilote la synchronisation du socle partagé avec `autoformations-core-theme` via `push_theme.ps1` et `pull_theme.ps1`. | `theme-sync.json`, scripts PowerShell |
 | **[dev-n3](skills/dev-n3/SKILL.md)** | Développeur et coach technique sur la stack N3 (Laravel, Alpine.js, TDD, SOLID, Scrum). | Code d'accompagnement, tests |
 | **[skills-dev](skills/skills-dev/SKILL.md)** | Méta-compétence de gouvernance : conçoit, audite et raffine les skills (`.agents/skills/`) et les règles permanentes (`.agents/rules/`). | `.agents/skills/`, `.agents/rules/` |
-| **[project-setup](skills/project-setup/SKILL.md)** | Initialise l'agent sur n'importe quel dépôt, audite la configuration et déploie les compétences nécessaires. | `.agents/skills.json` |
+| **[project-setup](skills/project-setup/SKILL.md)** | Initialise l'agent sur n'importe quel dépôt, audite la configuration et déploie les compétences nécessaires. | `.agents/skills/` |
 
 ---
 
@@ -173,6 +173,6 @@ Pour synchroniser les tutoriels avec le projet cible réel :
 
 Toute action menée par l'un quelconque de ces skills doit rigoureusement respecter :
 1. **Encodage UTF-8 sans BOM :** Obligatoire pour tous les fichiers texte créés ou modifiés.
-2. **Documentation Obligatoire (`doc/how-to-use.md`) :** Tout skill possède son guide utilisateur colocalisé.
+2. **Documentation Colocalisée (`README.md`) :** Tout skill possède son fichier `README.md` colocalisé unique et suffisant. Aucun sous-dossier `doc/` n'est requis.
 3. **Découplage Multi-Niveaux :** Les skills méthodologiques sont agnostiques et résolvent le niveau (N1, N2, N3) et le projet cible à partir de `.agents/rules/`.
 4. **Transparence :** Indiquer obligatoirement les compétences mobilisées à la fin de chaque réponse.

@@ -56,9 +56,9 @@ trigger: always_on
 - **Affichage des compétences :** Indiquer les compétences mobilisées à la fin de chaque réponse.
 - **Plans d'action :** Expliciter obligatoirement les compétences prévues pour réaliser chaque étape d'un plan d'implémentation.
 
-## 5. Gouvernance des Skills & Documentation Obligatoire
-- Tout skill (`.agents/skills/<nom-du-skill>/`) doit obligatoirement inclure un sous-dossier `doc/` contenant son guide d'utilisation opérationnel (`doc/how-to-use.md`).
-- Ce document formalise : le rôle du skill, les cas d'usage, les prompts types pour l'invoquer, les prérequis, le déroulement pas-à-pas et la méthode de vérification des livrables.
+## 5. Gouvernance des Skills & Documentation Colocalisée
+- **100% Local au Dépôt :** Toutes les compétences de l'agent résident sous `.agents/skills/`. Aucun mécanisme de Hub distant ou de compétences globales n'est utilisé. La découverte des compétences s'effectue dynamiquement à partir des fichiers `SKILL.md`.
+- **Documentation Colocalisée Suffisante (`README.md`) :** Tout skill (`.agents/skills/<nom-du-skill>/`) doit obligatoirement comporter son fichier `README.md` colocalisé à la racine de son dossier. Ce document constitue la documentation opérationnelle unique et suffisante (rôle, cas d'usage, prompts types pour l'invoquer, déroulement pas-à-pas et méthode de vérification). Aucun sous-dossier `doc/` n'est requis.
 
 ## 6. Gouvernance des Modules et Compétences
 - **Collection `_modules/` :** Les modules de formation officiels du cursus sont stockés sous `_modules/` avec leur `id_bdd`, `code` (`M105`..`M114`), `module_reference` (`DMB-Mxxx`) et `title`.

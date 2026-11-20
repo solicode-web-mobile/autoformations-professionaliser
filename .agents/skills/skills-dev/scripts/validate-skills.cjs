@@ -1,156 +1,101 @@
 #!/usr/bin/env node
 /**
  * validate-skills.cjs — Validation statique déterministe des compétences IA
- * Colocalisé dans : skills-dev/scripts/validate-skills.cjs
+ * Vérifie localement les compétences du projet sous .agents/skills/
  */
 
 const fs = require('fs');
 const path = require('path');
 
-function findContext() {
+function findSkillsDir() {
     const cwd = process.cwd();
-    // 1. Si on est dans le Hub
-    if (fs.existsSync(path.join(cwd, 'catalog.yaml')) && fs.existsSync(path.join(cwd, 'skills'))) {
-        return {
-            name: 'Hub Global',
-            skillsDir: path.join(cwd, 'skills'),
-            catalogPath: path.join(cwd, 'catalog.yaml')
-        };
-    }
-    // 2. Si on est dans un projet avec .agents
-    const localAgents = path.join(cwd, '.agents');
-    if (fs.existsSync(localAgents)) {
-        return {
-            name: 'Projet Local',
-            skillsDir: path.join(localAgents, 'skills'),
-            catalogPath: 'D:/solicode-lms/skills-workspace/catalog.yaml'
-        };
-    }
-    // 3. Fallback ascendant
+    const localSkills = path.join(cwd, '.agents', 'skills');
+    if (fs.existsSync(localSkills)) return localSkills;
+
     let current = cwd;
     while (current !== path.dirname(current)) {
-        if (fs.existsSync(path.join(current, '.agents', 'skills'))) {
-            return {
-                name: 'Projet Détecté',
-                skillsDir: path.join(current, '.agents', 'skills'),
-                catalogPath: 'D:/solicode-lms/skills-workspace/catalog.yaml'
-            };
-        }
+        const candidate = path.join(current, '.agents', 'skills');
+        if (fs.existsSync(candidate)) return candidate;
         current = path.dirname(current);
     }
-    return {
-        name: 'Défaut Hub',
-        skillsDir: 'D:/solicode-lms/skills-workspace/skills',
-        catalogPath: 'D:/solicode-lms/skills-workspace/catalog.yaml'
-    };
+    return null;
 }
 
-const ctx = findContext();
-const skillsDir = ctx.skillsDir;
-const catalogPath = ctx.catalogPath;
+const skillsDir = findSkillsDir();
 
-console.log(`🔍 [VALIDATION SKILLS] Contexte : ${ctx.name}`);
-console.log(`📂 Répertoire analysé : ${skillsDir}`);
+console.log('🔍 [VALIDATION SKILLS] Analyse des compétences locales');
+if (!skillsDir) {
+    console.error('❌ ERREUR : Répertoire .agents/skills/ introuvable.');
+    process.exit(1);
+}
+
+console.log(`📂 Répertoire : ${skillsDir}\n`);
+
+const entries = fs.readdirSync(skillsDir)
+    .filter(f => {
+        try { return fs.statSync(path.join(skillsDir, f)).isDirectory(); } catch { return false; }
+    });
+
+console.log(`ℹ️ ${entries.length} skill(s) détecté(s)\n`);
 
 let errorsCount = 0;
+const requiredYamlKeys = ['name:', 'description:', 'version:'];
 
-if (!fs.existsSync(catalogPath)) {
-    console.warn(`⚠️ Avertissement : catalog.yaml introuvable (${catalogPath}).`);
-} else {
-    console.log(`✅ catalog.yaml détecté (${catalogPath}).`);
-}
+entries.forEach(skillName => {
+    const skillPath = path.join(skillsDir, skillName);
+    const skillFile = path.join(skillPath, 'SKILL.md');
+    const readmeFile = path.join(skillPath, 'README.md');
 
-if (!fs.existsSync(skillsDir)) {
-    console.warn(`⚠️ AVERTISSEMENT : Le dossier de skills n'existe pas : ${skillsDir}`);
-} else {
-    const skills = fs.readdirSync(skillsDir)
-        .filter(f => {
-            try { return fs.statSync(path.join(skillsDir, f)).isDirectory(); } catch { return false; }
-        });
+    // 1. Présence de SKILL.md
+    if (!fs.existsSync(skillFile)) {
+        console.error(`❌ ERREUR [${skillName}] : Fichier SKILL.md manquant !`);
+        errorsCount++;
+        return;
+    }
 
-    console.log(`ℹ️ ${skills.length} skill(s) trouvé(s) dans ${skillsDir}\n`);
+    // 2. Présence de README.md
+    if (!fs.existsSync(readmeFile)) {
+        console.error(`❌ ERREUR [${skillName}] : Fichier README.md manquant (documentation obligatoire) !`);
+        errorsCount++;
+        return;
+    }
 
-    const requiredRubrics = [
-        '# 1. Mission',
-        '# 2. Déclenchement & Limites',
-        '# 3. Entrées & Ressources à Charger',
-        '# 4. Contraintes & Règles Inviolables',
-        '# 5. Procédure Pas-à-Pas',
-        '# 6. Gestion des Ambiguïtés & Décisions',
-        '# 7. Format de Sortie & Livrables',
-        '# 8. Contrôle Qualité (Checklist Binaire)',
-        '# 9. Gestion des Erreurs Fréquentes',
-        '# 10. Exemples Concrets (Few-Shot)'
-    ];
+    // 3. Encodage et frontmatter
+    const buffer = fs.readFileSync(skillFile);
+    const hasBom = buffer.length >= 3 && buffer[0] === 0xEF && buffer[1] === 0xBB && buffer[2] === 0xBF;
+    if (hasBom) {
+        console.error(`❌ ERREUR [${skillName}] : Encodage UTF-8 AVEC BOM détecté (strictement interdit) !`);
+        errorsCount++;
+    }
 
-    skills.forEach(skillName => {
-        const skillFile = path.join(skillsDir, skillName, 'SKILL.md');
-        if (!fs.existsSync(skillFile)) {
-            console.error(`❌ ERREUR [${skillName}] : Fichier SKILL.md manquant !`);
-            errorsCount++;
-            return;
-        }
+    const content = buffer.toString('utf8').replace(/^\uFEFF/, '').trimStart();
+    if (!content.startsWith('---')) {
+        console.error(`❌ ERREUR [${skillName}] : Frontmatter YAML manquant au début !`);
+        errorsCount++;
+        return;
+    }
 
-        let content = fs.readFileSync(skillFile, 'utf8').replace(/^\uFEFF/, '').trimStart();
+    const endOfYaml = content.indexOf('---', 3);
+    if (endOfYaml === -1) {
+        console.error(`❌ ERREUR [${skillName}] : Frontmatter YAML non fermé !`);
+        errorsCount++;
+        return;
+    }
 
-        // Vérification frontmatter YAML
-        if (!content.startsWith('---')) {
-            console.error(`❌ ERREUR [${skillName}] : Frontmatter YAML manquant au début !`);
-            errorsCount++;
-            return;
-        }
+    const yamlHeader = content.substring(3, endOfYaml);
+    const missingKeys = requiredYamlKeys.filter(k => !yamlHeader.includes(k));
+    if (missingKeys.length > 0) {
+        console.error(`❌ ERREUR [${skillName}] : Clés YAML obligatoires manquantes : ${missingKeys.join(', ')}`);
+        errorsCount++;
+        return;
+    }
 
-        const endOfYaml = content.indexOf('---', 3);
-        if (endOfYaml === -1) {
-            console.error(`❌ ERREUR [${skillName}] : Frontmatter YAML non fermé (manque deuxième ---) !`);
-            errorsCount++;
-            return;
-        }
-
-        const yamlHeader = content.substring(3, endOfYaml);
-        const requiredYamlKeys = ['name:', 'description:', 'version:'];
-        const missingYamlKeys = requiredYamlKeys.filter(k => !yamlHeader.includes(k));
-
-        if (missingYamlKeys.length > 0) {
-            console.error(`❌ ERREUR [${skillName}] : Clés YAML obligatoires manquantes : ${missingYamlKeys.join(', ')}`);
-            errorsCount++;
-            return;
-        }
-
-        // Vérification des rubriques (format standard ou compact)
-        // Les skills compacts ou spécialisés peuvent avoir des rubriques adaptées
-        const isDomainSkill = skillName.startsWith('tutorial-writer-') || skillName.startsWith('tutorial-');
-        if (!isDomainSkill) {
-            const missingRubrics = [];
-            requiredRubrics.forEach(rubric => {
-                const shortName = rubric.substring(0, 4);
-                if (!content.includes(rubric) && !content.includes(shortName)) {
-                    missingRubrics.push(rubric);
-                }
-            });
-
-            if (missingRubrics.length > 0) {
-                console.warn(`⚠️ ATTENTION [${skillName}] : Rubriques manquantes : ${missingRubrics.join(', ')}`);
-            }
-        }
-
-        // Vérification du dossier de documentation doc/ et de how-to-use.md
-        const docDir = path.join(skillsDir, skillName, 'doc');
-        const howToUseFile = path.join(docDir, 'how-to-use.md');
-
-        if (!fs.existsSync(docDir) || !fs.existsSync(howToUseFile)) {
-            console.error(`❌ ERREUR [${skillName}] : Sous-dossier doc/ ou fichier doc/how-to-use.md manquant !`);
-            errorsCount++;
-            return;
-        }
-
-        console.log(`✅ [${skillName}] : SKILL.md et doc/how-to-use.md valides.`);
-    });
-}
+    console.log(`✅ [${skillName}] : SKILL.md et README.md conformes.`);
+});
 
 console.log('\n----------------------------------------');
 if (errorsCount > 0) {
-    console.error(`❌ VALIDATION ÉCHOUÉE : ${errorsCount} erreur(s) bloquante(s) trouvée(s).`);
+    console.error(`❌ VALIDATION ÉCHOUÉE : ${errorsCount} erreur(s) bloquante(s).`);
     process.exit(1);
 } else {
     console.log(`✨ TOUS LES SKILLS SONT CONFORMES (0 erreur bloquante) !`);
