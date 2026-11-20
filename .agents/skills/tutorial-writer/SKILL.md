@@ -58,12 +58,15 @@ flowchart TD
 ---
 
 # 3. Entrées & Ressources à Charger
+- **Contrat de Synchronisation Inter-Agents (`.sync/rules.md`) :**
+  - **Consultation obligatoire :** `<projet-cible>/.sync/rules.md`. Ce fichier définit les règles de synchronisation et de versioning entre l'Agent Réalisation (Agent Projet) et l'Agent Autoformation.
 - **Configuration Dynamique du Niveau & du Projet :**
   - Directives du niveau actif dans `.agents/rules/` (ex: `pedagogie-spartel-n3.md` ou équivalent N1/N2).
   - Standards techniques et chemin du projet cible configuré dans `.agents/rules/standards-techniques.md`.
   - Profil didactique du niveau sous `.agents/resources/[niveau]/` (le cas échéant).
 - **Projet Cible & Référentiel de Travail :**
   - Dépôt physique du projet d'application ou d'imitation spécifié dans les règles actives.
+  - Arborescence miroir des versions sous `<projet-cible>/.sync/`.
   - Arborescence des livrables d'apprentissage sous `tutoriels/` du projet cible.
 - **Plans de Réalisation & Sessions :**
   - Plan de réalisation du domaine ou de la session active.
@@ -136,24 +139,51 @@ flowchart TD
 
 ---
 
-# 6. Protocole de Synchronisation du Référentiel Cible
-`tutorial-writer` détient la responsabilité exclusive de maintenir la cohérence déterministe entre la plateforme de tutoriels et le projet cible réel :
+# 6. Protocole de Synchronisation Inter-Agents & Référentiel Cible (`.sync/rules.md`)
+`tutorial-writer` détient la responsabilité exclusive de maintenir la cohérence déterministe entre la plateforme de tutoriels et le projet cible réel en appliquant les règles formalisées dans **`<projet-cible>/.sync/rules.md`** :
 
-1. **Étape 1 — Résolution Dynamique du Référentiel Cible :**
-   - Charger l'emplacement du projet cible configuré dans `.agents/rules/` (ou les variables d'environnement du projet).
-   - Identifier la branche de travail active.
-2. **Étape 2 — Synchronisation en Miroir (Plateforme ➔ Projet Cible) :**
-   - Dès qu'une fiche de tutoriel `[slug-tuto].md` est créée ou révisée, `tutorial-writer` vérifie ou crée le dossier correspondant sous `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` dans le projet cible.
-   - Y synchroniser la fiche technique `[slug-tuto].md`, sa présentation Marp `presentation-[slug-tuto].md` et son journal `[slug-tuto].command.md` si existant.
-3. **Étape 3 — Rétro-Synchronisation (Projet Cible ➔ Plateforme) :**
-   - Si les livrables physiques du projet cible évoluent (fichiers de code, scripts, arborescences réelles), `tutorial-writer` actualise les fiches de tutoriels et les critères d'acceptation sur la plateforme.
-4. **Étape 4 — Résolution des Incohérences :**
-   - Le code et les livrables réels du projet cible font autorité sur les chemins et scripts ; `tutorial-writer` réconcilie les fiches pour garantir l'absence de divergence.
+### 6.1. Rôles et Modalités d'Interaction
+- **L'Agent Réalisation (Agent Projet) :**
+  - Réalise les fonctionnalités du sprint, rédige les fiches techniques, produit les diaporamas Marp et développe le code.
+  - Maintient l'arborescence miroir des versions exclusivement dans le dossier `.sync/`.
+  - Notifie la réalisation d'un tutoriel en mettant à jour le front-matter du tutoriel source (`_tutos/`) avec le sprint, le statut `statut_realisation: "realise"` et la liste des livrables associés avec leurs versions.
+- **L'Agent Autoformation (`tutorial-writer`) :**
+  - Consulte systématiquement `<projet-cible>/.sync/rules.md` pour savoir comment interagir avec l'Agent Réalisation.
+  - Rédige et maintient le catalogue des tutoriels sources dans `_tutos/`.
+  - Consulte le dossier `.sync/` du projet cible pour identifier les livrables existants et leurs versions courantes (`version.yml`).
+  - Compare les numéros de version déclarés dans le front-matter du tutoriel source avec ceux de `.sync/` pour détecter les mises à jour et synchroniser le contenu réel (code, diagrammes) dans Jekyll.
+  - Aligne la version dans le front-matter et bascule le statut à `statut_realisation: "synchronise"` (ou `statut_realisation: "a_adapter"` si une discordance majeure est détectée).
+
+### 6.2. Système de Versioning dans `.sync/`
+- **Emplacement strict dans `.sync/` :** Les fichiers `version.yml` existent **exclusivement à l'intérieur du dossier `.sync/`** du projet cible. Il est formellement interdit de créer des fichiers `version.yml` dans les dossiers applicatifs (`tutoriels/`, `rapport/`, `src/`).
+- **Création systématique et obligatoire :** Un fichier `version.yml` est créé pour chaque sous-dossier contenant des livrables existants ou des fichiers modifiés.
+- **Format ultra-minimaliste :** Correspondance directe entre le nom du fichier et son numéro de version sémantique :
+  ```yaml
+  nom-du-fichier.md: "1.0.0"
+  presentation-nom-du-fichier.md: "1.0.0"
+  ```
+- **Incrémentation continue :** À chaque modification d'un fichier par l'Agent IA, la version est incrémentée (`1.0.0` -> `1.0.1` pour un correctif, `1.1.0` pour un enrichissement).
+
+### 6.3. Déroulement de la Synchronisation Basée sur les Versions
+1. **Étape 1 — Résolution Dynamique & Consultation des Règles :**
+   - Identifier le projet cible configuré dans `.agents/rules/standards-techniques.md`.
+   - Lire `<projet-cible>/.sync/rules.md` pour charger les conventions de synchronisation actives.
+2. **Étape 2 — Lecture & Comparaison des Versions :**
+   - Lire le front-matter du tutoriel source dans `_tutos/`.
+   - Lire le fichier miroir correspondant `<projet-cible>/.sync/tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/version.yml`.
+   - Comparer chaque version déclarée dans `livrables:` avec la version réelle dans `version.yml`.
+3. **Étape 3 — Synchronisation du Contenu & Mise à Jour du Statut :**
+   - **Si Version `.sync/` > Version Front-Matter :** L'Agent Autoformation détecte une mise à jour, actualise les extraits de code et diagrammes dans Jekyll, aligne les numéros de version dans le front-matter et positionne `statut_realisation: "synchronise"`.
+   - **Si Statut = `realise` et Versions Alignées :** Valider la conformité du livrable et passer `statut_realisation: "synchronise"`.
+   - **Si Discordance Majeure ou Livrable Incomplet :** Positionner `statut_realisation: "a_adapter"` dans le front-matter pour notifier l'Agent Réalisation de la correction requise.
+4. **Étape 4 — Principe d'Adaptation Mutuelle :**
+   - **Cas 1 (Livrable incomplet ou décalé) :** L'Agent Réalisation adapte le livrable dans `tutoriels/` pour satisfaire tous les critères attendus.
+   - **Cas 2 (Évolution technique du projet plus pertinente) :** Si le projet réel valide une solution plus pertinente que la consigne initiale, l'Agent Autoformation met à jour le tutoriel de référence dans `_tutos/` pour aligner la théorie sur la pratique.
 
 ---
 
 # 7. Format de Sortie & Frontmatter Jekyll Canonique
-Toute fiche de tutoriel publiée sous `_tutos/` respecte le frontmatter YAML suivant :
+Toute fiche de tutoriel publiée sous `_tutos/` respecte le frontmatter YAML enrichi du bloc de synchronisation inter-agents :
 
 ```markdown
 ---
@@ -164,6 +194,14 @@ tuto_id: "T.XXX.YYY"
 ua: "UA.XXX.YY"
 nav_order: 10
 simplified: true
+branche: "sprint1"
+sprint: "sprint1"
+statut_realisation: "realise"
+livrables:
+  - chemin: "tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md"
+    version: "1.0.0"
+  - chemin: "tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/presentation-[slug-tuto].md"
+    version: "1.0.0"
 ---
 ```
 
@@ -179,19 +217,23 @@ Avant de valider tout tutoriel produit par l'écosystème :
 - [ ] Le versionnement Git respecte les prérequis du niveau actif définis dans `.agents/rules/`.
 - [ ] Les termes internes « 20/80 » ou « Jalon » sont strictement absents du texte.
 - [ ] Le tutoriel est rédigé de manière générique et ne contient aucun chemin physique codé en dur.
-- [ ] La synchronisation miroir avec le dossier `tutoriels/` du projet cible a été vérifiée et exécutée.
+- [ ] **Consultation de `.sync/rules.md` :** Le contrat de synchronisation inter-agents a été consulté avant l'opération.
+- [ ] **Isolation de `.sync/` :** Aucun fichier `version.yml` n'a été créé en dehors du répertoire `.sync/` du projet cible.
+- [ ] **Traçabilité des Versions :** Le front-matter du tutoriel source (`_tutos/`) est aligné avec les versions réelles de `.sync/` et son statut est à jour (`synchronise` ou `a_adapter`).
 
 ---
 
 # 9. Gestion des Erreurs Fréquentes
 | Erreur Constatée | Cause | Solution Immédiate par `tutorial-writer` |
 | :--- | :--- | :--- |
+| Présence d'un `version.yml` dans `tutoriels/` ou `src/` | Violation de l'isolation `.sync/` | Déplacer immédiatement le fichier sous l'arborescence miroir `.sync/.../version.yml` |
+| Version déclarée dans le front-matter différente de `.sync/` | Évolution non répercutée | Mettre à jour les extraits dans Jekyll, aligner la version et passer `statut_realisation: "synchronise"` |
+| Livrable incomplet ou code cassant dans le projet cible | Discordance technique | Passer `statut_realisation: "a_adapter"` dans le front-matter pour notifier l'Agent Réalisation |
 | Chemin physique absolu hardcodé dans le tutoriel | Non-respect de la généricité | Utiliser exclusivement le chemin relatif canonique `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` |
 | Bloc de code indenté sous une puce ou liste | Formatage Markdown incorrect | Aligner strictement à la colonne 0 avec une ligne vide avant et après |
 | Dossier de livrable nommé `labs/` | Référencement obsolète | Remplacer systématiquement par `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` |
 | Étape de commit/push imposée alors que le niveau actif prescrit l'autonomie | Mauvaise prise en compte des règles du niveau | Supprimer l'étape conformément aux règles du niveau configuré dans `.agents/rules/` |
 | Mention de « Règle des 20/80 » dans le texte | Fuite de cuisine interne didactique | Remplacer par « Notions fondamentales » et « Recherches à effectuer » |
-| Divergence entre le site et le projet cible | Oubli de synchronisation | Exécuter la synchronisation miroir dans le projet cible configuré |
 
 ---
 

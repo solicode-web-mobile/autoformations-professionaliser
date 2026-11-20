@@ -6,7 +6,7 @@ Il fonctionne de façon **générique et indépendante du niveau**, adaptant son
 
 Il assure deux rôles stratégiques :
 1. **Gouvernance Transversale :** Il fait respecter le socle invariable commun (encodage UTF-8 sans BOM, mise en page colonne 0, chemin canonique `tutoriels/`, journalisation CLI sans commande d'administration git, style direct A1-A2, terminal configuré dans les rules, interdiction des termes internes comme 20/80 et Jalons).
-2. **Autorité Unique de Synchronisation :** Il inspecte le projet cible configuré dans les règles du projet (`.agents/rules/`) et synchronise en miroir les fiches de tutoriels et les livrables physiques correspondants.
+2. **Autorité Unique de Synchronisation Inter-Agents :** Il consulte obligatoirement `<projet-cible>/.sync/rules.md` pour savoir comment interagir avec l'Agent Réalisation (Agent Projet), compare les versions déclarées dans le front-matter de `_tutos/` avec celles de `.sync/.../version.yml`, synchronise le contenu réel et met à jour les statuts (`synchronise`, `a_adapter`).
 
 ---
 
@@ -27,25 +27,35 @@ Il assure deux rôles stratégiques :
 ```markdown
 @[.agents/skills/tutorial-writer/SKILL.md] Rédige le tutoriel T.321.112 planifié pour l'UA.321.11 sur la branche active.
 ```
-*Action de l'Agent :* Détecte la nature de l'UA, active le sous-skill adapté (`tutorial-code-writer`, `tutorial-lab-writer` ou `tutorial-task-writer`), applique le socle commun et synchronise avec le projet cible.
+*Action de l'Agent :* Détecte la nature de l'UA, active le sous-skill adapté (`tutorial-code-writer`, `tutorial-lab-writer` ou `tutorial-task-writer`), applique le socle commun et initialise le bloc `livrables` dans le front-matter.
 
-### B. Synchronisation entre la Plateforme et le Projet Cible
+### B. Synchronisation Inter-Agents selon `.sync/rules.md`
 ```markdown
-@[.agents/skills/tutorial-writer/SKILL.md] Synchronise les fiches de tutoriels avec les livrables physiques du projet cible configuré dans .agents/rules/.
+@[.agents/skills/tutorial-writer/SKILL.md] Synchronise les tutoriels avec le projet cible selon .sync/rules.md.
 ```
-*Action de l'Agent :* Inspecte le dossier `tutoriels/` du projet cible, vérifie la cohérence des noms et livrables, génère ou adapte les documents miroirs.
+*Action de l'Agent :*
+1. Lit `<projet-cible>/.sync/rules.md`.
+2. Parcourt `.sync/` pour extraire les versions actuelles (`version.yml`).
+3. Compare avec le front-matter des tutoriels sources dans `_tutos/`.
+4. Si la version `.sync/` > version front-matter, actualise le contenu, met à jour la version et passe le statut à `synchronise`.
+5. Si un livrable est incomplet ou défaillant, passe le statut à `a_adapter`.
 
-### C. Audit de Conformité Pédagogique
+### C. Audit de Traçabilité des Livrables
 ```markdown
-@[.agents/skills/tutorial-writer/SKILL.md] Audite la fiche _tutos/[domaine]/[ua]/[code]/[slug].md et vérifie le respect des règles transversales.
+@[.agents/skills/tutorial-writer/SKILL.md] Audite l'état de synchronisation du tutoriel _tutos/D.351.1.scrum/UA.351.11/T.351.111/comprendre-scrum.md avec .sync/.
 ```
 
 ---
 
-## 4. Procédure de Synchronisation Déterministe
-1. Résolution du projet cible et de sa branche active d'après `.agents/rules/`.
-2. Vérification de l'arborescence `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` dans le projet cible.
-3. Mise à jour miroir des fichiers :
-   - `[slug-tuto].md` (fiche technique).
-   - `presentation-[slug-tuto].md` (support Marp si prévu).
-   - `[slug-tuto].command.md` (journal CLI).
+## 4. Format du Front-Matter pour la Traçabilité
+Le Master Skill s'assure que chaque tutoriel source dans `_tutos/` comporte le bloc standardisé :
+
+```yaml
+sprint: "sprint1"
+statut_realisation: "realise" # ou "synchronise", "a_adapter"
+livrables:
+  - chemin: "tutoriels/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md"
+    version: "1.0.0"
+  - chemin: "tutoriels/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md"
+    version: "1.0.0"
+```
