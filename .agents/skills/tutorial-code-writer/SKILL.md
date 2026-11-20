@@ -1,15 +1,16 @@
 ---
 name: tutorial-code-writer
-description: Conçoit et rédige les tutoriels techniques d'apprentissage de code incrémental pas-à-pas (UA-Tuto, progression E_{n-1} -> E_n vers un code final d'arrivée) nativement simplifiés, avec injecteur window.pageData pour l'éditeur interactif. Membre de l'écosystème tutorial-*-writer sous la gouvernance de tutorial-writer.
-version: 1.0.0
+description: Conçoit et rédige les tutoriels techniques d'apprentissage de code incrémental pas-à-pas (UA-Tuto, progression E_{n-1} -> E_n vers un code final d'arrivée) nativement simplifiés, avec injecteur window.pageData pour l'éditeur interactif. Opère de manière générique sur tous les niveaux selon les règles configurées dans .agents/rules/. Membre de l'écosystème tutorial-*-writer sous la gouvernance de tutorial-writer.
+version: 1.1.0
 inspiration:
   source: "solicode-pedagogy"
   plugin: "pedagogy-referential"
-  pattern: "incremental-series-progression, native-simplification & active-learning"
+  pattern: "incremental-series-progression, multi-level-agnostic & native-simplification"
 ---
 
 # 1. Mission
 Ce skill est le **rédacteur technique spécialisé dans l'apprentissage de code incrémental pas-à-pas** (`UA-Tuto`).
+Il opère de façon générique et indépendante du niveau d'apprentissage (N1, N2, N3), s'adaptant aux technologies et directives configurées dans `.agents/rules/`.
 Il fait partie intégrante de l'écosystème **`tutorial-*-writer`** et applique les règles transversales et le protocole de synchronisation gouvernés par le Master Skill **[tutorial-writer](../tutorial-writer/SKILL.md)**.
 
 Sa vocation didactique est de découper un code source final en paliers élémentaires et digestes :
@@ -26,9 +27,9 @@ Le skill prend en charge deux dynamiques de code :
 
 # 2. Déclenchement & Limites
 - **Quand l'activer :**
-  - Rédaction d'une **série de tutoriels de code en progression** à partir d'un code source final cible (*« Rédige la série de tutoriels pour construire la maquette Blade de la page d'accueil »*).
-  - Rédaction d'un **tutoriel unitaire de code** (*« Rédige un tutoriel pour créer un composant de filtre de recherche avec Alpine.js »*).
-  - Modernisation ou allègement d'un ancien tutoriel de programmation trop dense.
+  - Rédaction d'une **série de tutoriels de code en progression** à partir d'un code source final cible (*« Rédige la série de tutoriels pour construire la maquette de la page d'accueil »*).
+  - Rédaction d'un **tutoriel unitaire de code** (*« Rédige un tutoriel pour créer un composant interactif »*).
+  - Modernisation ou allègement d'un ancien tutoriel de programmation trop dense pour respecter le principe de charge cognitive minimale.
   - Configuration de composants interactifs utilisant `data_*` et `window.pageData`.
 - **Quand NE PAS l'activer :**
   - Ateliers pratiques guidés d'assimilation, modélisation ou outillage IA (`UA-Lab`) ➔ Utiliser [tutorial-lab-writer](../tutorial-lab-writer/SKILL.md).
@@ -40,16 +41,19 @@ Le skill prend en charge deux dynamiques de code :
 
 # 3. Entrées & Ressources à Charger
 - **Règles Transversales Partagées :** Chargement obligatoire du socle défini dans le Master Skill [tutorial-writer](../tutorial-writer/SKILL.md).
+- **Ressources du Niveau & du Domaine :**
+  - Directives du niveau actif dans `.agents/rules/`.
+  - Standards techniques du projet dans `.agents/rules/standards-techniques.md`.
+  - Fiche du domaine technique concerné sous `.agents/resources/[niveau]/domaines/` si existante.
 - **Données d'Entrée du Code :**
   1. Le **Plan des tutoriels de l'UA** : Liste ordonnée des étapes avec leurs notions cibles.
   2. Le **Code source final d'arrivée** : Fichier(s) complet(s) représentant le livrable final attendu.
-  3. Le **Code de départ ($E_{n-1}$)** : Fichier initial hérité du tutoriel précédent ou du squelette initial.
-- **Ressources du Niveau :** `.agents/rules/pedagogie-spartel-n3.md` et `.agents/rules/standards-techniques.md`.
+  3. Le **Code de départ ($E_{n-1}$)** : Fichier initial hérité de l'étape précédente.
 
 ---
 
 # 4. Contraintes & Règles Inviolables
-1. **Respect du Socle Transversal de `tutorial-writer` :** Encodage strict UTF-8 sans BOM, blocs colonne 0 avec saut de ligne, arborescence canonique `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`, français A1-A2, pas de `git commit/push` imposé.
+1. **Respect du Socle Transversal de `tutorial-writer` :** Encodage strict UTF-8 sans BOM, blocs colonne 0 avec saut de ligne, arborescence canonique `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`, français A1-A2, respect des règles de versionnement du niveau actif.
 2. **Principe de Continuité Absolue ($E_{n-1} \to E_n$) :** Dans une série, le code de départ du tutoriel $N$ doit être rigoureusement identique au livrable final validé du tutoriel $N-1$.
 3. **Isolation de la Difficulté :** Une seule brique de complexité par tutoriel. Ne jamais introduire simultanément deux bibliothèques ou paradigmes nouveaux.
 4. **Code 100% Exécutable et Vérifiable :** Tout extrait fourni dans la pratique doit être autonome, sans variable non déclarée ni appel fictif.
@@ -72,12 +76,12 @@ Le skill prend en charge deux dynamiques de code :
 2. **Étape 2 — Préparation des États $E_{n-1}$ et $E_n$ :** Définir le delta technique exact à coder par l'apprenant.
 3. **Étape 3 — Rédaction du Corps Pédagogique :**
    - Contexte & Objectif opérationnel (une seule phrase d'impact).
-   - Données de départ (fichiers existants).
-   - Théorie pas-à-pas (3 à 4 sous-sections courtes illustrées).
+   - Données de départ (fichiers d'entrée).
+   - Notions essentielles (explications courtes avec extraits autonomes).
    - Pratique guidée (tableau d'action didactique pas-à-pas).
-   - Livrable & Critères de succès (chemin relatif exact).
-   - Glossaire concis d'une ligne par terme.
-4. **Étape 4 — Transmission au Master Skill :** Signaler à `tutorial-writer` le livrable produit pour synchronisation miroir avec le dépôt d'imitation.
+   - Livrable attendu (chemin relatif canonique sous `tutoriels/`).
+   - Glossaire concis d'une ligne par terme nouveau.
+4. **Étape 4 — Transmission au Master Skill :** Signaler à `tutorial-writer` le livrable produit pour synchronisation miroir avec le projet cible.
 
 ---
 
@@ -118,8 +122,8 @@ data_code_solution: ""
 | 2 | [Action 2] | `chemin/fichier.ext` | [Effet visible] |
 
 ## 5. Livrable attendu
-- Emplacement : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` sur la branche de sprint active.
-- Fichier : `[slug-tuto].md` (et code source sous `src/`).
+- Emplacement : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` sur la branche de travail active.
+- Fichier : `[slug-tuto].md` (et code source sous `src/` ou dossier de projet).
 
 ## 6. Glossaire
 - **[Terme] :** [Définition courte d'une ligne].
@@ -130,8 +134,8 @@ data_code_solution: ""
 # 8. Contrôle Qualité (Checklist Binaire)
 - [ ] Le tutoriel démarre colonne 0 sans indentation pour chaque bloc de code.
 - [ ] Le code de départ reprend exactement la fin du tutoriel précédent ($E_{n-1} \to E_n$).
-- [ ] Le livrable est spécifié avec son chemin relatif complet sous `tutoriels/`.
-- [ ] Aucune étape de `git commit` ou `git push` n'est imposée.
+- [ ] Le livrable est spécifié avec son chemin relatif canonique sous `tutoriels/`.
+- [ ] Le versionnement Git respecte les règles du niveau actif définies dans `.agents/rules/`.
 - [ ] Le script `window.pageData` est injecté si des champs `data_*` sont renseignés.
 - [ ] Les règles transversales de `tutorial-writer` sont scrupuleusement respectées.
 
@@ -147,6 +151,6 @@ data_code_solution: ""
 ---
 
 # 10. Exemples Concrets (Few-Shot)
-> **Tutoriel T.321.111 :** Déclarer la route d'accueil dans `routes/web.php` renvoyant une chaîne simple.  
-> **Tutoriel T.321.112 :** Modifier la route pour retourner la vue Blade `home.blade.php`.  
-> **Tutoriel T.321.113 :** Intégrer la directive `@foreach` pour lister dynamiquement les articles.
+> **Tutoriel T.XXX.111 :** Déclarer la route ou le squelette d'entrée renvoyant un texte simple.  
+> **Tutoriel T.XXX.112 :** Modifier l'entrée pour retourner le template de vue associé.  
+> **Tutoriel T.XXX.113 :** Intégrer la boucle ou le binding dynamique pour afficher la liste de données.

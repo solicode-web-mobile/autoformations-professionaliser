@@ -10,7 +10,7 @@ Le skill `tutorial-lab-writer` est dédié à la rédaction, la structuration et
 
 Chaque UA-Lab applique systématiquement la triade pédagogique :
 1. **Tâche 1 (Théorie & Assimilation)** — Fondations conceptuelles et questionnement réflexif.
-2. **Tâche 2 (Pratique Imitation)** — Réalisation guidée pas-à-pas sur le projet d'imitation (*ex: Blog des Lauréats*).
+2. **Tâche 2 (Pratique Applicative)** — Réalisation guidée pas-à-pas sur le projet cible configuré.
 3. **Tâche 3 (Prompts & Skills Fil Rouge)** — Transposition opérationnelle vers le projet fil rouge par ingénierie de prompt (méthode RIO).
 
 ## Liens Utiles

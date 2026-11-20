@@ -43,7 +43,7 @@ Audite ce plan selon les standards N3, élimine les théories superflues, réser
 ## 4. Prérequis & Données d'Entrée
 - **Cadrage de Session :** Durée verrouillée à 80h (10 jours $\times$ 8h/j en N3) et branche Git `sprintX`.
 - **Référentiel de Compétences :** Fiches `_modules/`, `_competences/`, `_domaines/` et `_uas/`.
-- **Ciblage Exclusif :** Tous les tutoriels ciblent exclusivement le Projet d'imitation (*Blog des Lauréats*).
+- **Ciblage du Projet :** Tous les tutoriels ciblent le projet d'application ou d'imitation configuré dans les règles du projet (`.agents/rules/`).
 - **Règles applicables :**
   - `.agents/rules/pedagogie-spartel-n3.md` (Pareto 20/80, zéro théorie en tâche, pas de durée aux apprenants).
   - `.agents/rules/standards-techniques.md` (UTF-8 sans BOM, livrables de code source et markdown).

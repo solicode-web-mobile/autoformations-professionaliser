@@ -2,7 +2,7 @@
 
 > **Rôle :** Master Skill & Chef d'orchestre de la rédaction et de la synchronisation des tutoriels  
 > **Écosystème :** `tutorial-*-writer` (`tutorial-code-writer`, `tutorial-lab-writer`, `tutorial-task-writer`)  
-> **Autorité :** Socle transversal invariable & Synchronisation physique (`D:\labs-web\projet-imiation-n3`)  
-> **Niveau cible :** N3 (Développer / Réaliser)
+> **Autorité :** Socle transversal invariable & Synchronisation avec le projet cible  
+> **Portée :** Multi-niveaux (N1 Découvrir, N2 Prototyper, N3 Développer / Réaliser) selon `.agents/rules/`
 
-`tutorial-writer` est le chef d'orchestre didactique de Solicode. Il garantit la cohérence pédagogique, fait respecter le socle de règles transversales (UTF-8, formatage colonne 0, conventions CLI, zéro git push imposé) et maintient la synchronisation déterministe avec le dépôt physique réel du projet d'imitation.
+`tutorial-writer` est le chef d'orchestre didactique de la plateforme. Il garantit la cohérence pédagogique, fait respecter le socle de règles transversales (UTF-8, formatage colonne 0, chemin canonique `tutoriels/`, conventions CLI, zéro git push imposé si autonomie prescrite) et maintient la synchronisation déterministe avec le projet cible configuré dans les règles du projet.

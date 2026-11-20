@@ -43,7 +43,7 @@ Avant d'activer le skill, s'assurer que :
 - Ne jamais afficher d'indication de durée.
 
 ### Étape 3 : Rédaction de la Fiche Pratique
-- Cibler **exclusivement le Projet d'imitation** (*Blog des Lauréats*).
+- Cibler le **projet d'application ou d'imitation** configuré dans `.agents/rules/`.
 - Spécifier la branche Git (`branche: "sprintX"`).
 - **Autonomie de la pratique :** L'apprenant est en situation d'expérimentation active. Fournir le cahier des charges technique, les étapes directives et les critères d'acceptation, mais **interdiction formelle de donner la solution complète rédigée à copier-coller** (réservée aux `UA-Tuto` et `UA-Tâche`).
 - Spécifier l'emplacement exact sous `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` (jamais de dossier `labs/`).
