@@ -1,18 +1,9 @@
 # Skill : tutorial-lab-writer
 
-> **Artisan Pédagogique des Ateliers Pratiques Guidés (Maturité UA-Lab)**  
-> *Gouvernance : Solicode / autoformations-professionaliser*
+> **Rôle :** Rédacteur technique et pédagogique des ateliers pratiques guidés (`UA-Lab`)  
+> **Écosystème :** `tutorial-*-writer`  
+> **Master Skill :** [tutorial-writer](../tutorial-writer/SKILL.md)  
+> **Principe Cardinal :** Structure flexible 2 à 4 tâches, zéro solution clé en main dans la pratique, outillage RIO ciblé
 
----
-
-## Vue d'Ensemble
-Le skill `tutorial-lab-writer` est dédié à la rédaction, la structuration et la maintenance des fiches de tutoriels associées aux Unités d'Apprentissage de maturité **`UA-Lab`**.
-
-Chaque UA-Lab applique systématiquement la triade pédagogique :
-1. **Tâche 1 (Théorie & Assimilation)** — Fondations conceptuelles et questionnement réflexif.
-2. **Tâche 2 (Pratique Applicative)** — Réalisation guidée pas-à-pas sur le projet cible configuré.
-3. **Tâche 3 (Prompts & Skills Fil Rouge)** — Transposition opérationnelle vers le projet fil rouge par ingénierie de prompt (méthode RIO).
-
-## Liens Utiles
-- [Spécification complète du Skill](SKILL.md)
-- [Guide d'utilisation opérationnel (How-To-Use)](doc/how-to-use.md)
+- [Spécification du Skill](SKILL.md)
+- [Guide d'utilisation (How-To-Use)](doc/how-to-use.md)

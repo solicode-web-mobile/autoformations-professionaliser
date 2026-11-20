@@ -1,189 +1,79 @@
 ---
 name: tutorial-lab-writer
-description: Conçoit, structure et rédige les tutoriels d'ateliers pratiques guidés pour les Unités d'Apprentissage à maturité UA-Lab (Théorie d'assimilation 20/80, Pratique guidée sur projet d'imitation, Prompts et Skills RIO ciblés).
-version: 2.0.0
+description: Conçoit, structure et rédige les tutoriels d'ateliers pratiques guidés pour les Unités d'Apprentissage à maturité UA-Lab (Notions fondamentales, Recherche active, Pratique guidée sur projet cible, Prompts et Skills RIO ciblés).
+version: 2.1.0
 inspiration:
   source: "solicode-pedagogy"
   plugin: "pedagogy-referential"
   pattern: "ua-lab-flexible, pareto-20-80, single-sprint-branch & recurrent-workflow-prompts"
 ---
 
-# 1. Mission
-Ce skill est l'**artisan pédagogique et technique** de l'écosystème **`tutorial-*-writer`**, chargé de concevoir et rédiger les fiches d'ateliers pratiques guidés pour les Unités d'Apprentissage à maturité **`UA-Lab`**.
-Il applique les règles transversales et s'appuie sur le protocole de synchronisation physique gouvernés par le Master Skill **[tutorial-writer](../tutorial-writer/SKILL.md)**.
+# 1. Mission & Structure Flexible
+Rédacteur technique et pédagogique de l'écosystème `tutorial-*-writer`, dédié aux **`UA-Lab`** (assimilation conceptuelle, modélisation UML/schémas, architecture, frameworks, outillage IA).
+Applique le socle transversal et la synchronisation gouvernés par [tutorial-writer](../tutorial-writer/SKILL.md).
 
-Alors que [tutorial-code-writer](../tutorial-code-writer/SKILL.md) est dédié aux tutoriels pas-à-pas d'apprentissage de code incrémental (`UA-Tuto`, progression $E_{n-1} \to E_n$), `tutorial-lab-writer` encadre les disciplines de cadrage conceptuel, de modélisation (UML Mermaid), d'outillage IA, de gouvernance agile Scrum, d'architecture logicielle et de réalisation applicative avec frameworks.
-
-### Structure Didactique Flexible d'une UA-Lab
-Une Unité d'Apprentissage de maturité `UA-Lab` ne suit pas une triade dogmatique rigide. Elle s'adapte dynamiquement aux acquis antérieurs et à la nature du livrable, comportant **entre 2 et 4 tâches** selon les règles suivantes :
-
-$$\text{[Théorie 20/80 (Optionnelle)]} \longrightarrow \text{Pratique Imitation (Obligatoire)} \longrightarrow \text{[Création de Prompt(s) (Si flux récurrent)]}$$
-
-1. **Règle d'Omission de la Théorie (Prérequis Déjà Validés) :**  
-   Ne jamais introduire de tutoriel théorique pour des notions déjà maîtrisées aux niveaux ou étapes antérieurs selon le profil pédagogique actif (ex : diagramme de contexte UML, syntaxe de base). Dans ce cas, l'UA débute immédiatement par la pratique outillée sur le projet cible.
-2. **Règle d'Omission du Prompt (Hors Flux Récurrent) :**  
-   Les prompts ne sont créés que pour les étapes récurrentes du flux de travail produisant un livrable reproductible. Ne créer **aucun prompt** pour les labs d'apprentissage conceptuel pur, les décisions architecturales uniques prises une seule fois ou les tutoriels de prise en main initiale (premier contrôleur ou hello world).
-3. **Cas Particulier du Lab d'Ingénierie de Prompt (Étape 01) :**  
-   Dans un lab dédié au prompting, la pratique EST directement la création du méta-prompt générateur (`prompt-creator`).
-4. **Scission des Prompts Applicatifs :**  
-   Pour les tranches verticales complètes d'un framework applicatif, scinder systématiquement l'outillage IA en deux prompts distincts : `prompt-back-end` et `prompt-front-end` (accompagné d'un entraînement au Live Coding).
+Une `UA-Lab` comporte **entre 2 et 4 tâches modulaires** selon les acquis :
+$$\text{[Théorie essentielle (Optionnelle)]} \longrightarrow \text{Pratique Cible (Obligatoire)} \longrightarrow \text{[Création de Prompt(s) (Si flux récurrent)]}$$
+- **Omission Théorie :** Omettre si les notions sont déjà acquises aux étapes/niveaux antérieurs.
+- **Omission Prompt :** Réserver les prompts aux étapes récurrentes produisant un livrable reproductible (banni pour découverte conceptuelle pure, ADR unique ou Hello World initial).
+- **Tranches Framework Complètes :** Scinder l'outillage IA en `prompt-back-end` et `prompt-front-end` (avec entraînement au Live Coding).
 
 ---
 
 # 2. Déclenchement & Limites
-
-- **Quand l'activer :**
-  - Rédaction ou mise à jour des fiches de tutoriels associées à une Unité d'Apprentissage de maturité **`UA-Lab`**.
-  - Structuration des consignes et étapes directives de modélisation UML (Mermaid.js).
-  - Rédaction des ateliers de gouvernance agile Scrum (charte d'équipe, Product Backlog, User Stories INVEST).
-  - Formalisation des dossiers d'architecture logicielle (ADR, diagrammes de séquence).
-  - Élaboration de prompts directifs selon la méthode RIO pour les étapes récurrentes du flux de travail.
-- **Quand NE PAS l'activer :**
-  - Rédaction de tutoriels pas-à-pas de code pur (`UA-Tuto`) ➔ Utiliser [tutorial-writer](../tutorial-writer/SKILL.md).
-  - Rédaction de tutoriels de tâches opérationnelles ou cérémonies sans théorie (`UA-Tâche`) ➔ Utiliser [tutorial-task-writer](../tutorial-task-writer/SKILL.md).
-  - Planification globale, ordonnancement de sessions et arbitrage d'UAs ➔ Utiliser [tutorial-planer](../tutorial-planer/SKILL.md).
+- **Activer :** Ateliers `UA-Lab` ; modélisation UML (Mermaid) ; ateliers agiles Scrum (User Stories INVEST, Product Backlog) ; dossiers d'architecture (ADR) ; prompts directifs RIO.
+- **Ne PAS activer :** Code incrémental pas-à-pas ➔ `tutorial-code-writer` | Tâches de projet / cérémonies sans théorie ➔ `tutorial-task-writer` | Planification globale ➔ `tutorial-planer` | Gouvernance & synchronisation ➔ `tutorial-writer`.
 
 ---
 
-# 3. Structures Normées des Fiches d'une UA-Lab
+# 3. Structures Normées des Fiches `UA-Lab`
 
-### Format Fiche Théorie & Assimilation
+Frontmatter commun : `layout: tuto`, `title:`, `sous_titre:`, `slug:`, `permalink:`, `tuto_id:`, `ua:`, `maturite: "UA-Lab"`, `nav_order:`, `simplified: true`, `en_construction: false`, `branche: "sprintX"`.
+
+### A. Fiche Théorie & Assimilation
 ```markdown
----
-layout: tuto
-title: "Théorie : [Nom de la Notion]"
-sous_titre: "[Sous-titre logique / pédagogique explicitant l'enjeu]"
-slug: "[slug-kebab-case]"
-permalink: /tutos/[slug-kebab-case]/
-tuto_id: "T.XXX.YY1"
-version: "normal"
-ua: "UA.XXX.YY"
-maturite: "UA-Lab"
-nav_order: 1
-simplified: true
-en_construction: false
-branche: "sprintX"
-data_html: ""
-data_css: ""
-data_js: ""
-data_php: ""
----
-
 ## 1. Travail à faire
-[Description concrète de la recherche ou du livrable de synthèse]
-
+- [Consignes claires d'assimilation et d'investigation]
 ## 2. Notions fondamentales
-- **[Définition fondamentale 1] :** [Définition rigoureuse et immédiatement actionnable]
-- **[Définition fondamentale 2] :** [Définition rigoureuse et immédiatement actionnable]
-
+- **[Concept 1] :** [Définition discriminante et exemples essentiels]
 ## 3. Recherches à effectuer
-- [Question d'approfondissement ou exploration critique 1]
-- [Comparaison technique ou recherche active 2]
-
+- [Points d'approfondissement et questions d'investigation active de l'apprenant]
 ## 4. Livrable attendu
-- **Fichier de synthèse :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md` sur la branche `sprintX`.
-- **Contenu :** Synthèse personnelle structurée reprenant les notions fondamentales et les résultats des recherches à effectuer.
+- Emplacement : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md` sur la branche active.
 ```
 
-### Format Fiche Pratique sur Projet d'Imitation
+### B. Fiche Pratique sur Projet Cible (Zéro Solution Clé en Main)
 ```markdown
----
-layout: tuto
-title: "Pratique : [Nom de l'Action]"
-sous_titre: "[Sous-titre logique explicitant la réalisation sur le projet d'imitation]"
-slug: "[slug-kebab-case]"
-permalink: /tutos/[slug-kebab-case]/
-tuto_id: "T.XXX.YY2"
-version: "normal"
-ua: "UA.XXX.YY"
-maturite: "UA-Lab"
-nav_order: 2
-simplified: true
-en_construction: false
-branche: "sprintX"
-data_html: ""
-data_css: ""
-data_js: ""
-data_php: ""
----
-
 ## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** [Phase et étape du sprint]
-- **Branche Git :** `sprintX`
-- **Fichiers modifiés ou créés :** `[chemin/du/fichier.ext]`
-- **Stack mobilisée :** [Outils et technologies mobilisés]
-
-## 2. Travail à Faire (Projet d'Imitation)
-Bâtir le livrable sur le Projet d'imitation en respectant ces étapes :
-1. **Étape 1 — [Objectif opérationnel] :** [Description opérationnelle directive]
-2. **Étape 2 — [Objectif opérationnel] :** [Description opérationnelle directive]
-3. **Étape 3 — [Objectif opérationnel] :** [Description opérationnelle directive]
-
+- **Contexte :** [Étape du flux de travail et composants impactés]
+## 2. Travail à Faire (Projet Cible)
+1. **Étape 1 — [Nom] :** [Cahier des charges technique et étapes directives sans solution copier-coller]
+2. **Étape 2 — [Nom] :** [Cahier des charges technique et étapes directives]
 ## 3. Critères de Validation
-- [ ] Le fichier `[chemin/du/fichier.ext]` est présent et versionné sur la branche `sprintX`.
-- [ ] [Critère technique vérifiable 1]
-- [ ] [Critère technique vérifiable 2]
+- [ ] [Critère vérifiable opposable 1] | [ ] [Critère vérifiable opposable 2]
 ```
 
-### Format Fiche Création de Prompt IA
+### C. Fiche Création de Prompt IA (Méthode RIO)
 ```markdown
----
-layout: tuto
-title: "Création du prompt-[nom]"
-sous_titre: "Concevoir le prompt prompt-[nom] pour automatiser [action du flux de travail]"
-slug: "creation-prompt-[nom]"
-permalink: /tutos/creation-prompt-[nom]/
-tuto_id: "T.XXX.YY3"
-version: "normal"
-ua: "UA.XXX.YY"
-maturite: "UA-Lab"
-nav_order: 3
-simplified: true
-en_construction: false
-branche: "sprintX"
-data_html: ""
-data_css: ""
-data_js: ""
-data_php: ""
----
-
 ## 1. Positionnement dans le Flux & la Stack
-- **Position dans le flux :** [Phase et étape du sprint / Automatisation]
-- **Branche Git :** `sprintX`
-- **Fichiers modifiés ou créés :** `livrables/ia/prompts/prompt-[nom].prompt.md`
-
 ## 2. Travail à Faire
-Concevoir dans `livrables/ia/prompts/prompt-[nom].prompt.md` le prompt d'ingénierie réutilisable permettant à un agent IA de produire le livrable pour n'importe quelle application métier.
-
 ## 3. Missions Concrètes Réalisées par le Prompt
-1. [Mission opérationnelle 1]
-2. [Mission opérationnelle 2]
-3. [Mission opérationnelle 3]
-
+1. [Mission 1] | 2. [Mission 2]
 ## 4. Cahier des Charges du Prompt (Méthode RIO)
-- **Rôle :** [Persona d'expert précis]
-- **Instruction :** [Consigne directrice sans ambiguïté]
-- **Output :** [Format strict de sortie, sans bavardage]
-- **Contraintes Négatives :** [Interdictions formelles d'exclusion]
-
+- **Rôle :** [Persona d'expert] | **Instruction :** [Consigne sans ambiguïté]
+- **Output :** [Format strict de sortie] | **Contraintes Négatives :** [Interdictions formelles]
 ## 5. Critères de Validation
-- [ ] Le prompt est testé et consigné dans `livrables/ia/prompts/prompt-[nom].prompt.md` sur la branche `sprintX`.
-- [ ] Il génère une sortie conforme aux standards techniques sans hallucination.
+- [ ] Prompt consigné dans `livrables/ia/prompts/prompt-[nom].prompt.md` sur la branche active.
 ```
 
 ---
 
 # 4. Règles Inviolables
-1. **Ciblage du Projet Cible :** Dans toutes les fiches de tutoriels, le travail pratique cible le projet d'application ou d'imitation configuré dans les règles du projet (`.agents/rules/`).
-2. **Branche Git Unique :** Tout livrable physique est associé à la branche de travail du sprint (`branche: "sprintX"`).
-3. **Zéro Affichage de Durée aux Apprenants :** Interdiction stricte de mentionner des durées de tâche (`(2h)`, `(4h)`) dans les titres canoniques ou le corps des tutoriels.
-4. **Zéro Capture d'Écran comme Livrable :** Le livrable est obligatoirement un fichier de code, de configuration ou de modélisation versionné sous Git (`.php`, `.blade.php`, `.mmd`, `.md`, `.prompt.md`).
-5. **Encodage Strict UTF-8 sans BOM :** Tous les fichiers créés ou modifiés respectent la règle 1 de `standards-techniques.md`.
-6. **Maturité Explicite & Publication :** `maturite: "UA-Lab"`, `version: "normal"`, `simplified: true` et `en_construction: false` dès validation du tutoriel.
-7. **Gouvernance et Synchronisation avec le Projet Cible par le Master Skill `tutorial-writer` :** L'inspection du référentiel physique cible, la validation des livrables et leur synchronisation miroir avec les fiches de tutoriels sont gouvernées de manière centralisée par le Master Skill **`tutorial-writer`**. `tutorial-lab-writer` garantit la stricte concordance entre le contenu des ateliers et les dossiers de livrables physiques `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`.
-8. **Formatage Strict des Blocs de Code (Zéro Espace & Ligne Vide) :** Tout bloc de code (fenced code block ```` ``` ```` ou ```` ```` ````) doit obligatoirement être précédé d'une ligne vide et commencer strictement à la colonne 0 (sans aucun espace d'indentation), y compris à l'intérieur des listes ordonnées. Le contenu textuel ou Markdown encapsulé doit également débuter à la colonne 0 sans indentation artificielle.
-9. **Interdiction de Divulguer la Cuisine Interne aux Apprenants :** Interdiction formelle d'exposer des formulations didactiques internes telles que « Règle des 20/80 », « Les 20%... », « Les 80%... » ou « (Ce que l'Apprenant Doit Produire) » dans les tutoriels destinés aux apprenants. Utiliser des sections directes et professionnelles : « Notions fondamentales » (socle théorique fourni) et « Recherches à effectuer » (investigation active). Supprimer également le bloc superflue « Positionnement dans le Flux & la Stack » dans les fiches théoriques pour aller directement au travail à faire.
-10. **Chemins de Livrables Précis (`tutoriels/`) :** Tout livrable doit être référencé avec son chemin relatif complet (`tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`). Interdiction absolue des dossiers orphelins (comme `labs/` : toujours utiliser `tutoriels/`) et des formulations vagues (comme *« journal d'apprentissage personnel »* sans chemin physique explicite).
-11. **Autonomie de la Pratique (Zéro Solution Clé en Main) :** Dans les ateliers pratiques d'une `UA-Lab`, c'est à l'apprenant de concevoir et produire son code, ses schémas ou ses manifestes. Fournir des spécifications rigoureuses, des contraintes directives (cahier des charges RIO, étapes directives, critères de validation), mais **interdiction absolue de fournir la solution rédigée complète prête à copier-coller**. La solution intégrale pas-à-pas est réservée exclusivement aux fiches d'apprentissage incrémental (`UA-Tuto`) et aux tâches opérationnelles (`UA-Tâche`).
-12. **Gestion du Versionnement Git :** Se conformer aux directives de versionnement du niveau actif définies dans `.agents/rules/`. Si les règles du niveau prescrivent l'autonomie, ne jamais insérer d'étape directive de commit ou de push (`git add`, `git commit`, `git push`) à la fin des tutoriels.
-13. **Interdiction Formelle du Terme « Jalon » :** Dans tous les tutoriels destinés aux apprenants, utiliser exclusivement le terme direct et accessible **« Étape »** (`1. **Étape 1 — ... :**`). Le terme *« Jalon »* est proscrit.
+1. **Ciblage du Projet Cible :** Pratique exécutée sur le projet cible et la branche (`sprintX`) définis dans `.agents/rules/`.
+2. **Autonomie de la Pratique (Zéro Solution Clé en Main) :** Fournir spécifications rigoureuses, cahier des charges RIO et étapes directives, mais **interdiction formelle de fournir la solution rédigée complète prête à copier-coller** (réservée à `UA-Tuto` et `UA-Tâche`).
+3. **Zéro Fuite Didactique :** Interdiction des termes « 20/80 », « Règle des 20/80 » ou « Ce que l'apprenant doit produire ». Utiliser « Notions fondamentales » et « Recherches à effectuer ».
+4. **Zéro Durée Affichée & Zéro Jalon :** Aucune mention de temps (`(2h)`) aux apprenants. Terme direct « Étape » obligatoire (« Jalon » proscrit).
+5. **Formatage Colonne 0 & UTF-8 :** Tout bloc de code débute strictement colonne 0 (zéro indentation), précédé et suivi d'une ligne vide. UTF-8 sans BOM.
+6. **Chemins Canoniques :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`. Proscrire les dossiers orphelins (`labs/`), les `README.md` unitaires et les captures d'écran.
+7. **Versionnement Git :** Respecter l'autonomie Git du niveau actif (aucun `commit`/`push` imposé aux apprenants si autonomie prescrite).
+8. **Gouvernance :** Réfère au Master Skill [tutorial-writer](../tutorial-writer/SKILL.md) pour les règles partagées et la synchronisation avec le projet cible via `.sync/rules.md`.
