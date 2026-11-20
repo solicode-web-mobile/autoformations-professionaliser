@@ -51,6 +51,11 @@
 				"folderPath": "autoformations-web\\_plan-réalisation-tutos\\",
 				"isFolderOnly": true,
 				"color": "foldercolorizer.color_ff8700"
+			},
+			{
+				"folderPath": "autoformations-professionaliser\\.agents\\",
+				"color": "foldercolorizer.color_ff8700",
+				"isFolderOnly": true
 			}
 		]
 	}
