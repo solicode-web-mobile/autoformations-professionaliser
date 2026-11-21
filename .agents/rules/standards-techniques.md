@@ -44,6 +44,7 @@ trigger: always_on
   - **Sur la plateforme d'autoformation Jekyll (`autoformations-professionaliser`) :** Les livrables de référence des ateliers d'apprentissage sont réalisés et hébergés dans **`ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/`** par l'Agent Rédacteur d'Autoformation (via le skill `tuto-livrable-atelier-writer`). Ils sont consultables par les apprenants directement depuis les tutoriels enrichis (`tuto-atelier-notions`).
   - **Sur le poste apprenant (dépôt du projet cible) :** L'Agent Réalisation de Sprint (`realisation-sprint`) opère exclusivement sur l'ingénierie opérationnelle de projet (`UA-Tâche` / `maturite: projet` : `src/`, `docs/`, `sprints/`, `scrum/`). L'apprenant range ses propres fiches d'apprentissage sous `tutoriels/`.
   - **Décharge formelle :** L'Agent Réalisation de Sprint est formellement déchargé de la production des ateliers d'autoformation (`ua-lab`).
+  - **Exclusion de la Navigation Just the Docs (`nav_exclude: true`) :** Tous les livrables de référence publiés sous `ua-lab/` (fiches Markdown et diaporamas Marp) doivent obligatoirement porter `nav_exclude: true` dans leur Front Matter YAML afin de ne pas apparaître dans le menu de navigation latéral du site.
 
 ## 4. Transparence de l'Agent IA & Traçabilité des Actions
 - **Affichage Obligatoire des Skills Utilisés :** À la fin de chaque échange / discussion, l'Agent IA doit obligatoirement afficher la liste exacte des **Skills locaux utilisés** lors de la réponse (format : `Skills utilisés : [skill-1], [skill-2]`).

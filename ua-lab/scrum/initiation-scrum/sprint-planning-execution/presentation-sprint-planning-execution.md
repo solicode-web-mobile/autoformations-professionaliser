@@ -1,76 +1,79 @@
 ---
 layout: presentation
-title: "Présentation : Planifier, découper et piloter un Sprint"
+title: "Présentation : T.351.114 — Sprint Planning et Pilotage Kanban (Cas TodoList)"
 marp: true
 theme: default
 paginate: true
-header: "EFP N3 - Tutoriel 4 : Planifier, découper et piloter un Sprint"
-footer: "Encadrant : ESSARRAJ Fouad | EFP"
+header: "T.351.114 : Sprint Planning et Pilotage Kanban"
+footer: "Scrum & Ingénierie Agile"
+nav_exclude: true
 ---
 
 <!-- _class: lead -->
-# Planifier, découper et piloter un Sprint
-### Tutoriel 4 — Unité d'Apprentissage UA.351.11
+# T.351.114 : Planifier, découper et piloter un Sprint de développement
+### Cas d'étude didactique : Application TodoList
+**Unité d'Apprentissage : UA.351.11 — Initiation Scrum**
 
-- **Apprenant** : Développeur Web
-- **Encadrant** : ESSARRAJ Fouad
-- **Établissement** : EFP
-- **Domaine** : Scrum & Méthodes Agiles (scrum)
-- **Compétence** : c-scrum — Conduire un projet Web en méthode agile Scrum
-- **Projet d'application** : Blog des Lauréats
-- **Date** : 2026-11-18
+- **Public** : Développeurs Web (Niveau N3)
+- **Domaine** : Scrum & Ingénierie Agile (`D.351.1`)
+- **Compétence** : `C.351` — Piloter et animer la démarche Scrum
 
 ---
 
-## 1. La Réunion de Sprint Planning
-- Se tient au lancement de chaque itération.
-- Répond à trois interrogations majeures :
-  - **Pourquoi** : Quel est le Sprint Goal (la valeur produite) ?
-  - **Quoi** : Quelles User Stories du Backlog sont sélectionnées ?
-  - **Comment** : Comment découpe-t-on ces stories en tâches techniques ?
+## 1. Le Sprint Planning & Le Sprint Goal
+
+- **Les 3 questions du Sprint Planning :**
+  1. *Pourquoi ce sprint a-t-il de la valeur ?* $\rightarrow$ Le **Sprint Goal**.
+  2. *Que peut-on faire ?* $\rightarrow$ Sélection du **Sprint Backlog**.
+  3. *Comment allons-nous le concevoir ?* $\rightarrow$ Découpage technique.
+
+- **Sprint Goal du Sprint 1 (TodoList) :**
+  > *"Livrer une première version opérationnelle permettant de saisir, d'afficher et de cocher ses tâches quotidiennes en toute fluidité."*
 
 ---
 
-## 2. Le Sprint Goal : Le Fil Conducteur
-- Objectif fédérateur et mesurable pour l'équipe.
-- Protège contre la dispersion et les ajouts intempestifs.
-- **Sprint Goal du Portfolio (Sprint 1)** :
-  - *Déployer une première version One-Page responsive présentant l'identité, les compétences et 2 projets avec liens GitHub.*
+## 2. Découpage en Micro-Tâches Techniques Courtes
+
+### La règle d'or : Tâches de 1 à 3 heures
+- Évite les retards invisibles et les blocages prolongés.
+- Facilite l'entraide immédiate au sein de l'équipe.
+
+### Découpage des 8 Story Points en 9 micro-tâches :
+- **US-02 (2 pts) :** T-01 Squelette HTML (1h30), T-02 CSS responsive (2h), T-03 Compteur dynamique (1h).
+- **US-01 (3 pts) :** T-04 Formulaire (1h), T-05 Écouteur submit (1h30), T-06 Création nœud DOM (2h).
+- **US-03 (3 pts) :** T-07 Checkbox interactive (1h30), T-08 Style barré & recalcul (1h30), T-09 Test DoD (2h30).
 
 ---
 
-## 3. Découpage Technique des Stories
-- Une story n'est jamais codée d'un seul bloc.
-- Découpage en sous-tâches élémentaires (1h à 4h de code).
-- Avantages immédiats :
-  - Visibilité précise de l'avancement chaque jour.
-  - Détection précoce des retards et des blocages techniques.
+## 3. Le Management Visuel Kanban
+
+- **Les 4 colonnes du tableau :**
+  - **À faire (To Do)**
+  - **En cours (In Progress)** $\rightarrow$ *WIP Limit : maximum 2 tâches en cours simultanées*.
+  - **En revue (Review / QA)**
+  - **Terminé (Done)** $\rightarrow$ *100% conforme à la Definition of Done*.
+
+> **Devise Agile :** « Arrêter de commencer, commencer à terminer ! »
 
 ---
 
-## 4. Le Suivi Quotidien (Daily Scrum & Kanban)
-- **Daily Scrum (15 minutes)** :
-  - Ce que j'ai terminé hier.
-  - Ce que je code aujourd'hui.
-  - Les éventuels obstacles ou blocages rencontrés.
-- **Tableau Kanban** :
-  - Colonnes : À faire, En cours, Terminé.
-  - Règle d'or : Limiter le nombre de tâches en cours simultanées.
+## 4. Le Daily Scrum & La Levée d'Obstacles
 
----
+- **Le rituel en 15 minutes chrono (debout) :**
+  - *Qu'ai-je accompli hier ?*
+  - *Que vais-je faire aujourd'hui ?*
+  - *Quels sont les obstacles qui me bloquent ?*
 
-## 5. Application au Sprint 1 du Portfolio
-- **Engagement du Sprint 1** : 10 Story Points
-  - US-01 (Présentation) : 4 tâches techniques
-  - US-03 (Compétences) : 4 tâches techniques
-  - US-02 (Projets phares) : 5 tâches techniques
-- **Total** : 13 tâches techniques réparties sur 5 jours de code.
-- **Validation** : Chaque tâche achevée valide un critère de la DoD.
+- **Cas vécu sur la TodoList (Jour 3) :**
+  - **Obstacle :** Rechargement intempestif de la page lors de la touche Entrée.
+  - **Action du Scrum Master :** Conseil technique post-réunion pour injecter `event.preventDefault()`.
+  - **Résultat :** Blocage résolu en 10 minutes, livraison sécurisée dans les temps.
 
 ---
 
 <!-- _class: lead -->
-# Conclusion du Tutoriel 4
-### Une progression rythmée et maîtrisée
-- Découper son travail évite le stress et garantit la régularité.
-- Prochaine étape : Démontrer l'incrément et faire la rétrospective dans le Tutoriel 5.
+# Conclusion de l'Atelier T.351.114
+### Prêt pour la Démonstration et la Rétrospective
+
+- Le sprint s'exécute avec fluidité grâce au découpage court et au Kanban.
+- **Prochaine étape (T.351.115) :** Valider l'incrément en direct lors de la Sprint Review et animer la Sprint Retrospective.

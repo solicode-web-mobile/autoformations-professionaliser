@@ -27,47 +27,41 @@ livrables:
     version: "1.0.0"
 ---
 
-## 1. Travail à faire
-Clôturer le cycle du Sprint 1 sur votre projet technique individuel selon les règles Scrum : animer la démonstration en direct de l'incrément logiciel opérationnel (*Sprint Review*), collecter les retours d'un évaluateur externe, animer la réunion d'amélioration réflexive (*Sprint Retrospective*) et formaliser 3 actions concrètes pour le Sprint 2.
+## 1. Contexte & Enjeux
+La fin d'un Sprint ne se limite pas à valider du code sur GitHub. Elle articule deux rituels fondamentaux et complémentaires : la Sprint Review, dédiée à la démonstration concrète du produit devant les parties prenantes, et la Sprint Retrospective, dédiée à l'amélioration interne du fonctionnement de l'équipe. Cet atelier enseigne comment préparer et animer une démonstration en direct d'un incrément fonctionnel répondant à la Definition of Done, comment recueillir des retours d'usage concrets et comment formaliser un plan d'actions d'amélioration continue pour le sprint suivant.
 
-> [!NOTE]
-> **Projet Technique de Référence :** Ce tutoriel est rédigé et illustré à partir du **Portfolio Développeur**, qui sert d'exemple concret de Projet Technique. Vous devez appliquer et transposer cette démarche de clôture et d'amélioration continue à **votre propre projet technique**.
+## 2. Ce que vous devez apprendre
+- Préparer et animer une démonstration en direct (Sprint Review) sur un logiciel fonctionnel.
+- Contrôler l'adéquation stricte de l'incrément avec la Definition of Done (DoD).
+- Collecter et convertir les retours utilisateurs en ajustements concrets du Product Backlog.
+- Conduire une Sprint Retrospective réflexive et bienveillante autour des 3 questions clés.
+- Élaborer un plan de 2 à 3 actions d'amélioration concrètes, mesurables et directement applicables.
 
-## 2. Notions fondamentales
-- **La Revue de Sprint (Sprint Review) :**
-  - Consacrée à l'inspection du **produit**.
-  - *Règle essentielle :* Démonstration en direct d'un logiciel réellement fonctionnel satisfaisant à 100% à la *Definition of Done* (aucune présentation PowerPoint abstraite).
-  - Recueil des retours des parties prenantes (utilisateurs, formateur, pairs) et réajustement immédiat du Product Backlog.
-- **La Rétrospective de Sprint (Sprint Retrospective) :**
-  - Consacrée à l'inspection du **fonctionnement de l'équipe** (processus, outils, communication, relations humaines).
-  - Établie sur un climat de bienveillance et de responsabilité collective autour de 3 axes :
-    - *Ce qui a bien fonctionné et qu'il faut conserver.*
-    - *Ce qui a été difficile ou source d'inefficacité.*
-    - *Quelles actions correctives appliquer dès le sprint suivant.*
-- **Le Plan d'Actions d'Amélioration Continue :**
-  - Formalise 2 à 3 décisions concrètes, mesurables et immédiatement applicables traitées comme des tâches prioritaires dans le Sprint suivant.
+## 3. Travail à faire
+Vous devez concevoir et préparer une **présentation synthétique** sur la clôture d'un Sprint agile (Revue et Rétrospective) :
+1. **Rechercher et expliquer les notions fondamentales :** Définir avec vos propres mots la distinction fondamentale entre la Sprint Review (axée produit) et la Sprint Retrospective (axée équipe), les principes d'une démonstration live sans slides passives, les modalités de recueil de feedback, et la structure d'une rétrospective d'équipe efficace.
+2. **Illustrer par un exemple concret :** Choisir un cas d'usage ou vous appuyer sur votre projet technique pour simuler la démonstration en direct de votre incrément, lister les retours obtenus d'un utilisateur externe, et formaliser le bilan de votre rétrospective avec 3 actions d'amélioration prioritaires pour le Sprint 2.
+3. **Produire vos livrables de soutenance :**
+   - Rédiger votre fiche technique d'atelier synthétisant votre revue et votre plan d'actions.
+   - Concevoir votre support de présentation au format Marp (16:9).
 
-## 3. Application pratique sur le Projet Technique (Exemple Portfolio)
-- **Exemple de Démonstration d'Incrément (Sprint Review) :**
-  - Validation du Sprint Goal : page web One-Page chargée instantanément, présentation personnelle (US-01), section compétences à 3 catégories (US-03) et vitrine de 2 projets phares avec liens GitHub (US-02).
-  - Contrôle DoD : mise en page responsive multi-écrans sans débordement, console d'inspection sans erreur rouge, liens ouverts dans un nouvel onglet sécurisé.
-  - Collecte de retours : recueil des remarques formulées par un pair/formateur (ex. rehaussement du contraste et agrandissement des visuels) intégrées dans le backlog pour le Sprint 2.
-- **Exemple de Rétrospective du Sprint 1 :**
-  - *Points forts :* Précision des estimations des stories statiques (US-01 et US-03), discipline du tableau Kanban, code HTML5 sémantique.
-  - *Difficultés :* Temps imprévu pour adapter les dimensions hétérogènes des images de projets (US-02), tests responsive trop tardifs.
-  - *3 Actions d'amélioration pour le Sprint 2 :*
-    1. Recadrer et normaliser tous les visuels aux dimensions exactes (ex : 800x450 px WebP) avant toute intégration HTML.
-    2. Tester le comportement mobile dans les DevTools dès l'achèvement de chaque sous-tâche CSS.
-    3. Configurer un formateur automatique de code (Prettier) pour garantir une indentation homogène.
-- **Préparation du Sprint 2 :**
-  - Charge planifiée : US-04 (Formulaire de contact - 5 pts) + US-05 (Téléchargement CV - 1 pt) + Retouches graphiques (1 pt) = **7 Story Points**.
+> [!TIP]
+> **Solution de référence de l'atelier :**
+> Le concepteur a réalisé une solution de référence complète appliquée au cas d'école de l'application **TodoList**, consultable ci-dessous pour vous guider dans la formalisation de vos livrables :
 
-## 4. Livrables & Critères de validation
-- **Livrables attendus :**
-  - Fiche technique d'atelier : `ua-lab/scrum/initiation-scrum/revue-retrospective/revue-retrospective.md` sur la branche `sprint1`.
-  - Diaporama Marp de restitution : `ua-lab/scrum/initiation-scrum/revue-retrospective/presentation-revue-retrospective.md` sur la branche `sprint1`.
+{% include tuto-livrables.html %}
+
+## 4. Pistes de recherche active
+- Pourquoi une démonstration lors de la Sprint Review doit-elle impérativement se faire sur un logiciel fonctionnel et non sur des diapositives ?
+- En quoi la Sprint Review est-elle une séance de travail collaboratif plutôt qu'un simple examen sanctionnant ?
+- Quel climat relationnel le Scrum Master doit-il instaurer pour que la rétrospective soit constructive ?
+- Pourquoi est-il déconseillé de voter plus de 3 actions d'amélioration lors d'une rétrospective de sprint ?
+
+## 5. Livrables attendus & Critères de validation
+- **Fiche technique d'atelier :** `tutoriels/scrum/initiation-scrum/revue-retrospective/revue-retrospective.md`
+- **Diaporama Marp de restitution :** `tutoriels/scrum/initiation-scrum/revue-retrospective/presentation-revue-retrospective.md`
 - **Critères de validation :**
-  - [ ] Les résultats de la démonstration en direct de votre projet technique et la conformité à la DoD sont documentés.
-  - [ ] Les retours de l'évaluateur externe sont consignés avec leur répercussion dans le Product Backlog.
-  - [ ] La rétrospective analyse sincèrement les points forts et difficultés rencontrées sur votre projet.
-  - [ ] 3 actions d'amélioration concrètes, mesurables et réalistes sont contractualisées pour le Sprint 2.
+  - [ ] La démonstration en direct de l'incrément s'appuie sur des scénarios d'usage réels et vérifie la DoD.
+  - [ ] Les feedbacks collectés sont documentés et traduits en ajustements du carnet de produit.
+  - [ ] La rétrospective analyse en toute transparence les succès et les axes d'apprentissage.
+  - [ ] 2 à 3 actions d'amélioration concrètes, attribuées et mesurables sont définies pour le sprint suivant.

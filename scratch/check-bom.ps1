@@ -1,5 +1,5 @@
-$folders = @('_sessions', '_uas', '_prototypes', '_projets', '_tutos', '.agents')
-$files = Get-ChildItem -Path $folders -Recurse -Filter '*.md'
+$folders = @('_sessions', '_uas', '_prototypes', '_projets', '_tutos', '.agents', 'ua-lab')
+$files = Get-ChildItem -Path $folders -Recurse -Include '*.md', '*.yml'
 $bomFiles = @()
 
 foreach ($file in $files) {
@@ -10,7 +10,7 @@ foreach ($file in $files) {
 }
 
 if ($bomFiles.Count -eq 0) {
-    Write-Host "SUCCESS: ALL $($files.Count) MARKDOWN FILES ARE STRICT UTF-8 WITHOUT BOM!"
+    Write-Host "SUCCESS: ALL $($files.Count) FILES ARE STRICT UTF-8 WITHOUT BOM!"
 } else {
     Write-Host "WARNING: $($bomFiles.Count) files have BOM:"
     foreach ($b in $bomFiles) {

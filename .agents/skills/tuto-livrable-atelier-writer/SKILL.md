@@ -37,7 +37,7 @@ Pour chaque atelier à réaliser, `tuto-livrable-atelier-writer` coordonne l'éc
 
 # 4. Règles Inviolables
 1. **Emplacement de Référence sur le Site :** Tout livrable d'atelier d'autoformation réside strictement sous `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/` (le dossier `tutoriels/` étant réservé au poste apprenant).
-2. **Format Marp Interactif :** Les diaporamas portent obligatoirement dans leur frontmatter `layout: presentation` et `marp: true` pour être consultables en plein écran. Zéro mention d'encadrant ni d'établissement.
+2. **Format Marp & Exclusion de Navigation :** Les diaporamas portent obligatoirement dans leur frontmatter `layout: presentation`, `marp: true` et `nav_exclude: true` pour être consultables en plein écran sans polluer la navbar. La fiche de restitution `[slug-tuto].md` porte également `nav_exclude: true`. Zéro mention d'encadrant ni d'établissement.
 3. **Règles de Rédaction & Niveau de Détail Approfondi :** La fiche `[slug-tuto].md` applique un haut niveau de détail pédagogique adapté aux débutants : explications narratives complètes (zéro liste sèche) selon le plan : 1. Contexte & Objectif, 2. Données de départ, 3. Notions Essentielles (développées), 4. Pratique & Réalisation Guidée (tableau pas-à-pas), 5. Livrables & Critères, 6. Glossaire.
 4. **Promotion de la Fiche Jekyll :** À l'issue de la réalisation, promouvoir la fiche `_tutos/...` en `type: "tuto-atelier-notions"` (`statut_realisation: "realise"`) avec déclaration du bloc `livrables:`.
 5. **Zéro Commande Git dans `.command.md` :** Ne consigner que les commandes techniques de l'atelier (jamais `git add`, `commit`, `push`).

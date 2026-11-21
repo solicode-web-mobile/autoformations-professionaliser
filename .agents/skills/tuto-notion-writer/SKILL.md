@@ -27,7 +27,7 @@ Ce skill est le **rédacteur technique spécialisé dans les tutoriels de notion
   4. `## 4. Pratique & Réalisation Guidée` (avec tableau didactique d'action pas-à-pas)
   5. `## 5. Livrables de Référence Produits & Critères`
   6. `## 6. Glossaire Pédagogique`
-- **Typologie Frontmatter :** `type: "tuto-notion"`, `layout: default`.
+- **Typologie Frontmatter :** `type: "tuto-notion"`, `layout: default`, et `nav_exclude: true` (lorsque publié sous `ua-lab/`).
 - **Référence Gouvernante :** [`.agents/references/maturation-et-typologie-ua-tuto.md`](file:///d:/solicode-web-mobile/autoformations-professionaliser/.agents/references/maturation-et-typologie-ua-tuto.md).
 
 # 4. Procédure Pas-à-Pas

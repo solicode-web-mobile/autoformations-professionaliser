@@ -172,3 +172,14 @@ just_the_docs:
     projets:
       name: "Sprints"
       nav_exclude: true
+
+# --------------------------------------------------
+# Valeurs par Défaut (Front Matter Defaults)
+# --------------------------------------------------
+
+defaults:
+  - scope:
+      path: "ua-lab"
+    values:
+      nav_exclude: true
+

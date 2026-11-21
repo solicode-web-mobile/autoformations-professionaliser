@@ -6,6 +6,7 @@ theme: default
 paginate: true
 header: "T.351.111 : Comprendre l'approche Agile et Scrum"
 footer: "Scrum & Ingénierie Agile"
+nav_exclude: true
 ---
 
 <!-- _class: lead -->

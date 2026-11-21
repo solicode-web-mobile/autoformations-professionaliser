@@ -1,77 +1,84 @@
 ---
 layout: presentation
-title: "Présentation : Créer, estimer et ordonner le Product Backlog"
+title: "Présentation : T.351.113 — Estimation et Product Backlog (Cas TodoList)"
 marp: true
 theme: default
 paginate: true
-header: "EFP N3 - Tutoriel 3 : Créer, estimer et ordonner le Product Backlog"
-footer: "Encadrant : ESSARRAJ Fouad | EFP"
+header: "T.351.113 : Estimation et Product Backlog"
+footer: "Scrum & Ingénierie Agile"
+nav_exclude: true
 ---
 
 <!-- _class: lead -->
-# Créer, estimer et ordonner le Product Backlog
-### Tutoriel 3 — Unité d'Apprentissage UA.351.11
+# T.351.113 : Créer, estimer et ordonner le Product Backlog
+### Cas d'étude didactique : Application TodoList
+**Unité d'Apprentissage : UA.351.11 — Initiation Scrum**
 
-- **Apprenant** : Développeur Web
-- **Encadrant** : ESSARRAJ Fouad
-- **Établissement** : EFP
-- **Domaine** : Scrum & Méthodes Agiles (scrum)
-- **Compétence** : c-scrum — Conduire un projet Web en méthode agile Scrum
-- **Projet d'application** : Blog des Lauréats
-- **Date** : 2026-11-18
+- **Public** : Développeurs Web (Niveau N3)
+- **Domaine** : Scrum & Ingénierie Agile (`D.351.1`)
+- **Compétence** : `C.351` — Piloter et animer la démarche Scrum
 
 ---
 
-## 1. Le Product Backlog : Une Liste Vivante
-- Liste ordonnée de toutes les fonctionnalités souhaitées.
-- Source unique de travail pour l'équipe.
-- Évolue en continu selon les besoins et retours d'expérience.
-- Les éléments les plus prioritaires sont en haut, décrits avec précision.
+## 1. Pourquoi estimer en Story Points relatifs ?
+
+- **Les limites des heures absolues :**
+  - Forte subjectivité et sous-estimation systématique des imprévus.
+  - Varie considérablement selon l'expérience individuelle du développeur.
+
+- **La force des Story Points relatifs :**
+  - Mesure abstraite combinant : **effort**, **complexité**, **incertitude**.
+  - Comparaison directe entre éléments connus.
+  - Échelle de Fibonacci : **1, 2, 3, 5, 8, 13** (l'incertitude grandit avec la taille).
 
 ---
 
-## 2. L'Estimation Relative (Story Points)
-- Estimation en effort et complexité, pas en heures fermes.
-- Échelle inspirée de la suite de Fibonacci simplifiée :
-  - **1 point** : Changement trivial ou immédiat.
-  - **2 à 3 points** : Tâche simple et bien maîtrisée.
-  - **5 points** : Fonctionnalité moyenne avec logique.
-  - **8 à 13 points** : Élément complexe à découper.
+## 2. La Méthode de Priorisation MoSCoW
+
+- **Must Have (Indispensable) :**
+  - Cœur vital du MVP, non négociable pour le premier livrable.
+- **Should Have (Important) :**
+  - Forte valeur ajoutée mais n'empêche pas l'usage immédiat.
+- **Could Have (Souhaitable) :**
+  - Options de confort réalisées s'il reste du temps.
+- **Won't Have (Reporté) :**
+  - Exigences écartées pour le sprint en cours.
 
 ---
 
-## 3. Prioriser par la Méthode MoSCoW
-- **Must have** : Vital pour le produit (le cœur du MVP).
-- **Should have** : Fortement recommandé mais non bloquant.
-- **Could have** : Souhaitable si le temps le permet.
-- **Won't have** : Reporté pour les itérations ultérieures.
+## 3. Le Product Backlog Chiffré de la TodoList
+
+| Réf | Fonctionnalité | Points | MoSCoW | Cible |
+| :-: | :--- | :-: | :-: | :-: |
+| **US-02** | Affichage liste & compteur | **2 pts** | **Must Have** | Sprint 1 |
+| **US-01** | Ajout d'une tâche via formulaire | **3 pts** | **Must Have** | Sprint 1 |
+| **US-03** | Cochage et validation de tâche | **3 pts** | **Must Have** | Sprint 1 |
+| **US-04** | Filtrage 3 vues (Toutes/En cours/Fait) | 5 pts | Should Have | Sprint 2 |
+| **US-05** | Suppression et purge | 3 pts | Should Have | Sprint 2 |
+| **US-06** | Sauvegarde LocalStorage | 5 pts | Could Have | Sprint 3 |
+
+> **Périmètre engagé Sprint 1 : 8 Story Points (MVP vital).**
 
 ---
 
-## 4. Les Garde-fous Qualité : DoR & DoD
-- **Definition of Ready (DoR)** :
-  - Critères indispensables pour démarrer le développement.
-  - Textes prêts, maquettes claires, critères d'acceptation rédigés.
-- **Definition of Done (DoD)** :
-  - Contrat qualité pour déclarer une story terminée.
-  - HTML sémantique, CSS responsive, zéro erreur console, validé sur Git.
+## 4. Les Contrats Qualité : DoR vs DoD
 
----
+### Definition of Ready (DoR) — Filtre d'entrée :
+- Story rédigée au gabarit standard (*En tant que...*).
+- Critères d'acceptation clairs et testables.
+- Complexité votée en Story Points par l'équipe.
 
-## 5. Application au Backlog du Portfolio
-- **US-01 (Présentation)** : 2 pts — *Must have*
-- **US-03 (Compétences)** : 3 pts — *Must have*
-- **US-02 (Projets phares)** : 5 pts — *Must have*
-- **US-04 (Contact)** : 5 pts — *Must have*
-- **US-05 (Téléchargement CV)** : 1 pt — *Must have*
-- **Total MVP** : **16 Story Points** indispensables.
-- **US-06 (Dark mode)** : 5 pts — *Could have* (reporté).
-- **US-07 (Blog)** : 8 pts — *Won't have* (reporté).
+### Definition of Done (DoD) — Filtre de sortie :
+- HTML5 sémantique et responsive mobile 375px sans débordement.
+- Console du navigateur 100% propre (zéro warning, zéro erreur).
+- Critères d'acceptation validés manuellement.
+- Code versionné proprement sur la branche active.
 
 ---
 
 <!-- _class: lead -->
-# Conclusion du Tutoriel 3
-### Maîtriser ses priorités et son effort
-- Savoir dire non ou reporter permet de livrer vite et bien.
-- Prochaine étape : Planifier et conduire le Sprint 1 dans le Tutoriel 4.
+# Conclusion de l'Atelier T.351.113
+### Prêt pour la Planification du Sprint
+
+- Le backlog est chiffré, priorisé et encadré par des contrats qualité stricts.
+- **Prochaine étape (T.351.114) :** Planifier, découper et piloter un Sprint de développement avec le tableau Kanban et le Daily Scrum.

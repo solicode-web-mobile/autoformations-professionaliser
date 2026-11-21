@@ -30,8 +30,8 @@ Il délègue la rédaction pédagogique de la fiche technique à **`tuto-notion-
 2. **Mobilisation du Domaine :** Invoquer le skill technique approprié (`tuto-writer-scrum`, `tuto-writer-uml`, `tuto-writer-architecture`, `tuto-writer-laravel`, `tuto-writer-ia`).
 3. **Création sous `ua-lab/` :**
    - Créer le dossier `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/`.
-   - Rédiger `[slug-tuto].md`.
-   - Rédiger `presentation-[slug-tuto].md` avec `layout: presentation` et `marp: true`.
+   - Rédiger `[slug-tuto].md` avec `nav_exclude: true`.
+   - Rédiger `presentation-[slug-tuto].md` avec `layout: presentation`, `marp: true` et `nav_exclude: true`.
    - Rédiger `[slug-tuto].command.md` si des commandes sont exécutées.
    - Créer le fichier `version.yml` listant les fichiers livrables et leur numéro de version sémantique.
 4. **Promotion du Tutoriel Jekyll :**

@@ -7,6 +7,7 @@ ua: "UA.351.11"
 slug: "comprendre-scrum"
 slug_domaine: "scrum"
 slug_ua: "initiation-scrum"
+nav_exclude: true
 ---
 # T.351.111 : Comprendre l'approche Agile et le cadre Scrum
 

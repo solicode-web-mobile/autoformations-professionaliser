@@ -1,79 +1,92 @@
 ---
 layout: presentation
-title: "Présentation : Définir la vision produit et les User Stories"
+title: "Présentation : T.351.112 — Vision Produit et User Stories (Cas TodoList)"
 marp: true
 theme: default
 paginate: true
-header: "EFP N3 - Tutoriel 2 : Définir la vision produit et les User Stories"
-footer: "Encadrant : ESSARRAJ Fouad | EFP"
+header: "T.351.112 : Vision Produit et User Stories"
+footer: "Scrum & Ingénierie Agile"
+nav_exclude: true
 ---
 
 <!-- _class: lead -->
-# Définir la vision produit et les User Stories
-### Tutoriel 2 — Unité d'Apprentissage UA.351.11
+# T.351.112 : Définir la vision produit et exprimer les besoins en User Stories
+### Cas d'étude didactique : Application TodoList
+**Unité d'Apprentissage : UA.351.11 — Initiation Scrum**
 
-- **Apprenant** : Développeur Web
-- **Encadrant** : ESSARRAJ Fouad
-- **Établissement** : EFP
-- **Domaine** : Scrum & Méthodes Agiles (scrum)
-- **Compétence** : c-scrum — Conduire un projet Web en méthode agile Scrum
-- **Projet d'application** : Blog des Lauréats
-- **Date** : 2026-11-18
+- **Public** : Développeurs Web (Niveau N3)
+- **Domaine** : Scrum & Ingénierie Agile (`D.351.1`)
+- **Compétence** : `C.351` — Piloter et animer la démarche Scrum
 
 ---
 
-## 1. La Vision Produit : Le Cap du Projet
-- Résume l'ambition, les bénéficiaires et la proposition de valeur.
-- Sert de repère permanent pour les choix de développement.
-- **Vision du Portfolio** :
-  - Vitrine web moderne, rapide et responsive.
-  - Démonstration concrète du savoir-faire technique par des projets réels.
-  - Conversion des visites en opportunités professionnelles.
+## 1. La Vision Produit : La boussole du projet
+
+> *"Pour les étudiants et professionnels submergés par leurs tâches, l'application **TodoList** est un gestionnaire personnel en ligne, fluide et responsive, qui permet de capturer, visualiser et valider ses tâches en un instant, sans inscription ni configuration."*
+
+- **Pourquoi une vision produit ?**
+  - Fédère toute l'équipe autour d'une ambition commune.
+  - Évite la dispersion et la « dérive des objectifs » (*scope creep*).
+  - Sert de critère d'arbitrage pour refuser les fonctionnalités superflues.
 
 ---
 
-## 2. Les Personas Cibles
-- **Persona 1 : Sarah — Recruteuse RH Tech**
-  - Besoin : Évaluer le profil en moins de 30 secondes.
-  - Attente : Téléchargement rapide du CV, coordonnées immédiatement visibles.
-- **Persona 2 : Karim — Lead Développeur Web**
-  - Besoin : Vérifier la qualité technique et les réalisations.
-  - Attente : Démo des projets en ligne, code source GitHub propre et accessible.
+## 2. Les Personas cibles de la TodoList
+
+- **Yassine (21 ans, Étudiant en déplacement) :**
+  - **Usage :** 100% Smartphone en mobilité (entre deux cours, transports).
+  - **Objectif :** Noter une tâche en 3 secondes et cocher d'un geste du pouce.
+  - **Attente clé :** Boutons tactiles larges, saisie immédiate par la touche Entrée.
+
+- **Nadia (28 ans, Coordinatrice de projet) :**
+  - **Usage :** Ordinateur de bureau multi-écrans.
+  - **Objectif :** Vue d'ensemble claire, filtrage des tâches terminées et compteur dynamique.
+  - **Attente clé :** Interface aérée, aucun rechargement de page.
 
 ---
 
-## 3. Le Formalisme de la User Story
-- Une structure canonique orientée utilisateur :
-  - **En tant que** [rôle de l'utilisateur]
-  - **Je veux** [action ou fonctionnalité souhaitée]
-  - **Afin de** [bénéfice ou valeur métier apportée]
-- **Critères d'Acceptation** :
-  - Conditions de succès précises et mesurables.
-  - Base de validation pour les tests fonctionnels.
+## 3. Le Gabarit d'une User Story & Critères d'Acceptation
+
+### Structure canonique :
+- **En tant que** [rôle de l'utilisateur]
+- **Je veux** [action ou fonctionnalité souhaitée]
+- **Afin de** [bénéfice tangible ou valeur métier]
+
+### Les Critères d'Acceptation :
+- Fixent le contrat de succès clair entre le Product Owner et les Développeurs.
+- Rédigés sous forme de scénarios testables et vérifiables.
+- Servent de guide pour les tests fonctionnels avant la livraison.
 
 ---
 
-## 4. Les 5 User Stories Clés du Portfolio
-- **US-01** : Présentation et biographie professionnelle percutante.
-- **US-02** : Galerie des projets avec captures, démos et liens GitHub.
-- **US-03** : Affichage clair des compétences techniques par catégorie.
-- **US-04** : Formulaire de contact avec validation des champs.
-- **US-05** : Bouton de téléchargement direct du CV en format PDF.
+## 4. Les 5 User Stories du Backlog TodoList
+
+1. **US-01 (Ajout rapide) :** En tant qu'utilisateur, je veux saisir et valider une tâche par bouton ou touche Entrée.
+2. **US-02 (Affichage & Compteur) :** En tant qu'utilisateur, je veux visualiser ma liste et le décompte des tâches en cours.
+3. **US-03 (Cochage & Achèvement) :** En tant qu'utilisateur, je veux cocher une tâche pour la marquer barrée.
+4. **US-04 (Filtrage 3 vues) :** En tant qu'utilisateur, je veux basculer entre Toutes / En cours / Terminées.
+5. **US-05 (Suppression & Purge) :** En tant qu'utilisateur, je veux effacer une tâche ou nettoyer la liste.
 
 ---
 
-## 5. Délimiter le Périmètre (MVP)
-- **Inclus dans le MVP initial** :
-  - Les 5 User Stories majeures sur une page unique responsive.
-- **Exclu du premier cycle (reporté)** :
-  - Espace blog, mode sombre, animations complexes.
-- **Principe clé** :
-  - Livrer d'abord l'essentiel parfaitement exécuté avant d'ajouter le superflu.
+## 5. Périmètre MVP vs Évolutions reportées
+
+- **Cœur du MVP (Sprint 1) :**
+  - US-01 (Ajout via formulaire avec focus).
+  - US-02 (Affichage dynamique de la liste et compteur).
+  - US-03 (Cochage interactif avec style barré).
+
+- **Incrément du Sprint 2 :**
+  - US-04 (Boutons de filtre Toutes / En cours / Terminées).
+  - US-05 (Bouton de suppression unitaire et purge globale).
+
+- **Reporté post-MVP :** LocalStorage, Dark Mode, rappels horaires.
 
 ---
 
 <!-- _class: lead -->
-# Conclusion du Tutoriel 2
-### De l'idée au besoin structuré
-- Des besoins clairs et testables facilitent le développement.
-- Prochaine étape : Estimer et prioriser ces stories dans le Product Backlog lors du Tutoriel 3.
+# Conclusion de l'Atelier T.351.112
+### Prêt pour l'estimation du Backlog
+
+- La vision et les User Stories définissent avec précision **CE QU'IL FAUT CONSTRUIRE**.
+- **Prochaine étape (T.351.113) :** Créer, estimer et ordonner le Product Backlog avec les Story Points et la méthode MoSCoW.

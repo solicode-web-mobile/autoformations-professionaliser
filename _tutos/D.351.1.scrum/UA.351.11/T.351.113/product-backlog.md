@@ -27,50 +27,41 @@ livrables:
     version: "1.0.0"
 ---
 
-## 1. Travail à faire
-Structurer, chiffrer et ordonnancer le carnet de produit Scrum pour votre projet technique individuel. Vous devez attribuer des Story Points à chaque User Story, appliquer la priorisation MoSCoW pour isoler le MVP et formaliser la *Definition of Ready* (DoR) et la *Definition of Done* (DoD).
+## 1. Contexte & Enjeux
+Une fois les besoins recueillis et formulés en User Stories, l'équipe ne peut pas tout développer en même temps. Elle doit organiser son carnet de produit (Product Backlog), évaluer l'effort de chaque fonctionnalité et prioriser selon la valeur ajoutée réelle. Cet atelier enseigne les techniques d'estimation relative en Story Points avec la suite de Fibonacci, la méthode de priorisation MoSCoW, ainsi que la contractualisation de la *Definition of Ready* (DoR) et de la *Definition of Done* (DoD).
 
-> [!NOTE]
-> **Projet Technique de Référence :** Ce tutoriel est rédigé et illustré à partir du **Portfolio Développeur**, qui sert d'exemple concret de Projet Technique. Vous devez appliquer et adapter ces estimations et grilles qualité à **votre propre projet technique**.
+## 2. Ce que vous devez apprendre
+- Structurer et ordonner un Product Backlog sous la responsabilité du Product Owner.
+- Évaluer l'effort relatif en Story Points à l'aide de la suite de Fibonacci (1, 2, 3, 5, 8).
+- Appliquer la méthode de priorisation MoSCoW (Must, Should, Could, Won't) pour dégager le MVP.
+- Formaliser la Definition of Ready (DoR) pour valider la maturité d'une story avant engagement.
+- Établir la Definition of Done (DoD) pour garantir un standard de qualité strict et non négociable.
 
-## 2. Notions fondamentales
-- **Le Product Backlog :**
-  - Liste ordonnée et vivante de tout ce qui est nécessaire au produit. Source unique des exigences sous la responsabilité du Product Owner.
-  - Ajusté en continu selon les apprentissages techniques et les retours utilisateurs.
-- **L'Estimation Relative par les Story Points :**
-  - Mesure non pas un temps en heures fermes, mais un effort combinant quantité de travail, complexité technique et incertitude.
-  - Échelle standardisée basée sur la suite de Fibonacci simplifiée : **1, 2, 3, 5, 8, 13**.
-    - *1 point :* Tâche triviale (mise à jour d'un texte ou d'un lien).
-    - *2 à 3 points :* Fonctionnalité simple maîtrisée (section statique).
-    - *5 points :* Taille moyenne avec logique (formulaire avec validation).
-    - *8 à 13 points :* Fonctionnalité complexe à décomposer.
-- **La Priorisation MoSCoW :**
-  - **M — Must have (Indispensable) :** Fonctionnalités vitales constituant le cœur du MVP.
-  - **S — Should have (Important) :** Forte valeur ajoutée mais non bloquant pour le premier livrable.
-  - **C — Could have (Souhaitable) :** Améliorations de confort réalisées s'il reste du temps.
-  - **W — Won't have this time (Reporté) :** Exigences écartées pour le sprint en cours.
-- **Definition of Ready (DoR) :** Contrat préalable certifiant qu'une story est suffisamment claire, estimée et indépendante pour être prise en compte dans un sprint.
-- **Definition of Done (DoD) :** Grille d'exigence qualité non négociable indispensable pour déclarer une fonctionnalité terminée et prête à la démonstration.
+## 3. Travail à faire
+Vous devez concevoir et préparer une **présentation synthétique** sur l'estimation et l'ordonnancement du Product Backlog :
+1. **Rechercher et expliquer les notions fondamentales :** Définir avec vos propres mots le rôle du Product Backlog, les principes de l'estimation en Story Points vs les heures fermes, l'utilisation de la suite de Fibonacci, la méthode MoSCoW, ainsi que la différence essentielle entre la DoR et la DoD.
+2. **Illustrer par un exemple concret :** Choisir un cas d'usage ou vous appuyer sur votre projet technique pour chiffrer en Story Points au moins 5 User Stories, les ordonner selon MoSCoW, et rédiger votre grille de DoR et DoD.
+3. **Produire vos livrables de soutenance :**
+   - Rédiger votre fiche technique d'atelier synthétisant vos estimations et vos contrats qualité.
+   - Concevoir votre support de présentation au format Marp (16:9).
 
-## 3. Application pratique sur le Projet Technique (Exemple Portfolio)
-- **Exemple de Product Backlog ordonné (Portfolio) :**
-  - *US-01 (Présentation personnelle) :* 2 Story Points | Priorité 1 | **Must have**.
-  - *US-03 (Section Compétences techniques) :* 3 Story Points | Priorité 2 | **Must have**.
-  - *US-02 (Vitrine des réalisations) :* 5 Story Points | Priorité 3 | **Must have**.
-  - *US-04 (Formulaire de contact) :* 5 Story Points | Priorité 4 | **Must have**.
-  - *US-05 (Téléchargement du CV PDF) :* 1 Story Point | Priorité 5 | **Must have**.
-  - *US-06 (Mode sombre / Dark mode) :* 5 Story Points | Priorité 6 | **Could have** (post-MVP).
-  - *US-07 (Section Blog / Articles récents) :* 8 Story Points | Priorité 7 | **Won't have this time**.
-- **Effort total du MVP :** **16 Story Points** (US-01 à US-05).
-- **Definition of Ready (DoR) du projet technique :** Textes réels rédigés (aucun Lorem Ipsum), ressources graphiques prêtes et critères d'acceptation validés.
-- **Definition of Done (DoD) du projet technique :** Code HTML5 sémantique et valide W3C, CSS 100% responsive (desktop et smartphone), zéro erreur dans la console DevTools, attributs d'accessibilité (`alt`, contrastes) et code committé sur la branche Git active.
+> [!TIP]
+> **Solution de référence de l'atelier :**
+> Le concepteur a réalisé une solution de référence complète appliquée au cas d'école de l'application **TodoList**, consultable ci-dessous pour vous guider dans la formalisation de vos livrables :
 
-## 4. Livrables & Critères de validation
-- **Livrables attendus :**
-  - Fiche technique d'atelier : `ua-lab/scrum/initiation-scrum/product-backlog/product-backlog.md` sur la branche `sprint1`.
-  - Diaporama Marp de restitution : `ua-lab/scrum/initiation-scrum/product-backlog/presentation-product-backlog.md` sur la branche `sprint1`.
+{% include tuto-livrables.html %}
+
+## 4. Pistes de recherche active
+- Pourquoi l'estimation relative en Story Points est-elle plus fiable que l'estimation en heures au début d'un projet ?
+- Quel est le risque majeur d'une mauvaise utilisation de MoSCoW (ex: classer 90% des stories en « Must Have ») ?
+- Que se passe-t-il pendant un sprint si les développeurs démarrent une tâche qui ne respecte pas la DoR ?
+- Comment la Definition of Done protège-t-elle le projet contre la dette technique cumulative ?
+
+## 5. Livrables attendus & Critères de validation
+- **Fiche technique d'atelier :** `tutoriels/scrum/initiation-scrum/product-backlog/product-backlog.md`
+- **Diaporama Marp de restitution :** `tutoriels/scrum/initiation-scrum/product-backlog/presentation-product-backlog.md`
 - **Critères de validation :**
-  - [ ] Les User Stories de votre projet technique sont ordonnées selon la valeur métier et classées selon la grille MoSCoW.
-  - [ ] Chaque élément du backlog possède une estimation cohérente en Story Points sur l'échelle de Fibonacci.
-  - [ ] Le périmètre Must have (MVP) est clairement totalisé et délimité.
-  - [ ] La Definition of Ready et la Definition of Done sont formalisées avec des critères opérationnels stricts.
+  - [ ] Le Product Backlog recense toutes les stories avec leur valeur métier et leur estimation.
+  - [ ] L'effort est chiffré en Story Points sur l'échelle de Fibonacci sans dérive vers les heures.
+  - [ ] La priorisation MoSCoW est appliquée de façon réaliste pour isoler le MVP du Sprint 1.
+  - [ ] Les grilles DoR et DoD sont explicitement formalisées avec des critères vérifiables.
