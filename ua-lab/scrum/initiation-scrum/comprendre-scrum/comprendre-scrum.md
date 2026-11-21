@@ -1,113 +1,92 @@
 ---
 layout: default
-title: "Fiche d'Atelier : Comprendre l'approche Agile et Scrum (Cas d'étude TodoList)"
+title: "Fiche d'Atelier : T.351.111 — Comprendre l'approche Agile et Scrum (Cas TodoList)"
 ---
-# Tutoriel 1 : Comprendre l'approche Agile et le cadre Scrum
+# T.351.111 : Comprendre l'approche Agile et le cadre Scrum
 
 - **Unité d'apprentissage** : [UA.351.11 — Initiation à la Démarche Agile et Cadre Scrum](#)
 - **Diaporama de soutenance** : [presentation-comprendre-scrum.html](./presentation-comprendre-scrum.html)
 - **Domaine** : Scrum & Méthodes Agiles
 - **Cas d'étude didactique** : Application TodoList (Gestionnaire de tâches)
-- **Établissement** : EFP
+- **Encadrant** : ESSARRAJ Fouad
 
 ---
 
-## 1. Objectifs d'apprentissage
+## 1. Contexte & Objectif de l'Atelier
+Cet atelier d'initiation pose les fondations opérationnelles de l'ingénierie logicielle agile. L'objectif est d'assimiler la rupture avec le cycle en V traditionnel, de maîtriser la gouvernance des 3 rôles Scrum et de comprendre le cadencement des 5 rituels à travers l'étude concrète d'une application TodoList.
 
-Ce premier atelier d'initiation permet d'acquérir les bases de l'Agilité et du cadre Scrum :
-- Comprendre la rupture entre le cycle de développement traditionnel (en V ou cascade) et l'approche itérative Agile.
-- Identifier les valeurs fondamentales de l'Agilité adaptées aux réalités du développement Web.
-- Connaître les 3 rôles centraux de l'équipe Scrum et leurs responsabilités respectives.
-- Maîtriser le principe des Sprints et de l'incrément de produit opérationnel.
-- Mettre en application ces notions sur un cas d'école concret : l'application **TodoList** (gestionnaire de tâches).
+## 2. Données de Référence
+- **Projet support** : Application TodoList (gestionnaire de tâches responsive).
+- **Ressources associées** : Diaporama Marp de restitution interactif (`presentation-comprendre-scrum.md`).
+- **Périmètre du Sprint 1** : Cadrage du MVP (ajout, affichage et validation d'achèvement d'une tâche).
 
----
+## 3. Notions Essentielles
 
-## 2. Volet Théorique & Méthodologique
+### 3.1 Rupture Cycle en V vs Démarche Agile
+- **Cycle en V classique** : Cahier des charges exhaustif au démarrage, effet tunnel de plusieurs mois, découverte tardive des écarts par l'utilisateur final.
+- **Démarche Agile** : Itérations courtes (Sprints), livraisons régulières d'un incrément logiciel testé et directement utilisable, intégration fluide du changement.
 
-### 2.1 Cycle classique (en V) vs Démarche Agile
-- **Le modèle en cascade traditionnel (Cycle en V) :**
-  - Fonctionne par grandes étapes séquentielles figées : spécifications exhaustives, conception d'ensemble, développement complet, tests tardifs et livraison finale.
-  - Risque majeur : l'**effet tunnel**. Le client et les utilisateurs découvrent le logiciel après plusieurs mois, avec un fort risque d'inadéquation au besoin réel ou d'évolution du contexte métier.
-- **La démarche Agile :**
-  - Privilégie une progression empirique, itérative et incrémentale.
-  - Le produit est construit bloc par bloc à travers des cycles courts appelés **Sprints**.
-  - Chaque cycle produit une version opérationnelle, testée et directement utilisable du produit.
-  - Elle accepte et intègre le changement comme une opportunité d'amélioration continue.
+### 3.2 Les 4 Valeurs du Manifeste Agile
+- Les individus et leurs interactions avant les processus et les outils.
+- Un logiciel opérationnel avant une documentation exhaustive.
+- La collaboration avec les clients avant la négociation contractuelle.
+- L'adaptation au changement avant le suivi rigide d'un plan.
 
-### 2.2 Les 4 Valeurs du Manifeste Agile (2001)
-1. **Les individus et leurs interactions** avant les processus et les outils.
-2. **Un logiciel opérationnel** avant une documentation exhaustive.
-3. **La collaboration avec les clients** avant la négociation contractuelle stricte.
-4. **L'adaptation au changement** avant le suivi rigide d'un plan initial.
+### 3.3 Les 3 Piliers Empiriques de Scrum
+- **Transparence** : Visibilité partagée de l'ensemble des informations et du code source.
+- **Inspection** : Évaluation régulière de l'avancement et de la qualité.
+- **Adaptation** : Correction immédiate dès le constat d'une dérive par rapport aux objectifs.
 
-### 2.3 Les 3 Piliers du Cadre Scrum
-Scrum repose sur le contrôle empirique de processus :
-- **Transparence :** Les aspects significatifs du processus sont visibles par tous les membres de l'équipe et les parties prenantes.
-- **Inspection :** Les artéfacts et l'avancement sont examinés fréquemment pour détecter les écarts éventuels.
-- **Adaptation :** Dès qu'un écart dépasse les limites acceptables, le processus ou le produit est réajusté sans délai.
+### 3.4 Les 3 Rôles Scrum
+- **Product Owner (PO)** : Définit la vision produit, recueille les besoins utilisateurs et ordonne les priorités dans le Product Backlog.
+- **Scrum Master (SM)** : Coach et facilitateur méthodologique, garant du respect du cadre Scrum et éliminateur d'obstacles.
+- **Développeurs** : Équipe autonome et pluridisciplinaire réalisant la conception, le code et les tests de l'incrément.
 
-### 2.4 Les 3 Rôles de l'Équipe Scrum
-- **Le Product Owner (PO) :**
-  - Porte la vision produit et maximise la valeur métier délivrée par l'équipe.
-  - Rédige les fonctionnalités sous forme de User Stories et ordonne les priorités dans le Product Backlog.
-  - Valide les fonctionnalités développées à l'issue de chaque démonstration de sprint.
-- **Le Scrum Master (SM) :**
-  - Coach méthodologique et serviteur-leader de l'équipe.
-  - Veille au respect des règles, des valeurs et des événements du cadre Scrum.
-  - Élimine les obstacles techniques ou méthodologiques qui freinent les développeurs.
-- **L'Équipe de Développement (Développeurs) :**
-  - Groupe autonome et pluridisciplinaire responsable de la réalisation technique.
-  - Détermine la façon de concevoir, coder et tester les fonctionnalités sélectionnées.
-  - S'engage collectivement sur la qualité et la robustesse de l'incrément livré.
+### 3.5 Les 5 Événements Fondamentaux
+- **Sprint** : Boîte de temps fixe (timebox) contenant tous les travaux de développement.
+- **Sprint Planning** : Réunion définissant le Sprint Goal et sélectionnant les tâches du Sprint Backlog.
+- **Daily Scrum** : Point quotidien de 15 minutes pour mesurer l'avancement et lever les blocages.
+- **Sprint Review** : Démonstration live de l'incrément fonctionnel aux parties prenantes.
+- **Sprint Retrospective** : Bilan réflexif pour adopter 2 à 3 actions concrètes d'amélioration d'équipe.
 
-### 2.5 Les 5 Événements Fondamentaux
-1. **Le Sprint :** La boîte de temps régulière (timebox) contenant tous les autres événements.
-2. **Le Sprint Planning :** Réunion initiale définissant l'objectif du sprint (*Sprint Goal*) et les éléments engagés (*Sprint Backlog*).
-3. **Le Daily Scrum :** Point synchronisé quotidien de 15 minutes pour évaluer l'avancement et identifier les blocages.
-4. **La Sprint Review :** Démonstration interactive de l'incrément logiciel pour collecter les retours des utilisateurs.
-5. **La Sprint Retrospective :** Analyse réflexive du fonctionnement de l'équipe pour décider de 2 à 3 actions d'amélioration concrètes.
+## 4. Pratique & Réalisation Guidée (Cas TodoList)
 
----
+- **Étape 1 — Analyse d'échec du cycle en V sur une TodoList** :
+  - La rédaction d'un cahier des charges préalable de 30 pages (sous-tâches, synchronisation cloud, rappels sonores) produit après des mois un outil surchargé alors que l'utilisateur voulait simplement cocher une tâche en 2 secondes sur mobile.
+  - L'approche agile livre immédiatement le cœur vital en Sprint 1 (MVP) et reporte les fonctions secondaires (filtres, persistance) aux itérations suivantes.
+- **Étape 2 — Définition des rôles au sein de l'équipe TodoList** :
+  - Le Product Owner priorise la simplicité d'utilisation et la rapidité de saisie.
+  - Le Scrum Master structure le tableau Kanban (To Do, In Progress, QA, Done) et veille à la fluidité du flux.
+  - Les Développeurs conçoivent l'interface sémantique HTML5/CSS et la logique JavaScript réactive sans erreur console.
+- **Étape 3 — Cadrage du Sprint 1 et engagements qualité** :
+  - Sprint Goal fixé : Livrer une interface One-Page responsive permettant de saisir, afficher et cocher ses tâches quotidiennes.
+  - Charte d'équipe : code versionné quotidiennement sur la branche active du sprint, tests systématiques sur mobile 375px et console navigateur 100% propre.
 
-## 3. Application Pratique : Cadrage de l'Application TodoList
+## 5. Travail à faire pour l'apprenant (Transposition sur le Projet Technique)
 
-Pour appréhender ces concepts sur un cas technique concret et accessible, nous appliquons Scrum au développement d'une application **TodoList** (gestionnaire de tâches réactif).
+La présente réalisation sur l'application TodoList constitue votre cas d'école de référence.  
+Afin d'assimiler concrètement la démarche agile, vous devez réaliser les travaux suivants sur votre propre projet :
 
-### 3.1 Pourquoi le cycle en V échoue sur une TodoList ?
-- **Scénario classique en cascade :**
-  - Rédiger un cahier des charges de 30 pages décrivant la gestion de sous-tâches imbriquées, le tri multi-critères, le partage collaboratif, le stockage cloud et les rappels sonores.
-  - Après 3 mois de développement, le logiciel est livré mais se révèle trop complexe : les utilisateurs voulaient simplement une interface épurée sur smartphone pour cocher une tâche en 2 secondes.
-- **Scénario itératif Agile :**
-  - **Sprint 1 (MVP) :** Livrer immédiatement une page web épurée permettant de saisir une tâche, l'afficher dans une liste et la cocher comme terminée.
-  - **Sprint 2 :** Dès les premiers retours des testeurs, ajouter le filtrage des tâches actives et la persistance locale dans le navigateur (*LocalStorage*).
+- **Étape 1 : Analyse comparative sur votre projet** : Expliquer pourquoi un cycle en V classique ferait courir un risque d'effet tunnel à votre projet technique individuel, et quels sont les bénéfices attendus d'un découpage en sprints.
+- **Étape 2 : Cartographie des 3 rôles Scrum** : Identifier qui assume le rôle de Product Owner (partie prenante / formateur), de Scrum Master et de Développeur pour votre projet.
+- **Étape 3 : Cadrage du Sprint initial** : Définir le Sprint Goal du premier sprint de votre projet technique et formaliser votre charte d'engagement agile.
+- **Étape 4 : Dépôt des livrables** : Rédiger et consigner vos livrables sous :
+  - `tutoriels/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md`
+  - `tutoriels/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md`
 
-### 3.2 Cartographie des 3 Rôles pour l'Équipe TodoList
-- **Product Owner (PO) :**
-  - Définit le persona cible (l'étudiant ou le professionnel actif ayant besoin de clarté mentale).
-  - Établit la priorité absolue : rapidité de saisie et lisibilité sur petit écran.
-  - Décide de repousser les options secondaires (catégories, thèmes graphiques) aux versions ultérieures.
-- **Scrum Master (SM) :**
-  - Met en place le tableau visuel Kanban (colonnes : *À faire, En cours, En test, Terminé*).
-  - Facilite le découpage des tâches techniques et s'assure que le temps de travail reste fluide.
-  - Résout immédiatement les blocages d'environnement ou d'intégration Git.
-- **Développeurs :**
-  - Conçoivent la structure sémantique HTML5 et la mise en page CSS responsive (ordinateur et mobile 375px).
-  - Écrivent le code JavaScript modulaire pour gérer la manipulation du DOM et les événements utilisateurs.
-  - Contrôlent l'absence totale d'erreurs dans la console navigateur.
+## 6. Livrables de Référence Produits & Critères
 
-### 3.3 Charte d'Engagement Agile de l'Équipe
-1. **Transparence intégrale :** Tout le code est versionné quotidiennement sur GitHub sur la branche active du sprint.
-2. **Focus sur le Sprint Goal :** L'équipe concentre son énergie sur l'objectif engagé sans disperser ses efforts sur des détails superflus.
-3. **Qualité immédiate (Definition of Done) :** Une tâche n'est déclarée terminée que si elle est testée sur mobile et ordinateur, et validée sans warning console.
-4. **Amélioration continue :** Chaque fin de sprint donne lieu à un bilan sincère des réussites et des axes de progrès techniques.
+- **Fiche technique d'atelier** : `ua-lab/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md`
+- **Diaporama Marp de restitution** : `ua-lab/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md`
+- **Critères de réussite validés** :
+  - [x] Analyse comparative Cascade vs Agile appliquée à la TodoList.
+  - [x] 3 rôles Scrum et 5 événements décrits avec précision opérationnelle.
+  - [x] Travail à faire de transposition sur le Projet Technique clairement formulé.
+  - [x] Zéro citation d'établissement conformément aux normes du projet.
 
----
-
-## 4. Auto-évaluation & Checklist
-
-Vérifiez que vous maîtrisez les éléments de ce premier atelier :
-- [ ] Vous savez expliquer pourquoi l'approche itérative réduit le risque d'effet tunnel par rapport au cycle en V.
-- [ ] Vous citez les 4 valeurs du Manifeste Agile et les 3 piliers empiriques de Scrum.
-- [ ] Vous distinguez avec précision les responsabilités respectives du Product Owner, du Scrum Master et des Développeurs.
-- [ ] Vous savez justifier l'organisation d'un MVP et le découpage par Sprints sur le cas de la TodoList.
+## 7. Glossaire
+- **Sprint** : Boîte de temps fixe pendant laquelle l'équipe conçoit, code et teste un incrément logiciel utilisable.
+- **Product Owner** : Responsable qui porte la vision du produit et priorise le backlog selon la valeur utilisateur.
+- **Scrum Master** : Facilitateur méthodologique garant du cadre Scrum et de la levée des obstacles.
+- **Incrément** : Version concrète, vérifiée selon la Definition of Done et directement utilisable d'un produit.
+- **Effet tunnel** : Risque du cycle en V où l'utilisateur ne découvre le produit qu'à la livraison finale sans validation intermédiaire.

@@ -16,11 +16,6 @@ en_construction: false
 branche: "sprint0"
 sprint: "Sprint 0"
 statut_realisation: "a_realiser"
-livrables:
-  - chemin: "ua-lab/design/prototypage-ui-kit/prototypage-ui-kit/prototypage-ui-kit.md"
-    version: "0.1.0"
-  - chemin: "ua-lab/design/prototypage-ui-kit/prototypage-ui-kit/presentation-prototypage-ui-kit.md"
-    version: "0.1.0"
 ---
 
 ## 1. Contexte & Enjeux
@@ -41,7 +36,7 @@ Pour garantir une expérience utilisateur cohérente et professionnelle, les éq
 1. **Étape 1 — Définir la charte graphique de base :** Sélectionner une couleur primaire, une couleur secondaire, les teintes de texte et de fond en classes Tailwind CSS.
 2. **Étape 2 — Sélectionner les composants Preline UI :** Choisir les gabarits HTML adaptés pour le Header, le Hero, la grille de cartes d'articles et le Footer.
 3. **Étape 3 — Rédiger la spécification de l'UI Kit :** Documenter le rôle de chaque composant, ses classes Tailwind et son comportement adaptatif (desktop / mobile).
-4. **Étape 4 — Rédiger la fiche et le diaporama :** Consigner la documentation dans `ua-lab/design/prototypage-ui-kit/prototypage-ui-kit/prototypage-ui-kit.md` et préparer le diaporama Marp dans `ua-lab/design/prototypage-ui-kit/prototypage-ui-kit/presentation-prototypage-ui-kit.md`.
+4. **Étape 4 — Rédiger la fiche et le diaporama :** Consigner la documentation dans `tutoriels/design/parcours-utilisateur-prototypage/prototypage-ui-kit/prototypage-ui-kit.md` et préparer le diaporama Marp dans `tutoriels/design/parcours-utilisateur-prototypage/prototypage-ui-kit/presentation-prototypage-ui-kit.md`.
 
 ## 4. Pistes de recherche active
 - Quels sont les principes fondamentaux de l'approche *Atomic Design* (atomes, molécules, organismes, gabarits, pages) ?
@@ -49,6 +44,6 @@ Pour garantir une expérience utilisateur cohérente et professionnelle, les éq
 - Consultez la documentation officielle de Tailwind CSS et la bibliothèque de composants Preline UI.
 
 ## 5. Livrables attendus & Critères de validation
-- **Fiche technique d'atelier :** `ua-lab/design/prototypage-ui-kit/prototypage-ui-kit/prototypage-ui-kit.md`.
-- **Diaporama Marp de restitution :** `ua-lab/design/prototypage-ui-kit/prototypage-ui-kit/presentation-prototypage-ui-kit.md`.
-- **Critère de succès :** L'UI Kit documente clairement les 4 composants majeurs d'accueil avec leurs classes Tailwind CSS et leur disposition adaptative.
+- **Fiche technique d'atelier :** `tutoriels/design/parcours-utilisateur-prototypage/prototypage-ui-kit/prototypage-ui-kit.md`.
+- **Diaporama Marp de restitution :** `tutoriels/design/parcours-utilisateur-prototypage/prototypage-ui-kit/presentation-prototypage-ui-kit.md`.
+- **Critère de succès :** L'UI Kit documente clairement les 4 composants majeurs d'accueil avec leurs classes Tailwind CSS, leur disposition adaptative et les livrables sont versionnés sur la branche `sprint0`.

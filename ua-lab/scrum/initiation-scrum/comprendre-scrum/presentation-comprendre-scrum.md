@@ -1,22 +1,22 @@
 ---
 layout: presentation
-title: "Présentation : Comprendre l'approche Agile et Scrum (Cas TodoList)"
+title: "Présentation : T.351.111 — Comprendre l'approche Agile et Scrum (Cas TodoList)"
 marp: true
 theme: default
 paginate: true
-header: "EFP — Tutoriel 1 : Comprendre l'approche Agile et Scrum"
-footer: "Encadrant : ESSARRAJ Fouad | EFP"
+header: "T.351.111 : Comprendre l'approche Agile et Scrum"
+footer: "Scrum & Ingénierie Agile"
 ---
 
 <!-- _class: lead -->
-# Comprendre l'approche Agile et le cadre Scrum
+# T.351.111 : Comprendre l'approche Agile et le cadre Scrum
 ### Cas d'étude didactique : Application TodoList
 **Unité d'Apprentissage : UA.351.11 — Initiation Scrum**
 
 - **Public** : Développeurs Web (Niveau N3)
-- **Établissement** : EFP
 - **Domaine** : Scrum & Ingénierie Agile (`D.351.1`)
 - **Compétence** : `C.351` — Piloter et animer la démarche Scrum
+- **Encadrant** : ESSARRAJ Fouad
 
 ---
 
@@ -86,8 +86,8 @@ footer: "Encadrant : ESSARRAJ Fouad | EFP"
 ---
 
 <!-- _class: lead -->
-# Conclusion du Tutoriel 1
+# Conclusion de l'Atelier T.351.111
 ### Passer à l'action avec Scrum
 
 - La maîtrise des 3 rôles et des 5 événements sécurise le projet contre l'effet tunnel.
-- **Prochaine étape (Tutoriel 2) :** Définir la vision produit et exprimer les besoins en User Stories avec les personas cibles.
+- **Prochaine étape (T.351.112) :** Définir la vision produit et exprimer les besoins en User Stories avec les personas cibles.
