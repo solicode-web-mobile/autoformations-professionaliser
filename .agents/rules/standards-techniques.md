@@ -48,7 +48,7 @@ trigger: always_on
 ## 4. Transparence de l'Agent IA & Traçabilité des Actions
 - **Affichage Obligatoire des Skills Utilisés :** À la fin de chaque échange / discussion, l'Agent IA doit obligatoirement afficher la liste exacte des **Skills locaux utilisés** lors de la réponse (format : `Skills utilisés : [skill-1], [skill-2]`).
 - **Affichage des Compétences du Cursus :** Indiquer également les compétences certifiantes du référentiel mobilisées (format : `Compétences du cursus : C.xxx, C.yyy`).
-- **Plans d'action :** Expliciter obligatoirement les skills et compétences prévus pour réaliser chaque étape d'un plan d'implémentation.
+- **Plans d'action & Artéfacts `/plan` :** Dans tout artéfact de plan d'implémentation (`plan-*.md`), l'Agent IA doit obligatoirement et systématiquement déterminer et lister de manière exhaustive les **Skills locaux mobilisés** pour l'ensemble du plan ainsi que pour chaque étape/composant (avec les compétences du cursus associées). Chaque étape du plan doit explicitement mentionner le ou les skills responsables de sa réalisation.
 
 ## 5. Gouvernance des Skills & Documentation Colocalisée
 - **100% Local au Dépôt :** Toutes les compétences de l'agent résident sous `.agents/skills/`. Aucun mécanisme de Hub distant ou de compétences globales n'est utilisé. La découverte des compétences s'effectue dynamiquement à partir des fichiers `SKILL.md`.

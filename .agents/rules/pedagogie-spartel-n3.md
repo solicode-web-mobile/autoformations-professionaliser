@@ -54,6 +54,11 @@ $$\text{Comprendre} \longrightarrow \text{Reproduire} \longrightarrow \text{Exp�
 13. **Neutralité de Version de Framework dans les Tutoriels :** Dans l'ensemble des fiches de tutoriels (titres, consignes, descriptions, persona), désigner le framework simplement par son nom (**Laravel**), sans préciser de numéro de version (*Laravel 12* ou *version 12*). La version exacte du framework est exclusivement communiquée dans le fichier de stack technique du projet (`README.md`).
 14. **Intitulé Canonique de l'Organisation de Dépôt :** Utiliser la formulation directe et universelle **« Organisation standard d'un dépôt »** (sans y adjoindre *« Solicode »* ou *« EFP N3 »*).
 15. **Exclusion du Dossier `flux-travail/` pour les Apprenants :** Le dossier `flux-travail/` est un référentiel méthodologique rédigé par le formateur. Il ne doit pas être transmis aux apprenants ni figurer dans les étapes directives de création de dossiers (`mkdir`) de leurs tutoriels.
+16. **Travail à Faire Différencié selon le Domaine (Logique vs Code) dans les Ateliers Enrichis :**
+    - Lorsqu'un atelier pratique guidé (`tuto-atelier`) est promu en tutoriel enrichi (`tuto-atelier-notions`), la solution de référence réalisée sur un cas d'étude épuré (ex: TodoList) est mise à disposition pour consultation sous `ua-lab/`.
+    - Afin d'impliquer activement l'apprenant et d'évaluer son assimilation, la fiche de tutoriel formule obligatoirement un **Travail à faire** différencié :
+      - **Domaines Logiques & Méthodologiques (Scrum, UML, Design Thinking, Architecture) :** L'apprenant consulte la solution TodoList pour comprendre les concepts, puis doit obligatoirement **transposer et appliquer la démarche sur son propre Projet Technique individuel** (choisi au début de sa formation). Ses livrables sont déposés dans son espace `tutoriels/[slug-domaine]/...`.
+      - **Domaines de Codage & Implémentation (Laravel, Alpine.js, Composants front) :** L'apprenant n'a pas à transposer sur un autre projet : il lui suffit d'**implémenter concrètement le code** de l'exemple didactique (TodoList) et de fournir le code source fonctionnel ainsi que son journal de commandes.
 
 ## 4. Gestion Méthodique des Corrections
 Lorsqu'une erreur ou incohérence est constatée dans un code ou un livrable :

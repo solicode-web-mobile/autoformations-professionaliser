@@ -42,6 +42,7 @@ Pour chaque atelier à réaliser, `tuto-livrable-atelier-writer` coordonne l'éc
    - Mettre à jour `livrables:` avec les chemins `ua-lab/...`.
    - Injecter les **notions fondamentales consolidées** dans le corps du tutoriel.
 4. **Zéro Commande Git dans `.command.md` :** Ne consigner que les commandes techniques de l'atelier (jamais `git add`, `commit`, `push`).
+5. **Maintien du Travail à Faire Transposable :** Lors de la promotion en `tuto-atelier-notions`, maintenir un Travail à faire clair pour l'apprenant : transposition sur son propre projet technique individuel pour les domaines logiques (Scrum, UML, Architecture), ou implémentation concrète du code de l'exemple pour les domaines de développement.
 
 ---
 

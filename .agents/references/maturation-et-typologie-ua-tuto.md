@@ -81,6 +81,11 @@ flowchart LR
       version: "1.0.0"
   ```
 
+### 2.3 Règle du Travail à Faire Différencié dans les Ateliers Enrichis (Logique vs Code)
+Afin d'impliquer activement l'apprenant et d'évaluer son assimilation après la mise à disposition de la solution de référence consultable sous `ua-lab/` :
+- **Domaines Logiques & Méthodologiques (Scrum, UML, Design Thinking, Architecture) :** L'apprenant consulte la solution TodoList (ou cas modèle) pour appréhender les concepts et la démarche, puis doit obligatoirement **transposer et appliquer cette démarche sur son propre Projet Technique individuel** (choisi au début de la formation). Les livrables de l'apprenant sont rangés dans son espace `tutoriels/[slug-domaine]/...`.
+- **Domaines de Codage & Implémentation (Laravel, Alpine.js, Composants front) :** L'apprenant n'a pas à transposer sur un autre projet : il lui suffit d'**implémenter concrètement le code** de l'exemple didactique (TodoList) et de fournir le code source fonctionnel ainsi que son journal de commandes CLI.
+
 ---
 
 ## 3. Typologie Complète des Formats de Tutoriels (Préfixe `tuto-*`)

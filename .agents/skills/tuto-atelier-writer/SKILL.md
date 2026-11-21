@@ -49,3 +49,6 @@ Frontmatter : `layout: tuto`, `title:`, `sous_titre:`, `slug:`, `permalink:`, `t
 3. **Zéro Fuite Didactique & Zéro Jalon :** Bannir « 20/80 ». Terme direct « Étape » obligatoire (« Jalon » proscrit). Aucune durée unitaire (`(2h)`).
 4. **Formatage Colonne 0 & UTF-8 :** Tout bloc de code débute strictement colonne 0 (zéro indentation). UTF-8 sans BOM.
 5. **Gouvernance & Relais :** Réfère à [tuto-writer](../tuto-writer/SKILL.md) et transmet le relais à [tuto-livrable-atelier-writer](../tuto-livrable-atelier-writer/SKILL.md) pour la réalisation physique sous `ua-lab/`.
+6. **Travail à Faire Différencié (Logique vs Code) :**
+   - *Domaines Logiques (Scrum, UML, Design Thinking, Architecture) :* Le Travail à faire prescrit à l'apprenant exige de **transposer la méthode sur son propre Projet Technique individuel**.
+   - *Domaines de Code (Laravel, Alpine.js, Composants web) :* Le Travail à faire consiste à **implémenter concrètement le code** de l'exemple didactique (ex: TodoList) et fournir le code source fonctionnel.
