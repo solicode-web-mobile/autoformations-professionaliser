@@ -21,9 +21,9 @@ data_php: ""
 sprint: "Sprint 0"
 statut_realisation: "realise"
 livrables:
-  - chemin: "tutoriels/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md"
+  - chemin: "ua-lab/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md"
     version: "1.0.0"
-  - chemin: "tutoriels/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md"
+  - chemin: "ua-lab/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md"
     version: "1.0.0"
 ---
 
@@ -59,8 +59,8 @@ Assimiler les concepts directeurs de l'Agilité et la mécanique opérationnelle
 
 ## 4. Livrables & Critères de validation
 - **Livrables attendus :**
-  - Fiche technique d'atelier : `tutoriels/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md sur la branche sprint0`.
-  - Diaporama Marp de restitution : `tutoriels/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md sur la branche sprint0`.
+  - Fiche technique d'atelier : `ua-lab/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md sur la branche sprint0`.
+  - Diaporama Marp de restitution : `ua-lab/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md sur la branche sprint0`.
 - **Critères de validation :**
   - [ ] La fiche explicite clairement la différence entre cycle en V et démarche agile itérative.
   - [ ] Les 3 rôles Scrum et les 5 événements sont définis avec précision.

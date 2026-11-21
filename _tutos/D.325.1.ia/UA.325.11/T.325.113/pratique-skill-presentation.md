@@ -22,15 +22,15 @@ data_php: ""
 sprint: "sprint1"
 statut_realisation: "realise"
 livrables:
-  - chemin: "tutoriels/ia/agent-skills/skill-presentation/skill-presentation.md"
+  - chemin: "ua-lab/ia/agent-skills/skill-presentation/skill-presentation.md"
     version: "1.0.0"
-  - chemin: "tutoriels/ia/agent-skills/skill-presentation/presentation-skill-presentation.md"
+  - chemin: "ua-lab/ia/agent-skills/skill-presentation/presentation-skill-presentation.md"
     version: "1.0.0"
-  - chemin: "tutoriels/ia/agent-skills/skill-presentation/skill-presentation.command.md"
+  - chemin: "ua-lab/ia/agent-skills/skill-presentation/skill-presentation.command.md"
     version: "1.0.0"
-  - chemin: "tutoriels/ia/agent-skills/skill-presentation/SKILL.md"
+  - chemin: "ua-lab/ia/agent-skills/skill-presentation/SKILL.md"
     version: "1.0.0"
-  - chemin: "tutoriels/ia/agent-skills/skill-presentation/missions/marp-slides.md"
+  - chemin: "ua-lab/ia/agent-skills/skill-presentation/missions/marp-slides.md"
     version: "1.0.0"
 ---
 
@@ -50,11 +50,11 @@ Ce skill sert de modèle d'outillage pour automatiser la génération de diapora
    Initialisez l'arborescence dédiée à l'atelier pratique sous l'emplacement standardisé de tutoriels :
 
 ```bash
-mkdir tutoriels/ia/agent-skills/skill-presentation/missions
+mkdir ua-lab/ia/agent-skills/skill-presentation/missions
 ```
 
 2. **Étape 2 — Conception du manifeste orchestrateur `SKILL.md` :**  
-   Dans `tutoriels/ia/agent-skills/skill-presentation/SKILL.md`, concevez le manifeste du skill selon les directives suivantes :
+   Dans `ua-lab/ia/agent-skills/skill-presentation/SKILL.md`, concevez le manifeste du skill selon les directives suivantes :
    - **Frontmatter YAML :** Définir `name: skill-presentation` et rédiger une `description` orientée action et découvrabilité native par l'Agent IA.
    - **Titre principal :** Identifier clairement le nom du skill et sa commande d'activation conventionnelle (`/skill-presentation`).
    - **Section 1 (Mission) :** Définir en 1 à 2 phrases le rôle d'orchestration de présentations de diapositives.
@@ -63,7 +63,7 @@ mkdir tutoriels/ia/agent-skills/skill-presentation/missions
    - **Garde-fou de compacité :** Respecter rigoureusement le plafond strict de $\le 75$ lignes pour l'orchestrateur.
 
 3. **Étape 3 — Conception de la mission spécialisée `missions/marp-slides.md` :**  
-   Dans `tutoriels/ia/agent-skills/skill-presentation/missions/marp-slides.md`, formalisez le cahier des charges de la mission de génération de diapositives :
+   Dans `ua-lab/ia/agent-skills/skill-presentation/missions/marp-slides.md`, formalisez le cahier des charges de la mission de génération de diapositives :
    - **Titre & Objet :** Définir le périmètre de la mission (génération de diaporamas Marp Markdown).
    - **Tâche 1 (En-tête Marp) :** Exiger le bloc YAML initial (`marp: true`, `theme: default`, `paginate: true`, en-tête et pied de page).
    - **Tâche 2 (Page de garde normalisée) :** Intégrer la structure de la première slide (`<!-- _class: lead -->`) avec les mentions obligatoires Solicode : Apprenant, Encadrant ESSARRAJ Fouad, Établissement Solicode Tanger, Domaine, Compétence et Date.
@@ -71,29 +71,29 @@ mkdir tutoriels/ia/agent-skills/skill-presentation/missions
    - **Livrables attendus :** Fichier `.md` prêt à être prévisualisé ou exporté via Marp.
 
 4. **Étape 4 — Rédaction du compte-rendu d'atelier `skill-presentation.md` :**  
-   Dans `tutoriels/ia/agent-skills/skill-presentation/skill-presentation.md`, formalisez la notice complète de votre atelier pratique :
+   Dans `ua-lab/ia/agent-skills/skill-presentation/skill-presentation.md`, formalisez la notice complète de votre atelier pratique :
    - Les objectifs de l'atelier et compétences mobilisées.
    - L'anatomie d'un skill modulaire avec un diagramme Mermaid illustrant l'orchestrateur (`SKILL.md`) et le sous-dossier `missions/`.
    - La mise en œuvre détaillée des fichiers conçus (`SKILL.md` et `missions/marp-slides.md`).
    - La comparaison avec l'architecture déployée sur le projet d'imitation (*Blog des lauréats*) : `skills-dev` et `gestion-depot`.
 
 5. **Étape 5 — Conception du diaporama Marp `presentation-skill-presentation.md` :**  
-   Dans `tutoriels/ia/agent-skills/skill-presentation/presentation-skill-presentation.md`, préparez le support de présentation orale de l'atelier au format Marp Markdown en appliquant les consignes de la mission conçue.
+   Dans `ua-lab/ia/agent-skills/skill-presentation/presentation-skill-presentation.md`, préparez le support de présentation orale de l'atelier au format Marp Markdown en appliquant les consignes de la mission conçue.
 
 6. **Étape 6 — Journalisation des commandes dans `skill-presentation.command.md` :**  
-   Dans `tutoriels/ia/agent-skills/skill-presentation/skill-presentation.command.md`, consignez la commande de préparation des répertoires :
+   Dans `ua-lab/ia/agent-skills/skill-presentation/skill-presentation.command.md`, consignez la commande de préparation des répertoires :
 
 ```bash
-mkdir tutoriels/ia/agent-skills/skill-presentation/missions
+mkdir ua-lab/ia/agent-skills/skill-presentation/missions
 ```
 
 ## 3. Livrables & Critères de validation
 - **Livrables attendus :**
-  - Compte-rendu d'atelier : `tutoriels/ia/agent-skills/skill-presentation/skill-presentation.md` sur la branche `sprint1`.
-  - Diaporama Marp : `tutoriels/ia/agent-skills/skill-presentation/presentation-skill-presentation.md` sur la branche `sprint1`.
-  - Manifeste orchestrateur : `tutoriels/ia/agent-skills/skill-presentation/SKILL.md` sur la branche `sprint1`.
-  - Mission spécialisée : `tutoriels/ia/agent-skills/skill-presentation/missions/marp-slides.md` sur la branche `sprint1`.
-  - Journal des commandes : `tutoriels/ia/agent-skills/skill-presentation/skill-presentation.command.md` sur la branche `sprint1`.
+  - Compte-rendu d'atelier : `ua-lab/ia/agent-skills/skill-presentation/skill-presentation.md` sur la branche `sprint1`.
+  - Diaporama Marp : `ua-lab/ia/agent-skills/skill-presentation/presentation-skill-presentation.md` sur la branche `sprint1`.
+  - Manifeste orchestrateur : `ua-lab/ia/agent-skills/skill-presentation/SKILL.md` sur la branche `sprint1`.
+  - Mission spécialisée : `ua-lab/ia/agent-skills/skill-presentation/missions/marp-slides.md` sur la branche `sprint1`.
+  - Journal des commandes : `ua-lab/ia/agent-skills/skill-presentation/skill-presentation.command.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Le fichier `SKILL.md` contient un Front Matter YAML valide avec `name` et `description`, et ne dépasse pas 75 lignes.
   - [ ] Le fichier `SKILL.md` définit clairement sa mission, ses conditions de déclenchement et référence `missions/marp-slides.md`.

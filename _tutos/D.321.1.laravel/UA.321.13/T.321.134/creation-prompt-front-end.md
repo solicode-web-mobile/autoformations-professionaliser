@@ -52,8 +52,8 @@ Pour valider l'épreuve individuelle (65% de la note certificative) :
 
 ## 5. Livrables & Critères de validation
 - **Livrables attendus :**
-  - Fichier de prompt : `tutoriels/laravel/tranche-verticale/prompt-frontend/prompt-front-end.prompt.md` sur la branche `sprint1`.
-  - Compte-rendu d'entraînement : `tutoriels/laravel/tranche-verticale/prompt-frontend/prompt-frontend.md` sur la branche `sprint1`.
+  - Fichier de prompt : `ua-lab/laravel/tranche-verticale/prompt-frontend/prompt-front-end.prompt.md` sur la branche `sprint1`.
+  - Compte-rendu d'entraînement : `ua-lab/laravel/tranche-verticale/prompt-frontend/prompt-frontend.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Le prompt `prompt-front-end.prompt.md` génère des vues Blade valides sans CSS inline.
   - [ ] L'entraînement au Live Coding est réussi en moins de 40 minutes sans aucune assistance extérieure.

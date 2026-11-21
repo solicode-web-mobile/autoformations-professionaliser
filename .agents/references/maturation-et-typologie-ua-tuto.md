@@ -45,18 +45,18 @@ Pour refléter le cycle de vie d'un atelier pratique entre l'autoformation et la
 
 ```mermaid
 flowchart LR
-    A["Flux Opérationnel<br/>(flux-travail-s[X].md)"] --> B["1. tuto-atelier<br/>(Atelier initial brut)<br/>statut_realisation: a_realiser<br/>0% notions théoriques rédigées"]
-    B --> C["2. Réalisation Terrain<br/>(Agent réalisation-sprint)<br/>Production livrables & diapo Marp"]
-    C --> D["3. tuto-atelier-notions<br/>(Atelier enrichi)<br/>statut_realisation: realise<br/>+ Plan des notions de base"]
+    A["Flux Opérationnel<br/>(flux-travail-s[X].md)"] --> B["1. tuto-atelier<br/>(Conception par tuto-atelier-writer)<br/>statut: a_realiser<br/>0% notions théoriques rédigées"]
+    B --> C["2. Réalisation du Lab<br/>(Par tuto-livrable-atelier-writer)<br/>Livrables produits sous ua-lab/"]
+    C --> D["3. tuto-atelier-notions<br/>(Atelier enrichi de référence)<br/>statut: realise<br/>+ Notions fondamentales<br/>+ Liens vers la solution"]
 ```
 
 ### 2.1 `tuto-atelier` — Atelier Initial Brut (Sans Notions de Base)
-- **Définition :** Fiche conçue lors de l'alignement pédagogique initial à partir du flux opérationnel (`flux-travail-s[X].md`).
+- **Définition :** Fiche conçue lors de l'alignement pédagogique initial par le skill `tuto-atelier-writer` à partir du flux opérationnel (`flux-travail-s[X].md`).
 - **Contenu :** Contient strictement les informations opérationnelles transmises par le flux de travail :
   - Contexte professionnel et objectifs opérationnels (*Ce que vous devez apprendre*).
   - Travail à faire et déroulement opératoire pas à pas (ateliers, exercices, consignes).
   - Pistes d'approfondissement / recherches actives pour l'apprenant.
-  - Livrables attendus (dossier sous `tutoriels/`, diaporama Marp, journal CLI si applicable).
+  - Livrables attendus (référence vers `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/` sur la plateforme, stockés dans `tutoriels/` sur le poste apprenant).
 - **Règle absolue :** **ZÉRO notion théorique détaillée rédigée** (aucun cours magistral préalable).
 - **Métadonnées Frontmatter :**
   ```yaml
@@ -64,16 +64,21 @@ flowchart LR
   statut_realisation: "a_realiser"
   ```
 
-### 2.2 `tuto-atelier-notions` — Atelier Enrichi (Avec Notions Fondamentales)
-- **Définition :** Fiche promue en `tuto-atelier-notions` **après la réalisation effective sur le terrain** par l'Agent Réalisation de Sprint.
-- **Contenu :** Une fois les livrables réels produits et validés, l'Agent Autoformation injecte :
-  - Le plan des notions de base à voir (les 20% discriminants consolidés sur le terrain).
-  - Les définitions conceptuelles validées par la pratique.
-  - Les liens vers les livrables physiques et diaporamas complétés.
+### 2.2 `tuto-atelier-notions` — Atelier Enrichi (Avec Notions Fondamentales & Solution Réalisée)
+- **Définition :** Fiche promue en `tuto-atelier-notions` **après la réalisation effective des livrables** par l'Agent Rédacteur d'Autoformation via le skill `tuto-livrable-atelier-writer`.
+- **Contenu :** Une fois les livrables physiques produits sous `ua-lab/`, l'Agent Rédacteur injecte :
+  - Le plan des notions de base à voir (les concepts discriminants consolidés par la pratique).
+  - Les définitions conceptuelles validées.
+  - Les liens vers les livrables physiques et diaporamas complétés sous `ua-lab/` (affichés dans la carte de solution).
 - **Métadonnées Frontmatter :**
   ```yaml
   type: "tuto-atelier-notions"
   statut_realisation: "realise" # ou "synchronise"
+  livrables:
+    - chemin: "ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md"
+      version: "1.0.0"
+    - chemin: "ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/presentation-[slug-tuto].md"
+      version: "1.0.0"
   ```
 
 ---
@@ -82,7 +87,11 @@ flowchart LR
 
 ### A. `tuto-atelier` & `tuto-atelier-notions` — Ateliers Pratiques Guidés
 - **Rattachement :** Unités d'apprentissage de maturité `ua-lab`.
-- **Livrables attendus (dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`) :**
+- **Livrables de référence (dans `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/` sur Jekyll, `tutoriels/` sur poste apprenant) :**
+  1. Fiche technique d'atelier : `[slug-tuto].md`.
+  2. Diaporama Marp de restitution interactif : `presentation-[slug-tuto].md` (`layout: presentation`).
+  3. Journal des commandes CLI : `[slug-tuto].command.md` (si des commandes terminal ont été exécutées).
+  4. Fichiers de restitution ou ressources d'atelier.
   1. Fiche technique d'atelier : `[slug-tuto].md`.
   2. Diaporama Marp de restitution : `presentation-[slug-tuto].md` (**exclusif au format atelier**).
   3. Journal des commandes CLI : `[slug-tuto].command.md` (si des commandes terminal ont été exécutées).
@@ -124,8 +133,8 @@ flowchart LR
 
 | Type de Tutoriel (`type:`) | Maturité UA Parente | Statut Initial | Diaporama Marp ? | Journal CLI (`.command.md`) ? | Destination des Livrables |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **`tuto-atelier`** | `ua-lab` | `a_realiser` | **OUI** (`presentation-[slug].md`) | **OUI** (si CLI exécuté) | `tutoriels/.../[slug-tuto]/` |
-| **`tuto-atelier-notions`** | `ua-lab` | `realise` | **OUI** (`presentation-[slug].md`) | **OUI** (si CLI exécuté) | `tutoriels/.../[slug-tuto]/` |
+| **`tuto-atelier`** | `ua-lab` | `a_realiser` | **OUI** (`presentation-[slug].md`) | **OUI** (si CLI exécuté) | `ua-lab/.../[slug]/` (Jekyll) / `tutoriels/` (Apprenant) |
+| **`tuto-atelier-notions`** | `ua-lab` | `realise` | **OUI** (`presentation-[slug].md`) | **OUI** (si CLI exécuté) | `ua-lab/.../[slug]/` (Jekyll) / `tutoriels/` (Apprenant) |
 | **`tuto-tache`** | `projet` | `a_realiser` | **NON** | **NON** (proscrit) | Emplacements racine (`docs/`, `sprints/`, etc.) |
 | **`tuto-notion`** | `tutoriel` | `a_realiser` | **NON** | **OUI** (si CLI exécuté) | `tutoriels/.../[slug-tuto]/` |
 | **`tuto-code`** | `tutoriel` | `a_realiser` | **NON** | **OUI** (`tutoriels/.../[slug].command.md`) | **`src/`** (arborescence applicative) |

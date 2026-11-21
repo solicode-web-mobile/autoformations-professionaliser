@@ -30,6 +30,7 @@ Ce skill gouverne et formalise la communication inter-agents entre l'**Agent Ré
      ```
    - Toute mise à jour de l'émetteur est immédiatement accessible au récepteur sans duplication de données.
 4. **Encodage Strict :** UTF-8 sans BOM sur tous les messages.
+5. **Archivage Systématique :** Dès qu'un échange est `RESOLU`, il doit être archivé sous `.agents/communication-agents/archive/YYYY-MM-DD-[slug].md` avant d'émettre un nouveau message `A_TRAITER`.
 
 # 4. Structure Normative d'un Message Inter-Agents
 Tout message transmis via le canal adopte la structure suivante :

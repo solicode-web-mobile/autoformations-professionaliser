@@ -17,9 +17,9 @@ branche: "sprint0"
 sprint: "Sprint 0"
 statut_realisation: "a_realiser"
 livrables:
-  - chemin: "tutoriels/design/design-thinking/empathie-personas/empathie-personas.md"
+  - chemin: "ua-lab/design/design-thinking/empathie-personas/empathie-personas.md"
     version: "0.1.0"
-  - chemin: "tutoriels/design/design-thinking/empathie-personas/presentation-empathie-personas.md"
+  - chemin: "ua-lab/design/design-thinking/empathie-personas/presentation-empathie-personas.md"
     version: "0.1.0"
 ---
 
@@ -41,8 +41,8 @@ L'**Outil Persona** transforme les données brutes en un personnage fictif mais 
    - *Objectifs opérationnels (ce qu'il veut accomplir).*
    - *Frustrations et obstacles majeurs rencontrés.*
    - *Scénario d'usage type au quotidien.*
-3. **Étape 3 — Rédiger la fiche de synthèse :** Déposer la restitution dans `tutoriels/design/design-thinking/empathie-personas/empathie-personas.md`.
-4. **Étape 4 — Créer le diaporama Marp :** Mettre en forme le persona dans `tutoriels/design/design-thinking/empathie-personas/presentation-empathie-personas.md`.
+3. **Étape 3 — Rédiger la fiche de synthèse :** Déposer la restitution dans `ua-lab/design/design-thinking/empathie-personas/empathie-personas.md`.
+4. **Étape 4 — Créer le diaporama Marp :** Mettre en forme le persona dans `ua-lab/design/design-thinking/empathie-personas/presentation-empathie-personas.md`.
 
 ## 4. Pistes de recherche active
 - Quelle est la différence entre un persona marketing (axé sur l'achat) et un persona de conception UX (axé sur la tâche et l'interaction) ?
@@ -50,6 +50,6 @@ L'**Outil Persona** transforme les données brutes en un personnage fictif mais 
 - Combien de personas principaux une application ciblée doit-elle comporter au maximum ?
 
 ## 5. Livrables attendus & Critères de validation
-- **Fiche technique d'atelier :** `tutoriels/design/design-thinking/empathie-personas/empathie-personas.md`.
-- **Diaporama Marp de restitution :** `tutoriels/design/design-thinking/empathie-personas/presentation-empathie-personas.md`.
+- **Fiche technique d'atelier :** `ua-lab/design/design-thinking/empathie-personas/empathie-personas.md`.
+- **Diaporama Marp de restitution :** `ua-lab/design/design-thinking/empathie-personas/presentation-empathie-personas.md`.
 - **Critère de succès :** La fiche Persona est structurée avec rigueur et reflète directement les douleurs identifiées dans la Carte d'Empathie.

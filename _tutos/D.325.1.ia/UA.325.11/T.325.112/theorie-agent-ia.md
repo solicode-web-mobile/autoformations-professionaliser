@@ -22,9 +22,9 @@ data_php: ""
 sprint: "sprint1"
 statut_realisation: "realise"
 livrables:
-  - chemin: "tutoriels/ia/agent-skills/agent-ia/agent-ia.md"
+  - chemin: "ua-lab/ia/agent-skills/agent-ia/agent-ia.md"
     version: "1.0.0"
-  - chemin: "tutoriels/ia/agent-skills/agent-ia/presentation-agent-ia.md"
+  - chemin: "ua-lab/ia/agent-skills/agent-ia/presentation-agent-ia.md"
     version: "1.0.0"
 ---
 
@@ -58,6 +58,6 @@ Effectuer les recherches documentaires nécessaires, rédiger une fiche de synth
 - Étudier comment les agents IA industriels découpent un problème complexe en sous-tâches coordonnées.
 
 ## 4. Livrable attendu
-- **Fiche technique de synthèse :** `tutoriels/ia/agent-skills/agent-ia/agent-ia.md` sur la branche `sprint1`.
-- **Diaporama Marp de restitution :** `tutoriels/ia/agent-skills/agent-ia/presentation-agent-ia.md` sur la branche `sprint1`.
+- **Fiche technique de synthèse :** `ua-lab/ia/agent-skills/agent-ia/agent-ia.md` sur la branche `sprint1`.
+- **Diaporama Marp de restitution :** `ua-lab/ia/agent-skills/agent-ia/presentation-agent-ia.md` sur la branche `sprint1`.
 - **Contenu attendu :** Synthèse personnelle structurée reprenant les notions fondamentales (Paliers d'autonomie, cycle Perception-Décision-Action, Always-On vs Skills, principes SSOT/DRY) et les réponses documentées aux recherches à effectuer.

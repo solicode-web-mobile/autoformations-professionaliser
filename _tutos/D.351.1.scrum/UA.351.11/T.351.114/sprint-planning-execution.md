@@ -21,9 +21,9 @@ data_php: ""
 sprint: "sprint1"
 statut_realisation: "realise"
 livrables:
-  - chemin: "tutoriels/scrum/initiation-scrum/sprint-planning-execution/sprint-planning-execution.md"
+  - chemin: "ua-lab/scrum/initiation-scrum/sprint-planning-execution/sprint-planning-execution.md"
     version: "1.0.0"
-  - chemin: "tutoriels/scrum/initiation-scrum/sprint-planning-execution/presentation-sprint-planning-execution.md"
+  - chemin: "ua-lab/scrum/initiation-scrum/sprint-planning-execution/presentation-sprint-planning-execution.md"
     version: "1.0.0"
 ---
 
@@ -65,8 +65,8 @@ Organiser le travail d'une itération de développement sur votre projet techniq
 
 ## 4. Livrables & Critères de validation
 - **Livrables attendus :**
-  - Fiche technique d'atelier : `tutoriels/scrum/initiation-scrum/sprint-planning-execution/sprint-planning-execution.md` sur la branche `sprint1`.
-  - Diaporama Marp de restitution : `tutoriels/scrum/initiation-scrum/sprint-planning-execution/presentation-sprint-planning-execution.md` sur la branche `sprint1`.
+  - Fiche technique d'atelier : `ua-lab/scrum/initiation-scrum/sprint-planning-execution/sprint-planning-execution.md` sur la branche `sprint1`.
+  - Diaporama Marp de restitution : `ua-lab/scrum/initiation-scrum/sprint-planning-execution/presentation-sprint-planning-execution.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Le Sprint Goal du Sprint 1 est clair, mesurable et contextualisé à votre projet technique.
   - [ ] Le Sprint Backlog engage un nombre de Story Points réaliste adapté à la durée du sprint.

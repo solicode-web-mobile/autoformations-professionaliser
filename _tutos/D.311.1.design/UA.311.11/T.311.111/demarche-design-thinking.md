@@ -17,9 +17,9 @@ branche: "sprint0"
 sprint: "Sprint 0"
 statut_realisation: "a_realiser"
 livrables:
-  - chemin: "tutoriels/design/design-thinking/demarche-design-thinking/demarche-design-thinking.md"
+  - chemin: "ua-lab/design/design-thinking/demarche-design-thinking/demarche-design-thinking.md"
     version: "0.1.0"
-  - chemin: "tutoriels/design/design-thinking/demarche-design-thinking/presentation-demarche-design-thinking.md"
+  - chemin: "ua-lab/design/design-thinking/demarche-design-thinking/presentation-demarche-design-thinking.md"
     version: "0.1.0"
 ---
 
@@ -36,8 +36,8 @@ Pour assimiler cette démarche sans surcharge cognitive ni complexité métier, 
 ## 3. Travail à faire
 1. **Étape 1 — Cartographier les 5 phases :** Schématiser le cycle itératif du Design Thinking et décrire le rôle de chaque phase.
 2. **Étape 2 — Analyser le Double Diamant :** Identifier les deux phases de divergence (recherche de problèmes, génération d'idées) et les deux phases de convergence (cadrage du problème, sélection de solutions).
-3. **Étape 3 — Rédiger la fiche de restitution :** Renseigner la synthèse dans `tutoriels/design/design-thinking/demarche-design-thinking/demarche-design-thinking.md`.
-4. **Étape 4 — Concevoir le diaporama de restitution :** Rédiger la présentation Marp dans `tutoriels/design/design-thinking/demarche-design-thinking/presentation-demarche-design-thinking.md`.
+3. **Étape 3 — Rédiger la fiche de restitution :** Renseigner la synthèse dans `ua-lab/design/design-thinking/demarche-design-thinking/demarche-design-thinking.md`.
+4. **Étape 4 — Concevoir le diaporama de restitution :** Rédiger la présentation Marp dans `ua-lab/design/design-thinking/demarche-design-thinking/presentation-demarche-design-thinking.md`.
 
 ## 4. Pistes de recherche active
 - Quelles sont les différences fondamentales entre une approche centrée sur la technique et une approche centrée sur l'utilisateur ?
@@ -45,6 +45,6 @@ Pour assimiler cette démarche sans surcharge cognitive ni complexité métier, 
 - Consultez les publications de l'institut d'ingénierie du design de Stanford (d.school) et du Design Council britannique.
 
 ## 5. Livrables attendus & Critères de validation
-- **Fiche technique d'atelier :** `tutoriels/design/design-thinking/demarche-design-thinking/demarche-design-thinking.md`.
-- **Diaporama Marp de restitution :** `tutoriels/design/design-thinking/demarche-design-thinking/presentation-demarche-design-thinking.md`.
+- **Fiche technique d'atelier :** `ua-lab/design/design-thinking/demarche-design-thinking/demarche-design-thinking.md`.
+- **Diaporama Marp de restitution :** `ua-lab/design/design-thinking/demarche-design-thinking/presentation-demarche-design-thinking.md`.
 - **Critère de succès :** La démarche du Double Diamant est fidèlement schématisée et le choix du cas d'étude Todo List est argumenté.

@@ -50,9 +50,9 @@ Vous devez concevoir :
 
 ## 3. Livrables & Critères de validation
 - **Livrables attendus :**
-  - Diagramme Mermaid : `tutoriels/uml/cas-utilisation/modelisation-macro/use-cases-macro.mmd` sur la branche `sprint1`.
-  - Fiche technique : `tutoriels/uml/cas-utilisation/modelisation-macro/modelisation-macro.md` sur la branche `sprint1`.
-  - Diaporama Marp : `tutoriels/uml/cas-utilisation/modelisation-macro/presentation-modelisation-macro.md` sur la branche `sprint1`.
+  - Diagramme Mermaid : `ua-lab/uml/cas-utilisation/modelisation-macro/use-cases-macro.mmd` sur la branche `sprint1`.
+  - Fiche technique : `ua-lab/uml/cas-utilisation/modelisation-macro/modelisation-macro.md` sur la branche `sprint1`.
+  - Diaporama Marp : `ua-lab/uml/cas-utilisation/modelisation-macro/presentation-modelisation-macro.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Le fichier `use-cases-macro.mmd` compile sans erreur en orientation `graph TD`.
   - [ ] Les 15 cas d'utilisation macro couvrent l'ensemble des besoins du blog sans micro-actions techniques.

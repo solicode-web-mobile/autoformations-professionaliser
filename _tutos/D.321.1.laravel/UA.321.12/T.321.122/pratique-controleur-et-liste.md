@@ -63,7 +63,7 @@ php artisan make:controller Public/ArticleController
 
 5. **Étape 5 — Validation Navigateur & Journalisation :**  
    Testez l'accès sur `http://127.0.0.1:8000/articles`. Vérifiez le comportement de la grille lors du redimensionnement de l'écran.  
-   Consignez les commandes exécutées dans `tutoriels/laravel/controleur-vue/liste-articles/liste-articles.command.md` :
+   Consignez les commandes exécutées dans `ua-lab/laravel/controleur-vue/liste-articles/liste-articles.command.md` :
 
 ```bash
 cd src
@@ -73,9 +73,9 @@ php artisan make:controller Public/ArticleController
 ## 3. Livrables & Critères de validation
 - **Livrables attendus :**
   - Fichiers de code source : `src/app/Http/Controllers/Public/ArticleController.php`, `src/resources/views/articles/index.blade.php` et `src/routes/web.php` sur la branche `sprint1`.
-  - Compte-rendu technique : `tutoriels/laravel/controleur-vue/liste-articles/liste-articles.md` sur la branche `sprint1`.
-  - Diaporama Marp : `tutoriels/laravel/controleur-vue/liste-articles/presentation-liste-articles.md` sur la branche `sprint1`.
-  - Journal des commandes : `tutoriels/laravel/controleur-vue/liste-articles/liste-articles.command.md` sur la branche `sprint1`.
+  - Compte-rendu technique : `ua-lab/laravel/controleur-vue/liste-articles/liste-articles.md` sur la branche `sprint1`.
+  - Diaporama Marp : `ua-lab/laravel/controleur-vue/liste-articles/presentation-liste-articles.md` sur la branche `sprint1`.
+  - Journal des commandes : `ua-lab/laravel/controleur-vue/liste-articles/liste-articles.command.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Le contrôleur `ArticleController` est généré sous le namespace `App\Http\Controllers\Public`.
   - [ ] L'accès à `http://127.0.0.1:8000/articles` affiche la grille de cartes sans erreur PHP.

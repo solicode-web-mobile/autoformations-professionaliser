@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: "Présentation Atelier — EFP" }}</title>
+  
+  <link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/presentation.css' | relative_url }}">
+  
+  <!-- Highlight.js pour la coloration syntaxique dans les slides -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/vs2015.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+  
+  <!-- Mermaid pour les diagrammes dans les slides -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true, theme: 'default' });
+  </script>
+</head>
+<body class="presentation-body">
+
+  <div class="presentation-header">
+    <div class="presentation-title">{{ page.title }}</div>
+    <div class="presentation-meta">
+      {% if page.marp %}<span class="marp-badge">Marp Slide Deck</span>{% endif %}
+      <a href="javascript:history.back()" class="presentation-close-btn" title="Fermer la présentation (Retour)">✕ Quitter</a>
+    </div>
+  </div>
+
+  <div class="presentation-stage" id="presentation-stage">
+    <div class="presentation-raw-content" id="presentation-raw-content" style="display: none;">
+      {{ content }}
+    </div>
+    
+    <div class="slides-container" id="slides-container">
+      <!-- Les diapositives sont injectées dynamiquement par presentation.js -->
+    </div>
+  </div>
+
+  <div class="presentation-footer" id="presentation-footer">
+    <div class="presentation-progress-bar-container">
+      <div class="presentation-progress-bar" id="presentation-progress-bar"></div>
+    </div>
+    <div class="presentation-controls">
+      <div class="presentation-nav">
+        <button id="btn-prev-slide" class="presentation-btn" title="Précédent (Flèche Gauche)">❮</button>
+        <span class="slide-counter" id="slide-counter">1 / 1</span>
+        <button id="btn-next-slide" class="presentation-btn" title="Suivant (Flèche Droite, Espace)">❯</button>
+      </div>
+      <div class="presentation-actions">
+        <button id="btn-fullscreen" class="presentation-btn" title="Plein Écran (Touche F)">⛶ Plein écran</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ '/assets/js/presentation.js' | relative_url }}"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% if page.livrables and page.livrables.size > 0 %}
+<div class="tuto-solution-card">
+  <div class="tuto-solution-header">
+    <span class="tuto-solution-badge">💡 Solution de Référence</span>
+    <h3 class="tuto-solution-title">Livrables réalisés de l'atelier</h3>
+  </div>
+  <p class="tuto-solution-desc">
+    Vous avez terminé votre travail ou vous souhaitez confronter votre production ? Vous pouvez consulter ci-dessous les livrables de référence complets réalisés pour cet atelier :
+  </p>
+  <div class="tuto-solution-links">
+    {% for livrable in page.livrables %}
+      {% assign path = livrable.chemin %}
+      {% if path contains "presentation-" %}
+        {% assign pres_url = path | replace: '.md', '.html' | relative_url %}
+        <a href="{{ pres_url }}" class="tuto-solution-btn tuto-solution-btn-marp" target="_blank" rel="noopener noreferrer" title="Ouvrir le diaporama interactif 16:9 en plein écran">
+          <span class="tuto-solution-icon">🖥️</span>
+          <div class="tuto-solution-text">
+            <strong>Diaporama Marp (Plein écran)</strong>
+            <small>{{ path | split: "/" | last }}</small>
+          </div>
+          {% if livrable.version %}<span class="tuto-solution-ver">v{{ livrable.version }}</span>{% endif %}
+        </a>
+      {% elsif path contains ".command.md" %}
+        <a href="{{ path | relative_url }}" class="tuto-solution-btn tuto-solution-btn-cli" target="_blank" rel="noopener noreferrer" title="Consulter le rapport d'exécution des commandes terminal">
+          <span class="tuto-solution-icon">💻</span>
+          <div class="tuto-solution-text">
+            <strong>Journal des commandes CLI</strong>
+            <small>{{ path | split: "/" | last }}</small>
+          </div>
+          {% if livrable.version %}<span class="tuto-solution-ver">v{{ livrable.version }}</span>{% endif %}
+        </a>
+      {% else %}
+        {% assign doc_url = path | replace: '.md', '.html' | relative_url %}
+        <a href="{{ doc_url }}" class="tuto-solution-btn tuto-solution-btn-doc" target="_blank" rel="noopener noreferrer" title="Consulter la fiche de restitution technique détaillée">
+          <span class="tuto-solution-icon">📄</span>
+          <div class="tuto-solution-text">
+            <strong>Fiche technique réalisée</strong>
+            <small>{{ path | split: "/" | last }}</small>
+          </div>
+          {% if livrable.version %}<span class="tuto-solution-ver">v{{ livrable.version }}</span>{% endif %}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

@@ -45,6 +45,6 @@ Effectuer les recherches documentaires nécessaires, concevoir une fiche de synt
 - Comparer les avantages et inconvénients d'un amorçage rapide par source de données tabulaire CSV face à un schéma relationnel avec migrations.
 
 ## 4. Livrable attendu
-- **Fiche technique de synthèse :** `tutoriels/architecture/deux-couches/separation-responsabilites/separation-responsabilites.md` sur la branche `sprint1`.
-- **Diaporama Marp de restitution :** `tutoriels/architecture/deux-couches/separation-responsabilites/presentation-separation-responsabilites.md` sur la branche `sprint1`.
+- **Fiche technique de synthèse :** `ua-lab/architecture/deux-couches/separation-responsabilites/separation-responsabilites.md` sur la branche `sprint1`.
+- **Diaporama Marp de restitution :** `ua-lab/architecture/deux-couches/separation-responsabilites/presentation-separation-responsabilites.md` sur la branche `sprint1`.
 - **Contenu attendu :** Synthèse personnelle structurée reprenant les notions fondamentales (découpage 2 couches, SoC, formalisme ADR) et les réponses argumentées aux recherches à effectuer.

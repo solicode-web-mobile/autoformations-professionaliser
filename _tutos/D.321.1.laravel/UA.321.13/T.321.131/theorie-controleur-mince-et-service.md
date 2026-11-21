@@ -45,6 +45,6 @@ Effectuer les recherches documentaires nécessaires, concevoir une fiche de synt
 - Examiner la directive Blade `@yield` face aux nouveaux composants anonymes Blade (`<x-layout>`) introduits dans les versions récentes de Laravel.
 
 ## 4. Livrable attendu
-- **Fiche technique de synthèse :** `tutoriels/laravel/tranche-verticale/service-csv-ioc/service-csv-ioc.md` sur la branche `sprint1`.
-- **Diaporama Marp de restitution :** `tutoriels/laravel/tranche-verticale/service-csv-ioc/presentation-service-csv-ioc.md` sur la branche `sprint1`.
+- **Fiche technique de synthèse :** `ua-lab/laravel/tranche-verticale/service-csv-ioc/service-csv-ioc.md` sur la branche `sprint1`.
+- **Diaporama Marp de restitution :** `ua-lab/laravel/tranche-verticale/service-csv-ioc/presentation-service-csv-ioc.md` sur la branche `sprint1`.
 - **Contenu attendu :** Synthèse personnelle structurée reprenant les notions fondamentales (IoC, Classe Service, gestion 404, layout maître Blade) et les réponses documentées aux recherches à effectuer.

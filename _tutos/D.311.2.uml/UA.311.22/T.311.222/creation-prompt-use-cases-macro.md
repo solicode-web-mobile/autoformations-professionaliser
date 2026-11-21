@@ -43,7 +43,7 @@ Ce prompt permet à un Agent IA d'extraire la cartographie des cas d'utilisation
 
 ## 4. Livrables & Critères de validation
 - **Livrable attendu :**
-  - Fichier de prompt réutilisable : `tutoriels/uml/cas-utilisation/prompt-use-cases/prompt-use-cases-macro.prompt.md` sur la branche `sprint1`.
+  - Fichier de prompt réutilisable : `ua-lab/uml/cas-utilisation/prompt-use-cases/prompt-use-cases-macro.prompt.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Le prompt applique la méthode RIO avec des contraintes négatives explicites.
   - [ ] Testé sur une application métier (ex : Plateforme Cinéma), il génère un diagramme `graph TD` complet et lisible.

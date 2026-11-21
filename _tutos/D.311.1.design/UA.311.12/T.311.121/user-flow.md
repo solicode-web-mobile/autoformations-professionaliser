@@ -17,9 +17,9 @@ branche: "sprint0"
 sprint: "Sprint 0"
 statut_realisation: "a_realiser"
 livrables:
-  - chemin: "tutoriels/design/parcours-utilisateur/user-flow/user-flow.md"
+  - chemin: "ua-lab/design/parcours-utilisateur/user-flow/user-flow.md"
     version: "0.1.0"
-  - chemin: "tutoriels/design/parcours-utilisateur/user-flow/presentation-user-flow.md"
+  - chemin: "ua-lab/design/parcours-utilisateur/user-flow/presentation-user-flow.md"
     version: "0.1.0"
 ---
 
@@ -41,7 +41,7 @@ Le **User Flow** modélise cette séquence logique. Grâce à la syntaxe déclar
 1. **Étape 1 — Identifier le scénario cible :** Définir le scénario nominal d'un visiteur qui découvre une plateforme Web, recherche un contenu et consulte un élément détaillé.
 2. **Étape 2 — Structurer les embranchements :** Identifier au moins deux alternatives ou cas d'erreur (ex : contenu trouvé vs aucun résultat).
 3. **Étape 3 — Coder le diagramme Mermaid :** Rédiger le graphe `flowchart TD` en respectant scrupuleusement la syntaxe déclarative.
-4. **Étape 4 — Rédiger la fiche et le diaporama :** Formaliser la documentation dans `tutoriels/design/parcours-utilisateur/user-flow/user-flow.md` et préparer le diaporama Marp dans `tutoriels/design/parcours-utilisateur/user-flow/presentation-user-flow.md`.
+4. **Étape 4 — Rédiger la fiche et le diaporama :** Formaliser la documentation dans `ua-lab/design/parcours-utilisateur/user-flow/user-flow.md` et préparer le diaporama Marp dans `ua-lab/design/parcours-utilisateur/user-flow/presentation-user-flow.md`.
 
 ## 4. Pistes de recherche active
 - Quels sont les avantages d'un diagramme Mermaid textuel par rapport à un schéma réalisé sous un outil graphique propriétaire (Figma, Miro, Photoshop) ?
@@ -49,6 +49,6 @@ Le **User Flow** modélise cette séquence logique. Grâce à la syntaxe déclar
 - Consultez la documentation officielle de Mermaid JS sur les organigrammes (`flowchart`).
 
 ## 5. Livrables attendus & Critères de validation
-- **Fiche technique d'atelier :** `tutoriels/design/parcours-utilisateur/user-flow/user-flow.md`.
-- **Diaporama Marp de restitution :** `tutoriels/design/parcours-utilisateur/user-flow/presentation-user-flow.md`.
+- **Fiche technique d'atelier :** `ua-lab/design/parcours-utilisateur/user-flow/user-flow.md`.
+- **Diaporama Marp de restitution :** `ua-lab/design/parcours-utilisateur/user-flow/presentation-user-flow.md`.
 - **Critère de succès :** Le diagramme Mermaid est syntaxiquement valide, lisible, et modélise clairement les choix et actions de l'utilisateur.

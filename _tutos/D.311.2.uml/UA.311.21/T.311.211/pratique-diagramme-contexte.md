@@ -49,9 +49,9 @@ Vous devez concevoir :
 
 ## 3. Livrables & Critères de validation
 - **Livrables attendus :**
-  - Diagramme Mermaid : `tutoriels/uml/diagramme-contexte/modelisation-systeme/diagramme-contexte.mmd` sur la branche `sprint1`.
-  - Fiche technique : `tutoriels/uml/diagramme-contexte/modelisation-systeme/modelisation-systeme.md` sur la branche `sprint1`.
-  - Diaporama Marp : `tutoriels/uml/diagramme-contexte/modelisation-systeme/presentation-modelisation-systeme.md` sur la branche `sprint1`.
+  - Diagramme Mermaid : `ua-lab/uml/diagramme-contexte/modelisation-systeme/diagramme-contexte.mmd` sur la branche `sprint1`.
+  - Fiche technique : `ua-lab/uml/diagramme-contexte/modelisation-systeme/modelisation-systeme.md` sur la branche `sprint1`.
+  - Diaporama Marp : `ua-lab/uml/diagramme-contexte/modelisation-systeme/presentation-modelisation-systeme.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Le fichier `diagramme-contexte.mmd` est syntaxiquement valide sous Mermaid.js en orientation `graph LR`.
   - [ ] La frontière système est clairement matérialisée avec le Blog des Lauréats au centre.

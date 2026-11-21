@@ -22,9 +22,9 @@ data_php: ""
 sprint: "sprint1"
 statut_realisation: "realise"
 livrables:
-  - chemin: "tutoriels/ia/agent-skills/prompt-engineering/prompt-engineering.md"
+  - chemin: "ua-lab/ia/agent-skills/prompt-engineering/prompt-engineering.md"
     version: "1.0.0"
-  - chemin: "tutoriels/ia/agent-skills/prompt-engineering/presentation-prompt-engineering.md"
+  - chemin: "ua-lab/ia/agent-skills/prompt-engineering/presentation-prompt-engineering.md"
     version: "1.0.0"
 ---
 
@@ -54,6 +54,6 @@ Effectuer les recherches documentaires nécessaires, concevoir une fiche de synt
 - Expérimenter l'impact de contraintes négatives strictes sur la reproductibilité des sorties produites par l'agent.
 
 ## 4. Livrable attendu
-- **Fiche technique de synthèse :** `tutoriels/ia/agent-skills/prompt-engineering/prompt-engineering.md` sur la branche `sprint1`.
-- **Diaporama Marp de restitution :** `tutoriels/ia/agent-skills/prompt-engineering/presentation-prompt-engineering.md` sur la branche `sprint1`.
+- **Fiche technique de synthèse :** `ua-lab/ia/agent-skills/prompt-engineering/prompt-engineering.md` sur la branche `sprint1`.
+- **Diaporama Marp de restitution :** `ua-lab/ia/agent-skills/prompt-engineering/presentation-prompt-engineering.md` sur la branche `sprint1`.
 - **Contenu attendu :** Synthèse personnelle structurée reprenant les notions fondamentales (LLMs, méthode RIO, patterns de prompt, Context Engineering) et les réponses documentées aux recherches à effectuer.

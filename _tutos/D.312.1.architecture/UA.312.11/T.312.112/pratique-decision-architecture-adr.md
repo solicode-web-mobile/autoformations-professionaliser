@@ -50,9 +50,9 @@ Vous devez concevoir :
 
 ## 3. Livrables & Critères de validation
 - **Livrables attendus :**
-  - Document ADR : `tutoriels/architecture/deux-couches/decision-adr-sequence/adr-01-architecture-2-couches.md` sur la branche `sprint1`.
-  - Diagramme Mermaid : `tutoriels/architecture/deux-couches/decision-adr-sequence/sequence-http.mmd` sur la branche `sprint1`.
-  - Diaporama Marp : `tutoriels/architecture/deux-couches/decision-adr-sequence/presentation-decision-adr-sequence.md` sur la branche `sprint1`.
+  - Document ADR : `ua-lab/architecture/deux-couches/decision-adr-sequence/adr-01-architecture-2-couches.md` sur la branche `sprint1`.
+  - Diagramme Mermaid : `ua-lab/architecture/deux-couches/decision-adr-sequence/sequence-http.mmd` sur la branche `sprint1`.
+  - Diaporama Marp : `ua-lab/architecture/deux-couches/decision-adr-sequence/presentation-decision-adr-sequence.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Le document ADR-01 respecte la structure à 6 sections sans omission.
   - [ ] Le diagramme de séquence Mermaid compile sans avertissement et explicite le cas nominal ainsi que l'interception de l'erreur 404.

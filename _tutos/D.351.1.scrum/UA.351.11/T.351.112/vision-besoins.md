@@ -21,9 +21,9 @@ data_php: ""
 sprint: "sprint1"
 statut_realisation: "realise"
 livrables:
-  - chemin: "tutoriels/scrum/initiation-scrum/vision-besoins/vision-besoins.md"
+  - chemin: "ua-lab/scrum/initiation-scrum/vision-besoins/vision-besoins.md"
     version: "1.0.0"
-  - chemin: "tutoriels/scrum/initiation-scrum/vision-besoins/presentation-vision-besoins.md"
+  - chemin: "ua-lab/scrum/initiation-scrum/vision-besoins/presentation-vision-besoins.md"
     version: "1.0.0"
 ---
 
@@ -68,8 +68,8 @@ Cadrer le besoin fonctionnel de votre projet technique individuel en formulant l
 
 ## 4. Livrables & Critères de validation
 - **Livrables attendus :**
-  - Fiche technique d'atelier : `tutoriels/scrum/initiation-scrum/vision-besoins/vision-besoins.md` sur la branche `sprint1`.
-  - Diaporama Marp de restitution : `tutoriels/scrum/initiation-scrum/vision-besoins/presentation-vision-besoins.md` sur la branche `sprint1`.
+  - Fiche technique d'atelier : `ua-lab/scrum/initiation-scrum/vision-besoins/vision-besoins.md` sur la branche `sprint1`.
+  - Diaporama Marp de restitution : `ua-lab/scrum/initiation-scrum/vision-besoins/presentation-vision-besoins.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] La Vision Produit de votre projet technique est explicitement formulée.
   - [ ] Au moins 2 Personas sont caractérisés avec leurs attentes et contraintes spécifiques.

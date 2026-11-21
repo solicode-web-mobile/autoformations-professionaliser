@@ -40,12 +40,10 @@ trigger: always_on
   - Requis **uniquement** pour les `tuto-atelier`, `tuto-notion` et `tuto-code` lorsqu'ils comportent des commandes terminal.
   - **Formellement proscrit pour les `tuto-tache`** (dont les livrables d'ingénierie résident directement aux emplacements racine du projet).
   - Interdiction absolue d'y inclure les commandes Git (`git add`, `git commit`, `git push`).
-- **Consultation et Synchronisation du Référentiel Physique (`.sync/rules-sync.md`) :**
-  Le Master Skill **`tutorial-writer`** détient l'autorité exclusive d'inspection et de synchronisation avec le dépôt réel du projet cible (configuré ci-dessus ou via `.sync/rules-sync.md`).
-  Les échanges et le versioning inter-agents sont formellement régis par le contrat **`<projet-cible>/.sync/rules-sync.md`** :
-  - **L'Agent Réalisation de Sprint (`realisation-sprint`) :** Développe les livrables, maintient les numéros de version sémantique exclusivement dans les fichiers `version.yml` logés à l'intérieur du dossier `.sync/` (interdiction stricte de créer des `version.yml` dans `tutoriels/`, `src/`, etc.), et notifie la réalisation dans le front-matter du tutoriel source (`_tutos/`) avec `sprint`, `statut_realisation: "realise"` et la liste des `livrables` (chemins et versions).
-  - **L'Agent Autoformation (`tutorial-writer`) :** Déclenche l'audit des livrables réels : pour un `tuto-atelier`, il bascule la fiche de `maturite: "lab"` à `maturite: "ua-lab"`, injecte les notions fondamentales en détail, spécifie le plan d'UA-Lab, aligne les versions dans le front-matter et bascule le statut à `synchronise` (ou `a_adapter` si une discordance majeure est détectée).
-  - **Adaptation mutuelle :** En cas d'incohérence, si la pratique du projet réel valide une solution plus pertinente, le tutoriel est adapté pour refléter la réalité ; si le livrable est incomplet, l'Agent Projet corrige le livrable dans `tutoriels/`.
+- **Consultation et Séparation des Espaces de Livrables (`ua-lab/` vs `tutoriels/`) :**
+  - **Sur la plateforme d'autoformation Jekyll (`autoformations-professionaliser`) :** Les livrables de référence des ateliers d'apprentissage sont réalisés et hébergés dans **`ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/`** par l'Agent Rédacteur d'Autoformation (via le skill `tuto-livrable-atelier-writer`). Ils sont consultables par les apprenants directement depuis les tutoriels enrichis (`tuto-atelier-notions`).
+  - **Sur le poste apprenant (dépôt du projet cible) :** L'Agent Réalisation de Sprint (`realisation-sprint`) opère exclusivement sur l'ingénierie opérationnelle de projet (`UA-Tâche` / `maturite: projet` : `src/`, `docs/`, `sprints/`, `scrum/`). L'apprenant range ses propres fiches d'apprentissage sous `tutoriels/`.
+  - **Décharge formelle :** L'Agent Réalisation de Sprint est formellement déchargé de la production des ateliers d'autoformation (`ua-lab`).
 
 ## 4. Transparence de l'Agent IA & Traçabilité des Actions
 - **Affichage Obligatoire des Skills Utilisés :** À la fin de chaque échange / discussion, l'Agent IA doit obligatoirement afficher la liste exacte des **Skills locaux utilisés** lors de la réponse (format : `Skills utilisés : [skill-1], [skill-2]`).

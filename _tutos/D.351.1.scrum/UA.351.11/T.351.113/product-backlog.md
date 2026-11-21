@@ -21,9 +21,9 @@ data_php: ""
 sprint: "sprint1"
 statut_realisation: "realise"
 livrables:
-  - chemin: "tutoriels/scrum/initiation-scrum/product-backlog/product-backlog.md"
+  - chemin: "ua-lab/scrum/initiation-scrum/product-backlog/product-backlog.md"
     version: "1.0.0"
-  - chemin: "tutoriels/scrum/initiation-scrum/product-backlog/presentation-product-backlog.md"
+  - chemin: "ua-lab/scrum/initiation-scrum/product-backlog/presentation-product-backlog.md"
     version: "1.0.0"
 ---
 
@@ -67,8 +67,8 @@ Structurer, chiffrer et ordonnancer le carnet de produit Scrum pour votre projet
 
 ## 4. Livrables & Critères de validation
 - **Livrables attendus :**
-  - Fiche technique d'atelier : `tutoriels/scrum/initiation-scrum/product-backlog/product-backlog.md` sur la branche `sprint1`.
-  - Diaporama Marp de restitution : `tutoriels/scrum/initiation-scrum/product-backlog/presentation-product-backlog.md` sur la branche `sprint1`.
+  - Fiche technique d'atelier : `ua-lab/scrum/initiation-scrum/product-backlog/product-backlog.md` sur la branche `sprint1`.
+  - Diaporama Marp de restitution : `ua-lab/scrum/initiation-scrum/product-backlog/presentation-product-backlog.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Les User Stories de votre projet technique sont ordonnées selon la valeur métier et classées selon la grille MoSCoW.
   - [ ] Chaque élément du backlog possède une estimation cohérente en Story Points sur l'échelle de Fibonacci.

@@ -58,7 +58,7 @@ php artisan serve
 
 4. **Étape 4 — Validation Navigateur & Journalisation :**  
    Accédez à `http://127.0.0.1:8000/` depuis votre navigateur et contrôlez le bon affichage sur écran desktop et mobile (outils de développement F12).  
-   Consignez les commandes exécutées dans `tutoriels/laravel/hello-world/route-accueil-blade/route-accueil-blade.command.md` :
+   Consignez les commandes exécutées dans `ua-lab/laravel/hello-world/route-accueil-blade/route-accueil-blade.command.md` :
 
 ```bash
 cd src
@@ -68,9 +68,9 @@ php artisan serve
 ## 3. Livrables & Critères de validation
 - **Livrables attendus :**
   - Fichiers de code source : `src/routes/web.php` et `src/resources/views/welcome.blade.php` sur la branche `sprint1`.
-  - Compte-rendu technique : `tutoriels/laravel/hello-world/route-accueil-blade/route-accueil-blade.md` sur la branche `sprint1`.
-  - Diaporama Marp : `tutoriels/laravel/hello-world/route-accueil-blade/presentation-route-accueil-blade.md` sur la branche `sprint1`.
-  - Journal des commandes : `tutoriels/laravel/hello-world/route-accueil-blade/route-accueil-blade.command.md` sur la branche `sprint1`.
+  - Compte-rendu technique : `ua-lab/laravel/hello-world/route-accueil-blade/route-accueil-blade.md` sur la branche `sprint1`.
+  - Diaporama Marp : `ua-lab/laravel/hello-world/route-accueil-blade/presentation-route-accueil-blade.md` sur la branche `sprint1`.
+  - Journal des commandes : `ua-lab/laravel/hello-world/route-accueil-blade/route-accueil-blade.command.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Le serveur local répond avec un code HTTP 200 sur `http://127.0.0.1:8000/`.
   - [ ] La vue `welcome.blade.php` est responsive et exempte de CSS inline.

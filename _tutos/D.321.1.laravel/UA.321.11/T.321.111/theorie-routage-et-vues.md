@@ -45,6 +45,6 @@ Effectuer les recherches documentaires nécessaires, concevoir une fiche de synt
 - Comparer le moteur Blade avec d'autres moteurs de templates PHP (Twig, Smarty) sur les critères de simplicité et de sécurité.
 
 ## 4. Livrable attendu
-- **Fiche technique de synthèse :** `tutoriels/laravel/hello-world/routage-fondamentaux/routage-fondamentaux.md` sur la branche `sprint1`.
-- **Diaporama Marp de restitution :** `tutoriels/laravel/hello-world/routage-fondamentaux/presentation-routage-fondamentaux.md` sur la branche `sprint1`.
+- **Fiche technique de synthèse :** `ua-lab/laravel/hello-world/routage-fondamentaux/routage-fondamentaux.md` sur la branche `sprint1`.
+- **Diaporama Marp de restitution :** `ua-lab/laravel/hello-world/routage-fondamentaux/presentation-routage-fondamentaux.md` sur la branche `sprint1`.
 - **Contenu attendu :** Synthèse personnelle structurée reprenant les notions fondamentales (MVC Laravel, cycle de vie HTTP, routage, Blade et sécurité XSS) et les réponses documentées aux recherches à effectuer.

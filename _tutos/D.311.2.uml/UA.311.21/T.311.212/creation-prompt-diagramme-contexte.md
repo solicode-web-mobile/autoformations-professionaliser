@@ -43,7 +43,7 @@ Ce prompt est un composant agentique réutilisable permettant à un Agent IA de 
 
 ## 4. Livrables & Critères de validation
 - **Livrable attendu :**
-  - Fichier de prompt réutilisable : `tutoriels/uml/diagramme-contexte/prompt-generation/prompt-diagramme-contexte.prompt.md` sur la branche `sprint1`.
+  - Fichier de prompt réutilisable : `ua-lab/uml/diagramme-contexte/prompt-generation/prompt-diagramme-contexte.prompt.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Le prompt est rédigé selon le formalisme RIO avec ses contraintes négatives explicites.
   - [ ] Testé avec un exemple d'application métier (ex : Plateforme Cinéma), il génère un bloc Mermaid `graph LR` syntaxiquement valide.

@@ -12,10 +12,10 @@ flowchart LR
     Rules[".agents/rules/<br/>(Niveau & Persona)"] --> Master["tuto-writer (Master)"]
     Refs[".agents/references/<br/>(Livrables, Typologie, Maturation, Gitflow)"] --> Master
     Master --> RulesShared["Socle Transversal Partagé (12 Règles)"]
-    Master <--> Sync[".sync/rules-sync.md (Synchronisation Projet Cible)"]
     Master --> Format["Typologie tuto-*"]
     Format --> Code["tuto-code-writer<br/>(tuto-notion / tuto-code)"]
-    Format --> Lab["tuto-atelier-writer<br/>(tuto-atelier : lab ➔ ua-lab)"]
+    Format --> Lab["tuto-atelier-writer<br/>(tuto-atelier dans _tutos/)"]
+    Lab --> LabReal["tuto-livrable-atelier-writer<br/>(Réalisation dans ua-lab/)"]
     Format --> Task["tuto-tache-writer<br/>(tuto-tache)"]
     Master --> Domain["Domaine Technique"]
     Domain --> TDomain["tuto-writer-[slug]"]
@@ -65,10 +65,10 @@ Tous les rédacteurs `tutorial-*-writer` appliquent obligatoirement ces 12 règl
 # 5. Procédure d'Aiguillage Didactique & Technique
 `tuto-writer` orchestre la double délégation structurelle et technique selon `.agents/references/maturation-et-typologie-ua-tuto.md` :
 1. **Délégation par Typologie `tuto-*` :**
-   - **`type: "tuto-atelier"` ➔ [tuto-atelier-writer](../tuto-atelier-writer/SKILL.md) :**
-     - En `maturite: "lab"` : atelier d'expérimentation sans notions détaillées.
-     - En `maturite: "ua-lab"` : lab validé et intégré au référentiel EFP avec notions détaillées et plan d'UA spécifié.
-     - Diaporama Marp obligatoire `presentation-[slug-tuto].md`, `[slug-tuto].command.md` si CLI.
+   - **`type: "tuto-atelier"` ➔ [tuto-atelier-writer](../tuto-atelier-writer/SKILL.md) & [tuto-livrable-atelier-writer](../tuto-livrable-atelier-writer/SKILL.md) :**
+     - `tuto-atelier-writer` rédige la fiche de cadrage de l'atelier dans `_tutos/` (sujet, objectifs, consignes).
+     - `tuto-livrable-atelier-writer` réalise concrètement le travail prescrit et produit les livrables sous `ua-lab/` (fiche technique `[slug].md`, diaporama Marp `presentation-[slug].md` avec `layout: presentation`, journal CLI).
+     - Promotion en `tuto-atelier-notions` avec notions fondamentales consolidées et bloc de solution consultable.
    - **`type: "tuto-notion"` ➔ [tuto-code-writer](../tuto-code-writer/SKILL.md) :**
      - Notion & syntaxe isolée hors imitation (pratique dans `tutoriels/`, pas de Marp, `[slug-tuto].command.md` si CLI).
    - **`type: "tuto-code"` ➔ [tuto-code-writer](../tuto-code-writer/SKILL.md) :**

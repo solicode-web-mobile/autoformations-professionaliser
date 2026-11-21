@@ -71,7 +71,7 @@ Vous devez concevoir :
 
 6. **Étape 6 — Validation Navigateur & Journalisation :**  
    Vérifiez le fonctionnement nominal sur `http://127.0.0.1:8000/articles/1` et l'affichage propre de l'erreur 404 sur `http://127.0.0.1:8000/articles/999`.  
-   Consignez les commandes de test dans `tutoriels/laravel/tranche-verticale/consultation-detaillee-404/consultation-detaillee-404.command.md` :
+   Consignez les commandes de test dans `ua-lab/laravel/tranche-verticale/consultation-detaillee-404/consultation-detaillee-404.command.md` :
 
 ```bash
 cd src
@@ -81,9 +81,9 @@ php artisan test --filter=ArticleTest
 ## 3. Livrables & Critères de validation
 - **Livrables attendus :**
   - Code applicatif : `src/app/Services/ArticleService.php`, `src/app/Http/Controllers/Public/ArticleController.php`, `src/resources/views/layouts/app.blade.php`, `src/resources/views/articles/show.blade.php`, `src/resources/views/errors/404.blade.php` et `src/routes/web.php` sur la branche `sprint1`.
-  - Compte-rendu technique : `tutoriels/laravel/tranche-verticale/consultation-detaillee-404/consultation-detaillee-404.md` sur la branche `sprint1`.
-  - Diaporama Marp : `tutoriels/laravel/tranche-verticale/consultation-detaillee-404/presentation-consultation-detaillee-404.md` sur la branche `sprint1`.
-  - Journal des commandes : `tutoriels/laravel/tranche-verticale/consultation-detaillee-404/consultation-detaillee-404.command.md` sur la branche `sprint1`.
+  - Compte-rendu technique : `ua-lab/laravel/tranche-verticale/consultation-detaillee-404/consultation-detaillee-404.md` sur la branche `sprint1`.
+  - Diaporama Marp : `ua-lab/laravel/tranche-verticale/consultation-detaillee-404/presentation-consultation-detaillee-404.md` sur la branche `sprint1`.
+  - Journal des commandes : `ua-lab/laravel/tranche-verticale/consultation-detaillee-404/consultation-detaillee-404.command.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Le contrôleur délègue 100% de la lecture des données à `ArticleService` (zéro appel CSV direct dans le contrôleur).
   - [ ] La navigation sur un article valide affiche la vue complète dans le layout maître avec code HTTP 200.

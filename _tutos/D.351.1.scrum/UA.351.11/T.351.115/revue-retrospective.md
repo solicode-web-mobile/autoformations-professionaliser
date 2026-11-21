@@ -21,9 +21,9 @@ data_php: ""
 sprint: "sprint1"
 statut_realisation: "realise"
 livrables:
-  - chemin: "tutoriels/scrum/initiation-scrum/revue-retrospective/revue-retrospective.md"
+  - chemin: "ua-lab/scrum/initiation-scrum/revue-retrospective/revue-retrospective.md"
     version: "1.0.0"
-  - chemin: "tutoriels/scrum/initiation-scrum/revue-retrospective/presentation-revue-retrospective.md"
+  - chemin: "ua-lab/scrum/initiation-scrum/revue-retrospective/presentation-revue-retrospective.md"
     version: "1.0.0"
 ---
 
@@ -64,8 +64,8 @@ Clôturer le cycle du Sprint 1 sur votre projet technique individuel selon les r
 
 ## 4. Livrables & Critères de validation
 - **Livrables attendus :**
-  - Fiche technique d'atelier : `tutoriels/scrum/initiation-scrum/revue-retrospective/revue-retrospective.md` sur la branche `sprint1`.
-  - Diaporama Marp de restitution : `tutoriels/scrum/initiation-scrum/revue-retrospective/presentation-revue-retrospective.md` sur la branche `sprint1`.
+  - Fiche technique d'atelier : `ua-lab/scrum/initiation-scrum/revue-retrospective/revue-retrospective.md` sur la branche `sprint1`.
+  - Diaporama Marp de restitution : `ua-lab/scrum/initiation-scrum/revue-retrospective/presentation-revue-retrospective.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Les résultats de la démonstration en direct de votre projet technique et la conformité à la DoD sont documentés.
   - [ ] Les retours de l'évaluateur externe sont consignés avec leur répercussion dans le Product Backlog.

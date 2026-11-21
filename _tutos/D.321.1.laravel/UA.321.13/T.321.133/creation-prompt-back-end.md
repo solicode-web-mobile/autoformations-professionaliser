@@ -42,7 +42,7 @@ Ce prompt est un composant agentique réutilisable permettant à un Agent IA de 
 
 ## 4. Livrables & Critères de validation
 - **Livrable attendu :**
-  - Fichier de prompt réutilisable : `tutoriels/laravel/tranche-verticale/prompt-backend/prompt-back-end.prompt.md` sur la branche `sprint1`.
+  - Fichier de prompt réutilisable : `ua-lab/laravel/tranche-verticale/prompt-backend/prompt-back-end.prompt.md` sur la branche `sprint1`.
 - **Critères de validation :**
   - [ ] Le prompt est rédigé selon la méthode RIO avec contraintes négatives explicites.
   - [ ] Testé sur une nouvelle entité métier (ex : Réalisation, Film), il génère un code PHP backend syntaxiquement valide et prêt à l'emploi.

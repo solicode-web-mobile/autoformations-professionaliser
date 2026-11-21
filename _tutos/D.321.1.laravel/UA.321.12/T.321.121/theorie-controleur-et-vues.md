@@ -44,6 +44,6 @@ Effectuer les recherches documentaires nécessaires, concevoir une fiche de synt
 - Examiner comment passer des paramètres d'URL nommés aux actions de contrôleur.
 
 ## 4. Livrable attendu
-- **Fiche technique de synthèse :** `tutoriels/laravel/controleur-vue/requete-action-http/requete-action-http.md` sur la branche `sprint1`.
-- **Diaporama Marp de restitution :** `tutoriels/laravel/controleur-vue/requete-action-http/presentation-requete-action-http.md` sur la branche `sprint1`.
+- **Fiche technique de synthèse :** `ua-lab/laravel/controleur-vue/requete-action-http/requete-action-http.md` sur la branche `sprint1`.
+- **Diaporama Marp de restitution :** `ua-lab/laravel/controleur-vue/requete-action-http/presentation-requete-action-http.md` sur la branche `sprint1`.
 - **Contenu attendu :** Synthèse personnelle structurée reprenant les notions fondamentales (contrôleurs MVC, Artisan make:controller, directives Blade `@forelse`) et les réponses argumentées aux recherches à effectuer.
