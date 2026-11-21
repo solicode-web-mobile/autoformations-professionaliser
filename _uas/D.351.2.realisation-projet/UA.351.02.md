@@ -1,25 +1,25 @@
 ---
-title: "Sprint Review 0 (Jalon Go/No-Go) et Rétrospective du Sprint 0"
+title: "Incrément Maquette de la Page d'Accueil et Clôture Agile"
 layout: ua
 code: "UA.351.02"
-slug: "cloture-sprint-0"
+slug: "maquette-accueil-cloture-agile"
 maturite: "projet"
 ordre: 5
 competence: "C.351"
 domaine: "D.351.2"
 duree: 4
 objectif: >
-  Valider formellement les artéfacts de cadrage, la charte graphique et les maquettes ergonomiques de la page détaille lors de la démonstration contradictoire devant le Product Owner (Groupe 1), prononcer la décision Go/No-Go autorisant le passage au Sprint 1, et conduire l'analyse réflexive d'équipe lors de la Rétrospective 0 pour arrêter 2 engagements d'amélioration continue.
+  Modéliser le User Flow spécifique de la page d'accueil, concevoir la maquette ergonomique interactive de la page d'accueil avec Tailwind CSS et Preline UI, animer la démonstration contradictoire (Sprint Review 0 Go/No-Go) devant le Product Owner et conduire la Rétrospective du Sprint 0 pour acter les engagements d'amélioration continue.
 description: >
-  Phase de clôture et de validation collégiale du Sprint 0. L'équipe anime la séance de démonstration contradictoire (Sprint Review 0) devant le Groupe 1 assurant le rôle de Product Owner, soumet la maquette de la page détaille aux tests des utilisateurs cibles, consigne les retours et prononce officiellement la décision Go/No-Go dans le procès-verbal de revue (sprints/pv-review-0.md). Elle réunit ensuite les développeurs pour la Rétrospective du Sprint 0, acte les réussites et difficultés de la phase de cadrage, et contractualise 2 engagements fermes dans sprints/retrospective-0.md pour sécuriser le premier sprint de delivery.
+  Phase d'aboutissement de l'incrément et de clôture du Sprint 0. L'équipe modélise le flux d'interaction de la page d'accueil en syntaxe Mermaid, assemble la maquette interactive avec l'UI Kit Preline UI (docs/conception/maquettes-sprint-1.md), puis anime la démonstration en Sprint Review 0 pour obtenir la décision Go/No-Go officielle (sprints/pv-review-0.md) et contractualiser les améliorations lors de la Rétrospective 0 (sprints/retrospective-0.md).
 notions:
-  - "Animation d'une Sprint Review contradictoire devant le Product Owner et les parties prenantes"
-  - "Jalon décisionnel Go/No-Go : critères d'acceptation bloquants pour autoriser le premier sprint de développement"
-  - "Procès-verbal de démonstration et formalisation des arbitrages de cadrage et maquettes"
-  - "Rétrospective de Sprint réflexive : bilan des forces, difficultés et leviers d'amélioration de la phase initiale"
-  - "Plan d'actions d'amélioration continue et contractualisation des engagements d'équipe"
+  - "User Flow spécifique d'accueil et scénarisation de l'accès aux articles récents"
+  - "Maquettage ergonomique d'une page d'accueil de blog avec composants Preline UI"
+  - "Démonstration contradictoire d'incrément de cadrage (Sprint Review 0)"
+  - "Jalon décisionnel Go/No-Go pour l'autorisation du passage au Sprint 1"
+  - "Rétrospective agile de clôture et engagements d'amélioration continue"
 livrable: >
-  Procès-verbal de la Sprint Review 0 avec décision Go/No-Go formelle (sprints/pv-review-0.md) et compte-rendu de la Sprint Retrospective 0 avec engagements d'équipe (sprints/retrospective-0.md) sur la branche sprint0.
+  Maquette de la page d'accueil et UI Kit (docs/conception/ui-kit.md, docs/conception/maquettes-sprint-1.md), Procès-verbal de Sprint Review 0 Go/No-Go (sprints/pv-review-0.md) et Compte-rendu de Rétrospective 0 (sprints/retrospective-0.md).
 travail_a_faire: >
-  Animer la Sprint Review 0 contradictoire devant le Product Owner (Groupe 1), valider la conformité du cadrage et de la maquette de la page détaille, rédiger le procès-verbal Go/No-Go dans sprints/pv-review-0.md, puis animer la Rétrospective 0 et contractualiser les engagements dans sprints/retrospective-0.md.
+  Concevoir la maquette ergonomique de la page d'accueil et l'UI Kit, animer la Sprint Review 0 contradictoire pour obtenir le Go/No-Go, et contractualiser les engagements de l'équipe lors de la Rétrospective 0.
 ---

@@ -14,7 +14,7 @@ Ce skill assure la maintenance, la configuration et l'orchestration de la synchr
   - Accompagnement à la migration ou mise à jour du thème entre niveaux (N1, N2, N3).
   - Diagnostic ou audit de conformité des scripts `push_theme.ps1` et `pull_theme.ps1`.
 - **Quand NE PAS l'activer :**
-  - Modification de contenu éditorial ou pédagogique (tutoriels, UA) ➔ Utiliser `tutorial-writer`.
+  - Modification de contenu éditorial ou pédagogique (tutoriels, UA) ➔ Utiliser `tuto-writer`.
   - Développement de styles spécifiques à un layout local sans volonté de partage.
   - Exécution directe automatique de commandes Git distantes.
 

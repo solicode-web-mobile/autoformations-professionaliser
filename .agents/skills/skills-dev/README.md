@@ -10,7 +10,7 @@ Gouverne, conçoit, audite et affine les compétences locales (`.agents/skills/`
 
 ## 2. Prompts Types d'Invocation
 ```markdown
-@[.agents/skills/skills-dev/SKILL.md] Crée un nouveau skill local tutorial-writer-api pour le domaine API REST.
+@[.agents/skills/skills-dev/SKILL.md] Crée un nouveau skill local tuto-writer-api pour le domaine API REST.
 @[.agents/skills/skills-dev/SKILL.md] Ajoute une règle dans .agents/rules/ interdisant les requêtes SQL brutes.
 @[.agents/skills/skills-dev/SKILL.md] Valide l'ensemble des skills avec le script de conformité.
 ```

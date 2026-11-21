@@ -15,7 +15,7 @@ Ce skill est l'expert technique frontend pour le développement, la maintenance 
   - Développement de nouvelles fonctionnalités JavaScript dans `assets/js/` (ex: mode plein écran, boutons d'exécution, affichage conditionnel).
   - Résolution de bugs de compilation Jekyll ou d'affichage sous Just the Docs.
 - **Quand NE PAS l'activer :**
-  - Rédaction de contenu pédagogique ou de tutoriels ➔ Utiliser `tutorial-writer`.
+  - Rédaction de contenu pédagogique ou de tutoriels ➔ Utiliser `tuto-writer`.
   - Synchronisation avec le dépôt central ➔ Utiliser `sync-theme`.
   - Gouvernance des compétences ou règles ➔ Utiliser `skills-dev`.
 

@@ -1,6 +1,6 @@
 ---
 name: didactique
-description: Master Skill et chef d'orchestre de l'ingénierie pédagogique EFP générique pour tous les niveaux (N1 Découvrir, N2 Prototyper, N3 Développer). Gouverne le cadrage des sessions Scrum de 80h, la pédagogie des 3 projets, l'apprentissage actif sans redondance de prérequis, et route vers didactique-session-planner et didactique-tutorial-planner.
+description: Master Skill et chef d'orchestre de l'ingénierie pédagogique EFP générique pour tous les niveaux (N1 Découvrir, N2 Prototyper, N3 Développer). Gouverne le cadrage des sessions Scrum de 80h, la pédagogie des 3 projets, l'apprentissage actif sans redondance de prérequis, et route vers didactique-session-planner et didactique-tuto-planner.
 version: 1.2.0
 ---
 
@@ -31,13 +31,13 @@ Selon la mission demandée, invoquer immédiatement le sous-skill spécialisé :
 flowchart TD
     Demande["Demande d'Ingénierie Didactique (N1 / N2 / N3)"] --> Routeur{"Nature du besoin ?"}
     Routeur -- "Macro : Session, Flux réel, Élagage, Décomposition UAs" --> SP["didactique-session-planner"]
-    Routeur -- "Micro : Séquençage pas-à-pas, Titrage technique, Stubs Jekyll" --> TP["didactique-tutorial-planner"]
-    Routeur -- "Aval : Rédaction et synchronisation des fiches tutos" --> TW["tutorial-writer (Master Aval)"]
+    Routeur -- "Micro : Séquençage pas-à-pas, Titrage technique, Stubs Jekyll" --> TP["didactique-tuto-planner"]
+    Routeur -- "Aval : Rédaction et synchronisation des fiches tutos" --> TW["tuto-writer (Master Aval)"]
 ```
 
 - **Besoin Niveau Session / Sprint :** Cadrer la session, aligner avec le flux de travail réel (`_flux-travail.md`), auditer et élaguer les tâches selon Scrum (10 questions), qualifier les UAs (`UA-Tâche` vs `UA-Lab`), mettre à jour `_sessions/S[X].md` ➔ Invoquer **`didactique-session-planner`**.
-- **Besoin Niveau Progression / Tutoriels :** Découper la réalisation pas-à-pas sans rupture ($E_{n-1} \to E_n$), formuler des titres équilibrés sans entité métier, insérer le sas « Bien démarrer », matérialiser les entités Jekyll et générer les stubs sous `_tutos/` (`en_construction: true`) ➔ Invoquer **`didactique-tutorial-planner`**.
-- **Besoin Rédactionnel Aval :** Rédiger le corps complet des fiches, injecter `window.pageData` et synchroniser avec les livrables du projet cible ➔ Déléguer à **`tutorial-writer`**.
+- **Besoin Niveau Progression / Tutoriels :** Découper la réalisation pas-à-pas sans rupture ($E_{n-1} \to E_n$), formuler des titres équilibrés sans entité métier, insérer le sas « Bien démarrer », matérialiser les entités Jekyll et générer les stubs sous `_tutos/` (`en_construction: true`) ➔ Invoquer **`didactique-tuto-planner`**.
+- **Besoin Rédactionnel Aval :** Rédiger le corps complet des fiches, injecter `window.pageData` et synchroniser avec les livrables du projet cible ➔ Déléguer à **`tuto-writer`**.
 
 ## 4. Contrôle Qualité de l'Orchestrateur
 - [ ] La durée de session (indicative : 80 heures) sert de repère macro pour les formateurs sans être affichée aux apprenants.

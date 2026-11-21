@@ -8,7 +8,7 @@
   - **Ingénierie Pédagogique (Macro) :** Cadrer les sessions Scrum de 80h (`_sessions/`), arbitrer et élaguer les UAs (`_uas/`) avec `didactique` et `didactique-session-planner`.
   - **Planification Didactique (Micro) :** Structurer le découpage technique continu ($E_{n-1} \to E_n$), formuler des titres purement techniques et générer les stubs Jekyll (`_tutos/`) avec `didactique-tutorial-planner`.
   - **Rédaction Didactique :** Rédiger les tutoriels selon leur typologie canonique (`tuto-atelier`, `tuto-tache`, `tuto-notion`, `tuto-code`) avec l'écosystème `tutorial-writer` et les sous-skills spécialisés de domaines.
-  - **Gouvernance des Livrables de l'Apprenant :** Prescrire et maintenir les normes d'organisation physique des livrables de l'apprenant (`.agents/references/organisation-livrables.md`, `typologie-uas-tutoriels.md`, `maturation-ua-labs.md`, `gitflow.md`).
+  - **Gouvernance des Livrables de l'Apprenant :** Prescrire et maintenir les normes d'organisation physique des livrables de l'apprenant (`.agents/references/organisation-livrables.md`, `maturation-et-typologie-ua-tuto.md`, `gitflow.md`).
   - **Synchronisation Inter-Agents :** Piloter le contrat de synchronisation (`.sync/rules-sync.md`) avec le projet cible développé par l'apprenant / l'**Agent Réalisation de Sprint** (`realisation-sprint`), notamment pour le passage de `maturite: "lab"` à `maturite: "ua-lab"`.
 
 ---

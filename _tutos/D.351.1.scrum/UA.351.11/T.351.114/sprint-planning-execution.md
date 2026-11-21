@@ -9,8 +9,7 @@ permalink: /tutos/sprint-planning-execution/
 tuto_id: "T.351.114"
 version: "normal"
 ua: "UA.351.11"
-maturite: "ua-lab"
-type: "tuto-atelier"
+type: "tuto-atelier-notions"
 nav_order: 4
 simplified: true
 en_construction: false

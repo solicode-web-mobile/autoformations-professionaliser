@@ -9,7 +9,7 @@ Gouverneur et architecte technique des compétences de l'agent. Assure la concep
 
 # 2. Déclenchement & Limites
 - **Activer :** Création d'un nouveau skill, raffinement d'un skill existant, création/mise à jour d'une règle dans `.agents/rules/`, audit de conformité.
-- **Ne PAS activer :** Rédaction de tutoriels ➔ `tutorial-writer` | Layouts/CSS Jekyll ➔ `dev-jekyll` | Planification ➔ `tutorial-planer`.
+- **Ne PAS activer :** Rédaction de tutoriels ➔ `tuto-writer` | Layouts/CSS Jekyll ➔ `dev-jekyll` | Planification ➔ `tutorial-planer`.
 
 # 3. Structure Canonique d'un Skill
 Chaque compétence réside sous `.agents/skills/<nom-du-skill>/` et comporte :
@@ -24,7 +24,7 @@ Chaque compétence réside sous `.agents/skills/<nom-du-skill>/` et comporte :
 4. **Validation Statique :** Tout skill créé ou modifié est vérifié par `node .agents/skills/skills-dev/scripts/validate-skills.cjs`.
 
 # 5. Procédure Pas-à-Pas
-1. **Définition du Besoin :** Identifier le périmètre et attribuer le nom canonique en minuscules (ex: `tutorial-writer-[slug]`).
+1. **Définition du Besoin :** Identifier le périmètre et attribuer le nom canonique en minuscules (ex: `tuto-writer-[slug]`).
 2. **Rédaction `SKILL.md` :** Remplir le frontmatter YAML et formaliser les règles techniques spécifiques en $\le 80$ lignes.
 3. **Rédaction `README.md` :** Rédiger la documentation synthétique (prompts types et étapes opérationnelles).
 4. **Contrôle Qualité :** Exécuter `node .agents/skills/skills-dev/scripts/validate-skills.cjs` (0 erreur).

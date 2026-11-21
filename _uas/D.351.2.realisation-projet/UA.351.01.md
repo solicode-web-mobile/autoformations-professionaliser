@@ -1,25 +1,26 @@
 ---
-title: "Vision Produit, Product Backlog initial, UI Kit et User Flow Mermaid"
+title: "Application Projet : Dépôt, Cadrage, Stack et Backlog Initial"
 layout: ua
 code: "UA.351.01"
-slug: "vision-backlog-ui-flow"
+slug: "depot-cadrage-stack-backlog"
 maturite: "projet"
 ordre: 4
 competence: "C.351"
 domaine: "D.351.2"
 duree: 8
 objectif: >
-  Définir la Vision Produit (Product Goal) sous format Point of View en concertation avec le Product Owner (Groupe 1), découper les besoins en User Stories INVEST priorisées selon la méthode MoSCoW pour bâtir le Product Backlog initial, concevoir la charte graphique et l'UI Kit Tailwind CSS avec Preline UI, modéliser le User Flow en syntaxe déclarative Mermaid, et concevoir la maquette ergonomique interactive de la page de consultation détaillée d'un article.
+  Initialiser l'espace projet, formaliser la feuille d'engagement du Sprint 0, cadrer le périmètre produit (note de cadrage, justification de la stack Laravel), définir la Vision Produit (Product Goal) et concevoir le Product Backlog initial en User Stories INVEST ordonnées selon MoSCoW.
 description: >
-  Bloc d'ingénierie produit opérationnelle du Sprint 0. En collaboration étroite avec le Product Owner (Groupe 1), l'équipe synthétise les constats d'empathie pour formaliser la Vision Produit (docs/produit/vision-produit.md). Elle anime l'atelier d'expression des besoins, découpe le périmètre en User Stories INVEST dotées de critères d'acceptation précis, et établit le Product Backlog initial ordonné selon MoSCoW (scrum/product-backlog.md). Parallèlement, l'équipe définit la charte graphique et documente l'UI Kit Preline UI (docs/design/ui-kit.md), puis modélise le parcours utilisateur en Mermaid et conçoit la maquette ergonomique interactive de la page détaille (docs/design/maquettes-sprint-1.md).
+  Bloc d'ingénierie projet opérationnelle du Sprint 0. L'équipe initialise le dépôt Git et l'espace projet vitrine (README.md), signe la feuille d'engagement (sprints/sprint-0.md), délimite le périmètre In-Scope / Out-of-Scope (docs/cadrage/note-cadrage.md), valide et justifie le choix technique de Laravel (docs/cadrage/stack-technique.md), formalise la Vision Produit (docs/produit/vision-produit.md) et bâtir le Product Backlog initial (scrum/product-backlog.md) complété des fiches personas (docs/analyse/personas.md).
 notions:
-  - "Vision Produit (Product Goal) et synthèse des besoins sous formalisme Point of View (POV)"
-  - "Découpage des exigences en User Stories selon le standard INVEST et critères d'acceptation testables"
-  - "Priorisation du Product Backlog selon la méthode MoSCoW (Must, Should, Could, Won't have)"
-  - "Charte graphique et composants d'interface réutilisables Tailwind CSS / Preline UI"
-  - "Modélisation du User Flow en syntaxe déclarative Mermaid (graph TD) et maquettage ergonomique de la page détaille"
+  - "Organisation standard d'un dépôt d'ingénierie logicielle et gouvernance Git"
+  - "Feuille d'engagement d'équipe et planification initiale de sprint"
+  - "Note de cadrage opérationnelle : objectifs SMART, périmètre In-Scope / Out-of-Scope"
+  - "Justification et validation de la stack technologique (Laravel)"
+  - "Vision Produit (Product Goal) et formalisation Point of View (POV)"
+  - "Découpage en User Stories selon le standard INVEST et priorisation MoSCoW"
 livrable: >
-  Vision Produit (docs/produit/vision-produit.md), Product Backlog initial ordonné (scrum/product-backlog.md), Charte Graphique et UI Kit (docs/design/ui-kit.md), et User Flow Mermaid avec maquette ergonomique de la page détaille (docs/design/maquettes-sprint-1.md) sur la branche sprint0.
+  Livrables d'ingénierie opérationnels : README.md, sprints/sprint-0.md, docs/cadrage/note-cadrage.md, docs/cadrage/stack-technique.md, docs/produit/vision-produit.md, docs/analyse/personas.md et scrum/product-backlog.md.
 travail_a_faire: >
-  Formaliser la Vision Produit avec le Groupe 1 (PO) dans docs/produit/vision-produit.md, bâtir le Product Backlog initial INVEST/MoSCoW dans scrum/product-backlog.md, documenter l'UI Kit Preline UI dans docs/design/ui-kit.md, et concevoir le User Flow Mermaid et la maquette de la page détaille dans docs/design/maquettes-sprint-1.md.
+  Initialiser le dépôt, signer la feuille d'engagement S0, rédiger la note de cadrage et la justification de la stack, formaliser la vision produit et construire le Product Backlog initial ordonné.
 ---

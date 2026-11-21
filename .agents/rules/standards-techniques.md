@@ -29,8 +29,7 @@ trigger: always_on
   L'organisation physique de tous les livrables sur le poste de l'apprenant est gouvernée de manière centralisée et exclusive par les documents de référence normatifs de l'EFP :
   - **Identité de l'Agent Rédacteur :** `.agents/rules/persona.md` (définit l'**Agent de Rédaction de l'Autoformation**, alias `redacteur-autoformation`). L'agent miroir qui réalise les travaux sur le projet cible est l'**Agent Réalisation de Sprint** (`realisation-sprint`).
   - **Arborescence du Poste Apprenant :** `.agents/references/organisation-livrables.md` (cartographie complète pour N1, N2 et N3 : `tutoriels/`, `src/`, `docs/conception/`, `sprints/`, `scrum/`, `rapport/`, `presentations/`).
-  - **Échelle de Maturité & Typologie :** `.agents/references/typologie-uas-tutoriels.md` (définit les 5 maturités : `veille`, `lab`, `ua-lab`, `tutoriel`, `projet` et les 4 types : `tuto-atelier`, `tuto-tache`, `tuto-notion`, `tuto-code`).
-  - **Cycle de Maturation des Ateliers :** `.agents/references/maturation-ua-labs.md` (gouverne le passage de `maturite: "lab"` sans notions détaillées à `maturite: "ua-lab"` avec notions détaillées après validation).
+  - **Maturation des UAs & Typologie des Tutoriels :** `.agents/references/maturation-et-typologie-ua-tuto.md` (dissociation UA = maturité [`ua-lab`, `projet`] vs Tutoriel = type [`tuto-atelier`, `tuto-atelier-notions`, `tuto-tache`, `tuto-notion`, `tuto-code`], et cycle d'enrichissement de l'atelier).
   - **Stratégie Git & Commits :** `.agents/references/gitflow.md` (branches `sprint[N]`, commits atomiques conventionnels, interdiction formelle de commit/push automatique par l'Agent IA).
 - **Règles d'Exclusion et de Structuration Formelle :**
   - **Suppression du dossier `issues/` :** Les tâches de développement sont gérées au niveau du Sprint Planning dans `sprints/sprint-[N].md`.
