@@ -26,10 +26,11 @@ trigger: always_on
 - **Médias :** Stockage obligatoire dans `images-tutos/[Domaine]/[ID_Tuto]/[nom.ext]`.
 - **Livrables :** Le livrable est toujours un **dépôt GitHub** ou un fichier `.md` de commandes. **Interdiction stricte de captures d'écran comme livrable.**
 - **Référentiel Central des Livrables & Typologie :**
-  L'organisation physique de tous les livrables sur le poste de l'apprenant est gouvernée de manière centralisée et exclusive par les documents de référence normatifs :
+  L'organisation physique de tous les livrables sur le poste de l'apprenant est gouvernée de manière centralisée et exclusive par les documents de référence normatifs de l'EFP :
   - **Identité de l'Agent Rédacteur :** `.agents/rules/persona.md` (définit l'**Agent de Rédaction de l'Autoformation**, alias `redacteur-autoformation`). L'agent miroir qui réalise les travaux sur le projet cible est l'**Agent Réalisation de Sprint** (`realisation-sprint`).
   - **Arborescence du Poste Apprenant :** `.agents/references/organisation-livrables.md` (cartographie complète pour N1, N2 et N3 : `tutoriels/`, `src/`, `docs/conception/`, `sprints/`, `scrum/`, `rapport/`, `presentations/`).
-  - **Typologie des UAs et Tutoriels :** `.agents/references/typologie-uas-tutoriels.md` (définit les 3 types d'UAs et les 4 types de tutoriels : `tuto-lab`, `tuto-tache`, `tuto-notion`, `tuto-code`).
+  - **Échelle de Maturité & Typologie :** `.agents/references/typologie-uas-tutoriels.md` (définit les 5 maturités : `veille`, `lab`, `ua-lab`, `tutoriel`, `projet` et les 4 types : `tuto-atelier`, `tuto-tache`, `tuto-notion`, `tuto-code`).
+  - **Cycle de Maturation des Ateliers :** `.agents/references/maturation-ua-labs.md` (gouverne le passage de `maturite: "lab"` sans notions détaillées à `maturite: "ua-lab"` avec notions détaillées après validation).
   - **Stratégie Git & Commits :** `.agents/references/gitflow.md` (branches `sprint[N]`, commits atomiques conventionnels, interdiction formelle de commit/push automatique par l'Agent IA).
 - **Règles d'Exclusion et de Structuration Formelle :**
   - **Suppression du dossier `issues/` :** Les tâches de développement sont gérées au niveau du Sprint Planning dans `sprints/sprint-[N].md`.
@@ -37,14 +38,14 @@ trigger: always_on
   - **Interdiction formelle du dossier racine `labs/`.**
 - **Règle du Journal des Commandes CLI (`[slug-tuto].command.md`) :**
   - Le journal des commandes représente le **rapport d'exécution technique du tutoriel**.
-  - Requis **uniquement** pour les `tuto-lab`, `tuto-notion` et `tuto-code` lorsqu'ils comportent des commandes terminal.
+  - Requis **uniquement** pour les `tuto-atelier`, `tuto-notion` et `tuto-code` lorsqu'ils comportent des commandes terminal.
   - **Formellement proscrit pour les `tuto-tache`** (dont les livrables d'ingénierie résident directement aux emplacements racine du projet).
   - Interdiction absolue d'y inclure les commandes Git (`git add`, `git commit`, `git push`).
 - **Consultation et Synchronisation du Référentiel Physique (`.sync/rules-sync.md`) :**
   Le Master Skill **`tutorial-writer`** détient l'autorité exclusive d'inspection et de synchronisation avec le dépôt réel du projet cible (configuré ci-dessus ou via `.sync/rules-sync.md`).
   Les échanges et le versioning inter-agents sont formellement régis par le contrat **`<projet-cible>/.sync/rules-sync.md`** :
   - **L'Agent Réalisation de Sprint (`realisation-sprint`) :** Développe les livrables, maintient les numéros de version sémantique exclusivement dans les fichiers `version.yml` logés à l'intérieur du dossier `.sync/` (interdiction stricte de créer des `version.yml` dans `tutoriels/`, `src/`, etc.), et notifie la réalisation dans le front-matter du tutoriel source (`_tutos/`) avec `sprint`, `statut_realisation: "realise"` et la liste des `livrables` (chemins et versions).
-  - **L'Agent Autoformation (`tutorial-writer`) :** Consulte systématiquement `.sync/rules-sync.md` pour interagir avec l'Agent Réalisation, compare les versions déclarées dans le front-matter du tutoriel source avec celles de `.sync/.../version.yml`. Si une mise à jour est détectée, il actualise le contenu didactique dans Jekyll, aligne les versions dans le front-matter et bascule le statut à `synchronise` (ou `a_adapter` si une discordance majeure est détectée).
+  - **L'Agent Autoformation (`tutorial-writer`) :** Déclenche l'audit des livrables réels : pour un `tuto-atelier`, il bascule la fiche de `maturite: "lab"` à `maturite: "ua-lab"`, injecte les notions fondamentales en détail, spécifie le plan d'UA-Lab, aligne les versions dans le front-matter et bascule le statut à `synchronise` (ou `a_adapter` si une discordance majeure est détectée).
   - **Adaptation mutuelle :** En cas d'incohérence, si la pratique du projet réel valide une solution plus pertinente, le tutoriel est adapté pour refléter la réalité ; si le livrable est incomplet, l'Agent Projet corrige le livrable dans `tutoriels/`.
 
 ## 4. Transparence de l'Agent IA & Traçabilité des Actions

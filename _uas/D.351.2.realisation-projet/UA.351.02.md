@@ -3,7 +3,7 @@ title: "Sprint Review 0 (Jalon Go/No-Go) et Rétrospective du Sprint 0"
 layout: ua
 code: "UA.351.02"
 slug: "cloture-sprint-0"
-maturite: "UA-Tâche"
+maturite: "projet"
 ordre: 5
 competence: "C.351"
 domaine: "D.351.2"

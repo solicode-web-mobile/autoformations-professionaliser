@@ -9,7 +9,8 @@ permalink: /tutos/prompt-use-cases/
 tuto_id: "T.311.222"
 version: "normal"
 ua: "UA.311.22"
-maturite: "UA-Lab"
+maturite: "lab"
+type: "tuto-atelier"
 nav_order: 2
 simplified: true
 en_construction: false

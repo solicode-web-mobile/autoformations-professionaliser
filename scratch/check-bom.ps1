@@ -1,4 +1,4 @@
-$folders = @('_sessions', '_uas', '_prototypes', '_projets', '_tutos')
+$folders = @('_sessions', '_uas', '_prototypes', '_projets', '_tutos', '.agents')
 $files = Get-ChildItem -Path $folders -Recurse -Filter '*.md'
 $bomFiles = @()
 

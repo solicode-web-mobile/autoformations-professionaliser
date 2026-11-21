@@ -3,7 +3,7 @@ title: "Démarche de Design Thinking, immersion et personas"
 layout: ua
 code: "UA.311.11"
 slug: "design-thinking-personas"
-maturite: "UA-Lab"
+maturite: "ua-lab"
 ordre: 3
 competence: "C.311"
 domaine: "D.311.1"

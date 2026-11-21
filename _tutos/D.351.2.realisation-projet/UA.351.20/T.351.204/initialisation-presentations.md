@@ -9,7 +9,8 @@ permalink: /tutos/presentation-marp/
 tuto_id: "T.351.204"
 version: "normal"
 ua: "UA.351.20"
-maturite: "UA-Tâche"
+maturite: "projet"
+type: "tuto-tache"
 nav_order: 4
 simplified: true
 en_construction: false

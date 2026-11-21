@@ -9,7 +9,8 @@ permalink: /tutos/skill-gestion-depot/
 tuto_id: "T.325.114"
 version: "normal"
 ua: "UA.325.11"
-maturite: "UA-Tâche"
+maturite: "projet"
+type: "tuto-tache"
 nav_order: 4
 simplified: true
 en_construction: false

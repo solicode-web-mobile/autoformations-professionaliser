@@ -3,7 +3,7 @@ title: "Initialisation de l'Agent IA & Architecture des Skills"
 layout: ua
 code: "UA.325.11"
 slug: "agent-skills"
-maturite: "UA-Lab"
+maturite: "ua-lab"
 ordre: 2
 competence: "C.325"
 domaine: "D.325.1"

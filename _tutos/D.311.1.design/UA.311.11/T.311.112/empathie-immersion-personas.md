@@ -9,7 +9,8 @@ permalink: /tutos/empathie-immersion-personas/
 tuto_id: "T.311.112"
 version: "normal"
 ua: "UA.311.11"
-maturite: "UA-Lab"
+maturite: "lab"
+type: "tuto-atelier"
 nav_order: 2
 simplified: true
 en_construction: true

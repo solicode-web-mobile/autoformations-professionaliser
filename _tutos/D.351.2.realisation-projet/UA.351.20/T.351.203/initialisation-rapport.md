@@ -9,7 +9,8 @@ permalink: /tutos/rapport-modulaire/
 tuto_id: "T.351.203"
 version: "normal"
 ua: "UA.351.20"
-maturite: "UA-Tâche"
+maturite: "projet"
+type: "tuto-tache"
 nav_order: 3
 simplified: true
 en_construction: false

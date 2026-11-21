@@ -9,7 +9,8 @@ permalink: /tutos/liste-articles/
 tuto_id: "T.321.122"
 version: "normal"
 ua: "UA.321.12"
-maturite: "UA-Lab"
+maturite: "lab"
+type: "tuto-atelier"
 nav_order: 2
 simplified: true
 en_construction: false

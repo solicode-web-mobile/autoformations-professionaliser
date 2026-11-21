@@ -1,7 +1,7 @@
 # Skill : didactique (Master Orchestrateur Tous Niveaux)
 
 ## Présentation
-Le skill **`didactique`** est le Master Skill d'ingénierie pédagogique de Solicode, opérant de façon **générique sur l'ensemble des 3 niveaux du cursus** :
+Le skill **`didactique`** est le Master Skill d'ingénierie pédagogique de l'EFP, opérant de façon **générique sur l'ensemble des 3 niveaux du cursus** :
 - **N1 (Découvrir) :** Fondamentaux du web, programmation procédurale, SQL relationnel.
 - **N2 (Prototyper) :** Programmation Orientée Objet, architecture 3-tiers, modélisation UML.
 - **N3 (Développer / Réaliser) :** Frameworks modernes, architecture logicielle, TDD, Scrum, Agent IA.
@@ -9,7 +9,7 @@ Le skill **`didactique`** est le Master Skill d'ingénierie pédagogique de Soli
 Il centralise les principes directeurs communs (sprint 80h, règle des 3 projets, cycle actif, zéro répétition de prérequis) et pilote l'architecture de conception pédagogique en amont de `tutorial-writer`.
 
 ## Architecture de la Famille Didactique
-- **`didactique` (Master) :** Gouverneur général et garant du cadre didactique Solicode (N1, N2, N3).
+- **`didactique` (Master) :** Gouverneur général et garant du cadre didactique de l'EFP (N1, N2, N3).
   - **`didactique-session-planner` (Macro) :** Cadrage du Sprint Scrum 80h, alignement avec le flux réel (`_flux-travail.md`), élagage des tâches inutiles et qualification des UAs quel que soit le niveau.
   - **`didactique-tutorial-planner` (Micro) :** Découpage fin pas-à-pas ($E_{n-1} \to E_n$), titrage technique équilibré, sas « Bien démarrer » et génération des stubs Jekyll.
 

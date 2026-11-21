@@ -1,80 +1,81 @@
 ---
 name: tutorial-lab-writer
-description: Conçoit, structure et rédige les tutoriels d'ateliers pratiques guidés pour les Unités d'Apprentissage à maturité UA-Lab (tuto-lab, Notions fondamentales, Recherche active, Pratique guidée sur projet cible, Diaporama Marp, Prompts et Skills RIO ciblés).
-version: 2.2.0
+description: Conçoit, structure et rédige les tutoriels d'ateliers pratiques guidés (type: tuto-atelier) pour l'EFP, en gérant le cycle de maturation (maturite: lab sans notions détaillées -> maturite: ua-lab avec notions détaillées après validation).
+version: 3.0.0
 ---
 
-# 1. Mission & Structure Flexible
-Rédacteur technique et pédagogique de l'écosystème `tutorial-*-writer`, dédié aux fiches **`UA-Lab`** (`tuto-lab` : assimilation conceptuelle, modélisation UML/schémas, architecture, frameworks, outillage IA).
-Applique le socle transversal, l'organisation des livrables et la synchronisation gouvernés par [tutorial-writer](../tutorial-writer/SKILL.md), [.agents/references/organisation-livrables.md](../../references/organisation-livrables.md) et [.agents/references/typologie-uas-tutoriels.md](../../references/typologie-uas-tutoriels.md).
-- **Livrables canoniques d'un `tuto-lab` :**
+# 1. Mission & Rôle
+Rédacteur technique et pédagogique de l'écosystème `tutorial-*-writer`, dédié aux tutoriels de type **`tuto-atelier`** pour l'EFP (assimilation conceptuelle, modélisation UML/schémas, architecture, frameworks, outillage IA).
+Applique le socle transversal, l'organisation des livrables et la maturation gouvernés par [tutorial-writer](../tutorial-writer/SKILL.md), [.agents/references/organisation-livrables.md](../../references/organisation-livrables.md), [.agents/references/typologie-uas-tutoriels.md](../../references/typologie-uas-tutoriels.md) et [.agents/references/maturation-ua-labs.md](../../references/maturation-ua-labs.md).
+
+- **Livrables canoniques d'un `tuto-atelier` :**
   1. Fiche didactique : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md`
   2. Diaporama Marp : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/presentation-[slug-tuto].md`
   3. Rapport d'exécution CLI : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].command.md` (si commandes CLI exécutées).
 
-Une `UA-Lab` comporte **entre 2 et 4 tâches modulaires** selon les acquis :
-$$\text{[Théorie essentielle (Optionnelle)]} \longrightarrow \text{Pratique Cible (Obligatoire)} \longrightarrow \text{[Création de Prompt(s) (Si flux récurrent)]}$$
-- **Omission Théorie :** Omettre si les notions sont déjà acquises aux étapes/niveaux antérieurs.
-- **Omission Prompt :** Réserver les prompts aux étapes récurrentes produisant un livrable reproductible (banni pour découverte conceptuelle pure, ADR unique ou Hello World initial).
-- **Tranches Framework Complètes :** Scinder l'outillage IA en `prompt-back-end` et `prompt-front-end` (avec entraînement au Live Coding).
+- **Cycle de Maturation en 2 Phases (`lab` ➔ `ua-lab`) :**
+  - **En `maturite: "lab"` (Avant Réalisation) :** Fiche de cadrage orientée recherche active (Travail à faire + Ce que l'apprenant doit apprendre + Pistes de recherche), **SANS donner les notions de base en détail**.
+  - **En `maturite: "ua-lab"` (Post-Validation EFP) :** Fiche consolidée intégrant la spécification formelle du plan de l'UA-Lab et les **notions de base DONNÉES EN DÉTAIL** (« Notions fondamentales » vérifiées sur le terrain).
 
 ---
 
 # 2. Déclenchement & Limites
-- **Activer :** Ateliers `UA-Lab` (`tuto-lab`) ; modélisation UML (Mermaid) ; ateliers agiles Scrum (User Stories INVEST, Product Backlog) ; dossiers d'architecture (ADR) ; prompts directifs RIO.
-- **Ne PAS activer :** Code incrémental pas-à-pas ➔ `tutorial-code-writer` | Tâches de projet / cérémonies sans théorie ➔ `tutorial-task-writer` | Planification globale ➔ `didactique-tutorial-planner` | Gouvernance & synchronisation ➔ `tutorial-writer`.
+- **Activer :** Ateliers `tuto-atelier` en maturité `lab` ou `ua-lab` ; modélisation UML (Mermaid) ; ateliers agiles Scrum ; dossiers d'architecture (ADR) ; prompts directifs RIO.
+- **Ne PAS activer :** Code incrémental pas-à-pas ➔ `tutorial-code-writer` (`tuto-code`) | Tâches de projet / cérémonies sans théorie ➔ `tutorial-task-writer` (`tuto-tache`) | Planification globale ➔ `didactique-tutorial-planner` | Gouvernance & synchronisation ➔ `tutorial-writer`.
 
 ---
 
-# 3. Structures Normées des Fiches `UA-Lab`
+# 3. Structures Normées des Fiches `tuto-atelier`
 
-Frontmatter commun : `layout: tuto`, `title:`, `sous_titre:`, `slug:`, `permalink:`, `tuto_id:`, `ua:`, `maturite: "UA-Lab"`, `nav_order:`, `simplified: true`, `en_construction: false`, `branche: "sprintX"`.
+Frontmatter commun : `layout: tuto`, `title:`, `sous_titre:`, `slug:`, `permalink:`, `tuto_id:`, `ua:`, `maturite: "lab" | "ua-lab"`, `type: "tuto-atelier"`, `nav_order:`, `simplified: true`, `en_construction: false`, `branche: "sprintX"`.
 
-### A. Fiche Théorie & Assimilation
+### A. Fiche en Maturité `lab` (Recherche Active Initiale — Sans Notions Détaillées)
 ```markdown
-## 1. Travail à faire
-- [Consignes claires d'assimilation et d'investigation]
-## 2. Notions fondamentales
-- **[Concept 1] :** [Définition discriminante et exemples essentiels]
-## 3. Recherches à effectuer
-- [Points d'approfondissement et questions d'investigation active de l'apprenant]
-## 4. Livrable attendu
-- Emplacement : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md` sur la branche active.
-- Diaporama Marp : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/presentation-[slug-tuto].md`.
+## 1. Contexte & Enjeux
+[Pourquoi ce domaine/outil est abordé dans le sprint de l'EFP]
+
+## 2. Ce que vous devez apprendre
+- [Compétence cible à acquérir]
+- [Problématiques techniques à explorer]
+- [Questions directrices auxquelles répondre]
+
+## 3. Travail à faire
+- [Consignes directives sur ce que l'apprenant doit concevoir et produire]
+
+## 4. Pistes de recherche active
+- [Concepts clés et documentations officielles à investiguer]
+
+## 5. Livrables attendus & Critères de validation
+- **Fiche de restitution :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md`
+- **Diaporama Marp :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/presentation-[slug-tuto].md`
+- **Rapport CLI :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].command.md` (si commandes exécutées)
 ```
 
-### B. Fiche Pratique sur Projet Cible (Zéro Solution Clé en Main)
+### B. Fiche en Maturité `ua-lab` (Post-Validation & Intégration Référentiel EFP)
 ```markdown
-## 1. Positionnement dans le Flux & la Stack
-- **Contexte :** [Étape du flux de travail et composants impactés]
-## 2. Travail à Faire (Projet Cible)
-1. **Étape 1 — [Nom] :** [Cahier des charges technique et étapes directives sans solution copier-coller]
-2. **Étape 2 — [Nom] :** [Cahier des charges technique et étapes directives]
-## 3. Critères de Validation
-- [ ] [Critère vérifiable opposable 1] | [ ] [Critère vérifiable opposable 2]
-```
-
-### C. Fiche Création de Prompt IA (Méthode RIO)
-```markdown
-## 1. Positionnement dans le Flux & la Stack
-## 2. Travail à Faire
-## 3. Missions Concrètes Réalisées par le Prompt
-1. [Mission 1] | 2. [Mission 2]
-## 4. Cahier des Charges du Prompt (Méthode RIO)
-- **Rôle :** [Persona d'expert] | **Instruction :** [Consigne sans ambiguïté]
-- **Output :** [Format strict de sortie] | **Contraintes Négatives :** [Interdictions formelles]
-## 5. Critères de Validation
-- [ ] Prompt consigné dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/prompt-[nom].prompt.md` sur la branche active.
+## 1. Contexte & Enjeux
+## 2. Plan Spécifié de l'UA-Lab
+- [Spécification des tâches validées et ancrage dans la compétence certifiante C.xxx]
+## 3. Notions fondamentales (Données en Détail)
+- **[Concept 1] :** [Définition discriminante complète, syntaxe et exemples vérifiés]
+- **[Concept 2] :** [Explication technique approfondie]
+## 4. Travail Réalisé & Synthèse
+- [Rappel du cahier des charges et restitution validée]
+## 5. Recherches à effectuer (Approfondissements)
+- [Pistes d'investigation avancée]
+## 6. Livrables Validés
+- Emplacements canoniques conformes sous `tutoriels/`.
 ```
 
 ---
 
 # 4. Règles Inviolables
-1. **Ciblage du Projet Cible :** Pratique exécutée sur le projet cible et la branche (`sprintX`) définis dans `.agents/rules/`.
-2. **Autonomie de la Pratique (Zéro Solution Clé en Main) :** Fournir spécifications rigoureuses, cahier des charges RIO et étapes directives, mais **interdiction formelle de fournir la solution rédigée complète prête à copier-coller** (réservée à `UA-Tuto` et `UA-Tâche`).
-3. **Zéro Fuite Didactique :** Interdiction des termes « 20/80 », « Règle des 20/80 » ou « Ce que l'apprenant doit produire ». Utiliser « Notions fondamentales » et « Recherches à effectuer ».
-4. **Zéro Durée Affichée & Zéro Jalon :** Aucune mention de temps (`(2h)`) aux apprenants. Terme direct « Étape » obligatoire (« Jalon » proscrit).
-5. **Formatage Colonne 0 & UTF-8 :** Tout bloc de code débute strictement colonne 0 (zéro indentation), précédé et suivi d'une ligne vide. UTF-8 sans BOM.
-6. **Chemins Canoniques & Livrables Complets :** Conforme à [.agents/references/organisation-livrables.md](../../references/organisation-livrables.md) et [.agents/references/typologie-uas-tutoriels.md](../../references/typologie-uas-tutoriels.md). Dossier `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` contenant obligatoirement `[slug-tuto].md`, `presentation-[slug-tuto].md` et `[slug-tuto].command.md` (si CLI). Proscrire les dossiers orphelins (`labs/`), les `README.md` unitaires et les captures d'écran.
-7. **Versionnement Git :** Respecter l'autonomie Git du niveau actif selon [.agents/references/gitflow.md](../../references/gitflow.md) (aucun `commit`/`push` imposé aux apprenants si autonomie prescrite).
-8. **Gouvernance :** Réfère au Master Skill [tutorial-writer](../tutorial-writer/SKILL.md) pour les règles partagées et la synchronisation avec le projet cible via `.sync/rules.md`.
+1. **Dissociation Absolue Maturité / Type :** Le tutoriel porte obligatoirement `type: "tuto-atelier"` et `maturite: "lab"` (au départ) ou `maturite: "ua-lab"` (après validation).
+2. **Discrétion des Notions en Phase `lab` :** Interdiction absolue de rédiger les notions théoriques détaillées dans une fiche en maturité `lab`. L'apprenant doit chercher par lui-même.
+3. **Autonomie de la Pratique (Zéro Solution Clé en Main) :** Fournir spécifications rigoureuses, cahier des charges RIO et étapes directives, mais interdiction formelle de fournir la solution rédigée complète prête à copier-coller.
+4. **Zéro Fuite Didactique :** Interdiction des termes « 20/80 », « Règle des 20/80 » ou « Ce que l'apprenant doit produire ». Utiliser « Notions fondamentales » et « Recherches à effectuer ».
+5. **Zéro Durée Affichée & Zéro Jalon :** Aucune mention de temps (`(2h)`) aux apprenants. Terme direct « Étape » obligatoire (« Jalon » proscrit).
+6. **Formatage Colonne 0 & UTF-8 :** Tout bloc de code débute strictement colonne 0 (zéro indentation), précédé et suivi d'une ligne vide. UTF-8 sans BOM.
+7. **Chemins Canoniques & Livrables Complets :** Conforme à [.agents/references/organisation-livrables.md](../../references/organisation-livrables.md) et [.agents/references/typologie-uas-tutoriels.md](../../references/typologie-uas-tutoriels.md). Dossier `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` contenant obligatoirement `[slug-tuto].md`, `presentation-[slug-tuto].md` et `[slug-tuto].command.md` (si CLI). Proscrire les dossiers orphelins (`labs/`), les `README.md` unitaires et les captures d'écran.
+8. **Versionnement Git :** Respecter l'autonomie Git du niveau actif selon [.agents/references/gitflow.md](../../references/gitflow.md).
+9. **Gouvernance :** Réfère au Master Skill [tutorial-writer](../tutorial-writer/SKILL.md) pour les règles partagées et la synchronisation avec le projet cible via `.sync/rules-sync.md`.

@@ -9,7 +9,8 @@ permalink: /tutos/readme-stack-technique/
 tuto_id: "T.351.202"
 version: "normal"
 ua: "UA.351.20"
-maturite: "UA-Tâche"
+maturite: "projet"
+type: "tuto-tache"
 nav_order: 2
 simplified: true
 en_construction: false

@@ -9,7 +9,8 @@ permalink: /tutos/retrospective-sprint-0/
 tuto_id: "T.351.022"
 version: "normal"
 ua: "UA.351.02"
-maturite: "UA-Tâche"
+maturite: "projet"
+type: "tuto-tache"
 nav_order: 2
 simplified: true
 en_construction: true

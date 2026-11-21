@@ -9,7 +9,8 @@ permalink: /tutos/personas-utilisateurs/
 tuto_id: "T.311.113"
 version: "normal"
 ua: "UA.311.11"
-maturite: "UA-Lab"
+maturite: "lab"
+type: "tuto-atelier"
 nav_order: 3
 simplified: true
 en_construction: true

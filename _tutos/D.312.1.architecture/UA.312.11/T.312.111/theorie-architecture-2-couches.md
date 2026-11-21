@@ -9,7 +9,8 @@ permalink: /tutos/separation-responsabilites/
 tuto_id: "T.312.111"
 version: "normal"
 ua: "UA.312.11"
-maturite: "UA-Lab"
+maturite: "lab"
+type: "tuto-atelier"
 nav_order: 1
 simplified: true
 en_construction: false

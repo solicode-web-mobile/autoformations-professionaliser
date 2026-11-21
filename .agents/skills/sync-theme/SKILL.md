@@ -5,7 +5,7 @@ version: 1.0.0
 ---
 
 # 1. Mission
-Ce skill assure la maintenance, la configuration et l'orchestration de la synchronisation du **Core Theme** (socle technique partagé entre plusieurs plateformes d'autoformation Solicode) entre le dépôt courant et le dépôt central `../autoformations-core-theme`.
+Ce skill assure la maintenance, la configuration et l'orchestration de la synchronisation du **Core Theme** (socle technique partagé entre plusieurs plateformes d'autoformation EFP) entre le dépôt courant et le dépôt central `../autoformations-core-theme`.
 
 # 2. Déclenchement & Limites
 - **Quand l'activer :**

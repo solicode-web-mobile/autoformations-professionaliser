@@ -6,15 +6,15 @@ Ce document définit la norme officielle et universelle d'organisation, de nomma
 Il s'applique à tous les agents IA opérant sur le poste apprenant (en particulier l'**`Agent Réalisation de Sprint`**) ainsi qu'à l'apprenant lui-même.
 
 ### Généricité N1, N2, N3
-Le cadre s'applique aux trois niveaux de formation Solicode :
+Le cadre s'applique aux trois niveaux de formation de l'**EFP (Établissement de Formation Professionnelle)** :
 - **Niveau N1 (Découvrir) :**
-  - **Projet d'Imitation :** *Blog de l'EFP* (Établissement de Formation Professionnelle).
+  - **Projet d'Imitation :** *Blog de l'EFP*.
   - **Code Applicatif (`src/`) :** HTML5, CSS3, JavaScript vanilla, PHP procédural/modulaire, requêtes SQL relationnelles.
 - **Niveau N2 (Prototyper) :**
   - **Projet d'Imitation :** *Blog de l'EFP*.
   - **Code Applicatif (`src/`) :** Programmation Orientée Objet (POO PHP), Architecture 3-tiers / MVC (Modèle-Vue-Contrôleur).
 - **Niveau N3 (Développer / Réaliser) :**
-  - **Projet d'Imitation :** *Blog des Lauréats*.
+  - **Projet d'Imitation :** *Blog des Lauréats de l'EFP*.
   - **Code Applicatif (`src/`) :** Framework moderne (**Laravel**), architecture 2 couches / découplée, Blade, Alpine.js, Tailwind CSS, tests automatisés TDD.
 
 ---

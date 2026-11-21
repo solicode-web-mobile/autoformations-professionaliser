@@ -9,7 +9,8 @@ permalink: /tutos/skill-presentation/
 tuto_id: "T.325.113"
 version: "normal"
 ua: "UA.325.11"
-maturite: "UA-Lab"
+maturite: "ua-lab"
+type: "tuto-atelier"
 nav_order: 3
 simplified: true
 en_construction: false

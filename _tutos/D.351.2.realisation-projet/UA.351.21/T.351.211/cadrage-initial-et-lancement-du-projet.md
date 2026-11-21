@@ -9,7 +9,8 @@ permalink: /tutos/perimetre-produit/
 tuto_id: "T.351.211"
 version: "normal"
 ua: "UA.351.21"
-maturite: "UA-Tâche"
+maturite: "projet"
+type: "tuto-tache"
 nav_order: 1
 simplified: true
 en_construction: false

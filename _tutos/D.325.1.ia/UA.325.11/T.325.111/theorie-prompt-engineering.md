@@ -9,7 +9,8 @@ permalink: /tutos/prompt-engineering/
 tuto_id: "T.325.111"
 version: "normal"
 ua: "UA.325.11"
-maturite: "UA-Lab"
+maturite: "ua-lab"
+type: "tuto-atelier"
 nav_order: 1
 simplified: true
 en_construction: false

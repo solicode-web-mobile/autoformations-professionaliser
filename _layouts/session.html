@@ -171,9 +171,12 @@ layout: default
                     {% if ua.maturite %}
                       {% assign mat_clean = ua.maturite | replace: "UA-", "" | strip %}
                       {% assign mat_str = ua.maturite | downcase %}
-                      {% if mat_str contains "tach" or mat_str contains "tâch" %}
+                      {% if mat_str contains "tach" or mat_str contains "tâch" or mat_str contains "projet" %}
                         {% assign mat_badge_class = "badge-tache" %}
-                        {% assign mat_badge_text = "Tâche" %}
+                        {% assign mat_badge_text = "Projet" %}
+                      {% elsif mat_str contains "ua-lab" %}
+                        {% assign mat_badge_class = "badge-lab" %}
+                        {% assign mat_badge_text = "UA-Lab" %}
                       {% elsif mat_str contains "lab" %}
                         {% assign mat_badge_class = "badge-lab" %}
                         {% assign mat_badge_text = "Lab" %}

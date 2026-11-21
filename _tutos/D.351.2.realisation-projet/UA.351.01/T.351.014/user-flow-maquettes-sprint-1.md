@@ -9,7 +9,8 @@ permalink: /tutos/user-flow-maquettes-sprint-1/
 tuto_id: "T.351.014"
 version: "normal"
 ua: "UA.351.01"
-maturite: "UA-Tâche"
+maturite: "projet"
+type: "tuto-tache"
 nav_order: 4
 simplified: true
 en_construction: true

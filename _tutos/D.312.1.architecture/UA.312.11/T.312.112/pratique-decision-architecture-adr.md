@@ -9,7 +9,8 @@ permalink: /tutos/decision-adr-sequence/
 tuto_id: "T.312.112"
 version: "normal"
 ua: "UA.312.11"
-maturite: "UA-Lab"
+maturite: "lab"
+type: "tuto-atelier"
 nav_order: 2
 simplified: true
 en_construction: false

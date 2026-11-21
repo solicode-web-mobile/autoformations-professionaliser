@@ -9,7 +9,8 @@ permalink: /tutos/revue-sprint-0-go-no-go/
 tuto_id: "T.351.021"
 version: "normal"
 ua: "UA.351.02"
-maturite: "UA-Tâche"
+maturite: "projet"
+type: "tuto-tache"
 nav_order: 1
 simplified: true
 en_construction: true

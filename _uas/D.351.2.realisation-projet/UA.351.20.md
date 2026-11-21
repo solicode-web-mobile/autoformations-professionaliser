@@ -3,7 +3,7 @@ title: "Initialisation et publication du projet"
 layout: ua
 code: "UA.351.20"
 slug: "initialisation"
-maturite: "UA-Tâche"
+maturite: "projet"
 ordre: 2
 competence: "C.351"
 domaine: "D.351.2"

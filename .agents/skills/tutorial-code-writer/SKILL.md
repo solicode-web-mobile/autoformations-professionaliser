@@ -1,11 +1,11 @@
 ---
 name: tutorial-code-writer
-description: Conçoit et rédige les tutoriels techniques d'apprentissage de code (tuto-notion hors imitation sous tutoriels/ ou tuto-code incrémental E_{n-1} -> E_n sur imitation sous src/) nativement simplifiés, avec injecteur window.pageData pour l'éditeur interactif. Opère de manière générique sur tous les niveaux selon les règles configurées dans .agents/rules/. Membre de l'écosystème tutorial-*-writer sous la gouvernance de tutorial-writer.
-version: 1.2.0
+description: Conçoit et rédige les tutoriels techniques d'apprentissage de code pour l'EFP (maturite: tutoriel, type: tuto-notion hors imitation sous tutoriels/ ou type: tuto-code incrémental E_{n-1} -> E_n sur imitation sous src/) nativement simplifiés, avec injecteur window.pageData pour l'éditeur interactif. Opère de manière générique sur tous les niveaux selon les règles configurées dans .agents/rules/. Membre de l'écosystème tutorial-*-writer sous la gouvernance de tutorial-writer.
+version: 1.3.0
 ---
 
 # 1. Mission
-Ce skill est le **rédacteur technique spécialisé dans l'apprentissage de code** (`UA-Tuto`).
+Ce skill est le **rédacteur technique spécialisé dans l'apprentissage de code** en maturité **`tutoriel`** pour l'EFP.
 Il opère de façon générique et indépendante du niveau d'apprentissage (N1, N2, N3), s'adaptant aux technologies et directives configurées dans `.agents/rules/`.
 Il fait partie intégrante de l'écosystème **`tutorial-*-writer`** et applique les règles transversales, l'organisation des livrables et le protocole de synchronisation gouvernés par le Master Skill **[tutorial-writer](../tutorial-writer/SKILL.md)**, [.agents/references/organisation-livrables.md](../../references/organisation-livrables.md) et [.agents/references/typologie-uas-tutoriels.md](../../references/typologie-uas-tutoriels.md).
 
@@ -20,13 +20,13 @@ Selon [.agents/references/typologie-uas-tutoriels.md](../../references/typologie
 
 # 2. Déclenchement & Limites
 - **Quand l'activer :**
-  - Rédaction d'une **série de tutoriels de code en progression** (`tuto-code`) à partir d'un code source final cible (*« Rédige la série de tutoriels pour construire la maquette de la page d'accueil »*).
-  - Rédaction d'un **tutoriel unitaire de notion** (`tuto-notion`) (*« Rédige un tutoriel pour manipuler les tableaux associatifs »*).
+  - Rédaction d'une **série de tutoriels de code en progression** (`type: "tuto-code"`) à partir d'un code source final cible (*« Rédige la série de tutoriels pour construire la maquette de la page d'accueil »*).
+  - Rédaction d'un **tutoriel unitaire de notion** (`type: "tuto-notion"`) (*« Rédige un tutoriel pour manipuler les tableaux associatifs »*).
   - Modernisation ou allègement d'un ancien tutoriel de programmation trop dense pour respecter le principe de charge cognitive minimale.
   - Configuration de composants interactifs utilisant `data_*` et `window.pageData`.
 - **Quand NE PAS l'activer :**
-  - Ateliers pratiques guidés d'assimilation, modélisation ou outillage IA (`UA-Lab` / `tuto-lab`) ➔ Utiliser [tutorial-lab-writer](../tutorial-lab-writer/SKILL.md).
-  - Tâches opérationnelles de sprint et rituels agiles (`UA-Tâche` / `tuto-tache`) ➔ Utiliser [tutorial-task-writer](../tutorial-task-writer/SKILL.md).
+  - Ateliers pratiques guidés d'assimilation, modélisation ou outillage IA (`type: "tuto-atelier"`) ➔ Utiliser [tutorial-lab-writer](../tutorial-lab-writer/SKILL.md).
+  - Tâches opérationnelles de sprint et rituels agiles (`type: "tuto-tache"`) ➔ Utiliser [tutorial-task-writer](../tutorial-task-writer/SKILL.md).
   - Planification globale et ordonnancement de session ➔ Utiliser [didactique-tutorial-planner](../didactique-tutorial-planner/SKILL.md).
   - Gouvernance globale, routage et synchronisation physique ➔ Utiliser [tutorial-writer](../tutorial-writer/SKILL.md).
 
@@ -95,6 +95,8 @@ title: "Titre du Tutoriel"
 sous_titre: "Sous-titre technique"
 tuto_id: "T.XXX.YYY"
 ua: "UA.XXX.YY"
+maturite: "tutoriel"
+type: "tuto-code" # tuto-code | tuto-notion
 nav_order: 10
 simplified: true
 data_code_depart: ""

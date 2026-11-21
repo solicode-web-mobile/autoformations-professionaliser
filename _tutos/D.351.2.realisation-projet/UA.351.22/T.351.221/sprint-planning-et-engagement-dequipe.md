@@ -9,7 +9,8 @@ permalink: /tutos/sprint-backlog/
 tuto_id: "T.351.221"
 version: "normal"
 ua: "UA.351.22"
-maturite: "UA-Tâche"
+maturite: "projet"
+type: "tuto-tache"
 nav_order: 1
 simplified: true
 en_construction: false

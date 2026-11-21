@@ -1,13 +1,13 @@
 ---
 name: didactique
-description: Master Skill et chef d'orchestre de l'ingénierie pédagogique Solicode générique pour tous les niveaux (N1 Découvrir, N2 Prototyper, N3 Développer). Gouverne le cadrage des sessions Scrum de 80h, la pédagogie des 3 projets, l'apprentissage actif sans redondance de prérequis, et route vers didactique-session-planner et didactique-tutorial-planner.
-version: 1.1.0
+description: Master Skill et chef d'orchestre de l'ingénierie pédagogique EFP générique pour tous les niveaux (N1 Découvrir, N2 Prototyper, N3 Développer). Gouverne le cadrage des sessions Scrum de 80h, la pédagogie des 3 projets, l'apprentissage actif sans redondance de prérequis, et route vers didactique-session-planner et didactique-tutorial-planner.
+version: 1.2.0
 ---
 
 # Master Skill : didactique
 
 ## 1. Rôle et Mission
-Ce Master Skill est le **chef d'orchestre de l'ingénierie didactique** pour l'ensemble des formations Solicode sur les 3 niveaux de cursus : **N1 (Découvrir)**, **N2 (Prototyper)** et **N3 (Développer / Réaliser)**. Il garantit la cohérence pédagogique amont avant toute rédaction de tutoriels :
+Ce Master Skill est le **chef d'orchestre de l'ingénierie didactique** pour l'ensemble des formations de l'EFP sur les 3 niveaux de cursus : **N1 (Découvrir)**, **N2 (Prototyper)** et **N3 (Développer / Réaliser)**. Il garantit la cohérence pédagogique amont avant toute rédaction de tutoriels :
 1. **Gouvernance du socle didactique** : application des principes d'apprentissage actif adaptés au niveau cible résolu dans `.agents/rules/`.
 2. **Orchestration des compétences de conception** : aiguillage ciblé vers le niveau Macro (Session & Sprint) ou le niveau Micro (Tutoriels & Stubs).
 
@@ -19,9 +19,9 @@ Ce Master Skill est le **chef d'orchestre de l'ingénierie didactique** pour l'e
    - **Projet 3 — Fil Rouge :** Transposition vers une application métier (autonome ou avec Agent IA selon le niveau, après le sprint).
 3. **Cycle d'Apprentissage Actif :** $\text{Comprendre} \longrightarrow \text{Reproduire} \longrightarrow \text{Expérimenter} \longrightarrow \text{Réaliser} \longrightarrow \text{Réutiliser}$.
 4. **Non-Régression & Zéro Répétition des Prérequis :** Ne jamais introduire de cours théorique sur les notions déjà acquises aux niveaux antérieurs (en N2 : prérequis N1 acquis ; en N3 : prérequis N1 et N2 acquis ; en N1 : apprentissage direct des fondamentaux).
-5. **Typologie Didactique Stricte :**
-   - **`UA-Tâche` :** Action opérationnelle, cadrage, initialisation outillée, rituels Scrum. **0% théorie.**
-   - **`UA-Lab` :** Découverte d'un nouveau paradigme du niveau actif (N1 syntaxe/web, N2 POO/3-tiers, N3 frameworks/SOLID/TDD/IA). Fournit les 20% fondamentaux, 80% en recherche active.
+5. **Typologie et Maturation Didactique Stricte :**
+   - **Maturité `projet` / `type: "tuto-tache"` :** Action opérationnelle, cadrage, initialisation outillée, rituels Scrum. **0% théorie.**
+   - **Maturité `lab` & `ua-lab` / `type: "tuto-atelier"` :** Découverte active d'un paradigme. En phase `lab` : recherche active sans notions fondamentales détaillées. En phase `ua-lab` : lab validé sur le terrain avec plan d'UA spécifié et notions fondamentales détaillées (20% fondamentaux, 80% approfondissement).
 6. **Discrétion Pédagogique :** Interdiction formelle d'exposer la cuisine interne aux apprenants (ne jamais mentionner « 20/80 » ou des durées unitaires dans les fiches destinées aux apprenants).
 
 ## 3. Matrice d'Aiguillage Opérationnel

@@ -19,9 +19,12 @@ layout: default
             {% if current_maturite_header %}
               {% assign mat_clean_header = current_maturite_header | replace: "UA-", "" | strip %}
               {% assign mat_head_str = current_maturite_header | downcase %}
-              {% if mat_head_str contains "tach" or mat_head_str contains "tâch" %}
+              {% if mat_head_str contains "tach" or mat_head_str contains "tâch" or mat_head_str contains "projet" %}
                 {% assign mat_head_class = "badge-tache" %}
-                {% assign mat_head_text = "Tâche" %}
+                {% assign mat_head_text = "Projet" %}
+              {% elsif mat_head_str contains "ua-lab" %}
+                {% assign mat_head_class = "badge-lab" %}
+                {% assign mat_head_text = "UA-Lab" %}
               {% elsif mat_head_str contains "lab" %}
                 {% assign mat_head_class = "badge-lab" %}
                 {% assign mat_head_text = "Lab" %}

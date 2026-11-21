@@ -62,9 +62,12 @@
             {% if current_tuto_mat %}
               {% assign mat_pill = current_tuto_mat | replace: "UA-", "" | strip %}
               {% assign mat_pill_str = current_tuto_mat | downcase %}
-              {% if mat_pill_str contains "tach" or mat_pill_str contains "tâch" %}
+              {% if mat_pill_str contains "tach" or mat_pill_str contains "tâch" or mat_pill_str contains "projet" %}
                 {% assign mat_pill_class = "badge-tache" %}
-                {% assign mat_pill_text = "Tâche" %}
+                {% assign mat_pill_text = "Projet" %}
+              {% elsif mat_pill_str contains "ua-lab" %}
+                {% assign mat_pill_class = "badge-lab" %}
+                {% assign mat_pill_text = "UA-Lab" %}
               {% elsif mat_pill_str contains "lab" %}
                 {% assign mat_pill_class = "badge-lab" %}
                 {% assign mat_pill_text = "Lab" %}

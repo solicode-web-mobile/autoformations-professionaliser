@@ -9,7 +9,8 @@ permalink: /tutos/modelisation-macro/
 tuto_id: "T.311.221"
 version: "normal"
 ua: "UA.311.22"
-maturite: "UA-Lab"
+maturite: "lab"
+type: "tuto-atelier"
 nav_order: 1
 simplified: true
 en_construction: false

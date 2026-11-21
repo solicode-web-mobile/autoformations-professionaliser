@@ -9,7 +9,8 @@ permalink: /tutos/cadrer-projet-perimetre/
 tuto_id: "T.351.205"
 version: "normal"
 ua: "UA.351.20"
-maturite: "UA-Tâche"
+maturite: "projet"
+type: "tuto-tache"
 nav_order: 5
 simplified: true
 en_construction: false

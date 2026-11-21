@@ -9,7 +9,8 @@ permalink: /tutos/prompt-generation/
 tuto_id: "T.311.212"
 version: "normal"
 ua: "UA.311.21"
-maturite: "UA-Lab"
+maturite: "lab"
+type: "tuto-atelier"
 nav_order: 2
 simplified: true
 en_construction: false

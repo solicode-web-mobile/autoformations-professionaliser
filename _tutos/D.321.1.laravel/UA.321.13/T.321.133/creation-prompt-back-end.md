@@ -9,7 +9,8 @@ permalink: /tutos/prompt-backend/
 tuto_id: "T.321.133"
 version: "normal"
 ua: "UA.321.13"
-maturite: "UA-Lab"
+maturite: "lab"
+type: "tuto-atelier"
 nav_order: 3
 simplified: true
 en_construction: false

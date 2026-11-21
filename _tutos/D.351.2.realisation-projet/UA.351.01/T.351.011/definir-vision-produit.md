@@ -9,7 +9,8 @@ permalink: /tutos/definir-vision-produit/
 tuto_id: "T.351.011"
 version: "normal"
 ua: "UA.351.01"
-maturite: "UA-Tâche"
+maturite: "projet"
+type: "tuto-tache"
 nav_order: 1
 simplified: true
 en_construction: false

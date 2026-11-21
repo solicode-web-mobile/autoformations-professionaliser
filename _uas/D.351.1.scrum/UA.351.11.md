@@ -3,7 +3,7 @@ title: "Initiation à la méthode Agile Scrum"
 layout: ua
 code: "UA.351.11"
 slug: "initiation-scrum"
-maturite: "UA-Lab"
+maturite: "ua-lab"
 ordre: 1
 competence: "C.351"
 domaine: "D.351.1"

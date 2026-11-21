@@ -3,7 +3,7 @@ title: "Vision Produit, Product Backlog initial, UI Kit et User Flow Mermaid"
 layout: ua
 code: "UA.351.01"
 slug: "vision-backlog-ui-flow"
-maturite: "UA-Tâche"
+maturite: "projet"
 ordre: 4
 competence: "C.351"
 domaine: "D.351.2"

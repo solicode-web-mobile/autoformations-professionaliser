@@ -3,7 +3,7 @@ title: "Planification de sprint et carnet de tâches (Sprint 1)"
 layout: ua
 code: "UA.351.22"
 slug: "planification"
-maturite: "UA-Tâche"
+maturite: "projet"
 ordre: 7
 competence: "C.351"
 domaine: "D.351.2"

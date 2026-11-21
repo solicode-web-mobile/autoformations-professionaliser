@@ -9,7 +9,8 @@ permalink: /tutos/skill-cloture-sprint/
 tuto_id: "T.351.235"
 version: "normal"
 ua: "UA.351.23"
-maturite: "UA-Tâche"
+maturite: "projet"
+type: "tuto-tache"
 nav_order: 5
 simplified: true
 en_construction: false

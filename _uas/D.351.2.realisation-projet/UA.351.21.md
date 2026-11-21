@@ -3,7 +3,7 @@ title: "Cadrage du périmètre du projet (Sprint 1)"
 layout: ua
 code: "UA.351.21"
 slug: "cadrage"
-maturite: "UA-Tâche"
+maturite: "projet"
 ordre: 4
 competence: "C.351"
 domaine: "D.351.2"

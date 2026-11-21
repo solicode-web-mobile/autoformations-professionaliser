@@ -9,7 +9,8 @@ permalink: /tutos/prompt-engagement-equipe/
 tuto_id: "T.351.222"
 version: "normal"
 ua: "UA.351.22"
-maturite: "UA-Tâche"
+maturite: "projet"
+type: "tuto-tache"
 nav_order: 2
 simplified: true
 en_construction: false

@@ -9,7 +9,8 @@ permalink: /tutos/debriefing-progression/
 tuto_id: "T.351.234"
 version: "normal"
 ua: "UA.351.23"
-maturite: "UA-Tâche"
+maturite: "projet"
+type: "tuto-tache"
 nav_order: 4
 simplified: true
 en_construction: false

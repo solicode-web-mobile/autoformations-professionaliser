@@ -9,7 +9,8 @@ permalink: /tutos/comprendre-scrum/
 tuto_id: "T.351.111"
 version: "normal"
 ua: "UA.351.11"
-maturite: "UA-Lab"
+maturite: "ua-lab"
+type: "tuto-atelier"
 nav_order: 1
 simplified: true
 en_construction: false

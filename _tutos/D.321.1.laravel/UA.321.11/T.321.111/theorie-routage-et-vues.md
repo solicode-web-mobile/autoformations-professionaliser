@@ -9,7 +9,8 @@ permalink: /tutos/routage-fondamentaux/
 tuto_id: "T.321.111"
 version: "normal"
 ua: "UA.321.11"
-maturite: "UA-Lab"
+maturite: "lab"
+type: "tuto-atelier"
 nav_order: 1
 simplified: true
 en_construction: false
