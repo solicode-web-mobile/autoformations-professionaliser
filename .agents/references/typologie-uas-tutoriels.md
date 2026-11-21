@@ -27,11 +27,15 @@ $$\text{veille} \longrightarrow \text{lab} \longrightarrow \text{ua-lab} \longri
 
 ## 3. Typologie des Tutoriels (Préfixe Canonique `tuto-*`)
 
-### A. `tuto-atelier` — Atelier Pratique Guidé (Maturités `lab` et `ua-lab`)
+### A. `tuto-atelier` — Atelier Pratique Guidé (Maturité `lab`)
+> [!IMPORTANT]
+> Un tutoriel d'atelier porte toujours la maturité **`maturite: "lab"`**.  
+> La valeur `ua-lab` est **exclusivement une maturité d'Unité d'Apprentissage (`_uas/`)** désignant une UA validée et intégrée dans le cursus de l'EFP. Elle n'est jamais portée par un tutoriel unitaire.
+
 - **Finalité :** Assimilation collective et guidée d'un domaine ou d'une compétence nouvelle (Design Thinking, Scrum méthodologique, Modélisation UML, Architecture, Outillage IA).
-- **Cycle de maturation :**
-  - En `maturite: "lab"` : Travail à faire + Ce que l'apprenant doit apprendre, **SANS notions de base en détail**.
-  - En `maturite: "ua-lab"` : Lab validé et intégré au référentiel EFP, **AVEC notions de base données en détail**.
+- **Cycle de maturation au niveau tutoriel :**
+  - Au stade exploratoire : Travail à faire + Ce que l'apprenant doit apprendre, **SANS notions de base en détail**.
+  - Après validation terrain : **Notions de base DONNÉES EN DÉTAIL** (« Notions fondamentales » consolidées). L'UA associée est alors promue en `maturite: "ua-lab"`.
 - **Livrables attendus (dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`) :**
   1. Fiche technique d'atelier : `[slug-tuto].md`.
   2. Diaporama Marp de restitution : `presentation-[slug-tuto].md` (**exclusif au format atelier**).
@@ -71,7 +75,7 @@ $$\text{veille} \longrightarrow \text{lab} \longrightarrow \text{ua-lab} \longri
 
 | Type de Tutoriel (`type:`) | Maturité Typique (`maturite:`) | Destination du Livrable | Diaporama Marp ? | Journal CLI (`.command.md`) ? |
 | :--- | :--- | :--- | :---: | :---: |
-| **`tuto-atelier`** | `lab` ➔ `ua-lab` | `tutoriels/.../[slug-tuto]/` | **OUI** (`presentation-[slug-tuto].md`) | **OUI** (si CLI exécuté) |
+| **`tuto-atelier`** | `lab` | `tutoriels/.../[slug-tuto]/` | **OUI** (`presentation-[slug-tuto].md`) | **OUI** (si CLI exécuté) |
 | **`tuto-tache`** | `projet` | Emplacements racine (`docs/`, `sprints/`, `scrum/`, etc.) | **NON** | **NON** (proscrit) |
 | **`tuto-notion`** | `tutoriel` | `tutoriels/.../[slug-tuto]/` | **NON** | **OUI** (si CLI exécuté) |
 | **`tuto-code`** | `tutoriel` | **`src/`** (arborescence applicative) | **NON** | **OUI** (`tutoriels/.../[slug-tuto].command.md`) |

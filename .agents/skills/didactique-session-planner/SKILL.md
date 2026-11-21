@@ -13,13 +13,13 @@ Expert du niveau **Macro (Session & Sprint)** pour les niveaux **N1, N2 et N3**,
 3. **Qualifier les UAs** en `UA-Tâche` (0% théorie) et `UA-Lab` (20/80 Pareto) selon le niveau actif résolu dans `.agents/rules/`.
 4. **Mettre à jour la session** et produire le **Plan Artefact** d'impact sur les UAs (`_uas/`).
 
-## 2. Inviolabilité du Temps & Primauté Normative des Livrables
-- **Inviolabilité de la durée :** La session correspond strictement à un Sprint Scrum de **80 heures** (`duree: 80`) quel que soit le niveau. Ce budget global ne doit jamais être modifié ni fragmenté en heures unitaires dans les consignes.
+## 2. Temporalité Indicative & Primauté Normative des Livrables
+- **Durée indicative :** La durée temporelle d'une session (standard indicatif : 80 heures / 10 jours ouvrés pour un Sprint Scrum) est fournie à **titre purement indicatif** pour les formateurs et les concepteurs pédagogiques. Elle sert de repère macro pour rythmer les apprentissages sans être un carcan rigide, et ne doit jamais être affichée ni fragmentée en durées unitaires dans les consignes destinées aux apprenants.
 - **Primauté Normative des Règles de Livrables :** L'Agent Autoformation est l'autorité normative qui définit l'arborescence et le formatage des livrables (`tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` pour les tutoriels d'apprentissage, et `docs/`, `sprints/`, `scrum/`, `README.md` pour les livrables de projet). L'Agent Réalisation (`projet-imitation`) adapte obligatoirement ses livrables à cette nomenclature via `.sync/rules-sync.md`.
 - **Matrice d'arbitrage de véracité :**
-  - **Le Flux Réel fait autorité :** Pour la réalité des étapes franchies, les livrables concrets et les commandes CLI réelles.
-  - **La Session fait autorité :** Pour les compétences officielles certifiantes (`C.xxx`), les rituels Scrum et la durée réglementaire (`duree: 80`).
-  - **La Didactique qualifie les labs :** Les mentions brutes du flux sont critiquées et qualifiées aux standards du niveau actif.
+  - **Le Flux Réel fait autorité :** Pour la réalité des étapes franchies, la décomposition des blocs d'apprentissage, les livrables concrets et les commandes CLI réelles.
+  - **La Session fait autorité :** Pour les compétences officielles certifiantes (`C.xxx`) et les rituels Scrum.
+  - **La Didactique qualifie les UAs :** Les blocs bruts du flux sont critiqués et qualifiés selon la typologie et la maturité (`UA-Lab` / `tuto-atelier` vs `UA-Tâche` / `tuto-tache`).
 
 ## 3. Grille des 10 Questions d'Élagage Scrum
 Pour chaque activité du flux ou de la session, auditer systématiquement :
@@ -39,25 +39,25 @@ Pour chaque activité du flux ou de la session, auditer systématiquement :
 - `FUSIONNER` (regrouper les doublons) | `DÉPLACER` (repositionner au moment utile).
 - `SUPPRIMER` (sans valeur, redondante ou livrable orphelin) | `COMPLÉTER` (chaînon manquant).
 
-## 4. Typologie des UAs & Structure du Sprint
+## 4. Typologie des UAs & Respect de la Décomposition du Flux Opérationnel
 1. **Qualification didactique :**
-   - **`UA-Tâche` :** Cadrage, formalisation de manifestes, issues, rituels Scrum. **0% théorie.** Slugs normalisés sous `docs/`.
-   - **`UA-Lab` :** Découverte d'un nouveau paradigme du niveau actif. Fournit les 20% fondamentaux, 80% en recherche active. Zéro théorie sur les prérequis des niveaux antérieurs.
-2. **Découpage chronologique en 4 phases :**
-   - **Phase A — Outillage & Méthode :** Environnement, initialisation dépôt, flux de travail, outillage.
-   - **Phase B — Cadrage & Backlog :** Besoins utilisateurs, modélisation ciblée, Sprint Planning, issues.
-   - **Phase C — Réalisation Applicative :** Développement selon l'architecture du niveau, tests.
-   - **Phase D — Clôture & Cérémonies :** Sprint Review, Rétrospective, Refinement, bilan.
+   - **`UA-Tâche` (`maturite: "projet"`, `type: "tuto-tache"`) :** Action opérationnelle, cadrage, initialisation outillée, rituels Scrum. **0% théorie.** Livrables situés aux emplacements racine (`docs/`, `sprints/`, `scrum/`, `src/`).
+   - **`UA-Lab` (`maturite: "lab"` ou `"ua-lab"`, `type: "tuto-atelier"`) :** Découverte pratique guidée d'un nouveau paradigme. En phase `lab` : recherche active sans notions détaillées. En phase `ua-lab` : lab validé sur le terrain avec notions fondamentales détaillées.
+2. **Respect de la décomposition du flux opérationnel :**
+   - La session ne s'organise pas en phases abstraites artificielles qui masqueraient ou regrouperaient arbitrairement les UAs.
+   - **Chaque bloc opérationnel du flux transmis par l'équipe (`flux-travail-s[X].md`) fait directement l'objet d'une Unité d'Apprentissage dédiée (`UA-Lab` ou `UA-Tâche`)**.
+   - Par exemple, dans un flux comportant des blocs successifs intitulés *UA-Lab — Démarche Agile Scrum*, *UA-Lab — Design Thinking : Démarche & Empathie sur Todo List*, *UA-Lab — Design Thinking : Parcours & Prototypage*, *UA-Tâche — Application Projet : Cadrage & Backlog Initial*, et *UA-Tâche — Incrément Maquette & Clôture S0*, **chacun de ces blocs constitue directement une Unité d'Apprentissage dédiée de la session** avec ses tutoriels associés.
+   - L'enchaînement de la session dans `_sessions/S[X].md` reflète directement cette séquence ordonnée d'UAs.
 
 ## 5. Procédure d'Exécution & Plan Artefact
 1. **Lecture & Cartographie :** Charger le flux transmis par le concepteur, `_sessions/S[X].md` et inventorier `_uas/`.
 2. **Arbitrage & Élagage :** Appliquer la matrice de véracité et les 10 questions Scrum.
-3. **Mise à Jour de la Session (`_sessions/S[X].md`) :** Frontmatter `uas:` ordonné, `duree: 80` intacte, phases documentées.
+3. **Mise à Jour de la Session (`_sessions/S[X].md`) :** Frontmatter `uas:` ordonné reflétant directement la séquence des UAs du flux, `duree: 80` (indicatif), description centrée sur l'incrément.
 4. **Production du Plan Artefact :** Documenter l'arbitrage retenu, la matrice d'impact des UAs et la liste des stubs à initialiser.
 
 ## 6. Contrôle Qualité
-- [ ] La durée `duree: 80` est strictement préservée quel que soit le niveau.
+- [ ] La durée (ex: `duree: 80`) est fournie à titre indicatif sans être affichée aux apprenants.
 - [ ] Le document de flux est reçu dynamiquement du concepteur sans présupposer de chemin figé.
 - [ ] Les normes de livrables de l'Agent Autoformation s'imposent à l'Agent Projet (`rules-sync.md`).
-- [ ] Chaque UA est rigoureusement qualifiée en `UA-Tâche` ou `UA-Lab`.
+- [ ] Chaque bloc opérationnel du flux constitue directement une UA qualifiée (`UA-Lab` ou `UA-Tâche`).
 - [ ] Le frontmatter `uas:` de `_sessions/S[X].md` est complet et ordonné.

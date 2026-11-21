@@ -27,7 +27,7 @@ $$\text{Comprendre} \longrightarrow \text{Reproduire} \longrightarrow \text{Exp�
 - **Divulgation progressive :** Ne jamais introduire une notion sans vérifier ses prérequis dans l'UA ou la session. Isoler une difficulté à la fois.
 
 ## 3. Standards Didactiques des Sprints Scrum en N3
-1. **Calibrage Temporel :** Chaque session de formation correspond à un Sprint Scrum calibré à **strictement 80 heures** (10 jours à raison de 8 heures par jour).
+1. **Calibrage Temporel Indicatif :** La durée globale d'une session de formation (standard indicatif de 80 heures / 10 jours ouvrés pour un Sprint Scrum) est fournie à **titre purement indicatif** pour les formateurs et les concepteurs pédagogiques. Elle sert de repère macro pour rythmer les apprentissages et ne doit jamais être affichée ni fragmentée en durées unitaires dans les consignes destinées aux apprenants.
 2. **Branche Git Unique :** L'ensemble des livrables, tâches et UAs du sprint est versionné sur une **branche partagée unique par sprint** (`sprintX`, ex: `sprint1`).
 3. **Ciblage Exclusif du Projet d'Imitation :** Dans toutes les fiches de tutoriels, les consignes et le code cible s'appliquent **exclusivement au Projet d'imitation (*Blog des Lauréats de l'EFP*)**. Le Portfolio Développeur (Projet technique) et le Projet Fil Rouge sont réalisés de manière autonome après l'achèvement du sprint.
 4. **Règle de Pareto 20/80 en Théorie :** Dans toute fiche théorique, le contenu fournit directement les **20% de définitions fondamentales et discriminantes** débloquant 80% de la pratique ; les **80% complémentaires** font l'objet d'une recherche active ciblée de l'apprenant.

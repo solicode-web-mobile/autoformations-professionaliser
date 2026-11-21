@@ -12,7 +12,7 @@ Ce Master Skill est le **chef d'orchestre de l'ingénierie didactique** pour l'e
 2. **Orchestration des compétences de conception** : aiguillage ciblé vers le niveau Macro (Session & Sprint) ou le niveau Micro (Tutoriels & Stubs).
 
 ## 2. Principes Directeurs Inviolables (Socle Tous Niveaux)
-1. **Calibrage Temporel Strict :** Chaque session correspond à un Sprint Scrum calibré à **strictement 80 heures** (10 jours à raison de 8h/jour). La métadonnée `duree: 80` est inviolable.
+1. **Calibrage Temporel Indicatif :** La durée globale d'une session (standard indicatif de 80 heures / 10 jours ouvrés pour un Sprint Scrum) est fournie à **titre purement indicatif** pour les formateurs et concepteurs pédagogiques. Elle sert de repère de cadrage macro et ne doit jamais être affichée ni fragmentée en durées unitaires dans les consignes destinées aux apprenants.
 2. **Pédagogie des 3 Projets :**
    - **Projet 1 — Imitation :** Référence commune guidée pas-à-pas avec le formateur. Les tutoriels rédigés s'appliquent exclusivement à ce projet.
    - **Projet 2 — Technique :** Réalisation autonome par l'apprenant pour reproduire la technique sur son projet individuel (après le sprint).
@@ -30,7 +30,7 @@ Selon la mission demandée, invoquer immédiatement le sous-skill spécialisé :
 ```mermaid
 flowchart TD
     Demande["Demande d'Ingénierie Didactique (N1 / N2 / N3)"] --> Routeur{"Nature du besoin ?"}
-    Routeur -- "Macro : Session, Sprint 80h, Flux réel, Élagage, UAs" --> SP["didactique-session-planner"]
+    Routeur -- "Macro : Session, Flux réel, Élagage, Décomposition UAs" --> SP["didactique-session-planner"]
     Routeur -- "Micro : Séquençage pas-à-pas, Titrage technique, Stubs Jekyll" --> TP["didactique-tutorial-planner"]
     Routeur -- "Aval : Rédaction et synchronisation des fiches tutos" --> TW["tutorial-writer (Master Aval)"]
 ```
@@ -40,7 +40,7 @@ flowchart TD
 - **Besoin Rédactionnel Aval :** Rédiger le corps complet des fiches, injecter `window.pageData` et synchroniser avec les livrables du projet cible ➔ Déléguer à **`tutorial-writer`**.
 
 ## 4. Contrôle Qualité de l'Orchestrateur
-- [ ] Le budget temps de la session est fixé à exactement 80 heures quel que soit le niveau.
+- [ ] La durée de session (indicative : 80 heures) sert de repère macro pour les formateurs sans être affichée aux apprenants.
 - [ ] Le projet d'imitation du niveau actif est la cible exclusive des travaux guidés.
 - [ ] Aucun cours théorique n'est réintroduit pour les prérequis validés aux niveaux antérieurs.
 - [ ] L'aiguillage respecte la frontière étanche : Macro (`session-planner`) vs Micro (`tutorial-planner`).

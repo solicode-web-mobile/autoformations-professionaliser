@@ -29,15 +29,23 @@ $$\text{veille} \longrightarrow \text{lab} \longrightarrow \text{ua-lab} \longri
 
 ---
 
-## 3. Matrice de Correspondance Maturité $\times$ Type
+## 3. Matrice de Correspondance : Niveau UA vs Niveau Tutoriel
 
-| Maturité (`maturite:`) | Typologie (`type:`) | Livrables Attendus & Spécificités EFP |
-| :--- | :--- | :--- |
-| **`lab`** | **`tuto-atelier`** | Atelier pratique guidé en recherche active : **SANS notions de base en détail**. Diaporama Marp (`presentation-[slug].md`) + Fiche de restitution (`[slug].md`) + Journal CLI (`[slug].command.md` si CLI) sous `tutoriels/`. |
-| **`ua-lab`** | **`tuto-atelier`** | Lab **validé et intégré au référentiel EFP** : Plan d'UA spécifié + **Notions de base DONNÉES EN DÉTAIL** (« Notions fondamentales » consolidées). Même structure de livrables. |
-| **`tutoriel`** | **`tuto-notion`** | Concepts théoriques et notions isolées hors projet d'imitation (sous `tutoriels/`, sans Marp, rapport CLI si manipulation). |
-| **`tutoriel`** | **`tuto-code`** | Progression incrémentale $E_{n-1} \to E_n$ sur le projet d'imitation (code sous `src/`, sans Marp, rapport CLI sous `tutoriels/`). |
-| **`projet`** | **`tuto-tache`** | Tâches de projet opérationnelles et rituels Scrum (0% théorie, fichiers racine `docs/`, `sprints/`, `scrum/`, sans Marp, sans CLI). |
+> [!IMPORTANT]
+> **Règle absolue de dissociation :**  
+> `ua-lab` est une valeur de maturité **strictement réservée au niveau Unité d'Apprentissage (`_uas/`)**.  
+> Un tutoriel n'étant pas une UA, la valeur `ua-lab` n'est **jamais** une maturité de tutoriel.  
+> Un tutoriel d'atelier porte toujours la maturité **`maturite: "lab"`** (avec `type: "tuto-atelier"`).
+
+| Niveau d'Entité | Maturité (`maturite:`) | Typologie (`type:`) | Livrables Attendus & Spécificités EFP |
+| :--- | :--- | :--- | :--- |
+| **UA (`_uas/`)** | **`lab`** | **`UA-Lab`** | Unité d'Atelier en cours d'expérimentation amont. |
+| **UA (`_uas/`)** | **`ua-lab`** | **`UA-Lab`** | **Lab validé sur le terrain et intégré au référentiel EFP** : Plan d'UA spécifié avec cours théorique consolidé. |
+| **UA (`_uas/`)** | **`projet`** | **`UA-Tâche`** | Unité opérationnelle de sprint (0% théorie). |
+| **Tutoriel (`_tutos/`)** | **`lab`** | **`tuto-atelier`** | Atelier pratique guidé : diaporama Marp (`presentation-[slug].md`) + fiche atelier (`[slug].md`) + journal CLI (`[slug].command.md` si CLI) sous `tutoriels/`. |
+| **Tutoriel (`_tutos/`)** | **`tutoriel`** | **`tuto-notion`** | Concepts théoriques et notions isolées hors imitation (sous `tutoriels/`, sans Marp, rapport CLI si manipulation). |
+| **Tutoriel (`_tutos/`)** | **`tutoriel`** | **`tuto-code`** | Progression incrémentale $E_{n-1} \to E_n$ sur le projet d'imitation (code sous `src/`, sans Marp, rapport CLI sous `tutoriels/`). |
+| **Tutoriel (`_tutos/`)** | **`projet`** | **`tuto-tache`** | Tâches de projet opérationnelles et rituels Scrum (0% théorie, fichiers racine `docs/`, `sprints/`, `scrum/`, sans Marp, sans CLI). |
 
 ---
 
@@ -96,16 +104,20 @@ L'Agent Rédacteur conçoit le cadre de l'atelier sans prémâcher le travail :
 
 ---
 
-### Phase 3 : Maturité `ua-lab` (Lab Validé & Intégré au Référentiel de Compétences EFP)
+### Phase 3 : Validation de l'Atelier & Promotion de l'UA en `maturite: "ua-lab"`
 - **Déclencheur :** Notification `statut_realisation: "realise"`.
-- **Frontmatter Jekyll :**
+- **Frontmatter de l'UA (`_uas/`) :** L'Unité d'Apprentissage est promue au statut certifiant :
   ```yaml
   maturite: "ua-lab"
+  ```
+- **Frontmatter du Tutoriel (`_tutos/`) :** Le tutoriel conserve sa maturité d'atelier pratique `lab` et passe au statut synchronisé :
+  ```yaml
+  maturite: "lab"
   type: "tuto-atelier"
   statut_realisation: "synchronise"
   ```
 - **Enrichissements apportés par l'Agent Rédacteur :**
   1. **Audit des livrables :** Vérification de la véracité technique et de la qualité du support Marp.
-  2. **Spécification du Plan de l'UA-Lab :** Structuration formelle de la fiche UA dans `_uas/` (articulation des tâches, alignement sur les compétences certifiantes `C.xxx`).
-  3. **Notions de base données en détail :** Rédaction de la section **« Notions fondamentales »** : cours théorique rigoureux et synthétique (les 20% discriminants vérifiés sur le terrain).
+  2. **Spécification du Plan de l'UA-Lab :** Structuration formelle de la fiche UA dans `_uas/` (articulation des tâches, alignement sur les compétences certifiantes `C.xxx`, promotion en `maturite: "ua-lab"`).
+  3. **Notions de base données en détail :** Rédaction de la section **« Notions fondamentales »** dans le tutoriel : cours théorique rigoureux et synthétique (les 20% discriminants vérifiés sur le terrain).
   4. Conservation des pistes d'approfondissement dans « Recherches à effectuer ».
