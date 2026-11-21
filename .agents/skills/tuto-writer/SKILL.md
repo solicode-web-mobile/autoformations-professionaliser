@@ -59,6 +59,9 @@ Tous les rédacteurs `tutorial-*-writer` appliquent obligatoirement ces 12 règl
 10. **Neutralité Technologique :** Désigner les frameworks par leur nom générique (ex: `Laravel`, `Alpine.js`) sans numéro de version éphémère dans le tutoriel (version définie dans le `README.md` du projet).
 11. **Exclusion des Outils Formateur :** Le dossier `flux-travail/` ne doit jamais être transmis aux apprenants ni figurer dans les commandes `mkdir`.
 12. **Zéro Capture d'Écran :** Tout livrable est du code source ou du markdown versionné.
+13. **Zéro Justification d'Exemple Support & Zéro Solution Fictive :**
+    - Interdiction formelle de communiquer aux apprenants la justification didactique du choix d'un cas d'usage support (ex: Todo List) ou de leur demander de justifier ce choix.
+    - Ne déclarer aucun bloc `livrables:` en frontmatter tant que le tutoriel est `statut_realisation: "a_realiser"` pour éviter des liens brisés. La traçabilité des livrables s'opère via un fichier `version.yml` à la racine de leur dossier lors de la réalisation.
 
 ---
 

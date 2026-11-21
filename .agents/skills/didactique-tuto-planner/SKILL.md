@@ -34,13 +34,13 @@ Expert du niveau **Micro (Tutoriels & Progression)** opérant de façon généri
    - Unité d'Apprentissage : `_uas/[domaine]/UA.XXX.YY.md` (`gabarit-ua.md`).
 2. **Fichiers Stubs dans `_tutos/` :** Chaque tutoriel planifié doit être matérialisé immédiatement par un fichier stub réservant la route Jekyll :
    - Emplacement : `_tutos/[Domaine]/[UA]/[Code-Tuto]/[slug].md`.
-   - Frontmatter complet : `layout: tuto`, `tuto_id:`, `maturite:`, `type:`, `simplified: true`, `en_construction: true`. Corps vierge.
+   - Frontmatter complet : `layout: tuto`, `tuto_id:`, `ua:`, `type:`, `simplified: true`, `en_construction: true` (sans bloc `livrables:` fictif tant que non réalisé). Corps vierge.
 3. **Contrat avec `tuto-writer` :** `didactique-tuto-planner` livre la structure fermée et les stubs ; `tuto-writer` n'a plus qu'à rédiger le contenu sans jamais créer les entités.
 
 ## 4. Procédure Pas-à-Pas
 1. **Cartographie :** Comparer dossier de départ et livrable final pour isoler les incréments techniques.
 2. **Sas d'Atterrissage :** Insérer le sas « Bien Démarrer » si nouvel outil/runtime/langage.
-3. **Découpage Séquentiel & Qualification Typologique :** Ordonner les paliers $E_{n-1} \to E_n$, qualifier selon `maturation-et-typologie-ua-tuto.md` et formuler les titres équilibrés.
+3. **Découpage Séquentiel & Qualification Typologique :** Ordonner les paliers $E_{n-1} \to E_n$, qualifier selon `maturation-et-typologie-ua-tuto.md` et formuler les titres équilibrés sans entité d'exemple support.
 4. **Rédaction du Plan :** Rédiger selon `resources/gabarit-plan-session.md` avec frontmatter d'audit (`audite: true`, `statut: "audité et validé"`).
 5. **Alignement Référentiel & Stubs :** Créer/synchroniser `_sessions/`, `_domaines/`, `_uas/` et générer les stubs sous `_tutos/`.
 
@@ -48,7 +48,9 @@ Expert du niveau **Micro (Tutoriels & Progression)** opérant de façon généri
 - [ ] Chaînage déterministe $E_{n-1} \to E_n$ sans rupture cognitive quel que soit le niveau.
 - [ ] Typologie qualifiée conforme à `maturation-et-typologie-ua-tuto.md` (`tuto-atelier`, `tuto-tache`, `tuto-notion`, `tuto-code`).
 - [ ] Titres H3 100% techniques sans entité métier du cas exemple.
+- [ ] Zéro justification didactique d'exemples supports (ex: Todo List) demandée à l'apprenant.
+- [ ] Zéro livrable inexistant déclaré en frontmatter tant que l'atelier est à l'état à réaliser.
 - [ ] Sas « Bien Démarrer » inséré pour tout nouvel outil/runtime/langage.
 - [ ] Granularité respectée : 1 UA par domaine (2 max à l'introduction).
 - [ ] Entités Jekyll (`_sessions/`, `_domaines/`, `_uas/`) créées et alignées.
-- [ ] Fichiers stubs créés sous `_tutos/` avec corps vierge, `maturite:`, `type:` et `en_construction: true`.
+- [ ] Fichiers stubs créés sous `_tutos/` avec corps vierge, `type:` et `en_construction: true`.

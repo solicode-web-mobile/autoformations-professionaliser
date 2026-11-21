@@ -1,7 +1,7 @@
 ---
 layout: tuto
 title: "Comprendre l'approche Agile et le cadre Scrum"
-sous_titre: "Assimiler la rupture Agile vs Cascade, les 3 rôles Scrum, les Sprints et l'incrément sur le projet d'imitation"
+sous_titre: "Assimiler la rupture Agile vs Cascade, les 3 rôles Scrum et les 5 événements sur l'application TodoList"
 slug: "comprendre-scrum"
 slug_domaine: "scrum"
 slug_ua: "initiation-scrum"
@@ -28,41 +28,86 @@ livrables:
 ---
 
 ## 1. Travail à faire
-Assimiler les concepts directeurs de l'Agilité et la mécanique opérationnelle du cadre Scrum pour piloter le projet d'imitation *Blog des Lauréats*. Vous devez formaliser une fiche technique d'atelier expliquant la rupture avec le cycle en V et les responsabilités des 3 rôles Scrum, puis restituer ces acquis sous forme d'un diaporama synthétique au format Marp.
+
+Dans cet atelier d'initiation, vous devez appréhender la démarche Agile et le fonctionnement opérationnel du cadre Scrum.  
+Pour vous guider, une solution complète et commentée a été réalisée sur l'application didactique **TodoList**.
+
+Votre travail consiste à :
+1. **Consulter la solution de référence :** Prenez connaissance de la fiche technique et du diaporama de l'application TodoList disponibles dans l'encadré de consultation ci-dessous.
+2. **Transposer la démarche sur votre Projet Technique individuel :**
+   - Comparer l'impact du cycle en V et de l'approche Agile sur votre propre projet.
+   - Identifier et cartographier les 3 rôles Scrum (Product Owner, Scrum Master, Développeurs) adaptés à votre contexte d'équipe.
+   - Définir le rythme de vos sprints et le format de votre incrément logiciel.
+3. **Formaliser vos livrables :** Rédiger votre fiche de synthèse et votre support de présentation dans votre espace de travail personnel : `tutoriels/scrum/initiation-scrum/comprendre-scrum/`.
 
 ## 2. Notions fondamentales
-- **Rupture Agile vs Approche Traditionnelle en Cascade (Cycle en V) :**
-  - Le cycle en V fige l'intégralité du périmètre initialement (effet tunnel), reportant les retours utilisateurs en fin de cycle.
-  - L'approche Agile privilégie des itérations courtes et adaptatives, produisant un incrément visible et testable à chaque itération.
-- **Les 4 Valeurs du Manifeste Agile (2001) :**
-  - Les individus et leurs interactions de préférence aux processus et aux outils.
-  - Un logiciel opérationnel de préférence à une documentation exhaustive.
-  - La collaboration avec les clients de préférence à la négociation contractuelle.
-  - L'adaptation au changement de préférence au suivi d'un plan.
-- **Les 3 Rôles Centraux de Scrum :**
-  - **Product Owner (PO) :** Porte la vision produit, représente les utilisateurs finaux et ordonne les priorités dans le Product Backlog (rôle tenu par le Groupe 1 de la promotion).
-  - **Scrum Master (SM) :** Facilitateur méthodologique, garant du respect du cadre Scrum et de la levée des blocages.
-  - **Développeurs :** Équipe pluridisciplinaire responsable de la conception, du code et des tests techniques.
-- **Sprint et Incrément :**
-  - **Sprint :** Période à durée fixe (timebox de 80 heures / 10 jours ouvrés) pour livrer un ensemble cohérent de fonctionnalités.
-  - **Incrément :** Somme des éléments du backlog achevés et vérifiés selon la *Definition of Done* (DoD).
 
-## 3. Application pratique sur le Blog des Lauréats
-- **Organisation de l'équipe :**
-  - Le Groupe 1 incarne le Product Owner et statue sur les arbitrages fonctionnels.
-  - Les Groupes 2, 3 et 4 assurent les rôles de Développeurs et de Scrum Master en alternance.
-- **Cadence de travail :**
-  - Sprints calibrés à strictement 80 heures (10 jours ouvrés).
-- **Règles d'engagement :**
-  - Transparence intégrale du code sur GitHub via la branche unique `sprint0`.
-  - Contrôle qualité systématique avant validation de chaque étape.
+### A. Rupture Agile vs Approche Traditionnelle en Cascade (Cycle en V)
+- **Le cycle en V (Cascade) :**
+  - Le périmètre est figé au départ à travers un cahier des charges rigide.
+  - Le client et les utilisateurs découvrent le logiciel uniquement à la fin (effet tunnel).
+  - Tout changement en cours de route entraîne des coûts élevés et des retards importants.
+- **L'approche Agile :**
+  - Le travail est découpé en cycles courts et réguliers appelés **Sprints**.
+  - À chaque fin de cycle, l'équipe produit un **incrément logiciel opérationnel**, visible et testable.
+  - Les retours utilisateurs sont intégrés en continu pour faire évoluer le produit sans friction.
 
-## 4. Livrables & Critères de validation
-- **Livrables attendus :**
-  - Fiche technique d'atelier : `ua-lab/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md sur la branche sprint0`.
-  - Diaporama Marp de restitution : `ua-lab/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md sur la branche sprint0`.
-- **Critères de validation :**
-  - [ ] La fiche explicite clairement la différence entre cycle en V et démarche agile itérative.
-  - [ ] Les 3 rôles Scrum et les 5 événements sont définis avec précision.
-  - [ ] La timebox de 80 heures et la gouvernance avec le Groupe 1 (PO) sont contractualisées.
-  - [ ] Le support Marp respecte les standards de présentation Solicode.
+### B. Les 4 Valeurs du Manifeste Agile (2001)
+1. **Les individus et leurs interactions** avant les processus et les outils.
+2. **Un logiciel opérationnel** avant une documentation exhaustive.
+3. **La collaboration avec les clients** avant la négociation contractuelle stricte.
+4. **L'adaptation au changement** avant le suivi rigide d'un plan initial.
+
+### C. Les 3 Rôles Centraux de Scrum
+- **Le Product Owner (PO) :**
+  - Porte la vision produit et représente les besoins des utilisateurs.
+  - Rédige et priorise le Product Backlog selon la valeur métier.
+  - Accepte ou rejette les fonctionnalités développées.
+- **Le Scrum Master (SM) :**
+  - Garantit l'application des règles et des valeurs du cadre Scrum.
+  - Facilite les réunions et aide l'équipe à s'organiser de manière autonome.
+  - Élimine les obstacles techniques ou méthodologiques qui ralentissent l'équipe.
+- **L'Équipe de Développement :**
+  - Équipe pluridisciplinaire responsable de la conception, du code et des tests.
+  - Décide de la façon de réaliser techniquement les fonctionnalités retenues.
+  - S'engage collectivement sur la qualité de l'incrément livré.
+
+### D. Les 5 Événements Fondamentaux
+1. **Le Sprint :** Le conteneur temporel régulier dans lequel tous les autres événements prennent place.
+2. **Le Sprint Planning :** Réunion d'ouverture pour définir l'objectif du sprint (*Sprint Goal*) et sélectionner les éléments du backlog à réaliser.
+3. **Le Daily Scrum :** Point synchronisé quotidien de 15 minutes pour inspecter l'avancement et lever les blocages.
+4. **La Sprint Review :** Démonstration en direct de l'incrément fonctionnel aux parties prenantes pour recueillir leurs retours.
+5. **La Sprint Retrospective :** Réunion d'amélioration continue pour analyser le fonctionnement interne de l'équipe et adopter 2 à 3 actions correctives.
+
+## 3. Application pratique sur le cas d'étude (Exemple TodoList)
+
+Pour visualiser concrètement ces principes sur un cas épuré, étudions le développement d'une application **TodoList** (gestionnaire de tâches) :
+
+- **Pourquoi le cycle en V échoue sur une TodoList :**
+  - Si vous spécifiez toutes les fonctionnalités à l'avance (sous-tâches, synchronisation cloud, rappels), vous livrez après des mois un outil trop complexe alors que l'utilisateur voulait simplement cocher une tâche rapidement sur mobile.
+  - En Agile, le premier sprint livre l'essentiel : ajouter et afficher une tâche. Les besoins réels (ex : filtrer les tâches actives) sont constatés dès la première démonstration.
+- **Les Rôles appliqués à la TodoList :**
+  - *Product Owner :* Définit l'expérience utilisateur idéale et priorise les actions d'ajout et de suppression.
+  - *Scrum Master :* S'assure que le tableau de suivi Kanban est à jour et que l'équipe ne se disperse pas.
+  - *Développeurs :* Conçoivent l'interface HTML/CSS et le comportement JavaScript réactif.
+
+{% include tuto-livrables.html %}
+
+## 4. Pistes de recherche active
+
+Pour préparer votre transposition sur votre Projet Technique, investiguez les questions suivantes :
+1. Quels sont les 3 risques majeurs identifiés si votre projet technique était développé selon un cycle en V classique ?
+2. Dans le cadre de votre formation, qui jouera le rôle de Product Owner (partie prenante / formateur) pour arbitrer vos choix de fonctionnalités ?
+3. Quelle est la plus petite fonctionnalité de votre projet qui constitue un incrément logiciel utilisable dès la fin d'un premier sprint ?
+
+## 5. Livrables attendus & Critères d'acceptation
+
+### Livrables à produire sur votre Projet Technique
+- **Fiche technique de cadrage :** `tutoriels/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md`
+- **Diaporama de présentation :** `tutoriels/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md`
+
+### Critères d'acceptation
+- [ ] La comparaison entre cycle en V et démarche itérative est appliquée de façon concrète à votre propre projet.
+- [ ] Les 3 rôles Scrum sont précisément affectés et décrits pour votre équipe de développement.
+- [ ] Les 5 rituels Scrum sont planifiés avec leurs objectifs spécifiques.
+- [ ] Le support de présentation est rédigé au format Marp (16:9) sans surcharge de texte.

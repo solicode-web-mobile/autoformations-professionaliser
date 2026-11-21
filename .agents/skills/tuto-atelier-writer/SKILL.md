@@ -36,9 +36,9 @@ Frontmatter : `layout: tuto`, `title:`, `sous_titre:`, `slug:`, `permalink:`, `t
 - [Concepts clés et documentations officielles à investiguer]
 
 ## 5. Livrables attendus & Critères de validation
-- **Fiche technique d'atelier :** `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md`
-- **Diaporama Marp de restitution :** `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/presentation-[slug-tuto].md`
-- **Rapport CLI :** `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].command.md` (si commandes exécutées)
+- **Fiche technique d'atelier :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md`
+- **Diaporama Marp de restitution :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/presentation-[slug-tuto].md`
+- **Rapport CLI :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].command.md` (si commandes exécutées)
 ```
 
 ---
@@ -52,3 +52,5 @@ Frontmatter : `layout: tuto`, `title:`, `sous_titre:`, `slug:`, `permalink:`, `t
 6. **Travail à Faire Différencié (Logique vs Code) :**
    - *Domaines Logiques (Scrum, UML, Design Thinking, Architecture) :* Le Travail à faire prescrit à l'apprenant exige de **transposer la méthode sur son propre Projet Technique individuel**.
    - *Domaines de Code (Laravel, Alpine.js, Composants web) :* Le Travail à faire consiste à **implémenter concrètement le code** de l'exemple didactique (ex: TodoList) et fournir le code source fonctionnel.
+7. **Zéro Livrable Inexistant en Frontmatter :** Ne déclarer aucun bloc `livrables:` tant que le tutoriel est `statut_realisation: "a_realiser"` pour éviter des cartes de solution brisées.
+8. **Zéro Justification d'Exemple Support :** Ne jamais demander à l'apprenant de justifier le choix didactique d'un exemple support (ex: Todo List). La justification réside uniquement dans `flux-travail-s[X].md`.

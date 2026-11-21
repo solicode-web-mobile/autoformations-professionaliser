@@ -43,10 +43,11 @@ Pour chaque atelier à réaliser, `tuto-livrable-atelier-writer` coordonne l'éc
    - Injecter les **notions fondamentales consolidées** dans le corps du tutoriel.
 4. **Zéro Commande Git dans `.command.md` :** Ne consigner que les commandes techniques de l'atelier (jamais `git add`, `commit`, `push`).
 5. **Maintien du Travail à Faire Transposable :** Lors de la promotion en `tuto-atelier-notions`, maintenir un Travail à faire clair pour l'apprenant : transposition sur son propre projet technique individuel pour les domaines logiques (Scrum, UML, Architecture), ou implémentation concrète du code de l'exemple pour les domaines de développement.
+6. **Manifeste `version.yml` Obligatoire :** Créer obligatoirement un fichier `version.yml` à la racine du dossier de livrables (`ua-lab/.../version.yml`) recensant chaque livrable produit et sa version (ex: `fichier.md: "1.0.0"`). Le champ `livrables:` du tutoriel n'est renseigné qu'après création effective de ces fichiers.
 
 ---
 
 # 5. Procédure Pas-à-Pas
 1. **Étape 1 — Analyse du Sujet :** Lire la fiche `_tutos/.../[slug-tuto].md` rédigée par `tuto-atelier-writer`.
-2. **Étape 2 — Génération des Livrables dans `ua-lab/` :** Créer le sous-dossier et rédiger `[slug-tuto].md`, `presentation-[slug-tuto].md` et `[slug-tuto].command.md` avec le skill thématique de domaine.
-3. **Étape 3 — Promotion du Tutoriel :** Modifier le tutoriel `_tutos/` en `type: "tuto-atelier-notions"` et enrichir le contenu avec les notions fondamentales.
+2. **Étape 2 — Génération des Livrables dans `ua-lab/` :** Créer le sous-dossier, rédiger les livrables (`.md`, `presentation-*.md`, `.command.md`) et générer `version.yml` avec les versions sémantiques.
+3. **Étape 3 — Promotion du Tutoriel :** Modifier le tutoriel `_tutos/` en `type: "tuto-atelier-notions"`, ajouter le bloc `livrables:` validé et enrichir le contenu avec les notions fondamentales.

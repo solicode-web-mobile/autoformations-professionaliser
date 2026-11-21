@@ -19,7 +19,7 @@ notions:
   - "Les 3 artéfacts et leurs engagements : Product Backlog, Sprint Backlog, Incrément et Definition of Done"
   - "Timebox de sprint et feuille d'engagement d'équipe"
 livrable: >
-  Fiches d'atelier technique dans tutoriels/scrum/initiation-scrum/ avec leurs diaporamas Marp associés.
+  Fiches de référence d'ateliers sous ua-lab/scrum/initiation-scrum/ (cas d'étude TodoList) avec leurs diaporamas Marp associés, et fiches de transposition produites par l'apprenant sur son projet technique individuel dans tutoriels/scrum/initiation-scrum/.
 travail_a_faire: >
-  Assimiler le cadre méthodologique Scrum, rédiger les guides d'atelier et leurs diaporamas Marp, contractualiser l'organisation d'équipe et signer la feuille de route du Sprint 0.
+  Assimiler le cadre méthodologique Scrum à partir de la solution de référence TodoList, transposer la démarche agile sur son projet technique individuel, formaliser les fiches d'atelier et diaporamas de restitution, et définir les critères d'acceptation et la Definition of Done.
 ---

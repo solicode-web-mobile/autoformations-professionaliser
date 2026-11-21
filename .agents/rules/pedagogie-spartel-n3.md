@@ -59,6 +59,12 @@ $$\text{Comprendre} \longrightarrow \text{Reproduire} \longrightarrow \text{Exp�
     - Afin d'impliquer activement l'apprenant et d'évaluer son assimilation, la fiche de tutoriel formule obligatoirement un **Travail à faire** différencié :
       - **Domaines Logiques & Méthodologiques (Scrum, UML, Design Thinking, Architecture) :** L'apprenant consulte la solution TodoList pour comprendre les concepts, puis doit obligatoirement **transposer et appliquer la démarche sur son propre Projet Technique individuel** (choisi au début de sa formation). Ses livrables sont déposés dans son espace `tutoriels/[slug-domaine]/...`.
       - **Domaines de Codage & Implémentation (Laravel, Alpine.js, Composants front) :** L'apprenant n'a pas à transposer sur un autre projet : il lui suffit d'**implémenter concrètement le code** de l'exemple didactique (TodoList) et de fournir le code source fonctionnel ainsi que son journal de commandes.
+17. **Interdiction de Demander la Justification des Exemples Supports aux Apprenants :**
+    - La justification didactique du choix d'un cas d'usage épuré (tel que la Todo List) réside exclusivement dans le flux de travail opérationnel destiné au formateur et au concepteur (`flux-travail-s[X].md`).
+    - Il est formellement interdit de communiquer cette justification aux apprenants ou de leur demander de justifier ce choix dans leurs objectifs d'apprentissage, leurs consignes ou leurs critères de réussite.
+18. **Interdiction de Livrables Inexistants en Phase 'À Réaliser' & Traçabilité `version.yml` :**
+    - Tant qu'un tutoriel est au stade initial (`statut_realisation: "a_realiser"`), il est formellement interdit de déclarer des fichiers inexistants dans le champ `livrables:` de son frontmatter Jekyll afin d'éviter l'affichage prématuré de solutions de référence et de liens brisés.
+    - Lors de la réalisation effective des livrables (passage à `statut_realisation: "realise"`), un fichier `version.yml` doit être systématiquement créé à la racine du dossier contenant les livrables, recensant chaque fichier produit et sa version sémantique (ex: `demarche-design-thinking.md: "1.0.0"`).
 
 ## 4. Gestion Méthodique des Corrections
 Lorsqu'une erreur ou incohérence est constatée dans un code ou un livrable :
