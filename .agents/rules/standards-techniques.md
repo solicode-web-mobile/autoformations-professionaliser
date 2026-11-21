@@ -21,34 +21,29 @@ trigger: always_on
   - Toujours **laisser une ligne vide** avant d'ouvrir un bloc de code et une ligne vide après sa fermeture.
   - Le contenu textuel ou Markdown inséré dans le bloc doit être calé à la marge gauche (colonne 0), sans indentation artificielle.
 
-## 3. Éditeur de Code & Livrables
+## 3. Éditeur de Code & Gouvernance Normative des Livrables
 - **Éditeur interactif :** Dès qu'un tutoriel utilise des champs `data_*`, insérer systématiquement le script `window.pageData` sous le Front Matter. Isoler le code de préparation pour que l'onglet de travail de l'apprenant reste vierge.
 - **Médias :** Stockage obligatoire dans `images-tutos/[Domaine]/[ID_Tuto]/[nom.ext]`.
 - **Livrables :** Le livrable est toujours un **dépôt GitHub** ou un fichier `.md` de commandes. **Interdiction stricte de captures d'écran comme livrable.**
-- **Règle Universelle des Chemins de Livrables (`tutoriels/`) :**
-  Tout livrable d'apprentissage doit obligatoirement être spécifié avec son chemin relatif complet sous l'arborescence standardisée :
-  `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`
-  - **Fiche théorique :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md` sur la branche active du sprint.
-  - **Atelier pratique ou exemple guidé :** Déposé obligatoirement sous `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` (fichiers de code, manifestes, documentation). **Interdiction formelle d'utiliser un dossier racine `labs/`.**
-  - **Tâche de projet opérationnelle :** Livrables positionnés aux emplacements racine officiels (`src/`, `.agents/`, `rapport/`, `presentations/`, etc.) ET journal des commandes dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].command.md`.
-  - **Interdiction formelle des formulations vagues :** Ne jamais écrire de mentions floues telles que *« journal d'apprentissage personnel »* sans fournir le chemin complet et explicite du fichier à commiter.
-  - **Interdiction des fichiers `README.md` au niveau des tutoriels unitaires :** Les dossiers de tutoriels unitaires (`tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`) ne doivent pas comporter de fichier `README.md`. Le document technique principal est directement `[slug-tuto].md` accompagné de son diaporama Marp `presentation-[slug-tuto].md`. Les fichiers `README.md` sont réservés aux dossiers structurels parents (`tutoriels/`, `[slug-domaine]/`, `[slug-ua]/`).
-- **Règle de Journalisation des Commandes :**
-  - Dès qu'un tutoriel implique la saisie de commandes en ligne de commande (CLI / Shell), l'apprenant doit obligatoirement consigner ses commandes dans le fichier standardisé `[slug-tuto].command.md` déposé dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` sur la branche de sprint active.
-  - Dans la fiche de tutoriel, les commandes du journal sont présentées directement sous la forme d'un bloc ```` ```bash ```` (sans double encapsulation ```` ````markdown ````).
-  - Le journal ne consigne que les commandes opérationnelles utiles de la tâche : **interdiction formelle d'y inclure les commandes Git (`git add`, `git commit`, `git push`)**.
-  - **S'il n'y a aucune commande CLI à exécuter dans le tutoriel (travail purement rédactionnel ou d'édition dans l'IDE), ne pas citer cette partie** (aucun fichier journal ni étape de journalisation).
-  - **Interdiction formelle des étapes de Commit / Push :** Interdiction d'ajouter une étape directive de commit ou push (`git add`, `git commit`, `git push`) à la fin des tutoriels. Les apprenants N3 maîtrisent déjà le cycle de versionnement Git et gèrent leurs commits de manière autonome.
-- **Environnement d'Exécution & Commandes CLI en N3 :**
-  - L'environnement de travail officiel en Niveau N3 est **Windows (PowerShell)** pour tous les développements (Laravel, Git, GitHub CLI, Artisan, tests).
-  - L'environnement **Linux (Bash)** est strictement réservé au domaine de **déploiement** (serveurs distants, conteneurisation).
-  - Les commandes CLI fournies aux apprenants doivent fonctionner nativement sous Windows PowerShell tout en adoptant la syntaxe la plus familière et proche possible des standards Linux :
-    - Conserver systématiquement **`mkdir`** (`mkdir dossier`, `mkdir chemin/vers/dossier` sans option `-p` inutile sous PowerShell, et `mkdir dossier1, dossier2` pour plusieurs dossiers).
-    - Pour créer un fichier vide, utiliser la redirection standard **`echo "" > <fichier>`** (proscrire `touch` non reconnu par PowerShell et proscrire `New-Item`).
+- **Référentiel Central des Livrables & Typologie :**
+  L'organisation physique de tous les livrables sur le poste de l'apprenant est gouvernée de manière centralisée et exclusive par les documents de référence normatifs :
+  - **Identité de l'Agent Rédacteur :** `.agents/rules/persona.md` (définit l'**Agent de Rédaction de l'Autoformation**, alias `redacteur-autoformation`). L'agent miroir qui réalise les travaux sur le projet cible est l'**Agent Réalisation de Sprint** (`realisation-sprint`).
+  - **Arborescence du Poste Apprenant :** `.agents/references/organisation-livrables.md` (cartographie complète pour N1, N2 et N3 : `tutoriels/`, `src/`, `docs/conception/`, `sprints/`, `scrum/`, `rapport/`, `presentations/`).
+  - **Typologie des UAs et Tutoriels :** `.agents/references/typologie-uas-tutoriels.md` (définit les 3 types d'UAs et les 4 types de tutoriels : `tuto-lab`, `tuto-tache`, `tuto-notion`, `tuto-code`).
+  - **Stratégie Git & Commits :** `.agents/references/gitflow.md` (branches `sprint[N]`, commits atomiques conventionnels, interdiction formelle de commit/push automatique par l'Agent IA).
+- **Règles d'Exclusion et de Structuration Formelle :**
+  - **Suppression du dossier `issues/` :** Les tâches de développement sont gérées au niveau du Sprint Planning dans `sprints/sprint-[N].md`.
+  - **Règle Unique du fichier `README.md` dans `tutoriels/` :** Requis uniquement à la racine `tutoriels/README.md`. Interdiction formelle dans les sous-dossiers de domaines, d'UAs ou de tutoriels unitaires.
+  - **Interdiction formelle du dossier racine `labs/`.**
+- **Règle du Journal des Commandes CLI (`[slug-tuto].command.md`) :**
+  - Le journal des commandes représente le **rapport d'exécution technique du tutoriel**.
+  - Requis **uniquement** pour les `tuto-lab`, `tuto-notion` et `tuto-code` lorsqu'ils comportent des commandes terminal.
+  - **Formellement proscrit pour les `tuto-tache`** (dont les livrables d'ingénierie résident directement aux emplacements racine du projet).
+  - Interdiction absolue d'y inclure les commandes Git (`git add`, `git commit`, `git push`).
 - **Consultation et Synchronisation du Référentiel Physique (`.sync/rules-sync.md`) :**
   Le Master Skill **`tutorial-writer`** détient l'autorité exclusive d'inspection et de synchronisation avec le dépôt réel du projet cible (configuré ci-dessus ou via `.sync/rules-sync.md`).
   Les échanges et le versioning inter-agents sont formellement régis par le contrat **`<projet-cible>/.sync/rules-sync.md`** :
-  - **L'Agent Réalisation (Agent Projet) :** Développe les livrables, maintient les numéros de version sémantique exclusivement dans les fichiers `version.yml` logés à l'intérieur du dossier `.sync/` (interdiction stricte de créer des `version.yml` dans `tutoriels/`, `src/`, etc.), et notifie la réalisation dans le front-matter du tutoriel source (`_tutos/`) avec `sprint`, `statut_realisation: "realise"` et la liste des `livrables` (chemins et versions).
+  - **L'Agent Réalisation de Sprint (`realisation-sprint`) :** Développe les livrables, maintient les numéros de version sémantique exclusivement dans les fichiers `version.yml` logés à l'intérieur du dossier `.sync/` (interdiction stricte de créer des `version.yml` dans `tutoriels/`, `src/`, etc.), et notifie la réalisation dans le front-matter du tutoriel source (`_tutos/`) avec `sprint`, `statut_realisation: "realise"` et la liste des `livrables` (chemins et versions).
   - **L'Agent Autoformation (`tutorial-writer`) :** Consulte systématiquement `.sync/rules-sync.md` pour interagir avec l'Agent Réalisation, compare les versions déclarées dans le front-matter du tutoriel source avec celles de `.sync/.../version.yml`. Si une mise à jour est détectée, il actualise le contenu didactique dans Jekyll, aligne les versions dans le front-matter et bascule le statut à `synchronise` (ou `a_adapter` si une discordance majeure est détectée).
   - **Adaptation mutuelle :** En cas d'incohérence, si la pratique du projet réel valide une solution plus pertinente, le tutoriel est adapté pour refléter la réalité ; si le livrable est incomplet, l'Agent Projet corrige le livrable dans `tutoriels/`.
 

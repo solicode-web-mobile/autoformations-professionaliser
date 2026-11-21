@@ -1,12 +1,16 @@
 ---
 name: tutorial-lab-writer
-description: Conçoit, structure et rédige les tutoriels d'ateliers pratiques guidés pour les Unités d'Apprentissage à maturité UA-Lab (Notions fondamentales, Recherche active, Pratique guidée sur projet cible, Prompts et Skills RIO ciblés).
-version: 2.1.0
+description: Conçoit, structure et rédige les tutoriels d'ateliers pratiques guidés pour les Unités d'Apprentissage à maturité UA-Lab (tuto-lab, Notions fondamentales, Recherche active, Pratique guidée sur projet cible, Diaporama Marp, Prompts et Skills RIO ciblés).
+version: 2.2.0
 ---
 
 # 1. Mission & Structure Flexible
-Rédacteur technique et pédagogique de l'écosystème `tutorial-*-writer`, dédié aux **`UA-Lab`** (assimilation conceptuelle, modélisation UML/schémas, architecture, frameworks, outillage IA).
-Applique le socle transversal et la synchronisation gouvernés par [tutorial-writer](../tutorial-writer/SKILL.md).
+Rédacteur technique et pédagogique de l'écosystème `tutorial-*-writer`, dédié aux fiches **`UA-Lab`** (`tuto-lab` : assimilation conceptuelle, modélisation UML/schémas, architecture, frameworks, outillage IA).
+Applique le socle transversal, l'organisation des livrables et la synchronisation gouvernés par [tutorial-writer](../tutorial-writer/SKILL.md), [.agents/references/organisation-livrables.md](../../references/organisation-livrables.md) et [.agents/references/typologie-uas-tutoriels.md](../../references/typologie-uas-tutoriels.md).
+- **Livrables canoniques d'un `tuto-lab` :**
+  1. Fiche didactique : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md`
+  2. Diaporama Marp : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/presentation-[slug-tuto].md`
+  3. Rapport d'exécution CLI : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].command.md` (si commandes CLI exécutées).
 
 Une `UA-Lab` comporte **entre 2 et 4 tâches modulaires** selon les acquis :
 $$\text{[Théorie essentielle (Optionnelle)]} \longrightarrow \text{Pratique Cible (Obligatoire)} \longrightarrow \text{[Création de Prompt(s) (Si flux récurrent)]}$$
@@ -17,8 +21,8 @@ $$\text{[Théorie essentielle (Optionnelle)]} \longrightarrow \text{Pratique Cib
 ---
 
 # 2. Déclenchement & Limites
-- **Activer :** Ateliers `UA-Lab` ; modélisation UML (Mermaid) ; ateliers agiles Scrum (User Stories INVEST, Product Backlog) ; dossiers d'architecture (ADR) ; prompts directifs RIO.
-- **Ne PAS activer :** Code incrémental pas-à-pas ➔ `tutorial-code-writer` | Tâches de projet / cérémonies sans théorie ➔ `tutorial-task-writer` | Planification globale ➔ `tutorial-planer` | Gouvernance & synchronisation ➔ `tutorial-writer`.
+- **Activer :** Ateliers `UA-Lab` (`tuto-lab`) ; modélisation UML (Mermaid) ; ateliers agiles Scrum (User Stories INVEST, Product Backlog) ; dossiers d'architecture (ADR) ; prompts directifs RIO.
+- **Ne PAS activer :** Code incrémental pas-à-pas ➔ `tutorial-code-writer` | Tâches de projet / cérémonies sans théorie ➔ `tutorial-task-writer` | Planification globale ➔ `didactique-tutorial-planner` | Gouvernance & synchronisation ➔ `tutorial-writer`.
 
 ---
 
@@ -36,6 +40,7 @@ Frontmatter commun : `layout: tuto`, `title:`, `sous_titre:`, `slug:`, `permalin
 - [Points d'approfondissement et questions d'investigation active de l'apprenant]
 ## 4. Livrable attendu
 - Emplacement : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md` sur la branche active.
+- Diaporama Marp : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/presentation-[slug-tuto].md`.
 ```
 
 ### B. Fiche Pratique sur Projet Cible (Zéro Solution Clé en Main)
@@ -59,7 +64,7 @@ Frontmatter commun : `layout: tuto`, `title:`, `sous_titre:`, `slug:`, `permalin
 - **Rôle :** [Persona d'expert] | **Instruction :** [Consigne sans ambiguïté]
 - **Output :** [Format strict de sortie] | **Contraintes Négatives :** [Interdictions formelles]
 ## 5. Critères de Validation
-- [ ] Prompt consigné dans `livrables/ia/prompts/prompt-[nom].prompt.md` sur la branche active.
+- [ ] Prompt consigné dans `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/prompt-[nom].prompt.md` sur la branche active.
 ```
 
 ---
@@ -70,6 +75,6 @@ Frontmatter commun : `layout: tuto`, `title:`, `sous_titre:`, `slug:`, `permalin
 3. **Zéro Fuite Didactique :** Interdiction des termes « 20/80 », « Règle des 20/80 » ou « Ce que l'apprenant doit produire ». Utiliser « Notions fondamentales » et « Recherches à effectuer ».
 4. **Zéro Durée Affichée & Zéro Jalon :** Aucune mention de temps (`(2h)`) aux apprenants. Terme direct « Étape » obligatoire (« Jalon » proscrit).
 5. **Formatage Colonne 0 & UTF-8 :** Tout bloc de code débute strictement colonne 0 (zéro indentation), précédé et suivi d'une ligne vide. UTF-8 sans BOM.
-6. **Chemins Canoniques :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`. Proscrire les dossiers orphelins (`labs/`), les `README.md` unitaires et les captures d'écran.
-7. **Versionnement Git :** Respecter l'autonomie Git du niveau actif (aucun `commit`/`push` imposé aux apprenants si autonomie prescrite).
+6. **Chemins Canoniques & Livrables Complets :** Conforme à [.agents/references/organisation-livrables.md](../../references/organisation-livrables.md) et [.agents/references/typologie-uas-tutoriels.md](../../references/typologie-uas-tutoriels.md). Dossier `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` contenant obligatoirement `[slug-tuto].md`, `presentation-[slug-tuto].md` et `[slug-tuto].command.md` (si CLI). Proscrire les dossiers orphelins (`labs/`), les `README.md` unitaires et les captures d'écran.
+7. **Versionnement Git :** Respecter l'autonomie Git du niveau actif selon [.agents/references/gitflow.md](../../references/gitflow.md) (aucun `commit`/`push` imposé aux apprenants si autonomie prescrite).
 8. **Gouvernance :** Réfère au Master Skill [tutorial-writer](../tutorial-writer/SKILL.md) pour les règles partagées et la synchronisation avec le projet cible via `.sync/rules.md`.

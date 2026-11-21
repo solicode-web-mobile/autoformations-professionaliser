@@ -1,41 +1,40 @@
 ---
 name: tutorial-code-writer
-description: Conçoit et rédige les tutoriels techniques d'apprentissage de code incrémental pas-à-pas (UA-Tuto, progression E_{n-1} -> E_n vers un code final d'arrivée) nativement simplifiés, avec injecteur window.pageData pour l'éditeur interactif. Opère de manière générique sur tous les niveaux selon les règles configurées dans .agents/rules/. Membre de l'écosystème tutorial-*-writer sous la gouvernance de tutorial-writer.
-version: 1.1.0
+description: Conçoit et rédige les tutoriels techniques d'apprentissage de code (tuto-notion hors imitation sous tutoriels/ ou tuto-code incrémental E_{n-1} -> E_n sur imitation sous src/) nativement simplifiés, avec injecteur window.pageData pour l'éditeur interactif. Opère de manière générique sur tous les niveaux selon les règles configurées dans .agents/rules/. Membre de l'écosystème tutorial-*-writer sous la gouvernance de tutorial-writer.
+version: 1.2.0
 ---
 
 # 1. Mission
-Ce skill est le **rédacteur technique spécialisé dans l'apprentissage de code incrémental pas-à-pas** (`UA-Tuto`).
+Ce skill est le **rédacteur technique spécialisé dans l'apprentissage de code** (`UA-Tuto`).
 Il opère de façon générique et indépendante du niveau d'apprentissage (N1, N2, N3), s'adaptant aux technologies et directives configurées dans `.agents/rules/`.
-Il fait partie intégrante de l'écosystème **`tutorial-*-writer`** et applique les règles transversales et le protocole de synchronisation gouvernés par le Master Skill **[tutorial-writer](../tutorial-writer/SKILL.md)**.
-
-Sa vocation didactique est de découper un code source final en paliers élémentaires et digestes :
-chaque tutoriel transforme l'état d'entrée $E_{n-1}$ vers l'état de sortie $E_n$ avec le strict minimum de code nécessaire pour comprendre la notion.
+Il fait partie intégrante de l'écosystème **`tutorial-*-writer`** et applique les règles transversales, l'organisation des livrables et le protocole de synchronisation gouvernés par le Master Skill **[tutorial-writer](../tutorial-writer/SKILL.md)**, [.agents/references/organisation-livrables.md](../../references/organisation-livrables.md) et [.agents/references/typologie-uas-tutoriels.md](../../references/typologie-uas-tutoriels.md).
 
 ### Trajectoire Pédagogique Globale
 $$\text{Tutoriel (Comprendre avec le minimum de code)} \longrightarrow \text{Prototype (Pratiquer \& consolider)} \longrightarrow \text{Projet (Développer la compétence métier)}$$
 
-Le skill prend en charge deux dynamiques de code :
-1. **Le Tutoriel Unitaire Autonome :** Apprentissage ciblé d'une fonction ou brique isolée avec son micro-livrable.
-2. **La Série de Tutoriels en Progression Incrémentale :** Découpe méthodique d'un **code source final d'arrivée** en étapes successives ($E_0 \to E_1 \to \dots \to E_n$), chaque tutoriel apportant une brique cumulée.
+Selon [.agents/references/typologie-uas-tutoriels.md](../../references/typologie-uas-tutoriels.md), l'apprentissage de code se décline en deux types précis :
+1. **`tuto-notion` (Tutoriel de Notion / Syntaxe Isolé) :** Apprentissage ciblé d'une fonction, syntaxe ou brique isolée avec son micro-livrable hors du projet d'imitation. Livrable déposé sous `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` (sans diaporama Marp, avec rapport CLI `[slug-tuto].command.md` si manipulations CLI).
+2. **`tuto-code` (Tutoriel de Code Incrémental sur Imitation) :** Découpe méthodique d'un **code source final d'arrivée** en étapes successives ($E_0 \to E_1 \to \dots \to E_n$), chaque tutoriel apportant une brique cumulée dans le projet d'imitation. Code source produit sous `src/` (ou structure standard du framework), sans diaporama Marp, avec rapport CLI `[slug-tuto].command.md` consigné sous `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` si manipulations CLI.
 
 ---
 
 # 2. Déclenchement & Limites
 - **Quand l'activer :**
-  - Rédaction d'une **série de tutoriels de code en progression** à partir d'un code source final cible (*« Rédige la série de tutoriels pour construire la maquette de la page d'accueil »*).
-  - Rédaction d'un **tutoriel unitaire de code** (*« Rédige un tutoriel pour créer un composant interactif »*).
+  - Rédaction d'une **série de tutoriels de code en progression** (`tuto-code`) à partir d'un code source final cible (*« Rédige la série de tutoriels pour construire la maquette de la page d'accueil »*).
+  - Rédaction d'un **tutoriel unitaire de notion** (`tuto-notion`) (*« Rédige un tutoriel pour manipuler les tableaux associatifs »*).
   - Modernisation ou allègement d'un ancien tutoriel de programmation trop dense pour respecter le principe de charge cognitive minimale.
   - Configuration de composants interactifs utilisant `data_*` et `window.pageData`.
 - **Quand NE PAS l'activer :**
-  - Ateliers pratiques guidés d'assimilation, modélisation ou outillage IA (`UA-Lab`) ➔ Utiliser [tutorial-lab-writer](../tutorial-lab-writer/SKILL.md).
-  - Tâches opérationnelles de sprint et rituels agiles (`UA-Tâche`) ➔ Utiliser [tutorial-task-writer](../tutorial-task-writer/SKILL.md).
-  - Planification globale et ordonnancement de session ➔ Utiliser [tutorial-planer](../tutorial-planer/SKILL.md).
+  - Ateliers pratiques guidés d'assimilation, modélisation ou outillage IA (`UA-Lab` / `tuto-lab`) ➔ Utiliser [tutorial-lab-writer](../tutorial-lab-writer/SKILL.md).
+  - Tâches opérationnelles de sprint et rituels agiles (`UA-Tâche` / `tuto-tache`) ➔ Utiliser [tutorial-task-writer](../tutorial-task-writer/SKILL.md).
+  - Planification globale et ordonnancement de session ➔ Utiliser [didactique-tutorial-planner](../didactique-tutorial-planner/SKILL.md).
   - Gouvernance globale, routage et synchronisation physique ➔ Utiliser [tutorial-writer](../tutorial-writer/SKILL.md).
 
 ---
 
 # 3. Entrées & Ressources à Charger
+- **Normes Centralisées des Livrables & Typologie :** [.agents/references/organisation-livrables.md](../../references/organisation-livrables.md) et [.agents/references/typologie-uas-tutoriels.md](../../references/typologie-uas-tutoriels.md).
+- **Stratégie Git :** [.agents/references/gitflow.md](../../references/gitflow.md).
 - **Règles Transversales Partagées :** Chargement obligatoire du socle défini dans le Master Skill [tutorial-writer](../tutorial-writer/SKILL.md).
 - **Ressources du Niveau & du Domaine :**
   - Directives du niveau actif dans `.agents/rules/`.
@@ -49,8 +48,8 @@ Le skill prend en charge deux dynamiques de code :
 ---
 
 # 4. Contraintes & Règles Inviolables
-1. **Respect du Socle Transversal de `tutorial-writer` :** Encodage strict UTF-8 sans BOM, blocs colonne 0 avec saut de ligne, arborescence canonique `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/`, français A1-A2, respect des règles de versionnement du niveau actif.
-2. **Principe de Continuité Absolue ($E_{n-1} \to E_n$) :** Dans une série, le code de départ du tutoriel $N$ doit être rigoureusement identique au livrable final validé du tutoriel $N-1$.
+1. **Respect du Socle Centralisé & Transversal :** Encodage strict UTF-8 sans BOM, blocs colonne 0 avec saut de ligne, arborescence canonique selon [.agents/references/organisation-livrables.md](../../references/organisation-livrables.md), français A1-A2, respect des règles de versionnement de [.agents/references/gitflow.md](../../references/gitflow.md).
+2. **Principe de Continuité Absolue ($E_{n-1} \to E_n$) :** Dans une série `tuto-code`, le code de départ du tutoriel $N$ doit être rigoureusement identique au livrable final validé du tutoriel $N-1$.
 3. **Isolation de la Difficulté :** Une seule brique de complexité par tutoriel. Ne jamais introduire simultanément deux bibliothèques ou paradigmes nouveaux.
 4. **Code 100% Exécutable et Vérifiable :** Tout extrait fourni dans la pratique doit être autonome, sans variable non déclarée ni appel fictif.
 5. **Gestion de l'Éditeur Interactif (`window.pageData`) :**
@@ -68,16 +67,17 @@ Le skill prend en charge deux dynamiques de code :
 ---
 
 # 5. Procédure Pas-à-Pas
-1. **Étape 1 — Analyse du Code Final & Découpage :** Identifier le code source cible et isoler les incréments successifs.
-2. **Étape 2 — Préparation des États $E_{n-1}$ et $E_n$ :** Définir le delta technique exact à coder par l'apprenant.
-3. **Étape 3 — Rédaction du Corps Pédagogique :**
+1. **Étape 1 — Qualification de la Typologie :** Identifier s'il s'agit d'un `tuto-notion` (hors imitation) ou d'un `tuto-code` (sur l'imitation).
+2. **Étape 2 — Analyse du Code Final & Découpage :** Identifier le code source cible et isoler les incréments successifs.
+3. **Étape 3 — Préparation des États $E_{n-1}$ et $E_n$ :** Définir le delta technique exact à coder par l'apprenant.
+4. **Étape 4 — Rédaction du Corps Pédagogique :**
    - Contexte & Objectif opérationnel (une seule phrase d'impact).
    - Données de départ (fichiers d'entrée).
    - Notions essentielles (explications courtes avec extraits autonomes).
    - Pratique guidée (tableau d'action didactique pas-à-pas).
-   - Livrable attendu (chemin relatif canonique sous `tutoriels/`).
+   - Livrable attendu (chemin relatif canonique selon la typologie).
    - Glossaire concis d'une ligne par terme nouveau.
-4. **Étape 4 — Transmission au Master Skill :** Signaler à `tutorial-writer` le livrable produit pour synchronisation miroir avec le projet cible.
+5. **Étape 5 — Transmission au Master Skill :** Signaler à `tutorial-writer` le livrable produit pour synchronisation miroir avec le projet cible.
 
 ---
 
@@ -118,8 +118,10 @@ data_code_solution: ""
 | 2 | [Action 2] | `chemin/fichier.ext` | [Effet visible] |
 
 ## 5. Livrable attendu
-- Emplacement : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/` sur la branche de travail active.
-- Fichier : `[slug-tuto].md` (et code source sous `src/` ou dossier de projet).
+- Emplacement : selon `.agents/references/organisation-livrables.md` :
+  - Si `tuto-notion` : `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md`
+  - Si `tuto-code` : code source sous `src/` (ou arborescence framework) et rapport `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].command.md` (si CLI).
+  - Pas de diaporama Marp.
 
 ## 6. Glossaire
 - **[Terme] :** [Définition courte d'une ligne].
@@ -130,9 +132,10 @@ data_code_solution: ""
 # 8. Contrôle Qualité (Checklist Binaire)
 - [ ] Le tutoriel démarre colonne 0 sans indentation pour chaque bloc de code.
 - [ ] Le code de départ reprend exactement la fin du tutoriel précédent ($E_{n-1} \to E_n$).
-- [ ] Le livrable est spécifié avec son chemin relatif canonique sous `tutoriels/`.
-- [ ] Le versionnement Git respecte les règles du niveau actif définies dans `.agents/rules/`.
+- [ ] Le livrable est spécifié avec son chemin relatif canonique conforme à `organisation-livrables.md`.
+- [ ] Le versionnement Git respecte `gitflow.md` (aucun commit/push imposé à l'apprenant).
 - [ ] Le script `window.pageData` est injecté si des champs `data_*` sont renseignés.
+- [ ] Aucun diaporama Marp n'est demandé pour un tutoriel de code.
 - [ ] Les règles transversales de `tutorial-writer` sont scrupuleusement respectées.
 
 ---
@@ -143,6 +146,7 @@ data_code_solution: ""
 | Rupture de continuité dans une série | Tutoriel N déconnecté de N-1 | Vérifier que l'état initial de N reprend rigoureusement le code final de N-1 |
 | Blocs de code indentés sous des puces | Formatage Markdown incorrect | Aligner strictement à la colonne 0 avec saut de ligne |
 | Multiples exercices d'entraînement | Confusion avec le projet | Réduire au strict minimum de code (1 seul cas d'application concis) |
+| Diaporama Marp demandé pour un tutoriel de code | Confusion avec `tuto-lab` | Supprimer la demande de Marp (réservé exclusivement à `tuto-lab`) |
 
 ---
 
