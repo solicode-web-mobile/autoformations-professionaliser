@@ -39,6 +39,7 @@
 
         {% if tuto_normal %}
 
+          {% assign current_tuto_type = tuto_normal.type | default: tuto.type %}
           {% assign current_tuto_mat = tuto_normal.maturite | default: include.maturite | default: ua.maturite %}
 
           <a
@@ -59,7 +60,32 @@
               {{ tuto_normal.title }}{% if tuto_normal.en_construction %} 🚧{% endif %}
             </span>
 
-            {% if current_tuto_mat %}
+            {% if current_tuto_type and current_tuto_type != "" %}
+              {% assign type_clean = current_tuto_type | replace: "tuto-", "" | strip %}
+              {% assign type_str = current_tuto_type | downcase %}
+              {% if type_str contains "atelier-notion" %}
+                {% assign type_pill_class = "badge-atelier-notions" %}
+                {% assign type_pill_text = "Atelier notions" %}
+              {% elsif type_str contains "atelier" %}
+                {% assign type_pill_class = "badge-atelier" %}
+                {% assign type_pill_text = "Atelier" %}
+              {% elsif type_str contains "tach" or type_str contains "tâch" %}
+                {% assign type_pill_class = "badge-tache" %}
+                {% assign type_pill_text = "Tâche" %}
+              {% elsif type_str contains "notion" %}
+                {% assign type_pill_class = "badge-notion" %}
+                {% assign type_pill_text = "Notion" %}
+              {% elsif type_str contains "code" %}
+                {% assign type_pill_class = "badge-code" %}
+                {% assign type_pill_text = "Code" %}
+              {% else %}
+                {% assign type_pill_class = "badge-default" %}
+                {% assign type_pill_text = type_clean | capitalize %}
+              {% endif %}
+              <span class="badge-type tuto-card-badge-type tuto-card-badge-maturite {{ type_pill_class }}">
+                {{ type_pill_text }}
+              </span>
+            {% elsif current_tuto_mat %}
               {% assign mat_pill = current_tuto_mat | replace: "UA-", "" | strip %}
               {% assign mat_pill_str = current_tuto_mat | downcase %}
               {% if mat_pill_str contains "tach" or mat_pill_str contains "tâch" or mat_pill_str contains "projet" %}

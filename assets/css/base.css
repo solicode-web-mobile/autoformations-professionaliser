@@ -447,10 +447,11 @@ a:focus-visible {
 }
 
 /* =========================================================
-   BADGES DE MATURITÉ MINIMALISTES (UA & TUTOS)
+   BADGES DE MATURITÉ & DE TYPE MINIMALISTES (UA & TUTOS)
    ========================================================= */
 
-.badge-maturite {
+.badge-maturite,
+.badge-type {
   display: inline-flex;
   align-items: center;
   padding: 0.15rem 0.5rem;
@@ -464,36 +465,70 @@ a:focus-visible {
   flex-shrink: 0;
 }
 
-/* Maturité UA-Lab */
+/* Maturité UA-Lab & Type Atelier */
 .badge-maturite-lab,
 .badge-maturite.badge-ua-lab,
-.badge-maturite.badge-lab {
+.badge-maturite.badge-lab,
+.badge-type.badge-atelier,
+.badge-atelier {
   background-color: #f0f7ff;
   color: #0369a1;
   border-color: #bae6fd;
 }
 
-/* Maturité UA-Tâche (strictement sans accent dans les sélecteurs CSS) */
+/* Type Atelier Enrichi (avec notions fondamentales validées) */
+.badge-type.badge-atelier-notions,
+.badge-atelier-notions {
+  background-color: #f0fdfa;
+  color: #0f766e;
+  border-color: #99f6e4;
+}
+
+/* Maturité UA-Tâche & Type Tâche (strictement sans accent dans les sélecteurs CSS) */
 .badge-maturite-tache,
 .badge-maturite.badge-ua-tache,
 .badge-maturite.badge-tache,
 .badge-maturite-tche,
 .badge-maturite.badge-ua-tche,
-.badge-maturite.badge-tche {
+.badge-maturite.badge-tche,
+.badge-type.badge-tache,
+.badge-type.badge-tche,
+.badge-tache,
+.badge-tche {
   background-color: #f5f3ff;
   color: #6d28d9;
   border-color: #ddd6fe;
 }
 
-/* Maturité UA-Tuto */
+/* Maturité UA-Tuto & Type Code */
 .badge-maturite-tuto,
 .badge-maturite.badge-ua-tuto,
-.badge-maturite.badge-tuto {
+.badge-maturite.badge-tuto,
+.badge-type.badge-code,
+.badge-code {
   background-color: #f0fdf4;
   color: #15803d;
   border-color: #bbf7d0;
 }
 
+/* Type Notion (Assimilation théorique / syntaxique) */
+.badge-type.badge-notion,
+.badge-notion {
+  background-color: #fffbeb;
+  color: #b45309;
+  border-color: #fde68a;
+}
+
+/* Fallback par défaut */
+.badge-default,
+.badge-type.badge-default,
+.badge-maturite.badge-default {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border-color: #e5e7eb;
+}
+
+.tuto-card-badge-type,
 .tuto-card-badge-maturite {
   font-size: 0.62rem;
   padding: 0.1rem 0.45rem;

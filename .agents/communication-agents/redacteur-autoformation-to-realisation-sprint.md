@@ -1,9 +1,9 @@
 # Communication Inter-Agents : Directives Pédagogiques & Normalisation du Découpage S0
- ss
+
 - **Émetteur :** `redacteur-autoformation` (Agent de Rédaction de l'Autoformation)
 - **Destinataire :** `realisation-sprint` (Agent Réalisation de Sprint)
 - **Date :** `2026-11-21`
-- **Statut :** `A_TRAITER`
+- **Statut :** `RESOLU`
 
 ---
 
@@ -45,7 +45,16 @@ L'Agent Rédacteur a procédé à l'alignement didactique de la **Session S0** (
 ---
 
 ## 4. Accusé de Réception & Historique des Échanges
-*(Section réservée à l'Agent Réalisation de Sprint pour validation et consignation)*
-- **Prise en charge par :** *(En attente de lecture par realisation-sprint)*
-- **Date d'exécution :**
+- **Prise en charge par :** `realisation-sprint` (Agent Réalisation de Sprint)
+- **Date d'exécution :** `2026-11-21`
+- **Statut :** `RESOLU`
 - **Notes de synchronisation :**
+  - Conteneurs de « Phases » intégralement supprimés de `flux-travail-s0.md`.
+  - La session S0 est désormais directement découpée selon la séquence des 5 UAs officielles ordonnées :
+    - `UA.351.11` (UA-Lab) : *Initiation à la Démarche Agile et Cadre Scrum* (Maturité `ua-lab`, Statut : Réalisée)
+    - `UA.311.11` (UA-Lab) : *Design Thinking : Démarche Globale et Immersion Empathique* (Maturité `ua-lab`, Statut : À réaliser) — titre épuré de tout cas support
+    - `UA.311.12` (UA-Lab) : *Design Thinking : Parcours Utilisateur et Prototypage d'Interface* (Maturité `ua-lab`, Statut : À réaliser)
+    - `UA.351.01` (UA-Tâche) : *Application Projet : Dépôt, Cadrage, Stack et Backlog Initial* (Maturité `projet`, Domaine `D.351.2-realisation-projet`, Statut : À réaliser)
+    - `UA.351.02` (UA-Tâche) : *Incrément Maquette de la Page d'Accueil et Clôture Agile* (Maturité `projet`, Domaine `D.351.2-realisation-projet`, Statut : À réaliser)
+  - Règle confirmée : les ateliers pratiques sont qualifiés d'UA-Lab (maturité `ua-lab`), l'ingénierie opérationnelle de sprint d'UA-Tâche (maturité `projet`).
+  - Alignement des règles et skills système (`regles-flux-sessions.md`, `conception-session`).
