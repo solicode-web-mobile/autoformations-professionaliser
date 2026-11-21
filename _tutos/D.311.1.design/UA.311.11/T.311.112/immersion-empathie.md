@@ -38,7 +38,7 @@ Dans cet atelier, nous appliquons les techniques qualitatives d'écoute active e
 ## 4. Pistes de recherche active
 - Pourquoi les questions fermées (auxquelles on répond par oui ou par non) sont-elles déconseillées lors d'un entretien d'empathie ?
 - Comment identifier les contradictions entre ce qu'un utilisateur *dit* et ce qu'il *fait* réellement ?
-- Quelles sont les caractéristiques d'une bonne Carte d'Empathie selon les méthodologies de Nielsen Norman Group ?
+- Consultez le guide de référence sur la structuration des 4 quadrants : [Empathy Mapping: The First Step in Design Thinking (Nielsen Norman Group)](https://www.nngroup.com/articles/empathy-mapping/).
 
 ## 5. Livrables attendus & Critères de validation
 - **Fiche technique d'atelier :** `tutoriels/design/design-thinking-empathie/immersion-empathie/immersion-empathie.md`.

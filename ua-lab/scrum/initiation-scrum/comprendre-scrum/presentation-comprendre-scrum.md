@@ -16,7 +16,6 @@ footer: "Scrum & Ingénierie Agile"
 - **Public** : Développeurs Web (Niveau N3)
 - **Domaine** : Scrum & Ingénierie Agile (`D.351.1`)
 - **Compétence** : `C.351` — Piloter et animer la démarche Scrum
-- **Encadrant** : ESSARRAJ Fouad
 
 ---
 

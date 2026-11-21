@@ -9,8 +9,8 @@
 
 ## 1. Description & Cas d'Usage
 Ce skill intervient après la conception de la fiche d'atelier par `tuto-atelier-writer` (`_tutos/...` avec `type: "tuto-atelier"`).  
-Il prend en charge la **réalisation complète de l'atelier** en produisant :
-1. La fiche technique de restitution rédigée : `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md`.
+Il délègue la rédaction pédagogique de la fiche technique à **`tuto-notion-writer`** (type `tuto-notion`, explications narratives approfondies adaptées aux débutants, zéro liste sèche) et produit :
+1. La fiche technique de restitution rédigée : `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md` (de type `tuto-notion`).
 2. Le diaporama Marp de présentation interactif : `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/presentation-[slug-tuto].md` (doté de `layout: presentation`).
 3. Le rapport d'exécution CLI : `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].command.md` (si l'atelier nécessite des commandes terminal).
 4. Le manifeste sémantique : `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/version.yml` (recensant chaque livrable créé et sa version, ex: `demarche-design-thinking.md: "1.0.0"`).

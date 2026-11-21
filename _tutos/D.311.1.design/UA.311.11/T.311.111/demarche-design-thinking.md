@@ -37,7 +37,9 @@ Cette approche permet de transformer des observations concrètes de terrain en s
 ## 4. Pistes de recherche active
 - Quelles sont les différences fondamentales entre une approche centrée sur la technique et une approche centrée sur l'utilisateur ?
 - Pourquoi le modèle du Double Diamant insiste-t-il sur la séparation entre la recherche du *bon problème* et la recherche de la *bonne solution* ?
-- Consultez les publications de l'institut d'ingénierie du design de Stanford (d.school) et du Design Council britannique.
+- Consultez les guides officiels de référence :
+  - [Design Thinking Bootleg (Stanford d.school)](https://dschool.stanford.edu/resources/design-thinking-bootleg) : guide pratique des 5 étapes du Design Thinking.
+  - [The Double Diamond (British Design Council)](https://www.designcouncil.org.uk/our-work/skills-learning/the-double-diamond/) : modèle officiel et alternance divergence-convergence.
 
 ## 5. Livrables attendus & Critères de validation
 - **Fiche technique d'atelier :** `tutoriels/design/design-thinking-empathie/demarche-design-thinking/demarche-design-thinking.md`.

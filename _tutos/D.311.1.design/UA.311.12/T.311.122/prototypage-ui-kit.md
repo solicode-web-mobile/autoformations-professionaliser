@@ -41,7 +41,7 @@ Pour garantir une expérience utilisateur cohérente et professionnelle, les éq
 ## 4. Pistes de recherche active
 - Quels sont les principes fondamentaux de l'approche *Atomic Design* (atomes, molécules, organismes, gabarits, pages) ?
 - Pourquoi privilégier une bibliothèque de composants basée sur Tailwind CSS (comme Preline UI) plutôt qu'un framework CSS monolithique traditionnel ?
-- Consultez la documentation officielle de Tailwind CSS et la bibliothèque de composants Preline UI.
+- Consultez la documentation officielle : [Documentation Tailwind CSS](https://tailwindcss.com/docs) et le catalogue de composants [Preline UI](https://preline.co/).
 
 ## 5. Livrables attendus & Critères de validation
 - **Fiche technique d'atelier :** `tutoriels/design/parcours-utilisateur-prototypage/prototypage-ui-kit/prototypage-ui-kit.md`.

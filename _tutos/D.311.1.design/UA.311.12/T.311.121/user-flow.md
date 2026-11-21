@@ -41,7 +41,7 @@ Le **User Flow** modélise cette séquence logique. Grâce à la syntaxe déclar
 ## 4. Pistes de recherche active
 - Quels sont les avantages d'un diagramme Mermaid textuel par rapport à un schéma réalisé sous un outil graphique propriétaire (Figma, Miro, Photoshop) ?
 - Pourquoi un User Flow doit-il toujours commencer par un événement déclencheur et se terminer par un objectif utilisateur accompli ?
-- Consultez la documentation officielle de Mermaid JS sur les organigrammes (`flowchart`).
+- Consultez la documentation officielle de Mermaid : [Mermaid Flowcharts Documentation](https://mermaid.js.org/syntax/flowchart.html).
 
 ## 5. Livrables attendus & Critères de validation
 - **Fiche technique d'atelier :** `tutoriels/design/parcours-utilisateur-prototypage/user-flow/user-flow.md`.

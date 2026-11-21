@@ -24,8 +24,9 @@ Prend en charge l'exécution concrète du travail à faire formulé par [tuto-at
 
 # 3. Mobilisation des Skills Spécifiques & Orchestration
 Pour chaque atelier à réaliser, `tuto-livrable-atelier-writer` coordonne l'écosystème :
-1. **Socle & Gouvernance :** Fait respecter le socle transversal gouverné par [tuto-writer](../tuto-writer/SKILL.md) (encodage UTF-8 sans BOM, Markdown colonne 0, zéro capture d'écran, style A1-A2).
-2. **Expertise Technique Métier :** Invoque le skill thématique du domaine concerné :
+1. **Délégation de Rédaction à `tuto-notion-writer` :** La rédaction de la fiche technique d'atelier `[slug-tuto].md` est obligatoirement déléguée à [tuto-notion-writer](../tuto-notion-writer/SKILL.md). La fiche porte `type: "tuto-notion"` et `layout: default`.
+2. **Socle & Gouvernance :** Fait respecter le socle transversal gouverné par [tuto-writer](../tuto-writer/SKILL.md) (encodage UTF-8 sans BOM, Markdown colonne 0, zéro capture d'écran, style A1-A2).
+3. **Expertise Technique Métier :** Invoque le skill thématique du domaine concerné :
    - Scrum / Agilité ➔ [tuto-writer-scrum](../tuto-writer-scrum/SKILL.md)
    - UML / Modélisation ➔ [tuto-writer-uml](../tuto-writer-uml/SKILL.md)
    - Architecture logicielle ➔ [tuto-writer-architecture](../tuto-writer-architecture/SKILL.md)
@@ -36,14 +37,11 @@ Pour chaque atelier à réaliser, `tuto-livrable-atelier-writer` coordonne l'éc
 
 # 4. Règles Inviolables
 1. **Emplacement de Référence sur le Site :** Tout livrable d'atelier d'autoformation réside strictement sous `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/` (le dossier `tutoriels/` étant réservé au poste apprenant).
-2. **Format Marp Interactif :** Les diaporamas portent obligatoirement dans leur frontmatter `layout: presentation` et `marp: true` pour être consultables en diaporama plein écran sur le site Jekyll.
-3. **Promotion de la Fiche Jekyll :** À l'issue de la réalisation, mettre à jour la fiche `_tutos/...` :
-   - Basculer `type: "tuto-atelier-notions"` et `statut_realisation: "realise"`.
-   - Mettre à jour `livrables:` avec les chemins `ua-lab/...`.
-   - Injecter les **notions fondamentales consolidées** dans le corps du tutoriel.
-4. **Zéro Commande Git dans `.command.md` :** Ne consigner que les commandes techniques de l'atelier (jamais `git add`, `commit`, `push`).
-5. **Maintien du Travail à Faire Transposable :** Lors de la promotion en `tuto-atelier-notions`, maintenir un Travail à faire clair pour l'apprenant : transposition sur son propre projet technique individuel pour les domaines logiques (Scrum, UML, Architecture), ou implémentation concrète du code de l'exemple pour les domaines de développement.
-6. **Manifeste `version.yml` Obligatoire :** Créer obligatoirement un fichier `version.yml` à la racine du dossier de livrables (`ua-lab/.../version.yml`) recensant chaque livrable produit et sa version (ex: `fichier.md: "1.0.0"`). Le champ `livrables:` du tutoriel n'est renseigné qu'après création effective de ces fichiers.
+2. **Format Marp Interactif :** Les diaporamas portent obligatoirement dans leur frontmatter `layout: presentation` et `marp: true` pour être consultables en plein écran. Zéro mention d'encadrant ni d'établissement.
+3. **Règles de Rédaction & Niveau de Détail Approfondi :** La fiche `[slug-tuto].md` applique un haut niveau de détail pédagogique adapté aux débutants : explications narratives complètes (zéro liste sèche) selon le plan : 1. Contexte & Objectif, 2. Données de départ, 3. Notions Essentielles (développées), 4. Pratique & Réalisation Guidée (tableau pas-à-pas), 5. Livrables & Critères, 6. Glossaire.
+4. **Promotion de la Fiche Jekyll :** À l'issue de la réalisation, promouvoir la fiche `_tutos/...` en `type: "tuto-atelier-notions"` (`statut_realisation: "realise"`) avec déclaration du bloc `livrables:`.
+5. **Zéro Commande Git dans `.command.md` :** Ne consigner que les commandes techniques de l'atelier (jamais `git add`, `commit`, `push`).
+6. **Manifeste `version.yml` Obligatoire :** Créer obligatoirement un fichier `version.yml` à la racine du dossier de livrables (`ua-lab/.../version.yml`) recensant chaque livrable produit et sa version.
 
 ---
 
