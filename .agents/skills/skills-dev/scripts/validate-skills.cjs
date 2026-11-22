@@ -68,7 +68,18 @@ entries.forEach(skillName => {
         errorsCount++;
     }
 
-    const content = buffer.toString('utf8').replace(/^\uFEFF/, '').trimStart();
+    const rawUtf8 = buffer.toString('utf8');
+    const mojibakeRegex = /[\xC3\xC2][\x80-\xBF]|Ã©|Ã¨|Ã |Ã§|Ã´|Ã®|Ã»|Ãª|Ã¯|Ã«|Ã‰|Ã€|â€”|â€™|â€œ|â€|Â«|Â»|â€¦|Â°/;
+    if (mojibakeRegex.test(rawUtf8)) {
+        console.error(`❌ ERREUR [${skillName}] : Double encodage UTF-8 (mojibake) détecté dans SKILL.md !`);
+        errorsCount++;
+    }
+    if (rawUtf8.includes('\uFFFD')) {
+        console.error(`❌ ERREUR [${skillName}] : Caractère de remplacement Unicode (\\uFFFD) détecté dans SKILL.md !`);
+        errorsCount++;
+    }
+
+    const content = rawUtf8.replace(/^\uFEFF/, '').trimStart();
     if (!content.startsWith('---')) {
         console.error(`❌ ERREUR [${skillName}] : Frontmatter YAML manquant au début !`);
         errorsCount++;

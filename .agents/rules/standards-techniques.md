@@ -4,13 +4,28 @@ trigger: always_on
 
 # Standards Techniques & Comportementaux du Projet
 
-## 1. Encodage Strict (UTF-8 Sans BOM)
-- Tous les fichiers créés ou modifiés (`.md`, `.html`, `.css`, `.js`, `.yml`) doivent impérativement être encodés en **UTF-8 sans BOM**.
-- Sous PowerShell Windows, éviter `Set-Content -Encoding UTF8`. Utiliser l'objet .NET :
-  ```powershell
-  $utf8NoBom = New-Object System.Text.UTF8Encoding $False
-  [System.IO.File]::WriteAllText($chemin, $contenu, $utf8NoBom)
-  ```
+## 1. Encodage Strict (UTF-8 Sans BOM) & Prévention Anti-Mojibake
+- **Encodage Universel :** Tous les fichiers créés ou modifiés (`.md`, `.html`, `.css`, `.js`, `.yml`, `.csv`) doivent impérativement être encodés en **UTF-8 sans BOM**.
+- **Lecture Sécurisée sous PowerShell Windows :**
+  - **Interdiction formelle de `Get-Content` brut sans `-Encoding utf8` :** Sous Windows PowerShell 5.1, `Get-Content` sans paramètre d'encodage lit le fichier en Windows-1252 (ANSI). Réécrire une chaîne ainsi lue entraîne irrémédiablement un **double encodage UTF-8 (*mojibake*)**.
+  - Toujours spécifier explicitement l'encodage UTF-8 à la lecture :
+    ```powershell
+    # Méthode .NET recommandée (100% fiable) :
+    $contenu = [System.IO.File]::ReadAllText($chemin, [System.Text.Encoding]::UTF8)
+
+    # Ou commande PowerShell explicite :
+    $contenu = Get-Content -Path $chemin -Encoding utf8 -Raw
+    ```
+- **Écriture Sécurisée sous PowerShell Windows :**
+  - Éviter `Set-Content -Encoding UTF8` (qui écrit souvent un BOM sous Windows PowerShell 5.1).
+  - Utiliser impérativement l'objet .NET avec `$False` pour le BOM :
+    ```powershell
+    $utf8NoBom = New-Object System.Text.UTF8Encoding $False
+    [System.IO.File]::WriteAllText($chemin, $contenu, $utf8NoBom)
+    ```
+- **Interdiction Formelle du Double Encodage (Mojibake) et des Caractères Corrompus :**
+  - Interdiction absolue d'enregistrer ou de commiter tout fichier comportant des séquences de double encodage UTF-8 (*mojibake* résultant d'une re-conversion ANSI/UTF-8) ou le caractère de remplacement Unicode `\uFFFD` (``).
+  - Avant tout commit ou fin d'intervention, l'Agent IA doit vérifier l'absence totale de ces motifs sur l'ensemble des fichiers modifiés.
 
 ## 2. Architecture Jekyll & Just the Docs
 - **Collections :** Respecter l'organisation (`_missions/`, `_modules/`, `_competences/`, `_domaines/`, `_uas/`, `_sessions/`, `_tutos/`, `_labs/`, `_prototypes/`, `_projets/`). Le code d'accompagnement réside dans `/code`.
