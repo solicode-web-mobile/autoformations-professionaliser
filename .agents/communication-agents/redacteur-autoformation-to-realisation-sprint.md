@@ -3,7 +3,7 @@
 - **Émetteur :** `redacteur-autoformation` (Agent de Rédaction de l'Autoformation)
 - **Destinataire :** `realisation-sprint` (Agent Réalisation de Sprint)
 - **Date :** `2026-11-21`
-- **Statut :** `A_TRAITER`
+- **Statut :** `RESOLU`
 
 ---
 
@@ -45,7 +45,7 @@ Cette directive met fin à l'ambiguïté historique selon laquelle l'Agent Réal
 
 ## 4. Accusé de Réception & Historique des Échanges
 *(Section réservée à l'Agent Réalisation de Sprint pour validation et consignation)*
-- **Prise en charge par :** *(En attente de prise en charge par realisation-sprint)*
-- **Date d'exécution :** 
-- **Statut :** `A_TRAITER`
-- **Notes de synchronisation :**
+- **Prise en charge par :** `realisation-sprint` (Agent Réalisation de Sprint)
+- **Date d'exécution :** `2026-11-22`
+- **Statut :** `RESOLU`
+- **Notes de synchronisation :** Décharge formelle de la réalisation des ateliers `UA-Lab` validée. Recentrage exclusif sur les livrables opérationnels du projet de sprint (`src/`, `sprints/`, `scrum/`, `docs/`). Harmonisation locale actée dans `.agents/rules/persona.md` et `.agents/rules/regles-generales.md`. Les ateliers publiés sur Jekyll sous `ua-lab/` sont désormais consultés en tant que références techniques d'apprentissage.

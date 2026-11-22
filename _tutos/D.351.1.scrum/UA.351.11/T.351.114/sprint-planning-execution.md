@@ -45,19 +45,7 @@ Vous devez concevoir et préparer une **présentation synthétique** sur la plan
    - Rédiger votre fiche technique d'atelier synthétisant votre plan de sprint et votre organisation.
    - Concevoir votre support de présentation au format Marp (16:9).
 
-> [!TIP]
-> **Solution de référence de l'atelier :**
-> Le concepteur a réalisé une solution de référence complète appliquée au cas d'école de l'application **TodoList**, consultable ci-dessous pour vous guider dans la formalisation de vos livrables :
-
-{% include tuto-livrables.html %}
-
-## 4. Pistes de recherche active
-- Pourquoi une tâche technique ne doit-elle jamais dépasser une durée maximale d'une demi-journée ?
-- En quoi la limitation du travail en cours (WIP Limit) évite-t-elle le piège de « commencer dix choses sans en finir une seule » ?
-- Quel est le risque si le Daily Scrum se transforme en rapport hiérarchique au lieu d'un échange d'équipe ?
-- Comment le Scrum Master intervient-il lorsqu'un développeur signale un obstacle technique bloquant ?
-
-## 5. Livrables attendus & Critères de validation
+## 4. Livrables attendus & Critères de validation
 - **Fiche technique d'atelier :** `tutoriels/scrum/initiation-scrum/sprint-planning-execution/sprint-planning-execution.md`
 - **Diaporama Marp de restitution :** `tutoriels/scrum/initiation-scrum/sprint-planning-execution/presentation-sprint-planning-execution.md`
 - **Critères de validation :**

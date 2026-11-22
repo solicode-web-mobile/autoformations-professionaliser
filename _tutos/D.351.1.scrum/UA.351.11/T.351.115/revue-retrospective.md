@@ -45,19 +45,7 @@ Vous devez concevoir et préparer une **présentation synthétique** sur la clô
    - Rédiger votre fiche technique d'atelier synthétisant votre revue et votre plan d'actions.
    - Concevoir votre support de présentation au format Marp (16:9).
 
-> [!TIP]
-> **Solution de référence de l'atelier :**
-> Le concepteur a réalisé une solution de référence complète appliquée au cas d'école de l'application **TodoList**, consultable ci-dessous pour vous guider dans la formalisation de vos livrables :
-
-{% include tuto-livrables.html %}
-
-## 4. Pistes de recherche active
-- Pourquoi une démonstration lors de la Sprint Review doit-elle impérativement se faire sur un logiciel fonctionnel et non sur des diapositives ?
-- En quoi la Sprint Review est-elle une séance de travail collaboratif plutôt qu'un simple examen sanctionnant ?
-- Quel climat relationnel le Scrum Master doit-il instaurer pour que la rétrospective soit constructive ?
-- Pourquoi est-il déconseillé de voter plus de 3 actions d'amélioration lors d'une rétrospective de sprint ?
-
-## 5. Livrables attendus & Critères de validation
+## 4. Livrables attendus & Critères de validation
 - **Fiche technique d'atelier :** `tutoriels/scrum/initiation-scrum/revue-retrospective/revue-retrospective.md`
 - **Diaporama Marp de restitution :** `tutoriels/scrum/initiation-scrum/revue-retrospective/presentation-revue-retrospective.md`
 - **Critères de validation :**

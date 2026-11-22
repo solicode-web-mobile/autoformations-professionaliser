@@ -14,7 +14,7 @@ Il centralise les principes directeurs communs (durée indicative standard de 80
   - **`didactique-tuto-planner` (Micro) :** Découpage fin pas-à-pas ($E_{n-1} \to E_n$), titrage technique équilibré, sas « Bien démarrer » et génération des stubs Jekyll.
 
 ## Découplage du Niveau Actif
-Les règles spécifiques à chaque niveau sont résolues dynamiquement dans `.agents/rules/` (ex: `pedagogie-spartel-n3.md`). Les skills de la famille `didactique` appliquent ces règles sans être couplés en dur à un niveau particulier.
+Les règles spécifiques à chaque niveau sont résolues dynamiquement dans `.agents/rules/` (ex: `pedagogie-n3.md`). Les skills de la famille `didactique` appliquent ces règles sans être couplés en dur à un niveau particulier.
 
 ## Cas d'Usage & Prompts Types
 - **Cadrage d'une session (N1, N2 ou N3) :**

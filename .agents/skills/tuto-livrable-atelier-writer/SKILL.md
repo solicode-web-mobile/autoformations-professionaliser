@@ -1,7 +1,7 @@
 ---
 name: tuto-livrable-atelier-writer
 description: Réalise concrètement le travail prescrit par les tutoriels d'ateliers (tuto-atelier) en produisant les livrables d'ateliers sous ua-lab/ et en promouvant la fiche Jekyll en tuto-atelier-notions.
-version: 1.0.0
+version: 1.1.0
 ---
 
 # 1. Mission & Rôle
@@ -18,7 +18,7 @@ Prend en charge l'exécution concrète du travail à faire formulé par [tuto-at
 
 # 2. Déclenchement & Limites
 - **Activer :** Réalisation concrète d'une UA-Lab ou d'un tutoriel d'atelier `tuto-atelier` ; production de livrables d'ateliers dans `ua-lab/` ; promotion d'une fiche `_tutos/` en `tuto-atelier-notions`.
-- **Ne PAS activer :** Rédaction de l'énoncé/sujet du tutoriel d'atelier ➔ `tuto-atelier-writer` | Rédaction de tâches de sprint ➔ `tuto-tache-writer` | Code incrémental de projet ➔ `tuto-code-writer` | Cadrage macro de session ➔ `didactique-session-planner`.
+- **Ne PAS activer :** Rédaction de l'énoncé/sujet du tutoriel d'atelier ➔ `tuto-atelier-writer` | Rédaction de tâches de sprint ➔ `tuto-tache-writer` | Code incrémental ➔ `tuto-code-writer` | Cadrage macro de session ➔ `didactique-session-planner`.
 
 ---
 
@@ -39,13 +39,14 @@ Pour chaque atelier à réaliser, `tuto-livrable-atelier-writer` coordonne l'éc
 1. **Emplacement de Référence sur le Site :** Tout livrable d'atelier d'autoformation réside strictement sous `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/` (le dossier `tutoriels/` étant réservé au poste apprenant).
 2. **Format Marp & Exclusion de Navigation :** Les diaporamas portent obligatoirement dans leur frontmatter `layout: presentation`, `marp: true` et `nav_exclude: true` pour être consultables en plein écran sans polluer la navbar. La fiche de restitution `[slug-tuto].md` porte également `nav_exclude: true`. Zéro mention d'encadrant ni d'établissement.
 3. **Règles de Rédaction & Niveau de Détail Approfondi :** La fiche `[slug-tuto].md` applique un haut niveau de détail pédagogique adapté aux débutants : explications narratives complètes (zéro liste sèche) selon le plan : 1. Contexte & Objectif, 2. Données de départ, 3. Notions Essentielles (développées), 4. Pratique & Réalisation Guidée (tableau pas-à-pas), 5. Livrables & Critères, 6. Glossaire.
-4. **Promotion de la Fiche Jekyll :** À l'issue de la réalisation, promouvoir la fiche `_tutos/...` en `type: "tuto-atelier-notions"` (`statut_realisation: "realise"`) avec déclaration du bloc `livrables:`.
+4. **Promotion de la Fiche Jekyll :** À l'issue de la réalisation, promouvoir la fiche `_tutos/...` en `type: "tuto-atelier-notions"` (`statut_realisation: "realise"`) avec déclaration du bloc `livrables:`. Supprimer obligatoirement la section « Pistes de recherche active » et renuméroter la section finale en « 4. Livrables attendus & Critères de validation ».
 5. **Zéro Commande Git dans `.command.md` :** Ne consigner que les commandes techniques de l'atelier (jamais `git add`, `commit`, `push`).
 6. **Manifeste `version.yml` Obligatoire :** Créer obligatoirement un fichier `version.yml` à la racine du dossier de livrables (`ua-lab/.../version.yml`) recensant chaque livrable produit et sa version.
+7. **Zéro Injection Manuelle de Composant Solution :** La promotion d'un tutoriel active automatiquement la solution via le bloc YAML `livrables:` et `statut_realisation: "realise"`. Il est formellement interdit d'insérer manuellement `{% include tuto-livrables.html %}` dans le corps Markdown. L'affichage est géré de façon centralisée et masquée par le layout Jekyll.
 
 ---
 
 # 5. Procédure Pas-à-Pas
 1. **Étape 1 — Analyse du Sujet :** Lire la fiche `_tutos/.../[slug-tuto].md` rédigée par `tuto-atelier-writer`.
 2. **Étape 2 — Génération des Livrables dans `ua-lab/` :** Créer le sous-dossier, rédiger les livrables (`.md`, `presentation-*.md`, `.command.md`) et générer `version.yml` avec les versions sémantiques.
-3. **Étape 3 — Promotion du Tutoriel :** Modifier le tutoriel `_tutos/` en `type: "tuto-atelier-notions"`, ajouter le bloc `livrables:` validé et enrichir le contenu avec les notions fondamentales.
+3. **Étape 3 — Promotion du Tutoriel :** Modifier le tutoriel `_tutos/` en `type: "tuto-atelier-notions"`, ajouter le bloc `livrables:` validé, injecter les notions fondamentales, supprimer la section de recherche active et renuméroter les livrables en section 4.

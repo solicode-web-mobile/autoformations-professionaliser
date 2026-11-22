@@ -39,3 +39,4 @@ Il délègue la rédaction pédagogique de la fiche technique à **`tuto-notion-
    - Basculer `statut_realisation: "realise"`.
    - Déclarer le bloc `livrables:` avec les chemins réels existants sous `ua-lab/...`.
    - Injecter les **notions fondamentales consolidées** dans le corps de la fiche.
+   - Supprimer la section « Pistes de recherche active » et renuméroter les livrables en section 4.

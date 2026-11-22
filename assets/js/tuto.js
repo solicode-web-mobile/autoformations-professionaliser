@@ -41,6 +41,34 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+  // --- Solution de Référence d'Atelier (Toggle) ---
+  const solutionToggleBtns = document.querySelectorAll(".btn-toggle-solution");
+  solutionToggleBtns.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      const containerId = btn.getAttribute("aria-controls");
+      const container = document.getElementById(containerId) || (btn.closest(".tuto-solution-section") && btn.closest(".tuto-solution-section").querySelector(".tuto-solution-container"));
+      if (!container) return;
+
+      const isHidden = container.hasAttribute("hidden");
+      const textElem = btn.querySelector(".tuto-solution-toggle-text");
+      const arrowElem = btn.querySelector(".tuto-solution-toggle-arrow");
+
+      if (isHidden) {
+        container.removeAttribute("hidden");
+        btn.setAttribute("aria-expanded", "true");
+        btn.classList.add("is-active");
+        if (textElem) textElem.textContent = "Masquer la solution de référence de l'atelier";
+        if (arrowElem) arrowElem.textContent = "▲";
+      } else {
+        container.setAttribute("hidden", "");
+        btn.setAttribute("aria-expanded", "false");
+        btn.classList.remove("is-active");
+        if (textElem) textElem.textContent = "Afficher la solution de référence de l'atelier";
+        if (arrowElem) arrowElem.textContent = "▼";
+      }
+    });
+  });
+
   // --- UI/UX Customizations (Sidebar & Action Bar) ---
 
   // 1. Sidebar Toggle

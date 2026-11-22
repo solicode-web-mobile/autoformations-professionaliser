@@ -1,7 +1,7 @@
 ---
 name: tuto-atelier-writer
 description: Conçoit, structure et rédige les tutoriels d'ateliers pratiques guidés (type: tuto-atelier) dans _tutos/ pour l'EFP.
-version: 3.2.0
+version: 3.3.0
 ---
 
 # 1. Mission & Rôle
@@ -9,8 +9,8 @@ Rédacteur technique et pédagogique de l'écosystème `tuto-*-writer`, dédié 
 Il formule le cadre pédagogique, les compétences cibles, les consignes et le travail à faire. Il ne rédige pas le résultat du lab (délégué à [tuto-livrable-atelier-writer](../tuto-livrable-atelier-writer/SKILL.md)).
 
 - **Cycle de Maturation de l'Atelier :**
-  - **Type `tuto-atelier` (Atelier Initial Brut) :** Fiche de cadrage orientée recherche active (Contexte + Ce que vous devez apprendre + Travail à faire + Pistes de recherche), **SANS notions théoriques rédigées** (`statut_realisation: "a_realiser"`).
-  - **Type `tuto-atelier-notions` (Atelier Enrichi Post-Réalisation) :** Fiche enrichie intégrant les **notions fondamentales détaillées** et les liens vers les livrables de référence réalisés sous `ua-lab/` (`statut_realisation: "realise"`).
+  - **Type `tuto-atelier` (Atelier Initial Brut) :** Fiche de cadrage orientée recherche active (Contexte + Ce que vous devez apprendre + Travail à faire + Pistes de recherche + Livrables), **SANS notions théoriques rédigées** (`statut_realisation: "a_realiser"`).
+  - **Type `tuto-atelier-notions` (Atelier Enrichi Post-Réalisation) :** Fiche enrichie intégrant les **notions fondamentales détaillées**, les liens vers les livrables de référence réalisés sous `ua-lab/` (`statut_realisation: "realise"`), **SANS section de recherche active**.
 
 ---
 
@@ -20,26 +20,28 @@ Il formule le cadre pédagogique, les compétences cibles, les consignes et le t
 
 ---
 
-# 3. Structure Normée de la Fiche `type: "tuto-atelier"`
-Frontmatter : `layout: tuto`, `title:`, `sous_titre:`, `slug:`, `permalink:`, `tuto_id:`, `ua:`, `type: "tuto-atelier"`, `statut_realisation: "a_realiser"`, `nav_order:`, `simplified: true`, `en_construction: false`, `branche: "sprintX"`.
+# 3. Structures Normées des Fiches d'Ateliers
+
+### Format A — Fiche Initiale `type: "tuto-atelier"` (`statut_realisation: "a_realiser"`)
 ```markdown
 ## 1. Contexte & Enjeux
-[Pourquoi ce domaine/outil est abordé dans le sprint de l'EFP]
-
 ## 2. Ce que vous devez apprendre
-- [Compétence cible à acquérir et problématiques techniques à explorer]
-
 ## 3. Travail à faire
-- [Consignes directives sur ce que l'apprenant doit concevoir et produire]
-
 ## 4. Pistes de recherche active
-- [Concepts clés et documentations officielles à investiguer]
-
 ## 5. Livrables attendus & Critères de validation
-- **Fiche technique d'atelier :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].md`
-- **Diaporama Marp de restitution :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/presentation-[slug-tuto].md`
-- **Rapport CLI :** `tutoriels/[slug-domaine]/[slug-ua]/[slug-tuto]/[slug-tuto].command.md` (si commandes exécutées)
 ```
+
+### Format B — Fiche Enrichie `type: "tuto-atelier-notions"` (`statut_realisation: "realise"`)
+```markdown
+## 1. Contexte & Enjeux
+## 2. Ce que vous devez apprendre
+## 3. Travail à faire
+> [!TIP]
+> Solution de référence consultable sous ua-lab/...
+{% include tuto-livrables.html %}
+## 4. Livrables attendus & Critères de validation
+```
+*Règle d'or :* Interdiction formelle de la section « Pistes de recherche active » dans `tuto-atelier-notions` (les objectifs sont consolidés en section 2 et illustrés par la solution).
 
 ---
 
@@ -50,7 +52,8 @@ Frontmatter : `layout: tuto`, `title:`, `sous_titre:`, `slug:`, `permalink:`, `t
 4. **Formatage Colonne 0 & UTF-8 :** Tout bloc de code débute strictement colonne 0 (zéro indentation). UTF-8 sans BOM.
 5. **Gouvernance & Relais :** Réfère à [tuto-writer](../tuto-writer/SKILL.md) et transmet le relais à [tuto-livrable-atelier-writer](../tuto-livrable-atelier-writer/SKILL.md) pour la réalisation physique sous `ua-lab/`.
 6. **Travail à Faire Différencié (Logique vs Code) :**
-   - *Domaines Logiques (Scrum, UML, Design Thinking, Architecture) :* Le Travail à faire prescrit à l'apprenant exige de **transposer la méthode sur son propre Projet Technique individuel**.
-   - *Domaines de Code (Laravel, Alpine.js, Composants web) :* Le Travail à faire consiste à **implémenter concrètement le code** de l'exemple didactique (ex: TodoList) et fournir le code source fonctionnel.
-7. **Zéro Livrable Inexistant en Frontmatter :** Ne déclarer aucun bloc `livrables:` tant que le tutoriel est `statut_realisation: "a_realiser"` pour éviter des cartes de solution brisées.
-8. **Zéro Justification d'Exemple Support :** Ne jamais demander à l'apprenant de justifier le choix didactique d'un exemple support (ex: Todo List). La justification réside uniquement dans `flux-travail-s[X].md`.
+   - *Domaines Logiques (Scrum, UML, Design Thinking, Architecture) :* Transposition sur Projet Technique individuel.
+   - *Domaines de Code (Laravel, Alpine.js) :* Implémentation concrète de l'exemple didactique.
+7. **Zéro Livrable Inexistant en Frontmatter :** Ne déclarer aucun bloc `livrables:` tant que le tutoriel est `statut_realisation: "a_realiser"`.
+8. **Zéro Justification d'Exemple Support :** Ne jamais demander à l'apprenant de justifier le choix didactique d'un exemple support.
+9. **Zéro Inclusion Manuelle de Solution dans le Markdown :** Interdiction absolue d'insérer `{% include tuto-livrables.html %}` ou des blocs d'alerte de solution dans le corps Markdown des fiches. L'affichage de la solution de référence est géré de manière unique et centralisée par le layout (`_layouts/tuto.html`) à la fin du tutoriel, masqué initialement derrière un bouton de consultation.

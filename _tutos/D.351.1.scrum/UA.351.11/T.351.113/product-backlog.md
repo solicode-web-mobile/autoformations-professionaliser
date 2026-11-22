@@ -45,19 +45,7 @@ Vous devez concevoir et préparer une **présentation synthétique** sur l'estim
    - Rédiger votre fiche technique d'atelier synthétisant vos estimations et vos contrats qualité.
    - Concevoir votre support de présentation au format Marp (16:9).
 
-> [!TIP]
-> **Solution de référence de l'atelier :**
-> Le concepteur a réalisé une solution de référence complète appliquée au cas d'école de l'application **TodoList**, consultable ci-dessous pour vous guider dans la formalisation de vos livrables :
-
-{% include tuto-livrables.html %}
-
-## 4. Pistes de recherche active
-- Pourquoi l'estimation relative en Story Points est-elle plus fiable que l'estimation en heures au début d'un projet ?
-- Quel est le risque majeur d'une mauvaise utilisation de MoSCoW (ex: classer 90% des stories en « Must Have ») ?
-- Que se passe-t-il pendant un sprint si les développeurs démarrent une tâche qui ne respecte pas la DoR ?
-- Comment la Definition of Done protège-t-elle le projet contre la dette technique cumulative ?
-
-## 5. Livrables attendus & Critères de validation
+## 4. Livrables attendus & Critères de validation
 - **Fiche technique d'atelier :** `tutoriels/scrum/initiation-scrum/product-backlog/product-backlog.md`
 - **Diaporama Marp de restitution :** `tutoriels/scrum/initiation-scrum/product-backlog/presentation-product-backlog.md`
 - **Critères de validation :**

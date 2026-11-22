@@ -51,13 +51,7 @@ Vous devez concevoir et préparer une **présentation synthétique** sur les not
 
 {% include tuto-livrables.html %}
 
-## 4. Pistes de recherche active
-- Quels sont les risques majeurs d'un cycle en V classique (spécifications figées, effet tunnel) ?
-- Pourquoi Scrum ne définit-il aucun rôle de « chef de projet » hiérarchique ?
-- Comment le Daily Scrum permet-il d'identifier et de lever les obstacles techniques au quotidien ?
-- Qu'est-ce qui distingue la Sprint Review (axée sur le produit) de la Sprint Retrospective (axée sur l'équipe) ?
-
-## 5. Livrables attendus & Critères de validation
+## 4. Livrables attendus & Critères de validation
 - **Fiche technique d'atelier :** `tutoriels/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md`
 - **Diaporama Marp de restitution :** `tutoriels/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md`
 - **Critères de validation :**

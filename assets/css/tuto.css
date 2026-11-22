@@ -134,6 +134,7 @@
   line-height: 1.2;
 }
 
+.tuto-topbar-badge-type,
 .tuto-topbar-badge-maturite {
   margin-left: 0.45rem;
   margin-right: 0.45rem;
@@ -949,11 +950,83 @@
 }
 
 /* =========================================================
-   CARTE DE CONSULTATION DE LA SOLUTION RÉALISÉE (UA-LAB)
+   CARTE & BOUTON DE CONSULTATION DE LA SOLUTION (UA-LAB)
    ========================================================= */
 
+.tuto-solution-section {
+  margin: 2.5rem 0 2rem 0;
+}
+
+.tuto-solution-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.tuto-solution-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1.4rem;
+  background-color: #f0f9ff;
+  color: #0369a1;
+  border: 1.5px solid #bae6fd;
+  border-radius: 9999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(3, 105, 161, 0.08);
+  font-family: inherit;
+}
+
+.tuto-solution-toggle-btn:hover {
+  background-color: #e0f2fe;
+  border-color: #0284c7;
+  color: #0284c7;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(3, 105, 161, 0.12);
+}
+
+.tuto-solution-toggle-btn.is-active {
+  background-color: #e0f2fe;
+  border-color: #0284c7;
+  color: #0c4a6e;
+}
+
+.tuto-solution-toggle-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.tuto-solution-toggle-arrow {
+  font-size: 0.75rem;
+  color: #0284c7;
+  transition: transform 0.2s ease;
+}
+
+.tuto-solution-container[hidden] {
+  display: none;
+}
+
+.tuto-solution-container:not([hidden]) {
+  display: block;
+  animation: tutoFadeIn 0.25s ease-in-out;
+}
+
+@keyframes tutoFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .tuto-solution-card {
-  margin: 3rem 0 2rem 0;
+  margin: 1rem 0 2rem 0;
   padding: 1.5rem;
   background: #f8fafc;
   border: 1px solid #cbd5e1;

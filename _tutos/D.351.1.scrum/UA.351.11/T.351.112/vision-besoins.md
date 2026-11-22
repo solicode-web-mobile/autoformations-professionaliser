@@ -45,19 +45,7 @@ Vous devez concevoir et préparer une **présentation synthétique** sur l'expre
    - Rédiger votre fiche technique d'atelier synthétisant votre analyse et vos spécifications.
    - Concevoir votre support de présentation au format Marp (16:9).
 
-> [!TIP]
-> **Solution de référence de l'atelier :**
-> Le concepteur a réalisé une solution de référence complète appliquée au cas d'école de l'application **TodoList**, consultable ci-dessous pour vous guider dans la formalisation de vos livrables :
-
-{% include tuto-livrables.html %}
-
-## 4. Pistes de recherche active
-- En quoi la Vision Produit protège-t-elle l'équipe contre la « dérive des objectifs » (scope creep) ?
-- Pourquoi est-il risqué de concevoir une application pour un « utilisateur universel » plutôt que pour des Personas précis ?
-- Quelle est la différence fondamentale entre une exigence technique et un besoin exprimé en User Story ?
-- Pourquoi des critères d'acceptation flous ou incomplets pénalisent-ils directement les développeurs lors de la phase de test ?
-
-## 5. Livrables attendus & Critères de validation
+## 4. Livrables attendus & Critères de validation
 - **Fiche technique d'atelier :** `tutoriels/scrum/initiation-scrum/vision-besoins/vision-besoins.md`
 - **Diaporama Marp de restitution :** `tutoriels/scrum/initiation-scrum/vision-besoins/presentation-vision-besoins.md`
 - **Critères de validation :**
