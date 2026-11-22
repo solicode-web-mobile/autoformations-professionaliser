@@ -10,7 +10,8 @@ tuto_id: "T.351.012"
 version: "normal"
 ua: "UA.351.01"
 type: "tuto-tache"
-nav_order: 2
+etape: 1
+nav_order: 1
 simplified: true
 en_construction: false
 branche: "sprint0"

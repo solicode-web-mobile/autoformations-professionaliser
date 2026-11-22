@@ -4,13 +4,14 @@ title: "Définir la Vision Produit (Product Goal)"
 sous_titre: "Formuler la proposition de valeur, l'Elevator Pitch et le Product Goal du Blog des Lauréats"
 slug: "definir-vision-produit"
 slug_domaine: "realisation-projet"
-slug_ua: "depot-cadrage-stack-backlog"
+slug_ua: "initiation-scrum"
 permalink: /tutos/definir-vision-produit/
 tuto_id: "T.351.015"
 version: "normal"
-ua: "UA.351.01"
+ua: "UA.351.11"
 type: "tuto-tache"
-nav_order: 5
+etape: 5
+nav_order: 6
 simplified: true
 en_construction: false
 branche: "sprint0"

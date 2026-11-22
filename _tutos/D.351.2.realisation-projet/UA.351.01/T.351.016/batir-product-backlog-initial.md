@@ -1,25 +1,24 @@
 ---
 layout: tuto
-title: "Bâtir le Product Backlog initial et Personas du Blog"
-sous_titre: "Formaliser les Personas cibles du Blog et ordonner les User Stories INVEST selon MoSCoW"
+title: "Bâtir le Product Backlog initial du Blog"
+sous_titre: "Structurer et ordonner les User Stories INVEST selon la méthode MoSCoW"
 slug: "batir-product-backlog-initial"
-slug_domaine: "realisation-projet"
-slug_ua: "depot-cadrage-stack-backlog"
+slug_domaine: "scrum"
+slug_ua: "initiation-scrum"
 permalink: /tutos/batir-product-backlog-initial/
 tuto_id: "T.351.016"
 version: "normal"
-ua: "UA.351.01"
+ua: "UA.351.11"
 maturite: "projet"
 type: "tuto-tache"
-nav_order: 6
+etape: 9
+nav_order: 7
 simplified: true
 en_construction: false
 branche: "sprint0"
 sprint: "Sprint 0"
 statut_realisation: "a_realiser"
 livrables:
-  - chemin: "docs/analyse/personas.md"
-    version: "0.1.0"
   - chemin: "scrum/product-backlog.md"
     version: "0.1.0"
 ---

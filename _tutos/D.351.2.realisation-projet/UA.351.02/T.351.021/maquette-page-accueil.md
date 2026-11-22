@@ -1,16 +1,17 @@
 ---
 layout: tuto
-title: "Modéliser le User Flow et concevoir la Maquette de la Page d'Accueil"
-sous_titre: "Spécifier l'UI Kit Preline UI, modéliser le parcours Mermaid et assembler la maquette ergonomique d'accueil"
+title: "Concevoir l'UI Kit et prototyper la Maquette de la Page d'Accueil"
+sous_titre: "Spécifier l'UI Kit Preline UI et assembler la maquette ergonomique responsive du Blog des Lauréats"
 slug: "maquette-page-accueil"
-slug_domaine: "realisation-projet"
-slug_ua: "maquette-accueil-cloture-agile"
+slug_domaine: "design"
+slug_ua: "parcours-utilisateur-prototypage"
 permalink: /tutos/maquette-page-accueil/
 tuto_id: "T.351.021"
 version: "normal"
-ua: "UA.351.02"
+ua: "UA.311.12"
 type: "tuto-tache"
-nav_order: 1
+etape: 13
+nav_order: 4
 simplified: true
 en_construction: false
 branche: "sprint0"

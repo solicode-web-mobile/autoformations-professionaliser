@@ -3,14 +3,15 @@ layout: tuto
 title: "Planifier le Sprint 0 et formaliser la feuille d'engagement d'équipe"
 sous_titre: "Contractualiser l'organisation agile avec le Product Owner et définir les engagements du Sprint 0"
 slug: "planifier-sprint-0"
-slug_domaine: "realisation-projet"
-slug_ua: "depot-cadrage-stack-backlog"
+slug_domaine: "scrum"
+slug_ua: "initiation-scrum"
 permalink: /tutos/planifier-sprint-0/
 tuto_id: "T.351.011"
 version: "normal"
-ua: "UA.351.01"
+ua: "UA.351.11"
 type: "tuto-tache"
-nav_order: 1
+etape: 10
+nav_order: 8
 simplified: true
 en_construction: false
 branche: "sprint0"
