@@ -24,7 +24,7 @@ Le fichier `theme-sync.json` situé à la racine du projet permet de définir av
 4. Écrase ou ajoute les dossiers et fichiers listés depuis le Core Theme vers votre dépôt courant.
 
 **Commande :**
-```powershell
+```bash
 .\pull_theme.ps1
 ```
 *(Optionnel) Vous pouvez spécifier une version (tag) spécifique pour récupérer une version donnée : `.\pull_theme.ps1 -Version "v1.0"`*
@@ -39,7 +39,7 @@ Le fichier `theme-sync.json` situé à la racine du projet permet de définir av
 3. Copie les dossiers et fichiers modifiés de votre projet courant vers le dossier du Core Theme.
 
 **Commande :**
-```powershell
+```bash
 .\push_theme.ps1
 ```
 *(Note : Il se peut que vous deviez ensuite vous rendre dans le dossier `autoformations-core-theme` pour commiter et pousser manuellement ces changements vers le dépôt distant, à moins que cette étape ne soit automatisée dans la version actuelle du script).*

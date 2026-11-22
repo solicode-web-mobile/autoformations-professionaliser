@@ -32,11 +32,13 @@ Initialisez l'espace de travail officiel du *Blog des Lauréats* :
 
 ## 2. Consignes de Réalisation
 - Créez l'arborescence standard des dossiers d'ingénierie :
-  ```powershell
+  
+  ```bash
   mkdir docs, docs/cadrage, docs/analyse, docs/produit, docs/conception, docs/architecture, scrum, tutoriels, src
   ```
+
 - Créez le fichier `.gitignore` et le fichier `README.md` :
-  ```powershell
+  ```bash
   echo "" > .gitignore
   echo "" > README.md
   ```
@@ -46,7 +48,7 @@ Initialisez l'espace de travail officiel du *Blog des Lauréats* :
   - Équipe projet et répartition des rôles Scrum.
   - Lien vers la feuille d'engagement active (`sprints/sprint-0.md`).
 - Publiez le dépôt distant sur GitHub avec GitHub CLI :
-  ```powershell
+  ```bash
   gh repo create blog-laureats-efp --public --source=. --remote=origin
   git checkout -b sprint0
   ```

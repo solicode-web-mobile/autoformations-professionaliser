@@ -33,7 +33,7 @@ livrables:
 
 1. **Étape 1 — Initialiser la fiche de Personas :**
 
-```powershell
+```bash
 echo "" > docs/analyse/personas.md
 ```
 

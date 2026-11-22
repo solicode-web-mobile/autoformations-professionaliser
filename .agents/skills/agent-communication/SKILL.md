@@ -25,7 +25,7 @@ Ce skill gouverne et formalise la communication inter-agents entre l'**Agent Ré
    - Le fichier réel réside **exclusivement dans le dépôt de l'agent émetteur** sous `.agents/communication-agents/`.
 3. **Lien Symbolique (Symlink) chez le Récepteur :**
    - Le dépôt du récepteur contient un lien symbolique pointant directement vers le fichier de l'émetteur :
-     ```powershell
+     ```bash
      New-Item -ItemType SymbolicLink -Path "<recepteur>\.agents\communication-agents\<nom-canal>.md" -Target "<emetteur>\.agents\communication-agents\<nom-canal>.md" -Force
      ```
    - Toute mise à jour de l'émetteur est immédiatement accessible au récepteur sans duplication de données.

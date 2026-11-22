@@ -32,7 +32,7 @@ Formalisez la note de cadrage du *Blog des Lauréats* en collaboration étroite 
 
 ## 2. Consignes de Réalisation
 - Créez le fichier de la note de cadrage :
-  ```powershell
+  ```bash
   echo "" > docs/cadrage/note-cadrage.md
   ```
 - Structurez le document selon le plan suivant :

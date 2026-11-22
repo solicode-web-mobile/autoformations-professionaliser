@@ -38,7 +38,7 @@ Concevez l'incrément visuel et ergonomique majeur du Sprint 0 sur le *Blog des 
 
 ## 2. Consignes de Réalisation
 - Créez le dossier et les fichiers de conception :
-  ```powershell
+  ```bash
   mkdir docs/conception
   echo "" > docs/conception/ui-kit.md
   echo "" > docs/conception/maquettes-sprint-1.md

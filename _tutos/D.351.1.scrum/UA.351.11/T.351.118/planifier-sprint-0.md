@@ -32,11 +32,11 @@ Organisez le travail de cadrage du Sprint 0 sur le projet du *Blog des Lauréats
 
 ## 2. Consignes de Réalisation
 - Créez le répertoire dédié aux cérémonies de sprint :
-  ```powershell
+  ```bash
   mkdir sprints
   ```
 - Créez le fichier de planification du sprint :
-  ```powershell
+  ```bash
   echo "" > sprints/sprint-0.md
   ```
 - Renseignez les sections obligatoires de `sprints/sprint-0.md` :

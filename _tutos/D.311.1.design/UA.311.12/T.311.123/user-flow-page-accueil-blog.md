@@ -32,7 +32,7 @@ livrables:
 
 1. **Étape 1 — Initialiser le document de conception :**
 
-```powershell
+```bash
 mkdir docs/conception
 echo "" > docs/conception/user-flow.md
 ```

@@ -25,6 +25,6 @@ Gouverne, conçoit, audite et affine les compétences locales (`.agents/skills/`
 
 ## 4. Vérification Déterministe
 Pour vérifier la conformité de l'ensemble des compétences locales :
-```powershell
+```bash
 node .agents/skills/skills-dev/scripts/validate-skills.cjs
 ```

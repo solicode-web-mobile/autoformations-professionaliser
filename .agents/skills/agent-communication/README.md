@@ -24,7 +24,7 @@ Il garantit la traçabilité des directives, l'alignement des découpages didact
 ## 3. Mise en Œuvre Pratique du Canal EFP N3
 
 ### Initialisation du Symlink sous Windows PowerShell :
-```powershell
+```bash
 New-Item -ItemType SymbolicLink `
   -Path "d:\labs-web\projet-imiation-n3\.agents\communication-agents\redacteur-autoformation-to-realisation-sprint.md" `
   -Target "d:\solicode-web-mobile\autoformations-professionaliser\.agents\communication-agents\redacteur-autoformation-to-realisation-sprint.md" `

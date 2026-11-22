@@ -42,6 +42,6 @@ Attendre l'approbation explicite (clic sur le bouton **Proceed** ou retours comp
 
 ## 4. Vérification Déterministe
 Exécuter le script de conformité :
-```powershell
+```bash
 node .agents/skills/skills-dev/scripts/validate-skills.cjs
 ```

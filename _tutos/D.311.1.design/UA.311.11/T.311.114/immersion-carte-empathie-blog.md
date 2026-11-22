@@ -34,7 +34,7 @@ Appliquez les techniques d'immersion qualitative apprises en atelier au projet d
 1. **Étape 1 — Créer le fichier d'analyse :**
    Créez le dossier et le fichier de restitution :
 
-```powershell
+```bash
 mkdir docs/analyse
 echo "" > docs/analyse/empathie.md
 ```

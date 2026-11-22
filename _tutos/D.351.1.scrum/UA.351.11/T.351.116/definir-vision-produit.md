@@ -33,7 +33,7 @@ Définissez la Vision Produit (*Product Goal*) du *Blog des Lauréats* en atelie
 
 ## 2. Consignes de Réalisation
 - Créez le dossier et le fichier de la vision produit :
-  ```powershell
+  ```bash
   mkdir docs/produit
   echo "" > docs/produit/vision-produit.md
   ```

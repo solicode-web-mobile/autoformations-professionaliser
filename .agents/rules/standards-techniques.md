@@ -9,7 +9,7 @@ trigger: always_on
 - **Lecture Sécurisée sous PowerShell Windows :**
   - **Interdiction formelle de `Get-Content` brut sans `-Encoding utf8` :** Sous Windows PowerShell 5.1, `Get-Content` sans paramètre d'encodage lit le fichier en Windows-1252 (ANSI). Réécrire une chaîne ainsi lue entraîne irrémédiablement un **double encodage UTF-8 (*mojibake*)**.
   - Toujours spécifier explicitement l'encodage UTF-8 à la lecture :
-    ```powershell
+    ```bash
     # Méthode .NET recommandée (100% fiable) :
     $contenu = [System.IO.File]::ReadAllText($chemin, [System.Text.Encoding]::UTF8)
 
@@ -19,7 +19,7 @@ trigger: always_on
 - **Écriture Sécurisée sous PowerShell Windows :**
   - Éviter `Set-Content -Encoding UTF8` (qui écrit souvent un BOM sous Windows PowerShell 5.1).
   - Utiliser impérativement l'objet .NET avec `$False` pour le BOM :
-    ```powershell
+    ```bash
     $utf8NoBom = New-Object System.Text.UTF8Encoding $False
     [System.IO.File]::WriteAllText($chemin, $contenu, $utf8NoBom)
     ```

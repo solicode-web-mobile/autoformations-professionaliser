@@ -44,7 +44,7 @@ Bâtissez le socle fonctionnel et le carnet d'exigences du *Blog des Lauréats* 
 1. **Étape 1 — Créer les répertoires et les fichiers de projet :**  
    Initialisez les espaces dédiés à l'analyse et à la gouvernance Scrum sur votre poste local sous Windows PowerShell :
 
-```powershell
+```bash
 mkdir docs/analyse
 mkdir scrum
 echo "" > docs/analyse/personas.md
@@ -90,15 +90,15 @@ echo "" > scrum/product-backlog.md
 
    Enregistrez le carnet d'exigences structuré dans `scrum/product-backlog.md` :
 
-| ID | Titre de la User Story | Description Sémantique (INVEST) | Priorité MoSCoW | Estimation (SP) | Critères d'Acceptation |
-| :---: | :--- | :--- | :---: | :---: | :--- |
-| US01 | Consultation page d'accueil | En tant que visiteur ou apprenant (Amine), je veux visualiser la liste des derniers articles publiés afin de découvrir les retours d'expérience récents. | Must | 5 | Grille responsive, Hero section, tri chronologique descendant des publications. |
-| US02 | Consultation article détaillé | En tant que lecteur (Amine), je veux lire le contenu complet d'un article afin d'assimiler les conseils techniques et le retour d'expérience du lauréat. | Must | 5 | Route dynamique `/articles/{id}`, titre, auteur, date, contenu formaté, gestion de l'erreur 404. |
-| US03 | Filtrage par catégorie | En tant que lecteur (Amine), je veux filtrer les articles par domaine technique (Laravel, Scrum, Design, IA) afin de cibler directement mes centres d'intérêt. | Should | 3 | Boutons de filtrage actifs, affichage dynamique des articles filtrés. |
-| US04 | Authentification auteur | En tant que lauréat (Sara), je veux me connecter avec mes identifiants sécurisés afin d'accéder à mon espace de publication. | Must | 8 | Formulaire de login sécurisé (CSRF, validation), redirection vers le tableau de bord auteur. |
-| US05 | Tableau de bord auteur | En tant que lauréat auteur (Sara), je veux visualiser la liste de mes articles et leur statut (brouillon, publié) afin de suivre mes contributions. | Should | 5 | Liste des articles personnels, statuts visibles, actions d'édition et suppression. |
-| US06 | Recherche textuelle | En tant que lecteur (Amine), je veux rechercher des articles par mot-clé dans le titre ou le contenu afin de trouver rapidement une solution ciblée. | Could | 3 | Champ de recherche actif, filtrage instantané ou par soumission de formulaire. |
-| US07 | Messagerie instantanée | En tant qu'apprenant (Amine), je veux échanger en direct par chat avec un lauréat auteur. | Won't | 13 | Exclu du MVP initial : renvoi vers les profils professionnels externes (LinkedIn / GitHub). |
+|  ID   | Titre de la User Story        | Description Sémantique (INVEST)                                                                                                                                | Priorité MoSCoW | Estimation (SP) | Critères d'Acceptation                                                                           |
+| :---: | :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------: | :-------------: | :----------------------------------------------------------------------------------------------- |
+| US01  | Consultation page d'accueil   | En tant que visiteur ou apprenant (Amine), je veux visualiser la liste des derniers articles publiés afin de découvrir les retours d'expérience récents.       |      Must       |        5        | Grille responsive, Hero section, tri chronologique descendant des publications.                  |
+| US02  | Consultation article détaillé | En tant que lecteur (Amine), je veux lire le contenu complet d'un article afin d'assimiler les conseils techniques et le retour d'expérience du lauréat.       |      Must       |        5        | Route dynamique `/articles/{id}`, titre, auteur, date, contenu formaté, gestion de l'erreur 404. |
+| US03  | Filtrage par catégorie        | En tant que lecteur (Amine), je veux filtrer les articles par domaine technique (Laravel, Scrum, Design, IA) afin de cibler directement mes centres d'intérêt. |     Should      |        3        | Boutons de filtrage actifs, affichage dynamique des articles filtrés.                            |
+| US04  | Authentification auteur       | En tant que lauréat (Sara), je veux me connecter avec mes identifiants sécurisés afin d'accéder à mon espace de publication.                                   |      Must       |        8        | Formulaire de login sécurisé (CSRF, validation), redirection vers le tableau de bord auteur.     |
+| US05  | Tableau de bord auteur        | En tant que lauréat auteur (Sara), je veux visualiser la liste de mes articles et leur statut (brouillon, publié) afin de suivre mes contributions.            |     Should      |        5        | Liste des articles personnels, statuts visibles, actions d'édition et suppression.               |
+| US06  | Recherche textuelle           | En tant que lecteur (Amine), je veux rechercher des articles par mot-clé dans le titre ou le contenu afin de trouver rapidement une solution ciblée.           |      Could      |        3        | Champ de recherche actif, filtrage instantané ou par soumission de formulaire.                   |
+| US07  | Messagerie instantanée        | En tant qu'apprenant (Amine), je veux échanger en direct par chat avec un lauréat auteur.                                                                      |      Won't      |       13        | Exclu du MVP initial : renvoi vers les profils professionnels externes (LinkedIn / GitHub).      |
 
 ## 4. Livrables & Critères de Validation
 - **Livrables attendus :**

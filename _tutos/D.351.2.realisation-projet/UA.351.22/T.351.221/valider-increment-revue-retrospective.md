@@ -40,7 +40,7 @@ Clôturez officiellement le Sprint 0 en animant les deux cérémonies majeures d
 
 ## 2. Consignes de Réalisation
 - Créez les fichiers de clôture de sprint :
-  ```powershell
+  ```bash
   echo "" > sprints/pv-review-0.md
   echo "" > sprints/retrospective-0.md
   ```

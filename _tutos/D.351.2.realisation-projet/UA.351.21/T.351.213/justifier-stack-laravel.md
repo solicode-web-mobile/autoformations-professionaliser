@@ -33,7 +33,7 @@ Justifiez et documentez l'ensemble des choix technologiques structurant le *Blog
 
 ## 2. Consignes de Réalisation
 - Créez le fichier de documentation technique :
-  ```powershell
+  ```bash
   echo "" > docs/cadrage/stack-technique.md
   ```
 - Structurez le document avec les arguments comparatifs suivants :
