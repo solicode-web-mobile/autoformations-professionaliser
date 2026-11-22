@@ -38,9 +38,9 @@ Le passage de la théorie à la production commence véritablement lors du Sprin
 - Conduire un Daily Scrum efficace de 15 minutes pour identifier et éliminer les blocages.
 
 ## 3. Travail à faire
-Vous devez concevoir et préparer une **présentation synthétique** sur la planification opérationnelle et le pilotage quotidien d'un Sprint :
-1. **Rechercher et expliquer les notions fondamentales :** Définir avec vos propres mots le déroulement du Sprint Planning, le rôle du Sprint Goal, la règle d'or du découpage en micro-tâches techniques courtes, le fonctionnement d'un tableau Kanban (colonnes de flux, limitation du travail en cours WIP), et les 3 questions rituelles du Daily Scrum.
-2. **Illustrer par un exemple concret :** Choisir un cas d'usage ou vous appuyer sur votre projet technique pour définir un Sprint Goal, sélectionner vos User Stories, décomposer chaque story en 2 à 4 micro-tâches techniques chiffrées en heures, et simuler la levée d'un obstacle technique lors d'un Daily Scrum.
+Vous devez concevoir et préparer une **présentation synthétique** sur la planification opérationnelle et le pilotage quotidien d'un Sprint (pour vos exemples et cas pratiques, appliquez la démarche au sujet de votre **Projet Technique individuel** ; la solution de référence du formateur consultable ci-dessous illustre le cas modèle **TodoList**) :
+1. **Rechercher et expliquer les notions fondamentales :** Définir avec vos propres mots le rôle du Sprint Goal, la règle d'or du découpage en micro-tâches techniques courtes, le fonctionnement d'un tableau Kanban (colonnes de flux, limitation du travail en cours WIP), et les 3 questions rituelles du Daily Scrum.
+2. **Illustrer par un exemple concret :** Vous appuyer sur votre Projet Technique individuel pour définir un Sprint Goal, sélectionner vos User Stories, décomposer chaque story en 2 à 4 micro-tâches techniques chiffrées en heures, et simuler la levée d'un obstacle technique lors d'un Daily Scrum.
 3. **Produire vos livrables de soutenance :**
    - Rédiger votre fiche technique d'atelier synthétisant votre plan de sprint et votre organisation.
    - Concevoir votre support de présentation au format Marp (16:9).

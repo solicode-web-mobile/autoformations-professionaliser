@@ -63,6 +63,7 @@ Selon [.agents/references/maturation-et-typologie-ua-tuto.md](../../references/m
      </script>
      ```
    - Si les champs `data_*` sont vides, supprimer la section *Données de départ*.
+6. **Ciblage Exclusif du Projet d'Imitation (Blog) :** Tout `tuto-code` incrémental s'exécute systématiquement sur le Projet d'Imitation (*Blog des Lauréats de l'EFP*) pour délivrer directement le code applicatif du sprint sous `src/`.
 
 ---
 

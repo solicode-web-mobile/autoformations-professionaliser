@@ -33,7 +33,8 @@ Le **User Flow** modélise cette séquence logique. Grâce à la syntaxe déclar
 - Garantir la traçabilité et le versionnement du design au même titre que le code applicatif.
 
 ## 3. Travail à faire
-1. **Étape 1 — Identifier le scénario cible :** Définir le scénario nominal d'un visiteur qui découvre une plateforme Web, recherche un contenu et consulte un élément détaillé.
+Modélisez le parcours utilisateur en syntaxe textuelle déclarative Mermaid (pour vos exemples et cas pratiques, modélisez le parcours principal de votre **Projet Technique individuel** ; la solution de référence du formateur consultable ci-dessous illustre le cas modèle **TodoList**) :
+1. **Étape 1 — Identifier le scénario cible :** Définir le scénario nominal d'un visiteur qui découvre la plateforme Web, recherche un élément et consulte une information détaillée.
 2. **Étape 2 — Structurer les embranchements :** Identifier au moins deux alternatives ou cas d'erreur (ex : contenu trouvé vs aucun résultat).
 3. **Étape 3 — Coder le diagramme Mermaid :** Rédiger le graphe `flowchart TD` en respectant scrupuleusement la syntaxe déclarative.
 4. **Étape 4 — Rédiger la fiche et le diaporama :** Formaliser la documentation dans `tutoriels/design/parcours-utilisateur-prototypage/user-flow/user-flow.md` et préparer le diaporama Marp dans `tutoriels/design/parcours-utilisateur-prototypage/user-flow/presentation-user-flow.md`.

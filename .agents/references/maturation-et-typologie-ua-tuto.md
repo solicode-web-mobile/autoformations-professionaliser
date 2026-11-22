@@ -81,10 +81,10 @@ flowchart LR
       version: "1.0.0"
   ```
 
-### 2.3 Règle du Travail à Faire Différencié dans les Ateliers Enrichis (Logique vs Code)
-Afin d'impliquer activement l'apprenant et d'évaluer son assimilation après la mise à disposition de la solution de référence consultable sous `ua-lab/` :
-- **Domaines Logiques & Méthodologiques (Scrum, UML, Design Thinking, Architecture) :** L'apprenant consulte la solution TodoList (ou cas modèle) pour appréhender les concepts et la démarche, puis doit obligatoirement **transposer et appliquer cette démarche sur son propre Projet Technique individuel** (choisi au début de la formation). Les livrables de l'apprenant sont rangés dans son espace `tutoriels/[slug-domaine]/...`.
-- **Domaines de Codage & Implémentation (Laravel, Alpine.js, Composants front) :** L'apprenant n'a pas à transposer sur un autre projet : il lui suffit d'**implémenter concrètement le code** de l'exemple didactique (TodoList) et de fournir le code source fonctionnel ainsi que son journal de commandes CLI.
+### 2.3 Règle Universelle des Ateliers Pratiques (Projet Technique vs TodoList)
+Pour chaque atelier pratique guidé (`tuto-atelier`, `tuto-atelier-notions`) :
+- **Ancrage pratique de l'apprenant :** Dans la section *Travail à faire*, l'apprenant est guidé pour illustrer ses explications et réaliser ses cas pratiques **toujours sur le sujet de son Projet Technique individuel**. Aucune étape artificielle n'est ajoutée et on ne lui demande pas de refaire l'intégralité du travail du formateur. Ses productions sont rangées dans `tutoriels/[slug-domaine]/...`.
+- **Solution de référence du formateur :** L'Agent Rédacteur héberge sous `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/` la solution de référence complète, modélisée et rédigée **toujours sur l'application support unifiée TodoList**, consultable en fin de tutoriel.
 
 ---
 

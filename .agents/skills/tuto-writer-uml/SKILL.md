@@ -23,6 +23,7 @@ Applique le socle transversal et la synchronisation gouvernés par [tuto-writer]
 2. **Traçabilité avec le Product Backlog :** Tout cas d'utilisation modélisé doit être explicitement relié à une User Story issue du Product Backlog du sprint.
 3. **Syntaxe Déclarative Standardisée :** Noms des participants explicites, messages orientés action, messages de retour en pointillés (`-->>`).
 4. **Omission des Notions Déjà Acquises :** Aucune réintroduction théorique des bases UML validées en N1/N2 (définitions d'acteurs, flèches basiques). Aller droit à la modélisation métier.
+5. **Ancrage sur Projet Technique & Solution TodoList :** Dans les ateliers UML, l'apprenant modélise les diagrammes de son **Projet Technique individuel**, tandis que la solution de référence du formateur sous `ua-lab/` modélise **TodoList**.
 
 # 5. Formats de Livrables & Validation
 - **Fiches didactiques :** `tutoriels/uml/[slug-ua]/[slug-tuto]/[slug-tuto].md`

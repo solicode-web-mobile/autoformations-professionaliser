@@ -23,6 +23,7 @@ Applique le socle transversal et la synchronisation gouvernés par [tuto-writer]
 2. **Étape 01 Méta-Prompt Générateur :** Tout tutoriel de création de prompt débute obligatoirement par la conception du méta-prompt générateur (`prompt-creator`).
 3. **Skills Modulaires vs Prompts Passifs :** Privilégier systématiquement la conception de skills modulaires outillant des tâches récurrentes du flux de travail plutôt que des prompts isolés.
 4. **Zéro Prompt pour l'Apprentissage Conceptuel :** Proscrire tout prompt d'assistance pour les concepts purs sans livrable technique reproductible.
+5. **Ancrage sur Projet Technique & Solution TodoList :** Dans les ateliers d'ingénierie IA, l'apprenant ancre ses prompts et cas pratiques sur son **Projet Technique individuel**, tandis que la solution de référence du formateur sous `ua-lab/` outille **TodoList**.
 
 # 5. Formats de Livrables & Validation
 - **Fiches didactiques :** `tutoriels/ia/[slug-ua]/[slug-tuto]/[slug-tuto].md`

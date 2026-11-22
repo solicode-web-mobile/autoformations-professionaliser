@@ -38,9 +38,9 @@ L'expression claire et partagée du besoin utilisateur est la condition fondamen
 - Délimiter le périmètre initial du produit (MVP) pour éviter la dérive des fonctionnalités.
 
 ## 3. Travail à faire
-Vous devez concevoir et préparer une **présentation synthétique** sur l'expression des besoins et la formalisation des User Stories :
+Vous devez concevoir et préparer une **présentation synthétique** sur l'expression des besoins et la formalisation des User Stories (pour vos exemples et cas pratiques, appliquez la démarche au sujet de votre **Projet Technique individuel** ; la solution de référence du formateur consultable ci-dessous illustre le cas modèle **TodoList**) :
 1. **Rechercher et expliquer les notions fondamentales :** Définir avec vos propres mots le rôle de la Vision Produit, la technique des Personas, la structure canonique d'une User Story, l'utilité des critères d'acceptation et le principe de sélection du Minimum Viable Product (MVP).
-2. **Illustrer par un exemple concret :** Choisir un cas d'usage ou vous appuyer sur votre projet technique pour formuler une vision produit, dresser le portrait de 2 personas distincts et rédiger 3 à 5 User Stories majeures avec leurs critères d'acceptation.
+2. **Illustrer par un exemple concret :** Vous appuyer sur votre Projet Technique individuel pour formuler une vision produit, dresser le portrait de 2 personas distincts et rédiger 3 à 5 User Stories majeures avec leurs critères d'acceptation.
 3. **Produire vos livrables de soutenance :**
    - Rédiger votre fiche technique d'atelier synthétisant votre analyse et vos spécifications.
    - Concevoir votre support de présentation au format Marp (16:9).

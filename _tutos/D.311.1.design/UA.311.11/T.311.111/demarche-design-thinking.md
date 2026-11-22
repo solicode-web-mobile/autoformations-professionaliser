@@ -29,6 +29,7 @@ Cette approche permet de transformer des observations concrètes de terrain en s
 - Distinguer la phase de recherche du problème (comprendre et définir) de la phase de conception de la solution (idéer et prototyper).
 
 ## 3. Travail à faire
+Appropriez-vous la démarche méthodologique du Design Thinking (pour vos exemples et cas pratiques, appliquez la démarche au sujet de votre **Projet Technique individuel** ; la solution de référence du formateur consultable ci-dessous illustre le cas modèle **TodoList**) :
 1. **Étape 1 — Cartographier les 5 phases :** Schématiser le cycle itératif du Design Thinking et décrire le rôle de chaque phase.
 2. **Étape 2 — Analyser le Double Diamant :** Identifier les deux phases de divergence (recherche de problèmes, génération d'idées) et les deux phases de convergence (cadrage du problème, sélection de solutions).
 3. **Étape 3 — Rédiger la fiche de restitution :** Renseigner la synthèse dans `tutoriels/design/design-thinking-empathie/demarche-design-thinking/demarche-design-thinking.md`.

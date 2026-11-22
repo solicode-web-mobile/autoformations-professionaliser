@@ -36,9 +36,6 @@ Il formule le cadre pédagogique, les compétences cibles, les consignes et le t
 ## 1. Contexte & Enjeux
 ## 2. Ce que vous devez apprendre
 ## 3. Travail à faire
-> [!TIP]
-> Solution de référence consultable sous ua-lab/...
-{% include tuto-livrables.html %}
 ## 4. Livrables attendus & Critères de validation
 ```
 *Règle d'or :* Interdiction formelle de la section « Pistes de recherche active » dans `tuto-atelier-notions` (les objectifs sont consolidés en section 2 et illustrés par la solution).
@@ -51,9 +48,7 @@ Il formule le cadre pédagogique, les compétences cibles, les consignes et le t
 3. **Zéro Fuite Didactique & Zéro Jalon :** Bannir « 20/80 ». Terme direct « Étape » obligatoire (« Jalon » proscrit). Aucune durée unitaire (`(2h)`).
 4. **Formatage Colonne 0 & UTF-8 :** Tout bloc de code débute strictement colonne 0 (zéro indentation). UTF-8 sans BOM.
 5. **Gouvernance & Relais :** Réfère à [tuto-writer](../tuto-writer/SKILL.md) et transmet le relais à [tuto-livrable-atelier-writer](../tuto-livrable-atelier-writer/SKILL.md) pour la réalisation physique sous `ua-lab/`.
-6. **Travail à Faire Différencié (Logique vs Code) :**
-   - *Domaines Logiques (Scrum, UML, Design Thinking, Architecture) :* Transposition sur Projet Technique individuel.
-   - *Domaines de Code (Laravel, Alpine.js) :* Implémentation concrète de l'exemple didactique.
+6. **Ancrage sur Projet Technique & Solution TodoList :** Dans le *Travail à faire*, indiquer simplement que les illustrations, exemples ou cas pratiques demandés s'ancrent sur le sujet du **Projet Technique individuel** de l'apprenant. Zéro étape additionnelle lourde (ne pas demander de refaire tout le travail du formateur). La solution de référence consultable (`ua-lab/`) est systématiquement sur **TodoList**.
 7. **Zéro Livrable Inexistant en Frontmatter :** Ne déclarer aucun bloc `livrables:` tant que le tutoriel est `statut_realisation: "a_realiser"`.
 8. **Zéro Justification d'Exemple Support :** Ne jamais demander à l'apprenant de justifier le choix didactique d'un exemple support.
 9. **Zéro Inclusion Manuelle de Solution dans le Markdown :** Interdiction absolue d'insérer `{% include tuto-livrables.html %}` ou des blocs d'alerte de solution dans le corps Markdown des fiches. L'affichage de la solution de référence est géré de manière unique et centralisée par le layout (`_layouts/tuto.html`) à la fin du tutoriel, masqué initialement derrière un bouton de consultation.

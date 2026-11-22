@@ -23,6 +23,7 @@ Applique le socle transversal et la synchronisation gouvernés par [tuto-writer]
 2. **Critère INVEST & Priorisation MoSCoW :** Tout tutoriel portant sur le Product Backlog doit imposer la rédaction de User Stories au standard INVEST et la catégorisation MoSCoW (Must, Should, Could, Won't).
 3. **Definition of Done (DoD) Explicite :** Exiger des critères vérifiables et mesurables (tests passants, conformité de style, revue de code, branche active).
 4. **Zéro Prompt pour l'Assimilation Conceptuelle :** Interdiction d'outiller par un prompt IA l'apprentissage de notions théoriques Scrum pures.
+5. **Ancrage sur Projet Technique & Solution TodoList :** Dans les ateliers Scrum, l'apprenant ancre ses exemples et cas pratiques sur son **Projet Technique individuel**, tandis que la solution de référence du formateur sous `ua-lab/` illustre **TodoList**.
 
 # 5. Formats de Livrables & Validation
 - **Fiches didactiques :** `tutoriels/scrum/[slug-ua]/[slug-tuto]/[slug-tuto].md`

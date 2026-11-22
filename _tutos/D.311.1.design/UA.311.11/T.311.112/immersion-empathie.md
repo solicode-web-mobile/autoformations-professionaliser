@@ -30,7 +30,8 @@ Dans cet atelier, nous appliquons les techniques qualitatives d'écoute active e
 - Identifier avec précision les douleurs (*pains*) et les bénéfices recherchés (*gains*).
 
 ## 3. Travail à faire
-1. **Étape 1 — Préparer la grille d'investigation :** Rédiger 5 questions ouvertes destinées à comprendre comment un apprenant organise ses journées de formation et gère ses priorités.
+Conduisez l'immersion usagers et structurez la carte d'empathie (pour vos exemples et cas pratiques, appliquez la démarche au profil utilisateur de votre **Projet Technique individuel** ; la solution de référence du formateur consultable ci-dessous illustre le cas modèle **TodoList**) :
+1. **Étape 1 — Préparer la grille d'investigation :** Rédiger 5 questions ouvertes destinées à comprendre comment un utilisateur cible organise ses activités et gère ses priorités.
 2. **Étape 2 — Conduire l'observation :** Observer les habitudes réelles d'organisation et noter les verbatim concrets sans interprétation subjective.
 3. **Étape 3 — Remplir la Carte d'Empathie :** Synthétiser les observations dans les 4 quadrants (Dit, Fait, Pense, Ressent), puis isoler les frustrations majeures et les attentes clés.
 4. **Étape 4 — Rédiger la fiche et le diaporama :** Formaliser la synthèse dans `tutoriels/design/design-thinking-empathie/immersion-empathie/immersion-empathie.md` et concevoir le diaporama Marp dans `tutoriels/design/design-thinking-empathie/immersion-empathie/presentation-immersion-empathie.md`.

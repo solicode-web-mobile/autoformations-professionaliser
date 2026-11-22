@@ -38,9 +38,9 @@ La fin d'un Sprint ne se limite pas à valider du code sur GitHub. Elle articule
 - Élaborer un plan de 2 à 3 actions d'amélioration concrètes, mesurables et directement applicables.
 
 ## 3. Travail à faire
-Vous devez concevoir et préparer une **présentation synthétique** sur la clôture d'un Sprint agile (Revue et Rétrospective) :
+Vous devez concevoir et préparer une **présentation synthétique** sur la clôture d'un Sprint agile (Revue et Rétrospective) (pour vos exemples et cas pratiques, appliquez la démarche au sujet de votre **Projet Technique individuel** ; la solution de référence du formateur consultable ci-dessous illustre le cas modèle **TodoList**) :
 1. **Rechercher et expliquer les notions fondamentales :** Définir avec vos propres mots la distinction fondamentale entre la Sprint Review (axée produit) et la Sprint Retrospective (axée équipe), les principes d'une démonstration live sans slides passives, les modalités de recueil de feedback, et la structure d'une rétrospective d'équipe efficace.
-2. **Illustrer par un exemple concret :** Choisir un cas d'usage ou vous appuyer sur votre projet technique pour simuler la démonstration en direct de votre incrément, lister les retours obtenus d'un utilisateur externe, et formaliser le bilan de votre rétrospective avec 3 actions d'amélioration prioritaires pour le Sprint 2.
+2. **Illustrer par un exemple concret :** Vous appuyer sur votre Projet Technique individuel pour simuler la démonstration en direct de votre incrément, lister les retours obtenus d'un utilisateur externe, et formaliser le bilan de votre rétrospective avec 3 actions d'amélioration prioritaires pour le Sprint 2.
 3. **Produire vos livrables de soutenance :**
    - Rédiger votre fiche technique d'atelier synthétisant votre revue et votre plan d'actions.
    - Concevoir votre support de présentation au format Marp (16:9).

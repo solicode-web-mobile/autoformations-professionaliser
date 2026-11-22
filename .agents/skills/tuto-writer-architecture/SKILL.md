@@ -23,6 +23,7 @@ Applique le socle transversal et la synchronisation gouvernés par [tuto-writer]
 2. **Modélisation Déclarative des Flux :** Tout flux architectural transverse (ex: requête HTTP -> contrôleur -> service -> repository) doit être illustré par un `sequenceDiagram` Mermaid calé colonne 0.
 3. **Contrôleurs Minces :** Les tutoriels doivent proscrire la logique métier dans les contrôleurs et orienter vers les services ou actions dédiées.
 4. **Zéro Dépendance Circulaire :** Interdire explicitement tout couplage bidirectionnel entre couches.
+5. **Ancrage sur Projet Technique & Solution TodoList :** Dans les ateliers d'architecture, l'apprenant applique les choix et ADR à son **Projet Technique individuel**, tandis que la solution de référence du formateur sous `ua-lab/` illustre **TodoList**.
 
 # 5. Formats de Livrables & Validation
 - **Fiches didactiques :** `tutoriels/architecture/[slug-ua]/[slug-tuto]/[slug-tuto].md`

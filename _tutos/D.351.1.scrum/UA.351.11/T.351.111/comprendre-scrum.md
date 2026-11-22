@@ -38,9 +38,9 @@ Dans le développement logiciel moderne, la gestion de projet traditionnelle en 
 - Définir la notion d'incrément logiciel opérationnel et les exigences de la Definition of Done (DoD).
 
 ## 3. Travail à faire
-Vous devez concevoir et préparer une **présentation synthétique** sur les notions fondamentales de l'Agilité et du cadre Scrum :
+Vous devez concevoir et préparer une **présentation synthétique** sur les notions fondamentales de l'Agilité et du cadre Scrum (pour vos exemples et cas pratiques, appuyez-vous sur le sujet de votre **Projet Technique individuel** ; la solution de référence du formateur consultable ci-dessous illustre le cas modèle **TodoList**) :
 1. **Rechercher et expliquer les notions fondamentales :** Définir avec vos propres mots la rupture avec le cycle en V, les 4 valeurs agiles, les 3 piliers, les 3 rôles et les 5 événements Scrum.
-2. **Illustrer par un exemple concret :** Choisir un cas d'usage logiciel pour illustrer comment l'équipe Scrum s'organise et comment un premier sprint livre un incrément visible.
+2. **Illustrer par un exemple concret :** Vous appuyer sur votre Projet Technique individuel pour illustrer comment l'équipe Scrum s'organise et comment un premier sprint livre un incrément visible.
 3. **Produire vos livrables de soutenance :**
    - Rédiger votre fiche technique d'atelier synthétisant vos explications et votre exemple.
    - Concevoir votre support de présentation au format Marp (16:9).

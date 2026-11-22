@@ -23,6 +23,7 @@ Applique le socle transversal et la synchronisation gouvernés par [tuto-writer]
 2. **Neutralité de Version du Framework :** Nommer le framework simplement « Laravel » dans le corps du texte (pas de mention « Laravel 12 »). La version exacte est confinée au `README.md` du projet.
 3. **Validation par FormRequest :** Interdire la validation directe inline dans le contrôleur (`$request->validate(...)`). Exiger systématiquement un FormRequest dédié.
 4. **Commandes PowerShell Compatibles :** Fournir des commandes Artisan et PowerShell directement exécutables sous Windows.
+5. **Dualité Ateliers (Projet Technique/TodoList) vs Code Incrémental (Blog) :** Dans les ateliers d'assimilation Laravel, l'apprenant ancre ses exemples et cas pratiques sur son **Projet Technique individuel**, tandis que la solution de référence du formateur sous `ua-lab/` traite **TodoList**. Les tutoriels de code incrémental (`tuto-code`) sont quant à eux développés sur le **Blog des Lauréats** pour livrer le code applicatif du sprint sous `src/`.
 
 # 5. Formats de Livrables & Validation
 - **Fiches didactiques :** `tutoriels/laravel/[slug-ua]/[slug-tuto]/[slug-tuto].md`

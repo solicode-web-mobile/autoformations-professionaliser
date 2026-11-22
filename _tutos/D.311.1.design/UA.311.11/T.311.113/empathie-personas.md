@@ -29,6 +29,7 @@ L'**Outil Persona** transforme les données brutes en un personnage fictif mais 
 - Modéliser un Persona complet et cohérent représentant l'utilisateur cible (ex : apprenant confronté à la dispersion des priorités).
 
 ## 3. Travail à faire
+Modélisez la fiche Persona de votre utilisateur cible (pour vos exemples et cas pratiques, appliquez la démarche au sujet de votre **Projet Technique individuel** ; la solution de référence du formateur consultable ci-dessous illustre le cas modèle **TodoList**) :
 1. **Étape 1 — Identifier les caractéristiques clés :** À partir de la Carte d'Empathie, déterminer le profil démographique et le comportement type de l'utilisateur cible.
 2. **Étape 2 — Structurer la fiche Persona :** Renseigner chaque section canonique :
    - *Prénom, âge, statut professionnel, photo ou avatar représentatif.*

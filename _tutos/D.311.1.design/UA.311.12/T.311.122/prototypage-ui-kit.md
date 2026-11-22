@@ -33,6 +33,7 @@ Pour garantir une expérience utilisateur cohérente et professionnelle, les éq
 - Assembler ces composants pour créer un prototype interactif fluide et validable auprès des utilisateurs.
 
 ## 3. Travail à faire
+Spécifiez et assemblez l'UI Kit de composants d'interface (pour vos exemples et cas pratiques, adaptez l'UI Kit aux besoins de votre **Projet Technique individuel** ; la solution de référence du formateur consultable ci-dessous illustre le cas modèle **TodoList**) :
 1. **Étape 1 — Définir la charte graphique de base :** Sélectionner une couleur primaire, une couleur secondaire, les teintes de texte et de fond en classes Tailwind CSS.
 2. **Étape 2 — Sélectionner les composants Preline UI :** Choisir les gabarits HTML adaptés pour le Header, le Hero, la grille de cartes d'articles et le Footer.
 3. **Étape 3 — Rédiger la spécification de l'UI Kit :** Documenter le rôle de chaque composant, ses classes Tailwind et son comportement adaptatif (desktop / mobile).

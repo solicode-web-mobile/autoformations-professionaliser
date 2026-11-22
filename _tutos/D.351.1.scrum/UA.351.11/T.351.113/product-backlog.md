@@ -38,9 +38,9 @@ Une fois les besoins recueillis et formulés en User Stories, l'équipe ne peut 
 - Établir la Definition of Done (DoD) pour garantir un standard de qualité strict et non négociable.
 
 ## 3. Travail à faire
-Vous devez concevoir et préparer une **présentation synthétique** sur l'estimation et l'ordonnancement du Product Backlog :
+Vous devez concevoir et préparer une **présentation synthétique** sur l'estimation et l'ordonnancement du Product Backlog (pour vos exemples et cas pratiques, appliquez la démarche au sujet de votre **Projet Technique individuel** ; la solution de référence du formateur consultable ci-dessous illustre le cas modèle **TodoList**) :
 1. **Rechercher et expliquer les notions fondamentales :** Définir avec vos propres mots le rôle du Product Backlog, les principes de l'estimation en Story Points vs les heures fermes, l'utilisation de la suite de Fibonacci, la méthode MoSCoW, ainsi que la différence essentielle entre la DoR et la DoD.
-2. **Illustrer par un exemple concret :** Choisir un cas d'usage ou vous appuyer sur votre projet technique pour chiffrer en Story Points au moins 5 User Stories, les ordonner selon MoSCoW, et rédiger votre grille de DoR et DoD.
+2. **Illustrer par un exemple concret :** Vous appuyer sur votre Projet Technique individuel pour chiffrer en Story Points au moins 5 User Stories, les ordonner selon MoSCoW, et rédiger votre grille de DoR et DoD.
 3. **Produire vos livrables de soutenance :**
    - Rédiger votre fiche technique d'atelier synthétisant vos estimations et vos contrats qualité.
    - Concevoir votre support de présentation au format Marp (16:9).

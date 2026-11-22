@@ -6,7 +6,7 @@ version: 1.1.0
 
 # 1. Mission & Rôle
 Opérateur technique de réalisation d'ateliers pour l'Agent Rédacteur d'Autoformation.
-Prend en charge l'exécution concrète du travail à faire formulé par [tuto-atelier-writer](../tuto-atelier-writer/SKILL.md) et produit l'ensemble des livrables de référence sous `ua-lab/`.
+Prend en charge l'exécution concrète du travail à faire formulé par [tuto-atelier-writer](../tuto-atelier-writer/SKILL.md) et produit l'ensemble des livrables de référence sous `ua-lab/` systématiquement sur l'application support unifiée **TodoList**.
 
 - **Livrables produits sous `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/` :**
   1. Fiche de restitution réalisée : `[slug-tuto].md` (synthèse, schémas Mermaid, analyse, cas d'usage résolu).
@@ -36,7 +36,7 @@ Pour chaque atelier à réaliser, `tuto-livrable-atelier-writer` coordonne l'éc
 ---
 
 # 4. Règles Inviolables
-1. **Emplacement de Référence sur le Site :** Tout livrable d'atelier d'autoformation réside strictement sous `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/` (le dossier `tutoriels/` étant réservé au poste apprenant).
+1. **Emplacement de Référence & Cas d'École Unifié :** Tout livrable d'atelier d'autoformation réside strictement sous `ua-lab/[slug-domaine]/[slug-ua]/[slug-tuto]/` et traite systématiquement le cas d'école **TodoList** (le dossier `tutoriels/` étant réservé au poste apprenant pour son Projet Technique).
 2. **Format Marp & Exclusion de Navigation :** Les diaporamas portent obligatoirement dans leur frontmatter `layout: presentation`, `marp: true` et `nav_exclude: true` pour être consultables en plein écran sans polluer la navbar. La fiche de restitution `[slug-tuto].md` porte également `nav_exclude: true`. Zéro mention d'encadrant ni d'établissement.
 3. **Règles de Rédaction & Niveau de Détail Approfondi :** La fiche `[slug-tuto].md` applique un haut niveau de détail pédagogique adapté aux débutants : explications narratives complètes (zéro liste sèche) selon le plan : 1. Contexte & Objectif, 2. Données de départ, 3. Notions Essentielles (développées), 4. Pratique & Réalisation Guidée (tableau pas-à-pas), 5. Livrables & Critères, 6. Glossaire.
 4. **Promotion de la Fiche Jekyll :** À l'issue de la réalisation, promouvoir la fiche `_tutos/...` en `type: "tuto-atelier-notions"` (`statut_realisation: "realise"`, affichée sous le badge **« Atelier corrigé »**) avec déclaration du bloc `livrables:`. Supprimer obligatoirement la section « Pistes de recherche active » et renuméroter la section finale en « 4. Livrables attendus & Critères de validation ».
