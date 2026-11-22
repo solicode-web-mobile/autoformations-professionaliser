@@ -151,6 +151,12 @@
   vertical-align: middle;
 }
 
+.badge-etape.badge-etape-suite {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: #fde68a;
+}
+
 .tuto-topbar-badge-type,
 .tuto-topbar-badge-maturite {
   margin-left: 0.45rem;

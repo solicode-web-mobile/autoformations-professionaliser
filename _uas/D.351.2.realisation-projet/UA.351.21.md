@@ -1,8 +1,8 @@
 ---
 title: "Application Projet : Dépôt, Cadrage et Stack Technique"
 layout: ua
-code: "UA.351.01"
-slug: "depot-cadrage-stack"
+code: "UA.351.21"
+slug: "cadrage-initial"
 maturite: "projet"
 ordre: 1
 competence: "C.351"

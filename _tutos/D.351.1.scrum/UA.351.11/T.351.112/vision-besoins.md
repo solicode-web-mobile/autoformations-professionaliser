@@ -4,7 +4,7 @@ title: "Définir la vision produit et exprimer les besoins en User Stories"
 sous_titre: "Formuler la Vision Produit, concevoir les Personas cibles et rédiger les User Stories avec critères d'acceptation"
 slug: "vision-besoins"
 slug_domaine: "scrum"
-slug_ua: "initiation-scrum"
+slug_ua: "UA.351.11"
 permalink: /tutos/vision-besoins/
 tuto_id: "T.351.112"
 version: "normal"

@@ -1,5 +1,5 @@
 /* =========================================================
-   FORMATION WEB â€” BASE
+   FORMATION WEB — BASE
    Styles communs aux layouts
    ========================================================= */
 
@@ -70,10 +70,10 @@
 
 
 /* =========================================================
-   7. JUST THE DOCS â€” SIDEBAR & MAIN CONTENT
+   7. JUST THE DOCS — SIDEBAR & MAIN CONTENT
    ========================================================= */
 
-/* Fixer la largeur du menu aside pour tout mÃ©dia */
+/* Fixer la largeur du menu aside pour tout média */
 .side-bar {
   width: 350px !important;
 }
@@ -85,8 +85,8 @@
 }
 @media (min-width: 50rem) {
 
-  /* Ajuster la marge pour correspondre Ã  la largeur de la sidebar (350px) 
-     Surcharge de la fonction Max() de Just the Docs sur les trÃ¨s grands Ã©crans
+  /* Ajuster la marge pour correspondre à la largeur de la sidebar (350px) 
+     Surcharge de la fonction Max() de Just the Docs sur les très grands écrans
      pour permettre au contenu d'occuper tout l'espace sans marge vide au milieu */
   .main,
   .side-bar + .main {
@@ -94,7 +94,7 @@
     max-width: none !important;
   }
 
-  /* Retirer les limites de largeur par dÃ©faut du thÃ¨me sur le contenu */
+  /* Retirer les limites de largeur par défaut du thème sur le contenu */
   .main-content-wrap,
   .main-content {
     max-width: none !important;

@@ -4,7 +4,7 @@ title: "Prototypage d'interface et conception de l'UI Kit (Preline UI)"
 sous_titre: "Structurer un système de conception modulaire avec Tailwind CSS et les composants Preline UI"
 slug: "prototypage-ui-kit"
 slug_domaine: "design"
-slug_ua: "parcours-utilisateur-prototypage"
+slug_ua: "UA.311.12"
 permalink: /tutos/prototypage-ui-kit/
 tuto_id: "T.311.122"
 version: "normal"

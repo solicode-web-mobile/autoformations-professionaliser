@@ -4,13 +4,13 @@ title: "Introduction au Design Thinking et modèle du Double Diamant"
 sous_titre: "Assimiler les 5 phases de la conception centrée utilisateur et la dynamique de divergence-convergence"
 slug: "demarche-design-thinking"
 slug_domaine: "design"
-slug_ua: "design-thinking-empathie"
+slug_ua: "UA.311.11"
 permalink: /tutos/demarche-design-thinking/
 tuto_id: "T.311.111"
 version: "normal"
 ua: "UA.311.11"
 type: "tuto-atelier"
-etape: 6
+etape: 4
 nav_order: 1
 simplified: true
 en_construction: false

@@ -1,8 +1,8 @@
 ---
 title: "Application Projet : Validation d'Incrément et Clôture Agile"
 layout: ua
-code: "UA.351.02"
-slug: "cloture-agile-revue-retrospective"
+code: "UA.351.22"
+slug: "validation-soutenance"
 maturite: "projet"
 ordre: 6
 competence: "C.351"

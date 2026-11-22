@@ -4,11 +4,11 @@ title: "Initialiser le dépôt Git et l'espace projet vitrine"
 sous_titre: "Configurer l'espace de travail local, le suivi de version Git et la documentation vitrine du projet"
 slug: "initialiser-depot-git"
 slug_domaine: "realisation-projet"
-slug_ua: "depot-cadrage-stack-backlog"
-permalink: /tutos/initialiser-depot-git/
-tuto_id: "T.351.012"
+slug_ua: "UA.351.21"
+permalink: "/tutos/initialiser-depot-git/"
+tuto_id: "T.351.211"
 version: "normal"
-ua: "UA.351.01"
+ua: "UA.351.21"
 type: "tuto-tache"
 etape: 1
 nav_order: 1

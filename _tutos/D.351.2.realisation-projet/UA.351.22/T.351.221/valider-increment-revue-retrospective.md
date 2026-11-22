@@ -4,11 +4,11 @@ title: "Valider l'Incrément Maquette (Sprint Review 0 Go/No-Go) & Rétrospectiv
 sous_titre: "Animer la démonstration contradictoire, prononcer l'arbitrage Go/No-Go et formaliser la rétrospective"
 slug: "valider-increment-revue-retrospective"
 slug_domaine: "realisation-projet"
-slug_ua: "maquette-accueil-cloture-agile"
-permalink: /tutos/valider-increment-revue-retrospective/
-tuto_id: "T.351.022"
+slug_ua: "UA.351.22"
+permalink: "/tutos/valider-increment-revue-retrospective/"
+tuto_id: "T.351.221"
 version: "normal"
-ua: "UA.351.02"
+ua: "UA.351.22"
 type: "tuto-tache"
 etape: 15
 nav_order: 1

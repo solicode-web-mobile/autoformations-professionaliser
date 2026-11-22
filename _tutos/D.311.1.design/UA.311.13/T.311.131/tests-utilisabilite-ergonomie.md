@@ -4,7 +4,7 @@ title: "Protocoles de tests d'utilisabilité et critères d'évaluation ergonomi
 sous_titre: "Assimiler les heuristiques de Nielsen et conduire une évaluation formative d'interface"
 slug: "tests-utilisabilite-ergonomie"
 slug_domaine: "design"
-slug_ua: "tests-utilisabilite-ergonomie"
+slug_ua: "UA.311.13"
 permalink: /tutos/tests-utilisabilite-ergonomie/
 tuto_id: "T.311.131"
 version: "normal"

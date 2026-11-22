@@ -4,7 +4,7 @@ title: "Planifier, découper et piloter un Sprint de développement"
 sous_titre: "Fixer le Sprint Goal, constituer le Sprint Backlog, découper en tâches techniques et animer le Kanban"
 slug: "sprint-planning-execution"
 slug_domaine: "scrum"
-slug_ua: "initiation-scrum"
+slug_ua: "UA.351.11"
 permalink: /tutos/sprint-planning-execution/
 tuto_id: "T.351.114"
 version: "normal"

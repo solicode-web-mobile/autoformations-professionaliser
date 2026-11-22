@@ -4,7 +4,7 @@ title: "Modélisation des Personas utilisateurs"
 sous_titre: "Modéliser un archétype d'utilisateur cible à partir des constats d'empathie"
 slug: "empathie-personas"
 slug_domaine: "design"
-slug_ua: "design-thinking-empathie"
+slug_ua: "UA.311.11"
 permalink: /tutos/empathie-personas/
 tuto_id: "T.311.113"
 version: "normal"

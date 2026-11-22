@@ -39,7 +39,7 @@ Cette directive met fin à l'ambiguïté historique selon laquelle l'Agent Réal
 1. **Accusé de réception :** Compléter la section 4 ci-dessous pour confirmer la prise en compte de ce recentrage de périmètre.
 2. **Harmonisation locale :**
    - Mettre à jour vos personas ou règles locales si elles mentionnaient la production de fiches d'ateliers dans `tutoriels/`.
-   - Vous concentrer exclusivement sur les tâches de projet de la session S0 (`UA.351.01` et `UA.351.02`).
+   - Vous concentrer exclusivement sur les tâches de projet de la session S0 (`UA.351.21` et `UA.351.22`).
 
 ---
 

@@ -1,11 +1,11 @@
 ---
 layout: tuto
-title: "Sprint Review et dÃ©monstration live"
-sous_titre: "Conduire la dÃ©monstration de l'incrÃ©ment fonctionnel et valider la Definition of Done"
+title: "Sprint Review et démonstration live"
+sous_titre: "Conduire la démonstration de l'incrément fonctionnel et valider la Definition of Done"
 slug: "review-demonstration"
 slug_domaine: "realisation-projet"
-slug_ua: "cloture-sprint"
-permalink: /tutos/review-demonstration/
+slug_ua: "UA.351.25"
+permalink: "/tutos/sprint-review-et-demonstration-live/"
 tuto_id: "T.351.251"
 version: "normal"
 ua: "UA.351.25"
@@ -19,57 +19,58 @@ data_html: ""
 data_css: ""
 data_js: ""
 data_php: ""
+etape: 1004
 ---
 
-## 1. Objectif OpÃ©rationnel & PrÃ©requis
-- **Position dans le flux :** Phase D â€” ClÃ´ture de Sprint, RÃ©trospective & Bilan / Ã‰tape 12.1 â€” DÃ©monstration Live.
+## 1. Objectif Opérationnel & Prérequis
+- **Position dans le flux :** Phase D — Clôture de Sprint, Rétrospective & Bilan / Étape 12.1 — Démonstration Live.
 - **Branche Git :** `sprint1`
-- **Fichiers modifiÃ©s ou crÃ©Ã©s :** `scrum/revue-s1.md`.
-- **Objectif :** Conduire la dÃ©monstration live de l'incrÃ©ment dÃ©ployable du *Blog des LaurÃ©ats* face au Product Owner et valider critÃ¨re par critÃ¨re les 7 Ã©lÃ©ments de la Definition of Done (DoD).
-- **PrÃ©requis :** Tranche verticale complÃ¨te Laravel stabilisÃ©e (`UA.321.13`) sur la branche `sprint1`.
+- **Fichiers modifiés ou créés :** `scrum/revue-s1.md`.
+- **Objectif :** Conduire la démonstration live de l'incrément déployable du *Blog des Lauréats* face au Product Owner et valider critère par critère les 7 éléments de la Definition of Done (DoD).
+- **Prérequis :** Tranche verticale complète Laravel stabilisée (`UA.321.13`) sur la branche `sprint1`.
 
-## 2. DÃ©roulement Pas-Ã -Pas de la TÃ¢che
+## 2. Déroulement Pas-à-Pas de la Tâche
 
-1. **Ã‰tape 1 â€” PrÃ©paration de l'Environnement de DÃ©monstration :**  
-   DÃ©marrez le serveur local et prÃ©parez les jeux d'essais :
+1. **Étape 1 — Préparation de l'Environnement de Démonstration :**  
+   Démarrez le serveur local et préparez les jeux d'essais :
 
 ```bash
 cd src
 php artisan serve
 ```
 
-   VÃ©rifiez que le fichier de donnÃ©es tabulaires `src/database/data/articles.csv` contient au moins 3 articles complets pour la dÃ©monstration.
+   Vérifiez que le fichier de données tabulaires `src/database/data/articles.csv` contient au moins 3 articles complets pour la démonstration.
 
-2. **Ã‰tape 2 â€” Conduite de la DÃ©monstration Fonctionnelle en Direct :**  
+2. **Étape 2 — Conduite de la Démonstration Fonctionnelle en Direct :**  
    Sous la conduite du Product Owner (formateur) :
-   - PrÃ©sentez la page d'accueil responsive (`/`).
-   - AccÃ©dez Ã  la liste des articles (`/articles`).
-   - Cliquez sur un article et dÃ©montrez l'affichage complet de sa vue dÃ©taillÃ©e (`/articles/1`).
-   - Modifiez manuellement l'URL avec un identifiant inexistant (`/articles/999`) et dÃ©montrez l'interception propre par la page d'erreur 404 personnalisÃ©e.
+   - Présentez la page d'accueil responsive (`/`).
+   - Accédez à la liste des articles (`/articles`).
+   - Cliquez sur un article et démontrez l'affichage complet de sa vue détaillée (`/articles/1`).
+   - Modifiez manuellement l'URL avec un identifiant inexistant (`/articles/999`) et démontrez l'interception propre par la page d'erreur 404 personnalisée.
 
-3. **Ã‰tape 3 â€” Ã‰margement et Validation Formelle de la DoD :**  
-   Renseignez le procÃ¨s-verbal `scrum/revue-s1.md` en auditant les 7 critÃ¨res bloquants :
-   - [x] Code source versionnÃ© sur la branche de sprint active (`sprint1`).
-   - [x] Architecture 2 couches respectÃ©e (ContrÃ´leur mince $\to$ Classe Service).
+3. **Étape 3 — Émargement et Validation Formelle de la DoD :**  
+   Renseignez le procès-verbal `scrum/revue-s1.md` en auditant les 7 critères bloquants :
+   - [x] Code source versionné sur la branche de sprint active (`sprint1`).
+   - [x] Architecture 2 couches respectée (Contrôleur mince $\to$ Classe Service).
    - [x] Gabarit Blade responsive sous Tailwind CSS sans CSS inline.
-   - [x] ScÃ©nario nominal (HTTP 200) fonctionnel en direct.
-   - [x] ScÃ©nario d'exception (HTTP 404) gÃ©rÃ© de maniÃ¨re rÃ©siliente.
+   - [x] Scénario nominal (HTTP 200) fonctionnel en direct.
+   - [x] Scénario d'exception (HTTP 404) géré de manière résiliente.
    - [x] Code conforme aux standards PSR-12 et sans warning.
-   - [x] Prompts d'ingÃ©nierie rÃ©utilisables opÃ©rationnels.
+   - [x] Prompts d'ingénierie réutilisables opérationnels.
 
-4. **Ã‰tape 4 â€” Journalisation des commandes :**  
-   Consignez la commande de dÃ©marrage dans `tutoriels/realisation-projet/cloture-sprint/review-demonstration/review-demonstration.command.md` :
+4. **Étape 4 — Journalisation des commandes :**  
+   Consignez la commande de démarrage dans `tutoriels/realisation-projet/cloture-sprint/review-demonstration/review-demonstration.command.md` :
 
 ```bash
 cd src
 php artisan serve
 ```
 
-## 3. Livrables & CritÃ¨res de RÃ©ussite
+## 3. Livrables & Critères de Réussite
 - **Livrables attendus :**
-  - ProcÃ¨s-verbal de dÃ©monstration : `scrum/revue-s1.md` sur la branche `sprint1`.
+  - Procès-verbal de démonstration : `scrum/revue-s1.md` sur la branche `sprint1`.
   - Journal des commandes : `tutoriels/realisation-projet/cloture-sprint/review-demonstration/review-demonstration.command.md`.
-- **CritÃ¨res de validation :**
-  - [ ] L'incrÃ©ment logiciel fonctionne en dÃ©monstration rÃ©elle sans anomalie bloquante.
-  - [ ] Les 7 critÃ¨res de la DoD sont formellement validÃ©s avec le Product Owner dans `scrum/revue-s1.md`.
-  - [ ] Le journal consigne fidÃ¨lement les commandes opÃ©rationnelles exÃ©cutÃ©es.
+- **Critères de validation :**
+  - [ ] L'incrément logiciel fonctionne en démonstration réelle sans anomalie bloquante.
+  - [ ] Les 7 critères de la DoD sont formellement validés avec le Product Owner dans `scrum/revue-s1.md`.
+  - [ ] Le journal consigne fidèlement les commandes opérationnelles exécutées.

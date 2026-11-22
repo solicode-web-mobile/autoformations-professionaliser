@@ -4,7 +4,7 @@ title: "Valider l'incrément, animer la Sprint Review et la Rétrospective"
 sous_titre: "Faire la démonstration de l'incrément en direct, collecter les feedbacks et définir le plan d'actions d'amélioration"
 slug: "revue-retrospective"
 slug_domaine: "scrum"
-slug_ua: "initiation-scrum"
+slug_ua: "UA.351.11"
 permalink: /tutos/revue-retrospective/
 tuto_id: "T.351.115"
 version: "normal"

@@ -141,31 +141,164 @@ layout: default
 
       {% if page.uas and page.uas.size > 0 %}
 
+        {% assign session_tutos_all = "" | split: "" %}
+        {% for ua_code in page.uas %}
+          {% assign u_tutos = site.tutos | where: "ua", ua_code | where: "version", "normal" %}
+          {% for t in u_tutos %}
+            {% assign session_tutos_all = session_tutos_all | push: t %}
+          {% endfor %}
+        {% endfor %}
+        {% assign session_tutos_sorted = session_tutos_all | sort: "etape" %}
+
         <div class="session-uas">
 
-          {% for ua_code in page.uas %}
+          {% assign current_group_ua = nil %}
+          {% assign current_group_tutos = "" | split: "" %}
+          {% assign ua_seen_list = "" | split: "" %}
 
-            {% assign ua =
-              site.uas
-              | where: "code", ua_code
-              | first
-            %}
+          {% for tuto in session_tutos_sorted %}
+            {% if current_group_ua == nil %}
+              {% assign current_group_ua = tuto.ua %}
+              {% assign current_group_tutos = current_group_tutos | push: tuto %}
+            {% elsif tuto.ua == current_group_ua %}
+              {% assign current_group_tutos = current_group_tutos | push: tuto %}
+            {% else %}
+              {% assign ua = site.uas | where: "code", current_group_ua | first %}
+              {% if ua %}
+                {% assign first_etape = current_group_tutos.first.etape %}
+                {% assign last_etape = current_group_tutos.last.etape %}
+                <article class="ua-card">
+                  <div class="ua-card-header">
+                    <div class="ua-card-header-top">
+                      <span class="ua-card-code">
+                        <a href="{{ ua.url | relative_url }}">
+                          {{ ua.code }}
+                        </a>
+                        {% if first_etape and first_etape != "" %}
+                          <span class="badge-etape">
+                            {% if first_etape == last_etape %}
+                              Étape {{ first_etape }}
+                            {% else %}
+                              Étapes {{ first_etape }} à {{ last_etape }}
+                            {% endif %}
+                          </span>
+                        {% endif %}
+                        {% if ua_seen_list contains ua.code %}
+                          <span class="badge-etape badge-etape-suite">Suite</span>
+                        {% endif %}
+                      </span>
 
+                      {% if ua.maturite %}
+                        {% assign mat_clean = ua.maturite | replace: "UA-", "" | strip %}
+                        {% assign mat_str = ua.maturite | downcase %}
+                        {% if mat_str contains "tach" or mat_str contains "tâch" or mat_str contains "projet" %}
+                          {% assign mat_badge_class = "badge-tache" %}
+                          {% assign mat_badge_text = "Projet" %}
+                        {% elsif mat_str contains "ua-lab" %}
+                          {% assign mat_badge_class = "badge-lab" %}
+                          {% assign mat_badge_text = "UA-Lab" %}
+                        {% elsif mat_str contains "lab" %}
+                          {% assign mat_badge_class = "badge-lab" %}
+                          {% assign mat_badge_text = "Lab" %}
+                        {% elsif mat_str contains "tuto" %}
+                          {% assign mat_badge_class = "badge-tuto" %}
+                          {% assign mat_badge_text = "Tuto" %}
+                        {% else %}
+                          {% assign mat_badge_class = "badge-default" %}
+                          {% assign mat_badge_text = mat_clean %}
+                        {% endif %}
+                        <span class="badge-maturite {{ mat_badge_class }}">
+                          {{ mat_badge_text }}
+                        </span>
+                      {% endif %}
+                    </div>
+
+                    <h3>
+                      {{ ua.title }}
+                    </h3>
+
+                    {% if ua.objectif %}
+                      <p class="ua-card-objective">
+                        {{ ua.objectif }}
+                      </p>
+                    {% endif %}
+                  </div>
+
+                  <div class="ua-card-references">
+                    {% if ua.competence %}
+                      <p class="ua-card-reference">
+                        <strong>Compétence</strong>
+                        {% assign competence = site.competences | where: "code", ua.competence | first %}
+                        {% if competence %}
+                          <a href="{{ competence.url | relative_url }}">
+                            {{ competence.title }}
+                          </a>
+                        {% else %}
+                          {{ ua.competence }}
+                        {% endif %}
+                      </p>
+                    {% endif %}
+
+                    {% if ua.domaine %}
+                      <p class="ua-card-reference">
+                        <strong>Domaine</strong>
+                        {% assign domaine = site.domaines | where: "code", ua.domaine | first %}
+                        {% if domaine %}
+                          <a href="{{ domaine.url | relative_url }}">
+                            {{ domaine.title }}
+                          </a>
+                        {% else %}
+                          {{ ua.domaine }}
+                        {% endif %}
+                      </p>
+                    {% endif %}
+                  </div>
+
+                  <div class="ua-card-tutos">
+                    <div class="ua-card-tutos-header">
+                      <h4>
+                        Tutoriels
+                      </h4>
+                      <span>
+                        {{ current_group_tutos.size }}
+                      </span>
+                    </div>
+
+                    {% include tuto-list.html tutos=current_group_tutos maturite=ua.maturite %}
+                  </div>
+                </article>
+                {% assign ua_seen_list = ua_seen_list | push: ua.code %}
+              {% endif %}
+
+              {% assign current_group_ua = tuto.ua %}
+              {% assign current_group_tutos = "" | split: "" | push: tuto %}
+            {% endif %}
+          {% endfor %}
+
+          {% if current_group_ua and current_group_tutos.size > 0 %}
+            {% assign ua = site.uas | where: "code", current_group_ua | first %}
             {% if ua %}
-
+              {% assign first_etape = current_group_tutos.first.etape %}
+              {% assign last_etape = current_group_tutos.last.etape %}
               <article class="ua-card">
-
-                <!-- ======================================
-                     EN-TÊTE UA
-                     ====================================== -->
-
                 <div class="ua-card-header">
-
                   <div class="ua-card-header-top">
                     <span class="ua-card-code">
                       <a href="{{ ua.url | relative_url }}">
                         {{ ua.code }}
                       </a>
+                      {% if first_etape and first_etape != "" %}
+                        <span class="badge-etape">
+                          {% if first_etape == last_etape %}
+                            Étape {{ first_etape }}
+                          {% else %}
+                            Étapes {{ first_etape }} à {{ last_etape }}
+                          {% endif %}
+                        </span>
+                      {% endif %}
+                      {% if ua_seen_list contains ua.code %}
+                        <span class="badge-etape badge-etape-suite">Suite</span>
+                      {% endif %}
                     </span>
 
                     {% if ua.maturite %}
@@ -198,131 +331,57 @@ layout: default
                   </h3>
 
                   {% if ua.objectif %}
-
                     <p class="ua-card-objective">
                       {{ ua.objectif }}
                     </p>
-
                   {% endif %}
-
                 </div>
 
-
-                <!-- ======================================
-                     RÉFÉRENCES
-                     ====================================== -->
-
                 <div class="ua-card-references">
-
                   {% if ua.competence %}
-
                     <p class="ua-card-reference">
-
                       <strong>Compétence</strong>
-
-                      {% assign competence =
-                        site.competences
-                        | where: "code", ua.competence
-                        | first
-                      %}
-
+                      {% assign competence = site.competences | where: "code", ua.competence | first %}
                       {% if competence %}
-
                         <a href="{{ competence.url | relative_url }}">
                           {{ competence.title }}
                         </a>
-
                       {% else %}
-
                         {{ ua.competence }}
-
                       {% endif %}
-
                     </p>
-
                   {% endif %}
 
-
                   {% if ua.domaine %}
-
                     <p class="ua-card-reference">
-
                       <strong>Domaine</strong>
-
-                      {% assign domaine =
-                        site.domaines
-                        | where: "code", ua.domaine
-                        | first
-                      %}
-
+                      {% assign domaine = site.domaines | where: "code", ua.domaine | first %}
                       {% if domaine %}
-
                         <a href="{{ domaine.url | relative_url }}">
                           {{ domaine.title }}
                         </a>
-
                       {% else %}
-
                         {{ ua.domaine }}
-
                       {% endif %}
-
                     </p>
-
                   {% endif %}
-
                 </div>
 
-
-                <!-- ======================================
-                     TUTORIELS
-                     ====================================== -->
-
-                {% assign ua_tutos =
-                  site.tutos
-                  | where: "ua", ua.code
-                %}
-
-                {% assign ua_tutos_normal =
-                  ua_tutos
-                  | where: "version", "normal"
-                  | sort: "nav_order"
-                %}
-
-
-                {% if ua_tutos_normal.size > 0 %}
-
-                  <div class="ua-card-tutos">
-
-                    <div class="ua-card-tutos-header">
-
-                      <h4>
-                        Tutoriels
-                      </h4>
-
-                      <span>
-                        {{ ua_tutos_normal.size }}
-                      </span>
-
-                    </div>
-
-                    {% include tuto-list.html tutos=ua_tutos maturite=ua.maturite %}
-
+                <div class="ua-card-tutos">
+                  <div class="ua-card-tutos-header">
+                    <h4>
+                      Tutoriels
+                    </h4>
+                    <span>
+                      {{ current_group_tutos.size }}
+                    </span>
                   </div>
 
-                {% endif %}
-
+                  {% include tuto-list.html tutos=current_group_tutos maturite=ua.maturite %}
+                </div>
               </article>
-
-            {% else %}
-
-              <p class="content-error">
-                UA introuvable : {{ ua_code }}
-              </p>
-
             {% endif %}
-
-          {% endfor %}
+          {% endif %}
 
         </div>
 

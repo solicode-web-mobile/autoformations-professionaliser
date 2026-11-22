@@ -4,7 +4,7 @@ title: "Comprendre l'approche Agile et le cadre Scrum"
 sous_titre: "Assimiler la rupture Agile vs Cascade, les 3 rôles Scrum, les 5 événements et préparer sa soutenance"
 slug: "comprendre-scrum"
 slug_domaine: "scrum"
-slug_ua: "initiation-scrum"
+slug_ua: "UA.351.11"
 permalink: /tutos/comprendre-scrum/
 tuto_id: "T.351.111"
 version: "normal"

@@ -4,11 +4,11 @@ title: "Justifier et valider le choix de la stack technique (Laravel)"
 sous_titre: "Documenter les choix d'ingénierie logicielle : Laravel, MySQL, Tailwind CSS, Preline UI et Alpine.js"
 slug: "justifier-stack-laravel"
 slug_domaine: "realisation-projet"
-slug_ua: "depot-cadrage-stack-backlog"
-permalink: /tutos/justifier-stack-laravel/
-tuto_id: "T.351.014"
+slug_ua: "UA.351.21"
+permalink: "/tutos/justifier-stack-laravel/"
+tuto_id: "T.351.213"
 version: "normal"
-ua: "UA.351.01"
+ua: "UA.351.21"
 type: "tuto-tache"
 etape: 3
 nav_order: 3

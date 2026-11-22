@@ -4,7 +4,7 @@ title: "Modélisation déclarative de parcours utilisateur (User Flow Mermaid)"
 sous_titre: "Cartographier les flux de navigation et décisions utilisateur en syntaxe textuelle Mermaid"
 slug: "user-flow"
 slug_domaine: "design"
-slug_ua: "parcours-utilisateur-prototypage"
+slug_ua: "UA.311.12"
 permalink: /tutos/user-flow/
 tuto_id: "T.311.121"
 version: "normal"

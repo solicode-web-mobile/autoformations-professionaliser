@@ -4,7 +4,7 @@ title: "Modéliser les Personas utilisateurs du Blog des Lauréats"
 sous_titre: "Formaliser les fiches Personas détaillées pour guider les choix fonctionnels et le découpage de sprint"
 slug: "modeliser-personas-blog"
 slug_domaine: "design"
-slug_ua: "design-thinking-empathie"
+slug_ua: "UA.311.11"
 permalink: /tutos/modeliser-personas-blog/
 tuto_id: "T.311.115"
 version: "normal"

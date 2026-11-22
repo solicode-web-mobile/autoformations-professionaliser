@@ -4,11 +4,11 @@ title: "Cadrer le projet et définir le périmètre (In-Scope / Out-of-Scope)"
 sous_titre: "Délimiter les objectifs SMART, les contraintes et la matrice de périmètre du Blog des Lauréats"
 slug: "cadrer-projet"
 slug_domaine: "realisation-projet"
-slug_ua: "depot-cadrage-stack-backlog"
-permalink: /tutos/cadrer-projet/
-tuto_id: "T.351.013"
+slug_ua: "UA.351.21"
+permalink: "/tutos/cadrer-projet/"
+tuto_id: "T.351.212"
 version: "normal"
-ua: "UA.351.01"
+ua: "UA.351.21"
 type: "tuto-tache"
 etape: 2
 nav_order: 2

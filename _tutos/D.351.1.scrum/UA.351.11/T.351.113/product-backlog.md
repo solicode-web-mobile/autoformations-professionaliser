@@ -4,7 +4,7 @@ title: "Créer, estimer et ordonner le Product Backlog"
 sous_titre: "Estimer l'effort en Story Points, appliquer la méthode MoSCoW et contractualiser la DoR et la DoD"
 slug: "product-backlog"
 slug_domaine: "scrum"
-slug_ua: "initiation-scrum"
+slug_ua: "UA.351.11"
 permalink: /tutos/product-backlog/
 tuto_id: "T.351.113"
 version: "normal"

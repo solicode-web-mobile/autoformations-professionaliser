@@ -4,7 +4,7 @@ title: "Conduire l'immersion usagers et formaliser la Carte d'Empathie du Blog"
 sous_titre: "Appliquer la démarche d'empathie terrain aux futurs lecteurs et auteurs du Blog des Lauréats"
 slug: "immersion-carte-empathie-blog"
 slug_domaine: "design"
-slug_ua: "design-thinking-empathie"
+slug_ua: "UA.311.11"
 permalink: /tutos/immersion-carte-empathie-blog/
 tuto_id: "T.311.114"
 version: "normal"

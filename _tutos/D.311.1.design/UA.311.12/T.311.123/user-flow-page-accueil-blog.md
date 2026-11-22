@@ -4,7 +4,7 @@ title: "Modéliser le User Flow de la page d'accueil du Blog des Lauréats"
 sous_titre: "Cartographier les parcours d'accès aux articles et de navigation en syntaxe déclarative Mermaid"
 slug: "user-flow-page-accueil-blog"
 slug_domaine: "design"
-slug_ua: "parcours-utilisateur-prototypage"
+slug_ua: "UA.311.12"
 permalink: /tutos/user-flow-page-accueil-blog/
 tuto_id: "T.311.123"
 version: "normal"
