@@ -45,12 +45,6 @@ Vous devez concevoir et préparer une **présentation synthétique** sur les not
    - Rédiger votre fiche technique d'atelier synthétisant vos explications et votre exemple.
    - Concevoir votre support de présentation au format Marp (16:9).
 
-> [!TIP]
-> **Solution de référence de l'atelier :**
-> Le concepteur a réalisé une solution de référence complète appliquée au cas d'école de l'application **TodoList**, consultable ci-dessous pour vous guider dans la formalisation de vos livrables :
-
-{% include tuto-livrables.html %}
-
 ## 4. Livrables attendus & Critères de validation
 - **Fiche technique d'atelier :** `tutoriels/scrum/initiation-scrum/comprendre-scrum/comprendre-scrum.md`
 - **Diaporama Marp de restitution :** `tutoriels/scrum/initiation-scrum/comprendre-scrum/presentation-comprendre-scrum.md`
