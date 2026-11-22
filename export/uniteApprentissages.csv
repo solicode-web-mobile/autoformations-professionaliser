@@ -31,8 +31,9 @@ permalink: /export/uniteApprentissages.csv
     {%- assign _micro_comp = "" -%}
   {%- endif -%}
 
+  {%- assign prod_url = site.production_url | default: "https://solicode-web-mobile.github.io" -%}
   {%- if p.url != empty and p.url != nil -%}
-    {%- assign _lien = site.url | append: site.baseurl | append: p.url -%}
+    {%- assign _lien = prod_url | append: site.baseurl | append: p.url -%}
   {%- else -%}
     {%- assign _lien = "" -%}
   {%- endif -%}

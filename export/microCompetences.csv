@@ -13,8 +13,9 @@ permalink: /export/microCompetences.csv
   {%- assign _titre   = (p.title | append: "") | strip | replace: '"','""' | replace: '\n',' ' | replace: '\r',' ' -%}
   {%- assign _soustitre = "" -%}
   {%- assign _compref = (comp.reference | append: "") | strip -%}
+  {%- assign prod_url = site.production_url | default: "https://solicode-web-mobile.github.io" -%}
   {%- if p.url != empty and p.url != nil -%}
-    {%- assign _lien = site.url | append: site.baseurl | append: p.url -%}
+    {%- assign _lien = prod_url | append: site.baseurl | append: p.url -%}
   {%- else -%}
     {%- assign _lien = "" -%}
   {%- endif -%}

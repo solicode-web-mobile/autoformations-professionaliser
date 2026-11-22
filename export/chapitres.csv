@@ -6,6 +6,7 @@ permalink: /export/chapitres.csv
 {% endcapture -%}
 "ordre","code","nom","unite_apprentissage_reference","duree_en_heure","isOfficiel","lien","description","formateur_reference","reference","is_imitation_ua","etape"
 {%- assign filiere = site.filiere | default: "DMB" -%}
+{%- assign prod_url = site.production_url | default: "https://solicode-web-mobile.github.io" -%}
 {%- assign tutos = site.tutos | where: "version", "normal" | sort: "nav_order" -%}
 {%- for p in tutos -%}
   {%- assign _ordre = p.nav_order -%}
@@ -17,7 +18,7 @@ permalink: /export/chapitres.csv
   {%- assign _duree = "1" -%}
   {%- assign _isofficiel = "1" -%}
   {%- if p.url != empty and p.url != nil -%}
-    {%- assign _lien = site.url | append: site.baseurl | append: p.url -%}
+    {%- assign _lien = prod_url | append: site.baseurl | append: p.url -%}
   {%- else -%}
     {%- assign _lien = "" -%}
   {%- endif -%}

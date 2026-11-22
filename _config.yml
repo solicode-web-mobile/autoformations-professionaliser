@@ -7,6 +7,7 @@ filiere_nom: "Développeur Mobile et Web"
 theme: just-the-docs
 
 url: https://solicode-web-mobile.github.io
+production_url: https://solicode-web-mobile.github.io
 baseurl: /autoformations-professionaliser
 
 repository: solicode-web-mobile/autoformations-professionaliser
