@@ -6,9 +6,9 @@ permalink: /export/chapitres.csv
 {% endcapture -%}
 "ordre","code","nom","unite_apprentissage_reference","duree_en_heure","isOfficiel","lien","description","formateur_reference","reference","is_imitation_ua"
 {%- assign filiere = site.filiere | default: "DMB" -%}
-{%- assign tutos = site.tutos | where: "version", "normal" | sort: "nav_order" -%}
+{%- assign tutos = site.tutos | where: "version", "normal" | sort: "etape" -%}
 {%- for p in tutos -%}
-  {%- assign _ordre = p.nav_order -%}
+  {%- assign _ordre = p.etape | default: p.nav_order -%}
   {%- assign _code = p.tuto_id | append: "" | strip -%}
   {%- assign _nom = p.title | append: "" | strip | replace: '"','""' | replace: '\n',' ' | replace: '\r',' ' -%}
   {%- assign _ua = p.ua | append: "" | strip -%}

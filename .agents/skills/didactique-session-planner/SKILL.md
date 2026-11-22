@@ -41,8 +41,8 @@ Pour chaque activité du flux ou de la session, auditer systématiquement :
 
 ## 4. Typologie des UAs & Respect de la Décomposition du Flux Opérationnel
 1. **Qualification didactique :**
-   - **`UA-Tâche` (`maturite: "projet"`, `type: "tuto-tache"`) :** Action opérationnelle, cadrage, initialisation outillée, rituels Scrum. **0% théorie.** Livrables situés aux emplacements racine (`docs/`, `sprints/`, `scrum/`, `src/`).
-   - **`UA-Lab` (`maturite: "lab"` ou `"ua-lab"`, `type: "tuto-atelier"`) :** Découverte pratique guidée d'un nouveau paradigme. En phase `lab` : recherche active sans notions détaillées. En phase `ua-lab` : lab validé sur le terrain avec notions fondamentales détaillées.
+   - **`UA-Tâche` (`maturite: "projet"`, `type: "tuto-tache"`) :** Action opérationnelle, cadrage, initialisation outillée, rituels Scrum transversaux ou récurrents sans UA d'apprentissage. **0% théorie.** Livrables situés aux emplacements racine (`docs/`, `sprints/`, `scrum/`, `src/`).
+   - **`UA-Lab` (`maturite: "lab"` ou `"ua-lab"`, `type: "tuto-atelier"`) :** Découverte pratique guidée d'un nouveau paradigme. Intègre directement à la suite des ateliers les tâches d'application projet (`tuto-tache`) ancrées sur le sujet d'imitation.
 2. **Respect de la décomposition du flux opérationnel :**
    - La session ne s'organise pas en phases abstraites artificielles qui masqueraient ou regrouperaient arbitrairement les UAs.
    - **Chaque bloc opérationnel du flux transmis par l'équipe (`flux-travail-s[X].md`) fait directement l'objet d'une Unité d'Apprentissage dédiée (`UA-Lab` ou `UA-Tâche`)**.

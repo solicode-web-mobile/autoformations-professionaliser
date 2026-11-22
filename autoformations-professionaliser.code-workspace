@@ -1,62 +1,31 @@
-{
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"hide-files.files": [
-			"serve.ps1",
-			"README.md",
-			"LICENSE",
-			"index.md",
-			"Gemfile.lock",
-			"Gemfile",
-			"autoformations-web.code-workspace",
-			".gitignore",
-			"_config.yml",
-			".jekyll-cache",
-			"_site",
-			"_old",
-			".github",
-			".vscode"
-		],
-		"folder-color.pathColors": [
-			{
-				"folderPath": "autoformations-web\\_tutos\\",
-				"isFolderOnly": true,
-				"color": "foldercolorizer.color_afaf00"
-			},
-			{
-				"folderPath": "autoformations-web\\_agent",
-				"isFolderOnly": true,
-				"color": "foldercolorizer.color_ffaf87"
-			},
-			{
-				"folderPath": "autoformations-web\\_tutos\\C122\\",
-				"isFolderOnly": true,
-				"color": "foldercolorizer.color_5f5fd7"
-			},
-			{
-				"folderPath": "autoformations-web\\.agents\\",
-				"isFolderOnly": true,
-				"color": "foldercolorizer.color_ff8700"
-			},
-			{
-				"folderPath": "autoformations-web\\_plan-réalisation-tutos\\S4\\",
-				"isFolderOnly": true,
-				"color": "foldercolorizer.color_af5f00"
-			},
-			{
-				"folderPath": "autoformations-web\\_plan-réalisation-tutos\\",
-				"isFolderOnly": true,
-				"color": "foldercolorizer.color_ff8700"
-			},
-			{
-				"folderPath": "autoformations-professionaliser\\.agents\\",
-				"color": "foldercolorizer.color_ff8700",
-				"isFolderOnly": true
-			}
-		]
-	}
-}
+Ces trois publications convergent vers une même thèse : **l'écriture du code n'est plus le goulot d'étranglement de l'ingénierie logicielle**. L'utilisation de simples copilotes de complétion n'accélère qu'une portion minoritaire du projet (25 à 35 % du temps global) et déplace la friction en amont (spécification) et en aval (revue, tests, gouvernance). Pour transformer réellement la productivité et la fiabilité, les organisations doivent basculer vers un **SDLC augmenté / agentique (AI-Native)**, encadré par des méthodologies strictes et des points de contrôle formels.
+
+---
+
+### Synthèse comparative des trois visions
+
+| Dimension | **SFEIR** (*SDLC Augmenté à 11 phases*) | **Anthropic / Claude** (*The AI-Native SDLC Playbook*) | **Harington** (*Les 6 phases avec Harry SDLC*) |
+| --- | --- | --- | --- |
+| **Philosophie centrale** | « L'IA exécute, l'humain encadre, le projet apprend. » Approche *Compound Engineering*. | Le SDLC devient une boucle guidée par des artefacts versionnés (`.md`) qui déclenchent les étapes. | Séparation stricte entre l'**Atelier** (humains/cadrage) et l'**Usine** (agents/production). |
+| **Découpage du cycle** | **11 phases** (de 0-Setup à 10-Deprecation) regroupées en 4 temps : Amont, Cœur, Capitalisation, Aval. | **6 étapes modulaires** en boucle continue : Plan, Design, Build, Test, Deploy, Maintain. | **6 phases séquentielles** avec portes étanches : Cadrage, Spécification, Conception, Implémentation, Validation, Release. |
+| **Rôle de la spécification (*Spec-Driven*)** | Spécifications rigoureuses indispensables : l'IA est sensible au contexte flou. Une mauvaise spec répète les erreurs $10\times$ plus vite. | *Intent.md* rédigé dès l'origine du besoin, suivi de *spec.md* et *plan.md*, servant de contrat machine et humain. | *Spec-driven development* : le PO rédige le PRD, le BA découpe les stories, le Tech Lead fixe les invariants techniques. |
+| **Contrôle et gouvernance (*Gates*)** | **3 gates humains inviolables** : *Define* (spécification), *Plan* (architecture), *Ship* (acceptation avant release). | Revues en couches par des agents, avec validation humaine ciblée sur les parties réglementées et critiques. | **1 gate (humaine ou automatique) à chaque transition** ; validation explicite obligatoire avant tout merge. |
+| **Gestion de la preuve et des tests** | **Discipline de preuve** : capture de la sortie réelle des tests, sans jamais croire l'agent sur parole. | Évaluations continues (*evals*) intégrées directement pendant l'implémentation. | Scan de secrets automatique, CI systématique et confrontation de la PR aux critères d'acceptation initiaux. |
+| **Capitalisation & Contexte** | **Compound-1 & Compound-2** : réinjection des enseignements statiques et d'exploitation au cycle suivant (-30 % d'itérations). | Le contexte est maintenu via des fichiers versionnés (*CLAUDE.md*, skills partagés). | Le **Brain** : base de connaissances transverse (architecture, historique, invariants) guidant les agents. |
+
+---
+
+### Les points clés transversaux
+
+1. **Le déplacement de la valeur vers l'amont et la vérification :** La programmation manuelle laissant place à la génération agentique, la valeur de l'ingénieur réside désormais dans la clarté du problème exprimé (cadrage, critères d'acceptation, invariants d'architecture) et la rigueur de l'arbitrage critique.
+2. **La gestion du contexte (*Context Engineering*) :** Les agents ne peuvent pas concevoir du code d'entreprise pertinent sans un modèle de contexte standardisé (fichiers `.md` d'intention, dépôts de connaissances, chartes de code explicites).
+3. **Le principe de preuve contre les hallucinations :** Les trois cadres rejettent l'auto-évaluation des LLM : l'acceptation d'une tâche exige l'exécution vérifiée de suites de tests, de linters et d'analyses statiques dont les sorties brutes sont auditées.
+4. **Des limites opérationnelles claires :** Ces méthodologies atteignent leur plein potentiel sur les back-offices, les API, les migrations et la modernisation de code legacy ; elles restent limitées sur les domaines critiques hautement certifiables (aéronautique, santé) ou sur des données non gouvernées.
+
+---
+
+### Références
+
+* **SFEIR :** [SDLC augmenté par l'IA : le cycle à 11 phases](https://www.sfeir.com/concepts/sdlc-augmente/)
+* **Anthropic :** [The AI-native SDLC Playbook (Le guide du SDLC fondé sur l'IA)](https://claude.com/fr/resources/articles/the-ai-native-sdlc-playbook)
+* **Harington :** [SDLC : les 6 phases du cycle de développement logiciel augmenté par l'IA](https://harington.fr/2026/10/26/sdlc-augmente-ia/)

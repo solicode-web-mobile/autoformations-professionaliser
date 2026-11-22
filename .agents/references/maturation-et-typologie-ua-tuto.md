@@ -140,7 +140,7 @@ Pour chaque atelier pratique guidé (`tuto-atelier`, `tuto-atelier-notions`) :
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **`tuto-atelier`** | `ua-lab` | `a_realiser` | **OUI** (`presentation-[slug].md`) | **OUI** (si CLI exécuté) | `ua-lab/.../[slug]/` (Jekyll) / `tutoriels/` (Apprenant) |
 | **`tuto-atelier-notions`** | `ua-lab` | `realise` | **OUI** (`presentation-[slug].md`) | **OUI** (si CLI exécuté) | `ua-lab/.../[slug]/` (Jekyll) / `tutoriels/` (Apprenant) |
-| **`tuto-tache`** | `projet` | `a_realiser` | **NON** | **NON** (proscrit) | Emplacements racine (`docs/`, `sprints/`, etc.) |
+| **`tuto-tache`** | `projet` ou `ua-lab` | `a_realiser` | **NON** | **NON** (proscrit) | Emplacements racine (`docs/`, `sprints/`, etc.) |
 | **`tuto-notion`** | `tutoriel` | `a_realiser` | **NON** | **OUI** (si CLI exécuté) | `tutoriels/.../[slug-tuto]/` |
 | **`tuto-code`** | `tutoriel` | `a_realiser` | **NON** | **OUI** (`tutoriels/.../[slug].command.md`) | **`src/`** (arborescence applicative) |
 
@@ -154,3 +154,17 @@ Pour chaque atelier pratique guidé (`tuto-atelier`, `tuto-atelier-notions`) :
 > - Il est strictement réservé aux tutoriels d'apprentissage et d'atelier (`tuto-atelier`, `tuto-atelier-notions`, `tuto-notion`, `tuto-code`).  
 > - Il est formellement interdit d'y inclure les commandes de gestion de version Git (`add`, `commit`, `push`).  
 > - Il est **strictement proscrit pour les tâches opérationnelles (`tuto-tache`)**.
+
+---
+
+## 6. Ordonnancement Chronologique des Étapes du Sprint (`etape:`)
+
+Pour concilier le regroupement structurel par UA et l'ordre séquentiel d'exécution opérationnelle du flux de travail :
+1. **Attribut `etape:` dans le frontmatter :** Chaque tutoriel porte un champ `etape: [N]` reflétant son rang dans l'ordre chronologique d'exécution du sprint.
+2. **Plages Numériques par Sprint (Tranches de 1000) :**
+   - **Sprint 0 :** étapes `1` à `1000`.
+   - **Sprint 1 :** étapes `1001` à `2000`.
+   - **Sprint 2 :** étapes `2001` à `3000`, etc.
+3. **Mutualisation d'étape pour les Ateliers :** Tous les tutoriels d'ateliers d'une même UA partagent le même numéro d'étape macro (l'UA forme un bloc d'apprentissage continu) et sont départagés par `nav_order`.
+4. **Tâches d'Application Directe dans l'UA :** Chaque tâche d'application directe sur le projet (*Blog des Lauréats*) porte son propre numéro d'étape incrémental et s'insère directement après les ateliers correspondants.
+5. **Exports & Affichage :** `export/chapitres.csv` et la liste des chapitres ordonnent les fiches selon `etape:`, garantissant la fidélité au flux opérationnel.
