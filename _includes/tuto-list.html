@@ -63,9 +63,9 @@
             {% if current_tuto_type and current_tuto_type != "" %}
               {% assign type_clean = current_tuto_type | replace: "tuto-", "" | strip %}
               {% assign type_str = current_tuto_type | downcase %}
-              {% if type_str contains "atelier-notion" %}
-                {% assign type_pill_class = "badge-atelier-notions" %}
-                {% assign type_pill_text = "Atelier notions" %}
+              {% if type_str contains "atelier-notion" or type_str contains "corrige" or type_str contains "corrigé" %}
+                {% assign type_pill_class = "badge-atelier-corrige badge-atelier-notions" %}
+                {% assign type_pill_text = "Atelier corrigé" %}
               {% elsif type_str contains "atelier" %}
                 {% assign type_pill_class = "badge-atelier" %}
                 {% assign type_pill_text = "Atelier" %}

@@ -19,9 +19,9 @@ layout: default
             {% if current_tuto_type and current_tuto_type != "" %}
               {% assign type_clean_header = current_tuto_type | replace: "tuto-", "" | strip %}
               {% assign type_head_str = current_tuto_type | downcase %}
-              {% if type_head_str contains "atelier-notion" %}
-                {% assign type_head_class = "badge-atelier-notions" %}
-                {% assign type_head_text = "Atelier notions" %}
+              {% if type_head_str contains "atelier-notion" or type_head_str contains "corrige" or type_head_str contains "corrigé" %}
+                {% assign type_head_class = "badge-atelier-corrige badge-atelier-notions" %}
+                {% assign type_head_text = "Atelier corrigé" %}
               {% elsif type_head_str contains "atelier" %}
                 {% assign type_head_class = "badge-atelier" %}
                 {% assign type_head_text = "Atelier" %}

@@ -476,7 +476,9 @@ a:focus-visible {
   border-color: #bae6fd;
 }
 
-/* Type Atelier Enrichi (avec notions fondamentales validées) */
+/* Type Atelier Corrigé (avec solution de référence et proposition de correction) */
+.badge-type.badge-atelier-corrige,
+.badge-atelier-corrige,
 .badge-type.badge-atelier-notions,
 .badge-atelier-notions {
   background-color: #f0fdfa;

@@ -47,7 +47,7 @@ Pour refléter le cycle de vie d'un atelier pratique entre l'autoformation et la
 flowchart LR
     A["Flux Opérationnel<br/>(flux-travail-s[X].md)"] --> B["1. tuto-atelier<br/>(Conception par tuto-atelier-writer)<br/>statut: a_realiser<br/>0% notions théoriques rédigées"]
     B --> C["2. Réalisation du Lab<br/>(Par tuto-livrable-atelier-writer)<br/>Livrables produits sous ua-lab/"]
-    C --> D["3. tuto-atelier-notions<br/>(Atelier enrichi de référence)<br/>statut: realise<br/>+ Notions fondamentales<br/>+ Liens vers la solution"]
+    C --> D["3. tuto-atelier-notions<br/>(Atelier corrigé de référence)<br/>statut: realise<br/>+ Notions fondamentales<br/>+ Liens vers la solution"]
 ```
 
 ### 2.1 `tuto-atelier` — Atelier Initial Brut (Sans Notions de Base)
@@ -64,8 +64,8 @@ flowchart LR
   statut_realisation: "a_realiser"
   ```
 
-### 2.2 `tuto-atelier-notions` — Atelier Enrichi (Avec Notions Fondamentales & Solution Réalisée)
-- **Définition :** Fiche promue en `tuto-atelier-notions` **après la réalisation effective des livrables** par l'Agent Rédacteur d'Autoformation via le skill `tuto-livrable-atelier-writer`.
+### 2.2 `tuto-atelier-notions` — Atelier Corrigé (Avec Notions Fondamentales & Solution Réalisée)
+- **Définition :** Fiche promue en `tuto-atelier-notions` **après la réalisation effective des livrables** par l'Agent Rédacteur d'Autoformation via le skill `tuto-livrable-atelier-writer`. Elle s'affiche sous le badge **« Atelier corrigé »** à l'apprenant.
 - **Contenu :** Une fois les livrables physiques produits sous `ua-lab/`, l'Agent Rédacteur injecte :
   - Le plan des notions de base à voir (les concepts discriminants consolidés par la pratique).
   - Les définitions conceptuelles validées.

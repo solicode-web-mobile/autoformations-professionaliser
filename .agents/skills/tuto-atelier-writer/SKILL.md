@@ -10,7 +10,7 @@ Il formule le cadre pédagogique, les compétences cibles, les consignes et le t
 
 - **Cycle de Maturation de l'Atelier :**
   - **Type `tuto-atelier` (Atelier Initial Brut) :** Fiche de cadrage orientée recherche active (Contexte + Ce que vous devez apprendre + Travail à faire + Pistes de recherche + Livrables), **SANS notions théoriques rédigées** (`statut_realisation: "a_realiser"`).
-  - **Type `tuto-atelier-notions` (Atelier Enrichi Post-Réalisation) :** Fiche enrichie intégrant les **notions fondamentales détaillées**, les liens vers les livrables de référence réalisés sous `ua-lab/` (`statut_realisation: "realise"`), **SANS section de recherche active**.
+  - **Type `tuto-atelier-notions` (Atelier Corrigé Post-Réalisation) :** Fiche enrichie affichée sous le badge **« Atelier corrigé »**, intégrant les **notions fondamentales détaillées**, les liens vers les livrables de référence réalisés sous `ua-lab/` (`statut_realisation: "realise"`), **SANS section de recherche active**.
 
 ---
 
