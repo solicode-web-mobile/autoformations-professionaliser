@@ -9,13 +9,13 @@ competence: "C.351"
 domaine: "D.351.2"
 duree: 8
 objectif: >
-  Initialiser l'espace de développement et le dépôt Git du projet, cadrer le périmètre d'intervention In-Scope / Out-of-Scope et justifier rigoureusement le choix de la stack technologique (Laravel).
+  Initialiser l'espace de développement et le dépôt Git du projet, cadrer le périmètre d'intervention In-Scope / Out-of-Scope et justifier rigoureusement le choix de la stack technologique (Laravel & NativePHP).
 description: >
-  Bloc d'ingénierie projet initiale du Sprint 0. L'équipe configure le dépôt officiel sous Windows PowerShell avec son .gitignore et son README vitrine, délimite les frontières fonctionnelles du premier sprint (note de cadrage) et valide les choix d'architecture logicielle (stack technique Laravel).
+  Bloc d'ingénierie projet initiale du Sprint 0. L'équipe configure le dépôt officiel sous Windows PowerShell avec son .gitignore et son README vitrine, délimite les frontières fonctionnelles du premier sprint (note de cadrage) et valide les choix d'architecture logicielle (stack technique Laravel & NativePHP).
 notions:
   - "Organisation standard d'un dépôt d'ingénierie logicielle et gouvernance Git"
   - "Note de cadrage opérationnelle : objectifs SMART et matrice In-Scope / Out-of-Scope"
-  - "Justification et validation de la stack technologique (Laravel)"
+  - "Justification et validation de la stack technologique (Laravel & NativePHP)"
 livrable: >
   Livrables d'ingénierie initiaux : README.md, docs/cadrage/note-cadrage.md et docs/cadrage/stack-technique.md sur la branche sprint0.
 travail_a_faire: >

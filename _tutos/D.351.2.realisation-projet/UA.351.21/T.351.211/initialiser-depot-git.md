@@ -44,7 +44,7 @@ Initialisez l'espace de travail officiel du *Blog des Lauréats* :
   ```
 - Renseignez les sections normatives de `README.md` :
   - Nom du projet (*Blog des Lauréats de l'EFP*) et description en deux phrases.
-  - Stack technique ciblée (Laravel, MySQL, Tailwind CSS, Preline UI, Alpine.js).
+  - Stack technique ciblée (Laravel, MySQL, Tailwind CSS, Preline UI, Alpine.js, NativePHP Mobile).
   - Équipe projet et répartition des rôles Scrum.
   - Lien vers la feuille d'engagement active (`sprints/sprint-0.md`).
 - Publiez le dépôt distant sur GitHub avec GitHub CLI :
